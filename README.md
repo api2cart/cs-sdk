@@ -12,7 +12,6 @@ integration is easy.</b>
 Integrate once, save 4-8 weeks and thousands of dollars on each integration. Never worry about maintaining separate connections.
 
 To get started with API2Cart register an account for a 30-day trial. You can add stores and execute methods to test how API2Cart works with orders, products, categories, and other entities from stores.
-a href="https://app.getpostman.com/run-collection/c1f578bdddf7ee311593" target="_blank"><img src="https://run.pstmn.io/button.svg" alt="Run in Postman"></a>
 
 <h2><b>Webhooks</b></h2>
 
