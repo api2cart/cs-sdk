@@ -1,37 +1,45 @@
-## Welcome to GitHub Pages
+# C# sdk
+# What is API2Cart
+<b>With API2Cart shopping platform integration is easy.</b>
 
-You can use the [editor on GitHub](https://github.com/api2cart/cs-sdk/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+<h2><b>Overview</b></h2>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+API2Cart is a unified API that allows to integrate with 40+ shopping platforms and marketplaces like Magento, Shopify, WooCommerce, Amazon, eBay and others at once. 
 
-### Markdown
+<p align="left">
+  <img src="https://api2cart.com/wp-content/uploads/2018/07/scheme-for-adv.jpg">
+</p>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+Using API2Cart B2B software providers can easily connect to any supported eCommerce platform and never worry about developing separate connections. Moreover, API2Cart takes care of platform updates and maintains the integration.
 
-# Header 1
-## Header 2
-### Header 3
+<h2><b>How Does API2Cart Work</b></h2>
 
-- Bulleted
-- List
+API2Cart provides 100+ API methods to get, add, update, and sync various e-store data such as customers, orders, products, and categories, etc.
 
-1. Numbered
-2. List
+See all supported methods and platforms https://api2cart.com/supported-api-methods/.
 
-**Bold** and _Italic_ and `Code` text
+To get started with API2Cart <a href="https://app.api2cart.com/#register">register an account</a> for a 30-day free trial. Add stores and execute methods to see how you will be able to work with store entities.
 
-[Link](url) and ![Image](src)
-```
+<h2><b>Documentation For Authorization</b></h2>
+<b>api_key</b>
+<ul>
+  <li>Type: API key</li>
+  <li>API key parameter name: api_key</li>
+  <li>Location: URL query string</li>
+</ul>
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+<b>store_key</b>
+<ul>
+  <li>Type: API key</li>
+  <li>API key parameter name: store_key</li>
+  <li>Location: URL query string</li>
+</ul>
 
-### Jekyll Themes
+<h2><b>Documentation for API Endpoints</b></h2>
+All URIs are relative to https://api.api2cart.com/v1.1
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/api2cart/cs-sdk/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Our <a href="https://docs.api2cart.com/">documentation</a> includes explanations, code samples and interactive examples. 
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<h2><b>Support</b></h2>
+If you have any questions or issues, you can <a href="https://api2cart.com/contact-us/">contact us</a> in whatever way is convenient for you. We provide full-tech 24/7 support.
