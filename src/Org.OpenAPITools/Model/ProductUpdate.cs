@@ -114,7 +114,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="downloadable">Defines whether the product is downloadable (default to false).</param>
         /// <param name="materials">A list of material strings for materials used in the product..</param>
         /// <param name="autoRenew">When true, automatically renews a listing upon its expiration. (default to false).</param>
-        public ProductUpdate(string id = default(string), string model = default(string), decimal oldPrice = default(decimal), decimal price = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), decimal retailPrice = default(decimal), decimal quantity = default(decimal), bool availableForView = default(bool), decimal weight = default(decimal), string weightUnit = default(string), string dimensionsUnit = default(string), decimal increaseQuantity = default(decimal), decimal reduceQuantity = default(decimal), string warehouseId = default(string), decimal reserveQuantity = default(decimal), bool manageStock = default(bool), string backorderStatus = default(string), string name = default(string), string sku = default(string), string visible = default(string), string manufacturer = default(string), string manufacturerId = default(string), string categoriesIds = default(string), string relatedProductsIds = default(string), string upSellProductsIds = default(string), string crossSellProductsIds = default(string), string description = default(string), string shortDescription = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string storeId = default(string), string langId = default(string), bool inStock = default(bool), string status = default(string), string seoUrl = default(string), string reportRequestId = default(string), bool disableReportCache = false, bool reindex = true, string tags = default(string), bool clearCache = true, string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), bool taxable = true, string productClass = default(string), decimal height = default(decimal), decimal length = default(decimal), decimal width = default(decimal), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), string searchKeywords = default(string), string barcode = default(string), bool isVirtual = false, bool isFreeShipping = default(bool), decimal reservePrice = default(decimal), decimal buyitnowPrice = default(decimal), string availFrom = default(string), string taxClassId = default(string), string type = default(string), bool avail = true, string deliveryCode = default(string), bool checkProcessStatus = false, ProductAddPackageDetails packageDetails = default(ProductAddPackageDetails), string storesIds = default(string), ProductAddManufacturerInfo manufacturerInfo = default(ProductAddManufacturerInfo), string productionPartnerIds = default(string), int shippingTemplateId = 0, string whenMade = @"made_to_order", bool isSupply = true, bool downloadable = false, List<string> materials = default(List<string>), bool autoRenew = false)
+        /// <param name="onSale">Set whether the product on sale (default to false).</param>
+        public ProductUpdate(string id = default(string), string model = default(string), decimal oldPrice = default(decimal), decimal price = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), decimal retailPrice = default(decimal), decimal quantity = default(decimal), bool availableForView = default(bool), decimal weight = default(decimal), string weightUnit = default(string), string dimensionsUnit = default(string), decimal increaseQuantity = default(decimal), decimal reduceQuantity = default(decimal), string warehouseId = default(string), decimal reserveQuantity = default(decimal), bool manageStock = default(bool), string backorderStatus = default(string), string name = default(string), string sku = default(string), string visible = default(string), string manufacturer = default(string), string manufacturerId = default(string), string categoriesIds = default(string), string relatedProductsIds = default(string), string upSellProductsIds = default(string), string crossSellProductsIds = default(string), string description = default(string), string shortDescription = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string storeId = default(string), string langId = default(string), bool inStock = default(bool), string status = default(string), string seoUrl = default(string), string reportRequestId = default(string), bool disableReportCache = false, bool reindex = true, string tags = default(string), bool clearCache = true, string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), bool taxable = true, string productClass = default(string), decimal height = default(decimal), decimal length = default(decimal), decimal width = default(decimal), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), string searchKeywords = default(string), string barcode = default(string), bool isVirtual = false, bool isFreeShipping = default(bool), decimal reservePrice = default(decimal), decimal buyitnowPrice = default(decimal), string availFrom = default(string), string taxClassId = default(string), string type = default(string), bool avail = true, string deliveryCode = default(string), bool checkProcessStatus = false, ProductAddPackageDetails packageDetails = default(ProductAddPackageDetails), string storesIds = default(string), ProductAddManufacturerInfo manufacturerInfo = default(ProductAddManufacturerInfo), string productionPartnerIds = default(string), int shippingTemplateId = 0, string whenMade = @"made_to_order", bool isSupply = true, bool downloadable = false, List<string> materials = default(List<string>), bool autoRenew = false, bool onSale = false)
         {
             this.Id = id;
             this.Model = model;
@@ -196,6 +197,7 @@ namespace Org.OpenAPITools.Model
             this.Downloadable = downloadable;
             this.Materials = materials;
             this.AutoRenew = autoRenew;
+            this.OnSale = onSale;
         }
 
         /// <summary>
@@ -981,6 +983,16 @@ namespace Org.OpenAPITools.Model
         public bool AutoRenew { get; set; }
 
         /// <summary>
+        /// Set whether the product on sale
+        /// </summary>
+        /// <value>Set whether the product on sale</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "on_sale", EmitDefaultValue = true)]
+        public bool OnSale { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -1067,6 +1079,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Downloadable: ").Append(Downloadable).Append("\n");
             sb.Append("  Materials: ").Append(Materials).Append("\n");
             sb.Append("  AutoRenew: ").Append(AutoRenew).Append("\n");
+            sb.Append("  OnSale: ").Append(OnSale).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

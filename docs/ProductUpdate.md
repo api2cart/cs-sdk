@@ -83,6 +83,7 @@ Name | Type | Description | Notes
 **Downloadable** | **bool** | Defines whether the product is downloadable | [optional] [default to false]
 **Materials** | **List&lt;string&gt;** | A list of material strings for materials used in the product. | [optional] 
 **AutoRenew** | **bool** | When true, automatically renews a listing upon its expiration. | [optional] [default to false]
+**OnSale** | **bool** | Set whether the product on sale | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -28811,6 +28811,7 @@ components:
         - related_products_ids
         - related_products_ids
         sort_order: 4
+        on_sale: true
         cost_price: 5.637376656633329
         manage_stock: manage_stock
         quantity: 2.3021358869347655
@@ -28955,6 +28956,8 @@ components:
         sort_order:
           type: integer
         in_stock:
+          type: boolean
+        on_sale:
           type: boolean
         backorders:
           type: string
@@ -29464,6 +29467,7 @@ components:
             - related_products_ids
             - related_products_ids
             sort_order: 4
+            on_sale: true
             cost_price: 5.637376656633329
             manage_stock: manage_stock
             quantity: 2.3021358869347655
@@ -29777,6 +29781,7 @@ components:
             - related_products_ids
             - related_products_ids
             sort_order: 4
+            on_sale: true
             cost_price: 5.637376656633329
             manage_stock: manage_stock
             quantity: 2.3021358869347655
@@ -30118,6 +30123,7 @@ components:
           - related_products_ids
           - related_products_ids
           sort_order: 4
+          on_sale: true
           cost_price: 5.637376656633329
           manage_stock: manage_stock
           quantity: 2.3021358869347655
@@ -30431,6 +30437,7 @@ components:
           - related_products_ids
           - related_products_ids
           sort_order: 4
+          on_sale: true
           cost_price: 5.637376656633329
           manage_stock: manage_stock
           quantity: 2.3021358869347655
@@ -31995,6 +32002,7 @@ components:
           weight_major: 9.301444243932576
           weight_minor: 3.616076749251911
         fixed_cost_shipping_price: 5.5
+        on_sale: false
         cost_price: 65.9
         store_id: "1"
         manage_stock: false
@@ -32437,6 +32445,12 @@ components:
           example: false
           type: boolean
           name: auto_renew
+        on_sale:
+          default: false
+          description: Set whether the product on sale
+          example: false
+          type: boolean
+          name: on_sale
     ProductUpdateBatch:
       example:
         clear_cache: false
@@ -43929,6 +43943,7 @@ components:
           - related_products_ids
           - related_products_ids
           sort_order: 4
+          on_sale: true
           cost_price: 5.637376656633329
           manage_stock: manage_stock
           quantity: 2.3021358869347655
@@ -44794,6 +44809,7 @@ components:
           - related_products_ids
           - related_products_ids
           sort_order: 4
+          on_sale: true
           cost_price: 5.637376656633329
           manage_stock: manage_stock
           quantity: 2.3021358869347655
@@ -45107,6 +45123,7 @@ components:
           - related_products_ids
           - related_products_ids
           sort_order: 4
+          on_sale: true
           cost_price: 5.637376656633329
           manage_stock: manage_stock
           quantity: 2.3021358869347655
@@ -45429,6 +45446,7 @@ components:
             - related_products_ids
             - related_products_ids
             sort_order: 4
+            on_sale: true
             cost_price: 5.637376656633329
             manage_stock: manage_stock
             quantity: 2.3021358869347655
@@ -45742,6 +45760,7 @@ components:
             - related_products_ids
             - related_products_ids
             sort_order: 4
+            on_sale: true
             cost_price: 5.637376656633329
             manage_stock: manage_stock
             quantity: 2.3021358869347655

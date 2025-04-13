@@ -765,5 +765,14 @@ namespace Org.OpenAPITools.Test.Model
         {
             // TODO unit test for the property 'AutoRenew'
         }
+
+        /// <summary>
+        /// Test the property 'OnSale'
+        /// </summary>
+        [Fact]
+        public void OnSaleTest()
+        {
+            // TODO unit test for the property 'OnSale'
+        }
     }
 }
