@@ -6,11 +6,6 @@
 
 API2Cart is a unified API that allows to integrate with 40+ shopping platforms and marketplaces like Magento, Shopify, WooCommerce, Amazon, eBay and others at once. 
 
-<p align="left">
-  <img src="https://api2cart.com/wp-content/uploads/2018/07/scheme-for-adv.jpg">
-</p>
-
-
 Using API2Cart B2B software providers can easily connect to any supported eCommerce platform and never worry about developing separate connections. Moreover, API2Cart takes care of platform updates and maintains the integration.
 
 <h2><b>How Does API2Cart Work</b></h2>
@@ -39,7 +34,7 @@ To get started with API2Cart <a href="https://app.api2cart.com/#register">regist
 <h2><b>Documentation for API Endpoints</b></h2>
 All URIs are relative to https://api.api2cart.com/v1.1
 
-Our <a href="https://docs.api2cart.com/">documentation</a> includes explanations, code samples and interactive examples. 
+Our <a href="https://api2cart.com/docs/?utm_source=github&utm_medium=referral&utm_campaign=cpp-qt-sdk">documentation</a> includes explanations, code samples and interactive examples. 
 
 <h2><b>Support</b></h2>
-If you have any questions or issues, you can <a href="https://api2cart.com/contact-us/">contact us</a> in whatever way is convenient for you. We provide full-tech 24/7 support.
+If you have any questions or issues, you can <a href="https://api2cart.com/contact-us/?utm_source=github&utm_medium=referral&utm_campaign=cpp-qt-sdk">contact us</a> in whatever way is convenient for you. We provide full-tech 24/7 support.
