@@ -10139,6 +10139,15 @@ paths:
         schema:
           type: string
         style: form
+      - description: Retrieves product brands specified by category id
+        example: 6
+        explode: true
+        in: query
+        name: category_id
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Store Id
         example: "1"
         explode: true
@@ -30545,6 +30554,9 @@ components:
         is_free_shipping: true
         sku: bag_01
         height: 56.12
+        additional_image_urls:
+        - https://openapi-generator.tech
+        - https://openapi-generator.tech
         taxable: false
         image_url: https://docs.api2cart.com/img/logo.png
         old_price: 99.9
@@ -30552,6 +30564,15 @@ components:
         listing_type: Auction
         upc: "9770317847001"
         mpn: "9770317847001"
+        logistic_info:
+        - shipping_fee: 9.965781217890562
+          logistic_id: 5.025004791520295
+          is_free: true
+          size_id: 9.369310271410669
+        - shipping_fee: 9.965781217890562
+          logistic_id: 5.025004791520295
+          is_free: true
+          size_id: 9.369310271410669
         avail_from: avail_from=2029-10-25T15:54:37-0500
         tags: "tag1,tag2"
         is_supply: false
@@ -31148,6 +31169,12 @@ components:
           example: abibas.png
           type: string
           name: image_name
+        additional_image_urls:
+          description: Image Url
+          items:
+            format: uri
+            type: string
+          type: array
         reserve_price:
           description: Defines reserve price value
           example: 65.9
@@ -31169,6 +31196,11 @@ components:
           example: public
           type: string
           name: auction_confidentiality_level
+        logistic_info:
+          description: Defines product's logistic channel settings
+          items:
+            $ref: '#/components/schemas/ProductAdd_logistic_info_inner'
+          type: array
         avail_from:
           description: Allows to schedule a time in the future that the item becomes
             available. The value should be greater than the current date and time.
@@ -47338,6 +47370,23 @@ components:
           type: array
         booking_details:
           $ref: '#/components/schemas/ProductAdd_specifics_inner_booking_details'
+    ProductAdd_logistic_info_inner:
+      example:
+        shipping_fee: 9.965781217890562
+        logistic_id: 5.025004791520295
+        is_free: true
+        size_id: 9.369310271410669
+      properties:
+        logistic_id:
+          type: number
+        is_free:
+          type: boolean
+        shipping_fee:
+          type: number
+        size_id:
+          type: number
+      required:
+      - logistic_id
     ProductAdd_files_inner:
       example:
         name: name

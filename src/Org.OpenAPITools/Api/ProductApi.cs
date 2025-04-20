@@ -207,6 +207,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,short_description,active,url&quot;)</param>
         /// <param name="brandIds">Retrieves brands specified by brand ids (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="categoryId">Retrieves product brands specified by category id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -219,7 +220,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseProductBrandList</returns>
-        ModelResponseProductBrandList ProductBrandList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0);
+        ModelResponseProductBrandList ProductBrandList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// product.brand.list
@@ -234,6 +235,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,short_description,active,url&quot;)</param>
         /// <param name="brandIds">Retrieves brands specified by brand ids (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="categoryId">Retrieves product brands specified by category id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -246,7 +248,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseProductBrandList</returns>
-        ApiResponse<ModelResponseProductBrandList> ProductBrandListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseProductBrandList> ProductBrandListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0);
         /// <summary>
         /// product.child_item.find
         /// </summary>
@@ -1906,6 +1908,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,short_description,active,url&quot;)</param>
         /// <param name="brandIds">Retrieves brands specified by brand ids (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="categoryId">Retrieves product brands specified by category id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -1919,7 +1922,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseProductBrandList</returns>
-        System.Threading.Tasks.Task<ModelResponseProductBrandList> ProductBrandListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseProductBrandList> ProductBrandListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.brand.list
@@ -1934,6 +1937,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,short_description,active,url&quot;)</param>
         /// <param name="brandIds">Retrieves brands specified by brand ids (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="categoryId">Retrieves product brands specified by category id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -1947,7 +1951,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseProductBrandList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseProductBrandList>> ProductBrandListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseProductBrandList>> ProductBrandListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.child_item.find
         /// </summary>
@@ -4777,6 +4781,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,short_description,active,url&quot;)</param>
         /// <param name="brandIds">Retrieves brands specified by brand ids (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="categoryId">Retrieves product brands specified by category id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -4789,9 +4794,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseProductBrandList</returns>
-        public ModelResponseProductBrandList ProductBrandList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0)
+        public ModelResponseProductBrandList ProductBrandList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseProductBrandList> localVarResponse = ProductBrandListWithHttpInfo(start, count, pageCursor, varParams, brandIds, exclude, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, parentId, responseFields, findWhere, findValue);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseProductBrandList> localVarResponse = ProductBrandListWithHttpInfo(start, count, pageCursor, varParams, brandIds, exclude, categoryId, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, parentId, responseFields, findWhere, findValue);
             return localVarResponse.Data;
         }
 
@@ -4805,6 +4810,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,short_description,active,url&quot;)</param>
         /// <param name="brandIds">Retrieves brands specified by brand ids (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="categoryId">Retrieves product brands specified by category id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -4817,7 +4823,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseProductBrandList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseProductBrandList> ProductBrandListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseProductBrandList> ProductBrandListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -4865,6 +4871,10 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
+            }
+            if (categoryId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "category_id", categoryId));
             }
             if (storeId != null)
             {
@@ -4945,6 +4955,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,short_description,active,url&quot;)</param>
         /// <param name="brandIds">Retrieves brands specified by brand ids (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="categoryId">Retrieves product brands specified by category id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -4958,9 +4969,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseProductBrandList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseProductBrandList> ProductBrandListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseProductBrandList> ProductBrandListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseProductBrandList> localVarResponse = await ProductBrandListWithHttpInfoAsync(start, count, pageCursor, varParams, brandIds, exclude, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, parentId, responseFields, findWhere, findValue, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseProductBrandList> localVarResponse = await ProductBrandListWithHttpInfoAsync(start, count, pageCursor, varParams, brandIds, exclude, categoryId, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, parentId, responseFields, findWhere, findValue, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4974,6 +4985,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,short_description,active,url&quot;)</param>
         /// <param name="brandIds">Retrieves brands specified by brand ids (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="categoryId">Retrieves product brands specified by category id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -4987,7 +4999,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseProductBrandList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseProductBrandList>> ProductBrandListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseProductBrandList>> ProductBrandListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? brandIds = default(string?), string? exclude = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? parentId = default(string?), string? responseFields = default(string?), string? findWhere = default(string?), string? findValue = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -5035,6 +5047,10 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
+            }
+            if (categoryId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "category_id", categoryId));
             }
             if (storeId != null)
             {

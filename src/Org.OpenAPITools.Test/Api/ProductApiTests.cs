@@ -154,6 +154,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? varParams = null;
             //string? brandIds = null;
             //string? exclude = null;
+            //string? categoryId = null;
             //string? storeId = null;
             //string? langId = null;
             //string? createdFrom = null;
@@ -164,7 +165,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? responseFields = null;
             //string? findWhere = null;
             //string? findValue = null;
-            //var response = instance.ProductBrandList(start, count, pageCursor, varParams, brandIds, exclude, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, parentId, responseFields, findWhere, findValue);
+            //var response = instance.ProductBrandList(start, count, pageCursor, varParams, brandIds, exclude, categoryId, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, parentId, responseFields, findWhere, findValue);
             //Assert.IsType<ModelResponseProductBrandList>(response);
         }
 

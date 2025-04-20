@@ -611,7 +611,7 @@ catch (ApiException e)
 
 <a id="productbrandlist"></a>
 # **ProductBrandList**
-> ModelResponseProductBrandList ProductBrandList (int? start = null, int? count = null, string? pageCursor = null, string? varParams = null, string? brandIds = null, string? exclude = null, string? storeId = null, string? langId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? parentId = null, string? responseFields = null, string? findWhere = null, string? findValue = null)
+> ModelResponseProductBrandList ProductBrandList (int? start = null, int? count = null, string? pageCursor = null, string? varParams = null, string? brandIds = null, string? exclude = null, string? categoryId = null, string? storeId = null, string? langId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? parentId = null, string? responseFields = null, string? findWhere = null, string? findValue = null)
 
 product.brand.list
 
@@ -649,6 +649,7 @@ namespace Example
             var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,short_description,active,url")
             var brandIds = 4,5;  // string? | Retrieves brands specified by brand ids (optional) 
             var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var categoryId = 6;  // string? | Retrieves product brands specified by category id (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
             var langId = 3;  // string? | Language id (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
@@ -663,7 +664,7 @@ namespace Example
             try
             {
                 // product.brand.list
-                ModelResponseProductBrandList result = apiInstance.ProductBrandList(start, count, pageCursor, varParams, brandIds, exclude, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, parentId, responseFields, findWhere, findValue);
+                ModelResponseProductBrandList result = apiInstance.ProductBrandList(start, count, pageCursor, varParams, brandIds, exclude, categoryId, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, parentId, responseFields, findWhere, findValue);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -684,7 +685,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.brand.list
-    ApiResponse<ModelResponseProductBrandList> response = apiInstance.ProductBrandListWithHttpInfo(start, count, pageCursor, varParams, brandIds, exclude, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, parentId, responseFields, findWhere, findValue);
+    ApiResponse<ModelResponseProductBrandList> response = apiInstance.ProductBrandListWithHttpInfo(start, count, pageCursor, varParams, brandIds, exclude, categoryId, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, parentId, responseFields, findWhere, findValue);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -707,6 +708,7 @@ catch (ApiException e)
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,short_description,active,url&quot;] |
 | **brandIds** | **string?** | Retrieves brands specified by brand ids | [optional]  |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **categoryId** | **string?** | Retrieves product brands specified by category id | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |

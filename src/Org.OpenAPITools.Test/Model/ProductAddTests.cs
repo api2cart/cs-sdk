@@ -668,6 +668,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'AdditionalImageUrls'
+        /// </summary>
+        [Fact]
+        public void AdditionalImageUrlsTest()
+        {
+            // TODO unit test for the property 'AdditionalImageUrls'
+        }
+
+        /// <summary>
         /// Test the property 'ReservePrice'
         /// </summary>
         [Fact]
@@ -701,6 +710,15 @@ namespace Org.OpenAPITools.Test.Model
         public void AuctionConfidentialityLevelTest()
         {
             // TODO unit test for the property 'AuctionConfidentialityLevel'
+        }
+
+        /// <summary>
+        /// Test the property 'LogisticInfo'
+        /// </summary>
+        [Fact]
+        public void LogisticInfoTest()
+        {
+            // TODO unit test for the property 'LogisticInfo'
         }
 
         /// <summary>
