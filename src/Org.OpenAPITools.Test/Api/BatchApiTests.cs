@@ -64,13 +64,13 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int? count = null;
             //string? pageCursor = null;
+            //string? ids = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? processedFrom = null;
             //string? processedTo = null;
-            //string? ids = null;
             //string? responseFields = null;
-            //var response = instance.BatchJobList(count, pageCursor, createdFrom, createdTo, processedFrom, processedTo, ids, responseFields);
+            //var response = instance.BatchJobList(count, pageCursor, ids, createdFrom, createdTo, processedFrom, processedTo, responseFields);
             //Assert.IsType<ModelResponseBatchJobList>(response);
         }
 

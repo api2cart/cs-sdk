@@ -17,9 +17,9 @@ Name | Type | Description | Notes
 **Consents** | [**List&lt;CustomerAddConsentsInner&gt;**](CustomerAddConsentsInner.md) | Defines consents to notifications | [optional] 
 **Tags** | **string** | Customer tags | [optional] 
 **Gender** | **string** | Defines customer&#39;s gender | [optional] 
-**StoreId** | **string** | Store Id | [optional] 
 **Note** | **string** | The customer note. | [optional] 
 **Status** | **string** | Defines customer&#39;s status | [optional] 
+**StoreId** | **string** | Store Id | [optional] 
 **Address** | [**List&lt;CustomerUpdateAddressInner&gt;**](CustomerUpdateAddressInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

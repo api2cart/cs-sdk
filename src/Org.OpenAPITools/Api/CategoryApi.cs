@@ -35,23 +35,23 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Defines category&#39;s name that has to be added</param>
-        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
-        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
-        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
-        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
         /// <param name="description">Defines category&#39;s description (optional)</param>
         /// <param name="shortDescription">Defines short description (optional)</param>
+        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
+        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
+        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryAdd200Response</returns>
-        CategoryAdd200Response CategoryAdd(string name, string? parentId = default(string?), string? storesIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? createdTime = default(string?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), int operationIndex = 0);
+        CategoryAdd200Response CategoryAdd(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// category.add
@@ -61,23 +61,23 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Defines category&#39;s name that has to be added</param>
-        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
-        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
-        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
-        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
         /// <param name="description">Defines category&#39;s description (optional)</param>
         /// <param name="shortDescription">Defines short description (optional)</param>
+        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
+        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
+        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryAdd200Response</returns>
-        ApiResponse<CategoryAdd200Response> CategoryAddWithHttpInfo(string name, string? parentId = default(string?), string? storesIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? createdTime = default(string?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), int operationIndex = 0);
+        ApiResponse<CategoryAdd200Response> CategoryAddWithHttpInfo(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0);
         /// <summary>
         /// category.add.batch
         /// </summary>
@@ -108,12 +108,12 @@ namespace Org.OpenAPITools.Api
         /// Assign category to product
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="categoryId">Defines category assign, specified by category id</param>
+        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CartConfigUpdate200Response</returns>
-        CartConfigUpdate200Response CategoryAssign(string productId, string categoryId, string? storeId = default(string?), int operationIndex = 0);
+        CartConfigUpdate200Response CategoryAssign(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// category.assign
@@ -122,12 +122,12 @@ namespace Org.OpenAPITools.Api
         /// Assign category to product
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="categoryId">Defines category assign, specified by category id</param>
+        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CartConfigUpdate200Response</returns>
-        ApiResponse<CartConfigUpdate200Response> CategoryAssignWithHttpInfo(string productId, string categoryId, string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<CartConfigUpdate200Response> CategoryAssignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0);
         /// <summary>
         /// category.count
         /// </summary>
@@ -138,11 +138,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="parentId">Counts categories specified by parent id (optional)</param>
         /// <param name="storeId">Counts category specified by store id (optional)</param>
         /// <param name="langId">Counts category specified by language id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts categories that are searched specified by field (optional)</param>
@@ -150,7 +150,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryCount200Response</returns>
-        CategoryCount200Response CategoryCount(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
+        CategoryCount200Response CategoryCount(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// category.count
@@ -162,11 +162,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="parentId">Counts categories specified by parent id (optional)</param>
         /// <param name="storeId">Counts category specified by store id (optional)</param>
         /// <param name="langId">Counts category specified by language id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts categories that are searched specified by field (optional)</param>
@@ -174,7 +174,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryCount200Response</returns>
-        ApiResponse<CategoryCount200Response> CategoryCountWithHttpInfo(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
+        ApiResponse<CategoryCount200Response> CategoryCountWithHttpInfo(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
         /// <summary>
         /// category.delete
         /// </summary>
@@ -242,13 +242,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="imageName">Defines image&#39;s name</param>
         /// <param name="url">Defines URL of the image that has to be added</param>
         /// <param name="type">Defines image&#39;s types that are specified by comma-separated list</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryImageAdd200Response</returns>
-        CategoryImageAdd200Response CategoryImageAdd(string categoryId, string imageName, string url, string type, string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? storeId = default(string?), int operationIndex = 0);
+        CategoryImageAdd200Response CategoryImageAdd(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// category.image.add
@@ -261,13 +261,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="imageName">Defines image&#39;s name</param>
         /// <param name="url">Defines URL of the image that has to be added</param>
         /// <param name="type">Defines image&#39;s types that are specified by comma-separated list</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryImageAdd200Response</returns>
-        ApiResponse<CategoryImageAdd200Response> CategoryImageAddWithHttpInfo(string categoryId, string imageName, string url, string type, string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<CategoryImageAdd200Response> CategoryImageAddWithHttpInfo(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0);
         /// <summary>
         /// category.image.delete
         /// </summary>
@@ -303,17 +303,17 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Retrieves category&#39;s info specified by category id</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves category info  specified by store id (optional)</param>
         /// <param name="langId">Retrieves category info  specified by language id (optional)</param>
         /// <param name="schemaType">The name of the requirements set for the provided schema. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryInfo200Response</returns>
-        CategoryInfo200Response CategoryInfo(string id, string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
+        CategoryInfo200Response CategoryInfo(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// category.info
@@ -323,17 +323,17 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Retrieves category&#39;s info specified by category id</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves category info  specified by store id (optional)</param>
         /// <param name="langId">Retrieves category info  specified by language id (optional)</param>
         /// <param name="schemaType">The name of the requirements set for the provided schema. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryInfo200Response</returns>
-        ApiResponse<CategoryInfo200Response> CategoryInfoWithHttpInfo(string id, string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
+        ApiResponse<CategoryInfo200Response> CategoryInfoWithHttpInfo(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
         /// <summary>
         /// category.list
         /// </summary>
@@ -344,26 +344,26 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves categories specified by store id (optional)</param>
         /// <param name="langId">Retrieves categorys specified by language id (optional)</param>
+        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Category search that is specified by field (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCategoryList</returns>
-        ModelResponseCategoryList CategoryList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? parentId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0);
+        ModelResponseCategoryList CategoryList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// category.list
@@ -375,26 +375,26 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves categories specified by store id (optional)</param>
         /// <param name="langId">Retrieves categorys specified by language id (optional)</param>
+        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Category search that is specified by field (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCategoryList</returns>
-        ApiResponse<ModelResponseCategoryList> CategoryListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? parentId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0);
+        ApiResponse<ModelResponseCategoryList> CategoryListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0);
         /// <summary>
         /// category.unassign
         /// </summary>
@@ -431,22 +431,22 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Defines category update specified by category id</param>
         /// <param name="name">Defines new category’s name (optional)</param>
+        /// <param name="description">Defines new category&#39;s description (optional)</param>
+        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="parentId">Defines new parent category id (optional)</param>
-        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional)</param>
         /// <param name="sortOrder">Sort number in the list (optional)</param>
         /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
-        /// <param name="description">Defines new category&#39;s description (optional)</param>
-        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountConfigUpdate200Response</returns>
-        AccountConfigUpdate200Response CategoryUpdate(string id, string? name = default(string?), string? parentId = default(string?), string? storesIds = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0);
+        AccountConfigUpdate200Response CategoryUpdate(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// category.update
@@ -457,22 +457,22 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Defines category update specified by category id</param>
         /// <param name="name">Defines new category’s name (optional)</param>
+        /// <param name="description">Defines new category&#39;s description (optional)</param>
+        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="parentId">Defines new parent category id (optional)</param>
-        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional)</param>
         /// <param name="sortOrder">Sort number in the list (optional)</param>
         /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
-        /// <param name="description">Defines new category&#39;s description (optional)</param>
-        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountConfigUpdate200Response</returns>
-        ApiResponse<AccountConfigUpdate200Response> CategoryUpdateWithHttpInfo(string id, string? name = default(string?), string? parentId = default(string?), string? storesIds = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<AccountConfigUpdate200Response> CategoryUpdateWithHttpInfo(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -490,24 +490,24 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Defines category&#39;s name that has to be added</param>
-        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
-        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
-        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
-        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
         /// <param name="description">Defines category&#39;s description (optional)</param>
         /// <param name="shortDescription">Defines short description (optional)</param>
+        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
+        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
+        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryAdd200Response</returns>
-        System.Threading.Tasks.Task<CategoryAdd200Response> CategoryAddAsync(string name, string? parentId = default(string?), string? storesIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? createdTime = default(string?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryAdd200Response> CategoryAddAsync(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.add
@@ -517,24 +517,24 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Defines category&#39;s name that has to be added</param>
-        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
-        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
-        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
-        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
         /// <param name="description">Defines category&#39;s description (optional)</param>
         /// <param name="shortDescription">Defines short description (optional)</param>
+        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
+        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
+        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryAdd200Response>> CategoryAddWithHttpInfoAsync(string name, string? parentId = default(string?), string? storesIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? createdTime = default(string?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CategoryAdd200Response>> CategoryAddWithHttpInfoAsync(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.add.batch
         /// </summary>
@@ -567,13 +567,13 @@ namespace Org.OpenAPITools.Api
         /// Assign category to product
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="categoryId">Defines category assign, specified by category id</param>
+        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CartConfigUpdate200Response</returns>
-        System.Threading.Tasks.Task<CartConfigUpdate200Response> CategoryAssignAsync(string productId, string categoryId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CartConfigUpdate200Response> CategoryAssignAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.assign
@@ -582,13 +582,13 @@ namespace Org.OpenAPITools.Api
         /// Assign category to product
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="categoryId">Defines category assign, specified by category id</param>
+        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CartConfigUpdate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartConfigUpdate200Response>> CategoryAssignWithHttpInfoAsync(string productId, string categoryId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CartConfigUpdate200Response>> CategoryAssignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.count
         /// </summary>
@@ -599,11 +599,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="parentId">Counts categories specified by parent id (optional)</param>
         /// <param name="storeId">Counts category specified by store id (optional)</param>
         /// <param name="langId">Counts category specified by language id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts categories that are searched specified by field (optional)</param>
@@ -612,7 +612,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryCount200Response</returns>
-        System.Threading.Tasks.Task<CategoryCount200Response> CategoryCountAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryCount200Response> CategoryCountAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.count
@@ -624,11 +624,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="parentId">Counts categories specified by parent id (optional)</param>
         /// <param name="storeId">Counts category specified by store id (optional)</param>
         /// <param name="langId">Counts category specified by language id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts categories that are searched specified by field (optional)</param>
@@ -637,7 +637,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryCount200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryCount200Response>> CategoryCountWithHttpInfoAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CategoryCount200Response>> CategoryCountWithHttpInfoAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.delete
         /// </summary>
@@ -709,14 +709,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="imageName">Defines image&#39;s name</param>
         /// <param name="url">Defines URL of the image that has to be added</param>
         /// <param name="type">Defines image&#39;s types that are specified by comma-separated list</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryImageAdd200Response</returns>
-        System.Threading.Tasks.Task<CategoryImageAdd200Response> CategoryImageAddAsync(string categoryId, string imageName, string url, string type, string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryImageAdd200Response> CategoryImageAddAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.image.add
@@ -729,14 +729,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="imageName">Defines image&#39;s name</param>
         /// <param name="url">Defines URL of the image that has to be added</param>
         /// <param name="type">Defines image&#39;s types that are specified by comma-separated list</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryImageAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryImageAdd200Response>> CategoryImageAddWithHttpInfoAsync(string categoryId, string imageName, string url, string type, string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CategoryImageAdd200Response>> CategoryImageAddWithHttpInfoAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.image.delete
         /// </summary>
@@ -774,18 +774,18 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Retrieves category&#39;s info specified by category id</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves category info  specified by store id (optional)</param>
         /// <param name="langId">Retrieves category info  specified by language id (optional)</param>
         /// <param name="schemaType">The name of the requirements set for the provided schema. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryInfo200Response</returns>
-        System.Threading.Tasks.Task<CategoryInfo200Response> CategoryInfoAsync(string id, string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryInfo200Response> CategoryInfoAsync(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.info
@@ -795,18 +795,18 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Retrieves category&#39;s info specified by category id</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves category info  specified by store id (optional)</param>
         /// <param name="langId">Retrieves category info  specified by language id (optional)</param>
         /// <param name="schemaType">The name of the requirements set for the provided schema. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryInfo200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryInfo200Response>> CategoryInfoWithHttpInfoAsync(string id, string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CategoryInfo200Response>> CategoryInfoWithHttpInfoAsync(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.list
         /// </summary>
@@ -817,27 +817,27 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves categories specified by store id (optional)</param>
         /// <param name="langId">Retrieves categorys specified by language id (optional)</param>
+        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Category search that is specified by field (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCategoryList</returns>
-        System.Threading.Tasks.Task<ModelResponseCategoryList> CategoryListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? parentId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseCategoryList> CategoryListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.list
@@ -849,27 +849,27 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves categories specified by store id (optional)</param>
         /// <param name="langId">Retrieves categorys specified by language id (optional)</param>
+        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Category search that is specified by field (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCategoryList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseCategoryList>> CategoryListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? parentId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCategoryList>> CategoryListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.unassign
         /// </summary>
@@ -908,23 +908,23 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Defines category update specified by category id</param>
         /// <param name="name">Defines new category’s name (optional)</param>
+        /// <param name="description">Defines new category&#39;s description (optional)</param>
+        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="parentId">Defines new parent category id (optional)</param>
-        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional)</param>
         /// <param name="sortOrder">Sort number in the list (optional)</param>
         /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
-        /// <param name="description">Defines new category&#39;s description (optional)</param>
-        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountConfigUpdate200Response</returns>
-        System.Threading.Tasks.Task<AccountConfigUpdate200Response> CategoryUpdateAsync(string id, string? name = default(string?), string? parentId = default(string?), string? storesIds = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountConfigUpdate200Response> CategoryUpdateAsync(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.update
@@ -935,23 +935,23 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Defines category update specified by category id</param>
         /// <param name="name">Defines new category’s name (optional)</param>
+        /// <param name="description">Defines new category&#39;s description (optional)</param>
+        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="parentId">Defines new parent category id (optional)</param>
-        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional)</param>
         /// <param name="sortOrder">Sort number in the list (optional)</param>
         /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
-        /// <param name="description">Defines new category&#39;s description (optional)</param>
-        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountConfigUpdate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountConfigUpdate200Response>> CategoryUpdateWithHttpInfoAsync(string id, string? name = default(string?), string? parentId = default(string?), string? storesIds = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountConfigUpdate200Response>> CategoryUpdateWithHttpInfoAsync(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1077,25 +1077,25 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Defines category&#39;s name that has to be added</param>
-        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
-        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
-        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
-        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
         /// <param name="description">Defines category&#39;s description (optional)</param>
         /// <param name="shortDescription">Defines short description (optional)</param>
+        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
+        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
+        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryAdd200Response</returns>
-        public CategoryAdd200Response CategoryAdd(string name, string? parentId = default(string?), string? storesIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? createdTime = default(string?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), int operationIndex = 0)
+        public CategoryAdd200Response CategoryAdd(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response> localVarResponse = CategoryAddWithHttpInfo(name, parentId, storesIds, storeId, langId, avail, sortOrder, createdTime, modifiedTime, description, shortDescription, metaTitle, metaDescription, metaKeywords, seoUrl);
+            Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response> localVarResponse = CategoryAddWithHttpInfo(name, description, shortDescription, parentId, avail, createdTime, modifiedTime, sortOrder, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
             return localVarResponse.Data;
         }
 
@@ -1104,23 +1104,23 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Defines category&#39;s name that has to be added</param>
-        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
-        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
-        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
-        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
         /// <param name="description">Defines category&#39;s description (optional)</param>
         /// <param name="shortDescription">Defines short description (optional)</param>
+        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
+        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
+        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response> CategoryAddWithHttpInfo(string name, string? parentId = default(string?), string? storesIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? createdTime = default(string?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response> CategoryAddWithHttpInfo(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -1152,29 +1152,21 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
+            if (description != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "description", description));
+            }
+            if (shortDescription != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "short_description", shortDescription));
+            }
             if (parentId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "parent_id", parentId));
             }
-            if (storesIds != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "stores_ids", storesIds));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
-            if (langId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
-            }
             if (avail != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
-            }
-            if (sortOrder != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "sort_order", sortOrder));
             }
             if (createdTime != null)
             {
@@ -1184,13 +1176,9 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_time", modifiedTime));
             }
-            if (description != null)
+            if (sortOrder != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "description", description));
-            }
-            if (shortDescription != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "short_description", shortDescription));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "sort_order", sortOrder));
             }
             if (metaTitle != null)
             {
@@ -1207,6 +1195,18 @@ namespace Org.OpenAPITools.Api
             if (seoUrl != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "seo_url", seoUrl));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (storesIds != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "stores_ids", storesIds));
+            }
+            if (langId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryAdd";
@@ -1242,26 +1242,26 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Defines category&#39;s name that has to be added</param>
-        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
-        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
-        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
-        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
         /// <param name="description">Defines category&#39;s description (optional)</param>
         /// <param name="shortDescription">Defines short description (optional)</param>
+        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
+        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
+        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryAdd200Response</returns>
-        public async System.Threading.Tasks.Task<CategoryAdd200Response> CategoryAddAsync(string name, string? parentId = default(string?), string? storesIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? createdTime = default(string?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CategoryAdd200Response> CategoryAddAsync(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response> localVarResponse = await CategoryAddWithHttpInfoAsync(name, parentId, storesIds, storeId, langId, avail, sortOrder, createdTime, modifiedTime, description, shortDescription, metaTitle, metaDescription, metaKeywords, seoUrl, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response> localVarResponse = await CategoryAddWithHttpInfoAsync(name, description, shortDescription, parentId, avail, createdTime, modifiedTime, sortOrder, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1270,24 +1270,24 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Defines category&#39;s name that has to be added</param>
-        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
-        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
-        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
-        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
         /// <param name="description">Defines category&#39;s description (optional)</param>
         /// <param name="shortDescription">Defines short description (optional)</param>
+        /// <param name="parentId">Adds categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="createdTime">Entity&#39;s date creation (optional)</param>
+        /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
+        /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response>> CategoryAddWithHttpInfoAsync(string name, string? parentId = default(string?), string? storesIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? createdTime = default(string?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response>> CategoryAddWithHttpInfoAsync(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -1319,29 +1319,21 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
+            if (description != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "description", description));
+            }
+            if (shortDescription != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "short_description", shortDescription));
+            }
             if (parentId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "parent_id", parentId));
             }
-            if (storesIds != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "stores_ids", storesIds));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
-            if (langId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
-            }
             if (avail != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
-            }
-            if (sortOrder != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "sort_order", sortOrder));
             }
             if (createdTime != null)
             {
@@ -1351,13 +1343,9 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_time", modifiedTime));
             }
-            if (description != null)
+            if (sortOrder != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "description", description));
-            }
-            if (shortDescription != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "short_description", shortDescription));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "sort_order", sortOrder));
             }
             if (metaTitle != null)
             {
@@ -1374,6 +1362,18 @@ namespace Org.OpenAPITools.Api
             if (seoUrl != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "seo_url", seoUrl));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (storesIds != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "stores_ids", storesIds));
+            }
+            if (langId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryAdd";
@@ -1576,14 +1576,14 @@ namespace Org.OpenAPITools.Api
         /// category.assign Assign category to product
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="categoryId">Defines category assign, specified by category id</param>
+        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CartConfigUpdate200Response</returns>
-        public CartConfigUpdate200Response CategoryAssign(string productId, string categoryId, string? storeId = default(string?), int operationIndex = 0)
+        public CartConfigUpdate200Response CategoryAssign(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response> localVarResponse = CategoryAssignWithHttpInfo(productId, categoryId, storeId);
+            Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response> localVarResponse = CategoryAssignWithHttpInfo(categoryId, productId, storeId);
             return localVarResponse.Data;
         }
 
@@ -1591,23 +1591,23 @@ namespace Org.OpenAPITools.Api
         /// category.assign Assign category to product
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="categoryId">Defines category assign, specified by category id</param>
+        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CartConfigUpdate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response> CategoryAssignWithHttpInfo(string productId, string categoryId, string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response> CategoryAssignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0)
         {
-            // verify the required parameter 'productId' is set
-            if (productId == null)
-            {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'productId' when calling CategoryApi->CategoryAssign");
-            }
-
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
             {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'categoryId' when calling CategoryApi->CategoryAssign");
+            }
+
+            // verify the required parameter 'productId' is set
+            if (productId == null)
+            {
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'productId' when calling CategoryApi->CategoryAssign");
             }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1633,8 +1633,8 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "product_id", productId));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "category_id", categoryId));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "product_id", productId));
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
@@ -1672,15 +1672,15 @@ namespace Org.OpenAPITools.Api
         /// category.assign Assign category to product
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="categoryId">Defines category assign, specified by category id</param>
+        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CartConfigUpdate200Response</returns>
-        public async System.Threading.Tasks.Task<CartConfigUpdate200Response> CategoryAssignAsync(string productId, string categoryId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CartConfigUpdate200Response> CategoryAssignAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response> localVarResponse = await CategoryAssignWithHttpInfoAsync(productId, categoryId, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response> localVarResponse = await CategoryAssignWithHttpInfoAsync(categoryId, productId, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1688,24 +1688,24 @@ namespace Org.OpenAPITools.Api
         /// category.assign Assign category to product
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="categoryId">Defines category assign, specified by category id</param>
+        /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CartConfigUpdate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response>> CategoryAssignWithHttpInfoAsync(string productId, string categoryId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response>> CategoryAssignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            // verify the required parameter 'productId' is set
-            if (productId == null)
-            {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'productId' when calling CategoryApi->CategoryAssign");
-            }
-
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
             {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'categoryId' when calling CategoryApi->CategoryAssign");
+            }
+
+            // verify the required parameter 'productId' is set
+            if (productId == null)
+            {
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'productId' when calling CategoryApi->CategoryAssign");
             }
 
 
@@ -1731,8 +1731,8 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "product_id", productId));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "category_id", categoryId));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "product_id", productId));
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
@@ -1774,11 +1774,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="parentId">Counts categories specified by parent id (optional)</param>
         /// <param name="storeId">Counts category specified by store id (optional)</param>
         /// <param name="langId">Counts category specified by language id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts categories that are searched specified by field (optional)</param>
@@ -1786,9 +1786,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryCount200Response</returns>
-        public CategoryCount200Response CategoryCount(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
+        public CategoryCount200Response CategoryCount(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryCount200Response> localVarResponse = CategoryCountWithHttpInfo(parentId, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, avail, productType, findValue, findWhere, reportRequestId, disableReportCache);
+            Org.OpenAPITools.Client.ApiResponse<CategoryCount200Response> localVarResponse = CategoryCountWithHttpInfo(parentId, storeId, langId, avail, createdFrom, createdTo, modifiedFrom, modifiedTo, productType, findValue, findWhere, reportRequestId, disableReportCache);
             return localVarResponse.Data;
         }
 
@@ -1799,11 +1799,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="parentId">Counts categories specified by parent id (optional)</param>
         /// <param name="storeId">Counts category specified by store id (optional)</param>
         /// <param name="langId">Counts category specified by language id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts categories that are searched specified by field (optional)</param>
@@ -1811,7 +1811,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryCount200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CategoryCount200Response> CategoryCountWithHttpInfo(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CategoryCount200Response> CategoryCountWithHttpInfo(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1848,6 +1848,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
+            if (avail != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
+            }
             if (createdFrom != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
@@ -1863,10 +1867,6 @@ namespace Org.OpenAPITools.Api
             if (modifiedTo != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
-            }
-            if (avail != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
             }
             if (productType != null)
             {
@@ -1924,11 +1924,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="parentId">Counts categories specified by parent id (optional)</param>
         /// <param name="storeId">Counts category specified by store id (optional)</param>
         /// <param name="langId">Counts category specified by language id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts categories that are searched specified by field (optional)</param>
@@ -1937,9 +1937,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryCount200Response</returns>
-        public async System.Threading.Tasks.Task<CategoryCount200Response> CategoryCountAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CategoryCount200Response> CategoryCountAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryCount200Response> localVarResponse = await CategoryCountWithHttpInfoAsync(parentId, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, avail, productType, findValue, findWhere, reportRequestId, disableReportCache, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CategoryCount200Response> localVarResponse = await CategoryCountWithHttpInfoAsync(parentId, storeId, langId, avail, createdFrom, createdTo, modifiedFrom, modifiedTo, productType, findValue, findWhere, reportRequestId, disableReportCache, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1950,11 +1950,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="parentId">Counts categories specified by parent id (optional)</param>
         /// <param name="storeId">Counts category specified by store id (optional)</param>
         /// <param name="langId">Counts category specified by language id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts categories that are searched specified by field (optional)</param>
@@ -1963,7 +1963,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryCount200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryCount200Response>> CategoryCountWithHttpInfoAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryCount200Response>> CategoryCountWithHttpInfoAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2000,6 +2000,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
+            if (avail != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
+            }
             if (createdFrom != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
@@ -2015,10 +2019,6 @@ namespace Org.OpenAPITools.Api
             if (modifiedTo != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
-            }
-            if (avail != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
             }
             if (productType != null)
             {
@@ -2468,15 +2468,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="imageName">Defines image&#39;s name</param>
         /// <param name="url">Defines URL of the image that has to be added</param>
         /// <param name="type">Defines image&#39;s types that are specified by comma-separated list</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryImageAdd200Response</returns>
-        public CategoryImageAdd200Response CategoryImageAdd(string categoryId, string imageName, string url, string type, string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? storeId = default(string?), int operationIndex = 0)
+        public CategoryImageAdd200Response CategoryImageAdd(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> localVarResponse = CategoryImageAddWithHttpInfo(categoryId, imageName, url, type, label, mime, position, storeId);
+            Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> localVarResponse = CategoryImageAddWithHttpInfo(categoryId, imageName, url, type, storeId, label, mime, position);
             return localVarResponse.Data;
         }
 
@@ -2488,13 +2488,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="imageName">Defines image&#39;s name</param>
         /// <param name="url">Defines URL of the image that has to be added</param>
         /// <param name="type">Defines image&#39;s types that are specified by comma-separated list</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryImageAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> CategoryImageAddWithHttpInfo(string categoryId, string imageName, string url, string type, string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> CategoryImageAddWithHttpInfo(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -2546,6 +2546,11 @@ namespace Org.OpenAPITools.Api
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "category_id", categoryId));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "image_name", imageName));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "url", url));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
             if (label != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "label", label));
@@ -2554,14 +2559,9 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "mime", mime));
             }
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
             if (position != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "position", position));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryImageAdd";
@@ -2600,16 +2600,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="imageName">Defines image&#39;s name</param>
         /// <param name="url">Defines URL of the image that has to be added</param>
         /// <param name="type">Defines image&#39;s types that are specified by comma-separated list</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryImageAdd200Response</returns>
-        public async System.Threading.Tasks.Task<CategoryImageAdd200Response> CategoryImageAddAsync(string categoryId, string imageName, string url, string type, string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CategoryImageAdd200Response> CategoryImageAddAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> localVarResponse = await CategoryImageAddWithHttpInfoAsync(categoryId, imageName, url, type, label, mime, position, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> localVarResponse = await CategoryImageAddWithHttpInfoAsync(categoryId, imageName, url, type, storeId, label, mime, position, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2621,14 +2621,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="imageName">Defines image&#39;s name</param>
         /// <param name="url">Defines URL of the image that has to be added</param>
         /// <param name="type">Defines image&#39;s types that are specified by comma-separated list</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryImageAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response>> CategoryImageAddWithHttpInfoAsync(string categoryId, string imageName, string url, string type, string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response>> CategoryImageAddWithHttpInfoAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -2680,6 +2680,11 @@ namespace Org.OpenAPITools.Api
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "category_id", categoryId));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "image_name", imageName));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "url", url));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
             if (label != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "label", label));
@@ -2688,14 +2693,9 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "mime", mime));
             }
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
             if (position != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "position", position));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryImageAdd";
@@ -2927,19 +2927,19 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Retrieves category&#39;s info specified by category id</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves category info  specified by store id (optional)</param>
         /// <param name="langId">Retrieves category info  specified by language id (optional)</param>
         /// <param name="schemaType">The name of the requirements set for the provided schema. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryInfo200Response</returns>
-        public CategoryInfo200Response CategoryInfo(string id, string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
+        public CategoryInfo200Response CategoryInfo(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response> localVarResponse = CategoryInfoWithHttpInfo(id, varParams, responseFields, exclude, storeId, langId, schemaType, reportRequestId, disableReportCache);
+            Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response> localVarResponse = CategoryInfoWithHttpInfo(id, storeId, langId, schemaType, responseFields, varParams, exclude, reportRequestId, disableReportCache);
             return localVarResponse.Data;
         }
 
@@ -2948,17 +2948,17 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Retrieves category&#39;s info specified by category id</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves category info  specified by store id (optional)</param>
         /// <param name="langId">Retrieves category info  specified by language id (optional)</param>
         /// <param name="schemaType">The name of the requirements set for the provided schema. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryInfo200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response> CategoryInfoWithHttpInfo(string id, string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response> CategoryInfoWithHttpInfo(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -2990,18 +2990,6 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
-            }
-            if (exclude != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
@@ -3013,6 +3001,18 @@ namespace Org.OpenAPITools.Api
             if (schemaType != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "schema_type", schemaType));
+            }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
+            if (exclude != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
             }
             if (reportRequestId != null)
             {
@@ -3056,20 +3056,20 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Retrieves category&#39;s info specified by category id</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves category info  specified by store id (optional)</param>
         /// <param name="langId">Retrieves category info  specified by language id (optional)</param>
         /// <param name="schemaType">The name of the requirements set for the provided schema. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryInfo200Response</returns>
-        public async System.Threading.Tasks.Task<CategoryInfo200Response> CategoryInfoAsync(string id, string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CategoryInfo200Response> CategoryInfoAsync(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response> localVarResponse = await CategoryInfoWithHttpInfoAsync(id, varParams, responseFields, exclude, storeId, langId, schemaType, reportRequestId, disableReportCache, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response> localVarResponse = await CategoryInfoWithHttpInfoAsync(id, storeId, langId, schemaType, responseFields, varParams, exclude, reportRequestId, disableReportCache, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3078,18 +3078,18 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Retrieves category&#39;s info specified by category id</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves category info  specified by store id (optional)</param>
         /// <param name="langId">Retrieves category info  specified by language id (optional)</param>
         /// <param name="schemaType">The name of the requirements set for the provided schema. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryInfo200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response>> CategoryInfoWithHttpInfoAsync(string id, string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response>> CategoryInfoWithHttpInfoAsync(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3121,18 +3121,6 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
-            }
-            if (exclude != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
@@ -3144,6 +3132,18 @@ namespace Org.OpenAPITools.Api
             if (schemaType != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "schema_type", schemaType));
+            }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
+            if (exclude != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
             }
             if (reportRequestId != null)
             {
@@ -3190,28 +3190,28 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves categories specified by store id (optional)</param>
         /// <param name="langId">Retrieves categorys specified by language id (optional)</param>
+        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Category search that is specified by field (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCategoryList</returns>
-        public ModelResponseCategoryList CategoryList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? parentId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0)
+        public ModelResponseCategoryList CategoryList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList> localVarResponse = CategoryListWithHttpInfo(start, count, pageCursor, parentId, varParams, responseFields, exclude, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, avail, productType, findValue, findWhere, reportRequestId, disableReportCache, disableCache);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList> localVarResponse = CategoryListWithHttpInfo(start, count, pageCursor, storeId, langId, parentId, avail, productType, createdFrom, createdTo, modifiedFrom, modifiedTo, findValue, findWhere, responseFields, varParams, exclude, reportRequestId, disableReportCache, disableCache);
             return localVarResponse.Data;
         }
 
@@ -3222,26 +3222,26 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves categories specified by store id (optional)</param>
         /// <param name="langId">Retrieves categorys specified by language id (optional)</param>
+        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Category search that is specified by field (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCategoryList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList> CategoryListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? parentId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList> CategoryListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3278,22 +3278,6 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
             }
-            if (parentId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "parent_id", parentId));
-            }
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
-            }
-            if (exclude != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
@@ -3301,6 +3285,18 @@ namespace Org.OpenAPITools.Api
             if (langId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
+            }
+            if (parentId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "parent_id", parentId));
+            }
+            if (avail != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
+            }
+            if (productType != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "product_type", productType));
             }
             if (createdFrom != null)
             {
@@ -3318,14 +3314,6 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
             }
-            if (avail != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
-            }
-            if (productType != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "product_type", productType));
-            }
             if (findValue != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "find_value", findValue));
@@ -3333,6 +3321,18 @@ namespace Org.OpenAPITools.Api
             if (findWhere != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "find_where", findWhere));
+            }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
+            if (exclude != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
             }
             if (reportRequestId != null)
             {
@@ -3382,29 +3382,29 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves categories specified by store id (optional)</param>
         /// <param name="langId">Retrieves categorys specified by language id (optional)</param>
+        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Category search that is specified by field (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCategoryList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseCategoryList> CategoryListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? parentId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseCategoryList> CategoryListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList> localVarResponse = await CategoryListWithHttpInfoAsync(start, count, pageCursor, parentId, varParams, responseFields, exclude, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, avail, productType, findValue, findWhere, reportRequestId, disableReportCache, disableCache, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList> localVarResponse = await CategoryListWithHttpInfoAsync(start, count, pageCursor, storeId, langId, parentId, avail, productType, createdFrom, createdTo, modifiedFrom, modifiedTo, findValue, findWhere, responseFields, varParams, exclude, reportRequestId, disableReportCache, disableCache, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3415,27 +3415,27 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Retrieves categories specified by store id (optional)</param>
         /// <param name="langId">Retrieves categorys specified by language id (optional)</param>
+        /// <param name="parentId">Retrieves categories specified by parent id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
-        /// <param name="productType">A categorization for the product (optional)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Category search that is specified by field (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,parent_id,name,description&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCategoryList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList>> CategoryListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? parentId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), string? langId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList>> CategoryListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3472,22 +3472,6 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
             }
-            if (parentId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "parent_id", parentId));
-            }
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
-            }
-            if (exclude != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
@@ -3495,6 +3479,18 @@ namespace Org.OpenAPITools.Api
             if (langId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
+            }
+            if (parentId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "parent_id", parentId));
+            }
+            if (avail != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
+            }
+            if (productType != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "product_type", productType));
             }
             if (createdFrom != null)
             {
@@ -3512,14 +3508,6 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
             }
-            if (avail != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
-            }
-            if (productType != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "product_type", productType));
-            }
             if (findValue != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "find_value", findValue));
@@ -3527,6 +3515,18 @@ namespace Org.OpenAPITools.Api
             if (findWhere != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "find_where", findWhere));
+            }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
+            if (exclude != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
             }
             if (reportRequestId != null)
             {
@@ -3771,24 +3771,24 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Defines category update specified by category id</param>
         /// <param name="name">Defines new category’s name (optional)</param>
+        /// <param name="description">Defines new category&#39;s description (optional)</param>
+        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="parentId">Defines new parent category id (optional)</param>
-        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional)</param>
         /// <param name="sortOrder">Sort number in the list (optional)</param>
         /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
-        /// <param name="description">Defines new category&#39;s description (optional)</param>
-        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountConfigUpdate200Response</returns>
-        public AccountConfigUpdate200Response CategoryUpdate(string id, string? name = default(string?), string? parentId = default(string?), string? storesIds = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0)
+        public AccountConfigUpdate200Response CategoryUpdate(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = CategoryUpdateWithHttpInfo(id, name, parentId, storesIds, avail, sortOrder, modifiedTime, description, shortDescription, metaTitle, metaDescription, metaKeywords, seoUrl, langId, storeId);
+            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = CategoryUpdateWithHttpInfo(id, name, description, shortDescription, parentId, avail, sortOrder, modifiedTime, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
             return localVarResponse.Data;
         }
 
@@ -3798,22 +3798,22 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Defines category update specified by category id</param>
         /// <param name="name">Defines new category’s name (optional)</param>
+        /// <param name="description">Defines new category&#39;s description (optional)</param>
+        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="parentId">Defines new parent category id (optional)</param>
-        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional)</param>
         /// <param name="sortOrder">Sort number in the list (optional)</param>
         /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
-        /// <param name="description">Defines new category&#39;s description (optional)</param>
-        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountConfigUpdate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> CategoryUpdateWithHttpInfo(string id, string? name = default(string?), string? parentId = default(string?), string? storesIds = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> CategoryUpdateWithHttpInfo(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3849,13 +3849,17 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
             }
+            if (description != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "description", description));
+            }
+            if (shortDescription != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "short_description", shortDescription));
+            }
             if (parentId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "parent_id", parentId));
-            }
-            if (storesIds != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "stores_ids", storesIds));
             }
             if (avail != null)
             {
@@ -3868,14 +3872,6 @@ namespace Org.OpenAPITools.Api
             if (modifiedTime != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_time", modifiedTime));
-            }
-            if (description != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "description", description));
-            }
-            if (shortDescription != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "short_description", shortDescription));
             }
             if (metaTitle != null)
             {
@@ -3893,13 +3889,17 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "seo_url", seoUrl));
             }
-            if (langId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
-            }
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (storesIds != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "stores_ids", storesIds));
+            }
+            if (langId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryUpdate";
@@ -3936,25 +3936,25 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Defines category update specified by category id</param>
         /// <param name="name">Defines new category’s name (optional)</param>
+        /// <param name="description">Defines new category&#39;s description (optional)</param>
+        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="parentId">Defines new parent category id (optional)</param>
-        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional)</param>
         /// <param name="sortOrder">Sort number in the list (optional)</param>
         /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
-        /// <param name="description">Defines new category&#39;s description (optional)</param>
-        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountConfigUpdate200Response</returns>
-        public async System.Threading.Tasks.Task<AccountConfigUpdate200Response> CategoryUpdateAsync(string id, string? name = default(string?), string? parentId = default(string?), string? storesIds = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountConfigUpdate200Response> CategoryUpdateAsync(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = await CategoryUpdateWithHttpInfoAsync(id, name, parentId, storesIds, avail, sortOrder, modifiedTime, description, shortDescription, metaTitle, metaDescription, metaKeywords, seoUrl, langId, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = await CategoryUpdateWithHttpInfoAsync(id, name, description, shortDescription, parentId, avail, sortOrder, modifiedTime, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3964,23 +3964,23 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Defines category update specified by category id</param>
         /// <param name="name">Defines new category’s name (optional)</param>
+        /// <param name="description">Defines new category&#39;s description (optional)</param>
+        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="parentId">Defines new parent category id (optional)</param>
-        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional)</param>
         /// <param name="sortOrder">Sort number in the list (optional)</param>
         /// <param name="modifiedTime">Entity&#39;s date modification (optional)</param>
-        /// <param name="description">Defines new category&#39;s description (optional)</param>
-        /// <param name="shortDescription">Defines short description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="seoUrl">Defines unique category&#39;s URL for SEO (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountConfigUpdate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response>> CategoryUpdateWithHttpInfoAsync(string id, string? name = default(string?), string? parentId = default(string?), string? storesIds = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response>> CategoryUpdateWithHttpInfoAsync(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -4016,13 +4016,17 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
             }
+            if (description != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "description", description));
+            }
+            if (shortDescription != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "short_description", shortDescription));
+            }
             if (parentId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "parent_id", parentId));
-            }
-            if (storesIds != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "stores_ids", storesIds));
             }
             if (avail != null)
             {
@@ -4035,14 +4039,6 @@ namespace Org.OpenAPITools.Api
             if (modifiedTime != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_time", modifiedTime));
-            }
-            if (description != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "description", description));
-            }
-            if (shortDescription != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "short_description", shortDescription));
             }
             if (metaTitle != null)
             {
@@ -4060,13 +4056,17 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "seo_url", seoUrl));
             }
-            if (langId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
-            }
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (storesIds != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "stores_ids", storesIds));
+            }
+            if (langId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryUpdate";

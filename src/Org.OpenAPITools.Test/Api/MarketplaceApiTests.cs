@@ -62,21 +62,21 @@ namespace Org.OpenAPITools.Test.Api
         public void MarketplaceProductFindTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? storeId = null;
             //int? count = null;
             //string? pageCursor = null;
-            //string? categoriesIds = null;
             //string? keyword = null;
+            //string? categoriesIds = null;
+            //string? storeId = null;
             //string? asin = null;
             //string? ean = null;
             //string? gtin = null;
             //string? upc = null;
             //string? mpn = null;
             //string? isbn = null;
+            //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //string? responseFields = null;
-            //var response = instance.MarketplaceProductFind(storeId, count, pageCursor, categoriesIds, keyword, asin, ean, gtin, upc, mpn, isbn, varParams, exclude, responseFields);
+            //var response = instance.MarketplaceProductFind(count, pageCursor, keyword, categoriesIds, storeId, asin, ean, gtin, upc, mpn, isbn, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseMarketplaceProductFind>(response);
         }
     }

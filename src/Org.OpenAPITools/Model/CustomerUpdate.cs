@@ -48,11 +48,11 @@ namespace Org.OpenAPITools.Model
         /// <param name="consents">Defines consents to notifications.</param>
         /// <param name="tags">Customer tags.</param>
         /// <param name="gender">Defines customer&#39;s gender.</param>
-        /// <param name="storeId">Store Id.</param>
         /// <param name="note">The customer note..</param>
         /// <param name="status">Defines customer&#39;s status.</param>
+        /// <param name="storeId">Store Id.</param>
         /// <param name="address">address.</param>
-        public CustomerUpdate(string id = default(string), string groupId = default(string), string groupIds = default(string), string group = default(string), string email = default(string), string phone = default(string), string firstName = default(string), string lastName = default(string), string birthDay = default(string), bool newsLetterSubscription = default(bool), List<CustomerAddConsentsInner> consents = default(List<CustomerAddConsentsInner>), string tags = default(string), string gender = default(string), string storeId = default(string), string note = default(string), string status = default(string), List<CustomerUpdateAddressInner> address = default(List<CustomerUpdateAddressInner>))
+        public CustomerUpdate(string id = default(string), string groupId = default(string), string groupIds = default(string), string group = default(string), string email = default(string), string phone = default(string), string firstName = default(string), string lastName = default(string), string birthDay = default(string), bool newsLetterSubscription = default(bool), List<CustomerAddConsentsInner> consents = default(List<CustomerAddConsentsInner>), string tags = default(string), string gender = default(string), string note = default(string), string status = default(string), string storeId = default(string), List<CustomerUpdateAddressInner> address = default(List<CustomerUpdateAddressInner>))
         {
             this.Id = id;
             this.GroupId = groupId;
@@ -67,9 +67,9 @@ namespace Org.OpenAPITools.Model
             this.Consents = consents;
             this.Tags = tags;
             this.Gender = gender;
-            this.StoreId = storeId;
             this.Note = note;
             this.Status = status;
+            this.StoreId = storeId;
             this.Address = address;
         }
 
@@ -201,16 +201,6 @@ namespace Org.OpenAPITools.Model
         public string Gender { get; set; }
 
         /// <summary>
-        /// Store Id
-        /// </summary>
-        /// <value>Store Id</value>
-        /*
-        <example>1</example>
-        */
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
-        public string StoreId { get; set; }
-
-        /// <summary>
         /// The customer note.
         /// </summary>
         /// <value>The customer note.</value>
@@ -229,6 +219,16 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "status", EmitDefaultValue = false)]
         public string Status { get; set; }
+
+        /// <summary>
+        /// Store Id
+        /// </summary>
+        /// <value>Store Id</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        public string StoreId { get; set; }
 
         /// <summary>
         /// Gets or Sets Address
@@ -257,9 +257,9 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Consents: ").Append(Consents).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  Gender: ").Append(Gender).Append("\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  Note: ").Append(Note).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

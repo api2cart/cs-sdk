@@ -98,10 +98,10 @@ namespace Org.OpenAPITools.Test.Api
             //string id = null;
             //string? orderId = null;
             //string? storeId = null;
+            //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //string? responseFields = null;
-            //var response = instance.ReturnInfo(id, orderId, storeId, varParams, exclude, responseFields);
+            //var response = instance.ReturnInfo(id, orderId, storeId, responseFields, varParams, exclude);
             //Assert.IsType<ReturnInfo200Response>(response);
         }
 
@@ -115,9 +115,6 @@ namespace Org.OpenAPITools.Test.Api
             //int? start = null;
             //int? count = null;
             //string? pageCursor = null;
-            //string? varParams = null;
-            //string? exclude = null;
-            //string? responseFields = null;
             //string? orderId = null;
             //string? orderIds = null;
             //string? customerId = null;
@@ -128,9 +125,12 @@ namespace Org.OpenAPITools.Test.Api
             //string? createdTo = null;
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
+            //string? responseFields = null;
+            //string? varParams = null;
+            //string? exclude = null;
             //string? reportRequestId = null;
             //bool? disableReportCache = null;
-            //var response = instance.ReturnList(start, count, pageCursor, varParams, exclude, responseFields, orderId, orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, reportRequestId, disableReportCache);
+            //var response = instance.ReturnList(start, count, pageCursor, orderId, orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude, reportRequestId, disableReportCache);
             //Assert.IsType<ModelResponseReturnList>(response);
         }
 

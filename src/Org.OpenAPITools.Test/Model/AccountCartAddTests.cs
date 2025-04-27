@@ -713,6 +713,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ShoplineSharedSecret'
+        /// </summary>
+        [Fact]
+        public void ShoplineSharedSecretTest()
+        {
+            // TODO unit test for the property 'ShoplineSharedSecret'
+        }
+
+        /// <summary>
         /// Test the property 'ShopifyAccessToken'
         /// </summary>
         [Fact]

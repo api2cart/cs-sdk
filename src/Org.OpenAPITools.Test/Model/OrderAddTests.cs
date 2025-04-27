@@ -101,21 +101,21 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'SendNotifications'
+        /// Test the property 'FulfillmentStatus'
         /// </summary>
         [Fact]
-        public void SendNotificationsTest()
+        public void FulfillmentStatusTest()
         {
-            // TODO unit test for the property 'SendNotifications'
+            // TODO unit test for the property 'FulfillmentStatus'
         }
 
         /// <summary>
-        /// Test the property 'SendAdminNotifications'
+        /// Test the property 'FinancialStatus'
         /// </summary>
         [Fact]
-        public void SendAdminNotificationsTest()
+        public void FinancialStatusTest()
         {
-            // TODO unit test for the property 'SendAdminNotifications'
+            // TODO unit test for the property 'FinancialStatus'
         }
 
         /// <summary>
@@ -125,249 +125,6 @@ namespace Org.OpenAPITools.Test.Model
         public void CustomerEmailTest()
         {
             // TODO unit test for the property 'CustomerEmail'
-        }
-
-        /// <summary>
-        /// Test the property 'BillFirstName'
-        /// </summary>
-        [Fact]
-        public void BillFirstNameTest()
-        {
-            // TODO unit test for the property 'BillFirstName'
-        }
-
-        /// <summary>
-        /// Test the property 'BillLastName'
-        /// </summary>
-        [Fact]
-        public void BillLastNameTest()
-        {
-            // TODO unit test for the property 'BillLastName'
-        }
-
-        /// <summary>
-        /// Test the property 'BillAddress1'
-        /// </summary>
-        [Fact]
-        public void BillAddress1Test()
-        {
-            // TODO unit test for the property 'BillAddress1'
-        }
-
-        /// <summary>
-        /// Test the property 'BillCity'
-        /// </summary>
-        [Fact]
-        public void BillCityTest()
-        {
-            // TODO unit test for the property 'BillCity'
-        }
-
-        /// <summary>
-        /// Test the property 'BillPostcode'
-        /// </summary>
-        [Fact]
-        public void BillPostcodeTest()
-        {
-            // TODO unit test for the property 'BillPostcode'
-        }
-
-        /// <summary>
-        /// Test the property 'BillState'
-        /// </summary>
-        [Fact]
-        public void BillStateTest()
-        {
-            // TODO unit test for the property 'BillState'
-        }
-
-        /// <summary>
-        /// Test the property 'BillCountry'
-        /// </summary>
-        [Fact]
-        public void BillCountryTest()
-        {
-            // TODO unit test for the property 'BillCountry'
-        }
-
-        /// <summary>
-        /// Test the property 'ShippFirstName'
-        /// </summary>
-        [Fact]
-        public void ShippFirstNameTest()
-        {
-            // TODO unit test for the property 'ShippFirstName'
-        }
-
-        /// <summary>
-        /// Test the property 'ShippLastName'
-        /// </summary>
-        [Fact]
-        public void ShippLastNameTest()
-        {
-            // TODO unit test for the property 'ShippLastName'
-        }
-
-        /// <summary>
-        /// Test the property 'ShippAddress1'
-        /// </summary>
-        [Fact]
-        public void ShippAddress1Test()
-        {
-            // TODO unit test for the property 'ShippAddress1'
-        }
-
-        /// <summary>
-        /// Test the property 'ShippCity'
-        /// </summary>
-        [Fact]
-        public void ShippCityTest()
-        {
-            // TODO unit test for the property 'ShippCity'
-        }
-
-        /// <summary>
-        /// Test the property 'ShippPostcode'
-        /// </summary>
-        [Fact]
-        public void ShippPostcodeTest()
-        {
-            // TODO unit test for the property 'ShippPostcode'
-        }
-
-        /// <summary>
-        /// Test the property 'ShippState'
-        /// </summary>
-        [Fact]
-        public void ShippStateTest()
-        {
-            // TODO unit test for the property 'ShippState'
-        }
-
-        /// <summary>
-        /// Test the property 'ShippCountry'
-        /// </summary>
-        [Fact]
-        public void ShippCountryTest()
-        {
-            // TODO unit test for the property 'ShippCountry'
-        }
-
-        /// <summary>
-        /// Test the property 'TotalPrice'
-        /// </summary>
-        [Fact]
-        public void TotalPriceTest()
-        {
-            // TODO unit test for the property 'TotalPrice'
-        }
-
-        /// <summary>
-        /// Test the property 'Date'
-        /// </summary>
-        [Fact]
-        public void DateTest()
-        {
-            // TODO unit test for the property 'Date'
-        }
-
-        /// <summary>
-        /// Test the property 'OrderPaymentMethod'
-        /// </summary>
-        [Fact]
-        public void OrderPaymentMethodTest()
-        {
-            // TODO unit test for the property 'OrderPaymentMethod'
-        }
-
-        /// <summary>
-        /// Test the property 'TransactionId'
-        /// </summary>
-        [Fact]
-        public void TransactionIdTest()
-        {
-            // TODO unit test for the property 'TransactionId'
-        }
-
-        /// <summary>
-        /// Test the property 'OrderShippingMethod'
-        /// </summary>
-        [Fact]
-        public void OrderShippingMethodTest()
-        {
-            // TODO unit test for the property 'OrderShippingMethod'
-        }
-
-        /// <summary>
-        /// Test the property 'Currency'
-        /// </summary>
-        [Fact]
-        public void CurrencyTest()
-        {
-            // TODO unit test for the property 'Currency'
-        }
-
-        /// <summary>
-        /// Test the property 'BillAddress2'
-        /// </summary>
-        [Fact]
-        public void BillAddress2Test()
-        {
-            // TODO unit test for the property 'BillAddress2'
-        }
-
-        /// <summary>
-        /// Test the property 'BillCompany'
-        /// </summary>
-        [Fact]
-        public void BillCompanyTest()
-        {
-            // TODO unit test for the property 'BillCompany'
-        }
-
-        /// <summary>
-        /// Test the property 'BillPhone'
-        /// </summary>
-        [Fact]
-        public void BillPhoneTest()
-        {
-            // TODO unit test for the property 'BillPhone'
-        }
-
-        /// <summary>
-        /// Test the property 'BillFax'
-        /// </summary>
-        [Fact]
-        public void BillFaxTest()
-        {
-            // TODO unit test for the property 'BillFax'
-        }
-
-        /// <summary>
-        /// Test the property 'Comment'
-        /// </summary>
-        [Fact]
-        public void CommentTest()
-        {
-            // TODO unit test for the property 'Comment'
-        }
-
-        /// <summary>
-        /// Test the property 'AdminComment'
-        /// </summary>
-        [Fact]
-        public void AdminCommentTest()
-        {
-            // TODO unit test for the property 'AdminComment'
-        }
-
-        /// <summary>
-        /// Test the property 'AdminPrivateComment'
-        /// </summary>
-        [Fact]
-        public void AdminPrivateCommentTest()
-        {
-            // TODO unit test for the property 'AdminPrivateComment'
         }
 
         /// <summary>
@@ -425,12 +182,228 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'OrderPaymentMethod'
+        /// </summary>
+        [Fact]
+        public void OrderPaymentMethodTest()
+        {
+            // TODO unit test for the property 'OrderPaymentMethod'
+        }
+
+        /// <summary>
+        /// Test the property 'TransactionId'
+        /// </summary>
+        [Fact]
+        public void TransactionIdTest()
+        {
+            // TODO unit test for the property 'TransactionId'
+        }
+
+        /// <summary>
+        /// Test the property 'Currency'
+        /// </summary>
+        [Fact]
+        public void CurrencyTest()
+        {
+            // TODO unit test for the property 'Currency'
+        }
+
+        /// <summary>
+        /// Test the property 'Date'
+        /// </summary>
+        [Fact]
+        public void DateTest()
+        {
+            // TODO unit test for the property 'Date'
+        }
+
+        /// <summary>
+        /// Test the property 'DateModified'
+        /// </summary>
+        [Fact]
+        public void DateModifiedTest()
+        {
+            // TODO unit test for the property 'DateModified'
+        }
+
+        /// <summary>
+        /// Test the property 'DateFinished'
+        /// </summary>
+        [Fact]
+        public void DateFinishedTest()
+        {
+            // TODO unit test for the property 'DateFinished'
+        }
+
+        /// <summary>
+        /// Test the property 'BillFirstName'
+        /// </summary>
+        [Fact]
+        public void BillFirstNameTest()
+        {
+            // TODO unit test for the property 'BillFirstName'
+        }
+
+        /// <summary>
+        /// Test the property 'BillLastName'
+        /// </summary>
+        [Fact]
+        public void BillLastNameTest()
+        {
+            // TODO unit test for the property 'BillLastName'
+        }
+
+        /// <summary>
+        /// Test the property 'BillAddress1'
+        /// </summary>
+        [Fact]
+        public void BillAddress1Test()
+        {
+            // TODO unit test for the property 'BillAddress1'
+        }
+
+        /// <summary>
+        /// Test the property 'BillAddress2'
+        /// </summary>
+        [Fact]
+        public void BillAddress2Test()
+        {
+            // TODO unit test for the property 'BillAddress2'
+        }
+
+        /// <summary>
+        /// Test the property 'BillCity'
+        /// </summary>
+        [Fact]
+        public void BillCityTest()
+        {
+            // TODO unit test for the property 'BillCity'
+        }
+
+        /// <summary>
+        /// Test the property 'BillPostcode'
+        /// </summary>
+        [Fact]
+        public void BillPostcodeTest()
+        {
+            // TODO unit test for the property 'BillPostcode'
+        }
+
+        /// <summary>
+        /// Test the property 'BillState'
+        /// </summary>
+        [Fact]
+        public void BillStateTest()
+        {
+            // TODO unit test for the property 'BillState'
+        }
+
+        /// <summary>
+        /// Test the property 'BillCountry'
+        /// </summary>
+        [Fact]
+        public void BillCountryTest()
+        {
+            // TODO unit test for the property 'BillCountry'
+        }
+
+        /// <summary>
+        /// Test the property 'BillCompany'
+        /// </summary>
+        [Fact]
+        public void BillCompanyTest()
+        {
+            // TODO unit test for the property 'BillCompany'
+        }
+
+        /// <summary>
+        /// Test the property 'BillPhone'
+        /// </summary>
+        [Fact]
+        public void BillPhoneTest()
+        {
+            // TODO unit test for the property 'BillPhone'
+        }
+
+        /// <summary>
+        /// Test the property 'BillFax'
+        /// </summary>
+        [Fact]
+        public void BillFaxTest()
+        {
+            // TODO unit test for the property 'BillFax'
+        }
+
+        /// <summary>
+        /// Test the property 'ShippFirstName'
+        /// </summary>
+        [Fact]
+        public void ShippFirstNameTest()
+        {
+            // TODO unit test for the property 'ShippFirstName'
+        }
+
+        /// <summary>
+        /// Test the property 'ShippLastName'
+        /// </summary>
+        [Fact]
+        public void ShippLastNameTest()
+        {
+            // TODO unit test for the property 'ShippLastName'
+        }
+
+        /// <summary>
+        /// Test the property 'ShippAddress1'
+        /// </summary>
+        [Fact]
+        public void ShippAddress1Test()
+        {
+            // TODO unit test for the property 'ShippAddress1'
+        }
+
+        /// <summary>
         /// Test the property 'ShippAddress2'
         /// </summary>
         [Fact]
         public void ShippAddress2Test()
         {
             // TODO unit test for the property 'ShippAddress2'
+        }
+
+        /// <summary>
+        /// Test the property 'ShippCity'
+        /// </summary>
+        [Fact]
+        public void ShippCityTest()
+        {
+            // TODO unit test for the property 'ShippCity'
+        }
+
+        /// <summary>
+        /// Test the property 'ShippPostcode'
+        /// </summary>
+        [Fact]
+        public void ShippPostcodeTest()
+        {
+            // TODO unit test for the property 'ShippPostcode'
+        }
+
+        /// <summary>
+        /// Test the property 'ShippState'
+        /// </summary>
+        [Fact]
+        public void ShippStateTest()
+        {
+            // TODO unit test for the property 'ShippState'
+        }
+
+        /// <summary>
+        /// Test the property 'ShippCountry'
+        /// </summary>
+        [Fact]
+        public void ShippCountryTest()
+        {
+            // TODO unit test for the property 'ShippCountry'
         }
 
         /// <summary>
@@ -461,24 +434,6 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'DateModified'
-        /// </summary>
-        [Fact]
-        public void DateModifiedTest()
-        {
-            // TODO unit test for the property 'DateModified'
-        }
-
-        /// <summary>
-        /// Test the property 'DateFinished'
-        /// </summary>
-        [Fact]
-        public void DateFinishedTest()
-        {
-            // TODO unit test for the property 'DateFinished'
-        }
-
-        /// <summary>
         /// Test the property 'SubtotalPrice'
         /// </summary>
         [Fact]
@@ -494,6 +449,33 @@ namespace Org.OpenAPITools.Test.Model
         public void TaxPriceTest()
         {
             // TODO unit test for the property 'TaxPrice'
+        }
+
+        /// <summary>
+        /// Test the property 'TotalPrice'
+        /// </summary>
+        [Fact]
+        public void TotalPriceTest()
+        {
+            // TODO unit test for the property 'TotalPrice'
+        }
+
+        /// <summary>
+        /// Test the property 'TotalPaid'
+        /// </summary>
+        [Fact]
+        public void TotalPaidTest()
+        {
+            // TODO unit test for the property 'TotalPaid'
+        }
+
+        /// <summary>
+        /// Test the property 'TotalWeight'
+        /// </summary>
+        [Fact]
+        public void TotalWeightTest()
+        {
+            // TODO unit test for the property 'TotalWeight'
         }
 
         /// <summary>
@@ -524,24 +506,6 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'CarrierId'
-        /// </summary>
-        [Fact]
-        public void CarrierIdTest()
-        {
-            // TODO unit test for the property 'CarrierId'
-        }
-
-        /// <summary>
-        /// Test the property 'WarehouseId'
-        /// </summary>
-        [Fact]
-        public void WarehouseIdTest()
-        {
-            // TODO unit test for the property 'WarehouseId'
-        }
-
-        /// <summary>
         /// Test the property 'Discount'
         /// </summary>
         [Fact]
@@ -560,15 +524,6 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Coupons'
-        /// </summary>
-        [Fact]
-        public void CouponsTest()
-        {
-            // TODO unit test for the property 'Coupons'
-        }
-
-        /// <summary>
         /// Test the property 'GiftCertificateDiscount'
         /// </summary>
         [Fact]
@@ -578,39 +533,39 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'FulfillmentStatus'
+        /// Test the property 'OrderShippingMethod'
         /// </summary>
         [Fact]
-        public void FulfillmentStatusTest()
+        public void OrderShippingMethodTest()
         {
-            // TODO unit test for the property 'FulfillmentStatus'
+            // TODO unit test for the property 'OrderShippingMethod'
         }
 
         /// <summary>
-        /// Test the property 'FinancialStatus'
+        /// Test the property 'CarrierId'
         /// </summary>
         [Fact]
-        public void FinancialStatusTest()
+        public void CarrierIdTest()
         {
-            // TODO unit test for the property 'FinancialStatus'
+            // TODO unit test for the property 'CarrierId'
         }
 
         /// <summary>
-        /// Test the property 'TotalPaid'
+        /// Test the property 'WarehouseId'
         /// </summary>
         [Fact]
-        public void TotalPaidTest()
+        public void WarehouseIdTest()
         {
-            // TODO unit test for the property 'TotalPaid'
+            // TODO unit test for the property 'WarehouseId'
         }
 
         /// <summary>
-        /// Test the property 'ExternalSource'
+        /// Test the property 'Coupons'
         /// </summary>
         [Fact]
-        public void ExternalSourceTest()
+        public void CouponsTest()
         {
-            // TODO unit test for the property 'ExternalSource'
+            // TODO unit test for the property 'Coupons'
         }
 
         /// <summary>
@@ -620,6 +575,60 @@ namespace Org.OpenAPITools.Test.Model
         public void TagsTest()
         {
             // TODO unit test for the property 'Tags'
+        }
+
+        /// <summary>
+        /// Test the property 'Comment'
+        /// </summary>
+        [Fact]
+        public void CommentTest()
+        {
+            // TODO unit test for the property 'Comment'
+        }
+
+        /// <summary>
+        /// Test the property 'AdminComment'
+        /// </summary>
+        [Fact]
+        public void AdminCommentTest()
+        {
+            // TODO unit test for the property 'AdminComment'
+        }
+
+        /// <summary>
+        /// Test the property 'AdminPrivateComment'
+        /// </summary>
+        [Fact]
+        public void AdminPrivateCommentTest()
+        {
+            // TODO unit test for the property 'AdminPrivateComment'
+        }
+
+        /// <summary>
+        /// Test the property 'SendNotifications'
+        /// </summary>
+        [Fact]
+        public void SendNotificationsTest()
+        {
+            // TODO unit test for the property 'SendNotifications'
+        }
+
+        /// <summary>
+        /// Test the property 'SendAdminNotifications'
+        /// </summary>
+        [Fact]
+        public void SendAdminNotificationsTest()
+        {
+            // TODO unit test for the property 'SendAdminNotifications'
+        }
+
+        /// <summary>
+        /// Test the property 'ExternalSource'
+        /// </summary>
+        [Fact]
+        public void ExternalSourceTest()
+        {
+            // TODO unit test for the property 'ExternalSource'
         }
 
         /// <summary>
@@ -647,15 +656,6 @@ namespace Org.OpenAPITools.Test.Model
         public void NoteAttributesTest()
         {
             // TODO unit test for the property 'NoteAttributes'
-        }
-
-        /// <summary>
-        /// Test the property 'TotalWeight'
-        /// </summary>
-        [Fact]
-        public void TotalWeightTest()
-        {
-            // TODO unit test for the property 'TotalWeight'
         }
 
         /// <summary>

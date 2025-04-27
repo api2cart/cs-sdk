@@ -223,7 +223,7 @@ This endpoint does not need any parameter.
 
 <a id="cartcatalogpriceruleslist"></a>
 # **CartCatalogPriceRulesList**
-> ModelResponseCartCatalogPriceRulesList CartCatalogPriceRulesList (string? pageCursor = null, int? start = null, int? count = null, string? ids = null, string? varParams = null, string? responseFields = null, string? exclude = null)
+> ModelResponseCartCatalogPriceRulesList CartCatalogPriceRulesList (int? start = null, int? count = null, string? pageCursor = null, string? ids = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 cart.catalog_price_rules.list
 
@@ -255,18 +255,18 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new CartApi(config);
-            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var ids = 24,25;  // string? | Retrieves  catalog_price_rules by ids (optional) 
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description")
             var responseFields = {result{catalog_price_rules_count,catalog_price_rules{id,type,name,avail,usage_count,actions,conditions}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description")
             var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // cart.catalog_price_rules.list
-                ModelResponseCartCatalogPriceRulesList result = apiInstance.CartCatalogPriceRulesList(pageCursor, start, count, ids, varParams, responseFields, exclude);
+                ModelResponseCartCatalogPriceRulesList result = apiInstance.CartCatalogPriceRulesList(start, count, pageCursor, ids, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -287,7 +287,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.catalog_price_rules.list
-    ApiResponse<ModelResponseCartCatalogPriceRulesList> response = apiInstance.CartCatalogPriceRulesListWithHttpInfo(pageCursor, start, count, ids, varParams, responseFields, exclude);
+    ApiResponse<ModelResponseCartCatalogPriceRulesList> response = apiInstance.CartCatalogPriceRulesListWithHttpInfo(start, count, pageCursor, ids, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -304,12 +304,12 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **ids** | **string?** | Retrieves  catalog_price_rules by ids | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description&quot;] |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
@@ -737,7 +737,7 @@ catch (ApiException e)
 
 <a id="cartcouponconditionadd"></a>
 # **CartCouponConditionAdd**
-> BasketLiveShippingServiceDelete200Response CartCouponConditionAdd (string couponId, string entity, string key, string varOperator, string value, string? storeId = null, string? target = null, bool? includeTax = null, bool? includeShipping = null)
+> BasketLiveShippingServiceDelete200Response CartCouponConditionAdd (string couponId, string entity, string key, string varOperator, string value, string? target = null, bool? includeTax = null, bool? includeShipping = null, string? storeId = null)
 
 cart.coupon.condition.add
 
@@ -774,15 +774,15 @@ namespace Example
             var key = subtotal;  // string | Defines condition entity attribute key
             var varOperator = ==;  // string | Defines condition operator
             var value = 2;  // string | Defines condition value, can be comma separated according to the operator.
-            var storeId = 1;  // string? | Store Id (optional) 
             var target = coupon_action;  // string? | Defines condition operator (optional)  (default to "coupon_prerequisite")
             var includeTax = true;  // bool? | Indicates whether to apply a discount for taxes. (optional)  (default to false)
             var includeShipping = true;  // bool? | Indicates whether to apply a discount for shipping. (optional)  (default to false)
+            var storeId = 1;  // string? | Store Id (optional) 
 
             try
             {
                 // cart.coupon.condition.add
-                BasketLiveShippingServiceDelete200Response result = apiInstance.CartCouponConditionAdd(couponId, entity, key, varOperator, value, storeId, target, includeTax, includeShipping);
+                BasketLiveShippingServiceDelete200Response result = apiInstance.CartCouponConditionAdd(couponId, entity, key, varOperator, value, target, includeTax, includeShipping, storeId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -803,7 +803,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.coupon.condition.add
-    ApiResponse<BasketLiveShippingServiceDelete200Response> response = apiInstance.CartCouponConditionAddWithHttpInfo(couponId, entity, key, varOperator, value, storeId, target, includeTax, includeShipping);
+    ApiResponse<BasketLiveShippingServiceDelete200Response> response = apiInstance.CartCouponConditionAddWithHttpInfo(couponId, entity, key, varOperator, value, target, includeTax, includeShipping, storeId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -825,10 +825,10 @@ catch (ApiException e)
 | **key** | **string** | Defines condition entity attribute key |  |
 | **varOperator** | **string** | Defines condition operator |  |
 | **value** | **string** | Defines condition value, can be comma separated according to the operator. |  |
-| **storeId** | **string?** | Store Id | [optional]  |
 | **target** | **string?** | Defines condition operator | [optional] [default to &quot;coupon_prerequisite&quot;] |
 | **includeTax** | **bool?** | Indicates whether to apply a discount for taxes. | [optional] [default to false] |
 | **includeShipping** | **bool?** | Indicates whether to apply a discount for shipping. | [optional] [default to false] |
+| **storeId** | **string?** | Store Id | [optional]  |
 
 ### Return type
 
@@ -853,7 +853,7 @@ catch (ApiException e)
 
 <a id="cartcouponcount"></a>
 # **CartCouponCount**
-> CartCouponCount200Response CartCouponCount (string? storeId = null, string? dateStartFrom = null, string? dateStartTo = null, string? dateEndFrom = null, string? dateEndTo = null, bool? avail = null)
+> CartCouponCount200Response CartCouponCount (string? storeId = null, bool? avail = null, string? dateStartFrom = null, string? dateStartTo = null, string? dateEndFrom = null, string? dateEndTo = null)
 
 cart.coupon.count
 
@@ -886,16 +886,16 @@ namespace Example
 
             var apiInstance = new CartApi(config);
             var storeId = 1;  // string? | Store Id (optional) 
+            var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
             var dateStartFrom = 2016-12-29 16:44:30;  // string? | Filter entity by date_start (greater or equal) (optional) 
             var dateStartTo = 2016-12-29 16:44:30;  // string? | Filter entity by date_start (less or equal) (optional) 
             var dateEndFrom = 2016-12-29 16:44:30;  // string? | Filter entity by date_end (greater or equal) (optional) 
             var dateEndTo = 2016-12-29 16:44:30;  // string? | Filter entity by date_end (less or equal) (optional) 
-            var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
 
             try
             {
                 // cart.coupon.count
-                CartCouponCount200Response result = apiInstance.CartCouponCount(storeId, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, avail);
+                CartCouponCount200Response result = apiInstance.CartCouponCount(storeId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -916,7 +916,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.coupon.count
-    ApiResponse<CartCouponCount200Response> response = apiInstance.CartCouponCountWithHttpInfo(storeId, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, avail);
+    ApiResponse<CartCouponCount200Response> response = apiInstance.CartCouponCountWithHttpInfo(storeId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -934,11 +934,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **storeId** | **string?** | Store Id | [optional]  |
+| **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
 | **dateStartFrom** | **string?** | Filter entity by date_start (greater or equal) | [optional]  |
 | **dateStartTo** | **string?** | Filter entity by date_start (less or equal) | [optional]  |
 | **dateEndFrom** | **string?** | Filter entity by date_end (greater or equal) | [optional]  |
 | **dateEndTo** | **string?** | Filter entity by date_end (less or equal) | [optional]  |
-| **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
 
 ### Return type
 
@@ -1065,7 +1065,7 @@ catch (ApiException e)
 
 <a id="cartcouponlist"></a>
 # **CartCouponList**
-> ModelResponseCartCouponList CartCouponList (string? pageCursor = null, int? start = null, int? count = null, string? couponsIds = null, string? storeId = null, string? dateStartFrom = null, string? dateStartTo = null, string? dateEndFrom = null, string? dateEndTo = null, bool? avail = null, string? langId = null, string? varParams = null, string? responseFields = null, string? exclude = null)
+> ModelResponseCartCouponList CartCouponList (int? start = null, int? count = null, string? pageCursor = null, string? couponsIds = null, string? storeId = null, string? langId = null, bool? avail = null, string? dateStartFrom = null, string? dateStartTo = null, string? dateEndFrom = null, string? dateEndTo = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 cart.coupon.list
 
@@ -1097,25 +1097,25 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new CartApi(config);
-            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var couponsIds = 1,2,3;  // string? | Filter coupons by ids (optional) 
             var storeId = 1;  // string? | Filter coupons by store id (optional) 
+            var langId = 3;  // string? | Language id (optional) 
+            var avail = false;  // bool? | Filter coupons by avail status (optional) 
             var dateStartFrom = 2016-12-29 16:44:30;  // string? | Filter entity by date_start (greater or equal) (optional) 
             var dateStartTo = 2016-12-29 16:44:30;  // string? | Filter entity by date_start (less or equal) (optional) 
             var dateEndFrom = 2016-12-29 16:44:30;  // string? | Filter entity by date_end (greater or equal) (optional) 
             var dateEndTo = 2016-12-29 16:44:30;  // string? | Filter entity by date_end (less or equal) (optional) 
-            var avail = false;  // bool? | Filter coupons by avail status (optional) 
-            var langId = 3;  // string? | Language id (optional) 
-            var varParams = id,code,type,amount;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,code,name,description")
             var responseFields = {pagination,result{coupon_count,coupon{id,code,name,conditions,actions{scope,amount,conditions{id,value,sub-conditions}},date_start,avail}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,code,type,amount;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,code,name,description")
             var exclude = usage_history,type;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // cart.coupon.list
-                ModelResponseCartCouponList result = apiInstance.CartCouponList(pageCursor, start, count, couponsIds, storeId, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, avail, langId, varParams, responseFields, exclude);
+                ModelResponseCartCouponList result = apiInstance.CartCouponList(start, count, pageCursor, couponsIds, storeId, langId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1136,7 +1136,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.coupon.list
-    ApiResponse<ModelResponseCartCouponList> response = apiInstance.CartCouponListWithHttpInfo(pageCursor, start, count, couponsIds, storeId, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, avail, langId, varParams, responseFields, exclude);
+    ApiResponse<ModelResponseCartCouponList> response = apiInstance.CartCouponListWithHttpInfo(start, count, pageCursor, couponsIds, storeId, langId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1153,19 +1153,19 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **couponsIds** | **string?** | Filter coupons by ids | [optional]  |
 | **storeId** | **string?** | Filter coupons by store id | [optional]  |
+| **langId** | **string?** | Language id | [optional]  |
+| **avail** | **bool?** | Filter coupons by avail status | [optional]  |
 | **dateStartFrom** | **string?** | Filter entity by date_start (greater or equal) | [optional]  |
 | **dateStartTo** | **string?** | Filter entity by date_start (less or equal) | [optional]  |
 | **dateEndFrom** | **string?** | Filter entity by date_end (greater or equal) | [optional]  |
 | **dateEndTo** | **string?** | Filter entity by date_end (less or equal) | [optional]  |
-| **avail** | **bool?** | Filter coupons by avail status | [optional]  |
-| **langId** | **string?** | Language id | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,code,name,description&quot;] |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,code,name,description&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
@@ -1797,7 +1797,7 @@ catch (ApiException e)
 
 <a id="cartgiftcardlist"></a>
 # **CartGiftcardList**
-> ModelResponseCartGiftCardList CartGiftcardList (string? pageCursor = null, int? start = null, int? count = null, string? storeId = null, string? varParams = null, string? responseFields = null, string? exclude = null)
+> ModelResponseCartGiftCardList CartGiftcardList (int? start = null, int? count = null, string? pageCursor = null, string? storeId = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 cart.giftcard.list
 
@@ -1829,18 +1829,18 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new CartApi(config);
-            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,code,name")
             var responseFields = {pagination,result{gift_card{id,code,amount,status}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,code,name")
             var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // cart.giftcard.list
-                ModelResponseCartGiftCardList result = apiInstance.CartGiftcardList(pageCursor, start, count, storeId, varParams, responseFields, exclude);
+                ModelResponseCartGiftCardList result = apiInstance.CartGiftcardList(start, count, pageCursor, storeId, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1861,7 +1861,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.giftcard.list
-    ApiResponse<ModelResponseCartGiftCardList> response = apiInstance.CartGiftcardListWithHttpInfo(pageCursor, start, count, storeId, varParams, responseFields, exclude);
+    ApiResponse<ModelResponseCartGiftCardList> response = apiInstance.CartGiftcardListWithHttpInfo(start, count, pageCursor, storeId, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1878,12 +1878,12 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,code,name&quot;] |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,code,name&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
@@ -1909,7 +1909,7 @@ catch (ApiException e)
 
 <a id="cartinfo"></a>
 # **CartInfo**
-> CartInfo200Response CartInfo (string? varParams = null, string? responseFields = null, string? exclude = null, string? storeId = null)
+> CartInfo200Response CartInfo (string? storeId = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 cart.info
 
@@ -1941,15 +1941,15 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new CartApi(config);
-            var varParams = name,url;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "store_name,store_url,db_prefix")
-            var responseFields = {result{name,url,stores_info{store_id,name,currency{id,iso3},store_owner_info}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var exclude = name,url;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
+            var responseFields = {result{name,url,stores_info{store_id,name,currency{id,iso3},store_owner_info}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = name,url;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "store_name,store_url,db_prefix")
+            var exclude = name,url;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // cart.info
-                CartInfo200Response result = apiInstance.CartInfo(varParams, responseFields, exclude, storeId);
+                CartInfo200Response result = apiInstance.CartInfo(storeId, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1970,7 +1970,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.info
-    ApiResponse<CartInfo200Response> response = apiInstance.CartInfoWithHttpInfo(varParams, responseFields, exclude, storeId);
+    ApiResponse<CartInfo200Response> response = apiInstance.CartInfoWithHttpInfo(storeId, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1987,10 +1987,10 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;store_name,store_url,db_prefix&quot;] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;store_name,store_url,db_prefix&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 
@@ -2106,7 +2106,7 @@ This endpoint does not need any parameter.
 
 <a id="cartmetadatalist"></a>
 # **CartMetaDataList**
-> ModelResponseCartMetaDataList CartMetaDataList (string entityId, string? entity = null, string? storeId = null, string? langId = null, string? key = null, int? count = null, string? pageCursor = null, string? varParams = null, string? responseFields = null, string? exclude = null)
+> ModelResponseCartMetaDataList CartMetaDataList (string entityId, int? count = null, string? pageCursor = null, string? entity = null, string? storeId = null, string? langId = null, string? key = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 cart.meta_data.list
 
@@ -2139,20 +2139,20 @@ namespace Example
 
             var apiInstance = new CartApi(config);
             var entityId = 1;  // string | Entity Id
+            var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var entity = order;  // string? | Entity (optional)  (default to "product")
             var storeId = 1;  // string? | Store Id (optional) 
             var langId = 3;  // string? | Language id (optional) 
             var key = subtotal;  // string? | Key (optional) 
-            var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
-            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "key,value")
             var responseFields = {result{items{key,value}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "key,value")
             var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // cart.meta_data.list
-                ModelResponseCartMetaDataList result = apiInstance.CartMetaDataList(entityId, entity, storeId, langId, key, count, pageCursor, varParams, responseFields, exclude);
+                ModelResponseCartMetaDataList result = apiInstance.CartMetaDataList(entityId, count, pageCursor, entity, storeId, langId, key, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2173,7 +2173,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.meta_data.list
-    ApiResponse<ModelResponseCartMetaDataList> response = apiInstance.CartMetaDataListWithHttpInfo(entityId, entity, storeId, langId, key, count, pageCursor, varParams, responseFields, exclude);
+    ApiResponse<ModelResponseCartMetaDataList> response = apiInstance.CartMetaDataListWithHttpInfo(entityId, count, pageCursor, entity, storeId, langId, key, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2191,14 +2191,14 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **entityId** | **string** | Entity Id |  |
+| **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **entity** | **string?** | Entity | [optional] [default to &quot;product&quot;] |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
 | **key** | **string?** | Key | [optional]  |
-| **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
-| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;key,value&quot;] |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;key,value&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
@@ -2539,7 +2539,7 @@ This endpoint does not need any parameter.
 
 <a id="cartpluginlist"></a>
 # **CartPluginList**
-> CartPluginList200Response CartPluginList (string? storeId = null, int? start = null, int? count = null)
+> CartPluginList200Response CartPluginList (int? start = null, int? count = null, string? storeId = null)
 
 cart.plugin.list
 
@@ -2571,14 +2571,14 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new CartApi(config);
-            var storeId = 1;  // string? | Store Id (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var storeId = 1;  // string? | Store Id (optional) 
 
             try
             {
                 // cart.plugin.list
-                CartPluginList200Response result = apiInstance.CartPluginList(storeId, start, count);
+                CartPluginList200Response result = apiInstance.CartPluginList(start, count, storeId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2599,7 +2599,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.plugin.list
-    ApiResponse<CartPluginList200Response> response = apiInstance.CartPluginListWithHttpInfo(storeId, start, count);
+    ApiResponse<CartPluginList200Response> response = apiInstance.CartPluginListWithHttpInfo(start, count, storeId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2616,9 +2616,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **storeId** | **string?** | Store Id | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **storeId** | **string?** | Store Id | [optional]  |
 
 ### Return type
 
@@ -2859,7 +2859,7 @@ catch (ApiException e)
 
 <a id="cartscriptlist"></a>
 # **CartScriptList**
-> ModelResponseCartScriptList CartScriptList (string? pageCursor = null, int? start = null, int? count = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? scriptIds = null, string? storeId = null, string? varParams = null, string? responseFields = null, string? exclude = null)
+> ModelResponseCartScriptList CartScriptList (int? start = null, int? count = null, string? pageCursor = null, string? scriptIds = null, string? storeId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 cart.script.list
 
@@ -2891,23 +2891,23 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new CartApi(config);
-            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
+            var scriptIds = 34023324,34024032;  // string? | Retrieves only scripts with specific ids (optional) 
+            var storeId = 1;  // string? | Store Id (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-            var scriptIds = 34023324,34024032;  // string? | Retrieves only scripts with specific ids (optional) 
-            var storeId = 1;  // string? | Store Id (optional) 
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description")
             var responseFields = {pagination,result{total_count,scripts{id,name,src,created_time{value}}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description")
             var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // cart.script.list
-                ModelResponseCartScriptList result = apiInstance.CartScriptList(pageCursor, start, count, createdFrom, createdTo, modifiedFrom, modifiedTo, scriptIds, storeId, varParams, responseFields, exclude);
+                ModelResponseCartScriptList result = apiInstance.CartScriptList(start, count, pageCursor, scriptIds, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2928,7 +2928,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.script.list
-    ApiResponse<ModelResponseCartScriptList> response = apiInstance.CartScriptListWithHttpInfo(pageCursor, start, count, createdFrom, createdTo, modifiedFrom, modifiedTo, scriptIds, storeId, varParams, responseFields, exclude);
+    ApiResponse<ModelResponseCartScriptList> response = apiInstance.CartScriptListWithHttpInfo(start, count, pageCursor, scriptIds, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2945,17 +2945,17 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
+| **scriptIds** | **string?** | Retrieves only scripts with specific ids | [optional]  |
+| **storeId** | **string?** | Store Id | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-| **scriptIds** | **string?** | Retrieves only scripts with specific ids | [optional]  |
-| **storeId** | **string?** | Store Id | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description&quot;] |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
@@ -2981,7 +2981,7 @@ catch (ApiException e)
 
 <a id="cartshippingzoneslist"></a>
 # **CartShippingZonesList**
-> ModelResponseCartShippingZonesList CartShippingZonesList (string? storeId = null, int? start = null, int? count = null, string? varParams = null, string? responseFields = null, string? exclude = null)
+> ModelResponseCartShippingZonesList CartShippingZonesList (int? start = null, int? count = null, string? storeId = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 cart.shipping_zones.list
 
@@ -3013,17 +3013,17 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new CartApi(config);
-            var storeId = 1;  // string? | Store Id (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,enabled")
+            var storeId = 1;  // string? | Store Id (optional) 
             var responseFields = {result{id,name,enabled,countries,shipping_methods{name,rates}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,enabled")
             var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // cart.shipping_zones.list
-                ModelResponseCartShippingZonesList result = apiInstance.CartShippingZonesList(storeId, start, count, varParams, responseFields, exclude);
+                ModelResponseCartShippingZonesList result = apiInstance.CartShippingZonesList(start, count, storeId, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3044,7 +3044,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.shipping_zones.list
-    ApiResponse<ModelResponseCartShippingZonesList> response = apiInstance.CartShippingZonesListWithHttpInfo(storeId, start, count, varParams, responseFields, exclude);
+    ApiResponse<ModelResponseCartShippingZonesList> response = apiInstance.CartShippingZonesListWithHttpInfo(start, count, storeId, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -3061,11 +3061,11 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **storeId** | **string?** | Store Id | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,enabled&quot;] |
+| **storeId** | **string?** | Store Id | [optional]  |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,enabled&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type

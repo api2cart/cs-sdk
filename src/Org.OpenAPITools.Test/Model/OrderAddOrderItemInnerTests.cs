@@ -128,6 +128,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'OrderItemPriceIncludesTax'
+        /// </summary>
+        [Fact]
+        public void OrderItemPriceIncludesTaxTest()
+        {
+            // TODO unit test for the property 'OrderItemPriceIncludesTax'
+        }
+
+        /// <summary>
         /// Test the property 'OrderItemParent'
         /// </summary>
         [Fact]
@@ -161,15 +170,6 @@ namespace Org.OpenAPITools.Test.Model
         public void OrderItemAllowShipItemsSeparatelyTest()
         {
             // TODO unit test for the property 'OrderItemAllowShipItemsSeparately'
-        }
-
-        /// <summary>
-        /// Test the property 'OrderItemPriceIncludesTax'
-        /// </summary>
-        [Fact]
-        public void OrderItemPriceIncludesTaxTest()
-        {
-            // TODO unit test for the property 'OrderItemPriceIncludesTax'
         }
 
         /// <summary>

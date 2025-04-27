@@ -56,12 +56,12 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'ProductId'
+        /// Test the property 'Type'
         /// </summary>
         [Fact]
-        public void ProductIdTest()
+        public void TypeTest()
         {
-            // TODO unit test for the property 'ProductId'
+            // TODO unit test for the property 'Type'
         }
 
         /// <summary>
@@ -74,57 +74,12 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Type'
+        /// Test the property 'ProductId'
         /// </summary>
         [Fact]
-        public void TypeTest()
+        public void ProductIdTest()
         {
-            // TODO unit test for the property 'Type'
-        }
-
-        /// <summary>
-        /// Test the property 'Url'
-        /// </summary>
-        [Fact]
-        public void UrlTest()
-        {
-            // TODO unit test for the property 'Url'
-        }
-
-        /// <summary>
-        /// Test the property 'Label'
-        /// </summary>
-        [Fact]
-        public void LabelTest()
-        {
-            // TODO unit test for the property 'Label'
-        }
-
-        /// <summary>
-        /// Test the property 'Mime'
-        /// </summary>
-        [Fact]
-        public void MimeTest()
-        {
-            // TODO unit test for the property 'Mime'
-        }
-
-        /// <summary>
-        /// Test the property 'Position'
-        /// </summary>
-        [Fact]
-        public void PositionTest()
-        {
-            // TODO unit test for the property 'Position'
-        }
-
-        /// <summary>
-        /// Test the property 'Content'
-        /// </summary>
-        [Fact]
-        public void ContentTest()
-        {
-            // TODO unit test for the property 'Content'
+            // TODO unit test for the property 'ProductId'
         }
 
         /// <summary>
@@ -170,6 +125,51 @@ namespace Org.OpenAPITools.Test.Model
         public void LangIdTest()
         {
             // TODO unit test for the property 'LangId'
+        }
+
+        /// <summary>
+        /// Test the property 'Url'
+        /// </summary>
+        [Fact]
+        public void UrlTest()
+        {
+            // TODO unit test for the property 'Url'
+        }
+
+        /// <summary>
+        /// Test the property 'Content'
+        /// </summary>
+        [Fact]
+        public void ContentTest()
+        {
+            // TODO unit test for the property 'Content'
+        }
+
+        /// <summary>
+        /// Test the property 'Label'
+        /// </summary>
+        [Fact]
+        public void LabelTest()
+        {
+            // TODO unit test for the property 'Label'
+        }
+
+        /// <summary>
+        /// Test the property 'Mime'
+        /// </summary>
+        [Fact]
+        public void MimeTest()
+        {
+            // TODO unit test for the property 'Mime'
+        }
+
+        /// <summary>
+        /// Test the property 'Position'
+        /// </summary>
+        [Fact]
+        public void PositionTest()
+        {
+            // TODO unit test for the property 'Position'
         }
 
         /// <summary>

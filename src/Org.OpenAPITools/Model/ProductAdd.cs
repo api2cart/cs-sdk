@@ -42,117 +42,117 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <param name="name">Defines product&#39;s name that has to be added (required).</param>
         /// <param name="model">Defines product&#39;s model that has to be added (required).</param>
-        /// <param name="sku">Defines product&#39;s sku that has to be added.</param>
         /// <param name="description">Defines product&#39;s description that has to be added (required).</param>
         /// <param name="price">Defines product&#39;s price that has to be added (required).</param>
-        /// <param name="oldPrice">Defines product&#39;s old price.</param>
-        /// <param name="specialPrice">Defines product&#39;s model that has to be added.</param>
-        /// <param name="costPrice">Defines new product&#39;s cost price.</param>
-        /// <param name="fixedCostShippingPrice">Specifies product&#39;s fixed cost shipping price.</param>
-        /// <param name="spriceCreate">Defines the date of special price creation.</param>
-        /// <param name="spriceModified">Defines the date of special price modification.</param>
-        /// <param name="spriceExpire">Defines the term of special price offer duration.</param>
-        /// <param name="tierPrices">Defines product&#39;s tier prices.</param>
-        /// <param name="groupPrices">Defines product&#39;s group prices.</param>
+        /// <param name="sku">Defines product&#39;s sku that has to be added.</param>
+        /// <param name="shortDescription">Defines short description.</param>
+        /// <param name="type">Defines product&#39;s type (default to &quot;simple&quot;).</param>
+        /// <param name="status">Defines product&#39;s status.</param>
+        /// <param name="visible">Set visibility status.</param>
+        /// <param name="categoryId">Defines product add that is specified by category id.</param>
+        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id.</param>
+        /// <param name="productClass">A categorization for the product.</param>
+        /// <param name="productType">A categorization for the product.</param>
+        /// <param name="isVirtual">Defines whether the product is virtual (default to false).</param>
+        /// <param name="downloadable">Defines whether the product is downloadable (default to false).</param>
+        /// <param name="isSupply">If true, it indicates the product as a supply, otherwise it indicates that it is a finished product. (default to true).</param>
         /// <param name="availableForView">Specifies the set of visible/invisible products for users (default to true).</param>
         /// <param name="availableForSale">Specifies the set of visible/invisible products for sale (default to true).</param>
+        /// <param name="storeId">Store Id.</param>
+        /// <param name="storesIds">Assign product to the stores that is specified by comma-separated stores&#39; id.</param>
+        /// <param name="langId">Language id.</param>
+        /// <param name="oldPrice">Defines product&#39;s old price.</param>
+        /// <param name="specialPrice">Defines product&#39;s model that has to be added.</param>
+        /// <param name="wholesalePrice">Defines product&#39;s sale price.</param>
+        /// <param name="costPrice">Defines new product&#39;s cost price.</param>
+        /// <param name="fixedCostShippingPrice">Specifies product&#39;s fixed cost shipping price.</param>
+        /// <param name="tierPrices">Defines product&#39;s tier prices.</param>
+        /// <param name="groupPrices">Defines product&#39;s group prices.</param>
+        /// <param name="buyitnowPrice">Defines buy it now value.</param>
+        /// <param name="reservePrice">Defines reserve price value.</param>
+        /// <param name="quantity">Defines product&#39;s quantity that has to be added (default to 0M).</param>
+        /// <param name="inStock">Set stock status.</param>
+        /// <param name="manageStock">Defines inventory tracking for product.</param>
+        /// <param name="warehouseId">This parameter is used for selecting a warehouse where you need to set/modify a product quantity..</param>
+        /// <param name="backorderStatus">Set backorder status.</param>
+        /// <param name="minOrderQuantity">The minimum quantity an order must contain, to be eligible to purchase this product..</param>
+        /// <param name="maxOrderQuantity">The maximum quantity an order can contain when purchasing the product..</param>
         /// <param name="weight">Weight (default to 0M).</param>
+        /// <param name="weightUnit">Weight Unit.</param>
         /// <param name="width">Defines product&#39;s width.</param>
         /// <param name="height">Defines product&#39;s height.</param>
         /// <param name="length">Defines product&#39;s length.</param>
-        /// <param name="weightUnit">Weight Unit.</param>
         /// <param name="dimensionsUnit">Weight Unit.</param>
-        /// <param name="shortDescription">Defines short description.</param>
-        /// <param name="warehouseId">This parameter is used for selecting a warehouse where you need to set/modify a product quantity..</param>
-        /// <param name="backorderStatus">Set backorder status.</param>
-        /// <param name="quantity">Defines product&#39;s quantity that has to be added (default to 0M).</param>
-        /// <param name="downloadable">Defines whether the product is downloadable (default to false).</param>
-        /// <param name="wholesalePrice">Defines product&#39;s sale price.</param>
-        /// <param name="createdAt">Defines the date of entity creation.</param>
-        /// <param name="manufacturer">Defines product&#39;s manufacturer.</param>
-        /// <param name="manufacturerId">Defines product&#39;s manufacturer by manufacturer_id.</param>
-        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id.</param>
-        /// <param name="relatedProductsIds">Defines product&#39;s related products ids that has to be added.</param>
-        /// <param name="upSellProductsIds">Defines product&#39;s up-sell products ids that has to be added.</param>
-        /// <param name="crossSellProductsIds">Defines product&#39;s cross-sell products ids that has to be added.</param>
-        /// <param name="taxClassId">Defines tax classes where entity has to be added.</param>
-        /// <param name="type">Defines product&#39;s type (default to &quot;simple&quot;).</param>
-        /// <param name="metaTitle">Defines unique meta title for each entity.</param>
-        /// <param name="metaKeywords">Defines unique meta keywords for each entity.</param>
-        /// <param name="metaDescription">Defines unique meta description of a entity.</param>
-        /// <param name="url">Defines unique product&#39;s URL.</param>
-        /// <param name="langId">Language id.</param>
-        /// <param name="storesIds">Assign product to the stores that is specified by comma-separated stores&#39; id.</param>
-        /// <param name="categoryId">Defines product add that is specified by category id.</param>
-        /// <param name="viewedCount">Specifies the number of product&#39;s reviews (default to 0).</param>
-        /// <param name="orderedCount">Defines how many times the product was ordered (default to 0).</param>
-        /// <param name="attributeSetName">Defines product’s attribute set name in Magento (default to &quot;Default&quot;).</param>
-        /// <param name="attributeName">Defines product’s attribute name separated with a comma in Magento.</param>
-        /// <param name="shippingTemplateId">The numeric ID of the shipping template associated with the products in Etsy. You can find possible values in the \&quot;cart.info\&quot; API method response, in the field shipping_zones[]-&gt;id. (default to 0).</param>
-        /// <param name="productionPartnerIds">Defines product&#39;s production partner ids that has to be added.</param>
-        /// <param name="condition">The human-readable label for the condition (e.g., \&quot;New\&quot;)..</param>
-        /// <param name="listingDuration">Describes the number of days the seller wants the listing to be active. Look at cart.info method response for allowed values..</param>
-        /// <param name="listingType">Indicates the selling format of the marketplace listing. (default to &quot;FixedPrice&quot;).</param>
-        /// <param name="paymentMethods">Identifies the payment method (such as PayPal) that the seller will accept when the buyer pays for the item. Look at cart.info method response for allowed values.&lt;hr&gt;&lt;div style&#x3D;\&quot;font-style:normal\&quot;&gt;Param structure:&lt;div style&#x3D;\&quot;margin-left: 2%;\&quot;&gt;&lt;code style&#x3D;\&quot;padding:0; background-color:#ffffff;font-size:85%;font-family:monospace;\&quot;&gt;payment_methods[0] &#x3D; string&lt;/br&gt;payment_methods[1] &#x3D; string&lt;/br&gt;&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;.</param>
-        /// <param name="returnAccepted">Indicates whether the seller allows the buyer to return the item..</param>
-        /// <param name="shippingDetails">The shipping details, including flat and calculated shipping costs and shipping insurance costs. Look at cart.info method response for allowed values.&lt;hr&gt;&lt;div style&#x3D;\&quot;font-style:normal\&quot;&gt;Param structure:&lt;div style&#x3D;\&quot;margin-left: 2%;\&quot;&gt;&lt;code style&#x3D;\&quot;padding:0; background-color:#ffffff;font-size:85%;font-family:monospace;\&quot;&gt;shipping_details[0][&lt;b&gt;shipping_type&lt;/b&gt;] &#x3D; string &lt;/br&gt;shipping_details[0][&lt;b&gt;shipping_service&lt;/b&gt;] &#x3D; string&lt;/br&gt;shipping_details[0][&lt;b&gt;shipping_cost&lt;/b&gt;] &#x3D; decimal&lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_type&lt;/b&gt;] &#x3D; string &lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_service&lt;/b&gt;] &#x3D; string&lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_cost&lt;/b&gt;] &#x3D; decimal&lt;/br&gt;&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;.</param>
-        /// <param name="paypalEmail">Valid PayPal email address for the PayPal account that the seller will use if they offer PayPal as a payment method for the listing..</param>
-        /// <param name="sellerProfiles">sellerProfiles.</param>
-        /// <param name="packageDetails">packageDetails.</param>
-        /// <param name="bestOffer">bestOffer.</param>
-        /// <param name="salesTax">salesTax.</param>
         /// <param name="barcode">A barcode is a unique code composed of numbers used as a product identifier..</param>
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products..</param>
         /// <param name="ean">European Article Number. An EAN is a unique 8 or 13-digit identifier that many industries (such as book publishers) use to identify products..</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books..</param>
-        /// <param name="specifics">An array of Item Specific Name/Value pairs used by the seller to provide descriptive details of an item in a structured manner.         The list of possible specifications can be obtained using the category.info method (additional_fields-&gt;product_specifics).         &lt;b&gt;The structure of the parameter is different for specific platforms.&lt;/b&gt;.</param>
+        /// <param name="gtin">Global Trade Item Number. An GTIN is an identifier for trade items..</param>
+        /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used..</param>
+        /// <param name="asin">Amazon Standard Identification Number..</param>
+        /// <param name="productReference">Groups all variations, that you want to combine into one product..</param>
+        /// <param name="harmonizedSystemCode">Harmonized System Code. An HSC is a 6-digit identifier that allows participating countries to classify traded goods on a common basis for customs purposes.</param>
+        /// <param name="countryOfOrigin">The country where the inventory item was made.</param>
+        /// <param name="manufacturer">Defines product&#39;s manufacturer.</param>
+        /// <param name="manufacturerId">Defines product&#39;s manufacturer by manufacturer_id.</param>
+        /// <param name="manufacturerInfo">manufacturerInfo.</param>
+        /// <param name="brandName">Defines product brand name.</param>
         /// <param name="imageUrl">Image Url.</param>
         /// <param name="imageName">Defines image&#39;s name.</param>
         /// <param name="additionalImageUrls">Image Url.</param>
-        /// <param name="reservePrice">Defines reserve price value.</param>
-        /// <param name="buyitnowPrice">Defines buy it now value.</param>
-        /// <param name="conditionDescription">Detailed description of the product condition..</param>
-        /// <param name="auctionConfidentialityLevel">This allows buyers to remain anonymous when the bid or buy an item..</param>
-        /// <param name="logisticInfo">Defines product&#39;s logistic channel settings.</param>
-        /// <param name="availFrom">Allows to schedule a time in the future that the item becomes available. The value should be greater than the current date and time..</param>
-        /// <param name="tags">Product tags.</param>
-        /// <param name="clearCache">Is cache clear required (default to true).</param>
-        /// <param name="asin">Amazon Standard Identification Number..</param>
-        /// <param name="gtin">Global Trade Item Number. An GTIN is an identifier for trade items..</param>
-        /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used..</param>
-        /// <param name="taxable">Specifies whether a tax is charged (default to true).</param>
-        /// <param name="visible">Set visibility status.</param>
-        /// <param name="status">Defines product&#39;s status.</param>
-        /// <param name="seoUrl">Defines unique URL for SEO.</param>
-        /// <param name="productClass">A categorization for the product.</param>
-        /// <param name="productType">A categorization for the product.</param>
-        /// <param name="marketplaceItemProperties">String containing the JSON representation of the supplied data.</param>
-        /// <param name="manageStock">Defines inventory tracking for product.</param>
-        /// <param name="harmonizedSystemCode">Harmonized System Code. An HSC is a 6-digit identifier that allows participating countries to classify traded goods on a common basis for customs purposes.</param>
-        /// <param name="countryOfOrigin">The country where the inventory item was made.</param>
         /// <param name="files">File Url.</param>
+        /// <param name="sizeChart">sizeChart.</param>
+        /// <param name="relatedProductsIds">Defines product&#39;s related products ids that has to be added.</param>
+        /// <param name="upSellProductsIds">Defines product&#39;s up-sell products ids that has to be added.</param>
+        /// <param name="crossSellProductsIds">Defines product&#39;s cross-sell products ids that has to be added.</param>
+        /// <param name="attributeSetName">Defines product’s attribute set name in Magento (default to &quot;Default&quot;).</param>
+        /// <param name="attributeName">Defines product’s attribute name separated with a comma in Magento.</param>
         /// <param name="searchKeywords">Defines unique search keywords.</param>
-        /// <param name="storeId">Store Id.</param>
-        /// <param name="brandName">Defines product brand name.</param>
-        /// <param name="isVirtual">Defines whether the product is virtual (default to false).</param>
+        /// <param name="tags">Product tags.</param>
+        /// <param name="materials">A list of material strings for materials used in the product..</param>
+        /// <param name="certifications">An array of product certifications. The list of possible certifications can be obtained using the \&quot;&lt;i&gt;category.info&lt;/i&gt;\&quot; method (&lt;i&gt;additional_fields-&gt;rules-&gt;product_certifications&lt;/i&gt;)..</param>
+        /// <param name="specifics">An array of Item Specific Name/Value pairs used by the seller to provide descriptive details of an item in a structured manner.         The list of possible specifications can be obtained using the category.info method (additional_fields-&gt;product_specifics).         &lt;b&gt;The structure of the parameter is different for specific platforms.&lt;/b&gt;.</param>
+        /// <param name="availFrom">Allows to schedule a time in the future that the item becomes available. The value should be greater than the current date and time..</param>
+        /// <param name="spriceCreate">Defines the date of special price creation.</param>
+        /// <param name="spriceModified">Defines the date of special price modification.</param>
+        /// <param name="spriceExpire">Defines the term of special price offer duration.</param>
+        /// <param name="createdAt">Defines the date of entity creation.</param>
+        /// <param name="autoRenew">When true, automatically renews a listing upon its expiration. (default to false).</param>
+        /// <param name="whenMade">An enumerated string for the era in which the maker made the product. (default to &quot;made_to_order&quot;).</param>
+        /// <param name="metaTitle">Defines unique meta title for each entity.</param>
+        /// <param name="metaKeywords">Defines unique meta keywords for each entity.</param>
+        /// <param name="metaDescription">Defines unique meta description of a entity.</param>
+        /// <param name="url">Defines unique product&#39;s URL.</param>
+        /// <param name="seoUrl">Defines unique URL for SEO.</param>
+        /// <param name="taxClassId">Defines tax classes where entity has to be added.</param>
+        /// <param name="taxable">Specifies whether a tax is charged (default to true).</param>
+        /// <param name="salesTax">salesTax.</param>
+        /// <param name="condition">The human-readable label for the condition (e.g., \&quot;New\&quot;)..</param>
+        /// <param name="conditionDescription">Detailed description of the product condition..</param>
+        /// <param name="allowDisplayCondition">Flag used to determine whether the product condition is shown to the customer on the product page..</param>
+        /// <param name="paymentMethods">Identifies the payment method (such as PayPal) that the seller will accept when the buyer pays for the item. Look at cart.info method response for allowed values.&lt;hr&gt;&lt;div style&#x3D;\&quot;font-style:normal\&quot;&gt;Param structure:&lt;div style&#x3D;\&quot;margin-left: 2%;\&quot;&gt;&lt;code style&#x3D;\&quot;padding:0; background-color:#ffffff;font-size:85%;font-family:monospace;\&quot;&gt;payment_methods[0] &#x3D; string&lt;/br&gt;payment_methods[1] &#x3D; string&lt;/br&gt;&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;.</param>
+        /// <param name="paypalEmail">Valid PayPal email address for the PayPal account that the seller will use if they offer PayPal as a payment method for the listing..</param>
+        /// <param name="shippingTemplateId">The numeric ID of the shipping template associated with the products in Etsy. You can find possible values in the \&quot;cart.info\&quot; API method response, in the field shipping_zones[]-&gt;id. (default to 0).</param>
+        /// <param name="shippingDetails">The shipping details, including flat and calculated shipping costs and shipping insurance costs. Look at cart.info method response for allowed values.&lt;hr&gt;&lt;div style&#x3D;\&quot;font-style:normal\&quot;&gt;Param structure:&lt;div style&#x3D;\&quot;margin-left: 2%;\&quot;&gt;&lt;code style&#x3D;\&quot;padding:0; background-color:#ffffff;font-size:85%;font-family:monospace;\&quot;&gt;shipping_details[0][&lt;b&gt;shipping_type&lt;/b&gt;] &#x3D; string &lt;/br&gt;shipping_details[0][&lt;b&gt;shipping_service&lt;/b&gt;] &#x3D; string&lt;/br&gt;shipping_details[0][&lt;b&gt;shipping_cost&lt;/b&gt;] &#x3D; decimal&lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_type&lt;/b&gt;] &#x3D; string &lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_service&lt;/b&gt;] &#x3D; string&lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_cost&lt;/b&gt;] &#x3D; decimal&lt;/br&gt;&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;.</param>
         /// <param name="isFreeShipping">Specifies product&#39;s free shipping flag that has to be added.</param>
-        /// <param name="inStock">Set stock status.</param>
         /// <param name="deliveryCode">The delivery promise that applies to offer.</param>
-        /// <param name="productReference">Groups all variations, that you want to combine into one product..</param>
         /// <param name="deliveryType">Defines the type of the delivery..</param>
         /// <param name="deliveryTime">Defines delivery time in days..</param>
-        /// <param name="sizeChart">sizeChart.</param>
-        /// <param name="certifications">An array of product certifications. The list of possible certifications can be obtained using the \&quot;&lt;i&gt;category.info&lt;/i&gt;\&quot; method (&lt;i&gt;additional_fields-&gt;rules-&gt;product_certifications&lt;/i&gt;)..</param>
         /// <param name="deliveryOptionIds">Defines delivery options for product by ids..</param>
-        /// <param name="manufacturerInfo">manufacturerInfo.</param>
-        /// <param name="whenMade">An enumerated string for the era in which the maker made the product. (default to &quot;made_to_order&quot;).</param>
-        /// <param name="isSupply">If true, it indicates the product as a supply, otherwise it indicates that it is a finished product. (default to true).</param>
-        /// <param name="materials">A list of material strings for materials used in the product..</param>
-        /// <param name="autoRenew">When true, automatically renews a listing upon its expiration. (default to false).</param>
-        /// <param name="allowDisplayCondition">Flag used to determine whether the product condition is shown to the customer on the product page..</param>
-        /// <param name="minOrderQuantity">The minimum quantity an order must contain, to be eligible to purchase this product..</param>
-        /// <param name="maxOrderQuantity">The maximum quantity an order can contain when purchasing the product..</param>
-        public ProductAdd(string name = default(string), string model = default(string), string sku = default(string), string description = default(string), decimal price = default(decimal), decimal oldPrice = default(decimal), decimal specialPrice = default(decimal), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), string spriceCreate = default(string), string spriceModified = default(string), string spriceExpire = default(string), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), List<ProductAddGroupPricesInner> groupPrices = default(List<ProductAddGroupPricesInner>), bool availableForView = true, bool availableForSale = true, decimal weight = 0M, decimal width = default(decimal), decimal height = default(decimal), decimal length = default(decimal), string weightUnit = default(string), string dimensionsUnit = default(string), string shortDescription = default(string), string warehouseId = default(string), string backorderStatus = default(string), decimal quantity = 0M, bool downloadable = false, decimal wholesalePrice = default(decimal), string createdAt = default(string), string manufacturer = default(string), string manufacturerId = default(string), string categoriesIds = default(string), string relatedProductsIds = default(string), string upSellProductsIds = default(string), string crossSellProductsIds = default(string), string taxClassId = default(string), string type = @"simple", string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string url = default(string), string langId = default(string), string storesIds = default(string), string categoryId = default(string), int viewedCount = 0, int orderedCount = 0, string attributeSetName = @"Default", string attributeName = default(string), int shippingTemplateId = 0, string productionPartnerIds = default(string), string condition = default(string), string listingDuration = default(string), string listingType = @"FixedPrice", List<string> paymentMethods = default(List<string>), bool returnAccepted = default(bool), List<ProductAddShippingDetailsInner> shippingDetails = default(List<ProductAddShippingDetailsInner>), string paypalEmail = default(string), ProductAddSellerProfiles sellerProfiles = default(ProductAddSellerProfiles), ProductAddPackageDetails packageDetails = default(ProductAddPackageDetails), ProductAddBestOffer bestOffer = default(ProductAddBestOffer), ProductAddSalesTax salesTax = default(ProductAddSalesTax), string barcode = default(string), string upc = default(string), string ean = default(string), string isbn = default(string), List<ProductAddSpecificsInner> specifics = default(List<ProductAddSpecificsInner>), string imageUrl = default(string), string imageName = default(string), List<string> additionalImageUrls = default(List<string>), decimal reservePrice = default(decimal), decimal buyitnowPrice = default(decimal), string conditionDescription = default(string), string auctionConfidentialityLevel = default(string), List<ProductAddLogisticInfoInner> logisticInfo = default(List<ProductAddLogisticInfoInner>), string availFrom = default(string), string tags = default(string), bool clearCache = true, string asin = default(string), string gtin = default(string), string mpn = default(string), bool taxable = true, string visible = default(string), string status = default(string), string seoUrl = default(string), string productClass = default(string), string productType = default(string), string marketplaceItemProperties = default(string), bool manageStock = default(bool), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), List<ProductAddFilesInner> files = default(List<ProductAddFilesInner>), string searchKeywords = default(string), string storeId = default(string), string brandName = default(string), bool isVirtual = false, bool isFreeShipping = default(bool), bool inStock = default(bool), string deliveryCode = default(string), string productReference = default(string), string deliveryType = default(string), int deliveryTime = default(int), ProductAddSizeChart sizeChart = default(ProductAddSizeChart), List<ProductAddCertificationsInner> certifications = default(List<ProductAddCertificationsInner>), string deliveryOptionIds = default(string), ProductAddManufacturerInfo manufacturerInfo = default(ProductAddManufacturerInfo), string whenMade = @"made_to_order", bool isSupply = true, List<string> materials = default(List<string>), bool autoRenew = false, bool allowDisplayCondition = default(bool), decimal minOrderQuantity = default(decimal), decimal maxOrderQuantity = default(decimal))
+        /// <param name="packageDetails">packageDetails.</param>
+        /// <param name="logisticInfo">Defines product&#39;s logistic channel settings.</param>
+        /// <param name="listingDuration">Describes the number of days the seller wants the listing to be active. Look at cart.info method response for allowed values..</param>
+        /// <param name="listingType">Indicates the selling format of the marketplace listing. (default to &quot;FixedPrice&quot;).</param>
+        /// <param name="returnAccepted">Indicates whether the seller allows the buyer to return the item..</param>
+        /// <param name="sellerProfiles">sellerProfiles.</param>
+        /// <param name="auctionConfidentialityLevel">This allows buyers to remain anonymous when the bid or buy an item..</param>
+        /// <param name="bestOffer">bestOffer.</param>
+        /// <param name="productionPartnerIds">Defines product&#39;s production partner ids that has to be added.</param>
+        /// <param name="marketplaceItemProperties">String containing the JSON representation of the supplied data.</param>
+        /// <param name="clearCache">Is cache clear required (default to true).</param>
+        /// <param name="viewedCount">Specifies the number of product&#39;s reviews (default to 0).</param>
+        /// <param name="orderedCount">Defines how many times the product was ordered (default to 0).</param>
+        public ProductAdd(string name = default(string), string model = default(string), string description = default(string), decimal price = default(decimal), string sku = default(string), string shortDescription = default(string), string type = @"simple", string status = default(string), string visible = default(string), string categoryId = default(string), string categoriesIds = default(string), string productClass = default(string), string productType = default(string), bool isVirtual = false, bool downloadable = false, bool isSupply = true, bool availableForView = true, bool availableForSale = true, string storeId = default(string), string storesIds = default(string), string langId = default(string), decimal oldPrice = default(decimal), decimal specialPrice = default(decimal), decimal wholesalePrice = default(decimal), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), List<ProductAddGroupPricesInner> groupPrices = default(List<ProductAddGroupPricesInner>), decimal buyitnowPrice = default(decimal), decimal reservePrice = default(decimal), decimal quantity = 0M, bool inStock = default(bool), bool manageStock = default(bool), string warehouseId = default(string), string backorderStatus = default(string), decimal minOrderQuantity = default(decimal), decimal maxOrderQuantity = default(decimal), decimal weight = 0M, string weightUnit = default(string), decimal width = default(decimal), decimal height = default(decimal), decimal length = default(decimal), string dimensionsUnit = default(string), string barcode = default(string), string upc = default(string), string ean = default(string), string isbn = default(string), string gtin = default(string), string mpn = default(string), string asin = default(string), string productReference = default(string), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), string manufacturer = default(string), string manufacturerId = default(string), ProductAddManufacturerInfo manufacturerInfo = default(ProductAddManufacturerInfo), string brandName = default(string), string imageUrl = default(string), string imageName = default(string), List<string> additionalImageUrls = default(List<string>), List<ProductAddFilesInner> files = default(List<ProductAddFilesInner>), ProductAddSizeChart sizeChart = default(ProductAddSizeChart), string relatedProductsIds = default(string), string upSellProductsIds = default(string), string crossSellProductsIds = default(string), string attributeSetName = @"Default", string attributeName = default(string), string searchKeywords = default(string), string tags = default(string), List<string> materials = default(List<string>), List<ProductAddCertificationsInner> certifications = default(List<ProductAddCertificationsInner>), List<ProductAddSpecificsInner> specifics = default(List<ProductAddSpecificsInner>), string availFrom = default(string), string spriceCreate = default(string), string spriceModified = default(string), string spriceExpire = default(string), string createdAt = default(string), bool autoRenew = false, string whenMade = @"made_to_order", string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string url = default(string), string seoUrl = default(string), string taxClassId = default(string), bool taxable = true, ProductAddSalesTax salesTax = default(ProductAddSalesTax), string condition = default(string), string conditionDescription = default(string), bool allowDisplayCondition = default(bool), List<string> paymentMethods = default(List<string>), string paypalEmail = default(string), int shippingTemplateId = 0, List<ProductAddShippingDetailsInner> shippingDetails = default(List<ProductAddShippingDetailsInner>), bool isFreeShipping = default(bool), string deliveryCode = default(string), string deliveryType = default(string), int deliveryTime = default(int), string deliveryOptionIds = default(string), ProductAddPackageDetails packageDetails = default(ProductAddPackageDetails), List<ProductAddLogisticInfoInner> logisticInfo = default(List<ProductAddLogisticInfoInner>), string listingDuration = default(string), string listingType = @"FixedPrice", bool returnAccepted = default(bool), ProductAddSellerProfiles sellerProfiles = default(ProductAddSellerProfiles), string auctionConfidentialityLevel = default(string), ProductAddBestOffer bestOffer = default(ProductAddBestOffer), string productionPartnerIds = default(string), string marketplaceItemProperties = default(string), bool clearCache = true, int viewedCount = 0, int orderedCount = 0)
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -174,117 +174,117 @@ namespace Org.OpenAPITools.Model
             this.Description = description;
             this.Price = price;
             this.Sku = sku;
-            this.OldPrice = oldPrice;
-            this.SpecialPrice = specialPrice;
-            this.CostPrice = costPrice;
-            this.FixedCostShippingPrice = fixedCostShippingPrice;
-            this.SpriceCreate = spriceCreate;
-            this.SpriceModified = spriceModified;
-            this.SpriceExpire = spriceExpire;
-            this.TierPrices = tierPrices;
-            this.GroupPrices = groupPrices;
+            this.ShortDescription = shortDescription;
+            // use default value if no "type" provided
+            this.Type = type ?? @"simple";
+            this.Status = status;
+            this.Visible = visible;
+            this.CategoryId = categoryId;
+            this.CategoriesIds = categoriesIds;
+            this.ProductClass = productClass;
+            this.ProductType = productType;
+            this.IsVirtual = isVirtual;
+            this.Downloadable = downloadable;
+            this.IsSupply = isSupply;
             this.AvailableForView = availableForView;
             this.AvailableForSale = availableForSale;
+            this.StoreId = storeId;
+            this.StoresIds = storesIds;
+            this.LangId = langId;
+            this.OldPrice = oldPrice;
+            this.SpecialPrice = specialPrice;
+            this.WholesalePrice = wholesalePrice;
+            this.CostPrice = costPrice;
+            this.FixedCostShippingPrice = fixedCostShippingPrice;
+            this.TierPrices = tierPrices;
+            this.GroupPrices = groupPrices;
+            this.BuyitnowPrice = buyitnowPrice;
+            this.ReservePrice = reservePrice;
+            this.Quantity = quantity;
+            this.InStock = inStock;
+            this.ManageStock = manageStock;
+            this.WarehouseId = warehouseId;
+            this.BackorderStatus = backorderStatus;
+            this.MinOrderQuantity = minOrderQuantity;
+            this.MaxOrderQuantity = maxOrderQuantity;
             this.Weight = weight;
+            this.WeightUnit = weightUnit;
             this.Width = width;
             this.Height = height;
             this.Length = length;
-            this.WeightUnit = weightUnit;
             this.DimensionsUnit = dimensionsUnit;
-            this.ShortDescription = shortDescription;
-            this.WarehouseId = warehouseId;
-            this.BackorderStatus = backorderStatus;
-            this.Quantity = quantity;
-            this.Downloadable = downloadable;
-            this.WholesalePrice = wholesalePrice;
-            this.CreatedAt = createdAt;
-            this.Manufacturer = manufacturer;
-            this.ManufacturerId = manufacturerId;
-            this.CategoriesIds = categoriesIds;
-            this.RelatedProductsIds = relatedProductsIds;
-            this.UpSellProductsIds = upSellProductsIds;
-            this.CrossSellProductsIds = crossSellProductsIds;
-            this.TaxClassId = taxClassId;
-            // use default value if no "type" provided
-            this.Type = type ?? @"simple";
-            this.MetaTitle = metaTitle;
-            this.MetaKeywords = metaKeywords;
-            this.MetaDescription = metaDescription;
-            this.Url = url;
-            this.LangId = langId;
-            this.StoresIds = storesIds;
-            this.CategoryId = categoryId;
-            this.ViewedCount = viewedCount;
-            this.OrderedCount = orderedCount;
-            // use default value if no "attributeSetName" provided
-            this.AttributeSetName = attributeSetName ?? @"Default";
-            this.AttributeName = attributeName;
-            this.ShippingTemplateId = shippingTemplateId;
-            this.ProductionPartnerIds = productionPartnerIds;
-            this.Condition = condition;
-            this.ListingDuration = listingDuration;
-            // use default value if no "listingType" provided
-            this.ListingType = listingType ?? @"FixedPrice";
-            this.PaymentMethods = paymentMethods;
-            this.ReturnAccepted = returnAccepted;
-            this.ShippingDetails = shippingDetails;
-            this.PaypalEmail = paypalEmail;
-            this.SellerProfiles = sellerProfiles;
-            this.PackageDetails = packageDetails;
-            this.BestOffer = bestOffer;
-            this.SalesTax = salesTax;
             this.Barcode = barcode;
             this.Upc = upc;
             this.Ean = ean;
             this.Isbn = isbn;
-            this.Specifics = specifics;
+            this.Gtin = gtin;
+            this.Mpn = mpn;
+            this.Asin = asin;
+            this.ProductReference = productReference;
+            this.HarmonizedSystemCode = harmonizedSystemCode;
+            this.CountryOfOrigin = countryOfOrigin;
+            this.Manufacturer = manufacturer;
+            this.ManufacturerId = manufacturerId;
+            this.ManufacturerInfo = manufacturerInfo;
+            this.BrandName = brandName;
             this.ImageUrl = imageUrl;
             this.ImageName = imageName;
             this.AdditionalImageUrls = additionalImageUrls;
-            this.ReservePrice = reservePrice;
-            this.BuyitnowPrice = buyitnowPrice;
-            this.ConditionDescription = conditionDescription;
-            this.AuctionConfidentialityLevel = auctionConfidentialityLevel;
-            this.LogisticInfo = logisticInfo;
-            this.AvailFrom = availFrom;
-            this.Tags = tags;
-            this.ClearCache = clearCache;
-            this.Asin = asin;
-            this.Gtin = gtin;
-            this.Mpn = mpn;
-            this.Taxable = taxable;
-            this.Visible = visible;
-            this.Status = status;
-            this.SeoUrl = seoUrl;
-            this.ProductClass = productClass;
-            this.ProductType = productType;
-            this.MarketplaceItemProperties = marketplaceItemProperties;
-            this.ManageStock = manageStock;
-            this.HarmonizedSystemCode = harmonizedSystemCode;
-            this.CountryOfOrigin = countryOfOrigin;
             this.Files = files;
-            this.SearchKeywords = searchKeywords;
-            this.StoreId = storeId;
-            this.BrandName = brandName;
-            this.IsVirtual = isVirtual;
-            this.IsFreeShipping = isFreeShipping;
-            this.InStock = inStock;
-            this.DeliveryCode = deliveryCode;
-            this.ProductReference = productReference;
-            this.DeliveryType = deliveryType;
-            this.DeliveryTime = deliveryTime;
             this.SizeChart = sizeChart;
+            this.RelatedProductsIds = relatedProductsIds;
+            this.UpSellProductsIds = upSellProductsIds;
+            this.CrossSellProductsIds = crossSellProductsIds;
+            // use default value if no "attributeSetName" provided
+            this.AttributeSetName = attributeSetName ?? @"Default";
+            this.AttributeName = attributeName;
+            this.SearchKeywords = searchKeywords;
+            this.Tags = tags;
+            this.Materials = materials;
             this.Certifications = certifications;
-            this.DeliveryOptionIds = deliveryOptionIds;
-            this.ManufacturerInfo = manufacturerInfo;
+            this.Specifics = specifics;
+            this.AvailFrom = availFrom;
+            this.SpriceCreate = spriceCreate;
+            this.SpriceModified = spriceModified;
+            this.SpriceExpire = spriceExpire;
+            this.CreatedAt = createdAt;
+            this.AutoRenew = autoRenew;
             // use default value if no "whenMade" provided
             this.WhenMade = whenMade ?? @"made_to_order";
-            this.IsSupply = isSupply;
-            this.Materials = materials;
-            this.AutoRenew = autoRenew;
+            this.MetaTitle = metaTitle;
+            this.MetaKeywords = metaKeywords;
+            this.MetaDescription = metaDescription;
+            this.Url = url;
+            this.SeoUrl = seoUrl;
+            this.TaxClassId = taxClassId;
+            this.Taxable = taxable;
+            this.SalesTax = salesTax;
+            this.Condition = condition;
+            this.ConditionDescription = conditionDescription;
             this.AllowDisplayCondition = allowDisplayCondition;
-            this.MinOrderQuantity = minOrderQuantity;
-            this.MaxOrderQuantity = maxOrderQuantity;
+            this.PaymentMethods = paymentMethods;
+            this.PaypalEmail = paypalEmail;
+            this.ShippingTemplateId = shippingTemplateId;
+            this.ShippingDetails = shippingDetails;
+            this.IsFreeShipping = isFreeShipping;
+            this.DeliveryCode = deliveryCode;
+            this.DeliveryType = deliveryType;
+            this.DeliveryTime = deliveryTime;
+            this.DeliveryOptionIds = deliveryOptionIds;
+            this.PackageDetails = packageDetails;
+            this.LogisticInfo = logisticInfo;
+            this.ListingDuration = listingDuration;
+            // use default value if no "listingType" provided
+            this.ListingType = listingType ?? @"FixedPrice";
+            this.ReturnAccepted = returnAccepted;
+            this.SellerProfiles = sellerProfiles;
+            this.AuctionConfidentialityLevel = auctionConfidentialityLevel;
+            this.BestOffer = bestOffer;
+            this.ProductionPartnerIds = productionPartnerIds;
+            this.MarketplaceItemProperties = marketplaceItemProperties;
+            this.ClearCache = clearCache;
+            this.ViewedCount = viewedCount;
+            this.OrderedCount = orderedCount;
         }
 
         /// <summary>
@@ -308,16 +308,6 @@ namespace Org.OpenAPITools.Model
         public string Model { get; set; }
 
         /// <summary>
-        /// Defines product&#39;s sku that has to be added
-        /// </summary>
-        /// <value>Defines product&#39;s sku that has to be added</value>
-        /*
-        <example>bag_01</example>
-        */
-        [DataMember(Name = "sku", EmitDefaultValue = false)]
-        public string Sku { get; set; }
-
-        /// <summary>
         /// Defines product&#39;s description that has to be added
         /// </summary>
         /// <value>Defines product&#39;s description that has to be added</value>
@@ -338,88 +328,124 @@ namespace Org.OpenAPITools.Model
         public decimal Price { get; set; }
 
         /// <summary>
-        /// Defines product&#39;s old price
+        /// Defines product&#39;s sku that has to be added
         /// </summary>
-        /// <value>Defines product&#39;s old price</value>
+        /// <value>Defines product&#39;s sku that has to be added</value>
         /*
-        <example>99.9</example>
+        <example>bag_01</example>
         */
-        [DataMember(Name = "old_price", EmitDefaultValue = false)]
-        public decimal OldPrice { get; set; }
+        [DataMember(Name = "sku", EmitDefaultValue = false)]
+        public string Sku { get; set; }
 
         /// <summary>
-        /// Defines product&#39;s model that has to be added
+        /// Defines short description
         /// </summary>
-        /// <value>Defines product&#39;s model that has to be added</value>
+        /// <value>Defines short description</value>
         /*
-        <example>56.9</example>
+        <example>Short description. This is very short description</example>
         */
-        [DataMember(Name = "special_price", EmitDefaultValue = false)]
-        public decimal SpecialPrice { get; set; }
+        [DataMember(Name = "short_description", EmitDefaultValue = false)]
+        public string ShortDescription { get; set; }
 
         /// <summary>
-        /// Defines new product&#39;s cost price
+        /// Defines product&#39;s type
         /// </summary>
-        /// <value>Defines new product&#39;s cost price</value>
+        /// <value>Defines product&#39;s type</value>
         /*
-        <example>65.9</example>
+        <example>configurable</example>
         */
-        [DataMember(Name = "cost_price", EmitDefaultValue = false)]
-        public decimal CostPrice { get; set; }
+        [DataMember(Name = "type", EmitDefaultValue = false)]
+        public string Type { get; set; }
 
         /// <summary>
-        /// Specifies product&#39;s fixed cost shipping price
+        /// Defines product&#39;s status
         /// </summary>
-        /// <value>Specifies product&#39;s fixed cost shipping price</value>
+        /// <value>Defines product&#39;s status</value>
         /*
-        <example>5.5</example>
+        <example>disabled</example>
         */
-        [DataMember(Name = "fixed_cost_shipping_price", EmitDefaultValue = false)]
-        public decimal FixedCostShippingPrice { get; set; }
+        [DataMember(Name = "status", EmitDefaultValue = false)]
+        public string Status { get; set; }
 
         /// <summary>
-        /// Defines the date of special price creation
+        /// Set visibility status
         /// </summary>
-        /// <value>Defines the date of special price creation</value>
+        /// <value>Set visibility status</value>
         /*
-        <example>2018-08-25 23:56:12</example>
+        <example>search</example>
         */
-        [DataMember(Name = "sprice_create", EmitDefaultValue = false)]
-        public string SpriceCreate { get; set; }
+        [DataMember(Name = "visible", EmitDefaultValue = false)]
+        public string Visible { get; set; }
 
         /// <summary>
-        /// Defines the date of special price modification
+        /// Defines product add that is specified by category id
         /// </summary>
-        /// <value>Defines the date of special price modification</value>
+        /// <value>Defines product add that is specified by category id</value>
         /*
-        <example>2018-12-05 13:46:20</example>
+        <example>6</example>
         */
-        [DataMember(Name = "sprice_modified", EmitDefaultValue = false)]
-        public string SpriceModified { get; set; }
+        [DataMember(Name = "category_id", EmitDefaultValue = false)]
+        public string CategoryId { get; set; }
 
         /// <summary>
-        /// Defines the term of special price offer duration
+        /// Defines product add that is specified by comma-separated categories id
         /// </summary>
-        /// <value>Defines the term of special price offer duration</value>
+        /// <value>Defines product add that is specified by comma-separated categories id</value>
         /*
-        <example>2018-08-25 23:56:12</example>
+        <example>23,56</example>
         */
-        [DataMember(Name = "sprice_expire", EmitDefaultValue = false)]
-        public string SpriceExpire { get; set; }
+        [DataMember(Name = "categories_ids", EmitDefaultValue = false)]
+        public string CategoriesIds { get; set; }
 
         /// <summary>
-        /// Defines product&#39;s tier prices
+        /// A categorization for the product
         /// </summary>
-        /// <value>Defines product&#39;s tier prices</value>
-        [DataMember(Name = "tier_prices", EmitDefaultValue = false)]
-        public List<ProductAddTierPricesInner> TierPrices { get; set; }
+        /// <value>A categorization for the product</value>
+        /*
+        <example>Shirts</example>
+        */
+        [DataMember(Name = "product_class", EmitDefaultValue = false)]
+        public string ProductClass { get; set; }
 
         /// <summary>
-        /// Defines product&#39;s group prices
+        /// A categorization for the product
         /// </summary>
-        /// <value>Defines product&#39;s group prices</value>
-        [DataMember(Name = "group_prices", EmitDefaultValue = false)]
-        public List<ProductAddGroupPricesInner> GroupPrices { get; set; }
+        /// <value>A categorization for the product</value>
+        /*
+        <example>BICYCLE</example>
+        */
+        [DataMember(Name = "product_type", EmitDefaultValue = false)]
+        public string ProductType { get; set; }
+
+        /// <summary>
+        /// Defines whether the product is virtual
+        /// </summary>
+        /// <value>Defines whether the product is virtual</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "is_virtual", EmitDefaultValue = true)]
+        public bool IsVirtual { get; set; }
+
+        /// <summary>
+        /// Defines whether the product is downloadable
+        /// </summary>
+        /// <value>Defines whether the product is downloadable</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "downloadable", EmitDefaultValue = true)]
+        public bool Downloadable { get; set; }
+
+        /// <summary>
+        /// If true, it indicates the product as a supply, otherwise it indicates that it is a finished product.
+        /// </summary>
+        /// <value>If true, it indicates the product as a supply, otherwise it indicates that it is a finished product.</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "is_supply", EmitDefaultValue = true)]
+        public bool IsSupply { get; set; }
 
         /// <summary>
         /// Specifies the set of visible/invisible products for users
@@ -442,6 +468,190 @@ namespace Org.OpenAPITools.Model
         public bool AvailableForSale { get; set; }
 
         /// <summary>
+        /// Store Id
+        /// </summary>
+        /// <value>Store Id</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        public string StoreId { get; set; }
+
+        /// <summary>
+        /// Assign product to the stores that is specified by comma-separated stores&#39; id
+        /// </summary>
+        /// <value>Assign product to the stores that is specified by comma-separated stores&#39; id</value>
+        /*
+        <example>1,2</example>
+        */
+        [DataMember(Name = "stores_ids", EmitDefaultValue = false)]
+        public string StoresIds { get; set; }
+
+        /// <summary>
+        /// Language id
+        /// </summary>
+        /// <value>Language id</value>
+        /*
+        <example>3</example>
+        */
+        [DataMember(Name = "lang_id", EmitDefaultValue = false)]
+        public string LangId { get; set; }
+
+        /// <summary>
+        /// Defines product&#39;s old price
+        /// </summary>
+        /// <value>Defines product&#39;s old price</value>
+        /*
+        <example>99.9</example>
+        */
+        [DataMember(Name = "old_price", EmitDefaultValue = false)]
+        public decimal OldPrice { get; set; }
+
+        /// <summary>
+        /// Defines product&#39;s model that has to be added
+        /// </summary>
+        /// <value>Defines product&#39;s model that has to be added</value>
+        /*
+        <example>56.9</example>
+        */
+        [DataMember(Name = "special_price", EmitDefaultValue = false)]
+        public decimal SpecialPrice { get; set; }
+
+        /// <summary>
+        /// Defines product&#39;s sale price
+        /// </summary>
+        /// <value>Defines product&#39;s sale price</value>
+        /*
+        <example>56.12</example>
+        */
+        [DataMember(Name = "wholesale_price", EmitDefaultValue = false)]
+        public decimal WholesalePrice { get; set; }
+
+        /// <summary>
+        /// Defines new product&#39;s cost price
+        /// </summary>
+        /// <value>Defines new product&#39;s cost price</value>
+        /*
+        <example>65.9</example>
+        */
+        [DataMember(Name = "cost_price", EmitDefaultValue = false)]
+        public decimal CostPrice { get; set; }
+
+        /// <summary>
+        /// Specifies product&#39;s fixed cost shipping price
+        /// </summary>
+        /// <value>Specifies product&#39;s fixed cost shipping price</value>
+        /*
+        <example>5.5</example>
+        */
+        [DataMember(Name = "fixed_cost_shipping_price", EmitDefaultValue = false)]
+        public decimal FixedCostShippingPrice { get; set; }
+
+        /// <summary>
+        /// Defines product&#39;s tier prices
+        /// </summary>
+        /// <value>Defines product&#39;s tier prices</value>
+        [DataMember(Name = "tier_prices", EmitDefaultValue = false)]
+        public List<ProductAddTierPricesInner> TierPrices { get; set; }
+
+        /// <summary>
+        /// Defines product&#39;s group prices
+        /// </summary>
+        /// <value>Defines product&#39;s group prices</value>
+        [DataMember(Name = "group_prices", EmitDefaultValue = false)]
+        public List<ProductAddGroupPricesInner> GroupPrices { get; set; }
+
+        /// <summary>
+        /// Defines buy it now value
+        /// </summary>
+        /// <value>Defines buy it now value</value>
+        /*
+        <example>65.9</example>
+        */
+        [DataMember(Name = "buyitnow_price", EmitDefaultValue = false)]
+        public decimal BuyitnowPrice { get; set; }
+
+        /// <summary>
+        /// Defines reserve price value
+        /// </summary>
+        /// <value>Defines reserve price value</value>
+        /*
+        <example>65.9</example>
+        */
+        [DataMember(Name = "reserve_price", EmitDefaultValue = false)]
+        public decimal ReservePrice { get; set; }
+
+        /// <summary>
+        /// Defines product&#39;s quantity that has to be added
+        /// </summary>
+        /// <value>Defines product&#39;s quantity that has to be added</value>
+        /*
+        <example>6</example>
+        */
+        [DataMember(Name = "quantity", EmitDefaultValue = false)]
+        public decimal Quantity { get; set; }
+
+        /// <summary>
+        /// Set stock status
+        /// </summary>
+        /// <value>Set stock status</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "in_stock", EmitDefaultValue = true)]
+        public bool InStock { get; set; }
+
+        /// <summary>
+        /// Defines inventory tracking for product
+        /// </summary>
+        /// <value>Defines inventory tracking for product</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "manage_stock", EmitDefaultValue = true)]
+        public bool ManageStock { get; set; }
+
+        /// <summary>
+        /// This parameter is used for selecting a warehouse where you need to set/modify a product quantity.
+        /// </summary>
+        /// <value>This parameter is used for selecting a warehouse where you need to set/modify a product quantity.</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "warehouse_id", EmitDefaultValue = false)]
+        public string WarehouseId { get; set; }
+
+        /// <summary>
+        /// Set backorder status
+        /// </summary>
+        /// <value>Set backorder status</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "backorder_status", EmitDefaultValue = false)]
+        public string BackorderStatus { get; set; }
+
+        /// <summary>
+        /// The minimum quantity an order must contain, to be eligible to purchase this product.
+        /// </summary>
+        /// <value>The minimum quantity an order must contain, to be eligible to purchase this product.</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "min_order_quantity", EmitDefaultValue = false)]
+        public decimal MinOrderQuantity { get; set; }
+
+        /// <summary>
+        /// The maximum quantity an order can contain when purchasing the product.
+        /// </summary>
+        /// <value>The maximum quantity an order can contain when purchasing the product.</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "max_order_quantity", EmitDefaultValue = false)]
+        public decimal MaxOrderQuantity { get; set; }
+
+        /// <summary>
         /// Weight
         /// </summary>
         /// <value>Weight</value>
@@ -450,6 +660,16 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "weight", EmitDefaultValue = false)]
         public decimal Weight { get; set; }
+
+        /// <summary>
+        /// Weight Unit
+        /// </summary>
+        /// <value>Weight Unit</value>
+        /*
+        <example>lb</example>
+        */
+        [DataMember(Name = "weight_unit", EmitDefaultValue = false)]
+        public string WeightUnit { get; set; }
 
         /// <summary>
         /// Defines product&#39;s width
@@ -486,391 +706,10 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <value>Weight Unit</value>
         /*
-        <example>lb</example>
-        */
-        [DataMember(Name = "weight_unit", EmitDefaultValue = false)]
-        public string WeightUnit { get; set; }
-
-        /// <summary>
-        /// Weight Unit
-        /// </summary>
-        /// <value>Weight Unit</value>
-        /*
         <example>cm</example>
         */
         [DataMember(Name = "dimensions_unit", EmitDefaultValue = false)]
         public string DimensionsUnit { get; set; }
-
-        /// <summary>
-        /// Defines short description
-        /// </summary>
-        /// <value>Defines short description</value>
-        /*
-        <example>Short description. This is very short description</example>
-        */
-        [DataMember(Name = "short_description", EmitDefaultValue = false)]
-        public string ShortDescription { get; set; }
-
-        /// <summary>
-        /// This parameter is used for selecting a warehouse where you need to set/modify a product quantity.
-        /// </summary>
-        /// <value>This parameter is used for selecting a warehouse where you need to set/modify a product quantity.</value>
-        /*
-        <example>1</example>
-        */
-        [DataMember(Name = "warehouse_id", EmitDefaultValue = false)]
-        public string WarehouseId { get; set; }
-
-        /// <summary>
-        /// Set backorder status
-        /// </summary>
-        /// <value>Set backorder status</value>
-        /*
-        <example>true</example>
-        */
-        [DataMember(Name = "backorder_status", EmitDefaultValue = false)]
-        public string BackorderStatus { get; set; }
-
-        /// <summary>
-        /// Defines product&#39;s quantity that has to be added
-        /// </summary>
-        /// <value>Defines product&#39;s quantity that has to be added</value>
-        /*
-        <example>6</example>
-        */
-        [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public decimal Quantity { get; set; }
-
-        /// <summary>
-        /// Defines whether the product is downloadable
-        /// </summary>
-        /// <value>Defines whether the product is downloadable</value>
-        /*
-        <example>true</example>
-        */
-        [DataMember(Name = "downloadable", EmitDefaultValue = true)]
-        public bool Downloadable { get; set; }
-
-        /// <summary>
-        /// Defines product&#39;s sale price
-        /// </summary>
-        /// <value>Defines product&#39;s sale price</value>
-        /*
-        <example>56.12</example>
-        */
-        [DataMember(Name = "wholesale_price", EmitDefaultValue = false)]
-        public decimal WholesalePrice { get; set; }
-
-        /// <summary>
-        /// Defines the date of entity creation
-        /// </summary>
-        /// <value>Defines the date of entity creation</value>
-        /*
-        <example>2014-08-09 13:13:13</example>
-        */
-        [DataMember(Name = "created_at", EmitDefaultValue = false)]
-        public string CreatedAt { get; set; }
-
-        /// <summary>
-        /// Defines product&#39;s manufacturer
-        /// </summary>
-        /// <value>Defines product&#39;s manufacturer</value>
-        /*
-        <example>Samsung</example>
-        */
-        [DataMember(Name = "manufacturer", EmitDefaultValue = false)]
-        public string Manufacturer { get; set; }
-
-        /// <summary>
-        /// Defines product&#39;s manufacturer by manufacturer_id
-        /// </summary>
-        /// <value>Defines product&#39;s manufacturer by manufacturer_id</value>
-        /*
-        <example>1</example>
-        */
-        [DataMember(Name = "manufacturer_id", EmitDefaultValue = false)]
-        public string ManufacturerId { get; set; }
-
-        /// <summary>
-        /// Defines product add that is specified by comma-separated categories id
-        /// </summary>
-        /// <value>Defines product add that is specified by comma-separated categories id</value>
-        /*
-        <example>23,56</example>
-        */
-        [DataMember(Name = "categories_ids", EmitDefaultValue = false)]
-        public string CategoriesIds { get; set; }
-
-        /// <summary>
-        /// Defines product&#39;s related products ids that has to be added
-        /// </summary>
-        /// <value>Defines product&#39;s related products ids that has to be added</value>
-        /*
-        <example>4,5</example>
-        */
-        [DataMember(Name = "related_products_ids", EmitDefaultValue = false)]
-        public string RelatedProductsIds { get; set; }
-
-        /// <summary>
-        /// Defines product&#39;s up-sell products ids that has to be added
-        /// </summary>
-        /// <value>Defines product&#39;s up-sell products ids that has to be added</value>
-        /*
-        <example>4,5</example>
-        */
-        [DataMember(Name = "up_sell_products_ids", EmitDefaultValue = false)]
-        public string UpSellProductsIds { get; set; }
-
-        /// <summary>
-        /// Defines product&#39;s cross-sell products ids that has to be added
-        /// </summary>
-        /// <value>Defines product&#39;s cross-sell products ids that has to be added</value>
-        /*
-        <example>4,5</example>
-        */
-        [DataMember(Name = "cross_sell_products_ids", EmitDefaultValue = false)]
-        public string CrossSellProductsIds { get; set; }
-
-        /// <summary>
-        /// Defines tax classes where entity has to be added
-        /// </summary>
-        /// <value>Defines tax classes where entity has to be added</value>
-        /*
-        <example>9</example>
-        */
-        [DataMember(Name = "tax_class_id", EmitDefaultValue = false)]
-        public string TaxClassId { get; set; }
-
-        /// <summary>
-        /// Defines product&#39;s type
-        /// </summary>
-        /// <value>Defines product&#39;s type</value>
-        /*
-        <example>configurable</example>
-        */
-        [DataMember(Name = "type", EmitDefaultValue = false)]
-        public string Type { get; set; }
-
-        /// <summary>
-        /// Defines unique meta title for each entity
-        /// </summary>
-        /// <value>Defines unique meta title for each entity</value>
-        /*
-        <example>category,test</example>
-        */
-        [DataMember(Name = "meta_title", EmitDefaultValue = false)]
-        public string MetaTitle { get; set; }
-
-        /// <summary>
-        /// Defines unique meta keywords for each entity
-        /// </summary>
-        /// <value>Defines unique meta keywords for each entity</value>
-        /*
-        <example>category,test</example>
-        */
-        [DataMember(Name = "meta_keywords", EmitDefaultValue = false)]
-        public string MetaKeywords { get; set; }
-
-        /// <summary>
-        /// Defines unique meta description of a entity
-        /// </summary>
-        /// <value>Defines unique meta description of a entity</value>
-        /*
-        <example>category,test</example>
-        */
-        [DataMember(Name = "meta_description", EmitDefaultValue = false)]
-        public string MetaDescription { get; set; }
-
-        /// <summary>
-        /// Defines unique product&#39;s URL
-        /// </summary>
-        /// <value>Defines unique product&#39;s URL</value>
-        /*
-        <example>/product_slug</example>
-        */
-        [DataMember(Name = "url", EmitDefaultValue = false)]
-        public string Url { get; set; }
-
-        /// <summary>
-        /// Language id
-        /// </summary>
-        /// <value>Language id</value>
-        /*
-        <example>3</example>
-        */
-        [DataMember(Name = "lang_id", EmitDefaultValue = false)]
-        public string LangId { get; set; }
-
-        /// <summary>
-        /// Assign product to the stores that is specified by comma-separated stores&#39; id
-        /// </summary>
-        /// <value>Assign product to the stores that is specified by comma-separated stores&#39; id</value>
-        /*
-        <example>1,2</example>
-        */
-        [DataMember(Name = "stores_ids", EmitDefaultValue = false)]
-        public string StoresIds { get; set; }
-
-        /// <summary>
-        /// Defines product add that is specified by category id
-        /// </summary>
-        /// <value>Defines product add that is specified by category id</value>
-        /*
-        <example>6</example>
-        */
-        [DataMember(Name = "category_id", EmitDefaultValue = false)]
-        public string CategoryId { get; set; }
-
-        /// <summary>
-        /// Specifies the number of product&#39;s reviews
-        /// </summary>
-        /// <value>Specifies the number of product&#39;s reviews</value>
-        /*
-        <example>9</example>
-        */
-        [DataMember(Name = "viewed_count", EmitDefaultValue = false)]
-        public int ViewedCount { get; set; }
-
-        /// <summary>
-        /// Defines how many times the product was ordered
-        /// </summary>
-        /// <value>Defines how many times the product was ordered</value>
-        /*
-        <example>15</example>
-        */
-        [DataMember(Name = "ordered_count", EmitDefaultValue = false)]
-        public int OrderedCount { get; set; }
-
-        /// <summary>
-        /// Defines product’s attribute set name in Magento
-        /// </summary>
-        /// <value>Defines product’s attribute set name in Magento</value>
-        /*
-        <example>Shoes</example>
-        */
-        [DataMember(Name = "attribute_set_name", EmitDefaultValue = false)]
-        public string AttributeSetName { get; set; }
-
-        /// <summary>
-        /// Defines product’s attribute name separated with a comma in Magento
-        /// </summary>
-        /// <value>Defines product’s attribute name separated with a comma in Magento</value>
-        /*
-        <example>Color,Manufacturer</example>
-        */
-        [DataMember(Name = "attribute_name", EmitDefaultValue = false)]
-        public string AttributeName { get; set; }
-
-        /// <summary>
-        /// The numeric ID of the shipping template associated with the products in Etsy. You can find possible values in the \&quot;cart.info\&quot; API method response, in the field shipping_zones[]-&gt;id.
-        /// </summary>
-        /// <value>The numeric ID of the shipping template associated with the products in Etsy. You can find possible values in the \&quot;cart.info\&quot; API method response, in the field shipping_zones[]-&gt;id.</value>
-        /*
-        <example>40256592690</example>
-        */
-        [DataMember(Name = "shipping_template_id", EmitDefaultValue = false)]
-        public int ShippingTemplateId { get; set; }
-
-        /// <summary>
-        /// Defines product&#39;s production partner ids that has to be added
-        /// </summary>
-        /// <value>Defines product&#39;s production partner ids that has to be added</value>
-        /*
-        <example>4,5</example>
-        */
-        [DataMember(Name = "production_partner_ids", EmitDefaultValue = false)]
-        public string ProductionPartnerIds { get; set; }
-
-        /// <summary>
-        /// The human-readable label for the condition (e.g., \&quot;New\&quot;).
-        /// </summary>
-        /// <value>The human-readable label for the condition (e.g., \&quot;New\&quot;).</value>
-        /*
-        <example>Like New</example>
-        */
-        [DataMember(Name = "condition", EmitDefaultValue = false)]
-        public string Condition { get; set; }
-
-        /// <summary>
-        /// Describes the number of days the seller wants the listing to be active. Look at cart.info method response for allowed values.
-        /// </summary>
-        /// <value>Describes the number of days the seller wants the listing to be active. Look at cart.info method response for allowed values.</value>
-        /*
-        <example>Days_3</example>
-        */
-        [DataMember(Name = "listing_duration", EmitDefaultValue = false)]
-        public string ListingDuration { get; set; }
-
-        /// <summary>
-        /// Indicates the selling format of the marketplace listing.
-        /// </summary>
-        /// <value>Indicates the selling format of the marketplace listing.</value>
-        /*
-        <example>Auction</example>
-        */
-        [DataMember(Name = "listing_type", EmitDefaultValue = false)]
-        public string ListingType { get; set; }
-
-        /// <summary>
-        /// Identifies the payment method (such as PayPal) that the seller will accept when the buyer pays for the item. Look at cart.info method response for allowed values.&lt;hr&gt;&lt;div style&#x3D;\&quot;font-style:normal\&quot;&gt;Param structure:&lt;div style&#x3D;\&quot;margin-left: 2%;\&quot;&gt;&lt;code style&#x3D;\&quot;padding:0; background-color:#ffffff;font-size:85%;font-family:monospace;\&quot;&gt;payment_methods[0] &#x3D; string&lt;/br&gt;payment_methods[1] &#x3D; string&lt;/br&gt;&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;
-        /// </summary>
-        /// <value>Identifies the payment method (such as PayPal) that the seller will accept when the buyer pays for the item. Look at cart.info method response for allowed values.&lt;hr&gt;&lt;div style&#x3D;\&quot;font-style:normal\&quot;&gt;Param structure:&lt;div style&#x3D;\&quot;margin-left: 2%;\&quot;&gt;&lt;code style&#x3D;\&quot;padding:0; background-color:#ffffff;font-size:85%;font-family:monospace;\&quot;&gt;payment_methods[0] &#x3D; string&lt;/br&gt;payment_methods[1] &#x3D; string&lt;/br&gt;&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;</value>
-        /*
-        <example>payment_methods[0]&#x3D;CashOnPickup&amp;payment_methods[1]&#x3D;PayPal</example>
-        */
-        [DataMember(Name = "payment_methods", EmitDefaultValue = false)]
-        public List<string> PaymentMethods { get; set; }
-
-        /// <summary>
-        /// Indicates whether the seller allows the buyer to return the item.
-        /// </summary>
-        /// <value>Indicates whether the seller allows the buyer to return the item.</value>
-        /*
-        <example>true</example>
-        */
-        [DataMember(Name = "return_accepted", EmitDefaultValue = true)]
-        public bool ReturnAccepted { get; set; }
-
-        /// <summary>
-        /// The shipping details, including flat and calculated shipping costs and shipping insurance costs. Look at cart.info method response for allowed values.&lt;hr&gt;&lt;div style&#x3D;\&quot;font-style:normal\&quot;&gt;Param structure:&lt;div style&#x3D;\&quot;margin-left: 2%;\&quot;&gt;&lt;code style&#x3D;\&quot;padding:0; background-color:#ffffff;font-size:85%;font-family:monospace;\&quot;&gt;shipping_details[0][&lt;b&gt;shipping_type&lt;/b&gt;] &#x3D; string &lt;/br&gt;shipping_details[0][&lt;b&gt;shipping_service&lt;/b&gt;] &#x3D; string&lt;/br&gt;shipping_details[0][&lt;b&gt;shipping_cost&lt;/b&gt;] &#x3D; decimal&lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_type&lt;/b&gt;] &#x3D; string &lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_service&lt;/b&gt;] &#x3D; string&lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_cost&lt;/b&gt;] &#x3D; decimal&lt;/br&gt;&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;
-        /// </summary>
-        /// <value>The shipping details, including flat and calculated shipping costs and shipping insurance costs. Look at cart.info method response for allowed values.&lt;hr&gt;&lt;div style&#x3D;\&quot;font-style:normal\&quot;&gt;Param structure:&lt;div style&#x3D;\&quot;margin-left: 2%;\&quot;&gt;&lt;code style&#x3D;\&quot;padding:0; background-color:#ffffff;font-size:85%;font-family:monospace;\&quot;&gt;shipping_details[0][&lt;b&gt;shipping_type&lt;/b&gt;] &#x3D; string &lt;/br&gt;shipping_details[0][&lt;b&gt;shipping_service&lt;/b&gt;] &#x3D; string&lt;/br&gt;shipping_details[0][&lt;b&gt;shipping_cost&lt;/b&gt;] &#x3D; decimal&lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_type&lt;/b&gt;] &#x3D; string &lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_service&lt;/b&gt;] &#x3D; string&lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_cost&lt;/b&gt;] &#x3D; decimal&lt;/br&gt;&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;</value>
-        [DataMember(Name = "shipping_details", EmitDefaultValue = false)]
-        public List<ProductAddShippingDetailsInner> ShippingDetails { get; set; }
-
-        /// <summary>
-        /// Valid PayPal email address for the PayPal account that the seller will use if they offer PayPal as a payment method for the listing.
-        /// </summary>
-        /// <value>Valid PayPal email address for the PayPal account that the seller will use if they offer PayPal as a payment method for the listing.</value>
-        /*
-        <example>paypall@mail.com</example>
-        */
-        [DataMember(Name = "paypal_email", EmitDefaultValue = false)]
-        public string PaypalEmail { get; set; }
-
-        /// <summary>
-        /// Gets or Sets SellerProfiles
-        /// </summary>
-        [DataMember(Name = "seller_profiles", EmitDefaultValue = false)]
-        public ProductAddSellerProfiles SellerProfiles { get; set; }
-
-        /// <summary>
-        /// Gets or Sets PackageDetails
-        /// </summary>
-        [DataMember(Name = "package_details", EmitDefaultValue = false)]
-        public ProductAddPackageDetails PackageDetails { get; set; }
-
-        /// <summary>
-        /// Gets or Sets BestOffer
-        /// </summary>
-        [DataMember(Name = "best_offer", EmitDefaultValue = false)]
-        public ProductAddBestOffer BestOffer { get; set; }
-
-        /// <summary>
-        /// Gets or Sets SalesTax
-        /// </summary>
-        [DataMember(Name = "sales_tax", EmitDefaultValue = false)]
-        public ProductAddSalesTax SalesTax { get; set; }
 
         /// <summary>
         /// A barcode is a unique code composed of numbers used as a product identifier.
@@ -913,11 +752,100 @@ namespace Org.OpenAPITools.Model
         public string Isbn { get; set; }
 
         /// <summary>
-        /// An array of Item Specific Name/Value pairs used by the seller to provide descriptive details of an item in a structured manner.         The list of possible specifications can be obtained using the category.info method (additional_fields-&gt;product_specifics).         &lt;b&gt;The structure of the parameter is different for specific platforms.&lt;/b&gt;
+        /// Global Trade Item Number. An GTIN is an identifier for trade items.
         /// </summary>
-        /// <value>An array of Item Specific Name/Value pairs used by the seller to provide descriptive details of an item in a structured manner.         The list of possible specifications can be obtained using the category.info method (additional_fields-&gt;product_specifics).         &lt;b&gt;The structure of the parameter is different for specific platforms.&lt;/b&gt;</value>
-        [DataMember(Name = "specifics", EmitDefaultValue = false)]
-        public List<ProductAddSpecificsInner> Specifics { get; set; }
+        /// <value>Global Trade Item Number. An GTIN is an identifier for trade items.</value>
+        /*
+        <example>12345678912345</example>
+        */
+        [DataMember(Name = "gtin", EmitDefaultValue = false)]
+        public string Gtin { get; set; }
+
+        /// <summary>
+        /// Manufacturer Part Number. A MPN is an identifier of a particular part design or material used.
+        /// </summary>
+        /// <value>Manufacturer Part Number. A MPN is an identifier of a particular part design or material used.</value>
+        /*
+        <example>9770317847001</example>
+        */
+        [DataMember(Name = "mpn", EmitDefaultValue = false)]
+        public string Mpn { get; set; }
+
+        /// <summary>
+        /// Amazon Standard Identification Number.
+        /// </summary>
+        /// <value>Amazon Standard Identification Number.</value>
+        /*
+        <example>97703178470</example>
+        */
+        [DataMember(Name = "asin", EmitDefaultValue = false)]
+        public string Asin { get; set; }
+
+        /// <summary>
+        /// Groups all variations, that you want to combine into one product.
+        /// </summary>
+        /// <value>Groups all variations, that you want to combine into one product.</value>
+        /*
+        <example>5901234123457</example>
+        */
+        [DataMember(Name = "product_reference", EmitDefaultValue = false)]
+        public string ProductReference { get; set; }
+
+        /// <summary>
+        /// Harmonized System Code. An HSC is a 6-digit identifier that allows participating countries to classify traded goods on a common basis for customs purposes
+        /// </summary>
+        /// <value>Harmonized System Code. An HSC is a 6-digit identifier that allows participating countries to classify traded goods on a common basis for customs purposes</value>
+        /*
+        <example>123456</example>
+        */
+        [DataMember(Name = "harmonized_system_code", EmitDefaultValue = false)]
+        public string HarmonizedSystemCode { get; set; }
+
+        /// <summary>
+        /// The country where the inventory item was made
+        /// </summary>
+        /// <value>The country where the inventory item was made</value>
+        /*
+        <example>123456</example>
+        */
+        [DataMember(Name = "country_of_origin", EmitDefaultValue = false)]
+        public string CountryOfOrigin { get; set; }
+
+        /// <summary>
+        /// Defines product&#39;s manufacturer
+        /// </summary>
+        /// <value>Defines product&#39;s manufacturer</value>
+        /*
+        <example>Samsung</example>
+        */
+        [DataMember(Name = "manufacturer", EmitDefaultValue = false)]
+        public string Manufacturer { get; set; }
+
+        /// <summary>
+        /// Defines product&#39;s manufacturer by manufacturer_id
+        /// </summary>
+        /// <value>Defines product&#39;s manufacturer by manufacturer_id</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "manufacturer_id", EmitDefaultValue = false)]
+        public string ManufacturerId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ManufacturerInfo
+        /// </summary>
+        [DataMember(Name = "manufacturer_info", EmitDefaultValue = false)]
+        public ProductAddManufacturerInfo ManufacturerInfo { get; set; }
+
+        /// <summary>
+        /// Defines product brand name
+        /// </summary>
+        /// <value>Defines product brand name</value>
+        /*
+        <example>Abidas</example>
+        */
+        [DataMember(Name = "brand_name", EmitDefaultValue = false)]
+        public string BrandName { get; set; }
 
         /// <summary>
         /// Image Url
@@ -947,218 +875,67 @@ namespace Org.OpenAPITools.Model
         public List<string> AdditionalImageUrls { get; set; }
 
         /// <summary>
-        /// Defines reserve price value
-        /// </summary>
-        /// <value>Defines reserve price value</value>
-        /*
-        <example>65.9</example>
-        */
-        [DataMember(Name = "reserve_price", EmitDefaultValue = false)]
-        public decimal ReservePrice { get; set; }
-
-        /// <summary>
-        /// Defines buy it now value
-        /// </summary>
-        /// <value>Defines buy it now value</value>
-        /*
-        <example>65.9</example>
-        */
-        [DataMember(Name = "buyitnow_price", EmitDefaultValue = false)]
-        public decimal BuyitnowPrice { get; set; }
-
-        /// <summary>
-        /// Detailed description of the product condition.
-        /// </summary>
-        /// <value>Detailed description of the product condition.</value>
-        /*
-        <example>Almost perfect condition, a few scratches</example>
-        */
-        [DataMember(Name = "condition_description", EmitDefaultValue = false)]
-        public string ConditionDescription { get; set; }
-
-        /// <summary>
-        /// This allows buyers to remain anonymous when the bid or buy an item.
-        /// </summary>
-        /// <value>This allows buyers to remain anonymous when the bid or buy an item.</value>
-        /*
-        <example>public</example>
-        */
-        [DataMember(Name = "auction_confidentiality_level", EmitDefaultValue = false)]
-        public string AuctionConfidentialityLevel { get; set; }
-
-        /// <summary>
-        /// Defines product&#39;s logistic channel settings
-        /// </summary>
-        /// <value>Defines product&#39;s logistic channel settings</value>
-        [DataMember(Name = "logistic_info", EmitDefaultValue = false)]
-        public List<ProductAddLogisticInfoInner> LogisticInfo { get; set; }
-
-        /// <summary>
-        /// Allows to schedule a time in the future that the item becomes available. The value should be greater than the current date and time.
-        /// </summary>
-        /// <value>Allows to schedule a time in the future that the item becomes available. The value should be greater than the current date and time.</value>
-        /*
-        <example>avail_from&#x3D;2029-10-25T15:54:37-0500</example>
-        */
-        [DataMember(Name = "avail_from", EmitDefaultValue = false)]
-        public string AvailFrom { get; set; }
-
-        /// <summary>
-        /// Product tags
-        /// </summary>
-        /// <value>Product tags</value>
-        /*
-        <example>tag1,tag2</example>
-        */
-        [DataMember(Name = "tags", EmitDefaultValue = false)]
-        public string Tags { get; set; }
-
-        /// <summary>
-        /// Is cache clear required
-        /// </summary>
-        /// <value>Is cache clear required</value>
-        /*
-        <example>false</example>
-        */
-        [DataMember(Name = "clear_cache", EmitDefaultValue = true)]
-        public bool ClearCache { get; set; }
-
-        /// <summary>
-        /// Amazon Standard Identification Number.
-        /// </summary>
-        /// <value>Amazon Standard Identification Number.</value>
-        /*
-        <example>97703178470</example>
-        */
-        [DataMember(Name = "asin", EmitDefaultValue = false)]
-        public string Asin { get; set; }
-
-        /// <summary>
-        /// Global Trade Item Number. An GTIN is an identifier for trade items.
-        /// </summary>
-        /// <value>Global Trade Item Number. An GTIN is an identifier for trade items.</value>
-        /*
-        <example>12345678912345</example>
-        */
-        [DataMember(Name = "gtin", EmitDefaultValue = false)]
-        public string Gtin { get; set; }
-
-        /// <summary>
-        /// Manufacturer Part Number. A MPN is an identifier of a particular part design or material used.
-        /// </summary>
-        /// <value>Manufacturer Part Number. A MPN is an identifier of a particular part design or material used.</value>
-        /*
-        <example>9770317847001</example>
-        */
-        [DataMember(Name = "mpn", EmitDefaultValue = false)]
-        public string Mpn { get; set; }
-
-        /// <summary>
-        /// Specifies whether a tax is charged
-        /// </summary>
-        /// <value>Specifies whether a tax is charged</value>
-        /*
-        <example>false</example>
-        */
-        [DataMember(Name = "taxable", EmitDefaultValue = true)]
-        public bool Taxable { get; set; }
-
-        /// <summary>
-        /// Set visibility status
-        /// </summary>
-        /// <value>Set visibility status</value>
-        /*
-        <example>search</example>
-        */
-        [DataMember(Name = "visible", EmitDefaultValue = false)]
-        public string Visible { get; set; }
-
-        /// <summary>
-        /// Defines product&#39;s status
-        /// </summary>
-        /// <value>Defines product&#39;s status</value>
-        /*
-        <example>disabled</example>
-        */
-        [DataMember(Name = "status", EmitDefaultValue = false)]
-        public string Status { get; set; }
-
-        /// <summary>
-        /// Defines unique URL for SEO
-        /// </summary>
-        /// <value>Defines unique URL for SEO</value>
-        /*
-        <example>some seo url</example>
-        */
-        [DataMember(Name = "seo_url", EmitDefaultValue = false)]
-        public string SeoUrl { get; set; }
-
-        /// <summary>
-        /// A categorization for the product
-        /// </summary>
-        /// <value>A categorization for the product</value>
-        /*
-        <example>Shirts</example>
-        */
-        [DataMember(Name = "product_class", EmitDefaultValue = false)]
-        public string ProductClass { get; set; }
-
-        /// <summary>
-        /// A categorization for the product
-        /// </summary>
-        /// <value>A categorization for the product</value>
-        /*
-        <example>BICYCLE</example>
-        */
-        [DataMember(Name = "product_type", EmitDefaultValue = false)]
-        public string ProductType { get; set; }
-
-        /// <summary>
-        /// String containing the JSON representation of the supplied data
-        /// </summary>
-        /// <value>String containing the JSON representation of the supplied data</value>
-        /*
-        <example>{&quot;color&quot;:[&quot;Silver&quot;],&quot;manufacturer&quot;:&quot;Philips&quot;,&quot;features&quot;:[&quot;3 way&quot;],&quot;countPerPack&quot;:1,&quot;watts&quot;:{&quot;unit&quot;:&quot;W&quot;,&quot;measure&quot;:40}}</example>
-        */
-        [DataMember(Name = "marketplace_item_properties", EmitDefaultValue = false)]
-        public string MarketplaceItemProperties { get; set; }
-
-        /// <summary>
-        /// Defines inventory tracking for product
-        /// </summary>
-        /// <value>Defines inventory tracking for product</value>
-        /*
-        <example>false</example>
-        */
-        [DataMember(Name = "manage_stock", EmitDefaultValue = true)]
-        public bool ManageStock { get; set; }
-
-        /// <summary>
-        /// Harmonized System Code. An HSC is a 6-digit identifier that allows participating countries to classify traded goods on a common basis for customs purposes
-        /// </summary>
-        /// <value>Harmonized System Code. An HSC is a 6-digit identifier that allows participating countries to classify traded goods on a common basis for customs purposes</value>
-        /*
-        <example>123456</example>
-        */
-        [DataMember(Name = "harmonized_system_code", EmitDefaultValue = false)]
-        public string HarmonizedSystemCode { get; set; }
-
-        /// <summary>
-        /// The country where the inventory item was made
-        /// </summary>
-        /// <value>The country where the inventory item was made</value>
-        /*
-        <example>123456</example>
-        */
-        [DataMember(Name = "country_of_origin", EmitDefaultValue = false)]
-        public string CountryOfOrigin { get; set; }
-
-        /// <summary>
         /// File Url
         /// </summary>
         /// <value>File Url</value>
         [DataMember(Name = "files", EmitDefaultValue = false)]
         public List<ProductAddFilesInner> Files { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SizeChart
+        /// </summary>
+        [DataMember(Name = "size_chart", EmitDefaultValue = false)]
+        public ProductAddSizeChart SizeChart { get; set; }
+
+        /// <summary>
+        /// Defines product&#39;s related products ids that has to be added
+        /// </summary>
+        /// <value>Defines product&#39;s related products ids that has to be added</value>
+        /*
+        <example>4,5</example>
+        */
+        [DataMember(Name = "related_products_ids", EmitDefaultValue = false)]
+        public string RelatedProductsIds { get; set; }
+
+        /// <summary>
+        /// Defines product&#39;s up-sell products ids that has to be added
+        /// </summary>
+        /// <value>Defines product&#39;s up-sell products ids that has to be added</value>
+        /*
+        <example>4,5</example>
+        */
+        [DataMember(Name = "up_sell_products_ids", EmitDefaultValue = false)]
+        public string UpSellProductsIds { get; set; }
+
+        /// <summary>
+        /// Defines product&#39;s cross-sell products ids that has to be added
+        /// </summary>
+        /// <value>Defines product&#39;s cross-sell products ids that has to be added</value>
+        /*
+        <example>4,5</example>
+        */
+        [DataMember(Name = "cross_sell_products_ids", EmitDefaultValue = false)]
+        public string CrossSellProductsIds { get; set; }
+
+        /// <summary>
+        /// Defines product’s attribute set name in Magento
+        /// </summary>
+        /// <value>Defines product’s attribute set name in Magento</value>
+        /*
+        <example>Shoes</example>
+        */
+        [DataMember(Name = "attribute_set_name", EmitDefaultValue = false)]
+        public string AttributeSetName { get; set; }
+
+        /// <summary>
+        /// Defines product’s attribute name separated with a comma in Magento
+        /// </summary>
+        /// <value>Defines product’s attribute name separated with a comma in Magento</value>
+        /*
+        <example>Color,Manufacturer</example>
+        */
+        [DataMember(Name = "attribute_name", EmitDefaultValue = false)]
+        public string AttributeName { get; set; }
 
         /// <summary>
         /// Defines unique search keywords
@@ -1171,34 +948,251 @@ namespace Org.OpenAPITools.Model
         public string SearchKeywords { get; set; }
 
         /// <summary>
-        /// Store Id
+        /// Product tags
         /// </summary>
-        /// <value>Store Id</value>
+        /// <value>Product tags</value>
         /*
-        <example>1</example>
+        <example>tag1,tag2</example>
         */
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
-        public string StoreId { get; set; }
+        [DataMember(Name = "tags", EmitDefaultValue = false)]
+        public string Tags { get; set; }
 
         /// <summary>
-        /// Defines product brand name
+        /// A list of material strings for materials used in the product.
         /// </summary>
-        /// <value>Defines product brand name</value>
+        /// <value>A list of material strings for materials used in the product.</value>
         /*
-        <example>Abidas</example>
+        <example>materials[0]&#x3D;Aluminum&amp;materials[1]&#x3D;Brass</example>
         */
-        [DataMember(Name = "brand_name", EmitDefaultValue = false)]
-        public string BrandName { get; set; }
+        [DataMember(Name = "materials", EmitDefaultValue = false)]
+        public List<string> Materials { get; set; }
 
         /// <summary>
-        /// Defines whether the product is virtual
+        /// An array of product certifications. The list of possible certifications can be obtained using the \&quot;&lt;i&gt;category.info&lt;/i&gt;\&quot; method (&lt;i&gt;additional_fields-&gt;rules-&gt;product_certifications&lt;/i&gt;).
         /// </summary>
-        /// <value>Defines whether the product is virtual</value>
+        /// <value>An array of product certifications. The list of possible certifications can be obtained using the \&quot;&lt;i&gt;category.info&lt;/i&gt;\&quot; method (&lt;i&gt;additional_fields-&gt;rules-&gt;product_certifications&lt;/i&gt;).</value>
+        [DataMember(Name = "certifications", EmitDefaultValue = false)]
+        public List<ProductAddCertificationsInner> Certifications { get; set; }
+
+        /// <summary>
+        /// An array of Item Specific Name/Value pairs used by the seller to provide descriptive details of an item in a structured manner.         The list of possible specifications can be obtained using the category.info method (additional_fields-&gt;product_specifics).         &lt;b&gt;The structure of the parameter is different for specific platforms.&lt;/b&gt;
+        /// </summary>
+        /// <value>An array of Item Specific Name/Value pairs used by the seller to provide descriptive details of an item in a structured manner.         The list of possible specifications can be obtained using the category.info method (additional_fields-&gt;product_specifics).         &lt;b&gt;The structure of the parameter is different for specific platforms.&lt;/b&gt;</value>
+        [DataMember(Name = "specifics", EmitDefaultValue = false)]
+        public List<ProductAddSpecificsInner> Specifics { get; set; }
+
+        /// <summary>
+        /// Allows to schedule a time in the future that the item becomes available. The value should be greater than the current date and time.
+        /// </summary>
+        /// <value>Allows to schedule a time in the future that the item becomes available. The value should be greater than the current date and time.</value>
+        /*
+        <example>avail_from&#x3D;2029-10-25T15:54:37-0500</example>
+        */
+        [DataMember(Name = "avail_from", EmitDefaultValue = false)]
+        public string AvailFrom { get; set; }
+
+        /// <summary>
+        /// Defines the date of special price creation
+        /// </summary>
+        /// <value>Defines the date of special price creation</value>
+        /*
+        <example>2018-08-25 23:56:12</example>
+        */
+        [DataMember(Name = "sprice_create", EmitDefaultValue = false)]
+        public string SpriceCreate { get; set; }
+
+        /// <summary>
+        /// Defines the date of special price modification
+        /// </summary>
+        /// <value>Defines the date of special price modification</value>
+        /*
+        <example>2018-12-05 13:46:20</example>
+        */
+        [DataMember(Name = "sprice_modified", EmitDefaultValue = false)]
+        public string SpriceModified { get; set; }
+
+        /// <summary>
+        /// Defines the term of special price offer duration
+        /// </summary>
+        /// <value>Defines the term of special price offer duration</value>
+        /*
+        <example>2018-08-25 23:56:12</example>
+        */
+        [DataMember(Name = "sprice_expire", EmitDefaultValue = false)]
+        public string SpriceExpire { get; set; }
+
+        /// <summary>
+        /// Defines the date of entity creation
+        /// </summary>
+        /// <value>Defines the date of entity creation</value>
+        /*
+        <example>2014-08-09 13:13:13</example>
+        */
+        [DataMember(Name = "created_at", EmitDefaultValue = false)]
+        public string CreatedAt { get; set; }
+
+        /// <summary>
+        /// When true, automatically renews a listing upon its expiration.
+        /// </summary>
+        /// <value>When true, automatically renews a listing upon its expiration.</value>
         /*
         <example>false</example>
         */
-        [DataMember(Name = "is_virtual", EmitDefaultValue = true)]
-        public bool IsVirtual { get; set; }
+        [DataMember(Name = "auto_renew", EmitDefaultValue = true)]
+        public bool AutoRenew { get; set; }
+
+        /// <summary>
+        /// An enumerated string for the era in which the maker made the product.
+        /// </summary>
+        /// <value>An enumerated string for the era in which the maker made the product.</value>
+        /*
+        <example>2020_2025</example>
+        */
+        [DataMember(Name = "when_made", EmitDefaultValue = false)]
+        public string WhenMade { get; set; }
+
+        /// <summary>
+        /// Defines unique meta title for each entity
+        /// </summary>
+        /// <value>Defines unique meta title for each entity</value>
+        /*
+        <example>category,test</example>
+        */
+        [DataMember(Name = "meta_title", EmitDefaultValue = false)]
+        public string MetaTitle { get; set; }
+
+        /// <summary>
+        /// Defines unique meta keywords for each entity
+        /// </summary>
+        /// <value>Defines unique meta keywords for each entity</value>
+        /*
+        <example>category,test</example>
+        */
+        [DataMember(Name = "meta_keywords", EmitDefaultValue = false)]
+        public string MetaKeywords { get; set; }
+
+        /// <summary>
+        /// Defines unique meta description of a entity
+        /// </summary>
+        /// <value>Defines unique meta description of a entity</value>
+        /*
+        <example>category,test</example>
+        */
+        [DataMember(Name = "meta_description", EmitDefaultValue = false)]
+        public string MetaDescription { get; set; }
+
+        /// <summary>
+        /// Defines unique product&#39;s URL
+        /// </summary>
+        /// <value>Defines unique product&#39;s URL</value>
+        /*
+        <example>/product_slug</example>
+        */
+        [DataMember(Name = "url", EmitDefaultValue = false)]
+        public string Url { get; set; }
+
+        /// <summary>
+        /// Defines unique URL for SEO
+        /// </summary>
+        /// <value>Defines unique URL for SEO</value>
+        /*
+        <example>some seo url</example>
+        */
+        [DataMember(Name = "seo_url", EmitDefaultValue = false)]
+        public string SeoUrl { get; set; }
+
+        /// <summary>
+        /// Defines tax classes where entity has to be added
+        /// </summary>
+        /// <value>Defines tax classes where entity has to be added</value>
+        /*
+        <example>9</example>
+        */
+        [DataMember(Name = "tax_class_id", EmitDefaultValue = false)]
+        public string TaxClassId { get; set; }
+
+        /// <summary>
+        /// Specifies whether a tax is charged
+        /// </summary>
+        /// <value>Specifies whether a tax is charged</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "taxable", EmitDefaultValue = true)]
+        public bool Taxable { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SalesTax
+        /// </summary>
+        [DataMember(Name = "sales_tax", EmitDefaultValue = false)]
+        public ProductAddSalesTax SalesTax { get; set; }
+
+        /// <summary>
+        /// The human-readable label for the condition (e.g., \&quot;New\&quot;).
+        /// </summary>
+        /// <value>The human-readable label for the condition (e.g., \&quot;New\&quot;).</value>
+        /*
+        <example>Like New</example>
+        */
+        [DataMember(Name = "condition", EmitDefaultValue = false)]
+        public string Condition { get; set; }
+
+        /// <summary>
+        /// Detailed description of the product condition.
+        /// </summary>
+        /// <value>Detailed description of the product condition.</value>
+        /*
+        <example>Almost perfect condition, a few scratches</example>
+        */
+        [DataMember(Name = "condition_description", EmitDefaultValue = false)]
+        public string ConditionDescription { get; set; }
+
+        /// <summary>
+        /// Flag used to determine whether the product condition is shown to the customer on the product page.
+        /// </summary>
+        /// <value>Flag used to determine whether the product condition is shown to the customer on the product page.</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "allow_display_condition", EmitDefaultValue = true)]
+        public bool AllowDisplayCondition { get; set; }
+
+        /// <summary>
+        /// Identifies the payment method (such as PayPal) that the seller will accept when the buyer pays for the item. Look at cart.info method response for allowed values.&lt;hr&gt;&lt;div style&#x3D;\&quot;font-style:normal\&quot;&gt;Param structure:&lt;div style&#x3D;\&quot;margin-left: 2%;\&quot;&gt;&lt;code style&#x3D;\&quot;padding:0; background-color:#ffffff;font-size:85%;font-family:monospace;\&quot;&gt;payment_methods[0] &#x3D; string&lt;/br&gt;payment_methods[1] &#x3D; string&lt;/br&gt;&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;
+        /// </summary>
+        /// <value>Identifies the payment method (such as PayPal) that the seller will accept when the buyer pays for the item. Look at cart.info method response for allowed values.&lt;hr&gt;&lt;div style&#x3D;\&quot;font-style:normal\&quot;&gt;Param structure:&lt;div style&#x3D;\&quot;margin-left: 2%;\&quot;&gt;&lt;code style&#x3D;\&quot;padding:0; background-color:#ffffff;font-size:85%;font-family:monospace;\&quot;&gt;payment_methods[0] &#x3D; string&lt;/br&gt;payment_methods[1] &#x3D; string&lt;/br&gt;&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;</value>
+        /*
+        <example>payment_methods[0]&#x3D;CashOnPickup&amp;payment_methods[1]&#x3D;PayPal</example>
+        */
+        [DataMember(Name = "payment_methods", EmitDefaultValue = false)]
+        public List<string> PaymentMethods { get; set; }
+
+        /// <summary>
+        /// Valid PayPal email address for the PayPal account that the seller will use if they offer PayPal as a payment method for the listing.
+        /// </summary>
+        /// <value>Valid PayPal email address for the PayPal account that the seller will use if they offer PayPal as a payment method for the listing.</value>
+        /*
+        <example>paypall@mail.com</example>
+        */
+        [DataMember(Name = "paypal_email", EmitDefaultValue = false)]
+        public string PaypalEmail { get; set; }
+
+        /// <summary>
+        /// The numeric ID of the shipping template associated with the products in Etsy. You can find possible values in the \&quot;cart.info\&quot; API method response, in the field shipping_zones[]-&gt;id.
+        /// </summary>
+        /// <value>The numeric ID of the shipping template associated with the products in Etsy. You can find possible values in the \&quot;cart.info\&quot; API method response, in the field shipping_zones[]-&gt;id.</value>
+        /*
+        <example>40256592690</example>
+        */
+        [DataMember(Name = "shipping_template_id", EmitDefaultValue = false)]
+        public int ShippingTemplateId { get; set; }
+
+        /// <summary>
+        /// The shipping details, including flat and calculated shipping costs and shipping insurance costs. Look at cart.info method response for allowed values.&lt;hr&gt;&lt;div style&#x3D;\&quot;font-style:normal\&quot;&gt;Param structure:&lt;div style&#x3D;\&quot;margin-left: 2%;\&quot;&gt;&lt;code style&#x3D;\&quot;padding:0; background-color:#ffffff;font-size:85%;font-family:monospace;\&quot;&gt;shipping_details[0][&lt;b&gt;shipping_type&lt;/b&gt;] &#x3D; string &lt;/br&gt;shipping_details[0][&lt;b&gt;shipping_service&lt;/b&gt;] &#x3D; string&lt;/br&gt;shipping_details[0][&lt;b&gt;shipping_cost&lt;/b&gt;] &#x3D; decimal&lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_type&lt;/b&gt;] &#x3D; string &lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_service&lt;/b&gt;] &#x3D; string&lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_cost&lt;/b&gt;] &#x3D; decimal&lt;/br&gt;&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;
+        /// </summary>
+        /// <value>The shipping details, including flat and calculated shipping costs and shipping insurance costs. Look at cart.info method response for allowed values.&lt;hr&gt;&lt;div style&#x3D;\&quot;font-style:normal\&quot;&gt;Param structure:&lt;div style&#x3D;\&quot;margin-left: 2%;\&quot;&gt;&lt;code style&#x3D;\&quot;padding:0; background-color:#ffffff;font-size:85%;font-family:monospace;\&quot;&gt;shipping_details[0][&lt;b&gt;shipping_type&lt;/b&gt;] &#x3D; string &lt;/br&gt;shipping_details[0][&lt;b&gt;shipping_service&lt;/b&gt;] &#x3D; string&lt;/br&gt;shipping_details[0][&lt;b&gt;shipping_cost&lt;/b&gt;] &#x3D; decimal&lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_type&lt;/b&gt;] &#x3D; string &lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_service&lt;/b&gt;] &#x3D; string&lt;/br&gt;shipping_details[1][&lt;b&gt;shipping_cost&lt;/b&gt;] &#x3D; decimal&lt;/br&gt;&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;</value>
+        [DataMember(Name = "shipping_details", EmitDefaultValue = false)]
+        public List<ProductAddShippingDetailsInner> ShippingDetails { get; set; }
 
         /// <summary>
         /// Specifies product&#39;s free shipping flag that has to be added
@@ -1211,16 +1205,6 @@ namespace Org.OpenAPITools.Model
         public bool IsFreeShipping { get; set; }
 
         /// <summary>
-        /// Set stock status
-        /// </summary>
-        /// <value>Set stock status</value>
-        /*
-        <example>true</example>
-        */
-        [DataMember(Name = "in_stock", EmitDefaultValue = true)]
-        public bool InStock { get; set; }
-
-        /// <summary>
         /// The delivery promise that applies to offer
         /// </summary>
         /// <value>The delivery promise that applies to offer</value>
@@ -1229,16 +1213,6 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "delivery_code", EmitDefaultValue = false)]
         public string DeliveryCode { get; set; }
-
-        /// <summary>
-        /// Groups all variations, that you want to combine into one product.
-        /// </summary>
-        /// <value>Groups all variations, that you want to combine into one product.</value>
-        /*
-        <example>5901234123457</example>
-        */
-        [DataMember(Name = "product_reference", EmitDefaultValue = false)]
-        public string ProductReference { get; set; }
 
         /// <summary>
         /// Defines the type of the delivery.
@@ -1261,19 +1235,6 @@ namespace Org.OpenAPITools.Model
         public int DeliveryTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets SizeChart
-        /// </summary>
-        [DataMember(Name = "size_chart", EmitDefaultValue = false)]
-        public ProductAddSizeChart SizeChart { get; set; }
-
-        /// <summary>
-        /// An array of product certifications. The list of possible certifications can be obtained using the \&quot;&lt;i&gt;category.info&lt;/i&gt;\&quot; method (&lt;i&gt;additional_fields-&gt;rules-&gt;product_certifications&lt;/i&gt;).
-        /// </summary>
-        /// <value>An array of product certifications. The list of possible certifications can be obtained using the \&quot;&lt;i&gt;category.info&lt;/i&gt;\&quot; method (&lt;i&gt;additional_fields-&gt;rules-&gt;product_certifications&lt;/i&gt;).</value>
-        [DataMember(Name = "certifications", EmitDefaultValue = false)]
-        public List<ProductAddCertificationsInner> Certifications { get; set; }
-
-        /// <summary>
         /// Defines delivery options for product by ids.
         /// </summary>
         /// <value>Defines delivery options for product by ids.</value>
@@ -1284,80 +1245,119 @@ namespace Org.OpenAPITools.Model
         public string DeliveryOptionIds { get; set; }
 
         /// <summary>
-        /// Gets or Sets ManufacturerInfo
+        /// Gets or Sets PackageDetails
         /// </summary>
-        [DataMember(Name = "manufacturer_info", EmitDefaultValue = false)]
-        public ProductAddManufacturerInfo ManufacturerInfo { get; set; }
+        [DataMember(Name = "package_details", EmitDefaultValue = false)]
+        public ProductAddPackageDetails PackageDetails { get; set; }
 
         /// <summary>
-        /// An enumerated string for the era in which the maker made the product.
+        /// Defines product&#39;s logistic channel settings
         /// </summary>
-        /// <value>An enumerated string for the era in which the maker made the product.</value>
+        /// <value>Defines product&#39;s logistic channel settings</value>
+        [DataMember(Name = "logistic_info", EmitDefaultValue = false)]
+        public List<ProductAddLogisticInfoInner> LogisticInfo { get; set; }
+
+        /// <summary>
+        /// Describes the number of days the seller wants the listing to be active. Look at cart.info method response for allowed values.
+        /// </summary>
+        /// <value>Describes the number of days the seller wants the listing to be active. Look at cart.info method response for allowed values.</value>
         /*
-        <example>2020_2025</example>
+        <example>Days_3</example>
         */
-        [DataMember(Name = "when_made", EmitDefaultValue = false)]
-        public string WhenMade { get; set; }
+        [DataMember(Name = "listing_duration", EmitDefaultValue = false)]
+        public string ListingDuration { get; set; }
 
         /// <summary>
-        /// If true, it indicates the product as a supply, otherwise it indicates that it is a finished product.
+        /// Indicates the selling format of the marketplace listing.
         /// </summary>
-        /// <value>If true, it indicates the product as a supply, otherwise it indicates that it is a finished product.</value>
+        /// <value>Indicates the selling format of the marketplace listing.</value>
+        /*
+        <example>Auction</example>
+        */
+        [DataMember(Name = "listing_type", EmitDefaultValue = false)]
+        public string ListingType { get; set; }
+
+        /// <summary>
+        /// Indicates whether the seller allows the buyer to return the item.
+        /// </summary>
+        /// <value>Indicates whether the seller allows the buyer to return the item.</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "return_accepted", EmitDefaultValue = true)]
+        public bool ReturnAccepted { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SellerProfiles
+        /// </summary>
+        [DataMember(Name = "seller_profiles", EmitDefaultValue = false)]
+        public ProductAddSellerProfiles SellerProfiles { get; set; }
+
+        /// <summary>
+        /// This allows buyers to remain anonymous when the bid or buy an item.
+        /// </summary>
+        /// <value>This allows buyers to remain anonymous when the bid or buy an item.</value>
+        /*
+        <example>public</example>
+        */
+        [DataMember(Name = "auction_confidentiality_level", EmitDefaultValue = false)]
+        public string AuctionConfidentialityLevel { get; set; }
+
+        /// <summary>
+        /// Gets or Sets BestOffer
+        /// </summary>
+        [DataMember(Name = "best_offer", EmitDefaultValue = false)]
+        public ProductAddBestOffer BestOffer { get; set; }
+
+        /// <summary>
+        /// Defines product&#39;s production partner ids that has to be added
+        /// </summary>
+        /// <value>Defines product&#39;s production partner ids that has to be added</value>
+        /*
+        <example>4,5</example>
+        */
+        [DataMember(Name = "production_partner_ids", EmitDefaultValue = false)]
+        public string ProductionPartnerIds { get; set; }
+
+        /// <summary>
+        /// String containing the JSON representation of the supplied data
+        /// </summary>
+        /// <value>String containing the JSON representation of the supplied data</value>
+        /*
+        <example>{&quot;color&quot;:[&quot;Silver&quot;],&quot;manufacturer&quot;:&quot;Philips&quot;,&quot;features&quot;:[&quot;3 way&quot;],&quot;countPerPack&quot;:1,&quot;watts&quot;:{&quot;unit&quot;:&quot;W&quot;,&quot;measure&quot;:40}}</example>
+        */
+        [DataMember(Name = "marketplace_item_properties", EmitDefaultValue = false)]
+        public string MarketplaceItemProperties { get; set; }
+
+        /// <summary>
+        /// Is cache clear required
+        /// </summary>
+        /// <value>Is cache clear required</value>
         /*
         <example>false</example>
         */
-        [DataMember(Name = "is_supply", EmitDefaultValue = true)]
-        public bool IsSupply { get; set; }
+        [DataMember(Name = "clear_cache", EmitDefaultValue = true)]
+        public bool ClearCache { get; set; }
 
         /// <summary>
-        /// A list of material strings for materials used in the product.
+        /// Specifies the number of product&#39;s reviews
         /// </summary>
-        /// <value>A list of material strings for materials used in the product.</value>
+        /// <value>Specifies the number of product&#39;s reviews</value>
         /*
-        <example>materials[0]&#x3D;Aluminum&amp;materials[1]&#x3D;Brass</example>
+        <example>9</example>
         */
-        [DataMember(Name = "materials", EmitDefaultValue = false)]
-        public List<string> Materials { get; set; }
+        [DataMember(Name = "viewed_count", EmitDefaultValue = false)]
+        public int ViewedCount { get; set; }
 
         /// <summary>
-        /// When true, automatically renews a listing upon its expiration.
+        /// Defines how many times the product was ordered
         /// </summary>
-        /// <value>When true, automatically renews a listing upon its expiration.</value>
+        /// <value>Defines how many times the product was ordered</value>
         /*
-        <example>false</example>
+        <example>15</example>
         */
-        [DataMember(Name = "auto_renew", EmitDefaultValue = true)]
-        public bool AutoRenew { get; set; }
-
-        /// <summary>
-        /// Flag used to determine whether the product condition is shown to the customer on the product page.
-        /// </summary>
-        /// <value>Flag used to determine whether the product condition is shown to the customer on the product page.</value>
-        /*
-        <example>false</example>
-        */
-        [DataMember(Name = "allow_display_condition", EmitDefaultValue = true)]
-        public bool AllowDisplayCondition { get; set; }
-
-        /// <summary>
-        /// The minimum quantity an order must contain, to be eligible to purchase this product.
-        /// </summary>
-        /// <value>The minimum quantity an order must contain, to be eligible to purchase this product.</value>
-        /*
-        <example>1</example>
-        */
-        [DataMember(Name = "min_order_quantity", EmitDefaultValue = false)]
-        public decimal MinOrderQuantity { get; set; }
-
-        /// <summary>
-        /// The maximum quantity an order can contain when purchasing the product.
-        /// </summary>
-        /// <value>The maximum quantity an order can contain when purchasing the product.</value>
-        /*
-        <example>1</example>
-        */
-        [DataMember(Name = "max_order_quantity", EmitDefaultValue = false)]
-        public decimal MaxOrderQuantity { get; set; }
+        [DataMember(Name = "ordered_count", EmitDefaultValue = false)]
+        public int OrderedCount { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -1369,116 +1369,116 @@ namespace Org.OpenAPITools.Model
             sb.Append("class ProductAdd {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Model: ").Append(Model).Append("\n");
-            sb.Append("  Sku: ").Append(Sku).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
-            sb.Append("  OldPrice: ").Append(OldPrice).Append("\n");
-            sb.Append("  SpecialPrice: ").Append(SpecialPrice).Append("\n");
-            sb.Append("  CostPrice: ").Append(CostPrice).Append("\n");
-            sb.Append("  FixedCostShippingPrice: ").Append(FixedCostShippingPrice).Append("\n");
-            sb.Append("  SpriceCreate: ").Append(SpriceCreate).Append("\n");
-            sb.Append("  SpriceModified: ").Append(SpriceModified).Append("\n");
-            sb.Append("  SpriceExpire: ").Append(SpriceExpire).Append("\n");
-            sb.Append("  TierPrices: ").Append(TierPrices).Append("\n");
-            sb.Append("  GroupPrices: ").Append(GroupPrices).Append("\n");
+            sb.Append("  Sku: ").Append(Sku).Append("\n");
+            sb.Append("  ShortDescription: ").Append(ShortDescription).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  Visible: ").Append(Visible).Append("\n");
+            sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
+            sb.Append("  CategoriesIds: ").Append(CategoriesIds).Append("\n");
+            sb.Append("  ProductClass: ").Append(ProductClass).Append("\n");
+            sb.Append("  ProductType: ").Append(ProductType).Append("\n");
+            sb.Append("  IsVirtual: ").Append(IsVirtual).Append("\n");
+            sb.Append("  Downloadable: ").Append(Downloadable).Append("\n");
+            sb.Append("  IsSupply: ").Append(IsSupply).Append("\n");
             sb.Append("  AvailableForView: ").Append(AvailableForView).Append("\n");
             sb.Append("  AvailableForSale: ").Append(AvailableForSale).Append("\n");
+            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  StoresIds: ").Append(StoresIds).Append("\n");
+            sb.Append("  LangId: ").Append(LangId).Append("\n");
+            sb.Append("  OldPrice: ").Append(OldPrice).Append("\n");
+            sb.Append("  SpecialPrice: ").Append(SpecialPrice).Append("\n");
+            sb.Append("  WholesalePrice: ").Append(WholesalePrice).Append("\n");
+            sb.Append("  CostPrice: ").Append(CostPrice).Append("\n");
+            sb.Append("  FixedCostShippingPrice: ").Append(FixedCostShippingPrice).Append("\n");
+            sb.Append("  TierPrices: ").Append(TierPrices).Append("\n");
+            sb.Append("  GroupPrices: ").Append(GroupPrices).Append("\n");
+            sb.Append("  BuyitnowPrice: ").Append(BuyitnowPrice).Append("\n");
+            sb.Append("  ReservePrice: ").Append(ReservePrice).Append("\n");
+            sb.Append("  Quantity: ").Append(Quantity).Append("\n");
+            sb.Append("  InStock: ").Append(InStock).Append("\n");
+            sb.Append("  ManageStock: ").Append(ManageStock).Append("\n");
+            sb.Append("  WarehouseId: ").Append(WarehouseId).Append("\n");
+            sb.Append("  BackorderStatus: ").Append(BackorderStatus).Append("\n");
+            sb.Append("  MinOrderQuantity: ").Append(MinOrderQuantity).Append("\n");
+            sb.Append("  MaxOrderQuantity: ").Append(MaxOrderQuantity).Append("\n");
             sb.Append("  Weight: ").Append(Weight).Append("\n");
+            sb.Append("  WeightUnit: ").Append(WeightUnit).Append("\n");
             sb.Append("  Width: ").Append(Width).Append("\n");
             sb.Append("  Height: ").Append(Height).Append("\n");
             sb.Append("  Length: ").Append(Length).Append("\n");
-            sb.Append("  WeightUnit: ").Append(WeightUnit).Append("\n");
             sb.Append("  DimensionsUnit: ").Append(DimensionsUnit).Append("\n");
-            sb.Append("  ShortDescription: ").Append(ShortDescription).Append("\n");
-            sb.Append("  WarehouseId: ").Append(WarehouseId).Append("\n");
-            sb.Append("  BackorderStatus: ").Append(BackorderStatus).Append("\n");
-            sb.Append("  Quantity: ").Append(Quantity).Append("\n");
-            sb.Append("  Downloadable: ").Append(Downloadable).Append("\n");
-            sb.Append("  WholesalePrice: ").Append(WholesalePrice).Append("\n");
-            sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
-            sb.Append("  Manufacturer: ").Append(Manufacturer).Append("\n");
-            sb.Append("  ManufacturerId: ").Append(ManufacturerId).Append("\n");
-            sb.Append("  CategoriesIds: ").Append(CategoriesIds).Append("\n");
-            sb.Append("  RelatedProductsIds: ").Append(RelatedProductsIds).Append("\n");
-            sb.Append("  UpSellProductsIds: ").Append(UpSellProductsIds).Append("\n");
-            sb.Append("  CrossSellProductsIds: ").Append(CrossSellProductsIds).Append("\n");
-            sb.Append("  TaxClassId: ").Append(TaxClassId).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  MetaTitle: ").Append(MetaTitle).Append("\n");
-            sb.Append("  MetaKeywords: ").Append(MetaKeywords).Append("\n");
-            sb.Append("  MetaDescription: ").Append(MetaDescription).Append("\n");
-            sb.Append("  Url: ").Append(Url).Append("\n");
-            sb.Append("  LangId: ").Append(LangId).Append("\n");
-            sb.Append("  StoresIds: ").Append(StoresIds).Append("\n");
-            sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
-            sb.Append("  ViewedCount: ").Append(ViewedCount).Append("\n");
-            sb.Append("  OrderedCount: ").Append(OrderedCount).Append("\n");
-            sb.Append("  AttributeSetName: ").Append(AttributeSetName).Append("\n");
-            sb.Append("  AttributeName: ").Append(AttributeName).Append("\n");
-            sb.Append("  ShippingTemplateId: ").Append(ShippingTemplateId).Append("\n");
-            sb.Append("  ProductionPartnerIds: ").Append(ProductionPartnerIds).Append("\n");
-            sb.Append("  Condition: ").Append(Condition).Append("\n");
-            sb.Append("  ListingDuration: ").Append(ListingDuration).Append("\n");
-            sb.Append("  ListingType: ").Append(ListingType).Append("\n");
-            sb.Append("  PaymentMethods: ").Append(PaymentMethods).Append("\n");
-            sb.Append("  ReturnAccepted: ").Append(ReturnAccepted).Append("\n");
-            sb.Append("  ShippingDetails: ").Append(ShippingDetails).Append("\n");
-            sb.Append("  PaypalEmail: ").Append(PaypalEmail).Append("\n");
-            sb.Append("  SellerProfiles: ").Append(SellerProfiles).Append("\n");
-            sb.Append("  PackageDetails: ").Append(PackageDetails).Append("\n");
-            sb.Append("  BestOffer: ").Append(BestOffer).Append("\n");
-            sb.Append("  SalesTax: ").Append(SalesTax).Append("\n");
             sb.Append("  Barcode: ").Append(Barcode).Append("\n");
             sb.Append("  Upc: ").Append(Upc).Append("\n");
             sb.Append("  Ean: ").Append(Ean).Append("\n");
             sb.Append("  Isbn: ").Append(Isbn).Append("\n");
-            sb.Append("  Specifics: ").Append(Specifics).Append("\n");
+            sb.Append("  Gtin: ").Append(Gtin).Append("\n");
+            sb.Append("  Mpn: ").Append(Mpn).Append("\n");
+            sb.Append("  Asin: ").Append(Asin).Append("\n");
+            sb.Append("  ProductReference: ").Append(ProductReference).Append("\n");
+            sb.Append("  HarmonizedSystemCode: ").Append(HarmonizedSystemCode).Append("\n");
+            sb.Append("  CountryOfOrigin: ").Append(CountryOfOrigin).Append("\n");
+            sb.Append("  Manufacturer: ").Append(Manufacturer).Append("\n");
+            sb.Append("  ManufacturerId: ").Append(ManufacturerId).Append("\n");
+            sb.Append("  ManufacturerInfo: ").Append(ManufacturerInfo).Append("\n");
+            sb.Append("  BrandName: ").Append(BrandName).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  ImageName: ").Append(ImageName).Append("\n");
             sb.Append("  AdditionalImageUrls: ").Append(AdditionalImageUrls).Append("\n");
-            sb.Append("  ReservePrice: ").Append(ReservePrice).Append("\n");
-            sb.Append("  BuyitnowPrice: ").Append(BuyitnowPrice).Append("\n");
-            sb.Append("  ConditionDescription: ").Append(ConditionDescription).Append("\n");
-            sb.Append("  AuctionConfidentialityLevel: ").Append(AuctionConfidentialityLevel).Append("\n");
-            sb.Append("  LogisticInfo: ").Append(LogisticInfo).Append("\n");
-            sb.Append("  AvailFrom: ").Append(AvailFrom).Append("\n");
-            sb.Append("  Tags: ").Append(Tags).Append("\n");
-            sb.Append("  ClearCache: ").Append(ClearCache).Append("\n");
-            sb.Append("  Asin: ").Append(Asin).Append("\n");
-            sb.Append("  Gtin: ").Append(Gtin).Append("\n");
-            sb.Append("  Mpn: ").Append(Mpn).Append("\n");
-            sb.Append("  Taxable: ").Append(Taxable).Append("\n");
-            sb.Append("  Visible: ").Append(Visible).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  SeoUrl: ").Append(SeoUrl).Append("\n");
-            sb.Append("  ProductClass: ").Append(ProductClass).Append("\n");
-            sb.Append("  ProductType: ").Append(ProductType).Append("\n");
-            sb.Append("  MarketplaceItemProperties: ").Append(MarketplaceItemProperties).Append("\n");
-            sb.Append("  ManageStock: ").Append(ManageStock).Append("\n");
-            sb.Append("  HarmonizedSystemCode: ").Append(HarmonizedSystemCode).Append("\n");
-            sb.Append("  CountryOfOrigin: ").Append(CountryOfOrigin).Append("\n");
             sb.Append("  Files: ").Append(Files).Append("\n");
+            sb.Append("  SizeChart: ").Append(SizeChart).Append("\n");
+            sb.Append("  RelatedProductsIds: ").Append(RelatedProductsIds).Append("\n");
+            sb.Append("  UpSellProductsIds: ").Append(UpSellProductsIds).Append("\n");
+            sb.Append("  CrossSellProductsIds: ").Append(CrossSellProductsIds).Append("\n");
+            sb.Append("  AttributeSetName: ").Append(AttributeSetName).Append("\n");
+            sb.Append("  AttributeName: ").Append(AttributeName).Append("\n");
             sb.Append("  SearchKeywords: ").Append(SearchKeywords).Append("\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
-            sb.Append("  BrandName: ").Append(BrandName).Append("\n");
-            sb.Append("  IsVirtual: ").Append(IsVirtual).Append("\n");
+            sb.Append("  Tags: ").Append(Tags).Append("\n");
+            sb.Append("  Materials: ").Append(Materials).Append("\n");
+            sb.Append("  Certifications: ").Append(Certifications).Append("\n");
+            sb.Append("  Specifics: ").Append(Specifics).Append("\n");
+            sb.Append("  AvailFrom: ").Append(AvailFrom).Append("\n");
+            sb.Append("  SpriceCreate: ").Append(SpriceCreate).Append("\n");
+            sb.Append("  SpriceModified: ").Append(SpriceModified).Append("\n");
+            sb.Append("  SpriceExpire: ").Append(SpriceExpire).Append("\n");
+            sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
+            sb.Append("  AutoRenew: ").Append(AutoRenew).Append("\n");
+            sb.Append("  WhenMade: ").Append(WhenMade).Append("\n");
+            sb.Append("  MetaTitle: ").Append(MetaTitle).Append("\n");
+            sb.Append("  MetaKeywords: ").Append(MetaKeywords).Append("\n");
+            sb.Append("  MetaDescription: ").Append(MetaDescription).Append("\n");
+            sb.Append("  Url: ").Append(Url).Append("\n");
+            sb.Append("  SeoUrl: ").Append(SeoUrl).Append("\n");
+            sb.Append("  TaxClassId: ").Append(TaxClassId).Append("\n");
+            sb.Append("  Taxable: ").Append(Taxable).Append("\n");
+            sb.Append("  SalesTax: ").Append(SalesTax).Append("\n");
+            sb.Append("  Condition: ").Append(Condition).Append("\n");
+            sb.Append("  ConditionDescription: ").Append(ConditionDescription).Append("\n");
+            sb.Append("  AllowDisplayCondition: ").Append(AllowDisplayCondition).Append("\n");
+            sb.Append("  PaymentMethods: ").Append(PaymentMethods).Append("\n");
+            sb.Append("  PaypalEmail: ").Append(PaypalEmail).Append("\n");
+            sb.Append("  ShippingTemplateId: ").Append(ShippingTemplateId).Append("\n");
+            sb.Append("  ShippingDetails: ").Append(ShippingDetails).Append("\n");
             sb.Append("  IsFreeShipping: ").Append(IsFreeShipping).Append("\n");
-            sb.Append("  InStock: ").Append(InStock).Append("\n");
             sb.Append("  DeliveryCode: ").Append(DeliveryCode).Append("\n");
-            sb.Append("  ProductReference: ").Append(ProductReference).Append("\n");
             sb.Append("  DeliveryType: ").Append(DeliveryType).Append("\n");
             sb.Append("  DeliveryTime: ").Append(DeliveryTime).Append("\n");
-            sb.Append("  SizeChart: ").Append(SizeChart).Append("\n");
-            sb.Append("  Certifications: ").Append(Certifications).Append("\n");
             sb.Append("  DeliveryOptionIds: ").Append(DeliveryOptionIds).Append("\n");
-            sb.Append("  ManufacturerInfo: ").Append(ManufacturerInfo).Append("\n");
-            sb.Append("  WhenMade: ").Append(WhenMade).Append("\n");
-            sb.Append("  IsSupply: ").Append(IsSupply).Append("\n");
-            sb.Append("  Materials: ").Append(Materials).Append("\n");
-            sb.Append("  AutoRenew: ").Append(AutoRenew).Append("\n");
-            sb.Append("  AllowDisplayCondition: ").Append(AllowDisplayCondition).Append("\n");
-            sb.Append("  MinOrderQuantity: ").Append(MinOrderQuantity).Append("\n");
-            sb.Append("  MaxOrderQuantity: ").Append(MaxOrderQuantity).Append("\n");
+            sb.Append("  PackageDetails: ").Append(PackageDetails).Append("\n");
+            sb.Append("  LogisticInfo: ").Append(LogisticInfo).Append("\n");
+            sb.Append("  ListingDuration: ").Append(ListingDuration).Append("\n");
+            sb.Append("  ListingType: ").Append(ListingType).Append("\n");
+            sb.Append("  ReturnAccepted: ").Append(ReturnAccepted).Append("\n");
+            sb.Append("  SellerProfiles: ").Append(SellerProfiles).Append("\n");
+            sb.Append("  AuctionConfidentialityLevel: ").Append(AuctionConfidentialityLevel).Append("\n");
+            sb.Append("  BestOffer: ").Append(BestOffer).Append("\n");
+            sb.Append("  ProductionPartnerIds: ").Append(ProductionPartnerIds).Append("\n");
+            sb.Append("  MarketplaceItemProperties: ").Append(MarketplaceItemProperties).Append("\n");
+            sb.Append("  ClearCache: ").Append(ClearCache).Append("\n");
+            sb.Append("  ViewedCount: ").Append(ViewedCount).Append("\n");
+            sb.Append("  OrderedCount: ").Append(OrderedCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

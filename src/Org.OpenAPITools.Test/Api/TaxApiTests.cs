@@ -65,10 +65,10 @@ namespace Org.OpenAPITools.Test.Api
             //string taxClassId = null;
             //string? storeId = null;
             //string? langId = null;
-            //string? varParams = null;
             //string? responseFields = null;
+            //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.TaxClassInfo(taxClassId, storeId, langId, varParams, responseFields, exclude);
+            //var response = instance.TaxClassInfo(taxClassId, storeId, langId, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseTaxClassInfo>(response);
         }
 
@@ -79,17 +79,17 @@ namespace Org.OpenAPITools.Test.Api
         public void TaxClassListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int? count = null;
+            //string? pageCursor = null;
+            //string? storeId = null;
+            //string? findValue = null;
+            //string? findWhere = null;
             //string? createdTo = null;
             //string? createdFrom = null;
             //string? modifiedTo = null;
             //string? modifiedFrom = null;
-            //string? findValue = null;
-            //string? findWhere = null;
-            //string? storeId = null;
-            //int? count = null;
-            //string? pageCursor = null;
             //string? responseFields = null;
-            //var response = instance.TaxClassList(createdTo, createdFrom, modifiedTo, modifiedFrom, findValue, findWhere, storeId, count, pageCursor, responseFields);
+            //var response = instance.TaxClassList(count, pageCursor, storeId, findValue, findWhere, createdTo, createdFrom, modifiedTo, modifiedFrom, responseFields);
             //Assert.IsType<ModelResponseTaxClassList>(response);
         }
     }

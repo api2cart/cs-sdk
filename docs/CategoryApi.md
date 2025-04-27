@@ -19,7 +19,7 @@ All URIs are relative to *https://api.api2cart.com/v1.1*
 
 <a id="categoryadd"></a>
 # **CategoryAdd**
-> CategoryAdd200Response CategoryAdd (string name, string? parentId = null, string? storesIds = null, string? storeId = null, string? langId = null, bool? avail = null, int? sortOrder = null, string? createdTime = null, string? modifiedTime = null, string? description = null, string? shortDescription = null, string? metaTitle = null, string? metaDescription = null, string? metaKeywords = null, string? seoUrl = null)
+> CategoryAdd200Response CategoryAdd (string name, string? description = null, string? shortDescription = null, string? parentId = null, bool? avail = null, string? createdTime = null, string? modifiedTime = null, int? sortOrder = null, string? metaTitle = null, string? metaDescription = null, string? metaKeywords = null, string? seoUrl = null, string? storeId = null, string? storesIds = null, string? langId = null)
 
 category.add
 
@@ -52,25 +52,25 @@ namespace Example
 
             var apiInstance = new CategoryApi(config);
             var name = Shoes;  // string | Defines category's name that has to be added
-            var parentId = 6;  // string? | Adds categories specified by parent id (optional) 
-            var storesIds = 1,2;  // string? | Create category in the stores that is specified by comma-separated stores' id (optional) 
-            var storeId = 1;  // string? | Store Id (optional) 
-            var langId = 3;  // string? | Language id (optional) 
-            var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
-            var sortOrder = 2;  // int? | Sort number in the list (optional)  (default to 0)
-            var createdTime = 2014-01-30 15:58:41;  // string? | Entity's date creation (optional) 
-            var modifiedTime = 2014-07-30 15:58:41;  // string? | Entity's date modification (optional) 
             var description = Test category;  // string? | Defines category's description (optional) 
             var shortDescription = Short description. This is very short description;  // string? | Defines short description (optional) 
+            var parentId = 6;  // string? | Adds categories specified by parent id (optional) 
+            var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
+            var createdTime = 2014-01-30 15:58:41;  // string? | Entity's date creation (optional) 
+            var modifiedTime = 2014-07-30 15:58:41;  // string? | Entity's date modification (optional) 
+            var sortOrder = 2;  // int? | Sort number in the list (optional)  (default to 0)
             var metaTitle = category,test;  // string? | Defines unique meta title for each entity (optional) 
             var metaDescription = category,test;  // string? | Defines unique meta description of a entity (optional) 
             var metaKeywords = category,test;  // string? | Defines unique meta keywords for each entity (optional) 
             var seoUrl = category,test;  // string? | Defines unique category's URL for SEO (optional) 
+            var storeId = 1;  // string? | Store Id (optional) 
+            var storesIds = 1,2;  // string? | Create category in the stores that is specified by comma-separated stores' id (optional) 
+            var langId = 3;  // string? | Language id (optional) 
 
             try
             {
                 // category.add
-                CategoryAdd200Response result = apiInstance.CategoryAdd(name, parentId, storesIds, storeId, langId, avail, sortOrder, createdTime, modifiedTime, description, shortDescription, metaTitle, metaDescription, metaKeywords, seoUrl);
+                CategoryAdd200Response result = apiInstance.CategoryAdd(name, description, shortDescription, parentId, avail, createdTime, modifiedTime, sortOrder, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -91,7 +91,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.add
-    ApiResponse<CategoryAdd200Response> response = apiInstance.CategoryAddWithHttpInfo(name, parentId, storesIds, storeId, langId, avail, sortOrder, createdTime, modifiedTime, description, shortDescription, metaTitle, metaDescription, metaKeywords, seoUrl);
+    ApiResponse<CategoryAdd200Response> response = apiInstance.CategoryAddWithHttpInfo(name, description, shortDescription, parentId, avail, createdTime, modifiedTime, sortOrder, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -109,20 +109,20 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **name** | **string** | Defines category&#39;s name that has to be added |  |
-| **parentId** | **string?** | Adds categories specified by parent id | [optional]  |
-| **storesIds** | **string?** | Create category in the stores that is specified by comma-separated stores&#39; id | [optional]  |
-| **storeId** | **string?** | Store Id | [optional]  |
-| **langId** | **string?** | Language id | [optional]  |
-| **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
-| **sortOrder** | **int?** | Sort number in the list | [optional] [default to 0] |
-| **createdTime** | **string?** | Entity&#39;s date creation | [optional]  |
-| **modifiedTime** | **string?** | Entity&#39;s date modification | [optional]  |
 | **description** | **string?** | Defines category&#39;s description | [optional]  |
 | **shortDescription** | **string?** | Defines short description | [optional]  |
+| **parentId** | **string?** | Adds categories specified by parent id | [optional]  |
+| **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
+| **createdTime** | **string?** | Entity&#39;s date creation | [optional]  |
+| **modifiedTime** | **string?** | Entity&#39;s date modification | [optional]  |
+| **sortOrder** | **int?** | Sort number in the list | [optional] [default to 0] |
 | **metaTitle** | **string?** | Defines unique meta title for each entity | [optional]  |
 | **metaDescription** | **string?** | Defines unique meta description of a entity | [optional]  |
 | **metaKeywords** | **string?** | Defines unique meta keywords for each entity | [optional]  |
 | **seoUrl** | **string?** | Defines unique category&#39;s URL for SEO | [optional]  |
+| **storeId** | **string?** | Store Id | [optional]  |
+| **storesIds** | **string?** | Create category in the stores that is specified by comma-separated stores&#39; id | [optional]  |
+| **langId** | **string?** | Language id | [optional]  |
 
 ### Return type
 
@@ -247,7 +247,7 @@ catch (ApiException e)
 
 <a id="categoryassign"></a>
 # **CategoryAssign**
-> CartConfigUpdate200Response CategoryAssign (string productId, string categoryId, string? storeId = null)
+> CartConfigUpdate200Response CategoryAssign (string categoryId, string productId, string? storeId = null)
 
 category.assign
 
@@ -279,14 +279,14 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new CategoryApi(config);
-            var productId = 10;  // string | Defines category assign to the product, specified by product id
             var categoryId = 6;  // string | Defines category assign, specified by category id
+            var productId = 10;  // string | Defines category assign to the product, specified by product id
             var storeId = 1;  // string? | Store Id (optional) 
 
             try
             {
                 // category.assign
-                CartConfigUpdate200Response result = apiInstance.CategoryAssign(productId, categoryId, storeId);
+                CartConfigUpdate200Response result = apiInstance.CategoryAssign(categoryId, productId, storeId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -307,7 +307,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.assign
-    ApiResponse<CartConfigUpdate200Response> response = apiInstance.CategoryAssignWithHttpInfo(productId, categoryId, storeId);
+    ApiResponse<CartConfigUpdate200Response> response = apiInstance.CategoryAssignWithHttpInfo(categoryId, productId, storeId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -324,8 +324,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **productId** | **string** | Defines category assign to the product, specified by product id |  |
 | **categoryId** | **string** | Defines category assign, specified by category id |  |
+| **productId** | **string** | Defines category assign to the product, specified by product id |  |
 | **storeId** | **string?** | Store Id | [optional]  |
 
 ### Return type
@@ -351,7 +351,7 @@ catch (ApiException e)
 
 <a id="categorycount"></a>
 # **CategoryCount**
-> CategoryCount200Response CategoryCount (string? parentId = null, string? storeId = null, string? langId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, bool? avail = null, string? productType = null, string? findValue = null, string? findWhere = null, string? reportRequestId = null, bool? disableReportCache = null)
+> CategoryCount200Response CategoryCount (string? parentId = null, string? storeId = null, string? langId = null, bool? avail = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? productType = null, string? findValue = null, string? findWhere = null, string? reportRequestId = null, bool? disableReportCache = null)
 
 category.count
 
@@ -386,11 +386,11 @@ namespace Example
             var parentId = 6;  // string? | Counts categories specified by parent id (optional) 
             var storeId = 1;  // string? | Counts category specified by store id (optional) 
             var langId = 3;  // string? | Counts category specified by language id (optional) 
+            var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-            var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
             var productType = BICYCLE;  // string? | A categorization for the product (optional) 
             var findValue = Demo category 1;  // string? | Entity search that is specified by some value (optional) 
             var findWhere = email;  // string? | Counts categories that are searched specified by field (optional) 
@@ -400,7 +400,7 @@ namespace Example
             try
             {
                 // category.count
-                CategoryCount200Response result = apiInstance.CategoryCount(parentId, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, avail, productType, findValue, findWhere, reportRequestId, disableReportCache);
+                CategoryCount200Response result = apiInstance.CategoryCount(parentId, storeId, langId, avail, createdFrom, createdTo, modifiedFrom, modifiedTo, productType, findValue, findWhere, reportRequestId, disableReportCache);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -421,7 +421,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.count
-    ApiResponse<CategoryCount200Response> response = apiInstance.CategoryCountWithHttpInfo(parentId, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, avail, productType, findValue, findWhere, reportRequestId, disableReportCache);
+    ApiResponse<CategoryCount200Response> response = apiInstance.CategoryCountWithHttpInfo(parentId, storeId, langId, avail, createdFrom, createdTo, modifiedFrom, modifiedTo, productType, findValue, findWhere, reportRequestId, disableReportCache);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -441,11 +441,11 @@ catch (ApiException e)
 | **parentId** | **string?** | Counts categories specified by parent id | [optional]  |
 | **storeId** | **string?** | Counts category specified by store id | [optional]  |
 | **langId** | **string?** | Counts category specified by language id | [optional]  |
+| **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-| **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
 | **productType** | **string?** | A categorization for the product | [optional]  |
 | **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
 | **findWhere** | **string?** | Counts categories that are searched specified by field | [optional]  |
@@ -685,7 +685,7 @@ catch (ApiException e)
 
 <a id="categoryimageadd"></a>
 # **CategoryImageAdd**
-> CategoryImageAdd200Response CategoryImageAdd (string categoryId, string imageName, string url, string type, string? label = null, string? mime = null, int? position = null, string? storeId = null)
+> CategoryImageAdd200Response CategoryImageAdd (string categoryId, string imageName, string url, string type, string? storeId = null, string? label = null, string? mime = null, int? position = null)
 
 category.image.add
 
@@ -721,15 +721,15 @@ namespace Example
             var imageName = bag-gray.png;  // string | Defines image's name
             var url = http://docs.api2cart.com/img/logo.png;  // string | Defines URL of the image that has to be added
             var type = base;  // string | Defines image's types that are specified by comma-separated list
+            var storeId = 1;  // string? | Store Id (optional) 
             var label = This cool image;  // string? | Defines alternative text that has to be attached to the picture (optional) 
             var mime = image/jpeg;  // string? | Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional) 
             var position = 5;  // int? | Defines image’s position in the list (optional)  (default to 0)
-            var storeId = 1;  // string? | Store Id (optional) 
 
             try
             {
                 // category.image.add
-                CategoryImageAdd200Response result = apiInstance.CategoryImageAdd(categoryId, imageName, url, type, label, mime, position, storeId);
+                CategoryImageAdd200Response result = apiInstance.CategoryImageAdd(categoryId, imageName, url, type, storeId, label, mime, position);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -750,7 +750,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.image.add
-    ApiResponse<CategoryImageAdd200Response> response = apiInstance.CategoryImageAddWithHttpInfo(categoryId, imageName, url, type, label, mime, position, storeId);
+    ApiResponse<CategoryImageAdd200Response> response = apiInstance.CategoryImageAddWithHttpInfo(categoryId, imageName, url, type, storeId, label, mime, position);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -771,10 +771,10 @@ catch (ApiException e)
 | **imageName** | **string** | Defines image&#39;s name |  |
 | **url** | **string** | Defines URL of the image that has to be added |  |
 | **type** | **string** | Defines image&#39;s types that are specified by comma-separated list |  |
+| **storeId** | **string?** | Store Id | [optional]  |
 | **label** | **string?** | Defines alternative text that has to be attached to the picture | [optional]  |
 | **mime** | **string?** | Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. | [optional]  |
 | **position** | **int?** | Defines image’s position in the list | [optional] [default to 0] |
-| **storeId** | **string?** | Store Id | [optional]  |
 
 ### Return type
 
@@ -903,7 +903,7 @@ catch (ApiException e)
 
 <a id="categoryinfo"></a>
 # **CategoryInfo**
-> CategoryInfo200Response CategoryInfo (string id, string? varParams = null, string? responseFields = null, string? exclude = null, string? storeId = null, string? langId = null, string? schemaType = null, string? reportRequestId = null, bool? disableReportCache = null)
+> CategoryInfo200Response CategoryInfo (string id, string? storeId = null, string? langId = null, string? schemaType = null, string? responseFields = null, string? varParams = null, string? exclude = null, string? reportRequestId = null, bool? disableReportCache = null)
 
 category.info
 
@@ -936,19 +936,19 @@ namespace Example
 
             var apiInstance = new CategoryApi(config);
             var id = 10;  // string | Retrieves category's info specified by category id
-            var varParams = id,parent_id,name;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,parent_id,name,description")
-            var responseFields = {result{id,name,parent_id,modified_at{value},images}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var exclude = id,parent_id,name;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var storeId = 1;  // string? | Retrieves category info  specified by store id (optional) 
             var langId = 3;  // string? | Retrieves category info  specified by language id (optional) 
             var schemaType = LISTING;  // string? | The name of the requirements set for the provided schema. (optional) 
+            var responseFields = {result{id,name,parent_id,modified_at{value},images}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,parent_id,name;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,parent_id,name,description")
+            var exclude = id,parent_id,name;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var reportRequestId = 105245017661;  // string? | Report request id (optional) 
             var disableReportCache = false;  // bool? | Disable report cache for current request (optional)  (default to false)
 
             try
             {
                 // category.info
-                CategoryInfo200Response result = apiInstance.CategoryInfo(id, varParams, responseFields, exclude, storeId, langId, schemaType, reportRequestId, disableReportCache);
+                CategoryInfo200Response result = apiInstance.CategoryInfo(id, storeId, langId, schemaType, responseFields, varParams, exclude, reportRequestId, disableReportCache);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -969,7 +969,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.info
-    ApiResponse<CategoryInfo200Response> response = apiInstance.CategoryInfoWithHttpInfo(id, varParams, responseFields, exclude, storeId, langId, schemaType, reportRequestId, disableReportCache);
+    ApiResponse<CategoryInfo200Response> response = apiInstance.CategoryInfoWithHttpInfo(id, storeId, langId, schemaType, responseFields, varParams, exclude, reportRequestId, disableReportCache);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -987,12 +987,12 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **string** | Retrieves category&#39;s info specified by category id |  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,parent_id,name,description&quot;] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **storeId** | **string?** | Retrieves category info  specified by store id | [optional]  |
 | **langId** | **string?** | Retrieves category info  specified by language id | [optional]  |
 | **schemaType** | **string?** | The name of the requirements set for the provided schema. | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,parent_id,name,description&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **reportRequestId** | **string?** | Report request id | [optional]  |
 | **disableReportCache** | **bool?** | Disable report cache for current request | [optional] [default to false] |
 
@@ -1019,7 +1019,7 @@ catch (ApiException e)
 
 <a id="categorylist"></a>
 # **CategoryList**
-> ModelResponseCategoryList CategoryList (int? start = null, int? count = null, string? pageCursor = null, string? parentId = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? storeId = null, string? langId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, bool? avail = null, string? productType = null, string? findValue = null, string? findWhere = null, string? reportRequestId = null, bool? disableReportCache = null, bool? disableCache = null)
+> ModelResponseCategoryList CategoryList (int? start = null, int? count = null, string? pageCursor = null, string? storeId = null, string? langId = null, string? parentId = null, bool? avail = null, string? productType = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? findValue = null, string? findWhere = null, string? responseFields = null, string? varParams = null, string? exclude = null, string? reportRequestId = null, bool? disableReportCache = null, bool? disableCache = null)
 
 category.list
 
@@ -1054,20 +1054,20 @@ namespace Example
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
             var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
-            var parentId = 6;  // string? | Retrieves categories specified by parent id (optional) 
-            var varParams = id,parent_id,name;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,parent_id,name,description")
-            var responseFields = {result{categories_count,category{id,parent_id,modified_at{value},images}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var exclude = id,parent_id,name;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var storeId = 1;  // string? | Retrieves categories specified by store id (optional) 
             var langId = 3;  // string? | Retrieves categorys specified by language id (optional) 
+            var parentId = 6;  // string? | Retrieves categories specified by parent id (optional) 
+            var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
+            var productType = BICYCLE;  // string? | A categorization for the product (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-            var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
-            var productType = BICYCLE;  // string? | A categorization for the product (optional) 
             var findValue = Demo category 1;  // string? | Entity search that is specified by some value (optional) 
             var findWhere = name;  // string? | Category search that is specified by field (optional) 
+            var responseFields = {result{categories_count,category{id,parent_id,modified_at{value},images}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,parent_id,name;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,parent_id,name,description")
+            var exclude = id,parent_id,name;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var reportRequestId = 105245017661;  // string? | Report request id (optional) 
             var disableReportCache = false;  // bool? | Disable report cache for current request (optional)  (default to false)
             var disableCache = false;  // bool? | Disable cache for current request (optional)  (default to false)
@@ -1075,7 +1075,7 @@ namespace Example
             try
             {
                 // category.list
-                ModelResponseCategoryList result = apiInstance.CategoryList(start, count, pageCursor, parentId, varParams, responseFields, exclude, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, avail, productType, findValue, findWhere, reportRequestId, disableReportCache, disableCache);
+                ModelResponseCategoryList result = apiInstance.CategoryList(start, count, pageCursor, storeId, langId, parentId, avail, productType, createdFrom, createdTo, modifiedFrom, modifiedTo, findValue, findWhere, responseFields, varParams, exclude, reportRequestId, disableReportCache, disableCache);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1096,7 +1096,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.list
-    ApiResponse<ModelResponseCategoryList> response = apiInstance.CategoryListWithHttpInfo(start, count, pageCursor, parentId, varParams, responseFields, exclude, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, avail, productType, findValue, findWhere, reportRequestId, disableReportCache, disableCache);
+    ApiResponse<ModelResponseCategoryList> response = apiInstance.CategoryListWithHttpInfo(start, count, pageCursor, storeId, langId, parentId, avail, productType, createdFrom, createdTo, modifiedFrom, modifiedTo, findValue, findWhere, responseFields, varParams, exclude, reportRequestId, disableReportCache, disableCache);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1116,20 +1116,20 @@ catch (ApiException e)
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
 | **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
-| **parentId** | **string?** | Retrieves categories specified by parent id | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,parent_id,name,description&quot;] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **storeId** | **string?** | Retrieves categories specified by store id | [optional]  |
 | **langId** | **string?** | Retrieves categorys specified by language id | [optional]  |
+| **parentId** | **string?** | Retrieves categories specified by parent id | [optional]  |
+| **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
+| **productType** | **string?** | A categorization for the product | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-| **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
-| **productType** | **string?** | A categorization for the product | [optional]  |
 | **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
 | **findWhere** | **string?** | Category search that is specified by field | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,parent_id,name,description&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **reportRequestId** | **string?** | Report request id | [optional]  |
 | **disableReportCache** | **bool?** | Disable report cache for current request | [optional] [default to false] |
 | **disableCache** | **bool?** | Disable cache for current request | [optional] [default to false] |
@@ -1261,7 +1261,7 @@ catch (ApiException e)
 
 <a id="categoryupdate"></a>
 # **CategoryUpdate**
-> AccountConfigUpdate200Response CategoryUpdate (string id, string? name = null, string? parentId = null, string? storesIds = null, bool? avail = null, int? sortOrder = null, string? modifiedTime = null, string? description = null, string? shortDescription = null, string? metaTitle = null, string? metaDescription = null, string? metaKeywords = null, string? seoUrl = null, string? langId = null, string? storeId = null)
+> AccountConfigUpdate200Response CategoryUpdate (string id, string? name = null, string? description = null, string? shortDescription = null, string? parentId = null, bool? avail = null, int? sortOrder = null, string? modifiedTime = null, string? metaTitle = null, string? metaDescription = null, string? metaKeywords = null, string? seoUrl = null, string? storeId = null, string? storesIds = null, string? langId = null)
 
 category.update
 
@@ -1295,24 +1295,24 @@ namespace Example
             var apiInstance = new CategoryApi(config);
             var id = 10;  // string | Defines category update specified by category id
             var name = NEW Shoes;  // string? | Defines new category’s name (optional) 
+            var description = New test category;  // string? | Defines new category's description (optional) 
+            var shortDescription = Short description. This is very short description;  // string? | Defines short description (optional) 
             var parentId = 6;  // string? | Defines new parent category id (optional) 
-            var storesIds = 1,2;  // string? | Update category in the stores that is specified by comma-separated stores' id (optional) 
             var avail = false;  // bool? | Defines category's visibility status (optional) 
             var sortOrder = 2;  // int? | Sort number in the list (optional) 
             var modifiedTime = 2014-07-30 15:58:41;  // string? | Entity's date modification (optional) 
-            var description = New test category;  // string? | Defines new category's description (optional) 
-            var shortDescription = Short description. This is very short description;  // string? | Defines short description (optional) 
             var metaTitle = category,test;  // string? | Defines unique meta title for each entity (optional) 
             var metaDescription = category,test;  // string? | Defines unique meta description of a entity (optional) 
             var metaKeywords = category,test;  // string? | Defines unique meta keywords for each entity (optional) 
             var seoUrl = category,test;  // string? | Defines unique category's URL for SEO (optional) 
-            var langId = 3;  // string? | Language id (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
+            var storesIds = 1,2;  // string? | Update category in the stores that is specified by comma-separated stores' id (optional) 
+            var langId = 3;  // string? | Language id (optional) 
 
             try
             {
                 // category.update
-                AccountConfigUpdate200Response result = apiInstance.CategoryUpdate(id, name, parentId, storesIds, avail, sortOrder, modifiedTime, description, shortDescription, metaTitle, metaDescription, metaKeywords, seoUrl, langId, storeId);
+                AccountConfigUpdate200Response result = apiInstance.CategoryUpdate(id, name, description, shortDescription, parentId, avail, sortOrder, modifiedTime, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1333,7 +1333,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.update
-    ApiResponse<AccountConfigUpdate200Response> response = apiInstance.CategoryUpdateWithHttpInfo(id, name, parentId, storesIds, avail, sortOrder, modifiedTime, description, shortDescription, metaTitle, metaDescription, metaKeywords, seoUrl, langId, storeId);
+    ApiResponse<AccountConfigUpdate200Response> response = apiInstance.CategoryUpdateWithHttpInfo(id, name, description, shortDescription, parentId, avail, sortOrder, modifiedTime, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1352,19 +1352,19 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **string** | Defines category update specified by category id |  |
 | **name** | **string?** | Defines new category’s name | [optional]  |
+| **description** | **string?** | Defines new category&#39;s description | [optional]  |
+| **shortDescription** | **string?** | Defines short description | [optional]  |
 | **parentId** | **string?** | Defines new parent category id | [optional]  |
-| **storesIds** | **string?** | Update category in the stores that is specified by comma-separated stores&#39; id | [optional]  |
 | **avail** | **bool?** | Defines category&#39;s visibility status | [optional]  |
 | **sortOrder** | **int?** | Sort number in the list | [optional]  |
 | **modifiedTime** | **string?** | Entity&#39;s date modification | [optional]  |
-| **description** | **string?** | Defines new category&#39;s description | [optional]  |
-| **shortDescription** | **string?** | Defines short description | [optional]  |
 | **metaTitle** | **string?** | Defines unique meta title for each entity | [optional]  |
 | **metaDescription** | **string?** | Defines unique meta description of a entity | [optional]  |
 | **metaKeywords** | **string?** | Defines unique meta keywords for each entity | [optional]  |
 | **seoUrl** | **string?** | Defines unique category&#39;s URL for SEO | [optional]  |
-| **langId** | **string?** | Language id | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **storesIds** | **string?** | Update category in the stores that is specified by comma-separated stores&#39; id | [optional]  |
+| **langId** | **string?** | Language id | [optional]  |
 
 ### Return type
 

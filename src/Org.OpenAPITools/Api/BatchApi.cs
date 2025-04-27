@@ -36,15 +36,15 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseBatchJobList</returns>
-        ModelResponseBatchJobList BatchJobList(int? count = default(int?), string? pageCursor = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? ids = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        ModelResponseBatchJobList BatchJobList(int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// batch.job.list
@@ -55,15 +55,15 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseBatchJobList</returns>
-        ApiResponse<ModelResponseBatchJobList> BatchJobListWithHttpInfo(int? count = default(int?), string? pageCursor = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? ids = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseBatchJobList> BatchJobListWithHttpInfo(int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0);
         /// <summary>
         /// batch.job.result
         /// </summary>
@@ -105,16 +105,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseBatchJobList</returns>
-        System.Threading.Tasks.Task<ModelResponseBatchJobList> BatchJobListAsync(int? count = default(int?), string? pageCursor = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? ids = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseBatchJobList> BatchJobListAsync(int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// batch.job.list
@@ -125,16 +125,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseBatchJobList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseBatchJobList>> BatchJobListWithHttpInfoAsync(int? count = default(int?), string? pageCursor = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? ids = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseBatchJobList>> BatchJobListWithHttpInfoAsync(int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// batch.job.result
         /// </summary>
@@ -286,17 +286,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseBatchJobList</returns>
-        public ModelResponseBatchJobList BatchJobList(int? count = default(int?), string? pageCursor = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? ids = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        public ModelResponseBatchJobList BatchJobList(int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseBatchJobList> localVarResponse = BatchJobListWithHttpInfo(count, pageCursor, createdFrom, createdTo, processedFrom, processedTo, ids, responseFields);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseBatchJobList> localVarResponse = BatchJobListWithHttpInfo(count, pageCursor, ids, createdFrom, createdTo, processedFrom, processedTo, responseFields);
             return localVarResponse.Data;
         }
 
@@ -306,15 +306,15 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseBatchJobList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseBatchJobList> BatchJobListWithHttpInfo(int? count = default(int?), string? pageCursor = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? ids = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseBatchJobList> BatchJobListWithHttpInfo(int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -347,6 +347,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
             }
+            if (ids != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
+            }
             if (createdFrom != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
@@ -362,10 +366,6 @@ namespace Org.OpenAPITools.Api
             if (processedTo != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "processed_to", processedTo));
-            }
-            if (ids != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
             }
             if (responseFields != null)
             {
@@ -406,18 +406,18 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseBatchJobList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseBatchJobList> BatchJobListAsync(int? count = default(int?), string? pageCursor = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? ids = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseBatchJobList> BatchJobListAsync(int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseBatchJobList> localVarResponse = await BatchJobListWithHttpInfoAsync(count, pageCursor, createdFrom, createdTo, processedFrom, processedTo, ids, responseFields, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseBatchJobList> localVarResponse = await BatchJobListWithHttpInfoAsync(count, pageCursor, ids, createdFrom, createdTo, processedFrom, processedTo, responseFields, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -427,16 +427,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="ids">Filter batch jobs by ids (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseBatchJobList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseBatchJobList>> BatchJobListWithHttpInfoAsync(int? count = default(int?), string? pageCursor = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? ids = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseBatchJobList>> BatchJobListWithHttpInfoAsync(int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -469,6 +469,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
             }
+            if (ids != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
+            }
             if (createdFrom != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
@@ -484,10 +488,6 @@ namespace Org.OpenAPITools.Api
             if (processedTo != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "processed_to", processedTo));
-            }
-            if (ids != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
             }
             if (responseFields != null)
             {

@@ -37,12 +37,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="taxClassId">Retrieves taxes specified by class id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseTaxClassInfo</returns>
-        ModelResponseTaxClassInfo TaxClassInfo(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ModelResponseTaxClassInfo TaxClassInfo(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// tax.class.info
@@ -54,12 +54,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="taxClassId">Retrieves taxes specified by class id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseTaxClassInfo</returns>
-        ApiResponse<ModelResponseTaxClassInfo> TaxClassInfoWithHttpInfo(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseTaxClassInfo> TaxClassInfoWithHttpInfo(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// tax.class.list
         /// </summary>
@@ -67,19 +67,19 @@ namespace Org.OpenAPITools.Api
         /// Get list of tax classes from your store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
+        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
-        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseTaxClassList</returns>
-        ModelResponseTaxClassList TaxClassList(string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        ModelResponseTaxClassList TaxClassList(int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? responseFields = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// tax.class.list
@@ -88,19 +88,19 @@ namespace Org.OpenAPITools.Api
         /// Get list of tax classes from your store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
+        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
-        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseTaxClassList</returns>
-        ApiResponse<ModelResponseTaxClassList> TaxClassListWithHttpInfo(string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseTaxClassList> TaxClassListWithHttpInfo(int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? responseFields = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -120,13 +120,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="taxClassId">Retrieves taxes specified by class id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseTaxClassInfo</returns>
-        System.Threading.Tasks.Task<ModelResponseTaxClassInfo> TaxClassInfoAsync(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseTaxClassInfo> TaxClassInfoAsync(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// tax.class.info
@@ -138,13 +138,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="taxClassId">Retrieves taxes specified by class id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseTaxClassInfo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseTaxClassInfo>> TaxClassInfoWithHttpInfoAsync(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseTaxClassInfo>> TaxClassInfoWithHttpInfoAsync(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// tax.class.list
         /// </summary>
@@ -152,20 +152,20 @@ namespace Org.OpenAPITools.Api
         /// Get list of tax classes from your store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
+        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
-        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseTaxClassList</returns>
-        System.Threading.Tasks.Task<ModelResponseTaxClassList> TaxClassListAsync(string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseTaxClassList> TaxClassListAsync(int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// tax.class.list
@@ -174,20 +174,20 @@ namespace Org.OpenAPITools.Api
         /// Get list of tax classes from your store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
+        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
-        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseTaxClassList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseTaxClassList>> TaxClassListWithHttpInfoAsync(string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseTaxClassList>> TaxClassListWithHttpInfoAsync(int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -315,14 +315,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="taxClassId">Retrieves taxes specified by class id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseTaxClassInfo</returns>
-        public ModelResponseTaxClassInfo TaxClassInfo(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public ModelResponseTaxClassInfo TaxClassInfo(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassInfo> localVarResponse = TaxClassInfoWithHttpInfo(taxClassId, storeId, langId, varParams, responseFields, exclude);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassInfo> localVarResponse = TaxClassInfoWithHttpInfo(taxClassId, storeId, langId, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -333,12 +333,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="taxClassId">Retrieves taxes specified by class id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseTaxClassInfo</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassInfo> TaxClassInfoWithHttpInfo(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassInfo> TaxClassInfoWithHttpInfo(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'taxClassId' is set
             if (taxClassId == null)
@@ -378,13 +378,13 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
             if (responseFields != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
             }
             if (exclude != null)
             {
@@ -426,15 +426,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="taxClassId">Retrieves taxes specified by class id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseTaxClassInfo</returns>
-        public async System.Threading.Tasks.Task<ModelResponseTaxClassInfo> TaxClassInfoAsync(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseTaxClassInfo> TaxClassInfoAsync(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassInfo> localVarResponse = await TaxClassInfoWithHttpInfoAsync(taxClassId, storeId, langId, varParams, responseFields, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassInfo> localVarResponse = await TaxClassInfoWithHttpInfoAsync(taxClassId, storeId, langId, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -445,13 +445,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="taxClassId">Retrieves taxes specified by class id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;tax_class_id,name,avail&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseTaxClassInfo)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassInfo>> TaxClassInfoWithHttpInfoAsync(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassInfo>> TaxClassInfoWithHttpInfoAsync(string taxClassId, string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'taxClassId' is set
             if (taxClassId == null)
@@ -491,13 +491,13 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
             if (responseFields != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
             }
             if (exclude != null)
             {
@@ -537,21 +537,21 @@ namespace Org.OpenAPITools.Api
         /// tax.class.list Get list of tax classes from your store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
+        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
-        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseTaxClassList</returns>
-        public ModelResponseTaxClassList TaxClassList(string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        public ModelResponseTaxClassList TaxClassList(int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? responseFields = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassList> localVarResponse = TaxClassListWithHttpInfo(createdTo, createdFrom, modifiedTo, modifiedFrom, findValue, findWhere, storeId, count, pageCursor, responseFields);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassList> localVarResponse = TaxClassListWithHttpInfo(count, pageCursor, storeId, findValue, findWhere, createdTo, createdFrom, modifiedTo, modifiedFrom, responseFields);
             return localVarResponse.Data;
         }
 
@@ -559,19 +559,19 @@ namespace Org.OpenAPITools.Api
         /// tax.class.list Get list of tax classes from your store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
+        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
-        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseTaxClassList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassList> TaxClassListWithHttpInfo(string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassList> TaxClassListWithHttpInfo(int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? responseFields = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -596,6 +596,26 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (count != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (findValue != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "find_value", findValue));
+            }
+            if (findWhere != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "find_where", findWhere));
+            }
             if (createdTo != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
@@ -611,26 +631,6 @@ namespace Org.OpenAPITools.Api
             if (modifiedFrom != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
-            }
-            if (findValue != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "find_value", findValue));
-            }
-            if (findWhere != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "find_where", findWhere));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
-            if (count != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
-            }
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
             }
             if (responseFields != null)
             {
@@ -669,22 +669,22 @@ namespace Org.OpenAPITools.Api
         /// tax.class.list Get list of tax classes from your store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
+        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
-        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseTaxClassList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseTaxClassList> TaxClassListAsync(string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseTaxClassList> TaxClassListAsync(int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassList> localVarResponse = await TaxClassListWithHttpInfoAsync(createdTo, createdFrom, modifiedTo, modifiedFrom, findValue, findWhere, storeId, count, pageCursor, responseFields, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassList> localVarResponse = await TaxClassListWithHttpInfoAsync(count, pageCursor, storeId, findValue, findWhere, createdTo, createdFrom, modifiedTo, modifiedFrom, responseFields, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -692,20 +692,20 @@ namespace Org.OpenAPITools.Api
         /// tax.class.list Get list of tax classes from your store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
+        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="findValue">Entity search that is specified by some value (optional)</param>
-        /// <param name="findWhere">Tax class search that is specified by field (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseTaxClassList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassList>> TaxClassListWithHttpInfoAsync(string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseTaxClassList>> TaxClassListWithHttpInfoAsync(int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -730,6 +730,26 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (count != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (findValue != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "find_value", findValue));
+            }
+            if (findWhere != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "find_where", findWhere));
+            }
             if (createdTo != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
@@ -745,26 +765,6 @@ namespace Org.OpenAPITools.Api
             if (modifiedFrom != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
-            }
-            if (findValue != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "find_value", findValue));
-            }
-            if (findWhere != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "find_where", findWhere));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
-            if (count != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
-            }
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
             }
             if (responseFields != null)
             {

@@ -56,15 +56,6 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'StoreId'
-        /// </summary>
-        [Fact]
-        public void StoreIdTest()
-        {
-            // TODO unit test for the property 'StoreId'
-        }
-
-        /// <summary>
         /// Test the property 'ShipmentId'
         /// </summary>
         [Fact]
@@ -83,30 +74,30 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'StoreId'
+        /// </summary>
+        [Fact]
+        public void StoreIdTest()
+        {
+            // TODO unit test for the property 'StoreId'
+        }
+
+        /// <summary>
+        /// Test the property 'ShipmentProvider'
+        /// </summary>
+        [Fact]
+        public void ShipmentProviderTest()
+        {
+            // TODO unit test for the property 'ShipmentProvider'
+        }
+
+        /// <summary>
         /// Test the property 'TrackingNumbers'
         /// </summary>
         [Fact]
         public void TrackingNumbersTest()
         {
             // TODO unit test for the property 'TrackingNumbers'
-        }
-
-        /// <summary>
-        /// Test the property 'Replace'
-        /// </summary>
-        [Fact]
-        public void ReplaceTest()
-        {
-            // TODO unit test for the property 'Replace'
-        }
-
-        /// <summary>
-        /// Test the property 'IsShipped'
-        /// </summary>
-        [Fact]
-        public void IsShippedTest()
-        {
-            // TODO unit test for the property 'IsShipped'
         }
 
         /// <summary>
@@ -119,6 +110,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IsShipped'
+        /// </summary>
+        [Fact]
+        public void IsShippedTest()
+        {
+            // TODO unit test for the property 'IsShipped'
+        }
+
+        /// <summary>
         /// Test the property 'DeliveredAt'
         /// </summary>
         [Fact]
@@ -128,12 +128,12 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'ShipmentProvider'
+        /// Test the property 'Replace'
         /// </summary>
         [Fact]
-        public void ShipmentProviderTest()
+        public void ReplaceTest()
         {
-            // TODO unit test for the property 'ShipmentProvider'
+            // TODO unit test for the property 'Replace'
         }
     }
 }

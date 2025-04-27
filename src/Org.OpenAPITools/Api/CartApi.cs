@@ -78,16 +78,16 @@ namespace Org.OpenAPITools.Api
         /// Get cart catalog price rules discounts.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves  catalog_price_rules by ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartCatalogPriceRulesList</returns>
-        ModelResponseCartCatalogPriceRulesList CartCatalogPriceRulesList(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? ids = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ModelResponseCartCatalogPriceRulesList CartCatalogPriceRulesList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.catalog_price_rules.list
@@ -96,16 +96,16 @@ namespace Org.OpenAPITools.Api
         /// Get cart catalog price rules discounts.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves  catalog_price_rules by ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartCatalogPriceRulesList</returns>
-        ApiResponse<ModelResponseCartCatalogPriceRulesList> CartCatalogPriceRulesListWithHttpInfo(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? ids = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseCartCatalogPriceRulesList> CartCatalogPriceRulesListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.clear_cache
         /// </summary>
@@ -218,13 +218,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="key">Defines condition entity attribute key</param>
         /// <param name="varOperator">Defines condition operator</param>
         /// <param name="value">Defines condition value, can be comma separated according to the operator.</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="target">Defines condition operator (optional, default to &quot;coupon_prerequisite&quot;)</param>
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketLiveShippingServiceDelete200Response</returns>
-        BasketLiveShippingServiceDelete200Response CartCouponConditionAdd(string couponId, string entity, string key, string varOperator, string value, string? storeId = default(string?), string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), int operationIndex = 0);
+        BasketLiveShippingServiceDelete200Response CartCouponConditionAdd(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.coupon.condition.add
@@ -238,13 +238,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="key">Defines condition entity attribute key</param>
         /// <param name="varOperator">Defines condition operator</param>
         /// <param name="value">Defines condition value, can be comma separated according to the operator.</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="target">Defines condition operator (optional, default to &quot;coupon_prerequisite&quot;)</param>
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketLiveShippingServiceDelete200Response</returns>
-        ApiResponse<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddWithHttpInfo(string couponId, string entity, string key, string varOperator, string value, string? storeId = default(string?), string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), int operationIndex = 0);
+        ApiResponse<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddWithHttpInfo(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.coupon.count
         /// </summary>
@@ -253,14 +253,14 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CartCouponCount200Response</returns>
-        CartCouponCount200Response CartCouponCount(string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), int operationIndex = 0);
+        CartCouponCount200Response CartCouponCount(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.coupon.count
@@ -270,14 +270,14 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CartCouponCount200Response</returns>
-        ApiResponse<CartCouponCount200Response> CartCouponCountWithHttpInfo(string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), int operationIndex = 0);
+        ApiResponse<CartCouponCount200Response> CartCouponCountWithHttpInfo(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.coupon.delete
         /// </summary>
@@ -310,23 +310,23 @@ namespace Org.OpenAPITools.Api
         /// Get cart coupon discounts.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="couponsIds">Filter coupons by ids (optional)</param>
         /// <param name="storeId">Filter coupons by store id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
+        /// <param name="avail">Filter coupons by avail status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Filter coupons by avail status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartCouponList</returns>
-        ModelResponseCartCouponList CartCouponList(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? couponsIds = default(string?), string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ModelResponseCartCouponList CartCouponList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.coupon.list
@@ -335,23 +335,23 @@ namespace Org.OpenAPITools.Api
         /// Get cart coupon discounts.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="couponsIds">Filter coupons by ids (optional)</param>
         /// <param name="storeId">Filter coupons by store id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
+        /// <param name="avail">Filter coupons by avail status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Filter coupons by avail status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartCouponList</returns>
-        ApiResponse<ModelResponseCartCouponList> CartCouponListWithHttpInfo(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? couponsIds = default(string?), string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseCartCouponList> CartCouponListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.create
         /// </summary>
@@ -511,16 +511,16 @@ namespace Org.OpenAPITools.Api
         /// Get gift cards list.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartGiftCardList</returns>
-        ModelResponseCartGiftCardList CartGiftcardList(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ModelResponseCartGiftCardList CartGiftcardList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.giftcard.list
@@ -529,16 +529,16 @@ namespace Org.OpenAPITools.Api
         /// Get gift cards list.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartGiftCardList</returns>
-        ApiResponse<ModelResponseCartGiftCardList> CartGiftcardListWithHttpInfo(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseCartGiftCardList> CartGiftcardListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.info
         /// </summary>
@@ -546,13 +546,13 @@ namespace Org.OpenAPITools.Api
         /// This method allows you to get various information about the store, including a list of stores (in the case of a multistore configuration), a list of supported languages, currencies, carriers, warehouses, and many other information. This information contains data that is relatively stable and rarely changes, so API2Cart can cache certain data to reduce the load on the store and speed up the execution of the request. We also recommend that you cache the response of this method on your side to save requests. If you need to clear the cache for a specific store, then use the cart.validate method.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CartInfo200Response</returns>
-        CartInfo200Response CartInfo(string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0);
+        CartInfo200Response CartInfo(string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.info
@@ -561,13 +561,13 @@ namespace Org.OpenAPITools.Api
         /// This method allows you to get various information about the store, including a list of stores (in the case of a multistore configuration), a list of supported languages, currencies, carriers, warehouses, and many other information. This information contains data that is relatively stable and rarely changes, so API2Cart can cache certain data to reduce the load on the store and speed up the execution of the request. We also recommend that you cache the response of this method on your side to save requests. If you need to clear the cache for a specific store, then use the cart.validate method.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CartInfo200Response</returns>
-        ApiResponse<CartInfo200Response> CartInfoWithHttpInfo(string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<CartInfo200Response> CartInfoWithHttpInfo(string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.list
         /// </summary>
@@ -599,18 +599,18 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="key">Key (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartMetaDataList</returns>
-        ModelResponseCartMetaDataList CartMetaDataList(string entityId, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ModelResponseCartMetaDataList CartMetaDataList(string entityId, int? count = default(int?), string? pageCursor = default(string?), string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.meta_data.list
@@ -620,18 +620,18 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="key">Key (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartMetaDataList</returns>
-        ApiResponse<ModelResponseCartMetaDataList> CartMetaDataListWithHttpInfo(string entityId, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseCartMetaDataList> CartMetaDataListWithHttpInfo(string entityId, int? count = default(int?), string? pageCursor = default(string?), string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.meta_data.set
         /// </summary>
@@ -726,12 +726,12 @@ namespace Org.OpenAPITools.Api
         /// Get a list of third-party plugins installed on the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CartPluginList200Response</returns>
-        CartPluginList200Response CartPluginList(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0);
+        CartPluginList200Response CartPluginList(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.plugin.list
@@ -740,12 +740,12 @@ namespace Org.OpenAPITools.Api
         /// Get a list of third-party plugins installed on the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CartPluginList200Response</returns>
-        ApiResponse<CartPluginList200Response> CartPluginListWithHttpInfo(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0);
+        ApiResponse<CartPluginList200Response> CartPluginListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.script.add
         /// </summary>
@@ -815,21 +815,21 @@ namespace Org.OpenAPITools.Api
         /// Get scripts installed to the storefront
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartScriptList</returns>
-        ModelResponseCartScriptList CartScriptList(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ModelResponseCartScriptList CartScriptList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.script.list
@@ -838,21 +838,21 @@ namespace Org.OpenAPITools.Api
         /// Get scripts installed to the storefront
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartScriptList</returns>
-        ApiResponse<ModelResponseCartScriptList> CartScriptListWithHttpInfo(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseCartScriptList> CartScriptListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.shipping_zones.list
         /// </summary>
@@ -860,15 +860,15 @@ namespace Org.OpenAPITools.Api
         /// Get list of shipping zones
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartShippingZonesList</returns>
-        ModelResponseCartShippingZonesList CartShippingZonesList(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ModelResponseCartShippingZonesList CartShippingZonesList(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.shipping_zones.list
@@ -877,15 +877,15 @@ namespace Org.OpenAPITools.Api
         /// Get list of shipping zones
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartShippingZonesList</returns>
-        ApiResponse<ModelResponseCartShippingZonesList> CartShippingZonesListWithHttpInfo(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseCartShippingZonesList> CartShippingZonesListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.validate
         /// </summary>
@@ -973,17 +973,17 @@ namespace Org.OpenAPITools.Api
         /// Get cart catalog price rules discounts.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves  catalog_price_rules by ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartCatalogPriceRulesList</returns>
-        System.Threading.Tasks.Task<ModelResponseCartCatalogPriceRulesList> CartCatalogPriceRulesListAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? ids = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseCartCatalogPriceRulesList> CartCatalogPriceRulesListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.catalog_price_rules.list
@@ -992,17 +992,17 @@ namespace Org.OpenAPITools.Api
         /// Get cart catalog price rules discounts.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves  catalog_price_rules by ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartCatalogPriceRulesList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartCatalogPriceRulesList>> CartCatalogPriceRulesListWithHttpInfoAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? ids = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartCatalogPriceRulesList>> CartCatalogPriceRulesListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.clear_cache
         /// </summary>
@@ -1123,14 +1123,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="key">Defines condition entity attribute key</param>
         /// <param name="varOperator">Defines condition operator</param>
         /// <param name="value">Defines condition value, can be comma separated according to the operator.</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="target">Defines condition operator (optional, default to &quot;coupon_prerequisite&quot;)</param>
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketLiveShippingServiceDelete200Response</returns>
-        System.Threading.Tasks.Task<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddAsync(string couponId, string entity, string key, string varOperator, string value, string? storeId = default(string?), string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddAsync(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.coupon.condition.add
@@ -1144,14 +1144,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="key">Defines condition entity attribute key</param>
         /// <param name="varOperator">Defines condition operator</param>
         /// <param name="value">Defines condition value, can be comma separated according to the operator.</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="target">Defines condition operator (optional, default to &quot;coupon_prerequisite&quot;)</param>
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketLiveShippingServiceDelete200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BasketLiveShippingServiceDelete200Response>> CartCouponConditionAddWithHttpInfoAsync(string couponId, string entity, string key, string varOperator, string value, string? storeId = default(string?), string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BasketLiveShippingServiceDelete200Response>> CartCouponConditionAddWithHttpInfoAsync(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.coupon.count
         /// </summary>
@@ -1160,15 +1160,15 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CartCouponCount200Response</returns>
-        System.Threading.Tasks.Task<CartCouponCount200Response> CartCouponCountAsync(string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CartCouponCount200Response> CartCouponCountAsync(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.coupon.count
@@ -1178,15 +1178,15 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CartCouponCount200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartCouponCount200Response>> CartCouponCountWithHttpInfoAsync(string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CartCouponCount200Response>> CartCouponCountWithHttpInfoAsync(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.coupon.delete
         /// </summary>
@@ -1221,24 +1221,24 @@ namespace Org.OpenAPITools.Api
         /// Get cart coupon discounts.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="couponsIds">Filter coupons by ids (optional)</param>
         /// <param name="storeId">Filter coupons by store id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
+        /// <param name="avail">Filter coupons by avail status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Filter coupons by avail status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartCouponList</returns>
-        System.Threading.Tasks.Task<ModelResponseCartCouponList> CartCouponListAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? couponsIds = default(string?), string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseCartCouponList> CartCouponListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.coupon.list
@@ -1247,24 +1247,24 @@ namespace Org.OpenAPITools.Api
         /// Get cart coupon discounts.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="couponsIds">Filter coupons by ids (optional)</param>
         /// <param name="storeId">Filter coupons by store id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
+        /// <param name="avail">Filter coupons by avail status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Filter coupons by avail status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartCouponList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartCouponList>> CartCouponListWithHttpInfoAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? couponsIds = default(string?), string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartCouponList>> CartCouponListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.create
         /// </summary>
@@ -1436,17 +1436,17 @@ namespace Org.OpenAPITools.Api
         /// Get gift cards list.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartGiftCardList</returns>
-        System.Threading.Tasks.Task<ModelResponseCartGiftCardList> CartGiftcardListAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseCartGiftCardList> CartGiftcardListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.giftcard.list
@@ -1455,17 +1455,17 @@ namespace Org.OpenAPITools.Api
         /// Get gift cards list.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartGiftCardList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartGiftCardList>> CartGiftcardListWithHttpInfoAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartGiftCardList>> CartGiftcardListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.info
         /// </summary>
@@ -1473,14 +1473,14 @@ namespace Org.OpenAPITools.Api
         /// This method allows you to get various information about the store, including a list of stores (in the case of a multistore configuration), a list of supported languages, currencies, carriers, warehouses, and many other information. This information contains data that is relatively stable and rarely changes, so API2Cart can cache certain data to reduce the load on the store and speed up the execution of the request. We also recommend that you cache the response of this method on your side to save requests. If you need to clear the cache for a specific store, then use the cart.validate method.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CartInfo200Response</returns>
-        System.Threading.Tasks.Task<CartInfo200Response> CartInfoAsync(string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CartInfo200Response> CartInfoAsync(string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.info
@@ -1489,14 +1489,14 @@ namespace Org.OpenAPITools.Api
         /// This method allows you to get various information about the store, including a list of stores (in the case of a multistore configuration), a list of supported languages, currencies, carriers, warehouses, and many other information. This information contains data that is relatively stable and rarely changes, so API2Cart can cache certain data to reduce the load on the store and speed up the execution of the request. We also recommend that you cache the response of this method on your side to save requests. If you need to clear the cache for a specific store, then use the cart.validate method.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CartInfo200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartInfo200Response>> CartInfoWithHttpInfoAsync(string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CartInfo200Response>> CartInfoWithHttpInfoAsync(string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.list
         /// </summary>
@@ -1530,19 +1530,19 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="key">Key (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartMetaDataList</returns>
-        System.Threading.Tasks.Task<ModelResponseCartMetaDataList> CartMetaDataListAsync(string entityId, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseCartMetaDataList> CartMetaDataListAsync(string entityId, int? count = default(int?), string? pageCursor = default(string?), string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.meta_data.list
@@ -1552,19 +1552,19 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="key">Key (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartMetaDataList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartMetaDataList>> CartMetaDataListWithHttpInfoAsync(string entityId, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartMetaDataList>> CartMetaDataListWithHttpInfoAsync(string entityId, int? count = default(int?), string? pageCursor = default(string?), string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.meta_data.set
         /// </summary>
@@ -1665,13 +1665,13 @@ namespace Org.OpenAPITools.Api
         /// Get a list of third-party plugins installed on the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CartPluginList200Response</returns>
-        System.Threading.Tasks.Task<CartPluginList200Response> CartPluginListAsync(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CartPluginList200Response> CartPluginListAsync(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.plugin.list
@@ -1680,13 +1680,13 @@ namespace Org.OpenAPITools.Api
         /// Get a list of third-party plugins installed on the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CartPluginList200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartPluginList200Response>> CartPluginListWithHttpInfoAsync(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CartPluginList200Response>> CartPluginListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.script.add
         /// </summary>
@@ -1760,22 +1760,22 @@ namespace Org.OpenAPITools.Api
         /// Get scripts installed to the storefront
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartScriptList</returns>
-        System.Threading.Tasks.Task<ModelResponseCartScriptList> CartScriptListAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseCartScriptList> CartScriptListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.script.list
@@ -1784,22 +1784,22 @@ namespace Org.OpenAPITools.Api
         /// Get scripts installed to the storefront
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartScriptList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartScriptList>> CartScriptListWithHttpInfoAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartScriptList>> CartScriptListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.shipping_zones.list
         /// </summary>
@@ -1807,16 +1807,16 @@ namespace Org.OpenAPITools.Api
         /// Get list of shipping zones
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartShippingZonesList</returns>
-        System.Threading.Tasks.Task<ModelResponseCartShippingZonesList> CartShippingZonesListAsync(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseCartShippingZonesList> CartShippingZonesListAsync(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.shipping_zones.list
@@ -1825,16 +1825,16 @@ namespace Org.OpenAPITools.Api
         /// Get list of shipping zones
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartShippingZonesList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartShippingZonesList>> CartShippingZonesListWithHttpInfoAsync(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartShippingZonesList>> CartShippingZonesListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.validate
         /// </summary>
@@ -2272,18 +2272,18 @@ namespace Org.OpenAPITools.Api
         /// cart.catalog_price_rules.list Get cart catalog price rules discounts.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves  catalog_price_rules by ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartCatalogPriceRulesList</returns>
-        public ModelResponseCartCatalogPriceRulesList CartCatalogPriceRulesList(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? ids = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public ModelResponseCartCatalogPriceRulesList CartCatalogPriceRulesList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCatalogPriceRulesList> localVarResponse = CartCatalogPriceRulesListWithHttpInfo(pageCursor, start, count, ids, varParams, responseFields, exclude);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCatalogPriceRulesList> localVarResponse = CartCatalogPriceRulesListWithHttpInfo(start, count, pageCursor, ids, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -2291,16 +2291,16 @@ namespace Org.OpenAPITools.Api
         /// cart.catalog_price_rules.list Get cart catalog price rules discounts.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves  catalog_price_rules by ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartCatalogPriceRulesList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCatalogPriceRulesList> CartCatalogPriceRulesListWithHttpInfo(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? ids = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCatalogPriceRulesList> CartCatalogPriceRulesListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2325,10 +2325,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -2337,17 +2333,21 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
             if (ids != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
             }
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
             if (responseFields != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
             }
             if (exclude != null)
             {
@@ -2386,19 +2386,19 @@ namespace Org.OpenAPITools.Api
         /// cart.catalog_price_rules.list Get cart catalog price rules discounts.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves  catalog_price_rules by ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartCatalogPriceRulesList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseCartCatalogPriceRulesList> CartCatalogPriceRulesListAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? ids = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseCartCatalogPriceRulesList> CartCatalogPriceRulesListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCatalogPriceRulesList> localVarResponse = await CartCatalogPriceRulesListWithHttpInfoAsync(pageCursor, start, count, ids, varParams, responseFields, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCatalogPriceRulesList> localVarResponse = await CartCatalogPriceRulesListWithHttpInfoAsync(start, count, pageCursor, ids, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2406,17 +2406,17 @@ namespace Org.OpenAPITools.Api
         /// cart.catalog_price_rules.list Get cart catalog price rules discounts.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves  catalog_price_rules by ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartCatalogPriceRulesList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCatalogPriceRulesList>> CartCatalogPriceRulesListWithHttpInfoAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? ids = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCatalogPriceRulesList>> CartCatalogPriceRulesListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2441,10 +2441,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -2453,17 +2449,21 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
             if (ids != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
             }
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
             if (responseFields != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
             }
             if (exclude != null)
             {
@@ -3190,15 +3190,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="key">Defines condition entity attribute key</param>
         /// <param name="varOperator">Defines condition operator</param>
         /// <param name="value">Defines condition value, can be comma separated according to the operator.</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="target">Defines condition operator (optional, default to &quot;coupon_prerequisite&quot;)</param>
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketLiveShippingServiceDelete200Response</returns>
-        public BasketLiveShippingServiceDelete200Response CartCouponConditionAdd(string couponId, string entity, string key, string varOperator, string value, string? storeId = default(string?), string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), int operationIndex = 0)
+        public BasketLiveShippingServiceDelete200Response CartCouponConditionAdd(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response> localVarResponse = CartCouponConditionAddWithHttpInfo(couponId, entity, key, varOperator, value, storeId, target, includeTax, includeShipping);
+            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response> localVarResponse = CartCouponConditionAddWithHttpInfo(couponId, entity, key, varOperator, value, target, includeTax, includeShipping, storeId);
             return localVarResponse.Data;
         }
 
@@ -3211,13 +3211,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="key">Defines condition entity attribute key</param>
         /// <param name="varOperator">Defines condition operator</param>
         /// <param name="value">Defines condition value, can be comma separated according to the operator.</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="target">Defines condition operator (optional, default to &quot;coupon_prerequisite&quot;)</param>
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketLiveShippingServiceDelete200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddWithHttpInfo(string couponId, string entity, string key, string varOperator, string value, string? storeId = default(string?), string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddWithHttpInfo(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'couponId' is set
             if (couponId == null)
@@ -3272,19 +3272,15 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "coupon_id", couponId));
-            if (target != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "target", target));
-            }
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "entity", entity));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "key", key));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "operator", varOperator));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "value", value));
+            if (target != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "target", target));
+            }
             if (includeTax != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "include_tax", includeTax));
@@ -3292,6 +3288,10 @@ namespace Org.OpenAPITools.Api
             if (includeShipping != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "include_shipping", includeShipping));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
 
             localVarRequestOptions.Operation = "CartApi.CartCouponConditionAdd";
@@ -3331,16 +3331,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="key">Defines condition entity attribute key</param>
         /// <param name="varOperator">Defines condition operator</param>
         /// <param name="value">Defines condition value, can be comma separated according to the operator.</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="target">Defines condition operator (optional, default to &quot;coupon_prerequisite&quot;)</param>
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketLiveShippingServiceDelete200Response</returns>
-        public async System.Threading.Tasks.Task<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddAsync(string couponId, string entity, string key, string varOperator, string value, string? storeId = default(string?), string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddAsync(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response> localVarResponse = await CartCouponConditionAddWithHttpInfoAsync(couponId, entity, key, varOperator, value, storeId, target, includeTax, includeShipping, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response> localVarResponse = await CartCouponConditionAddWithHttpInfoAsync(couponId, entity, key, varOperator, value, target, includeTax, includeShipping, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3353,14 +3353,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="key">Defines condition entity attribute key</param>
         /// <param name="varOperator">Defines condition operator</param>
         /// <param name="value">Defines condition value, can be comma separated according to the operator.</param>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="target">Defines condition operator (optional, default to &quot;coupon_prerequisite&quot;)</param>
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketLiveShippingServiceDelete200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response>> CartCouponConditionAddWithHttpInfoAsync(string couponId, string entity, string key, string varOperator, string value, string? storeId = default(string?), string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response>> CartCouponConditionAddWithHttpInfoAsync(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'couponId' is set
             if (couponId == null)
@@ -3415,19 +3415,15 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "coupon_id", couponId));
-            if (target != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "target", target));
-            }
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "entity", entity));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "key", key));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "operator", varOperator));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "value", value));
+            if (target != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "target", target));
+            }
             if (includeTax != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "include_tax", includeTax));
@@ -3435,6 +3431,10 @@ namespace Org.OpenAPITools.Api
             if (includeShipping != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "include_shipping", includeShipping));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
 
             localVarRequestOptions.Operation = "CartApi.CartCouponConditionAdd";
@@ -3471,16 +3471,16 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CartCouponCount200Response</returns>
-        public CartCouponCount200Response CartCouponCount(string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), int operationIndex = 0)
+        public CartCouponCount200Response CartCouponCount(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CartCouponCount200Response> localVarResponse = CartCouponCountWithHttpInfo(storeId, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, avail);
+            Org.OpenAPITools.Client.ApiResponse<CartCouponCount200Response> localVarResponse = CartCouponCountWithHttpInfo(storeId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo);
             return localVarResponse.Data;
         }
 
@@ -3489,14 +3489,14 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CartCouponCount200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CartCouponCount200Response> CartCouponCountWithHttpInfo(string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CartCouponCount200Response> CartCouponCountWithHttpInfo(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3525,6 +3525,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (avail != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
+            }
             if (dateStartFrom != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "date_start_from", dateStartFrom));
@@ -3540,10 +3544,6 @@ namespace Org.OpenAPITools.Api
             if (dateEndTo != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "date_end_to", dateEndTo));
-            }
-            if (avail != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
             }
 
             localVarRequestOptions.Operation = "CartApi.CartCouponCount";
@@ -3579,17 +3579,17 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CartCouponCount200Response</returns>
-        public async System.Threading.Tasks.Task<CartCouponCount200Response> CartCouponCountAsync(string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CartCouponCount200Response> CartCouponCountAsync(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CartCouponCount200Response> localVarResponse = await CartCouponCountWithHttpInfoAsync(storeId, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, avail, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CartCouponCount200Response> localVarResponse = await CartCouponCountWithHttpInfoAsync(storeId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3598,15 +3598,15 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CartCouponCount200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartCouponCount200Response>> CartCouponCountWithHttpInfoAsync(string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartCouponCount200Response>> CartCouponCountWithHttpInfoAsync(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3635,6 +3635,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (avail != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
+            }
             if (dateStartFrom != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "date_start_from", dateStartFrom));
@@ -3650,10 +3654,6 @@ namespace Org.OpenAPITools.Api
             if (dateEndTo != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "date_end_to", dateEndTo));
-            }
-            if (avail != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
             }
 
             localVarRequestOptions.Operation = "CartApi.CartCouponCount";
@@ -3866,25 +3866,25 @@ namespace Org.OpenAPITools.Api
         /// cart.coupon.list Get cart coupon discounts.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="couponsIds">Filter coupons by ids (optional)</param>
         /// <param name="storeId">Filter coupons by store id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
+        /// <param name="avail">Filter coupons by avail status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Filter coupons by avail status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartCouponList</returns>
-        public ModelResponseCartCouponList CartCouponList(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? couponsIds = default(string?), string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public ModelResponseCartCouponList CartCouponList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList> localVarResponse = CartCouponListWithHttpInfo(pageCursor, start, count, couponsIds, storeId, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, avail, langId, varParams, responseFields, exclude);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList> localVarResponse = CartCouponListWithHttpInfo(start, count, pageCursor, couponsIds, storeId, langId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -3892,23 +3892,23 @@ namespace Org.OpenAPITools.Api
         /// cart.coupon.list Get cart coupon discounts.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="couponsIds">Filter coupons by ids (optional)</param>
         /// <param name="storeId">Filter coupons by store id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
+        /// <param name="avail">Filter coupons by avail status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Filter coupons by avail status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartCouponList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList> CartCouponListWithHttpInfo(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? couponsIds = default(string?), string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList> CartCouponListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3933,10 +3933,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -3945,6 +3941,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
             if (couponsIds != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "coupons_ids", couponsIds));
@@ -3952,6 +3952,14 @@ namespace Org.OpenAPITools.Api
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (langId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
+            }
+            if (avail != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
             }
             if (dateStartFrom != null)
             {
@@ -3969,21 +3977,13 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "date_end_to", dateEndTo));
             }
-            if (avail != null)
+            if (responseFields != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
-            }
-            if (langId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (exclude != null)
             {
@@ -4022,26 +4022,26 @@ namespace Org.OpenAPITools.Api
         /// cart.coupon.list Get cart coupon discounts.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="couponsIds">Filter coupons by ids (optional)</param>
         /// <param name="storeId">Filter coupons by store id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
+        /// <param name="avail">Filter coupons by avail status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Filter coupons by avail status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartCouponList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseCartCouponList> CartCouponListAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? couponsIds = default(string?), string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseCartCouponList> CartCouponListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList> localVarResponse = await CartCouponListWithHttpInfoAsync(pageCursor, start, count, couponsIds, storeId, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, avail, langId, varParams, responseFields, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList> localVarResponse = await CartCouponListWithHttpInfoAsync(start, count, pageCursor, couponsIds, storeId, langId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4049,24 +4049,24 @@ namespace Org.OpenAPITools.Api
         /// cart.coupon.list Get cart coupon discounts.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="couponsIds">Filter coupons by ids (optional)</param>
         /// <param name="storeId">Filter coupons by store id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
+        /// <param name="avail">Filter coupons by avail status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
-        /// <param name="avail">Filter coupons by avail status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartCouponList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList>> CartCouponListWithHttpInfoAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? couponsIds = default(string?), string? storeId = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), bool? avail = default(bool?), string? langId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList>> CartCouponListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -4091,10 +4091,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -4103,6 +4099,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
             if (couponsIds != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "coupons_ids", couponsIds));
@@ -4110,6 +4110,14 @@ namespace Org.OpenAPITools.Api
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (langId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
+            }
+            if (avail != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
             }
             if (dateStartFrom != null)
             {
@@ -4127,21 +4135,13 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "date_end_to", dateEndTo));
             }
-            if (avail != null)
+            if (responseFields != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
-            }
-            if (langId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (exclude != null)
             {
@@ -5201,18 +5201,18 @@ namespace Org.OpenAPITools.Api
         /// cart.giftcard.list Get gift cards list.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartGiftCardList</returns>
-        public ModelResponseCartGiftCardList CartGiftcardList(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public ModelResponseCartGiftCardList CartGiftcardList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList> localVarResponse = CartGiftcardListWithHttpInfo(pageCursor, start, count, storeId, varParams, responseFields, exclude);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList> localVarResponse = CartGiftcardListWithHttpInfo(start, count, pageCursor, storeId, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -5220,16 +5220,16 @@ namespace Org.OpenAPITools.Api
         /// cart.giftcard.list Get gift cards list.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartGiftCardList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList> CartGiftcardListWithHttpInfo(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList> CartGiftcardListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -5254,10 +5254,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -5266,17 +5262,21 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
             if (responseFields != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
             }
             if (exclude != null)
             {
@@ -5315,19 +5315,19 @@ namespace Org.OpenAPITools.Api
         /// cart.giftcard.list Get gift cards list.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartGiftCardList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseCartGiftCardList> CartGiftcardListAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseCartGiftCardList> CartGiftcardListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList> localVarResponse = await CartGiftcardListWithHttpInfoAsync(pageCursor, start, count, storeId, varParams, responseFields, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList> localVarResponse = await CartGiftcardListWithHttpInfoAsync(start, count, pageCursor, storeId, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5335,17 +5335,17 @@ namespace Org.OpenAPITools.Api
         /// cart.giftcard.list Get gift cards list.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,code,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartGiftCardList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList>> CartGiftcardListWithHttpInfoAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList>> CartGiftcardListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -5370,10 +5370,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -5382,17 +5378,21 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
             if (responseFields != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
             }
             if (exclude != null)
             {
@@ -5432,15 +5432,15 @@ namespace Org.OpenAPITools.Api
         /// cart.info This method allows you to get various information about the store, including a list of stores (in the case of a multistore configuration), a list of supported languages, currencies, carriers, warehouses, and many other information. This information contains data that is relatively stable and rarely changes, so API2Cart can cache certain data to reduce the load on the store and speed up the execution of the request. We also recommend that you cache the response of this method on your side to save requests. If you need to clear the cache for a specific store, then use the cart.validate method.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CartInfo200Response</returns>
-        public CartInfo200Response CartInfo(string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0)
+        public CartInfo200Response CartInfo(string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CartInfo200Response> localVarResponse = CartInfoWithHttpInfo(varParams, responseFields, exclude, storeId);
+            Org.OpenAPITools.Client.ApiResponse<CartInfo200Response> localVarResponse = CartInfoWithHttpInfo(storeId, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -5448,13 +5448,13 @@ namespace Org.OpenAPITools.Api
         /// cart.info This method allows you to get various information about the store, including a list of stores (in the case of a multistore configuration), a list of supported languages, currencies, carriers, warehouses, and many other information. This information contains data that is relatively stable and rarely changes, so API2Cart can cache certain data to reduce the load on the store and speed up the execution of the request. We also recommend that you cache the response of this method on your side to save requests. If you need to clear the cache for a specific store, then use the cart.validate method.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CartInfo200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CartInfo200Response> CartInfoWithHttpInfo(string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CartInfo200Response> CartInfoWithHttpInfo(string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -5479,21 +5479,21 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (varParams != null)
+            if (storeId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (responseFields != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
 
             localVarRequestOptions.Operation = "CartApi.CartInfo";
@@ -5528,16 +5528,16 @@ namespace Org.OpenAPITools.Api
         /// cart.info This method allows you to get various information about the store, including a list of stores (in the case of a multistore configuration), a list of supported languages, currencies, carriers, warehouses, and many other information. This information contains data that is relatively stable and rarely changes, so API2Cart can cache certain data to reduce the load on the store and speed up the execution of the request. We also recommend that you cache the response of this method on your side to save requests. If you need to clear the cache for a specific store, then use the cart.validate method.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CartInfo200Response</returns>
-        public async System.Threading.Tasks.Task<CartInfo200Response> CartInfoAsync(string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CartInfo200Response> CartInfoAsync(string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CartInfo200Response> localVarResponse = await CartInfoWithHttpInfoAsync(varParams, responseFields, exclude, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CartInfo200Response> localVarResponse = await CartInfoWithHttpInfoAsync(storeId, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5545,14 +5545,14 @@ namespace Org.OpenAPITools.Api
         /// cart.info This method allows you to get various information about the store, including a list of stores (in the case of a multistore configuration), a list of supported languages, currencies, carriers, warehouses, and many other information. This information contains data that is relatively stable and rarely changes, so API2Cart can cache certain data to reduce the load on the store and speed up the execution of the request. We also recommend that you cache the response of this method on your side to save requests. If you need to clear the cache for a specific store, then use the cart.validate method.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;store_name,store_url,db_prefix&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CartInfo200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartInfo200Response>> CartInfoWithHttpInfoAsync(string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartInfo200Response>> CartInfoWithHttpInfoAsync(string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -5577,21 +5577,21 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (varParams != null)
+            if (storeId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (responseFields != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
 
             localVarRequestOptions.Operation = "CartApi.CartInfo";
@@ -5769,20 +5769,20 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="key">Key (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartMetaDataList</returns>
-        public ModelResponseCartMetaDataList CartMetaDataList(string entityId, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public ModelResponseCartMetaDataList CartMetaDataList(string entityId, int? count = default(int?), string? pageCursor = default(string?), string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartMetaDataList> localVarResponse = CartMetaDataListWithHttpInfo(entityId, entity, storeId, langId, key, count, pageCursor, varParams, responseFields, exclude);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartMetaDataList> localVarResponse = CartMetaDataListWithHttpInfo(entityId, count, pageCursor, entity, storeId, langId, key, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -5791,18 +5791,18 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="key">Key (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartMetaDataList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartMetaDataList> CartMetaDataListWithHttpInfo(string entityId, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartMetaDataList> CartMetaDataListWithHttpInfo(string entityId, int? count = default(int?), string? pageCursor = default(string?), string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'entityId' is set
             if (entityId == null)
@@ -5833,6 +5833,14 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (count != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "entity_id", entityId));
             if (entity != null)
             {
@@ -5850,21 +5858,13 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "key", key));
             }
-            if (count != null)
+            if (responseFields != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
-            }
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (exclude != null)
             {
@@ -5904,21 +5904,21 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="key">Key (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartMetaDataList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseCartMetaDataList> CartMetaDataListAsync(string entityId, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseCartMetaDataList> CartMetaDataListAsync(string entityId, int? count = default(int?), string? pageCursor = default(string?), string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartMetaDataList> localVarResponse = await CartMetaDataListWithHttpInfoAsync(entityId, entity, storeId, langId, key, count, pageCursor, varParams, responseFields, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartMetaDataList> localVarResponse = await CartMetaDataListWithHttpInfoAsync(entityId, count, pageCursor, entity, storeId, langId, key, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5927,19 +5927,19 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="key">Key (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;key,value&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartMetaDataList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartMetaDataList>> CartMetaDataListWithHttpInfoAsync(string entityId, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartMetaDataList>> CartMetaDataListWithHttpInfoAsync(string entityId, int? count = default(int?), string? pageCursor = default(string?), string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? key = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'entityId' is set
             if (entityId == null)
@@ -5970,6 +5970,14 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (count != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "entity_id", entityId));
             if (entity != null)
             {
@@ -5987,21 +5995,13 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "key", key));
             }
-            if (count != null)
+            if (responseFields != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
-            }
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (exclude != null)
             {
@@ -6119,6 +6119,9 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "entity_id", entityId));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "key", key));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "value", value));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             if (entity != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "entity", entity));
@@ -6131,9 +6134,6 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "key", key));
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "value", value));
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
 
             localVarRequestOptions.Operation = "CartApi.CartMetaDataSet";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -6247,6 +6247,9 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "entity_id", entityId));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "key", key));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "value", value));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
             if (entity != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "entity", entity));
@@ -6259,9 +6262,6 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "key", key));
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "value", value));
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "namespace", varNamespace));
 
             localVarRequestOptions.Operation = "CartApi.CartMetaDataSet";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -6364,6 +6364,8 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "entity_id", entityId));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "key", key));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
             if (entity != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "entity", entity));
@@ -6372,8 +6374,6 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "key", key));
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
 
             localVarRequestOptions.Operation = "CartApi.CartMetaDataUnset";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -6477,6 +6477,8 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "entity_id", entityId));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "key", key));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
             if (entity != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "entity", entity));
@@ -6485,8 +6487,6 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "key", key));
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
 
             localVarRequestOptions.Operation = "CartApi.CartMetaDataUnset";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -6668,14 +6668,14 @@ namespace Org.OpenAPITools.Api
         /// cart.plugin.list Get a list of third-party plugins installed on the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CartPluginList200Response</returns>
-        public CartPluginList200Response CartPluginList(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0)
+        public CartPluginList200Response CartPluginList(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CartPluginList200Response> localVarResponse = CartPluginListWithHttpInfo(storeId, start, count);
+            Org.OpenAPITools.Client.ApiResponse<CartPluginList200Response> localVarResponse = CartPluginListWithHttpInfo(start, count, storeId);
             return localVarResponse.Data;
         }
 
@@ -6683,12 +6683,12 @@ namespace Org.OpenAPITools.Api
         /// cart.plugin.list Get a list of third-party plugins installed on the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CartPluginList200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CartPluginList200Response> CartPluginListWithHttpInfo(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CartPluginList200Response> CartPluginListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -6713,10 +6713,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -6724,6 +6720,10 @@ namespace Org.OpenAPITools.Api
             if (count != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
 
             localVarRequestOptions.Operation = "CartApi.CartPluginList";
@@ -6758,15 +6758,15 @@ namespace Org.OpenAPITools.Api
         /// cart.plugin.list Get a list of third-party plugins installed on the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CartPluginList200Response</returns>
-        public async System.Threading.Tasks.Task<CartPluginList200Response> CartPluginListAsync(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CartPluginList200Response> CartPluginListAsync(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CartPluginList200Response> localVarResponse = await CartPluginListWithHttpInfoAsync(storeId, start, count, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CartPluginList200Response> localVarResponse = await CartPluginListWithHttpInfoAsync(start, count, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6774,13 +6774,13 @@ namespace Org.OpenAPITools.Api
         /// cart.plugin.list Get a list of third-party plugins installed on the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CartPluginList200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartPluginList200Response>> CartPluginListWithHttpInfoAsync(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartPluginList200Response>> CartPluginListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -6805,10 +6805,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -6816,6 +6812,10 @@ namespace Org.OpenAPITools.Api
             if (count != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
 
             localVarRequestOptions.Operation = "CartApi.CartPluginList";
@@ -7271,23 +7271,23 @@ namespace Org.OpenAPITools.Api
         /// cart.script.list Get scripts installed to the storefront
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartScriptList</returns>
-        public ModelResponseCartScriptList CartScriptList(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public ModelResponseCartScriptList CartScriptList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartScriptList> localVarResponse = CartScriptListWithHttpInfo(pageCursor, start, count, createdFrom, createdTo, modifiedFrom, modifiedTo, scriptIds, storeId, varParams, responseFields, exclude);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartScriptList> localVarResponse = CartScriptListWithHttpInfo(start, count, pageCursor, scriptIds, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -7295,21 +7295,21 @@ namespace Org.OpenAPITools.Api
         /// cart.script.list Get scripts installed to the storefront
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartScriptList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartScriptList> CartScriptListWithHttpInfo(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartScriptList> CartScriptListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -7334,10 +7334,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -7345,6 +7341,18 @@ namespace Org.OpenAPITools.Api
             if (count != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
+            if (scriptIds != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "script_ids", scriptIds));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (createdFrom != null)
             {
@@ -7362,21 +7370,13 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
             }
-            if (scriptIds != null)
+            if (responseFields != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "script_ids", scriptIds));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (exclude != null)
             {
@@ -7415,24 +7415,24 @@ namespace Org.OpenAPITools.Api
         /// cart.script.list Get scripts installed to the storefront
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartScriptList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseCartScriptList> CartScriptListAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseCartScriptList> CartScriptListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartScriptList> localVarResponse = await CartScriptListWithHttpInfoAsync(pageCursor, start, count, createdFrom, createdTo, modifiedFrom, modifiedTo, scriptIds, storeId, varParams, responseFields, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartScriptList> localVarResponse = await CartScriptListWithHttpInfoAsync(start, count, pageCursor, scriptIds, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -7440,22 +7440,22 @@ namespace Org.OpenAPITools.Api
         /// cart.script.list Get scripts installed to the storefront
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="scriptIds">Retrieves only scripts with specific ids (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,description&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartScriptList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartScriptList>> CartScriptListWithHttpInfoAsync(string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartScriptList>> CartScriptListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? scriptIds = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -7480,10 +7480,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -7491,6 +7487,18 @@ namespace Org.OpenAPITools.Api
             if (count != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
+            if (scriptIds != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "script_ids", scriptIds));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (createdFrom != null)
             {
@@ -7508,21 +7516,13 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
             }
-            if (scriptIds != null)
+            if (responseFields != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "script_ids", scriptIds));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (exclude != null)
             {
@@ -7562,17 +7562,17 @@ namespace Org.OpenAPITools.Api
         /// cart.shipping_zones.list Get list of shipping zones
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartShippingZonesList</returns>
-        public ModelResponseCartShippingZonesList CartShippingZonesList(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public ModelResponseCartShippingZonesList CartShippingZonesList(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartShippingZonesList> localVarResponse = CartShippingZonesListWithHttpInfo(storeId, start, count, varParams, responseFields, exclude);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartShippingZonesList> localVarResponse = CartShippingZonesListWithHttpInfo(start, count, storeId, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -7580,15 +7580,15 @@ namespace Org.OpenAPITools.Api
         /// cart.shipping_zones.list Get list of shipping zones
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartShippingZonesList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartShippingZonesList> CartShippingZonesListWithHttpInfo(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartShippingZonesList> CartShippingZonesListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -7613,10 +7613,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -7625,13 +7621,17 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
-            if (varParams != null)
+            if (storeId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (responseFields != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
             }
             if (exclude != null)
             {
@@ -7670,18 +7670,18 @@ namespace Org.OpenAPITools.Api
         /// cart.shipping_zones.list Get list of shipping zones
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartShippingZonesList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseCartShippingZonesList> CartShippingZonesListAsync(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseCartShippingZonesList> CartShippingZonesListAsync(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartShippingZonesList> localVarResponse = await CartShippingZonesListWithHttpInfoAsync(storeId, start, count, varParams, responseFields, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartShippingZonesList> localVarResponse = await CartShippingZonesListWithHttpInfoAsync(start, count, storeId, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -7689,16 +7689,16 @@ namespace Org.OpenAPITools.Api
         /// cart.shipping_zones.list Get list of shipping zones
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,enabled&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartShippingZonesList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartShippingZonesList>> CartShippingZonesListWithHttpInfoAsync(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartShippingZonesList>> CartShippingZonesListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -7723,10 +7723,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -7735,13 +7731,17 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
-            if (varParams != null)
+            if (storeId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (responseFields != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
             }
             if (exclude != null)
             {

@@ -173,15 +173,6 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'StoreId'
-        /// </summary>
-        [Fact]
-        public void StoreIdTest()
-        {
-            // TODO unit test for the property 'StoreId'
-        }
-
-        /// <summary>
         /// Test the property 'Note'
         /// </summary>
         [Fact]
@@ -197,6 +188,15 @@ namespace Org.OpenAPITools.Test.Model
         public void StatusTest()
         {
             // TODO unit test for the property 'Status'
+        }
+
+        /// <summary>
+        /// Test the property 'StoreId'
+        /// </summary>
+        [Fact]
+        public void StoreIdTest()
+        {
+            // TODO unit test for the property 'StoreId'
         }
 
         /// <summary>

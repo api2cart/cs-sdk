@@ -34,23 +34,23 @@ namespace Org.OpenAPITools.Api
         /// Get list of orders that were left by customers before completing the order.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseOrderAbandonedList</returns>
-        ModelResponseOrderAbandonedList OrderAbandonedList(string? customerId = default(string?), string? customerEmail = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), bool? skipEmptyEmail = default(bool?), string? storeId = default(string?), string? pageCursor = default(string?), int? count = default(int?), int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ModelResponseOrderAbandonedList OrderAbandonedList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? skipEmptyEmail = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// order.abandoned.list
@@ -59,23 +59,23 @@ namespace Org.OpenAPITools.Api
         /// Get list of orders that were left by customers before completing the order.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseOrderAbandonedList</returns>
-        ApiResponse<ModelResponseOrderAbandonedList> OrderAbandonedListWithHttpInfo(string? customerId = default(string?), string? customerEmail = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), bool? skipEmptyEmail = default(bool?), string? storeId = default(string?), string? pageCursor = default(string?), int? count = default(int?), int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseOrderAbandonedList> OrderAbandonedListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? skipEmptyEmail = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// order.add
         /// </summary>
@@ -106,17 +106,13 @@ namespace Org.OpenAPITools.Api
         /// Count orders in store
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
+        /// <param name="ids">Counts orders specified by ids (optional)</param>
         /// <param name="customerId">Counts orders quantity specified by customer id (optional)</param>
+        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
         /// <param name="customerEmail">Counts orders quantity specified by customer email (optional)</param>
         /// <param name="orderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
-        /// <param name="ids">Counts orders specified by ids (optional)</param>
-        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
         /// <param name="ebayOrderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="financialStatus">Counts orders quantity specified by financial status (optional)</param>
         /// <param name="financialStatusIds">Retrieves orders count specified by financial status ids (optional)</param>
@@ -126,9 +122,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
         /// <param name="tags">Order tags (optional)</param>
         /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OrderCount200Response</returns>
-        OrderCount200Response OrderCount(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), int operationIndex = 0);
+        OrderCount200Response OrderCount(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// order.count
@@ -137,17 +137,13 @@ namespace Org.OpenAPITools.Api
         /// Count orders in store
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
+        /// <param name="ids">Counts orders specified by ids (optional)</param>
         /// <param name="customerId">Counts orders quantity specified by customer id (optional)</param>
+        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
         /// <param name="customerEmail">Counts orders quantity specified by customer email (optional)</param>
         /// <param name="orderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
-        /// <param name="ids">Counts orders specified by ids (optional)</param>
-        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
         /// <param name="ebayOrderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="financialStatus">Counts orders quantity specified by financial status (optional)</param>
         /// <param name="financialStatusIds">Retrieves orders count specified by financial status ids (optional)</param>
@@ -157,9 +153,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
         /// <param name="tags">Order tags (optional)</param>
         /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OrderCount200Response</returns>
-        ApiResponse<OrderCount200Response> OrderCountWithHttpInfo(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), int operationIndex = 0);
+        ApiResponse<OrderCount200Response> OrderCountWithHttpInfo(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0);
         /// <summary>
         /// order.financial_status.list
         /// </summary>
@@ -188,22 +188,22 @@ namespace Org.OpenAPITools.Api
         /// This method is deprecated and won&#39;t be supported in the future. Please use \&quot;order.list\&quot; instead.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
         /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OrderFind200Response</returns>
         [Obsolete]
-        OrderFind200Response OrderFind(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? financialStatus = default(string?), int operationIndex = 0);
+        OrderFind200Response OrderFind(int? start = default(int?), int? count = default(int?), string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// order.find
@@ -212,22 +212,22 @@ namespace Org.OpenAPITools.Api
         /// This method is deprecated and won&#39;t be supported in the future. Please use \&quot;order.list\&quot; instead.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
         /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OrderFind200Response</returns>
         [Obsolete]
-        ApiResponse<OrderFind200Response> OrderFindWithHttpInfo(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? financialStatus = default(string?), int operationIndex = 0);
+        ApiResponse<OrderFind200Response> OrderFindWithHttpInfo(int? start = default(int?), int? count = default(int?), string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// order.fulfillment_status.list
         /// </summary>
@@ -258,17 +258,17 @@ namespace Org.OpenAPITools.Api
         /// Info about a specific order by ID
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
         /// <param name="id">Retrieves order info specified by id (optional)</param>
+        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
+        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39; and order exist in our cache, we will return order.info response from cache (optional, default to false)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OrderInfo200Response</returns>
-        OrderInfo200Response OrderInfo(string? orderId = default(string?), string? id = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
+        OrderInfo200Response OrderInfo(string? id = default(string?), string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// order.info
@@ -277,17 +277,17 @@ namespace Org.OpenAPITools.Api
         /// Info about a specific order by ID
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
         /// <param name="id">Retrieves order info specified by id (optional)</param>
+        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
+        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39; and order exist in our cache, we will return order.info response from cache (optional, default to false)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OrderInfo200Response</returns>
-        ApiResponse<OrderInfo200Response> OrderInfoWithHttpInfo(string? orderId = default(string?), string? id = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
+        ApiResponse<OrderInfo200Response> OrderInfoWithHttpInfo(string? id = default(string?), string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
         /// <summary>
         /// order.list
         /// </summary>
@@ -295,47 +295,47 @@ namespace Org.OpenAPITools.Api
         /// Get list of orders from store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
-        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
-        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve orders via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
+        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
+        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
+        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
+        /// <param name="currencyId">Currency Id (optional)</param>
+        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
+        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
+        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
+        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
+        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
+        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
+        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
+        /// <param name="isDeleted">Filter deleted orders (optional)</param>
+        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
+        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
+        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;order_id&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
-        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
-        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
-        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
-        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
-        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
-        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
-        /// <param name="isDeleted">Filter deleted orders (optional)</param>
-        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39;, we will cache orders for a 15 minutes in order to increase speed and reduce requests throttling for some methods and shoping platforms (for example order.shipment.add) (optional, default to false)</param>
-        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
-        /// <param name="tags">Order tags (optional)</param>
-        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
-        /// <param name="currencyId">Currency Id (optional)</param>
-        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseOrderList</returns>
-        ModelResponseOrderList OrderList(string? customerId = default(string?), string? customerEmail = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? basketId = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), string? sinceId = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), bool? enableCache = default(bool?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? currencyId = default(string?), string? returnStatus = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
+        ModelResponseOrderList OrderList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? sinceId = default(string?), string? storeId = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? basketId = default(string?), string? currencyId = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? returnStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), string? deliveryMethod = default(string?), string? shipNodeType = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? tags = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// order.list
@@ -344,47 +344,47 @@ namespace Org.OpenAPITools.Api
         /// Get list of orders from store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
-        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
-        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve orders via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
+        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
+        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
+        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
+        /// <param name="currencyId">Currency Id (optional)</param>
+        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
+        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
+        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
+        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
+        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
+        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
+        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
+        /// <param name="isDeleted">Filter deleted orders (optional)</param>
+        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
+        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
+        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;order_id&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
-        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
-        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
-        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
-        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
-        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
-        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
-        /// <param name="isDeleted">Filter deleted orders (optional)</param>
-        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39;, we will cache orders for a 15 minutes in order to increase speed and reduce requests throttling for some methods and shoping platforms (for example order.shipment.add) (optional, default to false)</param>
-        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
-        /// <param name="tags">Order tags (optional)</param>
-        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
-        /// <param name="currencyId">Currency Id (optional)</param>
-        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseOrderList</returns>
-        ApiResponse<ModelResponseOrderList> OrderListWithHttpInfo(string? customerId = default(string?), string? customerEmail = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? basketId = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), string? sinceId = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), bool? enableCache = default(bool?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? currencyId = default(string?), string? returnStatus = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
+        ApiResponse<ModelResponseOrderList> OrderListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? sinceId = default(string?), string? storeId = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? basketId = default(string?), string? currencyId = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? returnStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), string? deliveryMethod = default(string?), string? shipNodeType = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? tags = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
         /// <summary>
         /// order.preestimate_shipping.list
         /// </summary>
@@ -587,13 +587,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OrderShipmentInfo200Response</returns>
-        OrderShipmentInfo200Response OrderShipmentInfo(string id, string orderId, int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0);
+        OrderShipmentInfo200Response OrderShipmentInfo(string id, string orderId, int? start = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// order.shipment.info
@@ -605,13 +605,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OrderShipmentInfo200Response</returns>
-        ApiResponse<OrderShipmentInfo200Response> OrderShipmentInfoWithHttpInfo(string id, string orderId, int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<OrderShipmentInfo200Response> OrderShipmentInfoWithHttpInfo(string id, string orderId, int? start = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// order.shipment.list
         /// </summary>
@@ -620,20 +620,20 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseOrderShipmentList</returns>
-        ModelResponseOrderShipmentList OrderShipmentList(string orderId, string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? storeId = default(string?), int operationIndex = 0);
+        ModelResponseOrderShipmentList OrderShipmentList(string orderId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// order.shipment.list
@@ -643,20 +643,20 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseOrderShipmentList</returns>
-        ApiResponse<ModelResponseOrderShipmentList> OrderShipmentListWithHttpInfo(string orderId, string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseOrderShipmentList> OrderShipmentListWithHttpInfo(string orderId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// order.shipment.tracking.add
         /// </summary>
@@ -739,14 +739,14 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderIds">Retrieves order transactions specified by order ids</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,amount,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseOrderTransactionList</returns>
-        ModelResponseOrderTransactionList OrderTransactionList(string orderIds, int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? pageCursor = default(string?), int operationIndex = 0);
+        ModelResponseOrderTransactionList OrderTransactionList(string orderIds, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// order.transaction.list
@@ -757,14 +757,14 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderIds">Retrieves order transactions specified by order ids</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,amount,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseOrderTransactionList</returns>
-        ApiResponse<ModelResponseOrderTransactionList> OrderTransactionListWithHttpInfo(string orderIds, int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? pageCursor = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseOrderTransactionList> OrderTransactionListWithHttpInfo(string orderIds, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// order.update
         /// </summary>
@@ -775,22 +775,22 @@ namespace Org.OpenAPITools.Api
         /// <param name="orderId">Defines the orders specified by order id</param>
         /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="orderStatus">Defines new order&#39;s status (optional)</param>
+        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
         /// <param name="cancellationReason">Defines the cancellation reason when the order will be canceled (optional)</param>
+        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="comment">Specifies order comment (optional)</param>
         /// <param name="adminComment">Specifies admin&#39;s order comment (optional)</param>
         /// <param name="adminPrivateComment">Specifies private admin&#39;s order comment (optional)</param>
+        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
-        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
-        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
+        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountConfigUpdate200Response</returns>
-        AccountConfigUpdate200Response OrderUpdate(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? cancellationReason = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? orderPaymentMethod = default(string?), bool? sendNotifications = default(bool?), string? origin = default(string?), bool? createInvoice = default(bool?), string? invoiceAdminComment = default(string?), int operationIndex = 0);
+        AccountConfigUpdate200Response OrderUpdate(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// order.update
@@ -802,22 +802,22 @@ namespace Org.OpenAPITools.Api
         /// <param name="orderId">Defines the orders specified by order id</param>
         /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="orderStatus">Defines new order&#39;s status (optional)</param>
+        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
         /// <param name="cancellationReason">Defines the cancellation reason when the order will be canceled (optional)</param>
+        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="comment">Specifies order comment (optional)</param>
         /// <param name="adminComment">Specifies admin&#39;s order comment (optional)</param>
         /// <param name="adminPrivateComment">Specifies private admin&#39;s order comment (optional)</param>
+        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
-        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
-        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
+        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountConfigUpdate200Response</returns>
-        ApiResponse<AccountConfigUpdate200Response> OrderUpdateWithHttpInfo(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? cancellationReason = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? orderPaymentMethod = default(string?), bool? sendNotifications = default(bool?), string? origin = default(string?), bool? createInvoice = default(bool?), string? invoiceAdminComment = default(string?), int operationIndex = 0);
+        ApiResponse<AccountConfigUpdate200Response> OrderUpdateWithHttpInfo(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -834,24 +834,24 @@ namespace Org.OpenAPITools.Api
         /// Get list of orders that were left by customers before completing the order.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseOrderAbandonedList</returns>
-        System.Threading.Tasks.Task<ModelResponseOrderAbandonedList> OrderAbandonedListAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), bool? skipEmptyEmail = default(bool?), string? storeId = default(string?), string? pageCursor = default(string?), int? count = default(int?), int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseOrderAbandonedList> OrderAbandonedListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? skipEmptyEmail = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// order.abandoned.list
@@ -860,24 +860,24 @@ namespace Org.OpenAPITools.Api
         /// Get list of orders that were left by customers before completing the order.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseOrderAbandonedList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseOrderAbandonedList>> OrderAbandonedListWithHttpInfoAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), bool? skipEmptyEmail = default(bool?), string? storeId = default(string?), string? pageCursor = default(string?), int? count = default(int?), int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseOrderAbandonedList>> OrderAbandonedListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? skipEmptyEmail = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// order.add
         /// </summary>
@@ -910,17 +910,13 @@ namespace Org.OpenAPITools.Api
         /// Count orders in store
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
+        /// <param name="ids">Counts orders specified by ids (optional)</param>
         /// <param name="customerId">Counts orders quantity specified by customer id (optional)</param>
+        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
         /// <param name="customerEmail">Counts orders quantity specified by customer email (optional)</param>
         /// <param name="orderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
-        /// <param name="ids">Counts orders specified by ids (optional)</param>
-        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
         /// <param name="ebayOrderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="financialStatus">Counts orders quantity specified by financial status (optional)</param>
         /// <param name="financialStatusIds">Retrieves orders count specified by financial status ids (optional)</param>
@@ -930,10 +926,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
         /// <param name="tags">Order tags (optional)</param>
         /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderCount200Response</returns>
-        System.Threading.Tasks.Task<OrderCount200Response> OrderCountAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderCount200Response> OrderCountAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// order.count
@@ -942,17 +942,13 @@ namespace Org.OpenAPITools.Api
         /// Count orders in store
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
+        /// <param name="ids">Counts orders specified by ids (optional)</param>
         /// <param name="customerId">Counts orders quantity specified by customer id (optional)</param>
+        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
         /// <param name="customerEmail">Counts orders quantity specified by customer email (optional)</param>
         /// <param name="orderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
-        /// <param name="ids">Counts orders specified by ids (optional)</param>
-        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
         /// <param name="ebayOrderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="financialStatus">Counts orders quantity specified by financial status (optional)</param>
         /// <param name="financialStatusIds">Retrieves orders count specified by financial status ids (optional)</param>
@@ -962,10 +958,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
         /// <param name="tags">Order tags (optional)</param>
         /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderCount200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderCount200Response>> OrderCountWithHttpInfoAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderCount200Response>> OrderCountWithHttpInfoAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// order.financial_status.list
         /// </summary>
@@ -996,23 +996,23 @@ namespace Org.OpenAPITools.Api
         /// This method is deprecated and won&#39;t be supported in the future. Please use \&quot;order.list\&quot; instead.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
         /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderFind200Response</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<OrderFind200Response> OrderFindAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? financialStatus = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderFind200Response> OrderFindAsync(int? start = default(int?), int? count = default(int?), string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// order.find
@@ -1021,23 +1021,23 @@ namespace Org.OpenAPITools.Api
         /// This method is deprecated and won&#39;t be supported in the future. Please use \&quot;order.list\&quot; instead.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
         /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderFind200Response)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<OrderFind200Response>> OrderFindWithHttpInfoAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? financialStatus = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderFind200Response>> OrderFindWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// order.fulfillment_status.list
         /// </summary>
@@ -1070,18 +1070,18 @@ namespace Org.OpenAPITools.Api
         /// Info about a specific order by ID
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
         /// <param name="id">Retrieves order info specified by id (optional)</param>
+        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
+        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39; and order exist in our cache, we will return order.info response from cache (optional, default to false)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderInfo200Response</returns>
-        System.Threading.Tasks.Task<OrderInfo200Response> OrderInfoAsync(string? orderId = default(string?), string? id = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderInfo200Response> OrderInfoAsync(string? id = default(string?), string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// order.info
@@ -1090,18 +1090,18 @@ namespace Org.OpenAPITools.Api
         /// Info about a specific order by ID
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
         /// <param name="id">Retrieves order info specified by id (optional)</param>
+        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
+        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39; and order exist in our cache, we will return order.info response from cache (optional, default to false)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderInfo200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderInfo200Response>> OrderInfoWithHttpInfoAsync(string? orderId = default(string?), string? id = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderInfo200Response>> OrderInfoWithHttpInfoAsync(string? id = default(string?), string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// order.list
         /// </summary>
@@ -1109,48 +1109,48 @@ namespace Org.OpenAPITools.Api
         /// Get list of orders from store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
-        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
-        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve orders via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
+        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
+        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
+        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
+        /// <param name="currencyId">Currency Id (optional)</param>
+        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
+        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
+        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
+        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
+        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
+        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
+        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
+        /// <param name="isDeleted">Filter deleted orders (optional)</param>
+        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
+        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
+        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;order_id&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
-        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
-        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
-        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
-        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
-        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
-        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
-        /// <param name="isDeleted">Filter deleted orders (optional)</param>
-        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39;, we will cache orders for a 15 minutes in order to increase speed and reduce requests throttling for some methods and shoping platforms (for example order.shipment.add) (optional, default to false)</param>
-        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
-        /// <param name="tags">Order tags (optional)</param>
-        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
-        /// <param name="currencyId">Currency Id (optional)</param>
-        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseOrderList</returns>
-        System.Threading.Tasks.Task<ModelResponseOrderList> OrderListAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? basketId = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), string? sinceId = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), bool? enableCache = default(bool?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? currencyId = default(string?), string? returnStatus = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseOrderList> OrderListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? sinceId = default(string?), string? storeId = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? basketId = default(string?), string? currencyId = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? returnStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), string? deliveryMethod = default(string?), string? shipNodeType = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? tags = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// order.list
@@ -1159,48 +1159,48 @@ namespace Org.OpenAPITools.Api
         /// Get list of orders from store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
-        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
-        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve orders via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
+        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
+        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
+        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
+        /// <param name="currencyId">Currency Id (optional)</param>
+        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
+        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
+        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
+        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
+        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
+        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
+        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
+        /// <param name="isDeleted">Filter deleted orders (optional)</param>
+        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
+        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
+        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;order_id&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
-        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
-        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
-        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
-        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
-        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
-        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
-        /// <param name="isDeleted">Filter deleted orders (optional)</param>
-        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39;, we will cache orders for a 15 minutes in order to increase speed and reduce requests throttling for some methods and shoping platforms (for example order.shipment.add) (optional, default to false)</param>
-        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
-        /// <param name="tags">Order tags (optional)</param>
-        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
-        /// <param name="currencyId">Currency Id (optional)</param>
-        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseOrderList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseOrderList>> OrderListWithHttpInfoAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? basketId = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), string? sinceId = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), bool? enableCache = default(bool?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? currencyId = default(string?), string? returnStatus = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseOrderList>> OrderListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? sinceId = default(string?), string? storeId = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? basketId = default(string?), string? currencyId = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? returnStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), string? deliveryMethod = default(string?), string? shipNodeType = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? tags = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// order.preestimate_shipping.list
         /// </summary>
@@ -1419,14 +1419,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderShipmentInfo200Response</returns>
-        System.Threading.Tasks.Task<OrderShipmentInfo200Response> OrderShipmentInfoAsync(string id, string orderId, int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderShipmentInfo200Response> OrderShipmentInfoAsync(string id, string orderId, int? start = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// order.shipment.info
@@ -1438,14 +1438,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderShipmentInfo200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderShipmentInfo200Response>> OrderShipmentInfoWithHttpInfoAsync(string id, string orderId, int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderShipmentInfo200Response>> OrderShipmentInfoWithHttpInfoAsync(string id, string orderId, int? start = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// order.shipment.list
         /// </summary>
@@ -1454,21 +1454,21 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseOrderShipmentList</returns>
-        System.Threading.Tasks.Task<ModelResponseOrderShipmentList> OrderShipmentListAsync(string orderId, string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseOrderShipmentList> OrderShipmentListAsync(string orderId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// order.shipment.list
@@ -1478,21 +1478,21 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseOrderShipmentList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseOrderShipmentList>> OrderShipmentListWithHttpInfoAsync(string orderId, string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseOrderShipmentList>> OrderShipmentListWithHttpInfoAsync(string orderId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// order.shipment.tracking.add
         /// </summary>
@@ -1581,15 +1581,15 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderIds">Retrieves order transactions specified by order ids</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,amount,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseOrderTransactionList</returns>
-        System.Threading.Tasks.Task<ModelResponseOrderTransactionList> OrderTransactionListAsync(string orderIds, int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? pageCursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseOrderTransactionList> OrderTransactionListAsync(string orderIds, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// order.transaction.list
@@ -1600,15 +1600,15 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderIds">Retrieves order transactions specified by order ids</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,amount,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseOrderTransactionList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseOrderTransactionList>> OrderTransactionListWithHttpInfoAsync(string orderIds, int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? pageCursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseOrderTransactionList>> OrderTransactionListWithHttpInfoAsync(string orderIds, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// order.update
         /// </summary>
@@ -1619,23 +1619,23 @@ namespace Org.OpenAPITools.Api
         /// <param name="orderId">Defines the orders specified by order id</param>
         /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="orderStatus">Defines new order&#39;s status (optional)</param>
+        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
         /// <param name="cancellationReason">Defines the cancellation reason when the order will be canceled (optional)</param>
+        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="comment">Specifies order comment (optional)</param>
         /// <param name="adminComment">Specifies admin&#39;s order comment (optional)</param>
         /// <param name="adminPrivateComment">Specifies private admin&#39;s order comment (optional)</param>
+        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
-        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
-        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
+        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountConfigUpdate200Response</returns>
-        System.Threading.Tasks.Task<AccountConfigUpdate200Response> OrderUpdateAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? cancellationReason = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? orderPaymentMethod = default(string?), bool? sendNotifications = default(bool?), string? origin = default(string?), bool? createInvoice = default(bool?), string? invoiceAdminComment = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountConfigUpdate200Response> OrderUpdateAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// order.update
@@ -1647,23 +1647,23 @@ namespace Org.OpenAPITools.Api
         /// <param name="orderId">Defines the orders specified by order id</param>
         /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="orderStatus">Defines new order&#39;s status (optional)</param>
+        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
         /// <param name="cancellationReason">Defines the cancellation reason when the order will be canceled (optional)</param>
+        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="comment">Specifies order comment (optional)</param>
         /// <param name="adminComment">Specifies admin&#39;s order comment (optional)</param>
         /// <param name="adminPrivateComment">Specifies private admin&#39;s order comment (optional)</param>
+        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
-        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
-        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
+        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountConfigUpdate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountConfigUpdate200Response>> OrderUpdateWithHttpInfoAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? cancellationReason = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? orderPaymentMethod = default(string?), bool? sendNotifications = default(bool?), string? origin = default(string?), bool? createInvoice = default(bool?), string? invoiceAdminComment = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountConfigUpdate200Response>> OrderUpdateWithHttpInfoAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1788,25 +1788,25 @@ namespace Org.OpenAPITools.Api
         /// order.abandoned.list Get list of orders that were left by customers before completing the order.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseOrderAbandonedList</returns>
-        public ModelResponseOrderAbandonedList OrderAbandonedList(string? customerId = default(string?), string? customerEmail = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), bool? skipEmptyEmail = default(bool?), string? storeId = default(string?), string? pageCursor = default(string?), int? count = default(int?), int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public ModelResponseOrderAbandonedList OrderAbandonedList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? skipEmptyEmail = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderAbandonedList> localVarResponse = OrderAbandonedListWithHttpInfo(customerId, customerEmail, createdTo, createdFrom, modifiedTo, modifiedFrom, skipEmptyEmail, storeId, pageCursor, count, start, varParams, responseFields, exclude);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderAbandonedList> localVarResponse = OrderAbandonedListWithHttpInfo(start, count, pageCursor, customerId, customerEmail, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, skipEmptyEmail, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -1814,23 +1814,23 @@ namespace Org.OpenAPITools.Api
         /// order.abandoned.list Get list of orders that were left by customers before completing the order.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseOrderAbandonedList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderAbandonedList> OrderAbandonedListWithHttpInfo(string? customerId = default(string?), string? customerEmail = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), bool? skipEmptyEmail = default(bool?), string? storeId = default(string?), string? pageCursor = default(string?), int? count = default(int?), int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderAbandonedList> OrderAbandonedListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? skipEmptyEmail = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1855,6 +1855,18 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (start != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
+            }
+            if (count != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
             if (customerId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "customer_id", customerId));
@@ -1863,49 +1875,37 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "customer_email", customerEmail));
             }
-            if (createdTo != null)
+            if (storeId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (createdFrom != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
             }
-            if (modifiedTo != null)
+            if (createdTo != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
             }
             if (modifiedFrom != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
             }
+            if (modifiedTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
+            }
             if (skipEmptyEmail != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "skip_empty_email", skipEmptyEmail));
             }
-            if (storeId != null)
+            if (responseFields != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
-            }
-            if (count != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
-            }
-            if (start != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (exclude != null)
             {
@@ -1944,26 +1944,26 @@ namespace Org.OpenAPITools.Api
         /// order.abandoned.list Get list of orders that were left by customers before completing the order.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseOrderAbandonedList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseOrderAbandonedList> OrderAbandonedListAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), bool? skipEmptyEmail = default(bool?), string? storeId = default(string?), string? pageCursor = default(string?), int? count = default(int?), int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseOrderAbandonedList> OrderAbandonedListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? skipEmptyEmail = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderAbandonedList> localVarResponse = await OrderAbandonedListWithHttpInfoAsync(customerId, customerEmail, createdTo, createdFrom, modifiedTo, modifiedFrom, skipEmptyEmail, storeId, pageCursor, count, start, varParams, responseFields, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderAbandonedList> localVarResponse = await OrderAbandonedListWithHttpInfoAsync(start, count, pageCursor, customerId, customerEmail, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, skipEmptyEmail, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1971,24 +1971,24 @@ namespace Org.OpenAPITools.Api
         /// order.abandoned.list Get list of orders that were left by customers before completing the order.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="skipEmptyEmail">Filter empty emails (optional, default to false)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;customer,totals,items&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseOrderAbandonedList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderAbandonedList>> OrderAbandonedListWithHttpInfoAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), bool? skipEmptyEmail = default(bool?), string? storeId = default(string?), string? pageCursor = default(string?), int? count = default(int?), int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderAbandonedList>> OrderAbandonedListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? skipEmptyEmail = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2013,6 +2013,18 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (start != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
+            }
+            if (count != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
             if (customerId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "customer_id", customerId));
@@ -2021,49 +2033,37 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "customer_email", customerEmail));
             }
-            if (createdTo != null)
+            if (storeId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (createdFrom != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
             }
-            if (modifiedTo != null)
+            if (createdTo != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
             }
             if (modifiedFrom != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
             }
+            if (modifiedTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
+            }
             if (skipEmptyEmail != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "skip_empty_email", skipEmptyEmail));
             }
-            if (storeId != null)
+            if (responseFields != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
-            }
-            if (count != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
-            }
-            if (start != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (exclude != null)
             {
@@ -2270,17 +2270,13 @@ namespace Org.OpenAPITools.Api
         /// order.count Count orders in store
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
+        /// <param name="ids">Counts orders specified by ids (optional)</param>
         /// <param name="customerId">Counts orders quantity specified by customer id (optional)</param>
+        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
         /// <param name="customerEmail">Counts orders quantity specified by customer email (optional)</param>
         /// <param name="orderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
-        /// <param name="ids">Counts orders specified by ids (optional)</param>
-        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
         /// <param name="ebayOrderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="financialStatus">Counts orders quantity specified by financial status (optional)</param>
         /// <param name="financialStatusIds">Retrieves orders count specified by financial status ids (optional)</param>
@@ -2290,11 +2286,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
         /// <param name="tags">Order tags (optional)</param>
         /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OrderCount200Response</returns>
-        public OrderCount200Response OrderCount(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), int operationIndex = 0)
+        public OrderCount200Response OrderCount(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderCount200Response> localVarResponse = OrderCountWithHttpInfo(customerId, customerEmail, orderStatus, orderStatusIds, createdTo, createdFrom, modifiedTo, modifiedFrom, storeId, ids, orderIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType);
+            Org.OpenAPITools.Client.ApiResponse<OrderCount200Response> localVarResponse = OrderCountWithHttpInfo(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo);
             return localVarResponse.Data;
         }
 
@@ -2302,17 +2302,13 @@ namespace Org.OpenAPITools.Api
         /// order.count Count orders in store
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
+        /// <param name="ids">Counts orders specified by ids (optional)</param>
         /// <param name="customerId">Counts orders quantity specified by customer id (optional)</param>
+        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
         /// <param name="customerEmail">Counts orders quantity specified by customer email (optional)</param>
         /// <param name="orderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
-        /// <param name="ids">Counts orders specified by ids (optional)</param>
-        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
         /// <param name="ebayOrderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="financialStatus">Counts orders quantity specified by financial status (optional)</param>
         /// <param name="financialStatusIds">Retrieves orders count specified by financial status ids (optional)</param>
@@ -2322,9 +2318,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
         /// <param name="tags">Order tags (optional)</param>
         /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OrderCount200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<OrderCount200Response> OrderCountWithHttpInfo(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<OrderCount200Response> OrderCountWithHttpInfo(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2349,9 +2349,21 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (orderIds != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_ids", orderIds));
+            }
+            if (ids != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
+            }
             if (customerId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "customer_id", customerId));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (customerEmail != null)
             {
@@ -2364,34 +2376,6 @@ namespace Org.OpenAPITools.Api
             if (orderStatusIds != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("multi", "order_status_ids", orderStatusIds));
-            }
-            if (createdTo != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
-            }
-            if (createdFrom != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
-            }
-            if (modifiedTo != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
-            }
-            if (modifiedFrom != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
-            if (ids != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
-            }
-            if (orderIds != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_ids", orderIds));
             }
             if (ebayOrderStatus != null)
             {
@@ -2428,6 +2412,22 @@ namespace Org.OpenAPITools.Api
             if (shipNodeType != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ship_node_type", shipNodeType));
+            }
+            if (createdFrom != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
+            }
+            if (createdTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
+            }
+            if (modifiedFrom != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
+            }
+            if (modifiedTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
             }
 
             localVarRequestOptions.Operation = "OrderApi.OrderCount";
@@ -2462,17 +2462,13 @@ namespace Org.OpenAPITools.Api
         /// order.count Count orders in store
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
+        /// <param name="ids">Counts orders specified by ids (optional)</param>
         /// <param name="customerId">Counts orders quantity specified by customer id (optional)</param>
+        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
         /// <param name="customerEmail">Counts orders quantity specified by customer email (optional)</param>
         /// <param name="orderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
-        /// <param name="ids">Counts orders specified by ids (optional)</param>
-        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
         /// <param name="ebayOrderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="financialStatus">Counts orders quantity specified by financial status (optional)</param>
         /// <param name="financialStatusIds">Retrieves orders count specified by financial status ids (optional)</param>
@@ -2482,12 +2478,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
         /// <param name="tags">Order tags (optional)</param>
         /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderCount200Response</returns>
-        public async System.Threading.Tasks.Task<OrderCount200Response> OrderCountAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderCount200Response> OrderCountAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderCount200Response> localVarResponse = await OrderCountWithHttpInfoAsync(customerId, customerEmail, orderStatus, orderStatusIds, createdTo, createdFrom, modifiedTo, modifiedFrom, storeId, ids, orderIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<OrderCount200Response> localVarResponse = await OrderCountWithHttpInfoAsync(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2495,17 +2495,13 @@ namespace Org.OpenAPITools.Api
         /// order.count Count orders in store
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
+        /// <param name="ids">Counts orders specified by ids (optional)</param>
         /// <param name="customerId">Counts orders quantity specified by customer id (optional)</param>
+        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
         /// <param name="customerEmail">Counts orders quantity specified by customer email (optional)</param>
         /// <param name="orderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Counts orders quantity specified by store id (optional)</param>
-        /// <param name="ids">Counts orders specified by ids (optional)</param>
-        /// <param name="orderIds">Counts orders specified by order ids (optional)</param>
         /// <param name="ebayOrderStatus">Counts orders quantity specified by order status (optional)</param>
         /// <param name="financialStatus">Counts orders quantity specified by financial status (optional)</param>
         /// <param name="financialStatusIds">Retrieves orders count specified by financial status ids (optional)</param>
@@ -2515,10 +2511,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
         /// <param name="tags">Order tags (optional)</param>
         /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderCount200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrderCount200Response>> OrderCountWithHttpInfoAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrderCount200Response>> OrderCountWithHttpInfoAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2543,9 +2543,21 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (orderIds != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_ids", orderIds));
+            }
+            if (ids != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
+            }
             if (customerId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "customer_id", customerId));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (customerEmail != null)
             {
@@ -2558,34 +2570,6 @@ namespace Org.OpenAPITools.Api
             if (orderStatusIds != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("multi", "order_status_ids", orderStatusIds));
-            }
-            if (createdTo != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
-            }
-            if (createdFrom != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
-            }
-            if (modifiedTo != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
-            }
-            if (modifiedFrom != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
-            if (ids != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
-            }
-            if (orderIds != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_ids", orderIds));
             }
             if (ebayOrderStatus != null)
             {
@@ -2622,6 +2606,22 @@ namespace Org.OpenAPITools.Api
             if (shipNodeType != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ship_node_type", shipNodeType));
+            }
+            if (createdFrom != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
+            }
+            if (createdTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
+            }
+            if (modifiedFrom != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
+            }
+            if (modifiedTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
             }
 
             localVarRequestOptions.Operation = "OrderApi.OrderCount";
@@ -2804,24 +2804,24 @@ namespace Org.OpenAPITools.Api
         /// order.find This method is deprecated and won&#39;t be supported in the future. Please use \&quot;order.list\&quot; instead.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
         /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OrderFind200Response</returns>
         [Obsolete]
-        public OrderFind200Response OrderFind(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? financialStatus = default(string?), int operationIndex = 0)
+        public OrderFind200Response OrderFind(int? start = default(int?), int? count = default(int?), string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderFind200Response> localVarResponse = OrderFindWithHttpInfo(customerId, customerEmail, orderStatus, start, count, varParams, exclude, createdTo, createdFrom, modifiedTo, modifiedFrom, financialStatus);
+            Org.OpenAPITools.Client.ApiResponse<OrderFind200Response> localVarResponse = OrderFindWithHttpInfo(start, count, customerId, customerEmail, orderStatus, financialStatus, createdTo, createdFrom, modifiedTo, modifiedFrom, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -2829,22 +2829,22 @@ namespace Org.OpenAPITools.Api
         /// order.find This method is deprecated and won&#39;t be supported in the future. Please use \&quot;order.list\&quot; instead.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
         /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OrderFind200Response</returns>
         [Obsolete]
-        public Org.OpenAPITools.Client.ApiResponse<OrderFind200Response> OrderFindWithHttpInfo(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? financialStatus = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<OrderFind200Response> OrderFindWithHttpInfo(int? start = default(int?), int? count = default(int?), string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2869,6 +2869,14 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (start != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
+            }
+            if (count != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
             if (customerId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "customer_id", customerId));
@@ -2881,21 +2889,9 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_status", orderStatus));
             }
-            if (start != null)
+            if (financialStatus != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
-            }
-            if (count != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
-            }
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (exclude != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "financial_status", financialStatus));
             }
             if (createdTo != null)
             {
@@ -2913,9 +2909,13 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
             }
-            if (financialStatus != null)
+            if (varParams != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "financial_status", financialStatus));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
+            if (exclude != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
             }
 
             localVarRequestOptions.Operation = "OrderApi.OrderFind";
@@ -2950,25 +2950,25 @@ namespace Org.OpenAPITools.Api
         /// order.find This method is deprecated and won&#39;t be supported in the future. Please use \&quot;order.list\&quot; instead.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
         /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderFind200Response</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<OrderFind200Response> OrderFindAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? financialStatus = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderFind200Response> OrderFindAsync(int? start = default(int?), int? count = default(int?), string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderFind200Response> localVarResponse = await OrderFindWithHttpInfoAsync(customerId, customerEmail, orderStatus, start, count, varParams, exclude, createdTo, createdFrom, modifiedTo, modifiedFrom, financialStatus, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<OrderFind200Response> localVarResponse = await OrderFindWithHttpInfoAsync(start, count, customerId, customerEmail, orderStatus, financialStatus, createdTo, createdFrom, modifiedTo, modifiedFrom, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2976,23 +2976,23 @@ namespace Org.OpenAPITools.Api
         /// order.find This method is deprecated and won&#39;t be supported in the future. Please use \&quot;order.list\&quot; instead.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
         /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
         /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderFind200Response)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrderFind200Response>> OrderFindWithHttpInfoAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? financialStatus = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrderFind200Response>> OrderFindWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? customerId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3017,6 +3017,14 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (start != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
+            }
+            if (count != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
             if (customerId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "customer_id", customerId));
@@ -3029,21 +3037,9 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_status", orderStatus));
             }
-            if (start != null)
+            if (financialStatus != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
-            }
-            if (count != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
-            }
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (exclude != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "financial_status", financialStatus));
             }
             if (createdTo != null)
             {
@@ -3061,9 +3057,13 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
             }
-            if (financialStatus != null)
+            if (varParams != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "financial_status", financialStatus));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
+            if (exclude != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
             }
 
             localVarRequestOptions.Operation = "OrderApi.OrderFind";
@@ -3258,19 +3258,19 @@ namespace Org.OpenAPITools.Api
         /// order.info Info about a specific order by ID
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
         /// <param name="id">Retrieves order info specified by id (optional)</param>
+        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
+        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39; and order exist in our cache, we will return order.info response from cache (optional, default to false)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OrderInfo200Response</returns>
-        public OrderInfo200Response OrderInfo(string? orderId = default(string?), string? id = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
+        public OrderInfo200Response OrderInfo(string? id = default(string?), string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderInfo200Response> localVarResponse = OrderInfoWithHttpInfo(orderId, id, varParams, responseFields, exclude, storeId, enableCache, useLatestApiVersion);
+            Org.OpenAPITools.Client.ApiResponse<OrderInfo200Response> localVarResponse = OrderInfoWithHttpInfo(id, orderId, storeId, varParams, responseFields, exclude, enableCache, useLatestApiVersion);
             return localVarResponse.Data;
         }
 
@@ -3278,17 +3278,17 @@ namespace Org.OpenAPITools.Api
         /// order.info Info about a specific order by ID
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
         /// <param name="id">Retrieves order info specified by id (optional)</param>
+        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
+        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39; and order exist in our cache, we will return order.info response from cache (optional, default to false)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OrderInfo200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<OrderInfo200Response> OrderInfoWithHttpInfo(string? orderId = default(string?), string? id = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<OrderInfo200Response> OrderInfoWithHttpInfo(string? id = default(string?), string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3313,13 +3313,17 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (id != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            }
             if (orderId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_id", orderId));
             }
-            if (id != null)
+            if (storeId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (varParams != null)
             {
@@ -3332,10 +3336,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (enableCache != null)
             {
@@ -3378,20 +3378,20 @@ namespace Org.OpenAPITools.Api
         /// order.info Info about a specific order by ID
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
         /// <param name="id">Retrieves order info specified by id (optional)</param>
+        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
+        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39; and order exist in our cache, we will return order.info response from cache (optional, default to false)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderInfo200Response</returns>
-        public async System.Threading.Tasks.Task<OrderInfo200Response> OrderInfoAsync(string? orderId = default(string?), string? id = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderInfo200Response> OrderInfoAsync(string? id = default(string?), string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderInfo200Response> localVarResponse = await OrderInfoWithHttpInfoAsync(orderId, id, varParams, responseFields, exclude, storeId, enableCache, useLatestApiVersion, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<OrderInfo200Response> localVarResponse = await OrderInfoWithHttpInfoAsync(id, orderId, storeId, varParams, responseFields, exclude, enableCache, useLatestApiVersion, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3399,18 +3399,18 @@ namespace Org.OpenAPITools.Api
         /// order.info Info about a specific order by ID
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
         /// <param name="id">Retrieves order info specified by id (optional)</param>
+        /// <param name="orderId">Retrieves order’s info specified by order id (optional)</param>
+        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39; and order exist in our cache, we will return order.info response from cache (optional, default to false)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderInfo200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrderInfo200Response>> OrderInfoWithHttpInfoAsync(string? orderId = default(string?), string? id = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrderInfo200Response>> OrderInfoWithHttpInfoAsync(string? id = default(string?), string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3435,13 +3435,17 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (id != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            }
             if (orderId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_id", orderId));
             }
-            if (id != null)
+            if (storeId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (varParams != null)
             {
@@ -3454,10 +3458,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (enableCache != null)
             {
@@ -3501,49 +3501,49 @@ namespace Org.OpenAPITools.Api
         /// order.list Get list of orders from store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
-        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
-        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve orders via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
+        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
+        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
+        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
+        /// <param name="currencyId">Currency Id (optional)</param>
+        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
+        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
+        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
+        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
+        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
+        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
+        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
+        /// <param name="isDeleted">Filter deleted orders (optional)</param>
+        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
+        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
+        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;order_id&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
-        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
-        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
-        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
-        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
-        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
-        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
-        /// <param name="isDeleted">Filter deleted orders (optional)</param>
-        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39;, we will cache orders for a 15 minutes in order to increase speed and reduce requests throttling for some methods and shoping platforms (for example order.shipment.add) (optional, default to false)</param>
-        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
-        /// <param name="tags">Order tags (optional)</param>
-        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
-        /// <param name="currencyId">Currency Id (optional)</param>
-        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseOrderList</returns>
-        public ModelResponseOrderList OrderList(string? customerId = default(string?), string? customerEmail = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? basketId = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), string? sinceId = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), bool? enableCache = default(bool?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? currencyId = default(string?), string? returnStatus = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
+        public ModelResponseOrderList OrderList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? sinceId = default(string?), string? storeId = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? basketId = default(string?), string? currencyId = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? returnStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), string? deliveryMethod = default(string?), string? shipNodeType = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? tags = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderList> localVarResponse = OrderListWithHttpInfo(customerId, customerEmail, phone, orderStatus, orderStatusIds, start, count, pageCursor, sortBy, sortDirection, varParams, responseFields, exclude, createdTo, createdFrom, modifiedTo, modifiedFrom, storeId, ids, orderIds, ebayOrderStatus, basketId, financialStatus, financialStatusIds, fulfillmentStatus, fulfillmentChannel, shippingMethod, skipOrderIds, sinceId, isDeleted, shippingCountryIso3, enableCache, deliveryMethod, tags, shipNodeType, currencyId, returnStatus, useLatestApiVersion);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderList> localVarResponse = OrderListWithHttpInfo(start, count, pageCursor, ids, orderIds, sinceId, storeId, customerId, customerEmail, basketId, currencyId, phone, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentStatus, returnStatus, fulfillmentChannel, shippingMethod, skipOrderIds, isDeleted, shippingCountryIso3, deliveryMethod, shipNodeType, createdTo, createdFrom, modifiedTo, modifiedFrom, tags, sortBy, sortDirection, varParams, responseFields, exclude, enableCache, useLatestApiVersion);
             return localVarResponse.Data;
         }
 
@@ -3551,47 +3551,47 @@ namespace Org.OpenAPITools.Api
         /// order.list Get list of orders from store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
-        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
-        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve orders via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
+        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
+        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
+        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
+        /// <param name="currencyId">Currency Id (optional)</param>
+        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
+        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
+        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
+        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
+        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
+        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
+        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
+        /// <param name="isDeleted">Filter deleted orders (optional)</param>
+        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
+        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
+        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;order_id&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
-        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
-        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
-        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
-        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
-        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
-        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
-        /// <param name="isDeleted">Filter deleted orders (optional)</param>
-        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39;, we will cache orders for a 15 minutes in order to increase speed and reduce requests throttling for some methods and shoping platforms (for example order.shipment.add) (optional, default to false)</param>
-        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
-        /// <param name="tags">Order tags (optional)</param>
-        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
-        /// <param name="currencyId">Currency Id (optional)</param>
-        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseOrderList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderList> OrderListWithHttpInfo(string? customerId = default(string?), string? customerEmail = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? basketId = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), string? sinceId = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), bool? enableCache = default(bool?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? currencyId = default(string?), string? returnStatus = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderList> OrderListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? sinceId = default(string?), string? storeId = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? basketId = default(string?), string? currencyId = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? returnStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), string? deliveryMethod = default(string?), string? shipNodeType = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? tags = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3616,6 +3616,34 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (start != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
+            }
+            if (count != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
+            if (ids != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
+            }
+            if (orderIds != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_ids", orderIds));
+            }
+            if (sinceId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "since_id", sinceId));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
             if (customerId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "customer_id", customerId));
@@ -3623,6 +3651,14 @@ namespace Org.OpenAPITools.Api
             if (customerEmail != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "customer_email", customerEmail));
+            }
+            if (basketId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "basket_id", basketId));
+            }
+            if (currencyId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "currency_id", currencyId));
             }
             if (phone != null)
             {
@@ -3636,17 +3672,73 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("multi", "order_status_ids", orderStatusIds));
             }
-            if (start != null)
+            if (ebayOrderStatus != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ebay_order_status", ebayOrderStatus));
             }
-            if (count != null)
+            if (financialStatus != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "financial_status", financialStatus));
             }
-            if (pageCursor != null)
+            if (financialStatusIds != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("multi", "financial_status_ids", financialStatusIds));
+            }
+            if (fulfillmentStatus != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fulfillment_status", fulfillmentStatus));
+            }
+            if (returnStatus != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "return_status", returnStatus));
+            }
+            if (fulfillmentChannel != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fulfillment_channel", fulfillmentChannel));
+            }
+            if (shippingMethod != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "shipping_method", shippingMethod));
+            }
+            if (skipOrderIds != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "skip_order_ids", skipOrderIds));
+            }
+            if (isDeleted != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "is_deleted", isDeleted));
+            }
+            if (shippingCountryIso3 != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "shipping_country_iso3", shippingCountryIso3));
+            }
+            if (deliveryMethod != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "delivery_method", deliveryMethod));
+            }
+            if (shipNodeType != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ship_node_type", shipNodeType));
+            }
+            if (createdTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
+            }
+            if (createdFrom != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
+            }
+            if (modifiedTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
+            }
+            if (modifiedFrom != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
+            }
+            if (tags != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "tags", tags));
             }
             if (sortBy != null)
             {
@@ -3668,101 +3760,9 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
             }
-            if (createdTo != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
-            }
-            if (createdFrom != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
-            }
-            if (modifiedTo != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
-            }
-            if (modifiedFrom != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
-            if (ids != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
-            }
-            if (orderIds != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_ids", orderIds));
-            }
-            if (ebayOrderStatus != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ebay_order_status", ebayOrderStatus));
-            }
-            if (basketId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "basket_id", basketId));
-            }
-            if (financialStatus != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "financial_status", financialStatus));
-            }
-            if (financialStatusIds != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("multi", "financial_status_ids", financialStatusIds));
-            }
-            if (fulfillmentStatus != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fulfillment_status", fulfillmentStatus));
-            }
-            if (fulfillmentChannel != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fulfillment_channel", fulfillmentChannel));
-            }
-            if (shippingMethod != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "shipping_method", shippingMethod));
-            }
-            if (skipOrderIds != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "skip_order_ids", skipOrderIds));
-            }
-            if (sinceId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "since_id", sinceId));
-            }
-            if (isDeleted != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "is_deleted", isDeleted));
-            }
-            if (shippingCountryIso3 != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "shipping_country_iso3", shippingCountryIso3));
-            }
             if (enableCache != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "enable_cache", enableCache));
-            }
-            if (deliveryMethod != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "delivery_method", deliveryMethod));
-            }
-            if (tags != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "tags", tags));
-            }
-            if (shipNodeType != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ship_node_type", shipNodeType));
-            }
-            if (currencyId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "currency_id", currencyId));
-            }
-            if (returnStatus != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "return_status", returnStatus));
             }
             if (useLatestApiVersion != null)
             {
@@ -3801,50 +3801,50 @@ namespace Org.OpenAPITools.Api
         /// order.list Get list of orders from store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
-        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
-        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve orders via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
+        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
+        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
+        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
+        /// <param name="currencyId">Currency Id (optional)</param>
+        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
+        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
+        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
+        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
+        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
+        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
+        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
+        /// <param name="isDeleted">Filter deleted orders (optional)</param>
+        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
+        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
+        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;order_id&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
-        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
-        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
-        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
-        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
-        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
-        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
-        /// <param name="isDeleted">Filter deleted orders (optional)</param>
-        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39;, we will cache orders for a 15 minutes in order to increase speed and reduce requests throttling for some methods and shoping platforms (for example order.shipment.add) (optional, default to false)</param>
-        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
-        /// <param name="tags">Order tags (optional)</param>
-        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
-        /// <param name="currencyId">Currency Id (optional)</param>
-        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseOrderList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseOrderList> OrderListAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? basketId = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), string? sinceId = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), bool? enableCache = default(bool?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? currencyId = default(string?), string? returnStatus = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseOrderList> OrderListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? sinceId = default(string?), string? storeId = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? basketId = default(string?), string? currencyId = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? returnStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), string? deliveryMethod = default(string?), string? shipNodeType = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? tags = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderList> localVarResponse = await OrderListWithHttpInfoAsync(customerId, customerEmail, phone, orderStatus, orderStatusIds, start, count, pageCursor, sortBy, sortDirection, varParams, responseFields, exclude, createdTo, createdFrom, modifiedTo, modifiedFrom, storeId, ids, orderIds, ebayOrderStatus, basketId, financialStatus, financialStatusIds, fulfillmentStatus, fulfillmentChannel, shippingMethod, skipOrderIds, sinceId, isDeleted, shippingCountryIso3, enableCache, deliveryMethod, tags, shipNodeType, currencyId, returnStatus, useLatestApiVersion, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderList> localVarResponse = await OrderListWithHttpInfoAsync(start, count, pageCursor, ids, orderIds, sinceId, storeId, customerId, customerEmail, basketId, currencyId, phone, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentStatus, returnStatus, fulfillmentChannel, shippingMethod, skipOrderIds, isDeleted, shippingCountryIso3, deliveryMethod, shipNodeType, createdTo, createdFrom, modifiedTo, modifiedFrom, tags, sortBy, sortDirection, varParams, responseFields, exclude, enableCache, useLatestApiVersion, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3852,48 +3852,48 @@ namespace Org.OpenAPITools.Api
         /// order.list Get list of orders from store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
-        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
-        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
-        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve orders via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
+        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
+        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="customerEmail">Retrieves orders specified by customer email (optional)</param>
+        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
+        /// <param name="currencyId">Currency Id (optional)</param>
+        /// <param name="phone">Filter orders by customer&#39;s phone number (optional)</param>
+        /// <param name="orderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="orderStatusIds">Retrieves orders specified by order statuses (optional)</param>
+        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
+        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
+        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
+        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
+        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
+        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
+        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
+        /// <param name="isDeleted">Filter deleted orders (optional)</param>
+        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
+        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
+        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;order_id&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;order_id,customer,totals,address,items,bundles,status&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
-        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
-        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="ids">Retrieves orders specified by ids (optional)</param>
-        /// <param name="orderIds">Retrieves orders specified by order ids (optional)</param>
-        /// <param name="ebayOrderStatus">Retrieves orders specified by order status (optional)</param>
-        /// <param name="basketId">Retrieves order’s info specified by basket id. (optional)</param>
-        /// <param name="financialStatus">Retrieves orders specified by financial status (optional)</param>
-        /// <param name="financialStatusIds">Retrieves orders specified by financial status ids (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="fulfillmentChannel">Retrieves order with a fulfillment channel (optional)</param>
-        /// <param name="shippingMethod">Retrieve entities according to shipping method (optional)</param>
-        /// <param name="skipOrderIds">Skipped orders by ids (optional)</param>
-        /// <param name="sinceId">Retrieve entities starting from the specified id. (optional)</param>
-        /// <param name="isDeleted">Filter deleted orders (optional)</param>
-        /// <param name="shippingCountryIso3">Retrieve entities according to shipping country (optional)</param>
         /// <param name="enableCache">If the value is &#39;true&#39;, we will cache orders for a 15 minutes in order to increase speed and reduce requests throttling for some methods and shoping platforms (for example order.shipment.add) (optional, default to false)</param>
-        /// <param name="deliveryMethod">Retrieves order with delivery method (optional)</param>
-        /// <param name="tags">Order tags (optional)</param>
-        /// <param name="shipNodeType">Retrieves order with ship node type (optional)</param>
-        /// <param name="currencyId">Currency Id (optional)</param>
-        /// <param name="returnStatus">Retrieves orders specified by return status (optional)</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseOrderList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderList>> OrderListWithHttpInfoAsync(string? customerId = default(string?), string? customerEmail = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? storeId = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? ebayOrderStatus = default(string?), string? basketId = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), string? sinceId = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), bool? enableCache = default(bool?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? currencyId = default(string?), string? returnStatus = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderList>> OrderListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? orderIds = default(string?), string? sinceId = default(string?), string? storeId = default(string?), string? customerId = default(string?), string? customerEmail = default(string?), string? basketId = default(string?), string? currencyId = default(string?), string? phone = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentStatus = default(string?), string? returnStatus = default(string?), string? fulfillmentChannel = default(string?), string? shippingMethod = default(string?), string? skipOrderIds = default(string?), bool? isDeleted = default(bool?), string? shippingCountryIso3 = default(string?), string? deliveryMethod = default(string?), string? shipNodeType = default(string?), string? createdTo = default(string?), string? createdFrom = default(string?), string? modifiedTo = default(string?), string? modifiedFrom = default(string?), string? tags = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3918,6 +3918,34 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (start != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
+            }
+            if (count != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
+            if (ids != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
+            }
+            if (orderIds != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_ids", orderIds));
+            }
+            if (sinceId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "since_id", sinceId));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
             if (customerId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "customer_id", customerId));
@@ -3925,6 +3953,14 @@ namespace Org.OpenAPITools.Api
             if (customerEmail != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "customer_email", customerEmail));
+            }
+            if (basketId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "basket_id", basketId));
+            }
+            if (currencyId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "currency_id", currencyId));
             }
             if (phone != null)
             {
@@ -3938,17 +3974,73 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("multi", "order_status_ids", orderStatusIds));
             }
-            if (start != null)
+            if (ebayOrderStatus != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ebay_order_status", ebayOrderStatus));
             }
-            if (count != null)
+            if (financialStatus != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "financial_status", financialStatus));
             }
-            if (pageCursor != null)
+            if (financialStatusIds != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("multi", "financial_status_ids", financialStatusIds));
+            }
+            if (fulfillmentStatus != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fulfillment_status", fulfillmentStatus));
+            }
+            if (returnStatus != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "return_status", returnStatus));
+            }
+            if (fulfillmentChannel != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fulfillment_channel", fulfillmentChannel));
+            }
+            if (shippingMethod != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "shipping_method", shippingMethod));
+            }
+            if (skipOrderIds != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "skip_order_ids", skipOrderIds));
+            }
+            if (isDeleted != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "is_deleted", isDeleted));
+            }
+            if (shippingCountryIso3 != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "shipping_country_iso3", shippingCountryIso3));
+            }
+            if (deliveryMethod != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "delivery_method", deliveryMethod));
+            }
+            if (shipNodeType != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ship_node_type", shipNodeType));
+            }
+            if (createdTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
+            }
+            if (createdFrom != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
+            }
+            if (modifiedTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
+            }
+            if (modifiedFrom != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
+            }
+            if (tags != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "tags", tags));
             }
             if (sortBy != null)
             {
@@ -3970,101 +4062,9 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
             }
-            if (createdTo != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
-            }
-            if (createdFrom != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
-            }
-            if (modifiedTo != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
-            }
-            if (modifiedFrom != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
-            if (ids != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
-            }
-            if (orderIds != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_ids", orderIds));
-            }
-            if (ebayOrderStatus != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ebay_order_status", ebayOrderStatus));
-            }
-            if (basketId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "basket_id", basketId));
-            }
-            if (financialStatus != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "financial_status", financialStatus));
-            }
-            if (financialStatusIds != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("multi", "financial_status_ids", financialStatusIds));
-            }
-            if (fulfillmentStatus != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fulfillment_status", fulfillmentStatus));
-            }
-            if (fulfillmentChannel != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fulfillment_channel", fulfillmentChannel));
-            }
-            if (shippingMethod != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "shipping_method", shippingMethod));
-            }
-            if (skipOrderIds != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "skip_order_ids", skipOrderIds));
-            }
-            if (sinceId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "since_id", sinceId));
-            }
-            if (isDeleted != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "is_deleted", isDeleted));
-            }
-            if (shippingCountryIso3 != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "shipping_country_iso3", shippingCountryIso3));
-            }
             if (enableCache != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "enable_cache", enableCache));
-            }
-            if (deliveryMethod != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "delivery_method", deliveryMethod));
-            }
-            if (tags != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "tags", tags));
-            }
-            if (shipNodeType != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ship_node_type", shipNodeType));
-            }
-            if (currencyId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "currency_id", currencyId));
-            }
-            if (returnStatus != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "return_status", returnStatus));
             }
             if (useLatestApiVersion != null)
             {
@@ -5499,15 +5499,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OrderShipmentInfo200Response</returns>
-        public OrderShipmentInfo200Response OrderShipmentInfo(string id, string orderId, int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0)
+        public OrderShipmentInfo200Response OrderShipmentInfo(string id, string orderId, int? start = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderShipmentInfo200Response> localVarResponse = OrderShipmentInfoWithHttpInfo(id, orderId, start, varParams, responseFields, exclude, storeId);
+            Org.OpenAPITools.Client.ApiResponse<OrderShipmentInfo200Response> localVarResponse = OrderShipmentInfoWithHttpInfo(id, orderId, start, storeId, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -5518,13 +5518,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OrderShipmentInfo200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<OrderShipmentInfo200Response> OrderShipmentInfoWithHttpInfo(string id, string orderId, int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<OrderShipmentInfo200Response> OrderShipmentInfoWithHttpInfo(string id, string orderId, int? start = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -5561,27 +5561,27 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_id", orderId));
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
             }
-            if (varParams != null)
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_id", orderId));
+            if (storeId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (responseFields != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
 
             localVarRequestOptions.Operation = "OrderApi.OrderShipmentInfo";
@@ -5619,16 +5619,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderShipmentInfo200Response</returns>
-        public async System.Threading.Tasks.Task<OrderShipmentInfo200Response> OrderShipmentInfoAsync(string id, string orderId, int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderShipmentInfo200Response> OrderShipmentInfoAsync(string id, string orderId, int? start = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderShipmentInfo200Response> localVarResponse = await OrderShipmentInfoWithHttpInfoAsync(id, orderId, start, varParams, responseFields, exclude, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<OrderShipmentInfo200Response> localVarResponse = await OrderShipmentInfoWithHttpInfoAsync(id, orderId, start, storeId, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5639,14 +5639,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderShipmentInfo200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrderShipmentInfo200Response>> OrderShipmentInfoWithHttpInfoAsync(string id, string orderId, int? start = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrderShipmentInfo200Response>> OrderShipmentInfoWithHttpInfoAsync(string id, string orderId, int? start = default(int?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -5683,27 +5683,27 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_id", orderId));
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
             }
-            if (varParams != null)
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_id", orderId));
+            if (storeId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (responseFields != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
 
             localVarRequestOptions.Operation = "OrderApi.OrderShipmentInfo";
@@ -5740,22 +5740,22 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseOrderShipmentList</returns>
-        public ModelResponseOrderShipmentList OrderShipmentList(string orderId, string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? storeId = default(string?), int operationIndex = 0)
+        public ModelResponseOrderShipmentList OrderShipmentList(string orderId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderShipmentList> localVarResponse = OrderShipmentListWithHttpInfo(orderId, pageCursor, start, count, varParams, responseFields, exclude, createdFrom, createdTo, modifiedFrom, modifiedTo, storeId);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderShipmentList> localVarResponse = OrderShipmentListWithHttpInfo(orderId, start, count, pageCursor, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -5764,20 +5764,20 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseOrderShipmentList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderShipmentList> OrderShipmentListWithHttpInfo(string orderId, string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderShipmentList> OrderShipmentListWithHttpInfo(string orderId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
@@ -5808,11 +5808,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_id", orderId));
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -5821,17 +5816,14 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
-            if (varParams != null)
+            if (pageCursor != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
             }
-            if (responseFields != null)
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_id", orderId));
+            if (storeId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
-            }
-            if (exclude != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (createdFrom != null)
             {
@@ -5849,9 +5841,17 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
             }
-            if (storeId != null)
+            if (responseFields != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
+            if (exclude != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
             }
 
             localVarRequestOptions.Operation = "OrderApi.OrderShipmentList";
@@ -5887,23 +5887,23 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseOrderShipmentList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseOrderShipmentList> OrderShipmentListAsync(string orderId, string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseOrderShipmentList> OrderShipmentListAsync(string orderId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderShipmentList> localVarResponse = await OrderShipmentListWithHttpInfoAsync(orderId, pageCursor, start, count, varParams, responseFields, exclude, createdFrom, createdTo, modifiedFrom, modifiedTo, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderShipmentList> localVarResponse = await OrderShipmentListWithHttpInfoAsync(orderId, start, count, pageCursor, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5912,21 +5912,21 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,items,tracking_numbers&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseOrderShipmentList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderShipmentList>> OrderShipmentListWithHttpInfoAsync(string orderId, string? pageCursor = default(string?), int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderShipmentList>> OrderShipmentListWithHttpInfoAsync(string orderId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
@@ -5957,11 +5957,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_id", orderId));
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -5970,17 +5965,14 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
-            if (varParams != null)
+            if (pageCursor != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
             }
-            if (responseFields != null)
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_id", orderId));
+            if (storeId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
-            }
-            if (exclude != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (createdFrom != null)
             {
@@ -5998,9 +5990,17 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
             }
-            if (storeId != null)
+            if (responseFields != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
+            if (exclude != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
             }
 
             localVarRequestOptions.Operation = "OrderApi.OrderShipmentList";
@@ -6555,16 +6555,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderIds">Retrieves order transactions specified by order ids</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,amount,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseOrderTransactionList</returns>
-        public ModelResponseOrderTransactionList OrderTransactionList(string orderIds, int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? pageCursor = default(string?), int operationIndex = 0)
+        public ModelResponseOrderTransactionList OrderTransactionList(string orderIds, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderTransactionList> localVarResponse = OrderTransactionListWithHttpInfo(orderIds, count, storeId, varParams, responseFields, exclude, pageCursor);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderTransactionList> localVarResponse = OrderTransactionListWithHttpInfo(orderIds, count, pageCursor, storeId, varParams, responseFields, exclude);
             return localVarResponse.Data;
         }
 
@@ -6574,14 +6574,14 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderIds">Retrieves order transactions specified by order ids</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,amount,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseOrderTransactionList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderTransactionList> OrderTransactionListWithHttpInfo(string orderIds, int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? pageCursor = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderTransactionList> OrderTransactionListWithHttpInfo(string orderIds, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'orderIds' is set
             if (orderIds == null)
@@ -6616,6 +6616,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_ids", orderIds));
             if (storeId != null)
             {
@@ -6632,10 +6636,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
             }
 
             localVarRequestOptions.Operation = "OrderApi.OrderTransactionList";
@@ -6672,17 +6672,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderIds">Retrieves order transactions specified by order ids</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,amount,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseOrderTransactionList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseOrderTransactionList> OrderTransactionListAsync(string orderIds, int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? pageCursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseOrderTransactionList> OrderTransactionListAsync(string orderIds, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderTransactionList> localVarResponse = await OrderTransactionListWithHttpInfoAsync(orderIds, count, storeId, varParams, responseFields, exclude, pageCursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderTransactionList> localVarResponse = await OrderTransactionListWithHttpInfoAsync(orderIds, count, pageCursor, storeId, varParams, responseFields, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6692,15 +6692,15 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderIds">Retrieves order transactions specified by order ids</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_id,amount,description&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseOrderTransactionList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderTransactionList>> OrderTransactionListWithHttpInfoAsync(string orderIds, int? count = default(int?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? pageCursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderTransactionList>> OrderTransactionListWithHttpInfoAsync(string orderIds, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'orderIds' is set
             if (orderIds == null)
@@ -6735,6 +6735,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_ids", orderIds));
             if (storeId != null)
             {
@@ -6751,10 +6755,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (pageCursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
             }
 
             localVarRequestOptions.Operation = "OrderApi.OrderTransactionList";
@@ -6793,24 +6793,24 @@ namespace Org.OpenAPITools.Api
         /// <param name="orderId">Defines the orders specified by order id</param>
         /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="orderStatus">Defines new order&#39;s status (optional)</param>
+        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
         /// <param name="cancellationReason">Defines the cancellation reason when the order will be canceled (optional)</param>
+        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="comment">Specifies order comment (optional)</param>
         /// <param name="adminComment">Specifies admin&#39;s order comment (optional)</param>
         /// <param name="adminPrivateComment">Specifies private admin&#39;s order comment (optional)</param>
+        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
-        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
-        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
+        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountConfigUpdate200Response</returns>
-        public AccountConfigUpdate200Response OrderUpdate(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? cancellationReason = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? orderPaymentMethod = default(string?), bool? sendNotifications = default(bool?), string? origin = default(string?), bool? createInvoice = default(bool?), string? invoiceAdminComment = default(string?), int operationIndex = 0)
+        public AccountConfigUpdate200Response OrderUpdate(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = OrderUpdateWithHttpInfo(orderId, storeId, orderStatus, cancellationReason, comment, adminComment, adminPrivateComment, dateModified, dateFinished, financialStatus, fulfillmentStatus, orderPaymentMethod, sendNotifications, origin, createInvoice, invoiceAdminComment);
+            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = OrderUpdateWithHttpInfo(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin);
             return localVarResponse.Data;
         }
 
@@ -6821,22 +6821,22 @@ namespace Org.OpenAPITools.Api
         /// <param name="orderId">Defines the orders specified by order id</param>
         /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="orderStatus">Defines new order&#39;s status (optional)</param>
+        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
         /// <param name="cancellationReason">Defines the cancellation reason when the order will be canceled (optional)</param>
+        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="comment">Specifies order comment (optional)</param>
         /// <param name="adminComment">Specifies admin&#39;s order comment (optional)</param>
         /// <param name="adminPrivateComment">Specifies private admin&#39;s order comment (optional)</param>
+        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
-        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
-        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
+        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountConfigUpdate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> OrderUpdateWithHttpInfo(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? cancellationReason = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? orderPaymentMethod = default(string?), bool? sendNotifications = default(bool?), string? origin = default(string?), bool? createInvoice = default(bool?), string? invoiceAdminComment = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> OrderUpdateWithHttpInfo(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
@@ -6876,9 +6876,21 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_status", orderStatus));
             }
+            if (financialStatus != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "financial_status", financialStatus));
+            }
+            if (fulfillmentStatus != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fulfillment_status", fulfillmentStatus));
+            }
             if (cancellationReason != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "cancellation_reason", cancellationReason));
+            }
+            if (orderPaymentMethod != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_payment_method", orderPaymentMethod));
             }
             if (comment != null)
             {
@@ -6892,6 +6904,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "admin_private_comment", adminPrivateComment));
             }
+            if (invoiceAdminComment != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "invoice_admin_comment", invoiceAdminComment));
+            }
             if (dateModified != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "date_modified", dateModified));
@@ -6900,33 +6916,17 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "date_finished", dateFinished));
             }
-            if (financialStatus != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "financial_status", financialStatus));
-            }
-            if (fulfillmentStatus != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fulfillment_status", fulfillmentStatus));
-            }
-            if (orderPaymentMethod != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_payment_method", orderPaymentMethod));
-            }
             if (sendNotifications != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "send_notifications", sendNotifications));
-            }
-            if (origin != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "origin", origin));
             }
             if (createInvoice != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "create_invoice", createInvoice));
             }
-            if (invoiceAdminComment != null)
+            if (origin != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "invoice_admin_comment", invoiceAdminComment));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "origin", origin));
             }
 
             localVarRequestOptions.Operation = "OrderApi.OrderUpdate";
@@ -6964,25 +6964,25 @@ namespace Org.OpenAPITools.Api
         /// <param name="orderId">Defines the orders specified by order id</param>
         /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="orderStatus">Defines new order&#39;s status (optional)</param>
+        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
         /// <param name="cancellationReason">Defines the cancellation reason when the order will be canceled (optional)</param>
+        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="comment">Specifies order comment (optional)</param>
         /// <param name="adminComment">Specifies admin&#39;s order comment (optional)</param>
         /// <param name="adminPrivateComment">Specifies private admin&#39;s order comment (optional)</param>
+        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
-        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
-        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
+        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountConfigUpdate200Response</returns>
-        public async System.Threading.Tasks.Task<AccountConfigUpdate200Response> OrderUpdateAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? cancellationReason = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? orderPaymentMethod = default(string?), bool? sendNotifications = default(bool?), string? origin = default(string?), bool? createInvoice = default(bool?), string? invoiceAdminComment = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountConfigUpdate200Response> OrderUpdateAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = await OrderUpdateWithHttpInfoAsync(orderId, storeId, orderStatus, cancellationReason, comment, adminComment, adminPrivateComment, dateModified, dateFinished, financialStatus, fulfillmentStatus, orderPaymentMethod, sendNotifications, origin, createInvoice, invoiceAdminComment, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = await OrderUpdateWithHttpInfoAsync(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6993,23 +6993,23 @@ namespace Org.OpenAPITools.Api
         /// <param name="orderId">Defines the orders specified by order id</param>
         /// <param name="storeId">Defines store id where the order should be found (optional)</param>
         /// <param name="orderStatus">Defines new order&#39;s status (optional)</param>
+        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
         /// <param name="cancellationReason">Defines the cancellation reason when the order will be canceled (optional)</param>
+        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="comment">Specifies order comment (optional)</param>
         /// <param name="adminComment">Specifies admin&#39;s order comment (optional)</param>
         /// <param name="adminPrivateComment">Specifies private admin&#39;s order comment (optional)</param>
+        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="financialStatus">Update order financial status to specified (optional)</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status (optional)</param>
-        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; (optional)</param>
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
-        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
-        /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
+        /// <param name="origin">The source of the order (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountConfigUpdate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response>> OrderUpdateWithHttpInfoAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? cancellationReason = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? orderPaymentMethod = default(string?), bool? sendNotifications = default(bool?), string? origin = default(string?), bool? createInvoice = default(bool?), string? invoiceAdminComment = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response>> OrderUpdateWithHttpInfoAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
@@ -7049,9 +7049,21 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_status", orderStatus));
             }
+            if (financialStatus != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "financial_status", financialStatus));
+            }
+            if (fulfillmentStatus != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fulfillment_status", fulfillmentStatus));
+            }
             if (cancellationReason != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "cancellation_reason", cancellationReason));
+            }
+            if (orderPaymentMethod != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_payment_method", orderPaymentMethod));
             }
             if (comment != null)
             {
@@ -7065,6 +7077,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "admin_private_comment", adminPrivateComment));
             }
+            if (invoiceAdminComment != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "invoice_admin_comment", invoiceAdminComment));
+            }
             if (dateModified != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "date_modified", dateModified));
@@ -7073,33 +7089,17 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "date_finished", dateFinished));
             }
-            if (financialStatus != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "financial_status", financialStatus));
-            }
-            if (fulfillmentStatus != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fulfillment_status", fulfillmentStatus));
-            }
-            if (orderPaymentMethod != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_payment_method", orderPaymentMethod));
-            }
             if (sendNotifications != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "send_notifications", sendNotifications));
-            }
-            if (origin != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "origin", origin));
             }
             if (createInvoice != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "create_invoice", createInvoice));
             }
-            if (invoiceAdminComment != null)
+            if (origin != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "invoice_admin_comment", invoiceAdminComment));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "origin", origin));
             }
 
             localVarRequestOptions.Operation = "OrderApi.OrderUpdate";

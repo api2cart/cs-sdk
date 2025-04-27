@@ -35,9 +35,28 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProductVariantUpdate" /> class.
         /// </summary>
-        /// <param name="storeId">Defines store id where the variant should be found.</param>
         /// <param name="id">Defines variant update specified by variant id.</param>
         /// <param name="productId">Defines product&#39;s id where the variant has to be updated.</param>
+        /// <param name="storeId">Defines store id where the variant should be found.</param>
+        /// <param name="langId">Language id.</param>
+        /// <param name="options">Defines variant&#39;s options list.</param>
+        /// <param name="name">Defines variant&#39;s name that has to be updated.</param>
+        /// <param name="description">Specifies variant&#39;s description.</param>
+        /// <param name="shortDescription">Defines short description.</param>
+        /// <param name="model">Specifies variant&#39;s model that has to be added.</param>
+        /// <param name="sku">Defines new product&#39;s variant sku.</param>
+        /// <param name="visible">Set visibility status.</param>
+        /// <param name="status">Defines product variant&#39;s status.</param>
+        /// <param name="backorderStatus">Set backorder status.</param>
+        /// <param name="availableForSale">Specifies the set of visible/invisible product&#39;s variants for sale (default to true).</param>
+        /// <param name="avail">Defines category&#39;s visibility status (default to true).</param>
+        /// <param name="isDefault">Defines as a default variant.</param>
+        /// <param name="isFreeShipping">Specifies variant&#39;s free shipping flag that has to be added.</param>
+        /// <param name="taxable">Specifies whether a tax is charged (default to true).</param>
+        /// <param name="taxClassId">Defines tax classes where entity has to be added.</param>
+        /// <param name="isVirtual">Defines whether the product is virtual (default to false).</param>
+        /// <param name="manageStock">Defines inventory tracking for product variant.</param>
+        /// <param name="inStock">Set stock status.</param>
         /// <param name="warehouseId">This parameter is used for selecting a warehouse where you need to set/modify a product quantity..</param>
         /// <param name="reserveQuantity">This parameter allows to reserve/unreserve product variants quantity..</param>
         /// <param name="quantity">Defines new products&#39; variants quantity.</param>
@@ -51,48 +70,48 @@ namespace Org.OpenAPITools.Model
         /// <param name="fixedCostShippingPrice">Specifies fixed cost shipping price.</param>
         /// <param name="spriceCreate">Defines the date of special price creation.</param>
         /// <param name="spriceExpire">Defines the term of special price offer duration.</param>
-        /// <param name="manageStock">Defines inventory tracking for product variant.</param>
-        /// <param name="inStock">Set stock status.</param>
-        /// <param name="name">Defines variant&#39;s name that has to be updated.</param>
-        /// <param name="description">Specifies variant&#39;s description.</param>
-        /// <param name="sku">Defines new product&#39;s variant sku.</param>
-        /// <param name="metaTitle">Defines unique meta title for each entity.</param>
-        /// <param name="metaDescription">Defines unique meta description of a entity.</param>
-        /// <param name="metaKeywords">Defines unique meta keywords for each entity.</param>
-        /// <param name="shortDescription">Defines short description.</param>
-        /// <param name="visible">Set visibility status.</param>
-        /// <param name="status">Defines product variant&#39;s status.</param>
-        /// <param name="backorderStatus">Set backorder status.</param>
         /// <param name="weight">Weight (default to 0M).</param>
         /// <param name="barcode">A barcode is a unique code composed of numbers used as a product identifier..</param>
-        /// <param name="reindex">Is reindex required (default to true).</param>
-        /// <param name="taxable">Specifies whether a tax is charged (default to true).</param>
-        /// <param name="options">Defines variant&#39;s options list.</param>
-        /// <param name="harmonizedSystemCode">Harmonized System Code. An HSC is a 6-digit identifier that allows participating countries to classify traded goods on a common basis for customs purposes.</param>
-        /// <param name="countryOfOrigin">The country where the inventory item was made.</param>
         /// <param name="width">Defines product&#39;s width.</param>
         /// <param name="weightUnit">Weight Unit.</param>
         /// <param name="height">Defines product&#39;s height.</param>
         /// <param name="length">Defines product&#39;s length.</param>
         /// <param name="gtin">Global Trade Item Number. An GTIN is an identifier for trade items..</param>
-        /// <param name="clearCache">Is cache clear required (default to true).</param>
-        /// <param name="langId">Language id.</param>
-        /// <param name="model">Specifies variant&#39;s model that has to be added.</param>
-        /// <param name="availableForSale">Specifies the set of visible/invisible product&#39;s variants for sale (default to true).</param>
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products..</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used..</param>
         /// <param name="ean">European Article Number. An EAN is a unique 8 or 13-digit identifier that many industries (such as book publishers) use to identify products..</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books..</param>
-        /// <param name="avail">Defines category&#39;s visibility status (default to true).</param>
-        /// <param name="isDefault">Defines as a default variant.</param>
-        /// <param name="isFreeShipping">Specifies variant&#39;s free shipping flag that has to be added.</param>
-        /// <param name="taxClassId">Defines tax classes where entity has to be added.</param>
-        /// <param name="isVirtual">Defines whether the product is virtual (default to false).</param>
-        public ProductVariantUpdate(string storeId = default(string), string id = default(string), string productId = default(string), string warehouseId = default(string), decimal reserveQuantity = default(decimal), decimal quantity = default(decimal), decimal increaseQuantity = 0M, decimal reduceQuantity = 0M, decimal price = default(decimal), decimal specialPrice = default(decimal), decimal retailPrice = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), bool manageStock = default(bool), bool inStock = default(bool), string name = default(string), string description = default(string), string sku = default(string), string metaTitle = default(string), string metaDescription = default(string), string metaKeywords = default(string), string shortDescription = default(string), string visible = default(string), string status = default(string), string backorderStatus = default(string), decimal weight = 0M, string barcode = default(string), bool reindex = true, bool taxable = true, List<ProductVariantUpdateOptionsInner> options = default(List<ProductVariantUpdateOptionsInner>), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), decimal width = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), string gtin = default(string), bool clearCache = true, string langId = default(string), string model = default(string), bool availableForSale = true, string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), bool avail = true, bool isDefault = default(bool), bool isFreeShipping = default(bool), string taxClassId = default(string), bool isVirtual = false)
+        /// <param name="harmonizedSystemCode">Harmonized System Code. An HSC is a 6-digit identifier that allows participating countries to classify traded goods on a common basis for customs purposes.</param>
+        /// <param name="countryOfOrigin">The country where the inventory item was made.</param>
+        /// <param name="metaTitle">Defines unique meta title for each entity.</param>
+        /// <param name="metaDescription">Defines unique meta description of a entity.</param>
+        /// <param name="metaKeywords">Defines unique meta keywords for each entity.</param>
+        /// <param name="reindex">Is reindex required (default to true).</param>
+        /// <param name="clearCache">Is cache clear required (default to true).</param>
+        public ProductVariantUpdate(string id = default(string), string productId = default(string), string storeId = default(string), string langId = default(string), List<ProductVariantUpdateOptionsInner> options = default(List<ProductVariantUpdateOptionsInner>), string name = default(string), string description = default(string), string shortDescription = default(string), string model = default(string), string sku = default(string), string visible = default(string), string status = default(string), string backorderStatus = default(string), bool availableForSale = true, bool avail = true, bool isDefault = default(bool), bool isFreeShipping = default(bool), bool taxable = true, string taxClassId = default(string), bool isVirtual = false, bool manageStock = default(bool), bool inStock = default(bool), string warehouseId = default(string), decimal reserveQuantity = default(decimal), decimal quantity = default(decimal), decimal increaseQuantity = 0M, decimal reduceQuantity = 0M, decimal price = default(decimal), decimal specialPrice = default(decimal), decimal retailPrice = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal weight = 0M, string barcode = default(string), decimal width = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), string metaTitle = default(string), string metaDescription = default(string), string metaKeywords = default(string), bool reindex = true, bool clearCache = true)
         {
-            this.StoreId = storeId;
             this.Id = id;
             this.ProductId = productId;
+            this.StoreId = storeId;
+            this.LangId = langId;
+            this.Options = options;
+            this.Name = name;
+            this.Description = description;
+            this.ShortDescription = shortDescription;
+            this.Model = model;
+            this.Sku = sku;
+            this.Visible = visible;
+            this.Status = status;
+            this.BackorderStatus = backorderStatus;
+            this.AvailableForSale = availableForSale;
+            this.Avail = avail;
+            this.IsDefault = isDefault;
+            this.IsFreeShipping = isFreeShipping;
+            this.Taxable = taxable;
+            this.TaxClassId = taxClassId;
+            this.IsVirtual = isVirtual;
+            this.ManageStock = manageStock;
+            this.InStock = inStock;
             this.WarehouseId = warehouseId;
             this.ReserveQuantity = reserveQuantity;
             this.Quantity = quantity;
@@ -106,54 +125,25 @@ namespace Org.OpenAPITools.Model
             this.FixedCostShippingPrice = fixedCostShippingPrice;
             this.SpriceCreate = spriceCreate;
             this.SpriceExpire = spriceExpire;
-            this.ManageStock = manageStock;
-            this.InStock = inStock;
-            this.Name = name;
-            this.Description = description;
-            this.Sku = sku;
-            this.MetaTitle = metaTitle;
-            this.MetaDescription = metaDescription;
-            this.MetaKeywords = metaKeywords;
-            this.ShortDescription = shortDescription;
-            this.Visible = visible;
-            this.Status = status;
-            this.BackorderStatus = backorderStatus;
             this.Weight = weight;
             this.Barcode = barcode;
-            this.Reindex = reindex;
-            this.Taxable = taxable;
-            this.Options = options;
-            this.HarmonizedSystemCode = harmonizedSystemCode;
-            this.CountryOfOrigin = countryOfOrigin;
             this.Width = width;
             this.WeightUnit = weightUnit;
             this.Height = height;
             this.Length = length;
             this.Gtin = gtin;
-            this.ClearCache = clearCache;
-            this.LangId = langId;
-            this.Model = model;
-            this.AvailableForSale = availableForSale;
             this.Upc = upc;
             this.Mpn = mpn;
             this.Ean = ean;
             this.Isbn = isbn;
-            this.Avail = avail;
-            this.IsDefault = isDefault;
-            this.IsFreeShipping = isFreeShipping;
-            this.TaxClassId = taxClassId;
-            this.IsVirtual = isVirtual;
+            this.HarmonizedSystemCode = harmonizedSystemCode;
+            this.CountryOfOrigin = countryOfOrigin;
+            this.MetaTitle = metaTitle;
+            this.MetaDescription = metaDescription;
+            this.MetaKeywords = metaKeywords;
+            this.Reindex = reindex;
+            this.ClearCache = clearCache;
         }
-
-        /// <summary>
-        /// Defines store id where the variant should be found
-        /// </summary>
-        /// <value>Defines store id where the variant should be found</value>
-        /*
-        <example>1</example>
-        */
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
-        public string StoreId { get; set; }
 
         /// <summary>
         /// Defines variant update specified by variant id
@@ -174,6 +164,203 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "product_id", EmitDefaultValue = false)]
         public string ProductId { get; set; }
+
+        /// <summary>
+        /// Defines store id where the variant should be found
+        /// </summary>
+        /// <value>Defines store id where the variant should be found</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        public string StoreId { get; set; }
+
+        /// <summary>
+        /// Language id
+        /// </summary>
+        /// <value>Language id</value>
+        /*
+        <example>3</example>
+        */
+        [DataMember(Name = "lang_id", EmitDefaultValue = false)]
+        public string LangId { get; set; }
+
+        /// <summary>
+        /// Defines variant&#39;s options list
+        /// </summary>
+        /// <value>Defines variant&#39;s options list</value>
+        [DataMember(Name = "options", EmitDefaultValue = false)]
+        public List<ProductVariantUpdateOptionsInner> Options { get; set; }
+
+        /// <summary>
+        /// Defines variant&#39;s name that has to be updated
+        /// </summary>
+        /// <value>Defines variant&#39;s name that has to be updated</value>
+        /*
+        <example>Bag Green L</example>
+        */
+        [DataMember(Name = "name", EmitDefaultValue = false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Specifies variant&#39;s description
+        /// </summary>
+        /// <value>Specifies variant&#39;s description</value>
+        /*
+        <example>Product variant</example>
+        */
+        [DataMember(Name = "description", EmitDefaultValue = false)]
+        public string Description { get; set; }
+
+        /// <summary>
+        /// Defines short description
+        /// </summary>
+        /// <value>Defines short description</value>
+        /*
+        <example>Short description. This is very short description</example>
+        */
+        [DataMember(Name = "short_description", EmitDefaultValue = false)]
+        public string ShortDescription { get; set; }
+
+        /// <summary>
+        /// Specifies variant&#39;s model that has to be added
+        /// </summary>
+        /// <value>Specifies variant&#39;s model that has to be added</value>
+        /*
+        <example>bag_01</example>
+        */
+        [DataMember(Name = "model", EmitDefaultValue = false)]
+        public string Model { get; set; }
+
+        /// <summary>
+        /// Defines new product&#39;s variant sku
+        /// </summary>
+        /// <value>Defines new product&#39;s variant sku</value>
+        /*
+        <example>bag_01</example>
+        */
+        [DataMember(Name = "sku", EmitDefaultValue = false)]
+        public string Sku { get; set; }
+
+        /// <summary>
+        /// Set visibility status
+        /// </summary>
+        /// <value>Set visibility status</value>
+        /*
+        <example>catalog</example>
+        */
+        [DataMember(Name = "visible", EmitDefaultValue = false)]
+        public string Visible { get; set; }
+
+        /// <summary>
+        /// Defines product variant&#39;s status
+        /// </summary>
+        /// <value>Defines product variant&#39;s status</value>
+        /*
+        <example>disabled</example>
+        */
+        [DataMember(Name = "status", EmitDefaultValue = false)]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// Set backorder status
+        /// </summary>
+        /// <value>Set backorder status</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "backorder_status", EmitDefaultValue = false)]
+        public string BackorderStatus { get; set; }
+
+        /// <summary>
+        /// Specifies the set of visible/invisible product&#39;s variants for sale
+        /// </summary>
+        /// <value>Specifies the set of visible/invisible product&#39;s variants for sale</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "available_for_sale", EmitDefaultValue = true)]
+        public bool AvailableForSale { get; set; }
+
+        /// <summary>
+        /// Defines category&#39;s visibility status
+        /// </summary>
+        /// <value>Defines category&#39;s visibility status</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "avail", EmitDefaultValue = true)]
+        public bool Avail { get; set; }
+
+        /// <summary>
+        /// Defines as a default variant
+        /// </summary>
+        /// <value>Defines as a default variant</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "is_default", EmitDefaultValue = true)]
+        public bool IsDefault { get; set; }
+
+        /// <summary>
+        /// Specifies variant&#39;s free shipping flag that has to be added
+        /// </summary>
+        /// <value>Specifies variant&#39;s free shipping flag that has to be added</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "is_free_shipping", EmitDefaultValue = true)]
+        public bool IsFreeShipping { get; set; }
+
+        /// <summary>
+        /// Specifies whether a tax is charged
+        /// </summary>
+        /// <value>Specifies whether a tax is charged</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "taxable", EmitDefaultValue = true)]
+        public bool Taxable { get; set; }
+
+        /// <summary>
+        /// Defines tax classes where entity has to be added
+        /// </summary>
+        /// <value>Defines tax classes where entity has to be added</value>
+        /*
+        <example>9</example>
+        */
+        [DataMember(Name = "tax_class_id", EmitDefaultValue = false)]
+        public string TaxClassId { get; set; }
+
+        /// <summary>
+        /// Defines whether the product is virtual
+        /// </summary>
+        /// <value>Defines whether the product is virtual</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "is_virtual", EmitDefaultValue = true)]
+        public bool IsVirtual { get; set; }
+
+        /// <summary>
+        /// Defines inventory tracking for product variant
+        /// </summary>
+        /// <value>Defines inventory tracking for product variant</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "manage_stock", EmitDefaultValue = true)]
+        public bool ManageStock { get; set; }
+
+        /// <summary>
+        /// Set stock status
+        /// </summary>
+        /// <value>Set stock status</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "in_stock", EmitDefaultValue = true)]
+        public bool InStock { get; set; }
 
         /// <summary>
         /// This parameter is used for selecting a warehouse where you need to set/modify a product quantity.
@@ -306,126 +493,6 @@ namespace Org.OpenAPITools.Model
         public string SpriceExpire { get; set; }
 
         /// <summary>
-        /// Defines inventory tracking for product variant
-        /// </summary>
-        /// <value>Defines inventory tracking for product variant</value>
-        /*
-        <example>false</example>
-        */
-        [DataMember(Name = "manage_stock", EmitDefaultValue = true)]
-        public bool ManageStock { get; set; }
-
-        /// <summary>
-        /// Set stock status
-        /// </summary>
-        /// <value>Set stock status</value>
-        /*
-        <example>true</example>
-        */
-        [DataMember(Name = "in_stock", EmitDefaultValue = true)]
-        public bool InStock { get; set; }
-
-        /// <summary>
-        /// Defines variant&#39;s name that has to be updated
-        /// </summary>
-        /// <value>Defines variant&#39;s name that has to be updated</value>
-        /*
-        <example>Bag Green L</example>
-        */
-        [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Specifies variant&#39;s description
-        /// </summary>
-        /// <value>Specifies variant&#39;s description</value>
-        /*
-        <example>Product variant</example>
-        */
-        [DataMember(Name = "description", EmitDefaultValue = false)]
-        public string Description { get; set; }
-
-        /// <summary>
-        /// Defines new product&#39;s variant sku
-        /// </summary>
-        /// <value>Defines new product&#39;s variant sku</value>
-        /*
-        <example>bag_01</example>
-        */
-        [DataMember(Name = "sku", EmitDefaultValue = false)]
-        public string Sku { get; set; }
-
-        /// <summary>
-        /// Defines unique meta title for each entity
-        /// </summary>
-        /// <value>Defines unique meta title for each entity</value>
-        /*
-        <example>category,test</example>
-        */
-        [DataMember(Name = "meta_title", EmitDefaultValue = false)]
-        public string MetaTitle { get; set; }
-
-        /// <summary>
-        /// Defines unique meta description of a entity
-        /// </summary>
-        /// <value>Defines unique meta description of a entity</value>
-        /*
-        <example>category,test</example>
-        */
-        [DataMember(Name = "meta_description", EmitDefaultValue = false)]
-        public string MetaDescription { get; set; }
-
-        /// <summary>
-        /// Defines unique meta keywords for each entity
-        /// </summary>
-        /// <value>Defines unique meta keywords for each entity</value>
-        /*
-        <example>category,test</example>
-        */
-        [DataMember(Name = "meta_keywords", EmitDefaultValue = false)]
-        public string MetaKeywords { get; set; }
-
-        /// <summary>
-        /// Defines short description
-        /// </summary>
-        /// <value>Defines short description</value>
-        /*
-        <example>Short description. This is very short description</example>
-        */
-        [DataMember(Name = "short_description", EmitDefaultValue = false)]
-        public string ShortDescription { get; set; }
-
-        /// <summary>
-        /// Set visibility status
-        /// </summary>
-        /// <value>Set visibility status</value>
-        /*
-        <example>catalog</example>
-        */
-        [DataMember(Name = "visible", EmitDefaultValue = false)]
-        public string Visible { get; set; }
-
-        /// <summary>
-        /// Defines product variant&#39;s status
-        /// </summary>
-        /// <value>Defines product variant&#39;s status</value>
-        /*
-        <example>disabled</example>
-        */
-        [DataMember(Name = "status", EmitDefaultValue = false)]
-        public string Status { get; set; }
-
-        /// <summary>
-        /// Set backorder status
-        /// </summary>
-        /// <value>Set backorder status</value>
-        /*
-        <example>true</example>
-        */
-        [DataMember(Name = "backorder_status", EmitDefaultValue = false)]
-        public string BackorderStatus { get; set; }
-
-        /// <summary>
         /// Weight
         /// </summary>
         /// <value>Weight</value>
@@ -444,53 +511,6 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "barcode", EmitDefaultValue = false)]
         public string Barcode { get; set; }
-
-        /// <summary>
-        /// Is reindex required
-        /// </summary>
-        /// <value>Is reindex required</value>
-        /*
-        <example>false</example>
-        */
-        [DataMember(Name = "reindex", EmitDefaultValue = true)]
-        public bool Reindex { get; set; }
-
-        /// <summary>
-        /// Specifies whether a tax is charged
-        /// </summary>
-        /// <value>Specifies whether a tax is charged</value>
-        /*
-        <example>false</example>
-        */
-        [DataMember(Name = "taxable", EmitDefaultValue = true)]
-        public bool Taxable { get; set; }
-
-        /// <summary>
-        /// Defines variant&#39;s options list
-        /// </summary>
-        /// <value>Defines variant&#39;s options list</value>
-        [DataMember(Name = "options", EmitDefaultValue = false)]
-        public List<ProductVariantUpdateOptionsInner> Options { get; set; }
-
-        /// <summary>
-        /// Harmonized System Code. An HSC is a 6-digit identifier that allows participating countries to classify traded goods on a common basis for customs purposes
-        /// </summary>
-        /// <value>Harmonized System Code. An HSC is a 6-digit identifier that allows participating countries to classify traded goods on a common basis for customs purposes</value>
-        /*
-        <example>123456</example>
-        */
-        [DataMember(Name = "harmonized_system_code", EmitDefaultValue = false)]
-        public string HarmonizedSystemCode { get; set; }
-
-        /// <summary>
-        /// The country where the inventory item was made
-        /// </summary>
-        /// <value>The country where the inventory item was made</value>
-        /*
-        <example>123456</example>
-        */
-        [DataMember(Name = "country_of_origin", EmitDefaultValue = false)]
-        public string CountryOfOrigin { get; set; }
 
         /// <summary>
         /// Defines product&#39;s width
@@ -543,46 +563,6 @@ namespace Org.OpenAPITools.Model
         public string Gtin { get; set; }
 
         /// <summary>
-        /// Is cache clear required
-        /// </summary>
-        /// <value>Is cache clear required</value>
-        /*
-        <example>false</example>
-        */
-        [DataMember(Name = "clear_cache", EmitDefaultValue = true)]
-        public bool ClearCache { get; set; }
-
-        /// <summary>
-        /// Language id
-        /// </summary>
-        /// <value>Language id</value>
-        /*
-        <example>3</example>
-        */
-        [DataMember(Name = "lang_id", EmitDefaultValue = false)]
-        public string LangId { get; set; }
-
-        /// <summary>
-        /// Specifies variant&#39;s model that has to be added
-        /// </summary>
-        /// <value>Specifies variant&#39;s model that has to be added</value>
-        /*
-        <example>bag_01</example>
-        */
-        [DataMember(Name = "model", EmitDefaultValue = false)]
-        public string Model { get; set; }
-
-        /// <summary>
-        /// Specifies the set of visible/invisible product&#39;s variants for sale
-        /// </summary>
-        /// <value>Specifies the set of visible/invisible product&#39;s variants for sale</value>
-        /*
-        <example>false</example>
-        */
-        [DataMember(Name = "available_for_sale", EmitDefaultValue = true)]
-        public bool AvailableForSale { get; set; }
-
-        /// <summary>
         /// Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products.
         /// </summary>
         /// <value>Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products.</value>
@@ -623,54 +603,74 @@ namespace Org.OpenAPITools.Model
         public string Isbn { get; set; }
 
         /// <summary>
-        /// Defines category&#39;s visibility status
+        /// Harmonized System Code. An HSC is a 6-digit identifier that allows participating countries to classify traded goods on a common basis for customs purposes
         /// </summary>
-        /// <value>Defines category&#39;s visibility status</value>
+        /// <value>Harmonized System Code. An HSC is a 6-digit identifier that allows participating countries to classify traded goods on a common basis for customs purposes</value>
+        /*
+        <example>123456</example>
+        */
+        [DataMember(Name = "harmonized_system_code", EmitDefaultValue = false)]
+        public string HarmonizedSystemCode { get; set; }
+
+        /// <summary>
+        /// The country where the inventory item was made
+        /// </summary>
+        /// <value>The country where the inventory item was made</value>
+        /*
+        <example>123456</example>
+        */
+        [DataMember(Name = "country_of_origin", EmitDefaultValue = false)]
+        public string CountryOfOrigin { get; set; }
+
+        /// <summary>
+        /// Defines unique meta title for each entity
+        /// </summary>
+        /// <value>Defines unique meta title for each entity</value>
+        /*
+        <example>category,test</example>
+        */
+        [DataMember(Name = "meta_title", EmitDefaultValue = false)]
+        public string MetaTitle { get; set; }
+
+        /// <summary>
+        /// Defines unique meta description of a entity
+        /// </summary>
+        /// <value>Defines unique meta description of a entity</value>
+        /*
+        <example>category,test</example>
+        */
+        [DataMember(Name = "meta_description", EmitDefaultValue = false)]
+        public string MetaDescription { get; set; }
+
+        /// <summary>
+        /// Defines unique meta keywords for each entity
+        /// </summary>
+        /// <value>Defines unique meta keywords for each entity</value>
+        /*
+        <example>category,test</example>
+        */
+        [DataMember(Name = "meta_keywords", EmitDefaultValue = false)]
+        public string MetaKeywords { get; set; }
+
+        /// <summary>
+        /// Is reindex required
+        /// </summary>
+        /// <value>Is reindex required</value>
         /*
         <example>false</example>
         */
-        [DataMember(Name = "avail", EmitDefaultValue = true)]
-        public bool Avail { get; set; }
+        [DataMember(Name = "reindex", EmitDefaultValue = true)]
+        public bool Reindex { get; set; }
 
         /// <summary>
-        /// Defines as a default variant
+        /// Is cache clear required
         /// </summary>
-        /// <value>Defines as a default variant</value>
-        /*
-        <example>true</example>
-        */
-        [DataMember(Name = "is_default", EmitDefaultValue = true)]
-        public bool IsDefault { get; set; }
-
-        /// <summary>
-        /// Specifies variant&#39;s free shipping flag that has to be added
-        /// </summary>
-        /// <value>Specifies variant&#39;s free shipping flag that has to be added</value>
-        /*
-        <example>true</example>
-        */
-        [DataMember(Name = "is_free_shipping", EmitDefaultValue = true)]
-        public bool IsFreeShipping { get; set; }
-
-        /// <summary>
-        /// Defines tax classes where entity has to be added
-        /// </summary>
-        /// <value>Defines tax classes where entity has to be added</value>
-        /*
-        <example>9</example>
-        */
-        [DataMember(Name = "tax_class_id", EmitDefaultValue = false)]
-        public string TaxClassId { get; set; }
-
-        /// <summary>
-        /// Defines whether the product is virtual
-        /// </summary>
-        /// <value>Defines whether the product is virtual</value>
+        /// <value>Is cache clear required</value>
         /*
         <example>false</example>
         */
-        [DataMember(Name = "is_virtual", EmitDefaultValue = true)]
-        public bool IsVirtual { get; set; }
+        [DataMember(Name = "clear_cache", EmitDefaultValue = true)]
+        public bool ClearCache { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -680,9 +680,28 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ProductVariantUpdate {\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ProductId: ").Append(ProductId).Append("\n");
+            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  LangId: ").Append(LangId).Append("\n");
+            sb.Append("  Options: ").Append(Options).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  ShortDescription: ").Append(ShortDescription).Append("\n");
+            sb.Append("  Model: ").Append(Model).Append("\n");
+            sb.Append("  Sku: ").Append(Sku).Append("\n");
+            sb.Append("  Visible: ").Append(Visible).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  BackorderStatus: ").Append(BackorderStatus).Append("\n");
+            sb.Append("  AvailableForSale: ").Append(AvailableForSale).Append("\n");
+            sb.Append("  Avail: ").Append(Avail).Append("\n");
+            sb.Append("  IsDefault: ").Append(IsDefault).Append("\n");
+            sb.Append("  IsFreeShipping: ").Append(IsFreeShipping).Append("\n");
+            sb.Append("  Taxable: ").Append(Taxable).Append("\n");
+            sb.Append("  TaxClassId: ").Append(TaxClassId).Append("\n");
+            sb.Append("  IsVirtual: ").Append(IsVirtual).Append("\n");
+            sb.Append("  ManageStock: ").Append(ManageStock).Append("\n");
+            sb.Append("  InStock: ").Append(InStock).Append("\n");
             sb.Append("  WarehouseId: ").Append(WarehouseId).Append("\n");
             sb.Append("  ReserveQuantity: ").Append(ReserveQuantity).Append("\n");
             sb.Append("  Quantity: ").Append(Quantity).Append("\n");
@@ -696,43 +715,24 @@ namespace Org.OpenAPITools.Model
             sb.Append("  FixedCostShippingPrice: ").Append(FixedCostShippingPrice).Append("\n");
             sb.Append("  SpriceCreate: ").Append(SpriceCreate).Append("\n");
             sb.Append("  SpriceExpire: ").Append(SpriceExpire).Append("\n");
-            sb.Append("  ManageStock: ").Append(ManageStock).Append("\n");
-            sb.Append("  InStock: ").Append(InStock).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  Sku: ").Append(Sku).Append("\n");
-            sb.Append("  MetaTitle: ").Append(MetaTitle).Append("\n");
-            sb.Append("  MetaDescription: ").Append(MetaDescription).Append("\n");
-            sb.Append("  MetaKeywords: ").Append(MetaKeywords).Append("\n");
-            sb.Append("  ShortDescription: ").Append(ShortDescription).Append("\n");
-            sb.Append("  Visible: ").Append(Visible).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  BackorderStatus: ").Append(BackorderStatus).Append("\n");
             sb.Append("  Weight: ").Append(Weight).Append("\n");
             sb.Append("  Barcode: ").Append(Barcode).Append("\n");
-            sb.Append("  Reindex: ").Append(Reindex).Append("\n");
-            sb.Append("  Taxable: ").Append(Taxable).Append("\n");
-            sb.Append("  Options: ").Append(Options).Append("\n");
-            sb.Append("  HarmonizedSystemCode: ").Append(HarmonizedSystemCode).Append("\n");
-            sb.Append("  CountryOfOrigin: ").Append(CountryOfOrigin).Append("\n");
             sb.Append("  Width: ").Append(Width).Append("\n");
             sb.Append("  WeightUnit: ").Append(WeightUnit).Append("\n");
             sb.Append("  Height: ").Append(Height).Append("\n");
             sb.Append("  Length: ").Append(Length).Append("\n");
             sb.Append("  Gtin: ").Append(Gtin).Append("\n");
-            sb.Append("  ClearCache: ").Append(ClearCache).Append("\n");
-            sb.Append("  LangId: ").Append(LangId).Append("\n");
-            sb.Append("  Model: ").Append(Model).Append("\n");
-            sb.Append("  AvailableForSale: ").Append(AvailableForSale).Append("\n");
             sb.Append("  Upc: ").Append(Upc).Append("\n");
             sb.Append("  Mpn: ").Append(Mpn).Append("\n");
             sb.Append("  Ean: ").Append(Ean).Append("\n");
             sb.Append("  Isbn: ").Append(Isbn).Append("\n");
-            sb.Append("  Avail: ").Append(Avail).Append("\n");
-            sb.Append("  IsDefault: ").Append(IsDefault).Append("\n");
-            sb.Append("  IsFreeShipping: ").Append(IsFreeShipping).Append("\n");
-            sb.Append("  TaxClassId: ").Append(TaxClassId).Append("\n");
-            sb.Append("  IsVirtual: ").Append(IsVirtual).Append("\n");
+            sb.Append("  HarmonizedSystemCode: ").Append(HarmonizedSystemCode).Append("\n");
+            sb.Append("  CountryOfOrigin: ").Append(CountryOfOrigin).Append("\n");
+            sb.Append("  MetaTitle: ").Append(MetaTitle).Append("\n");
+            sb.Append("  MetaDescription: ").Append(MetaDescription).Append("\n");
+            sb.Append("  MetaKeywords: ").Append(MetaKeywords).Append("\n");
+            sb.Append("  Reindex: ").Append(Reindex).Append("\n");
+            sb.Append("  ClearCache: ").Append(ClearCache).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

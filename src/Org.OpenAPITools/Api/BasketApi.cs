@@ -36,12 +36,12 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketInfo200Response</returns>
-        BasketInfo200Response BasketInfo(string id, string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        BasketInfo200Response BasketInfo(string id, string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// basket.info
@@ -52,12 +52,12 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketInfo200Response</returns>
-        ApiResponse<BasketInfo200Response> BasketInfoWithHttpInfo(string id, string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        ApiResponse<BasketInfo200Response> BasketInfoWithHttpInfo(string id, string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// basket.item.add
         /// </summary>
@@ -146,12 +146,12 @@ namespace Org.OpenAPITools.Api
         /// Retrieve a list of live shipping rate services.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketLiveShippingServiceList200Response</returns>
-        BasketLiveShippingServiceList200Response BasketLiveShippingServiceList(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0);
+        BasketLiveShippingServiceList200Response BasketLiveShippingServiceList(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// basket.live_shipping_service.list
@@ -160,12 +160,12 @@ namespace Org.OpenAPITools.Api
         /// Retrieve a list of live shipping rate services.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketLiveShippingServiceList200Response</returns>
-        ApiResponse<BasketLiveShippingServiceList200Response> BasketLiveShippingServiceListWithHttpInfo(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0);
+        ApiResponse<BasketLiveShippingServiceList200Response> BasketLiveShippingServiceListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -184,13 +184,13 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketInfo200Response</returns>
-        System.Threading.Tasks.Task<BasketInfo200Response> BasketInfoAsync(string id, string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BasketInfo200Response> BasketInfoAsync(string id, string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// basket.info
@@ -201,13 +201,13 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketInfo200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BasketInfo200Response>> BasketInfoWithHttpInfoAsync(string id, string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BasketInfo200Response>> BasketInfoWithHttpInfoAsync(string id, string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// basket.item.add
         /// </summary>
@@ -302,13 +302,13 @@ namespace Org.OpenAPITools.Api
         /// Retrieve a list of live shipping rate services.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketLiveShippingServiceList200Response</returns>
-        System.Threading.Tasks.Task<BasketLiveShippingServiceList200Response> BasketLiveShippingServiceListAsync(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BasketLiveShippingServiceList200Response> BasketLiveShippingServiceListAsync(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// basket.live_shipping_service.list
@@ -317,13 +317,13 @@ namespace Org.OpenAPITools.Api
         /// Retrieve a list of live shipping rate services.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketLiveShippingServiceList200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BasketLiveShippingServiceList200Response>> BasketLiveShippingServiceListWithHttpInfoAsync(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BasketLiveShippingServiceList200Response>> BasketLiveShippingServiceListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -450,14 +450,14 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketInfo200Response</returns>
-        public BasketInfo200Response BasketInfo(string id, string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        public BasketInfo200Response BasketInfo(string id, string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketInfo200Response> localVarResponse = BasketInfoWithHttpInfo(id, storeId, varParams, exclude, responseFields);
+            Org.OpenAPITools.Client.ApiResponse<BasketInfo200Response> localVarResponse = BasketInfoWithHttpInfo(id, storeId, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -467,12 +467,12 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketInfo200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<BasketInfo200Response> BasketInfoWithHttpInfo(string id, string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<BasketInfo200Response> BasketInfoWithHttpInfo(string id, string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -508,6 +508,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
@@ -515,10 +519,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
 
             localVarRequestOptions.Operation = "BasketApi.BasketInfo";
@@ -555,15 +555,15 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketInfo200Response</returns>
-        public async System.Threading.Tasks.Task<BasketInfo200Response> BasketInfoAsync(string id, string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BasketInfo200Response> BasketInfoAsync(string id, string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketInfo200Response> localVarResponse = await BasketInfoWithHttpInfoAsync(id, storeId, varParams, exclude, responseFields, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<BasketInfo200Response> localVarResponse = await BasketInfoWithHttpInfoAsync(id, storeId, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -573,13 +573,13 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketInfo200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketInfo200Response>> BasketInfoWithHttpInfoAsync(string id, string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketInfo200Response>> BasketInfoWithHttpInfoAsync(string id, string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -615,6 +615,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
@@ -622,10 +626,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
 
             localVarRequestOptions.Operation = "BasketApi.BasketInfo";
@@ -937,12 +937,12 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "callback", callback));
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "callback", callback));
 
             localVarRequestOptions.Operation = "BasketApi.BasketLiveShippingServiceCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1035,12 +1035,12 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "callback", callback));
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "callback", callback));
 
             localVarRequestOptions.Operation = "BasketApi.BasketLiveShippingServiceCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1228,14 +1228,14 @@ namespace Org.OpenAPITools.Api
         /// basket.live_shipping_service.list Retrieve a list of live shipping rate services.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketLiveShippingServiceList200Response</returns>
-        public BasketLiveShippingServiceList200Response BasketLiveShippingServiceList(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0)
+        public BasketLiveShippingServiceList200Response BasketLiveShippingServiceList(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceList200Response> localVarResponse = BasketLiveShippingServiceListWithHttpInfo(storeId, start, count);
+            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceList200Response> localVarResponse = BasketLiveShippingServiceListWithHttpInfo(start, count, storeId);
             return localVarResponse.Data;
         }
 
@@ -1243,12 +1243,12 @@ namespace Org.OpenAPITools.Api
         /// basket.live_shipping_service.list Retrieve a list of live shipping rate services.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketLiveShippingServiceList200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceList200Response> BasketLiveShippingServiceListWithHttpInfo(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceList200Response> BasketLiveShippingServiceListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1273,10 +1273,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -1284,6 +1280,10 @@ namespace Org.OpenAPITools.Api
             if (count != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
 
             localVarRequestOptions.Operation = "BasketApi.BasketLiveShippingServiceList";
@@ -1318,15 +1318,15 @@ namespace Org.OpenAPITools.Api
         /// basket.live_shipping_service.list Retrieve a list of live shipping rate services.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketLiveShippingServiceList200Response</returns>
-        public async System.Threading.Tasks.Task<BasketLiveShippingServiceList200Response> BasketLiveShippingServiceListAsync(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BasketLiveShippingServiceList200Response> BasketLiveShippingServiceListAsync(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceList200Response> localVarResponse = await BasketLiveShippingServiceListWithHttpInfoAsync(storeId, start, count, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceList200Response> localVarResponse = await BasketLiveShippingServiceListWithHttpInfoAsync(start, count, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1334,13 +1334,13 @@ namespace Org.OpenAPITools.Api
         /// basket.live_shipping_service.list Retrieve a list of live shipping rate services.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketLiveShippingServiceList200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceList200Response>> BasketLiveShippingServiceListWithHttpInfoAsync(string? storeId = default(string?), int? start = default(int?), int? count = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceList200Response>> BasketLiveShippingServiceListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1365,10 +1365,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -1376,6 +1372,10 @@ namespace Org.OpenAPITools.Api
             if (count != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
 
             localVarRequestOptions.Operation = "BasketApi.BasketLiveShippingServiceList";

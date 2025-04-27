@@ -91,10 +91,10 @@ namespace Org.OpenAPITools.Test.Api
             //string? pageCursor = null;
             //string? storeId = null;
             //string? langId = null;
+            //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //string? responseFields = null;
-            //var response = instance.CustomerAttributeList(customerId, count, pageCursor, storeId, langId, varParams, exclude, responseFields);
+            //var response = instance.CustomerAttributeList(customerId, count, pageCursor, storeId, langId, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseCustomerAttributeList>(response);
         }
 
@@ -105,19 +105,19 @@ namespace Org.OpenAPITools.Test.Api
         public void CustomerCountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string? ids = null;
+            //string? sinceId = null;
+            //string? customerListId = null;
             //string? groupId = null;
+            //string? storeId = null;
+            //bool? avail = null;
+            //string? findValue = null;
+            //string? findWhere = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
-            //string? storeId = null;
-            //string? customerListId = null;
-            //bool? avail = null;
-            //string? findValue = null;
-            //string? findWhere = null;
-            //string? ids = null;
-            //string? sinceId = null;
-            //var response = instance.CustomerCount(groupId, createdFrom, createdTo, modifiedFrom, modifiedTo, storeId, customerListId, avail, findValue, findWhere, ids, sinceId);
+            //var response = instance.CustomerCount(ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
             //Assert.IsType<CustomerCount200Response>(response);
         }
 
@@ -169,17 +169,17 @@ namespace Org.OpenAPITools.Test.Api
         public void CustomerGroupListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //bool? disableCache = null;
-            //string? pageCursor = null;
             //int? start = null;
             //int? count = null;
+            //string? pageCursor = null;
+            //string? groupIds = null;
             //string? storeId = null;
             //string? langId = null;
-            //string? groupIds = null;
+            //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //string? responseFields = null;
-            //var response = instance.CustomerGroupList(disableCache, pageCursor, start, count, storeId, langId, groupIds, varParams, exclude, responseFields);
+            //bool? disableCache = null;
+            //var response = instance.CustomerGroupList(start, count, pageCursor, groupIds, storeId, langId, responseFields, varParams, exclude, disableCache);
             //Assert.IsType<ModelResponseCustomerGroupList>(response);
         }
 
@@ -191,11 +191,11 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
-            //string? varParams = null;
-            //string? responseFields = null;
-            //string? exclude = null;
             //string? storeId = null;
-            //var response = instance.CustomerInfo(id, varParams, responseFields, exclude, storeId);
+            //string? responseFields = null;
+            //string? varParams = null;
+            //string? exclude = null;
+            //var response = instance.CustomerInfo(id, storeId, responseFields, varParams, exclude);
             //Assert.IsType<CustomerInfo200Response>(response);
         }
 
@@ -206,27 +206,27 @@ namespace Org.OpenAPITools.Test.Api
         public void CustomerListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? pageCursor = null;
             //int? start = null;
             //int? count = null;
+            //string? pageCursor = null;
+            //string? ids = null;
+            //string? sinceId = null;
+            //string? customerListId = null;
+            //string? groupId = null;
+            //string? storeId = null;
+            //bool? avail = null;
+            //string? findValue = null;
+            //string? findWhere = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
-            //string? varParams = null;
-            //string? responseFields = null;
-            //string? exclude = null;
-            //string? groupId = null;
-            //string? storeId = null;
-            //string? customerListId = null;
-            //bool? avail = null;
-            //string? findValue = null;
-            //string? findWhere = null;
             //string? sortBy = null;
             //string? sortDirection = null;
-            //string? ids = null;
-            //string? sinceId = null;
-            //var response = instance.CustomerList(pageCursor, start, count, createdFrom, createdTo, modifiedFrom, modifiedTo, varParams, responseFields, exclude, groupId, storeId, customerListId, avail, findValue, findWhere, sortBy, sortDirection, ids, sinceId);
+            //string? responseFields = null;
+            //string? varParams = null;
+            //string? exclude = null;
+            //var response = instance.CustomerList(start, count, pageCursor, ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, sortBy, sortDirection, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseCustomerList>(response);
         }
 
@@ -250,13 +250,13 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string customerId = null;
-            //string? id = null;
-            //string? storeId = null;
             //int? start = null;
             //int? count = null;
             //string? pageCursor = null;
+            //string? id = null;
+            //string? storeId = null;
             //string? responseFields = null;
-            //var response = instance.CustomerWishlistList(customerId, id, storeId, start, count, pageCursor, responseFields);
+            //var response = instance.CustomerWishlistList(customerId, start, count, pageCursor, id, storeId, responseFields);
             //Assert.IsType<ModelResponseCustomerWishlistList>(response);
         }
     }

@@ -65,6 +65,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Attributes'
+        /// </summary>
+        [Fact]
+        public void AttributesTest()
+        {
+            // TODO unit test for the property 'Attributes'
+        }
+
+        /// <summary>
         /// Test the property 'Name'
         /// </summary>
         [Fact]
@@ -83,30 +92,84 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Sku'
+        /// Test the property 'Description'
         /// </summary>
         [Fact]
-        public void SkuTest()
+        public void DescriptionTest()
         {
-            // TODO unit test for the property 'Sku'
+            // TODO unit test for the property 'Description'
         }
 
         /// <summary>
-        /// Test the property 'Barcode'
+        /// Test the property 'ShortDescription'
         /// </summary>
         [Fact]
-        public void BarcodeTest()
+        public void ShortDescriptionTest()
         {
-            // TODO unit test for the property 'Barcode'
+            // TODO unit test for the property 'ShortDescription'
         }
 
         /// <summary>
-        /// Test the property 'Gtin'
+        /// Test the property 'AvailableForView'
         /// </summary>
         [Fact]
-        public void GtinTest()
+        public void AvailableForViewTest()
         {
-            // TODO unit test for the property 'Gtin'
+            // TODO unit test for the property 'AvailableForView'
+        }
+
+        /// <summary>
+        /// Test the property 'AvailableForSale'
+        /// </summary>
+        [Fact]
+        public void AvailableForSaleTest()
+        {
+            // TODO unit test for the property 'AvailableForSale'
+        }
+
+        /// <summary>
+        /// Test the property 'IsVirtual'
+        /// </summary>
+        [Fact]
+        public void IsVirtualTest()
+        {
+            // TODO unit test for the property 'IsVirtual'
+        }
+
+        /// <summary>
+        /// Test the property 'IsDefault'
+        /// </summary>
+        [Fact]
+        public void IsDefaultTest()
+        {
+            // TODO unit test for the property 'IsDefault'
+        }
+
+        /// <summary>
+        /// Test the property 'StoreId'
+        /// </summary>
+        [Fact]
+        public void StoreIdTest()
+        {
+            // TODO unit test for the property 'StoreId'
+        }
+
+        /// <summary>
+        /// Test the property 'StoresIds'
+        /// </summary>
+        [Fact]
+        public void StoresIdsTest()
+        {
+            // TODO unit test for the property 'StoresIds'
+        }
+
+        /// <summary>
+        /// Test the property 'LangId'
+        /// </summary>
+        [Fact]
+        public void LangIdTest()
+        {
+            // TODO unit test for the property 'LangId'
         }
 
         /// <summary>
@@ -134,33 +197,6 @@ namespace Org.OpenAPITools.Test.Model
         public void CostPriceTest()
         {
             // TODO unit test for the property 'CostPrice'
-        }
-
-        /// <summary>
-        /// Test the property 'FixedCostShippingPrice'
-        /// </summary>
-        [Fact]
-        public void FixedCostShippingPriceTest()
-        {
-            // TODO unit test for the property 'FixedCostShippingPrice'
-        }
-
-        /// <summary>
-        /// Test the property 'Attributes'
-        /// </summary>
-        [Fact]
-        public void AttributesTest()
-        {
-            // TODO unit test for the property 'Attributes'
-        }
-
-        /// <summary>
-        /// Test the property 'Description'
-        /// </summary>
-        [Fact]
-        public void DescriptionTest()
-        {
-            // TODO unit test for the property 'Description'
         }
 
         /// <summary>
@@ -200,21 +236,57 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'AvailableForView'
+        /// Test the property 'TierPrices'
         /// </summary>
         [Fact]
-        public void AvailableForViewTest()
+        public void TierPricesTest()
         {
-            // TODO unit test for the property 'AvailableForView'
+            // TODO unit test for the property 'TierPrices'
         }
 
         /// <summary>
-        /// Test the property 'AvailableForSale'
+        /// Test the property 'Quantity'
         /// </summary>
         [Fact]
-        public void AvailableForSaleTest()
+        public void QuantityTest()
         {
-            // TODO unit test for the property 'AvailableForSale'
+            // TODO unit test for the property 'Quantity'
+        }
+
+        /// <summary>
+        /// Test the property 'WarehouseId'
+        /// </summary>
+        [Fact]
+        public void WarehouseIdTest()
+        {
+            // TODO unit test for the property 'WarehouseId'
+        }
+
+        /// <summary>
+        /// Test the property 'InStock'
+        /// </summary>
+        [Fact]
+        public void InStockTest()
+        {
+            // TODO unit test for the property 'InStock'
+        }
+
+        /// <summary>
+        /// Test the property 'BackorderStatus'
+        /// </summary>
+        [Fact]
+        public void BackorderStatusTest()
+        {
+            // TODO unit test for the property 'BackorderStatus'
+        }
+
+        /// <summary>
+        /// Test the property 'ManageStock'
+        /// </summary>
+        [Fact]
+        public void ManageStockTest()
+        {
+            // TODO unit test for the property 'ManageStock'
         }
 
         /// <summary>
@@ -263,39 +335,66 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'ShortDescription'
+        /// Test the property 'Sku'
         /// </summary>
         [Fact]
-        public void ShortDescriptionTest()
+        public void SkuTest()
         {
-            // TODO unit test for the property 'ShortDescription'
+            // TODO unit test for the property 'Sku'
         }
 
         /// <summary>
-        /// Test the property 'WarehouseId'
+        /// Test the property 'Barcode'
         /// </summary>
         [Fact]
-        public void WarehouseIdTest()
+        public void BarcodeTest()
         {
-            // TODO unit test for the property 'WarehouseId'
+            // TODO unit test for the property 'Barcode'
         }
 
         /// <summary>
-        /// Test the property 'Quantity'
+        /// Test the property 'Gtin'
         /// </summary>
         [Fact]
-        public void QuantityTest()
+        public void GtinTest()
         {
-            // TODO unit test for the property 'Quantity'
+            // TODO unit test for the property 'Gtin'
         }
 
         /// <summary>
-        /// Test the property 'CreatedAt'
+        /// Test the property 'Upc'
         /// </summary>
         [Fact]
-        public void CreatedAtTest()
+        public void UpcTest()
         {
-            // TODO unit test for the property 'CreatedAt'
+            // TODO unit test for the property 'Upc'
+        }
+
+        /// <summary>
+        /// Test the property 'Ean'
+        /// </summary>
+        [Fact]
+        public void EanTest()
+        {
+            // TODO unit test for the property 'Ean'
+        }
+
+        /// <summary>
+        /// Test the property 'Mpn'
+        /// </summary>
+        [Fact]
+        public void MpnTest()
+        {
+            // TODO unit test for the property 'Mpn'
+        }
+
+        /// <summary>
+        /// Test the property 'Isbn'
+        /// </summary>
+        [Fact]
+        public void IsbnTest()
+        {
+            // TODO unit test for the property 'Isbn'
         }
 
         /// <summary>
@@ -308,12 +407,12 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'TaxClassId'
+        /// Test the property 'CreatedAt'
         /// </summary>
         [Fact]
-        public void TaxClassIdTest()
+        public void CreatedAtTest()
         {
-            // TODO unit test for the property 'TaxClassId'
+            // TODO unit test for the property 'CreatedAt'
         }
 
         /// <summary>
@@ -353,30 +452,12 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'StoreId'
+        /// Test the property 'TaxClassId'
         /// </summary>
         [Fact]
-        public void StoreIdTest()
+        public void TaxClassIdTest()
         {
-            // TODO unit test for the property 'StoreId'
-        }
-
-        /// <summary>
-        /// Test the property 'LangId'
-        /// </summary>
-        [Fact]
-        public void LangIdTest()
-        {
-            // TODO unit test for the property 'LangId'
-        }
-
-        /// <summary>
-        /// Test the property 'ClearCache'
-        /// </summary>
-        [Fact]
-        public void ClearCacheTest()
-        {
-            // TODO unit test for the property 'ClearCache'
+            // TODO unit test for the property 'TaxClassId'
         }
 
         /// <summary>
@@ -389,84 +470,12 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'HarmonizedSystemCode'
+        /// Test the property 'FixedCostShippingPrice'
         /// </summary>
         [Fact]
-        public void HarmonizedSystemCodeTest()
+        public void FixedCostShippingPriceTest()
         {
-            // TODO unit test for the property 'HarmonizedSystemCode'
-        }
-
-        /// <summary>
-        /// Test the property 'CountryOfOrigin'
-        /// </summary>
-        [Fact]
-        public void CountryOfOriginTest()
-        {
-            // TODO unit test for the property 'CountryOfOrigin'
-        }
-
-        /// <summary>
-        /// Test the property 'ManageStock'
-        /// </summary>
-        [Fact]
-        public void ManageStockTest()
-        {
-            // TODO unit test for the property 'ManageStock'
-        }
-
-        /// <summary>
-        /// Test the property 'Upc'
-        /// </summary>
-        [Fact]
-        public void UpcTest()
-        {
-            // TODO unit test for the property 'Upc'
-        }
-
-        /// <summary>
-        /// Test the property 'Mpn'
-        /// </summary>
-        [Fact]
-        public void MpnTest()
-        {
-            // TODO unit test for the property 'Mpn'
-        }
-
-        /// <summary>
-        /// Test the property 'Ean'
-        /// </summary>
-        [Fact]
-        public void EanTest()
-        {
-            // TODO unit test for the property 'Ean'
-        }
-
-        /// <summary>
-        /// Test the property 'Isbn'
-        /// </summary>
-        [Fact]
-        public void IsbnTest()
-        {
-            // TODO unit test for the property 'Isbn'
-        }
-
-        /// <summary>
-        /// Test the property 'StoresIds'
-        /// </summary>
-        [Fact]
-        public void StoresIdsTest()
-        {
-            // TODO unit test for the property 'StoresIds'
-        }
-
-        /// <summary>
-        /// Test the property 'IsDefault'
-        /// </summary>
-        [Fact]
-        public void IsDefaultTest()
-        {
-            // TODO unit test for the property 'IsDefault'
+            // TODO unit test for the property 'FixedCostShippingPrice'
         }
 
         /// <summary>
@@ -479,6 +488,24 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'CountryOfOrigin'
+        /// </summary>
+        [Fact]
+        public void CountryOfOriginTest()
+        {
+            // TODO unit test for the property 'CountryOfOrigin'
+        }
+
+        /// <summary>
+        /// Test the property 'HarmonizedSystemCode'
+        /// </summary>
+        [Fact]
+        public void HarmonizedSystemCodeTest()
+        {
+            // TODO unit test for the property 'HarmonizedSystemCode'
+        }
+
+        /// <summary>
         /// Test the property 'MarketplaceItemProperties'
         /// </summary>
         [Fact]
@@ -488,39 +515,12 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'InStock'
+        /// Test the property 'ClearCache'
         /// </summary>
         [Fact]
-        public void InStockTest()
+        public void ClearCacheTest()
         {
-            // TODO unit test for the property 'InStock'
-        }
-
-        /// <summary>
-        /// Test the property 'BackorderStatus'
-        /// </summary>
-        [Fact]
-        public void BackorderStatusTest()
-        {
-            // TODO unit test for the property 'BackorderStatus'
-        }
-
-        /// <summary>
-        /// Test the property 'TierPrices'
-        /// </summary>
-        [Fact]
-        public void TierPricesTest()
-        {
-            // TODO unit test for the property 'TierPrices'
-        }
-
-        /// <summary>
-        /// Test the property 'IsVirtual'
-        /// </summary>
-        [Fact]
-        public void IsVirtualTest()
-        {
-            // TODO unit test for the property 'IsVirtual'
+            // TODO unit test for the property 'ClearCache'
         }
     }
 }

@@ -40,10 +40,10 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderPreestimateShippingList" /> class.
         /// </summary>
-        /// <param name="storeId">Store Id.</param>
         /// <param name="warehouseId">This parameter is used for selecting a warehouse where you need to set/modify a product quantity..</param>
-        /// <param name="customerEmail">Retrieves orders specified by customer email.</param>
         /// <param name="customerId">Retrieves orders specified by customer id.</param>
+        /// <param name="customerEmail">Retrieves orders specified by customer email.</param>
+        /// <param name="storeId">Store Id.</param>
         /// <param name="shippAddress1">Specifies first shipping address.</param>
         /// <param name="shippCity">Specifies shipping city.</param>
         /// <param name="shippPostcode">Specifies shipping postcode.</param>
@@ -52,7 +52,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (default to &quot;force_all&quot;).</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all.</param>
         /// <param name="orderItem">orderItem (required).</param>
-        public OrderPreestimateShippingList(string storeId = default(string), string warehouseId = default(string), string customerEmail = default(string), string customerId = default(string), string shippAddress1 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), string varParams = @"force_all", string exclude = default(string), List<OrderPreestimateShippingListOrderItemInner> orderItem = default(List<OrderPreestimateShippingListOrderItemInner>))
+        public OrderPreestimateShippingList(string warehouseId = default(string), string customerId = default(string), string customerEmail = default(string), string storeId = default(string), string shippAddress1 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), string varParams = @"force_all", string exclude = default(string), List<OrderPreestimateShippingListOrderItemInner> orderItem = default(List<OrderPreestimateShippingListOrderItemInner>))
         {
             // to ensure "shippCountry" is required (not null)
             if (shippCountry == null)
@@ -66,10 +66,10 @@ namespace Org.OpenAPITools.Model
                 throw new ArgumentNullException("orderItem is a required property for OrderPreestimateShippingList and cannot be null");
             }
             this.OrderItem = orderItem;
-            this.StoreId = storeId;
             this.WarehouseId = warehouseId;
-            this.CustomerEmail = customerEmail;
             this.CustomerId = customerId;
+            this.CustomerEmail = customerEmail;
+            this.StoreId = storeId;
             this.ShippAddress1 = shippAddress1;
             this.ShippCity = shippCity;
             this.ShippPostcode = shippPostcode;
@@ -78,16 +78,6 @@ namespace Org.OpenAPITools.Model
             this.Params = varParams ?? @"force_all";
             this.Exclude = exclude;
         }
-
-        /// <summary>
-        /// Store Id
-        /// </summary>
-        /// <value>Store Id</value>
-        /*
-        <example>1</example>
-        */
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
-        public string StoreId { get; set; }
 
         /// <summary>
         /// This parameter is used for selecting a warehouse where you need to set/modify a product quantity.
@@ -100,6 +90,16 @@ namespace Org.OpenAPITools.Model
         public string WarehouseId { get; set; }
 
         /// <summary>
+        /// Retrieves orders specified by customer id
+        /// </summary>
+        /// <value>Retrieves orders specified by customer id</value>
+        /*
+        <example>5</example>
+        */
+        [DataMember(Name = "customer_id", EmitDefaultValue = false)]
+        public string CustomerId { get; set; }
+
+        /// <summary>
         /// Retrieves orders specified by customer email
         /// </summary>
         /// <value>Retrieves orders specified by customer email</value>
@@ -110,14 +110,14 @@ namespace Org.OpenAPITools.Model
         public string CustomerEmail { get; set; }
 
         /// <summary>
-        /// Retrieves orders specified by customer id
+        /// Store Id
         /// </summary>
-        /// <value>Retrieves orders specified by customer id</value>
+        /// <value>Store Id</value>
         /*
-        <example>5</example>
+        <example>1</example>
         */
-        [DataMember(Name = "customer_id", EmitDefaultValue = false)]
-        public string CustomerId { get; set; }
+        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        public string StoreId { get; set; }
 
         /// <summary>
         /// Specifies first shipping address
@@ -203,10 +203,10 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class OrderPreestimateShippingList {\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  WarehouseId: ").Append(WarehouseId).Append("\n");
-            sb.Append("  CustomerEmail: ").Append(CustomerEmail).Append("\n");
             sb.Append("  CustomerId: ").Append(CustomerId).Append("\n");
+            sb.Append("  CustomerEmail: ").Append(CustomerEmail).Append("\n");
+            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  ShippAddress1: ").Append(ShippAddress1).Append("\n");
             sb.Append("  ShippCity: ").Append(ShippCity).Append("\n");
             sb.Append("  ShippPostcode: ").Append(ShippPostcode).Append("\n");

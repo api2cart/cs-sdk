@@ -136,14 +136,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CartCouponAdd" /> class.
         /// </summary>
-        /// <param name="storeId">Store Id.</param>
         /// <param name="code">Coupon code (required).</param>
-        /// <param name="name">Coupon name.</param>
-        /// <param name="codes">Entity codes.</param>
         /// <param name="actionType">Coupon discount type (required).</param>
         /// <param name="actionApplyTo">Defines where discount should be applied (required).</param>
         /// <param name="actionScope">Specify how discount should be applied. If scope&#x3D;matching_items, then discount will be applied to each of the items that match action conditions. Scope order means that discount will be applied once. (required).</param>
         /// <param name="actionAmount">Defines the discount amount value. (required).</param>
+        /// <param name="codes">Entity codes.</param>
+        /// <param name="name">Coupon name.</param>
         /// <param name="dateStart">Date start (default to &quot;now&quot;).</param>
         /// <param name="dateEnd">Defines when discount code will be expired..</param>
         /// <param name="usageLimit">Usage limit for coupon..</param>
@@ -153,7 +152,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="actionConditionOperator">Defines condition operator..</param>
         /// <param name="actionConditionValue">Defines condition attribute value/s. Can be comma separated string..</param>
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (default to false).</param>
-        public CartCouponAdd(string storeId = default(string), string code = default(string), string name = default(string), List<string> codes = default(List<string>), ActionTypeEnum actionType = default(ActionTypeEnum), ActionApplyToEnum actionApplyTo = default(ActionApplyToEnum), ActionScopeEnum actionScope = default(ActionScopeEnum), decimal actionAmount = default(decimal), string dateStart = @"now", string dateEnd = default(string), int usageLimit = default(int), int usageLimitPerCustomer = default(int), string actionConditionEntity = default(string), string actionConditionKey = default(string), string actionConditionOperator = default(string), string actionConditionValue = default(string), bool includeTax = false)
+        /// <param name="storeId">Store Id.</param>
+        public CartCouponAdd(string code = default(string), ActionTypeEnum actionType = default(ActionTypeEnum), ActionApplyToEnum actionApplyTo = default(ActionApplyToEnum), ActionScopeEnum actionScope = default(ActionScopeEnum), decimal actionAmount = default(decimal), List<string> codes = default(List<string>), string name = default(string), string dateStart = @"now", string dateEnd = default(string), int usageLimit = default(int), int usageLimitPerCustomer = default(int), string actionConditionEntity = default(string), string actionConditionKey = default(string), string actionConditionOperator = default(string), string actionConditionValue = default(string), bool includeTax = false, string storeId = default(string))
         {
             // to ensure "code" is required (not null)
             if (code == null)
@@ -165,9 +165,8 @@ namespace Org.OpenAPITools.Model
             this.ActionApplyTo = actionApplyTo;
             this.ActionScope = actionScope;
             this.ActionAmount = actionAmount;
-            this.StoreId = storeId;
-            this.Name = name;
             this.Codes = codes;
+            this.Name = name;
             // use default value if no "dateStart" provided
             this.DateStart = dateStart ?? @"now";
             this.DateEnd = dateEnd;
@@ -178,17 +177,8 @@ namespace Org.OpenAPITools.Model
             this.ActionConditionOperator = actionConditionOperator;
             this.ActionConditionValue = actionConditionValue;
             this.IncludeTax = includeTax;
+            this.StoreId = storeId;
         }
-
-        /// <summary>
-        /// Store Id
-        /// </summary>
-        /// <value>Store Id</value>
-        /*
-        <example>1</example>
-        */
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
-        public string StoreId { get; set; }
 
         /// <summary>
         /// Coupon code
@@ -201,14 +191,14 @@ namespace Org.OpenAPITools.Model
         public string Code { get; set; }
 
         /// <summary>
-        /// Coupon name
+        /// Defines the discount amount value.
         /// </summary>
-        /// <value>Coupon name</value>
+        /// <value>Defines the discount amount value.</value>
         /*
-        <example>Sale! -30%</example>
+        <example>15.5</example>
         */
-        [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name { get; set; }
+        [DataMember(Name = "action_amount", IsRequired = true, EmitDefaultValue = true)]
+        public decimal ActionAmount { get; set; }
 
         /// <summary>
         /// Entity codes
@@ -221,14 +211,14 @@ namespace Org.OpenAPITools.Model
         public List<string> Codes { get; set; }
 
         /// <summary>
-        /// Defines the discount amount value.
+        /// Coupon name
         /// </summary>
-        /// <value>Defines the discount amount value.</value>
+        /// <value>Coupon name</value>
         /*
-        <example>15.5</example>
+        <example>Sale! -30%</example>
         */
-        [DataMember(Name = "action_amount", IsRequired = true, EmitDefaultValue = true)]
-        public decimal ActionAmount { get; set; }
+        [DataMember(Name = "name", EmitDefaultValue = false)]
+        public string Name { get; set; }
 
         /// <summary>
         /// Date start
@@ -321,6 +311,16 @@ namespace Org.OpenAPITools.Model
         public bool IncludeTax { get; set; }
 
         /// <summary>
+        /// Store Id
+        /// </summary>
+        /// <value>Store Id</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        public string StoreId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -328,14 +328,13 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class CartCouponAdd {\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Codes: ").Append(Codes).Append("\n");
             sb.Append("  ActionType: ").Append(ActionType).Append("\n");
             sb.Append("  ActionApplyTo: ").Append(ActionApplyTo).Append("\n");
             sb.Append("  ActionScope: ").Append(ActionScope).Append("\n");
             sb.Append("  ActionAmount: ").Append(ActionAmount).Append("\n");
+            sb.Append("  Codes: ").Append(Codes).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateStart: ").Append(DateStart).Append("\n");
             sb.Append("  DateEnd: ").Append(DateEnd).Append("\n");
             sb.Append("  UsageLimit: ").Append(UsageLimit).Append("\n");
@@ -345,6 +344,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  ActionConditionOperator: ").Append(ActionConditionOperator).Append("\n");
             sb.Append("  ActionConditionValue: ").Append(ActionConditionValue).Append("\n");
             sb.Append("  IncludeTax: ").Append(IncludeTax).Append("\n");
+            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

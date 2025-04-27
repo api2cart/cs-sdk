@@ -140,16 +140,16 @@ namespace Org.OpenAPITools.Api
         /// List registered webhook on the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="entity">The entity you want to filter webhooks by (e.g. order or product) (optional)</param>
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookList200Response</returns>
-        WebhookList200Response WebhookList(string? varParams = default(string?), int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), int operationIndex = 0);
+        WebhookList200Response WebhookList(int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), string? varParams = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// webhook.list
@@ -158,16 +158,16 @@ namespace Org.OpenAPITools.Api
         /// List registered webhook on the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="entity">The entity you want to filter webhooks by (e.g. order or product) (optional)</param>
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookList200Response</returns>
-        ApiResponse<WebhookList200Response> WebhookListWithHttpInfo(string? varParams = default(string?), int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), int operationIndex = 0);
+        ApiResponse<WebhookList200Response> WebhookListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), string? varParams = default(string?), int operationIndex = 0);
         /// <summary>
         /// webhook.update
         /// </summary>
@@ -329,17 +329,17 @@ namespace Org.OpenAPITools.Api
         /// List registered webhook on the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="entity">The entity you want to filter webhooks by (e.g. order or product) (optional)</param>
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookList200Response</returns>
-        System.Threading.Tasks.Task<WebhookList200Response> WebhookListAsync(string? varParams = default(string?), int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebhookList200Response> WebhookListAsync(int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), string? varParams = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// webhook.list
@@ -348,17 +348,17 @@ namespace Org.OpenAPITools.Api
         /// List registered webhook on the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="entity">The entity you want to filter webhooks by (e.g. order or product) (optional)</param>
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookList200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookList200Response>> WebhookListWithHttpInfoAsync(string? varParams = default(string?), int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookList200Response>> WebhookListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), string? varParams = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// webhook.update
         /// </summary>
@@ -1254,18 +1254,18 @@ namespace Org.OpenAPITools.Api
         /// webhook.list List registered webhook on the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="entity">The entity you want to filter webhooks by (e.g. order or product) (optional)</param>
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookList200Response</returns>
-        public WebhookList200Response WebhookList(string? varParams = default(string?), int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), int operationIndex = 0)
+        public WebhookList200Response WebhookList(int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), string? varParams = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<WebhookList200Response> localVarResponse = WebhookListWithHttpInfo(varParams, start, count, entity, action, active, ids);
+            Org.OpenAPITools.Client.ApiResponse<WebhookList200Response> localVarResponse = WebhookListWithHttpInfo(start, count, entity, action, active, ids, varParams);
             return localVarResponse.Data;
         }
 
@@ -1273,16 +1273,16 @@ namespace Org.OpenAPITools.Api
         /// webhook.list List registered webhook on the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="entity">The entity you want to filter webhooks by (e.g. order or product) (optional)</param>
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookList200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<WebhookList200Response> WebhookListWithHttpInfo(string? varParams = default(string?), int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<WebhookList200Response> WebhookListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), string? varParams = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1307,10 +1307,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -1334,6 +1330,10 @@ namespace Org.OpenAPITools.Api
             if (ids != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
             }
 
             localVarRequestOptions.Operation = "WebhookApi.WebhookList";
@@ -1368,19 +1368,19 @@ namespace Org.OpenAPITools.Api
         /// webhook.list List registered webhook on the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="entity">The entity you want to filter webhooks by (e.g. order or product) (optional)</param>
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookList200Response</returns>
-        public async System.Threading.Tasks.Task<WebhookList200Response> WebhookListAsync(string? varParams = default(string?), int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookList200Response> WebhookListAsync(int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), string? varParams = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<WebhookList200Response> localVarResponse = await WebhookListWithHttpInfoAsync(varParams, start, count, entity, action, active, ids, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<WebhookList200Response> localVarResponse = await WebhookListWithHttpInfoAsync(start, count, entity, action, active, ids, varParams, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1388,17 +1388,17 @@ namespace Org.OpenAPITools.Api
         /// webhook.list List registered webhook on the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="entity">The entity you want to filter webhooks by (e.g. order or product) (optional)</param>
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookList200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<WebhookList200Response>> WebhookListWithHttpInfoAsync(string? varParams = default(string?), int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<WebhookList200Response>> WebhookListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), string? varParams = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1423,10 +1423,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -1450,6 +1446,10 @@ namespace Org.OpenAPITools.Api
             if (ids != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
             }
 
             localVarRequestOptions.Operation = "WebhookApi.WebhookList";

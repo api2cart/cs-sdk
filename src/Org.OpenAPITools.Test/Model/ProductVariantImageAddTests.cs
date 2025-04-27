@@ -74,6 +74,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'StoreId'
+        /// </summary>
+        [Fact]
+        public void StoreIdTest()
+        {
+            // TODO unit test for the property 'StoreId'
+        }
+
+        /// <summary>
         /// Test the property 'ImageName'
         /// </summary>
         [Fact]
@@ -134,15 +143,6 @@ namespace Org.OpenAPITools.Test.Model
         public void PositionTest()
         {
             // TODO unit test for the property 'Position'
-        }
-
-        /// <summary>
-        /// Test the property 'StoreId'
-        /// </summary>
-        [Fact]
-        public void StoreIdTest()
-        {
-            // TODO unit test for the property 'StoreId'
         }
 
         /// <summary>

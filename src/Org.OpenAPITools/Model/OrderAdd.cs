@@ -45,72 +45,72 @@ namespace Org.OpenAPITools.Model
         /// <param name="storeId">Defines store id where the order should be assigned.</param>
         /// <param name="channelId">Channel ID.</param>
         /// <param name="orderStatus">Defines order status. (required).</param>
-        /// <param name="sendNotifications">Send notifications to customer after order was created (default to false).</param>
-        /// <param name="sendAdminNotifications">Notify admin when new order was created. (default to false).</param>
+        /// <param name="fulfillmentStatus">Create order with fulfillment status.</param>
+        /// <param name="financialStatus">Create order with financial status.</param>
         /// <param name="customerEmail">Defines the customer specified by email for whom order has to be created (required).</param>
-        /// <param name="billFirstName">Specifies billing first name (required).</param>
-        /// <param name="billLastName">Specifies billing last name (required).</param>
-        /// <param name="billAddress1">Specifies first billing address (required).</param>
-        /// <param name="billCity">Specifies billing city (required).</param>
-        /// <param name="billPostcode">Specifies billing postcode (required).</param>
-        /// <param name="billState">Specifies billing state code (required).</param>
-        /// <param name="billCountry">Specifies billing country code (required).</param>
-        /// <param name="shippFirstName">Specifies shipping first name.</param>
-        /// <param name="shippLastName">Specifies shipping last name.</param>
-        /// <param name="shippAddress1">Specifies first shipping address.</param>
-        /// <param name="shippCity">Specifies shipping city.</param>
-        /// <param name="shippPostcode">Specifies shipping postcode.</param>
-        /// <param name="shippState">Specifies shipping state code.</param>
-        /// <param name="shippCountry">Specifies shipping country code.</param>
-        /// <param name="totalPrice">Defines order&#39;s total price.</param>
-        /// <param name="date">Specifies an order creation date in format Y-m-d H:i:s.</param>
-        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39;.</param>
-        /// <param name="transactionId">Payment transaction id.</param>
-        /// <param name="orderShippingMethod">Defines order shipping method.</param>
-        /// <param name="currency">Currency code of order.</param>
-        /// <param name="billAddress2">Specifies second billing address.</param>
-        /// <param name="billCompany">Specifies billing company.</param>
-        /// <param name="billPhone">Specifies billing phone.</param>
-        /// <param name="billFax">Specifies billing fax.</param>
-        /// <param name="comment">Specifies order comment.</param>
-        /// <param name="adminComment">Specifies admin&#39;s order comment.</param>
-        /// <param name="adminPrivateComment">Specifies private admin&#39;s order comment.</param>
         /// <param name="customerFirstName">Specifies customer&#39;s first name.</param>
         /// <param name="customerLastName">Specifies customer’s last name.</param>
         /// <param name="customerPhone">Specifies customer’s phone.</param>
         /// <param name="customerCountry">Specifies customer&#39;s address ISO code or name of country.</param>
         /// <param name="customerBirthday">Specifies customer’s birthday.</param>
         /// <param name="customerFax">Specifies customer’s fax.</param>
+        /// <param name="orderPaymentMethod">Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39;.</param>
+        /// <param name="transactionId">Payment transaction id.</param>
+        /// <param name="currency">Currency code of order.</param>
+        /// <param name="date">Specifies an order creation date in format Y-m-d H:i:s.</param>
+        /// <param name="dateModified">Specifies order&#39;s  modification date.</param>
+        /// <param name="dateFinished">Specifies order&#39;s  finished date.</param>
+        /// <param name="billFirstName">Specifies billing first name (required).</param>
+        /// <param name="billLastName">Specifies billing last name (required).</param>
+        /// <param name="billAddress1">Specifies first billing address (required).</param>
+        /// <param name="billAddress2">Specifies second billing address.</param>
+        /// <param name="billCity">Specifies billing city (required).</param>
+        /// <param name="billPostcode">Specifies billing postcode (required).</param>
+        /// <param name="billState">Specifies billing state code (required).</param>
+        /// <param name="billCountry">Specifies billing country code (required).</param>
+        /// <param name="billCompany">Specifies billing company.</param>
+        /// <param name="billPhone">Specifies billing phone.</param>
+        /// <param name="billFax">Specifies billing fax.</param>
+        /// <param name="shippFirstName">Specifies shipping first name.</param>
+        /// <param name="shippLastName">Specifies shipping last name.</param>
+        /// <param name="shippAddress1">Specifies first shipping address.</param>
         /// <param name="shippAddress2">Specifies second address line of a shipping street address.</param>
+        /// <param name="shippCity">Specifies shipping city.</param>
+        /// <param name="shippPostcode">Specifies shipping postcode.</param>
+        /// <param name="shippState">Specifies shipping state code.</param>
+        /// <param name="shippCountry">Specifies shipping country code.</param>
         /// <param name="shippCompany">Specifies shipping company.</param>
         /// <param name="shippPhone">Specifies shipping phone.</param>
         /// <param name="shippFax">Specifies shipping fax.</param>
-        /// <param name="dateModified">Specifies order&#39;s  modification date.</param>
-        /// <param name="dateFinished">Specifies order&#39;s  finished date.</param>
         /// <param name="subtotalPrice">Total price of all ordered products multiplied by their number, excluding tax, shipping price and discounts.</param>
         /// <param name="taxPrice">The value of tax cost for order (default to 0M).</param>
+        /// <param name="totalPrice">Defines order&#39;s total price.</param>
+        /// <param name="totalPaid">Defines total paid amount for the order.</param>
+        /// <param name="totalWeight">Defines the sum of all line item weights in grams for the order.</param>
         /// <param name="pricesIncTax">Indicates whether prices and subtotal includes tax. (default to false).</param>
         /// <param name="shippingPrice">Specifies order&#39;s shipping price (default to 0M).</param>
         /// <param name="shippingTax">Specifies order&#39;s shipping price tax.</param>
-        /// <param name="carrierId">Defines tracking carrier id.</param>
-        /// <param name="warehouseId">This parameter is used for selecting a warehouse where you need to set/modify a product quantity..</param>
         /// <param name="discount">Specifies order&#39;s discount.</param>
         /// <param name="couponDiscount">Specifies order&#39;s coupon discount.</param>
-        /// <param name="coupons">Coupons that will be applied to order.</param>
         /// <param name="giftCertificateDiscount">Discounts for order with gift certificates.</param>
-        /// <param name="fulfillmentStatus">Create order with fulfillment status.</param>
-        /// <param name="financialStatus">Create order with financial status.</param>
-        /// <param name="totalPaid">Defines total paid amount for the order.</param>
-        /// <param name="externalSource">Identifying the system used to generate the order.</param>
+        /// <param name="orderShippingMethod">Defines order shipping method.</param>
+        /// <param name="carrierId">Defines tracking carrier id.</param>
+        /// <param name="warehouseId">This parameter is used for selecting a warehouse where you need to set/modify a product quantity..</param>
+        /// <param name="coupons">Coupons that will be applied to order.</param>
         /// <param name="tags">Order tags.</param>
+        /// <param name="comment">Specifies order comment.</param>
+        /// <param name="adminComment">Specifies admin&#39;s order comment.</param>
+        /// <param name="adminPrivateComment">Specifies private admin&#39;s order comment.</param>
+        /// <param name="sendNotifications">Send notifications to customer after order was created (default to false).</param>
+        /// <param name="sendAdminNotifications">Notify admin when new order was created. (default to false).</param>
+        /// <param name="externalSource">Identifying the system used to generate the order.</param>
         /// <param name="inventoryBehaviour">The behaviour to use when updating inventory.&lt;hr&gt;&lt;div style&#x3D;\&quot;font-style:normal\&quot;&gt;Values description:&lt;div style&#x3D;\&quot;margin-left: 2%; padding-top: 2%\&quot;&gt;&lt;div style&#x3D;\&quot;font-size:85%\&quot;&gt;&lt;b&gt;bypass&lt;/b&gt; &#x3D; Do not claim inventory &lt;/br&gt;&lt;/br&gt;&lt;b&gt;decrement_ignoring_policy&lt;/b&gt; &#x3D; Ignore the product&#39;s &lt;/br&gt; inventory policy and claim amounts&lt;/br&gt;&lt;/br&gt;&lt;b&gt;decrement_obeying_policy&lt;/b&gt; &#x3D;  Obey the product&#39;s &lt;/br&gt; inventory policy.&lt;/br&gt;&lt;/br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt; (default to &quot;bypass&quot;).</param>
         /// <param name="createInvoice">Defines whether the invoice is created automatically along with the order (default to false).</param>
         /// <param name="noteAttributes">Defines note attributes.</param>
-        /// <param name="totalWeight">Defines the sum of all line item weights in grams for the order.</param>
         /// <param name="clearCache">Is cache clear required (default to true).</param>
         /// <param name="origin">The source of the order.</param>
         /// <param name="orderItem">orderItem (required).</param>
-        public OrderAdd(string id = default(string), string orderId = default(string), string storeId = default(string), string channelId = default(string), string orderStatus = default(string), bool sendNotifications = false, bool sendAdminNotifications = false, string customerEmail = default(string), string billFirstName = default(string), string billLastName = default(string), string billAddress1 = default(string), string billCity = default(string), string billPostcode = default(string), string billState = default(string), string billCountry = default(string), string shippFirstName = default(string), string shippLastName = default(string), string shippAddress1 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), decimal totalPrice = default(decimal), string date = default(string), string orderPaymentMethod = default(string), string transactionId = default(string), string orderShippingMethod = default(string), string currency = default(string), string billAddress2 = default(string), string billCompany = default(string), string billPhone = default(string), string billFax = default(string), string comment = default(string), string adminComment = default(string), string adminPrivateComment = default(string), string customerFirstName = default(string), string customerLastName = default(string), string customerPhone = default(string), string customerCountry = default(string), string customerBirthday = default(string), string customerFax = default(string), string shippAddress2 = default(string), string shippCompany = default(string), string shippPhone = default(string), string shippFax = default(string), string dateModified = default(string), string dateFinished = default(string), decimal subtotalPrice = default(decimal), decimal taxPrice = 0M, bool pricesIncTax = false, decimal shippingPrice = 0M, decimal shippingTax = default(decimal), string carrierId = default(string), string warehouseId = default(string), decimal discount = default(decimal), decimal couponDiscount = default(decimal), List<string> coupons = default(List<string>), decimal giftCertificateDiscount = default(decimal), string fulfillmentStatus = default(string), string financialStatus = default(string), decimal totalPaid = default(decimal), string externalSource = default(string), string tags = default(string), string inventoryBehaviour = @"bypass", bool createInvoice = false, List<OrderAddNoteAttributesInner> noteAttributes = default(List<OrderAddNoteAttributesInner>), int totalWeight = default(int), bool clearCache = true, string origin = default(string), List<OrderAddOrderItemInner> orderItem = default(List<OrderAddOrderItemInner>))
+        public OrderAdd(string id = default(string), string orderId = default(string), string storeId = default(string), string channelId = default(string), string orderStatus = default(string), string fulfillmentStatus = default(string), string financialStatus = default(string), string customerEmail = default(string), string customerFirstName = default(string), string customerLastName = default(string), string customerPhone = default(string), string customerCountry = default(string), string customerBirthday = default(string), string customerFax = default(string), string orderPaymentMethod = default(string), string transactionId = default(string), string currency = default(string), string date = default(string), string dateModified = default(string), string dateFinished = default(string), string billFirstName = default(string), string billLastName = default(string), string billAddress1 = default(string), string billAddress2 = default(string), string billCity = default(string), string billPostcode = default(string), string billState = default(string), string billCountry = default(string), string billCompany = default(string), string billPhone = default(string), string billFax = default(string), string shippFirstName = default(string), string shippLastName = default(string), string shippAddress1 = default(string), string shippAddress2 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), string shippCompany = default(string), string shippPhone = default(string), string shippFax = default(string), decimal subtotalPrice = default(decimal), decimal taxPrice = 0M, decimal totalPrice = default(decimal), decimal totalPaid = default(decimal), int totalWeight = default(int), bool pricesIncTax = false, decimal shippingPrice = 0M, decimal shippingTax = default(decimal), decimal discount = default(decimal), decimal couponDiscount = default(decimal), decimal giftCertificateDiscount = default(decimal), string orderShippingMethod = default(string), string carrierId = default(string), string warehouseId = default(string), List<string> coupons = default(List<string>), string tags = default(string), string comment = default(string), string adminComment = default(string), string adminPrivateComment = default(string), bool sendNotifications = false, bool sendAdminNotifications = false, string externalSource = default(string), string inventoryBehaviour = @"bypass", bool createInvoice = false, List<OrderAddNoteAttributesInner> noteAttributes = default(List<OrderAddNoteAttributesInner>), bool clearCache = true, string origin = default(string), List<OrderAddOrderItemInner> orderItem = default(List<OrderAddOrderItemInner>))
         {
             // to ensure "orderStatus" is required (not null)
             if (orderStatus == null)
@@ -176,61 +176,61 @@ namespace Org.OpenAPITools.Model
             this.OrderId = orderId;
             this.StoreId = storeId;
             this.ChannelId = channelId;
-            this.SendNotifications = sendNotifications;
-            this.SendAdminNotifications = sendAdminNotifications;
-            this.ShippFirstName = shippFirstName;
-            this.ShippLastName = shippLastName;
-            this.ShippAddress1 = shippAddress1;
-            this.ShippCity = shippCity;
-            this.ShippPostcode = shippPostcode;
-            this.ShippState = shippState;
-            this.ShippCountry = shippCountry;
-            this.TotalPrice = totalPrice;
-            this.Date = date;
-            this.OrderPaymentMethod = orderPaymentMethod;
-            this.TransactionId = transactionId;
-            this.OrderShippingMethod = orderShippingMethod;
-            this.Currency = currency;
-            this.BillAddress2 = billAddress2;
-            this.BillCompany = billCompany;
-            this.BillPhone = billPhone;
-            this.BillFax = billFax;
-            this.Comment = comment;
-            this.AdminComment = adminComment;
-            this.AdminPrivateComment = adminPrivateComment;
+            this.FulfillmentStatus = fulfillmentStatus;
+            this.FinancialStatus = financialStatus;
             this.CustomerFirstName = customerFirstName;
             this.CustomerLastName = customerLastName;
             this.CustomerPhone = customerPhone;
             this.CustomerCountry = customerCountry;
             this.CustomerBirthday = customerBirthday;
             this.CustomerFax = customerFax;
+            this.OrderPaymentMethod = orderPaymentMethod;
+            this.TransactionId = transactionId;
+            this.Currency = currency;
+            this.Date = date;
+            this.DateModified = dateModified;
+            this.DateFinished = dateFinished;
+            this.BillAddress2 = billAddress2;
+            this.BillCompany = billCompany;
+            this.BillPhone = billPhone;
+            this.BillFax = billFax;
+            this.ShippFirstName = shippFirstName;
+            this.ShippLastName = shippLastName;
+            this.ShippAddress1 = shippAddress1;
             this.ShippAddress2 = shippAddress2;
+            this.ShippCity = shippCity;
+            this.ShippPostcode = shippPostcode;
+            this.ShippState = shippState;
+            this.ShippCountry = shippCountry;
             this.ShippCompany = shippCompany;
             this.ShippPhone = shippPhone;
             this.ShippFax = shippFax;
-            this.DateModified = dateModified;
-            this.DateFinished = dateFinished;
             this.SubtotalPrice = subtotalPrice;
             this.TaxPrice = taxPrice;
+            this.TotalPrice = totalPrice;
+            this.TotalPaid = totalPaid;
+            this.TotalWeight = totalWeight;
             this.PricesIncTax = pricesIncTax;
             this.ShippingPrice = shippingPrice;
             this.ShippingTax = shippingTax;
-            this.CarrierId = carrierId;
-            this.WarehouseId = warehouseId;
             this.Discount = discount;
             this.CouponDiscount = couponDiscount;
-            this.Coupons = coupons;
             this.GiftCertificateDiscount = giftCertificateDiscount;
-            this.FulfillmentStatus = fulfillmentStatus;
-            this.FinancialStatus = financialStatus;
-            this.TotalPaid = totalPaid;
-            this.ExternalSource = externalSource;
+            this.OrderShippingMethod = orderShippingMethod;
+            this.CarrierId = carrierId;
+            this.WarehouseId = warehouseId;
+            this.Coupons = coupons;
             this.Tags = tags;
+            this.Comment = comment;
+            this.AdminComment = adminComment;
+            this.AdminPrivateComment = adminPrivateComment;
+            this.SendNotifications = sendNotifications;
+            this.SendAdminNotifications = sendAdminNotifications;
+            this.ExternalSource = externalSource;
             // use default value if no "inventoryBehaviour" provided
             this.InventoryBehaviour = inventoryBehaviour ?? @"bypass";
             this.CreateInvoice = createInvoice;
             this.NoteAttributes = noteAttributes;
-            this.TotalWeight = totalWeight;
             this.ClearCache = clearCache;
             this.Origin = origin;
         }
@@ -286,24 +286,24 @@ namespace Org.OpenAPITools.Model
         public string OrderStatus { get; set; }
 
         /// <summary>
-        /// Send notifications to customer after order was created
+        /// Create order with fulfillment status
         /// </summary>
-        /// <value>Send notifications to customer after order was created</value>
+        /// <value>Create order with fulfillment status</value>
         /*
-        <example>true</example>
+        <example>fulfilled</example>
         */
-        [DataMember(Name = "send_notifications", EmitDefaultValue = true)]
-        public bool SendNotifications { get; set; }
+        [DataMember(Name = "fulfillment_status", EmitDefaultValue = false)]
+        public string FulfillmentStatus { get; set; }
 
         /// <summary>
-        /// Notify admin when new order was created.
+        /// Create order with financial status
         /// </summary>
-        /// <value>Notify admin when new order was created.</value>
+        /// <value>Create order with financial status</value>
         /*
-        <example>true</example>
+        <example>paid</example>
         */
-        [DataMember(Name = "send_admin_notifications", EmitDefaultValue = true)]
-        public bool SendAdminNotifications { get; set; }
+        [DataMember(Name = "financial_status", EmitDefaultValue = false)]
+        public string FinancialStatus { get; set; }
 
         /// <summary>
         /// Defines the customer specified by email for whom order has to be created
@@ -314,276 +314,6 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "customer_email", IsRequired = true, EmitDefaultValue = true)]
         public string CustomerEmail { get; set; }
-
-        /// <summary>
-        /// Specifies billing first name
-        /// </summary>
-        /// <value>Specifies billing first name</value>
-        /*
-        <example>Adam</example>
-        */
-        [DataMember(Name = "bill_first_name", IsRequired = true, EmitDefaultValue = true)]
-        public string BillFirstName { get; set; }
-
-        /// <summary>
-        /// Specifies billing last name
-        /// </summary>
-        /// <value>Specifies billing last name</value>
-        /*
-        <example>Smith</example>
-        */
-        [DataMember(Name = "bill_last_name", IsRequired = true, EmitDefaultValue = true)]
-        public string BillLastName { get; set; }
-
-        /// <summary>
-        /// Specifies first billing address
-        /// </summary>
-        /// <value>Specifies first billing address</value>
-        /*
-        <example>Green str. 35</example>
-        */
-        [DataMember(Name = "bill_address_1", IsRequired = true, EmitDefaultValue = true)]
-        public string BillAddress1 { get; set; }
-
-        /// <summary>
-        /// Specifies billing city
-        /// </summary>
-        /// <value>Specifies billing city</value>
-        /*
-        <example>Chicago</example>
-        */
-        [DataMember(Name = "bill_city", IsRequired = true, EmitDefaultValue = true)]
-        public string BillCity { get; set; }
-
-        /// <summary>
-        /// Specifies billing postcode
-        /// </summary>
-        /// <value>Specifies billing postcode</value>
-        /*
-        <example>12345</example>
-        */
-        [DataMember(Name = "bill_postcode", IsRequired = true, EmitDefaultValue = true)]
-        public string BillPostcode { get; set; }
-
-        /// <summary>
-        /// Specifies billing state code
-        /// </summary>
-        /// <value>Specifies billing state code</value>
-        /*
-        <example>IL</example>
-        */
-        [DataMember(Name = "bill_state", IsRequired = true, EmitDefaultValue = true)]
-        public string BillState { get; set; }
-
-        /// <summary>
-        /// Specifies billing country code
-        /// </summary>
-        /// <value>Specifies billing country code</value>
-        /*
-        <example>US</example>
-        */
-        [DataMember(Name = "bill_country", IsRequired = true, EmitDefaultValue = true)]
-        public string BillCountry { get; set; }
-
-        /// <summary>
-        /// Specifies shipping first name
-        /// </summary>
-        /// <value>Specifies shipping first name</value>
-        /*
-        <example>John</example>
-        */
-        [DataMember(Name = "shipp_first_name", EmitDefaultValue = false)]
-        public string ShippFirstName { get; set; }
-
-        /// <summary>
-        /// Specifies shipping last name
-        /// </summary>
-        /// <value>Specifies shipping last name</value>
-        /*
-        <example>Smith</example>
-        */
-        [DataMember(Name = "shipp_last_name", EmitDefaultValue = false)]
-        public string ShippLastName { get; set; }
-
-        /// <summary>
-        /// Specifies first shipping address
-        /// </summary>
-        /// <value>Specifies first shipping address</value>
-        /*
-        <example>Green str. 35</example>
-        */
-        [DataMember(Name = "shipp_address_1", EmitDefaultValue = false)]
-        public string ShippAddress1 { get; set; }
-
-        /// <summary>
-        /// Specifies shipping city
-        /// </summary>
-        /// <value>Specifies shipping city</value>
-        /*
-        <example>Chicago</example>
-        */
-        [DataMember(Name = "shipp_city", EmitDefaultValue = false)]
-        public string ShippCity { get; set; }
-
-        /// <summary>
-        /// Specifies shipping postcode
-        /// </summary>
-        /// <value>Specifies shipping postcode</value>
-        /*
-        <example>24545</example>
-        */
-        [DataMember(Name = "shipp_postcode", EmitDefaultValue = false)]
-        public string ShippPostcode { get; set; }
-
-        /// <summary>
-        /// Specifies shipping state code
-        /// </summary>
-        /// <value>Specifies shipping state code</value>
-        /*
-        <example>IL</example>
-        */
-        [DataMember(Name = "shipp_state", EmitDefaultValue = false)]
-        public string ShippState { get; set; }
-
-        /// <summary>
-        /// Specifies shipping country code
-        /// </summary>
-        /// <value>Specifies shipping country code</value>
-        /*
-        <example>US</example>
-        */
-        [DataMember(Name = "shipp_country", EmitDefaultValue = false)]
-        public string ShippCountry { get; set; }
-
-        /// <summary>
-        /// Defines order&#39;s total price
-        /// </summary>
-        /// <value>Defines order&#39;s total price</value>
-        /*
-        <example>23.56</example>
-        */
-        [DataMember(Name = "total_price", EmitDefaultValue = false)]
-        public decimal TotalPrice { get; set; }
-
-        /// <summary>
-        /// Specifies an order creation date in format Y-m-d H:i:s
-        /// </summary>
-        /// <value>Specifies an order creation date in format Y-m-d H:i:s</value>
-        /*
-        <example>2012-09-25 19:40:00</example>
-        */
-        [DataMember(Name = "date", EmitDefaultValue = false)]
-        public string Date { get; set; }
-
-        /// <summary>
-        /// Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39;
-        /// </summary>
-        /// <value>Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39;</value>
-        /*
-        <example>PayPal</example>
-        */
-        [DataMember(Name = "order_payment_method", EmitDefaultValue = false)]
-        public string OrderPaymentMethod { get; set; }
-
-        /// <summary>
-        /// Payment transaction id
-        /// </summary>
-        /// <value>Payment transaction id</value>
-        /*
-        <example>d41d8cd98f00b204e9800998ecf8427e</example>
-        */
-        [DataMember(Name = "transaction_id", EmitDefaultValue = false)]
-        public string TransactionId { get; set; }
-
-        /// <summary>
-        /// Defines order shipping method
-        /// </summary>
-        /// <value>Defines order shipping method</value>
-        /*
-        <example>UPS Ground</example>
-        */
-        [DataMember(Name = "order_shipping_method", EmitDefaultValue = false)]
-        public string OrderShippingMethod { get; set; }
-
-        /// <summary>
-        /// Currency code of order
-        /// </summary>
-        /// <value>Currency code of order</value>
-        /*
-        <example>USD</example>
-        */
-        [DataMember(Name = "currency", EmitDefaultValue = false)]
-        public string Currency { get; set; }
-
-        /// <summary>
-        /// Specifies second billing address
-        /// </summary>
-        /// <value>Specifies second billing address</value>
-        /*
-        <example>Red str, 2</example>
-        */
-        [DataMember(Name = "bill_address_2", EmitDefaultValue = false)]
-        public string BillAddress2 { get; set; }
-
-        /// <summary>
-        /// Specifies billing company
-        /// </summary>
-        /// <value>Specifies billing company</value>
-        /*
-        <example>Apple</example>
-        */
-        [DataMember(Name = "bill_company", EmitDefaultValue = false)]
-        public string BillCompany { get; set; }
-
-        /// <summary>
-        /// Specifies billing phone
-        /// </summary>
-        /// <value>Specifies billing phone</value>
-        /*
-        <example>8 800 5659 6896</example>
-        */
-        [DataMember(Name = "bill_phone", EmitDefaultValue = false)]
-        public string BillPhone { get; set; }
-
-        /// <summary>
-        /// Specifies billing fax
-        /// </summary>
-        /// <value>Specifies billing fax</value>
-        /*
-        <example>545 45878</example>
-        */
-        [DataMember(Name = "bill_fax", EmitDefaultValue = false)]
-        public string BillFax { get; set; }
-
-        /// <summary>
-        /// Specifies order comment
-        /// </summary>
-        /// <value>Specifies order comment</value>
-        /*
-        <example>This coole order</example>
-        */
-        [DataMember(Name = "comment", EmitDefaultValue = false)]
-        public string Comment { get; set; }
-
-        /// <summary>
-        /// Specifies admin&#39;s order comment
-        /// </summary>
-        /// <value>Specifies admin&#39;s order comment</value>
-        /*
-        <example>Test admin comment</example>
-        */
-        [DataMember(Name = "admin_comment", EmitDefaultValue = false)]
-        public string AdminComment { get; set; }
-
-        /// <summary>
-        /// Specifies private admin&#39;s order comment
-        /// </summary>
-        /// <value>Specifies private admin&#39;s order comment</value>
-        /*
-        <example>Test admin private comment</example>
-        */
-        [DataMember(Name = "admin_private_comment", EmitDefaultValue = false)]
-        public string AdminPrivateComment { get; set; }
 
         /// <summary>
         /// Specifies customer&#39;s first name
@@ -646,6 +376,206 @@ namespace Org.OpenAPITools.Model
         public string CustomerFax { get; set; }
 
         /// <summary>
+        /// Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39;
+        /// </summary>
+        /// <value>Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39;</value>
+        /*
+        <example>PayPal</example>
+        */
+        [DataMember(Name = "order_payment_method", EmitDefaultValue = false)]
+        public string OrderPaymentMethod { get; set; }
+
+        /// <summary>
+        /// Payment transaction id
+        /// </summary>
+        /// <value>Payment transaction id</value>
+        /*
+        <example>d41d8cd98f00b204e9800998ecf8427e</example>
+        */
+        [DataMember(Name = "transaction_id", EmitDefaultValue = false)]
+        public string TransactionId { get; set; }
+
+        /// <summary>
+        /// Currency code of order
+        /// </summary>
+        /// <value>Currency code of order</value>
+        /*
+        <example>USD</example>
+        */
+        [DataMember(Name = "currency", EmitDefaultValue = false)]
+        public string Currency { get; set; }
+
+        /// <summary>
+        /// Specifies an order creation date in format Y-m-d H:i:s
+        /// </summary>
+        /// <value>Specifies an order creation date in format Y-m-d H:i:s</value>
+        /*
+        <example>2012-09-25 19:40:00</example>
+        */
+        [DataMember(Name = "date", EmitDefaultValue = false)]
+        public string Date { get; set; }
+
+        /// <summary>
+        /// Specifies order&#39;s  modification date
+        /// </summary>
+        /// <value>Specifies order&#39;s  modification date</value>
+        /*
+        <example>2014-05-05 05:05:00</example>
+        */
+        [DataMember(Name = "date_modified", EmitDefaultValue = false)]
+        public string DateModified { get; set; }
+
+        /// <summary>
+        /// Specifies order&#39;s  finished date
+        /// </summary>
+        /// <value>Specifies order&#39;s  finished date</value>
+        /*
+        <example>2014-06-05 05:05:00</example>
+        */
+        [DataMember(Name = "date_finished", EmitDefaultValue = false)]
+        public string DateFinished { get; set; }
+
+        /// <summary>
+        /// Specifies billing first name
+        /// </summary>
+        /// <value>Specifies billing first name</value>
+        /*
+        <example>Adam</example>
+        */
+        [DataMember(Name = "bill_first_name", IsRequired = true, EmitDefaultValue = true)]
+        public string BillFirstName { get; set; }
+
+        /// <summary>
+        /// Specifies billing last name
+        /// </summary>
+        /// <value>Specifies billing last name</value>
+        /*
+        <example>Smith</example>
+        */
+        [DataMember(Name = "bill_last_name", IsRequired = true, EmitDefaultValue = true)]
+        public string BillLastName { get; set; }
+
+        /// <summary>
+        /// Specifies first billing address
+        /// </summary>
+        /// <value>Specifies first billing address</value>
+        /*
+        <example>Green str. 35</example>
+        */
+        [DataMember(Name = "bill_address_1", IsRequired = true, EmitDefaultValue = true)]
+        public string BillAddress1 { get; set; }
+
+        /// <summary>
+        /// Specifies second billing address
+        /// </summary>
+        /// <value>Specifies second billing address</value>
+        /*
+        <example>Red str, 2</example>
+        */
+        [DataMember(Name = "bill_address_2", EmitDefaultValue = false)]
+        public string BillAddress2 { get; set; }
+
+        /// <summary>
+        /// Specifies billing city
+        /// </summary>
+        /// <value>Specifies billing city</value>
+        /*
+        <example>Chicago</example>
+        */
+        [DataMember(Name = "bill_city", IsRequired = true, EmitDefaultValue = true)]
+        public string BillCity { get; set; }
+
+        /// <summary>
+        /// Specifies billing postcode
+        /// </summary>
+        /// <value>Specifies billing postcode</value>
+        /*
+        <example>12345</example>
+        */
+        [DataMember(Name = "bill_postcode", IsRequired = true, EmitDefaultValue = true)]
+        public string BillPostcode { get; set; }
+
+        /// <summary>
+        /// Specifies billing state code
+        /// </summary>
+        /// <value>Specifies billing state code</value>
+        /*
+        <example>IL</example>
+        */
+        [DataMember(Name = "bill_state", IsRequired = true, EmitDefaultValue = true)]
+        public string BillState { get; set; }
+
+        /// <summary>
+        /// Specifies billing country code
+        /// </summary>
+        /// <value>Specifies billing country code</value>
+        /*
+        <example>US</example>
+        */
+        [DataMember(Name = "bill_country", IsRequired = true, EmitDefaultValue = true)]
+        public string BillCountry { get; set; }
+
+        /// <summary>
+        /// Specifies billing company
+        /// </summary>
+        /// <value>Specifies billing company</value>
+        /*
+        <example>Apple</example>
+        */
+        [DataMember(Name = "bill_company", EmitDefaultValue = false)]
+        public string BillCompany { get; set; }
+
+        /// <summary>
+        /// Specifies billing phone
+        /// </summary>
+        /// <value>Specifies billing phone</value>
+        /*
+        <example>8 800 5659 6896</example>
+        */
+        [DataMember(Name = "bill_phone", EmitDefaultValue = false)]
+        public string BillPhone { get; set; }
+
+        /// <summary>
+        /// Specifies billing fax
+        /// </summary>
+        /// <value>Specifies billing fax</value>
+        /*
+        <example>545 45878</example>
+        */
+        [DataMember(Name = "bill_fax", EmitDefaultValue = false)]
+        public string BillFax { get; set; }
+
+        /// <summary>
+        /// Specifies shipping first name
+        /// </summary>
+        /// <value>Specifies shipping first name</value>
+        /*
+        <example>John</example>
+        */
+        [DataMember(Name = "shipp_first_name", EmitDefaultValue = false)]
+        public string ShippFirstName { get; set; }
+
+        /// <summary>
+        /// Specifies shipping last name
+        /// </summary>
+        /// <value>Specifies shipping last name</value>
+        /*
+        <example>Smith</example>
+        */
+        [DataMember(Name = "shipp_last_name", EmitDefaultValue = false)]
+        public string ShippLastName { get; set; }
+
+        /// <summary>
+        /// Specifies first shipping address
+        /// </summary>
+        /// <value>Specifies first shipping address</value>
+        /*
+        <example>Green str. 35</example>
+        */
+        [DataMember(Name = "shipp_address_1", EmitDefaultValue = false)]
+        public string ShippAddress1 { get; set; }
+
+        /// <summary>
         /// Specifies second address line of a shipping street address
         /// </summary>
         /// <value>Specifies second address line of a shipping street address</value>
@@ -654,6 +584,46 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "shipp_address_2", EmitDefaultValue = false)]
         public string ShippAddress2 { get; set; }
+
+        /// <summary>
+        /// Specifies shipping city
+        /// </summary>
+        /// <value>Specifies shipping city</value>
+        /*
+        <example>Chicago</example>
+        */
+        [DataMember(Name = "shipp_city", EmitDefaultValue = false)]
+        public string ShippCity { get; set; }
+
+        /// <summary>
+        /// Specifies shipping postcode
+        /// </summary>
+        /// <value>Specifies shipping postcode</value>
+        /*
+        <example>24545</example>
+        */
+        [DataMember(Name = "shipp_postcode", EmitDefaultValue = false)]
+        public string ShippPostcode { get; set; }
+
+        /// <summary>
+        /// Specifies shipping state code
+        /// </summary>
+        /// <value>Specifies shipping state code</value>
+        /*
+        <example>IL</example>
+        */
+        [DataMember(Name = "shipp_state", EmitDefaultValue = false)]
+        public string ShippState { get; set; }
+
+        /// <summary>
+        /// Specifies shipping country code
+        /// </summary>
+        /// <value>Specifies shipping country code</value>
+        /*
+        <example>US</example>
+        */
+        [DataMember(Name = "shipp_country", EmitDefaultValue = false)]
+        public string ShippCountry { get; set; }
 
         /// <summary>
         /// Specifies shipping company
@@ -686,26 +656,6 @@ namespace Org.OpenAPITools.Model
         public string ShippFax { get; set; }
 
         /// <summary>
-        /// Specifies order&#39;s  modification date
-        /// </summary>
-        /// <value>Specifies order&#39;s  modification date</value>
-        /*
-        <example>2014-05-05 05:05:00</example>
-        */
-        [DataMember(Name = "date_modified", EmitDefaultValue = false)]
-        public string DateModified { get; set; }
-
-        /// <summary>
-        /// Specifies order&#39;s  finished date
-        /// </summary>
-        /// <value>Specifies order&#39;s  finished date</value>
-        /*
-        <example>2014-06-05 05:05:00</example>
-        */
-        [DataMember(Name = "date_finished", EmitDefaultValue = false)]
-        public string DateFinished { get; set; }
-
-        /// <summary>
         /// Total price of all ordered products multiplied by their number, excluding tax, shipping price and discounts
         /// </summary>
         /// <value>Total price of all ordered products multiplied by their number, excluding tax, shipping price and discounts</value>
@@ -724,6 +674,36 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "tax_price", EmitDefaultValue = false)]
         public decimal TaxPrice { get; set; }
+
+        /// <summary>
+        /// Defines order&#39;s total price
+        /// </summary>
+        /// <value>Defines order&#39;s total price</value>
+        /*
+        <example>23.56</example>
+        */
+        [DataMember(Name = "total_price", EmitDefaultValue = false)]
+        public decimal TotalPrice { get; set; }
+
+        /// <summary>
+        /// Defines total paid amount for the order
+        /// </summary>
+        /// <value>Defines total paid amount for the order</value>
+        /*
+        <example>23.56</example>
+        */
+        [DataMember(Name = "total_paid", EmitDefaultValue = false)]
+        public decimal TotalPaid { get; set; }
+
+        /// <summary>
+        /// Defines the sum of all line item weights in grams for the order
+        /// </summary>
+        /// <value>Defines the sum of all line item weights in grams for the order</value>
+        /*
+        <example>23</example>
+        */
+        [DataMember(Name = "total_weight", EmitDefaultValue = false)]
+        public int TotalWeight { get; set; }
 
         /// <summary>
         /// Indicates whether prices and subtotal includes tax.
@@ -756,26 +736,6 @@ namespace Org.OpenAPITools.Model
         public decimal ShippingTax { get; set; }
 
         /// <summary>
-        /// Defines tracking carrier id
-        /// </summary>
-        /// <value>Defines tracking carrier id</value>
-        /*
-        <example>USPS</example>
-        */
-        [DataMember(Name = "carrier_id", EmitDefaultValue = false)]
-        public string CarrierId { get; set; }
-
-        /// <summary>
-        /// This parameter is used for selecting a warehouse where you need to set/modify a product quantity.
-        /// </summary>
-        /// <value>This parameter is used for selecting a warehouse where you need to set/modify a product quantity.</value>
-        /*
-        <example>1</example>
-        */
-        [DataMember(Name = "warehouse_id", EmitDefaultValue = false)]
-        public string WarehouseId { get; set; }
-
-        /// <summary>
         /// Specifies order&#39;s discount
         /// </summary>
         /// <value>Specifies order&#39;s discount</value>
@@ -796,13 +756,6 @@ namespace Org.OpenAPITools.Model
         public decimal CouponDiscount { get; set; }
 
         /// <summary>
-        /// Coupons that will be applied to order
-        /// </summary>
-        /// <value>Coupons that will be applied to order</value>
-        [DataMember(Name = "coupons", EmitDefaultValue = false)]
-        public List<string> Coupons { get; set; }
-
-        /// <summary>
         /// Discounts for order with gift certificates
         /// </summary>
         /// <value>Discounts for order with gift certificates</value>
@@ -813,44 +766,41 @@ namespace Org.OpenAPITools.Model
         public decimal GiftCertificateDiscount { get; set; }
 
         /// <summary>
-        /// Create order with fulfillment status
+        /// Defines order shipping method
         /// </summary>
-        /// <value>Create order with fulfillment status</value>
+        /// <value>Defines order shipping method</value>
         /*
-        <example>fulfilled</example>
+        <example>UPS Ground</example>
         */
-        [DataMember(Name = "fulfillment_status", EmitDefaultValue = false)]
-        public string FulfillmentStatus { get; set; }
+        [DataMember(Name = "order_shipping_method", EmitDefaultValue = false)]
+        public string OrderShippingMethod { get; set; }
 
         /// <summary>
-        /// Create order with financial status
+        /// Defines tracking carrier id
         /// </summary>
-        /// <value>Create order with financial status</value>
+        /// <value>Defines tracking carrier id</value>
         /*
-        <example>paid</example>
+        <example>USPS</example>
         */
-        [DataMember(Name = "financial_status", EmitDefaultValue = false)]
-        public string FinancialStatus { get; set; }
+        [DataMember(Name = "carrier_id", EmitDefaultValue = false)]
+        public string CarrierId { get; set; }
 
         /// <summary>
-        /// Defines total paid amount for the order
+        /// This parameter is used for selecting a warehouse where you need to set/modify a product quantity.
         /// </summary>
-        /// <value>Defines total paid amount for the order</value>
+        /// <value>This parameter is used for selecting a warehouse where you need to set/modify a product quantity.</value>
         /*
-        <example>23.56</example>
+        <example>1</example>
         */
-        [DataMember(Name = "total_paid", EmitDefaultValue = false)]
-        public decimal TotalPaid { get; set; }
+        [DataMember(Name = "warehouse_id", EmitDefaultValue = false)]
+        public string WarehouseId { get; set; }
 
         /// <summary>
-        /// Identifying the system used to generate the order
+        /// Coupons that will be applied to order
         /// </summary>
-        /// <value>Identifying the system used to generate the order</value>
-        /*
-        <example>POS</example>
-        */
-        [DataMember(Name = "external_source", EmitDefaultValue = false)]
-        public string ExternalSource { get; set; }
+        /// <value>Coupons that will be applied to order</value>
+        [DataMember(Name = "coupons", EmitDefaultValue = false)]
+        public List<string> Coupons { get; set; }
 
         /// <summary>
         /// Order tags
@@ -861,6 +811,66 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "tags", EmitDefaultValue = false)]
         public string Tags { get; set; }
+
+        /// <summary>
+        /// Specifies order comment
+        /// </summary>
+        /// <value>Specifies order comment</value>
+        /*
+        <example>This coole order</example>
+        */
+        [DataMember(Name = "comment", EmitDefaultValue = false)]
+        public string Comment { get; set; }
+
+        /// <summary>
+        /// Specifies admin&#39;s order comment
+        /// </summary>
+        /// <value>Specifies admin&#39;s order comment</value>
+        /*
+        <example>Test admin comment</example>
+        */
+        [DataMember(Name = "admin_comment", EmitDefaultValue = false)]
+        public string AdminComment { get; set; }
+
+        /// <summary>
+        /// Specifies private admin&#39;s order comment
+        /// </summary>
+        /// <value>Specifies private admin&#39;s order comment</value>
+        /*
+        <example>Test admin private comment</example>
+        */
+        [DataMember(Name = "admin_private_comment", EmitDefaultValue = false)]
+        public string AdminPrivateComment { get; set; }
+
+        /// <summary>
+        /// Send notifications to customer after order was created
+        /// </summary>
+        /// <value>Send notifications to customer after order was created</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "send_notifications", EmitDefaultValue = true)]
+        public bool SendNotifications { get; set; }
+
+        /// <summary>
+        /// Notify admin when new order was created.
+        /// </summary>
+        /// <value>Notify admin when new order was created.</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "send_admin_notifications", EmitDefaultValue = true)]
+        public bool SendAdminNotifications { get; set; }
+
+        /// <summary>
+        /// Identifying the system used to generate the order
+        /// </summary>
+        /// <value>Identifying the system used to generate the order</value>
+        /*
+        <example>POS</example>
+        */
+        [DataMember(Name = "external_source", EmitDefaultValue = false)]
+        public string ExternalSource { get; set; }
 
         /// <summary>
         /// The behaviour to use when updating inventory.&lt;hr&gt;&lt;div style&#x3D;\&quot;font-style:normal\&quot;&gt;Values description:&lt;div style&#x3D;\&quot;margin-left: 2%; padding-top: 2%\&quot;&gt;&lt;div style&#x3D;\&quot;font-size:85%\&quot;&gt;&lt;b&gt;bypass&lt;/b&gt; &#x3D; Do not claim inventory &lt;/br&gt;&lt;/br&gt;&lt;b&gt;decrement_ignoring_policy&lt;/b&gt; &#x3D; Ignore the product&#39;s &lt;/br&gt; inventory policy and claim amounts&lt;/br&gt;&lt;/br&gt;&lt;b&gt;decrement_obeying_policy&lt;/b&gt; &#x3D;  Obey the product&#39;s &lt;/br&gt; inventory policy.&lt;/br&gt;&lt;/br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
@@ -888,16 +898,6 @@ namespace Org.OpenAPITools.Model
         /// <value>Defines note attributes</value>
         [DataMember(Name = "note_attributes", EmitDefaultValue = false)]
         public List<OrderAddNoteAttributesInner> NoteAttributes { get; set; }
-
-        /// <summary>
-        /// Defines the sum of all line item weights in grams for the order
-        /// </summary>
-        /// <value>Defines the sum of all line item weights in grams for the order</value>
-        /*
-        <example>23</example>
-        */
-        [DataMember(Name = "total_weight", EmitDefaultValue = false)]
-        public int TotalWeight { get; set; }
 
         /// <summary>
         /// Is cache clear required
@@ -938,68 +938,68 @@ namespace Org.OpenAPITools.Model
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  ChannelId: ").Append(ChannelId).Append("\n");
             sb.Append("  OrderStatus: ").Append(OrderStatus).Append("\n");
-            sb.Append("  SendNotifications: ").Append(SendNotifications).Append("\n");
-            sb.Append("  SendAdminNotifications: ").Append(SendAdminNotifications).Append("\n");
+            sb.Append("  FulfillmentStatus: ").Append(FulfillmentStatus).Append("\n");
+            sb.Append("  FinancialStatus: ").Append(FinancialStatus).Append("\n");
             sb.Append("  CustomerEmail: ").Append(CustomerEmail).Append("\n");
-            sb.Append("  BillFirstName: ").Append(BillFirstName).Append("\n");
-            sb.Append("  BillLastName: ").Append(BillLastName).Append("\n");
-            sb.Append("  BillAddress1: ").Append(BillAddress1).Append("\n");
-            sb.Append("  BillCity: ").Append(BillCity).Append("\n");
-            sb.Append("  BillPostcode: ").Append(BillPostcode).Append("\n");
-            sb.Append("  BillState: ").Append(BillState).Append("\n");
-            sb.Append("  BillCountry: ").Append(BillCountry).Append("\n");
-            sb.Append("  ShippFirstName: ").Append(ShippFirstName).Append("\n");
-            sb.Append("  ShippLastName: ").Append(ShippLastName).Append("\n");
-            sb.Append("  ShippAddress1: ").Append(ShippAddress1).Append("\n");
-            sb.Append("  ShippCity: ").Append(ShippCity).Append("\n");
-            sb.Append("  ShippPostcode: ").Append(ShippPostcode).Append("\n");
-            sb.Append("  ShippState: ").Append(ShippState).Append("\n");
-            sb.Append("  ShippCountry: ").Append(ShippCountry).Append("\n");
-            sb.Append("  TotalPrice: ").Append(TotalPrice).Append("\n");
-            sb.Append("  Date: ").Append(Date).Append("\n");
-            sb.Append("  OrderPaymentMethod: ").Append(OrderPaymentMethod).Append("\n");
-            sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
-            sb.Append("  OrderShippingMethod: ").Append(OrderShippingMethod).Append("\n");
-            sb.Append("  Currency: ").Append(Currency).Append("\n");
-            sb.Append("  BillAddress2: ").Append(BillAddress2).Append("\n");
-            sb.Append("  BillCompany: ").Append(BillCompany).Append("\n");
-            sb.Append("  BillPhone: ").Append(BillPhone).Append("\n");
-            sb.Append("  BillFax: ").Append(BillFax).Append("\n");
-            sb.Append("  Comment: ").Append(Comment).Append("\n");
-            sb.Append("  AdminComment: ").Append(AdminComment).Append("\n");
-            sb.Append("  AdminPrivateComment: ").Append(AdminPrivateComment).Append("\n");
             sb.Append("  CustomerFirstName: ").Append(CustomerFirstName).Append("\n");
             sb.Append("  CustomerLastName: ").Append(CustomerLastName).Append("\n");
             sb.Append("  CustomerPhone: ").Append(CustomerPhone).Append("\n");
             sb.Append("  CustomerCountry: ").Append(CustomerCountry).Append("\n");
             sb.Append("  CustomerBirthday: ").Append(CustomerBirthday).Append("\n");
             sb.Append("  CustomerFax: ").Append(CustomerFax).Append("\n");
+            sb.Append("  OrderPaymentMethod: ").Append(OrderPaymentMethod).Append("\n");
+            sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
+            sb.Append("  Currency: ").Append(Currency).Append("\n");
+            sb.Append("  Date: ").Append(Date).Append("\n");
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  DateFinished: ").Append(DateFinished).Append("\n");
+            sb.Append("  BillFirstName: ").Append(BillFirstName).Append("\n");
+            sb.Append("  BillLastName: ").Append(BillLastName).Append("\n");
+            sb.Append("  BillAddress1: ").Append(BillAddress1).Append("\n");
+            sb.Append("  BillAddress2: ").Append(BillAddress2).Append("\n");
+            sb.Append("  BillCity: ").Append(BillCity).Append("\n");
+            sb.Append("  BillPostcode: ").Append(BillPostcode).Append("\n");
+            sb.Append("  BillState: ").Append(BillState).Append("\n");
+            sb.Append("  BillCountry: ").Append(BillCountry).Append("\n");
+            sb.Append("  BillCompany: ").Append(BillCompany).Append("\n");
+            sb.Append("  BillPhone: ").Append(BillPhone).Append("\n");
+            sb.Append("  BillFax: ").Append(BillFax).Append("\n");
+            sb.Append("  ShippFirstName: ").Append(ShippFirstName).Append("\n");
+            sb.Append("  ShippLastName: ").Append(ShippLastName).Append("\n");
+            sb.Append("  ShippAddress1: ").Append(ShippAddress1).Append("\n");
             sb.Append("  ShippAddress2: ").Append(ShippAddress2).Append("\n");
+            sb.Append("  ShippCity: ").Append(ShippCity).Append("\n");
+            sb.Append("  ShippPostcode: ").Append(ShippPostcode).Append("\n");
+            sb.Append("  ShippState: ").Append(ShippState).Append("\n");
+            sb.Append("  ShippCountry: ").Append(ShippCountry).Append("\n");
             sb.Append("  ShippCompany: ").Append(ShippCompany).Append("\n");
             sb.Append("  ShippPhone: ").Append(ShippPhone).Append("\n");
             sb.Append("  ShippFax: ").Append(ShippFax).Append("\n");
-            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            sb.Append("  DateFinished: ").Append(DateFinished).Append("\n");
             sb.Append("  SubtotalPrice: ").Append(SubtotalPrice).Append("\n");
             sb.Append("  TaxPrice: ").Append(TaxPrice).Append("\n");
+            sb.Append("  TotalPrice: ").Append(TotalPrice).Append("\n");
+            sb.Append("  TotalPaid: ").Append(TotalPaid).Append("\n");
+            sb.Append("  TotalWeight: ").Append(TotalWeight).Append("\n");
             sb.Append("  PricesIncTax: ").Append(PricesIncTax).Append("\n");
             sb.Append("  ShippingPrice: ").Append(ShippingPrice).Append("\n");
             sb.Append("  ShippingTax: ").Append(ShippingTax).Append("\n");
-            sb.Append("  CarrierId: ").Append(CarrierId).Append("\n");
-            sb.Append("  WarehouseId: ").Append(WarehouseId).Append("\n");
             sb.Append("  Discount: ").Append(Discount).Append("\n");
             sb.Append("  CouponDiscount: ").Append(CouponDiscount).Append("\n");
-            sb.Append("  Coupons: ").Append(Coupons).Append("\n");
             sb.Append("  GiftCertificateDiscount: ").Append(GiftCertificateDiscount).Append("\n");
-            sb.Append("  FulfillmentStatus: ").Append(FulfillmentStatus).Append("\n");
-            sb.Append("  FinancialStatus: ").Append(FinancialStatus).Append("\n");
-            sb.Append("  TotalPaid: ").Append(TotalPaid).Append("\n");
-            sb.Append("  ExternalSource: ").Append(ExternalSource).Append("\n");
+            sb.Append("  OrderShippingMethod: ").Append(OrderShippingMethod).Append("\n");
+            sb.Append("  CarrierId: ").Append(CarrierId).Append("\n");
+            sb.Append("  WarehouseId: ").Append(WarehouseId).Append("\n");
+            sb.Append("  Coupons: ").Append(Coupons).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
+            sb.Append("  Comment: ").Append(Comment).Append("\n");
+            sb.Append("  AdminComment: ").Append(AdminComment).Append("\n");
+            sb.Append("  AdminPrivateComment: ").Append(AdminPrivateComment).Append("\n");
+            sb.Append("  SendNotifications: ").Append(SendNotifications).Append("\n");
+            sb.Append("  SendAdminNotifications: ").Append(SendAdminNotifications).Append("\n");
+            sb.Append("  ExternalSource: ").Append(ExternalSource).Append("\n");
             sb.Append("  InventoryBehaviour: ").Append(InventoryBehaviour).Append("\n");
             sb.Append("  CreateInvoice: ").Append(CreateInvoice).Append("\n");
             sb.Append("  NoteAttributes: ").Append(NoteAttributes).Append("\n");
-            sb.Append("  TotalWeight: ").Append(TotalWeight).Append("\n");
             sb.Append("  ClearCache: ").Append(ClearCache).Append("\n");
             sb.Append("  Origin: ").Append(Origin).Append("\n");
             sb.Append("  OrderItem: ").Append(OrderItem).Append("\n");

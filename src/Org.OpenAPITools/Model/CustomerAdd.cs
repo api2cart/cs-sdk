@@ -41,29 +41,29 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="CustomerAdd" /> class.
         /// </summary>
         /// <param name="email">Defines customer&#39;s email (required).</param>
-        /// <param name="firstName">Defines customer&#39;s first name (required).</param>
-        /// <param name="lastName">Defines customer&#39;s last name (required).</param>
+        /// <param name="firstName">Defines customer&#39;s first name.</param>
+        /// <param name="lastName">Defines customer&#39;s last name.</param>
         /// <param name="password">Defines customer&#39;s unique password.</param>
         /// <param name="group">Defines the group where the customer.</param>
         /// <param name="groupIds">Groups that will be assigned to a customer.</param>
+        /// <param name="status">Defines customer&#39;s status (default to &quot;enabled&quot;).</param>
         /// <param name="createdTime">Entity&#39;s date creation.</param>
         /// <param name="modifiedTime">Entity&#39;s date modification.</param>
         /// <param name="login">Specifies customer&#39;s login name.</param>
         /// <param name="lastLogin">Defines customer&#39;s last login time.</param>
         /// <param name="birthDay">Defines customer&#39;s birthday.</param>
-        /// <param name="status">Defines customer&#39;s status (default to &quot;enabled&quot;).</param>
-        /// <param name="newsLetterSubscription">Defines whether the newsletter subscription is available for the user (default to false).</param>
+        /// <param name="newsLetterSubscription">Defines whether the newsletter subscription is available for the user.</param>
         /// <param name="consents">Defines consents to notifications.</param>
         /// <param name="gender">Defines customer&#39;s gender.</param>
         /// <param name="website">Link to customer website.</param>
-        /// <param name="storeId">Store Id.</param>
         /// <param name="fax">Defines customer&#39;s fax.</param>
         /// <param name="company">Defines customer&#39;s company.</param>
         /// <param name="phone">Defines customer&#39;s phone number.</param>
         /// <param name="note">The customer note..</param>
         /// <param name="country">Specifies ISO code or name of country.</param>
+        /// <param name="storeId">Store Id.</param>
         /// <param name="address">address.</param>
-        public CustomerAdd(string email = default(string), string firstName = default(string), string lastName = default(string), string password = default(string), string group = default(string), string groupIds = default(string), string createdTime = default(string), string modifiedTime = default(string), string login = default(string), string lastLogin = default(string), string birthDay = default(string), string status = @"enabled", bool newsLetterSubscription = false, List<CustomerAddConsentsInner> consents = default(List<CustomerAddConsentsInner>), string gender = default(string), string website = default(string), string storeId = default(string), string fax = default(string), string company = default(string), string phone = default(string), string note = default(string), string country = default(string), List<CustomerAddAddressInner> address = default(List<CustomerAddAddressInner>))
+        public CustomerAdd(string email = default(string), string firstName = default(string), string lastName = default(string), string password = default(string), string group = default(string), string groupIds = default(string), string status = @"enabled", string createdTime = default(string), string modifiedTime = default(string), string login = default(string), string lastLogin = default(string), string birthDay = default(string), bool newsLetterSubscription = default(bool), List<CustomerAddConsentsInner> consents = default(List<CustomerAddConsentsInner>), string gender = default(string), string website = default(string), string fax = default(string), string company = default(string), string phone = default(string), string note = default(string), string country = default(string), string storeId = default(string), List<CustomerAddAddressInner> address = default(List<CustomerAddAddressInner>))
         {
             // to ensure "email" is required (not null)
             if (email == null)
@@ -71,38 +71,28 @@ namespace Org.OpenAPITools.Model
                 throw new ArgumentNullException("email is a required property for CustomerAdd and cannot be null");
             }
             this.Email = email;
-            // to ensure "firstName" is required (not null)
-            if (firstName == null)
-            {
-                throw new ArgumentNullException("firstName is a required property for CustomerAdd and cannot be null");
-            }
             this.FirstName = firstName;
-            // to ensure "lastName" is required (not null)
-            if (lastName == null)
-            {
-                throw new ArgumentNullException("lastName is a required property for CustomerAdd and cannot be null");
-            }
             this.LastName = lastName;
             this.Password = password;
             this.Group = group;
             this.GroupIds = groupIds;
+            // use default value if no "status" provided
+            this.Status = status ?? @"enabled";
             this.CreatedTime = createdTime;
             this.ModifiedTime = modifiedTime;
             this.Login = login;
             this.LastLogin = lastLogin;
             this.BirthDay = birthDay;
-            // use default value if no "status" provided
-            this.Status = status ?? @"enabled";
             this.NewsLetterSubscription = newsLetterSubscription;
             this.Consents = consents;
             this.Gender = gender;
             this.Website = website;
-            this.StoreId = storeId;
             this.Fax = fax;
             this.Company = company;
             this.Phone = phone;
             this.Note = note;
             this.Country = country;
+            this.StoreId = storeId;
             this.Address = address;
         }
 
@@ -123,7 +113,7 @@ namespace Org.OpenAPITools.Model
         /*
         <example>John</example>
         */
-        [DataMember(Name = "first_name", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "first_name", EmitDefaultValue = false)]
         public string FirstName { get; set; }
 
         /// <summary>
@@ -133,7 +123,7 @@ namespace Org.OpenAPITools.Model
         /*
         <example>Smith</example>
         */
-        [DataMember(Name = "last_name", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "last_name", EmitDefaultValue = false)]
         public string LastName { get; set; }
 
         /// <summary>
@@ -165,6 +155,16 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "group_ids", EmitDefaultValue = false)]
         public string GroupIds { get; set; }
+
+        /// <summary>
+        /// Defines customer&#39;s status
+        /// </summary>
+        /// <value>Defines customer&#39;s status</value>
+        /*
+        <example>disabled</example>
+        */
+        [DataMember(Name = "status", EmitDefaultValue = false)]
+        public string Status { get; set; }
 
         /// <summary>
         /// Entity&#39;s date creation
@@ -217,16 +217,6 @@ namespace Org.OpenAPITools.Model
         public string BirthDay { get; set; }
 
         /// <summary>
-        /// Defines customer&#39;s status
-        /// </summary>
-        /// <value>Defines customer&#39;s status</value>
-        /*
-        <example>disabled</example>
-        */
-        [DataMember(Name = "status", EmitDefaultValue = false)]
-        public string Status { get; set; }
-
-        /// <summary>
         /// Defines whether the newsletter subscription is available for the user
         /// </summary>
         /// <value>Defines whether the newsletter subscription is available for the user</value>
@@ -262,16 +252,6 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "website", EmitDefaultValue = false)]
         public string Website { get; set; }
-
-        /// <summary>
-        /// Store Id
-        /// </summary>
-        /// <value>Store Id</value>
-        /*
-        <example>1</example>
-        */
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
-        public string StoreId { get; set; }
 
         /// <summary>
         /// Defines customer&#39;s fax
@@ -324,6 +304,16 @@ namespace Org.OpenAPITools.Model
         public string Country { get; set; }
 
         /// <summary>
+        /// Store Id
+        /// </summary>
+        /// <value>Store Id</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        public string StoreId { get; set; }
+
+        /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name = "address", EmitDefaultValue = false)]
@@ -343,22 +333,22 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Password: ").Append(Password).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  GroupIds: ").Append(GroupIds).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  CreatedTime: ").Append(CreatedTime).Append("\n");
             sb.Append("  ModifiedTime: ").Append(ModifiedTime).Append("\n");
             sb.Append("  Login: ").Append(Login).Append("\n");
             sb.Append("  LastLogin: ").Append(LastLogin).Append("\n");
             sb.Append("  BirthDay: ").Append(BirthDay).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  NewsLetterSubscription: ").Append(NewsLetterSubscription).Append("\n");
             sb.Append("  Consents: ").Append(Consents).Append("\n");
             sb.Append("  Gender: ").Append(Gender).Append("\n");
             sb.Append("  Website: ").Append(Website).Append("\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  Fax: ").Append(Fax).Append("\n");
             sb.Append("  Company: ").Append(Company).Append("\n");
             sb.Append("  Phone: ").Append(Phone).Append("\n");
             sb.Append("  Note: ").Append(Note).Append("\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
+            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

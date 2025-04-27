@@ -63,21 +63,21 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string? parentId = null;
-            //string? storesIds = null;
-            //string? storeId = null;
-            //string? langId = null;
-            //bool? avail = null;
-            //int? sortOrder = null;
-            //string? createdTime = null;
-            //string? modifiedTime = null;
             //string? description = null;
             //string? shortDescription = null;
+            //string? parentId = null;
+            //bool? avail = null;
+            //string? createdTime = null;
+            //string? modifiedTime = null;
+            //int? sortOrder = null;
             //string? metaTitle = null;
             //string? metaDescription = null;
             //string? metaKeywords = null;
             //string? seoUrl = null;
-            //var response = instance.CategoryAdd(name, parentId, storesIds, storeId, langId, avail, sortOrder, createdTime, modifiedTime, description, shortDescription, metaTitle, metaDescription, metaKeywords, seoUrl);
+            //string? storeId = null;
+            //string? storesIds = null;
+            //string? langId = null;
+            //var response = instance.CategoryAdd(name, description, shortDescription, parentId, avail, createdTime, modifiedTime, sortOrder, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
             //Assert.IsType<CategoryAdd200Response>(response);
         }
 
@@ -100,10 +100,10 @@ namespace Org.OpenAPITools.Test.Api
         public void CategoryAssignTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string productId = null;
             //string categoryId = null;
+            //string productId = null;
             //string? storeId = null;
-            //var response = instance.CategoryAssign(productId, categoryId, storeId);
+            //var response = instance.CategoryAssign(categoryId, productId, storeId);
             //Assert.IsType<CartConfigUpdate200Response>(response);
         }
 
@@ -117,17 +117,17 @@ namespace Org.OpenAPITools.Test.Api
             //string? parentId = null;
             //string? storeId = null;
             //string? langId = null;
+            //bool? avail = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
-            //bool? avail = null;
             //string? productType = null;
             //string? findValue = null;
             //string? findWhere = null;
             //string? reportRequestId = null;
             //bool? disableReportCache = null;
-            //var response = instance.CategoryCount(parentId, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, avail, productType, findValue, findWhere, reportRequestId, disableReportCache);
+            //var response = instance.CategoryCount(parentId, storeId, langId, avail, createdFrom, createdTo, modifiedFrom, modifiedTo, productType, findValue, findWhere, reportRequestId, disableReportCache);
             //Assert.IsType<CategoryCount200Response>(response);
         }
 
@@ -171,11 +171,11 @@ namespace Org.OpenAPITools.Test.Api
             //string imageName = null;
             //string url = null;
             //string type = null;
+            //string? storeId = null;
             //string? label = null;
             //string? mime = null;
             //int? position = null;
-            //string? storeId = null;
-            //var response = instance.CategoryImageAdd(categoryId, imageName, url, type, label, mime, position, storeId);
+            //var response = instance.CategoryImageAdd(categoryId, imageName, url, type, storeId, label, mime, position);
             //Assert.IsType<CategoryImageAdd200Response>(response);
         }
 
@@ -201,15 +201,15 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
-            //string? varParams = null;
-            //string? responseFields = null;
-            //string? exclude = null;
             //string? storeId = null;
             //string? langId = null;
             //string? schemaType = null;
+            //string? responseFields = null;
+            //string? varParams = null;
+            //string? exclude = null;
             //string? reportRequestId = null;
             //bool? disableReportCache = null;
-            //var response = instance.CategoryInfo(id, varParams, responseFields, exclude, storeId, langId, schemaType, reportRequestId, disableReportCache);
+            //var response = instance.CategoryInfo(id, storeId, langId, schemaType, responseFields, varParams, exclude, reportRequestId, disableReportCache);
             //Assert.IsType<CategoryInfo200Response>(response);
         }
 
@@ -223,24 +223,24 @@ namespace Org.OpenAPITools.Test.Api
             //int? start = null;
             //int? count = null;
             //string? pageCursor = null;
-            //string? parentId = null;
-            //string? varParams = null;
-            //string? responseFields = null;
-            //string? exclude = null;
             //string? storeId = null;
             //string? langId = null;
+            //string? parentId = null;
+            //bool? avail = null;
+            //string? productType = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
-            //bool? avail = null;
-            //string? productType = null;
             //string? findValue = null;
             //string? findWhere = null;
+            //string? responseFields = null;
+            //string? varParams = null;
+            //string? exclude = null;
             //string? reportRequestId = null;
             //bool? disableReportCache = null;
             //bool? disableCache = null;
-            //var response = instance.CategoryList(start, count, pageCursor, parentId, varParams, responseFields, exclude, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, avail, productType, findValue, findWhere, reportRequestId, disableReportCache, disableCache);
+            //var response = instance.CategoryList(start, count, pageCursor, storeId, langId, parentId, avail, productType, createdFrom, createdTo, modifiedFrom, modifiedTo, findValue, findWhere, responseFields, varParams, exclude, reportRequestId, disableReportCache, disableCache);
             //Assert.IsType<ModelResponseCategoryList>(response);
         }
 
@@ -267,20 +267,20 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //string? name = null;
+            //string? description = null;
+            //string? shortDescription = null;
             //string? parentId = null;
-            //string? storesIds = null;
             //bool? avail = null;
             //int? sortOrder = null;
             //string? modifiedTime = null;
-            //string? description = null;
-            //string? shortDescription = null;
             //string? metaTitle = null;
             //string? metaDescription = null;
             //string? metaKeywords = null;
             //string? seoUrl = null;
-            //string? langId = null;
             //string? storeId = null;
-            //var response = instance.CategoryUpdate(id, name, parentId, storesIds, avail, sortOrder, modifiedTime, description, shortDescription, metaTitle, metaDescription, metaKeywords, seoUrl, langId, storeId);
+            //string? storesIds = null;
+            //string? langId = null;
+            //var response = instance.CategoryUpdate(id, name, description, shortDescription, parentId, avail, sortOrder, modifiedTime, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
             //Assert.IsType<AccountConfigUpdate200Response>(response);
         }
     }

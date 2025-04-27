@@ -30,7 +30,7 @@ All URIs are relative to *https://api.api2cart.com/v1.1*
 
 <a id="orderabandonedlist"></a>
 # **OrderAbandonedList**
-> ModelResponseOrderAbandonedList OrderAbandonedList (string? customerId = null, string? customerEmail = null, string? createdTo = null, string? createdFrom = null, string? modifiedTo = null, string? modifiedFrom = null, bool? skipEmptyEmail = null, string? storeId = null, string? pageCursor = null, int? count = null, int? start = null, string? varParams = null, string? responseFields = null, string? exclude = null)
+> ModelResponseOrderAbandonedList OrderAbandonedList (int? start = null, int? count = null, string? pageCursor = null, string? customerId = null, string? customerEmail = null, string? storeId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, bool? skipEmptyEmail = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 order.abandoned.list
 
@@ -62,25 +62,25 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new OrderApi(config);
+            var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
+            var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var customerId = 5;  // string? | Retrieves orders specified by customer id (optional) 
             var customerEmail = jubari@hannsgroup.com;  // string? | Retrieves orders specified by customer email (optional) 
-            var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
-            var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
-            var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-            var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
-            var skipEmptyEmail = true;  // bool? | Filter empty emails (optional)  (default to false)
             var storeId = 1;  // string? | Store Id (optional) 
-            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
-            var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
-            var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
-            var varParams = force_all;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "customer,totals,items")
+            var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
+            var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
+            var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
+            var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
+            var skipEmptyEmail = true;  // bool? | Filter empty emails (optional)  (default to false)
             var responseFields = {return_code,pagination,result{order{id,customer{email},created_at,totals{total},order_products}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = force_all;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "customer,totals,items")
             var exclude = customer;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // order.abandoned.list
-                ModelResponseOrderAbandonedList result = apiInstance.OrderAbandonedList(customerId, customerEmail, createdTo, createdFrom, modifiedTo, modifiedFrom, skipEmptyEmail, storeId, pageCursor, count, start, varParams, responseFields, exclude);
+                ModelResponseOrderAbandonedList result = apiInstance.OrderAbandonedList(start, count, pageCursor, customerId, customerEmail, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, skipEmptyEmail, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -101,7 +101,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.abandoned.list
-    ApiResponse<ModelResponseOrderAbandonedList> response = apiInstance.OrderAbandonedListWithHttpInfo(customerId, customerEmail, createdTo, createdFrom, modifiedTo, modifiedFrom, skipEmptyEmail, storeId, pageCursor, count, start, varParams, responseFields, exclude);
+    ApiResponse<ModelResponseOrderAbandonedList> response = apiInstance.OrderAbandonedListWithHttpInfo(start, count, pageCursor, customerId, customerEmail, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, skipEmptyEmail, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -118,19 +118,19 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
+| **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
+| **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **customerId** | **string?** | Retrieves orders specified by customer id | [optional]  |
 | **customerEmail** | **string?** | Retrieves orders specified by customer email | [optional]  |
-| **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
-| **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
-| **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-| **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
-| **skipEmptyEmail** | **bool?** | Filter empty emails | [optional] [default to false] |
 | **storeId** | **string?** | Store Id | [optional]  |
-| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
-| **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
-| **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;customer,totals,items&quot;] |
+| **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
+| **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
+| **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
+| **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
+| **skipEmptyEmail** | **bool?** | Filter empty emails | [optional] [default to false] |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;customer,totals,items&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
@@ -256,7 +256,7 @@ catch (ApiException e)
 
 <a id="ordercount"></a>
 # **OrderCount**
-> OrderCount200Response OrderCount (string? customerId = null, string? customerEmail = null, string? orderStatus = null, List<string>? orderStatusIds = null, string? createdTo = null, string? createdFrom = null, string? modifiedTo = null, string? modifiedFrom = null, string? storeId = null, string? ids = null, string? orderIds = null, string? ebayOrderStatus = null, string? financialStatus = null, List<string>? financialStatusIds = null, string? fulfillmentChannel = null, string? fulfillmentStatus = null, string? shippingMethod = null, string? deliveryMethod = null, string? tags = null, string? shipNodeType = null)
+> OrderCount200Response OrderCount (string? orderIds = null, string? ids = null, string? customerId = null, string? storeId = null, string? customerEmail = null, string? orderStatus = null, List<string>? orderStatusIds = null, string? ebayOrderStatus = null, string? financialStatus = null, List<string>? financialStatusIds = null, string? fulfillmentChannel = null, string? fulfillmentStatus = null, string? shippingMethod = null, string? deliveryMethod = null, string? tags = null, string? shipNodeType = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null)
 
 order.count
 
@@ -288,17 +288,13 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new OrderApi(config);
+            var orderIds = 24,25;  // string? | Counts orders specified by order ids (optional) 
+            var ids = 24,25;  // string? | Counts orders specified by ids (optional) 
             var customerId = 5;  // string? | Counts orders quantity specified by customer id (optional) 
+            var storeId = 1;  // string? | Counts orders quantity specified by store id (optional) 
             var customerEmail = jubari@hannsgroup.com;  // string? | Counts orders quantity specified by customer email (optional) 
             var orderStatus = Completed;  // string? | Counts orders quantity specified by order status (optional) 
             var orderStatusIds = new List<string>?(); // List<string>? | Retrieves orders specified by order statuses (optional) 
-            var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
-            var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
-            var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-            var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
-            var storeId = 1;  // string? | Counts orders quantity specified by store id (optional) 
-            var ids = 24,25;  // string? | Counts orders specified by ids (optional) 
-            var orderIds = 24,25;  // string? | Counts orders specified by order ids (optional) 
             var ebayOrderStatus = Active;  // string? | Counts orders quantity specified by order status (optional) 
             var financialStatus = paid;  // string? | Counts orders quantity specified by financial status (optional) 
             var financialStatusIds = new List<string>?(); // List<string>? | Retrieves orders count specified by financial status ids (optional) 
@@ -308,11 +304,15 @@ namespace Example
             var deliveryMethod = local;  // string? | Retrieves order with delivery method (optional) 
             var tags = tag1,tag2;  // string? | Order tags (optional) 
             var shipNodeType = SellerFulfilled;  // string? | Retrieves order with ship node type (optional) 
+            var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
+            var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
+            var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
+            var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
 
             try
             {
                 // order.count
-                OrderCount200Response result = apiInstance.OrderCount(customerId, customerEmail, orderStatus, orderStatusIds, createdTo, createdFrom, modifiedTo, modifiedFrom, storeId, ids, orderIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType);
+                OrderCount200Response result = apiInstance.OrderCount(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -333,7 +333,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.count
-    ApiResponse<OrderCount200Response> response = apiInstance.OrderCountWithHttpInfo(customerId, customerEmail, orderStatus, orderStatusIds, createdTo, createdFrom, modifiedTo, modifiedFrom, storeId, ids, orderIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType);
+    ApiResponse<OrderCount200Response> response = apiInstance.OrderCountWithHttpInfo(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -350,17 +350,13 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
+| **orderIds** | **string?** | Counts orders specified by order ids | [optional]  |
+| **ids** | **string?** | Counts orders specified by ids | [optional]  |
 | **customerId** | **string?** | Counts orders quantity specified by customer id | [optional]  |
+| **storeId** | **string?** | Counts orders quantity specified by store id | [optional]  |
 | **customerEmail** | **string?** | Counts orders quantity specified by customer email | [optional]  |
 | **orderStatus** | **string?** | Counts orders quantity specified by order status | [optional]  |
 | **orderStatusIds** | [**List&lt;string&gt;?**](string.md) | Retrieves orders specified by order statuses | [optional]  |
-| **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
-| **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
-| **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-| **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
-| **storeId** | **string?** | Counts orders quantity specified by store id | [optional]  |
-| **ids** | **string?** | Counts orders specified by ids | [optional]  |
-| **orderIds** | **string?** | Counts orders specified by order ids | [optional]  |
 | **ebayOrderStatus** | **string?** | Counts orders quantity specified by order status | [optional]  |
 | **financialStatus** | **string?** | Counts orders quantity specified by financial status | [optional]  |
 | **financialStatusIds** | [**List&lt;string&gt;?**](string.md) | Retrieves orders count specified by financial status ids | [optional]  |
@@ -370,6 +366,10 @@ catch (ApiException e)
 | **deliveryMethod** | **string?** | Retrieves order with delivery method | [optional]  |
 | **tags** | **string?** | Order tags | [optional]  |
 | **shipNodeType** | **string?** | Retrieves order with ship node type | [optional]  |
+| **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
+| **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
+| **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
+| **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
 
 ### Return type
 
@@ -489,7 +489,7 @@ This endpoint does not need any parameter.
 
 <a id="orderfind"></a>
 # **OrderFind**
-> OrderFind200Response OrderFind (string? customerId = null, string? customerEmail = null, string? orderStatus = null, int? start = null, int? count = null, string? varParams = null, string? exclude = null, string? createdTo = null, string? createdFrom = null, string? modifiedTo = null, string? modifiedFrom = null, string? financialStatus = null)
+> OrderFind200Response OrderFind (int? start = null, int? count = null, string? customerId = null, string? customerEmail = null, string? orderStatus = null, string? financialStatus = null, string? createdTo = null, string? createdFrom = null, string? modifiedTo = null, string? modifiedFrom = null, string? varParams = null, string? exclude = null)
 
 order.find
 
@@ -521,23 +521,23 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new OrderApi(config);
+            var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
+            var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
             var customerId = 5;  // string? | Retrieves orders specified by customer id (optional) 
             var customerEmail = jubari@hannsgroup.com;  // string? | Retrieves orders specified by customer email (optional) 
             var orderStatus = Completed;  // string? | Retrieves orders specified by order status (optional) 
-            var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
-            var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
-            var varParams = order_id,totals,status;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "order_id,customer,totals,address,items,bundles,status")
-            var exclude = order_id,totals,status;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var financialStatus = paid;  // string? | Retrieves orders specified by financial status (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
-            var financialStatus = paid;  // string? | Retrieves orders specified by financial status (optional) 
+            var varParams = order_id,totals,status;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "order_id,customer,totals,address,items,bundles,status")
+            var exclude = order_id,totals,status;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // order.find
-                OrderFind200Response result = apiInstance.OrderFind(customerId, customerEmail, orderStatus, start, count, varParams, exclude, createdTo, createdFrom, modifiedTo, modifiedFrom, financialStatus);
+                OrderFind200Response result = apiInstance.OrderFind(start, count, customerId, customerEmail, orderStatus, financialStatus, createdTo, createdFrom, modifiedTo, modifiedFrom, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -558,7 +558,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.find
-    ApiResponse<OrderFind200Response> response = apiInstance.OrderFindWithHttpInfo(customerId, customerEmail, orderStatus, start, count, varParams, exclude, createdTo, createdFrom, modifiedTo, modifiedFrom, financialStatus);
+    ApiResponse<OrderFind200Response> response = apiInstance.OrderFindWithHttpInfo(start, count, customerId, customerEmail, orderStatus, financialStatus, createdTo, createdFrom, modifiedTo, modifiedFrom, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -575,18 +575,18 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
+| **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
+| **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
 | **customerId** | **string?** | Retrieves orders specified by customer id | [optional]  |
 | **customerEmail** | **string?** | Retrieves orders specified by customer email | [optional]  |
 | **orderStatus** | **string?** | Retrieves orders specified by order status | [optional]  |
-| **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
-| **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;order_id,customer,totals,address,items,bundles,status&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **financialStatus** | **string?** | Retrieves orders specified by financial status | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
-| **financialStatus** | **string?** | Retrieves orders specified by financial status | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;order_id,customer,totals,address,items,bundles,status&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 
@@ -711,7 +711,7 @@ catch (ApiException e)
 
 <a id="orderinfo"></a>
 # **OrderInfo**
-> OrderInfo200Response OrderInfo (string? orderId = null, string? id = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? storeId = null, bool? enableCache = null, bool? useLatestApiVersion = null)
+> OrderInfo200Response OrderInfo (string? id = null, string? orderId = null, string? storeId = null, string? varParams = null, string? responseFields = null, string? exclude = null, bool? enableCache = null, bool? useLatestApiVersion = null)
 
 order.info
 
@@ -743,19 +743,19 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new OrderApi(config);
-            var orderId = 25;  // string? | Retrieves order’s info specified by order id (optional) 
             var id = 10;  // string? | Retrieves order info specified by id (optional) 
+            var orderId = 25;  // string? | Retrieves order’s info specified by order id (optional) 
+            var storeId = 1;  // string? | Defines store id where the order should be found (optional) 
             var varParams = order_id,totals,status;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "order_id,customer,totals,address,items,bundles,status")
             var responseFields = {result{order_id,customer,totals,address,items,bundles,status}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var exclude = order_id,totals,status;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var storeId = 1;  // string? | Defines store id where the order should be found (optional) 
             var enableCache = true;  // bool? | If the value is 'true' and order exist in our cache, we will return order.info response from cache (optional)  (default to false)
             var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
 
             try
             {
                 // order.info
-                OrderInfo200Response result = apiInstance.OrderInfo(orderId, id, varParams, responseFields, exclude, storeId, enableCache, useLatestApiVersion);
+                OrderInfo200Response result = apiInstance.OrderInfo(id, orderId, storeId, varParams, responseFields, exclude, enableCache, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -776,7 +776,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.info
-    ApiResponse<OrderInfo200Response> response = apiInstance.OrderInfoWithHttpInfo(orderId, id, varParams, responseFields, exclude, storeId, enableCache, useLatestApiVersion);
+    ApiResponse<OrderInfo200Response> response = apiInstance.OrderInfoWithHttpInfo(id, orderId, storeId, varParams, responseFields, exclude, enableCache, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -793,12 +793,12 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **orderId** | **string?** | Retrieves order’s info specified by order id | [optional]  |
 | **id** | **string?** | Retrieves order info specified by id | [optional]  |
+| **orderId** | **string?** | Retrieves order’s info specified by order id | [optional]  |
+| **storeId** | **string?** | Defines store id where the order should be found | [optional]  |
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;order_id,customer,totals,address,items,bundles,status&quot;] |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **storeId** | **string?** | Defines store id where the order should be found | [optional]  |
 | **enableCache** | **bool?** | If the value is &#39;true&#39; and order exist in our cache, we will return order.info response from cache | [optional] [default to false] |
 | **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
 
@@ -825,7 +825,7 @@ catch (ApiException e)
 
 <a id="orderlist"></a>
 # **OrderList**
-> ModelResponseOrderList OrderList (string? customerId = null, string? customerEmail = null, string? phone = null, string? orderStatus = null, List<string>? orderStatusIds = null, int? start = null, int? count = null, string? pageCursor = null, string? sortBy = null, string? sortDirection = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? createdTo = null, string? createdFrom = null, string? modifiedTo = null, string? modifiedFrom = null, string? storeId = null, string? ids = null, string? orderIds = null, string? ebayOrderStatus = null, string? basketId = null, string? financialStatus = null, List<string>? financialStatusIds = null, string? fulfillmentStatus = null, string? fulfillmentChannel = null, string? shippingMethod = null, string? skipOrderIds = null, string? sinceId = null, bool? isDeleted = null, string? shippingCountryIso3 = null, bool? enableCache = null, string? deliveryMethod = null, string? tags = null, string? shipNodeType = null, string? currencyId = null, string? returnStatus = null, bool? useLatestApiVersion = null)
+> ModelResponseOrderList OrderList (int? start = null, int? count = null, string? pageCursor = null, string? ids = null, string? orderIds = null, string? sinceId = null, string? storeId = null, string? customerId = null, string? customerEmail = null, string? basketId = null, string? currencyId = null, string? phone = null, string? orderStatus = null, List<string>? orderStatusIds = null, string? ebayOrderStatus = null, string? financialStatus = null, List<string>? financialStatusIds = null, string? fulfillmentStatus = null, string? returnStatus = null, string? fulfillmentChannel = null, string? shippingMethod = null, string? skipOrderIds = null, bool? isDeleted = null, string? shippingCountryIso3 = null, string? deliveryMethod = null, string? shipNodeType = null, string? createdTo = null, string? createdFrom = null, string? modifiedTo = null, string? modifiedFrom = null, string? tags = null, string? sortBy = null, string? sortDirection = null, string? varParams = null, string? responseFields = null, string? exclude = null, bool? enableCache = null, bool? useLatestApiVersion = null)
 
 order.list
 
@@ -857,49 +857,49 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new OrderApi(config);
-            var customerId = 5;  // string? | Retrieves orders specified by customer id (optional) 
-            var customerEmail = jubari@hannsgroup.com;  // string? | Retrieves orders specified by customer email (optional) 
-            var phone = 56686868654;  // string? | Filter orders by customer's phone number (optional) 
-            var orderStatus = Completed;  // string? | Retrieves orders specified by order status (optional) 
-            var orderStatusIds = new List<string>?(); // List<string>? | Retrieves orders specified by order statuses (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
             var pageCursor = ;  // string? | Used to retrieve orders via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
+            var ids = 24,25;  // string? | Retrieves orders specified by ids (optional) 
+            var orderIds = 24,25;  // string? | Retrieves orders specified by order ids (optional) 
+            var sinceId = 56;  // string? | Retrieve entities starting from the specified id. (optional) 
+            var storeId = 1;  // string? | Store Id (optional) 
+            var customerId = 5;  // string? | Retrieves orders specified by customer id (optional) 
+            var customerEmail = jubari@hannsgroup.com;  // string? | Retrieves orders specified by customer email (optional) 
+            var basketId = 1;  // string? | Retrieves order’s info specified by basket id. (optional) 
+            var currencyId = usd;  // string? | Currency Id (optional) 
+            var phone = 56686868654;  // string? | Filter orders by customer's phone number (optional) 
+            var orderStatus = Completed;  // string? | Retrieves orders specified by order status (optional) 
+            var orderStatusIds = new List<string>?(); // List<string>? | Retrieves orders specified by order statuses (optional) 
+            var ebayOrderStatus = Active;  // string? | Retrieves orders specified by order status (optional) 
+            var financialStatus = paid;  // string? | Retrieves orders specified by financial status (optional) 
+            var financialStatusIds = new List<string>?(); // List<string>? | Retrieves orders specified by financial status ids (optional) 
+            var fulfillmentStatus = fulfilled;  // string? | Create order with fulfillment status (optional) 
+            var returnStatus = RETURNED;  // string? | Retrieves orders specified by return status (optional) 
+            var fulfillmentChannel = local;  // string? | Retrieves order with a fulfillment channel (optional) 
+            var shippingMethod = flatrate_flatrate;  // string? | Retrieve entities according to shipping method (optional) 
+            var skipOrderIds = 24,25;  // string? | Skipped orders by ids (optional) 
+            var isDeleted = true;  // bool? | Filter deleted orders (optional) 
+            var shippingCountryIso3 = DEU;  // string? | Retrieve entities according to shipping country (optional) 
+            var deliveryMethod = local;  // string? | Retrieves order with delivery method (optional) 
+            var shipNodeType = SellerFulfilled;  // string? | Retrieves order with ship node type (optional) 
+            var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
+            var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
+            var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
+            var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
+            var tags = tag1,tag2;  // string? | Order tags (optional) 
             var sortBy = modified_at;  // string? | Set field to sort by (optional)  (default to "order_id")
             var sortDirection = asc;  // string? | Set sorting direction (optional)  (default to "asc")
             var varParams = order_id,totals,status;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "order_id,customer,totals,address,items,bundles,status")
             var responseFields = {return_code,pagination,result{order{order_id,customer,totals,address,items,bundles,status}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var exclude = order_id,totals,status;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
-            var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
-            var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-            var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
-            var storeId = 1;  // string? | Store Id (optional) 
-            var ids = 24,25;  // string? | Retrieves orders specified by ids (optional) 
-            var orderIds = 24,25;  // string? | Retrieves orders specified by order ids (optional) 
-            var ebayOrderStatus = Active;  // string? | Retrieves orders specified by order status (optional) 
-            var basketId = 1;  // string? | Retrieves order’s info specified by basket id. (optional) 
-            var financialStatus = paid;  // string? | Retrieves orders specified by financial status (optional) 
-            var financialStatusIds = new List<string>?(); // List<string>? | Retrieves orders specified by financial status ids (optional) 
-            var fulfillmentStatus = fulfilled;  // string? | Create order with fulfillment status (optional) 
-            var fulfillmentChannel = local;  // string? | Retrieves order with a fulfillment channel (optional) 
-            var shippingMethod = flatrate_flatrate;  // string? | Retrieve entities according to shipping method (optional) 
-            var skipOrderIds = 24,25;  // string? | Skipped orders by ids (optional) 
-            var sinceId = 56;  // string? | Retrieve entities starting from the specified id. (optional) 
-            var isDeleted = true;  // bool? | Filter deleted orders (optional) 
-            var shippingCountryIso3 = DEU;  // string? | Retrieve entities according to shipping country (optional) 
             var enableCache = true;  // bool? | If the value is 'true', we will cache orders for a 15 minutes in order to increase speed and reduce requests throttling for some methods and shoping platforms (for example order.shipment.add) (optional)  (default to false)
-            var deliveryMethod = local;  // string? | Retrieves order with delivery method (optional) 
-            var tags = tag1,tag2;  // string? | Order tags (optional) 
-            var shipNodeType = SellerFulfilled;  // string? | Retrieves order with ship node type (optional) 
-            var currencyId = usd;  // string? | Currency Id (optional) 
-            var returnStatus = RETURNED;  // string? | Retrieves orders specified by return status (optional) 
             var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
 
             try
             {
                 // order.list
-                ModelResponseOrderList result = apiInstance.OrderList(customerId, customerEmail, phone, orderStatus, orderStatusIds, start, count, pageCursor, sortBy, sortDirection, varParams, responseFields, exclude, createdTo, createdFrom, modifiedTo, modifiedFrom, storeId, ids, orderIds, ebayOrderStatus, basketId, financialStatus, financialStatusIds, fulfillmentStatus, fulfillmentChannel, shippingMethod, skipOrderIds, sinceId, isDeleted, shippingCountryIso3, enableCache, deliveryMethod, tags, shipNodeType, currencyId, returnStatus, useLatestApiVersion);
+                ModelResponseOrderList result = apiInstance.OrderList(start, count, pageCursor, ids, orderIds, sinceId, storeId, customerId, customerEmail, basketId, currencyId, phone, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentStatus, returnStatus, fulfillmentChannel, shippingMethod, skipOrderIds, isDeleted, shippingCountryIso3, deliveryMethod, shipNodeType, createdTo, createdFrom, modifiedTo, modifiedFrom, tags, sortBy, sortDirection, varParams, responseFields, exclude, enableCache, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -920,7 +920,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.list
-    ApiResponse<ModelResponseOrderList> response = apiInstance.OrderListWithHttpInfo(customerId, customerEmail, phone, orderStatus, orderStatusIds, start, count, pageCursor, sortBy, sortDirection, varParams, responseFields, exclude, createdTo, createdFrom, modifiedTo, modifiedFrom, storeId, ids, orderIds, ebayOrderStatus, basketId, financialStatus, financialStatusIds, fulfillmentStatus, fulfillmentChannel, shippingMethod, skipOrderIds, sinceId, isDeleted, shippingCountryIso3, enableCache, deliveryMethod, tags, shipNodeType, currencyId, returnStatus, useLatestApiVersion);
+    ApiResponse<ModelResponseOrderList> response = apiInstance.OrderListWithHttpInfo(start, count, pageCursor, ids, orderIds, sinceId, storeId, customerId, customerEmail, basketId, currencyId, phone, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentStatus, returnStatus, fulfillmentChannel, shippingMethod, skipOrderIds, isDeleted, shippingCountryIso3, deliveryMethod, shipNodeType, createdTo, createdFrom, modifiedTo, modifiedFrom, tags, sortBy, sortDirection, varParams, responseFields, exclude, enableCache, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -937,43 +937,43 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **customerId** | **string?** | Retrieves orders specified by customer id | [optional]  |
-| **customerEmail** | **string?** | Retrieves orders specified by customer email | [optional]  |
-| **phone** | **string?** | Filter orders by customer&#39;s phone number | [optional]  |
-| **orderStatus** | **string?** | Retrieves orders specified by order status | [optional]  |
-| **orderStatusIds** | [**List&lt;string&gt;?**](string.md) | Retrieves orders specified by order statuses | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
 | **pageCursor** | **string?** | Used to retrieve orders via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
+| **ids** | **string?** | Retrieves orders specified by ids | [optional]  |
+| **orderIds** | **string?** | Retrieves orders specified by order ids | [optional]  |
+| **sinceId** | **string?** | Retrieve entities starting from the specified id. | [optional]  |
+| **storeId** | **string?** | Store Id | [optional]  |
+| **customerId** | **string?** | Retrieves orders specified by customer id | [optional]  |
+| **customerEmail** | **string?** | Retrieves orders specified by customer email | [optional]  |
+| **basketId** | **string?** | Retrieves order’s info specified by basket id. | [optional]  |
+| **currencyId** | **string?** | Currency Id | [optional]  |
+| **phone** | **string?** | Filter orders by customer&#39;s phone number | [optional]  |
+| **orderStatus** | **string?** | Retrieves orders specified by order status | [optional]  |
+| **orderStatusIds** | [**List&lt;string&gt;?**](string.md) | Retrieves orders specified by order statuses | [optional]  |
+| **ebayOrderStatus** | **string?** | Retrieves orders specified by order status | [optional]  |
+| **financialStatus** | **string?** | Retrieves orders specified by financial status | [optional]  |
+| **financialStatusIds** | [**List&lt;string&gt;?**](string.md) | Retrieves orders specified by financial status ids | [optional]  |
+| **fulfillmentStatus** | **string?** | Create order with fulfillment status | [optional]  |
+| **returnStatus** | **string?** | Retrieves orders specified by return status | [optional]  |
+| **fulfillmentChannel** | **string?** | Retrieves order with a fulfillment channel | [optional]  |
+| **shippingMethod** | **string?** | Retrieve entities according to shipping method | [optional]  |
+| **skipOrderIds** | **string?** | Skipped orders by ids | [optional]  |
+| **isDeleted** | **bool?** | Filter deleted orders | [optional]  |
+| **shippingCountryIso3** | **string?** | Retrieve entities according to shipping country | [optional]  |
+| **deliveryMethod** | **string?** | Retrieves order with delivery method | [optional]  |
+| **shipNodeType** | **string?** | Retrieves order with ship node type | [optional]  |
+| **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
+| **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
+| **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
+| **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
+| **tags** | **string?** | Order tags | [optional]  |
 | **sortBy** | **string?** | Set field to sort by | [optional] [default to &quot;order_id&quot;] |
 | **sortDirection** | **string?** | Set sorting direction | [optional] [default to &quot;asc&quot;] |
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;order_id,customer,totals,address,items,bundles,status&quot;] |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
-| **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
-| **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-| **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
-| **storeId** | **string?** | Store Id | [optional]  |
-| **ids** | **string?** | Retrieves orders specified by ids | [optional]  |
-| **orderIds** | **string?** | Retrieves orders specified by order ids | [optional]  |
-| **ebayOrderStatus** | **string?** | Retrieves orders specified by order status | [optional]  |
-| **basketId** | **string?** | Retrieves order’s info specified by basket id. | [optional]  |
-| **financialStatus** | **string?** | Retrieves orders specified by financial status | [optional]  |
-| **financialStatusIds** | [**List&lt;string&gt;?**](string.md) | Retrieves orders specified by financial status ids | [optional]  |
-| **fulfillmentStatus** | **string?** | Create order with fulfillment status | [optional]  |
-| **fulfillmentChannel** | **string?** | Retrieves order with a fulfillment channel | [optional]  |
-| **shippingMethod** | **string?** | Retrieve entities according to shipping method | [optional]  |
-| **skipOrderIds** | **string?** | Skipped orders by ids | [optional]  |
-| **sinceId** | **string?** | Retrieve entities starting from the specified id. | [optional]  |
-| **isDeleted** | **bool?** | Filter deleted orders | [optional]  |
-| **shippingCountryIso3** | **string?** | Retrieve entities according to shipping country | [optional]  |
 | **enableCache** | **bool?** | If the value is &#39;true&#39;, we will cache orders for a 15 minutes in order to increase speed and reduce requests throttling for some methods and shoping platforms (for example order.shipment.add) | [optional] [default to false] |
-| **deliveryMethod** | **string?** | Retrieves order with delivery method | [optional]  |
-| **tags** | **string?** | Order tags | [optional]  |
-| **shipNodeType** | **string?** | Retrieves order with ship node type | [optional]  |
-| **currencyId** | **string?** | Currency Id | [optional]  |
-| **returnStatus** | **string?** | Retrieves orders specified by return status | [optional]  |
 | **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
 
 ### Return type
@@ -1807,7 +1807,7 @@ catch (ApiException e)
 
 <a id="ordershipmentinfo"></a>
 # **OrderShipmentInfo**
-> OrderShipmentInfo200Response OrderShipmentInfo (string id, string orderId, int? start = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? storeId = null)
+> OrderShipmentInfo200Response OrderShipmentInfo (string id, string orderId, int? start = null, string? storeId = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 order.shipment.info
 
@@ -1842,15 +1842,15 @@ namespace Example
             var id = 10;  // string | Entity id
             var orderId = 25;  // string | Defines the order id
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,order_id,items,tracking_numbers")
-            var responseFields = {result{id,order_id,shipment_provider,tracking_numbers{tracking_number},items{product_id,quantity}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
+            var responseFields = {result{id,order_id,shipment_provider,tracking_numbers{tracking_number},items{product_id,quantity}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,order_id,items,tracking_numbers")
+            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // order.shipment.info
-                OrderShipmentInfo200Response result = apiInstance.OrderShipmentInfo(id, orderId, start, varParams, responseFields, exclude, storeId);
+                OrderShipmentInfo200Response result = apiInstance.OrderShipmentInfo(id, orderId, start, storeId, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1871,7 +1871,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.shipment.info
-    ApiResponse<OrderShipmentInfo200Response> response = apiInstance.OrderShipmentInfoWithHttpInfo(id, orderId, start, varParams, responseFields, exclude, storeId);
+    ApiResponse<OrderShipmentInfo200Response> response = apiInstance.OrderShipmentInfoWithHttpInfo(id, orderId, start, storeId, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1891,10 +1891,10 @@ catch (ApiException e)
 | **id** | **string** | Entity id |  |
 | **orderId** | **string** | Defines the order id |  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,order_id,items,tracking_numbers&quot;] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,order_id,items,tracking_numbers&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 
@@ -1919,7 +1919,7 @@ catch (ApiException e)
 
 <a id="ordershipmentlist"></a>
 # **OrderShipmentList**
-> ModelResponseOrderShipmentList OrderShipmentList (string orderId, string? pageCursor = null, int? start = null, int? count = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? storeId = null)
+> ModelResponseOrderShipmentList OrderShipmentList (string orderId, int? start = null, int? count = null, string? pageCursor = null, string? storeId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 order.shipment.list
 
@@ -1952,22 +1952,22 @@ namespace Example
 
             var apiInstance = new OrderApi(config);
             var orderId = 25;  // string | Retrieves shipments specified by order id
-            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,order_id,items,tracking_numbers")
-            var responseFields = {status_code,pagination,result{shipment{id,order_id,shipment_provider,tracking_numbers{tracking_number},items{product_id,quantity}}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
+            var storeId = 1;  // string? | Store Id (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-            var storeId = 1;  // string? | Store Id (optional) 
+            var responseFields = {status_code,pagination,result{shipment{id,order_id,shipment_provider,tracking_numbers{tracking_number},items{product_id,quantity}}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,order_id,items,tracking_numbers")
+            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // order.shipment.list
-                ModelResponseOrderShipmentList result = apiInstance.OrderShipmentList(orderId, pageCursor, start, count, varParams, responseFields, exclude, createdFrom, createdTo, modifiedFrom, modifiedTo, storeId);
+                ModelResponseOrderShipmentList result = apiInstance.OrderShipmentList(orderId, start, count, pageCursor, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1988,7 +1988,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.shipment.list
-    ApiResponse<ModelResponseOrderShipmentList> response = apiInstance.OrderShipmentListWithHttpInfo(orderId, pageCursor, start, count, varParams, responseFields, exclude, createdFrom, createdTo, modifiedFrom, modifiedTo, storeId);
+    ApiResponse<ModelResponseOrderShipmentList> response = apiInstance.OrderShipmentListWithHttpInfo(orderId, start, count, pageCursor, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2006,17 +2006,17 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **orderId** | **string** | Retrieves shipments specified by order id |  |
-| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,order_id,items,tracking_numbers&quot;] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
+| **storeId** | **string?** | Store Id | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-| **storeId** | **string?** | Store Id | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,order_id,items,tracking_numbers&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 
@@ -2345,7 +2345,7 @@ catch (ApiException e)
 
 <a id="ordertransactionlist"></a>
 # **OrderTransactionList**
-> ModelResponseOrderTransactionList OrderTransactionList (string orderIds, int? count = null, string? storeId = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? pageCursor = null)
+> ModelResponseOrderTransactionList OrderTransactionList (string orderIds, int? count = null, string? pageCursor = null, string? storeId = null, string? varParams = null, string? responseFields = null, string? exclude = null)
 
 order.transaction.list
 
@@ -2379,16 +2379,16 @@ namespace Example
             var apiInstance = new OrderApi(config);
             var orderIds = 24,25;  // string | Retrieves order transactions specified by order ids
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
             var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,order_id,amount,description")
             var responseFields = {return_code,pagination,result{transactions_count,transactions{id,transaction_id,status,description,settlement_amount,gateway,card_brand,card_last_four}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
 
             try
             {
                 // order.transaction.list
-                ModelResponseOrderTransactionList result = apiInstance.OrderTransactionList(orderIds, count, storeId, varParams, responseFields, exclude, pageCursor);
+                ModelResponseOrderTransactionList result = apiInstance.OrderTransactionList(orderIds, count, pageCursor, storeId, varParams, responseFields, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2409,7 +2409,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.transaction.list
-    ApiResponse<ModelResponseOrderTransactionList> response = apiInstance.OrderTransactionListWithHttpInfo(orderIds, count, storeId, varParams, responseFields, exclude, pageCursor);
+    ApiResponse<ModelResponseOrderTransactionList> response = apiInstance.OrderTransactionListWithHttpInfo(orderIds, count, pageCursor, storeId, varParams, responseFields, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2428,11 +2428,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **orderIds** | **string** | Retrieves order transactions specified by order ids |  |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,order_id,amount,description&quot;] |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 
 ### Return type
 
@@ -2457,7 +2457,7 @@ catch (ApiException e)
 
 <a id="orderupdate"></a>
 # **OrderUpdate**
-> AccountConfigUpdate200Response OrderUpdate (string orderId, string? storeId = null, string? orderStatus = null, string? cancellationReason = null, string? comment = null, string? adminComment = null, string? adminPrivateComment = null, string? dateModified = null, string? dateFinished = null, string? financialStatus = null, string? fulfillmentStatus = null, string? orderPaymentMethod = null, bool? sendNotifications = null, string? origin = null, bool? createInvoice = null, string? invoiceAdminComment = null)
+> AccountConfigUpdate200Response OrderUpdate (string orderId, string? storeId = null, string? orderStatus = null, string? financialStatus = null, string? fulfillmentStatus = null, string? cancellationReason = null, string? orderPaymentMethod = null, string? comment = null, string? adminComment = null, string? adminPrivateComment = null, string? invoiceAdminComment = null, string? dateModified = null, string? dateFinished = null, bool? sendNotifications = null, bool? createInvoice = null, string? origin = null)
 
 order.update
 
@@ -2492,24 +2492,24 @@ namespace Example
             var orderId = 25;  // string | Defines the orders specified by order id
             var storeId = 1;  // string? | Defines store id where the order should be found (optional) 
             var orderStatus = Completed;  // string? | Defines new order's status (optional) 
+            var financialStatus = paid;  // string? | Update order financial status to specified (optional) 
+            var fulfillmentStatus = fulfilled;  // string? | Create order with fulfillment status (optional) 
             var cancellationReason = ORDER_UNPAID;  // string? | Defines the cancellation reason when the order will be canceled (optional) 
+            var orderPaymentMethod = PayPal;  // string? | Defines order payment method.<br/>Setting order_payment_method on Shopify will also change financial_status field value to 'paid' (optional) 
             var comment = This coole order;  // string? | Specifies order comment (optional) 
             var adminComment = Test admin comment;  // string? | Specifies admin's order comment (optional) 
             var adminPrivateComment = Test admin private comment;  // string? | Specifies private admin's order comment (optional) 
+            var invoiceAdminComment = Test admin comment;  // string? | Specifies admin's order invoice comment (optional) 
             var dateModified = 2014-05-05 05:05:00;  // string? | Specifies order's  modification date (optional) 
             var dateFinished = 2014-06-05 05:05:00;  // string? | Specifies order's  finished date (optional) 
-            var financialStatus = paid;  // string? | Update order financial status to specified (optional) 
-            var fulfillmentStatus = fulfilled;  // string? | Create order with fulfillment status (optional) 
-            var orderPaymentMethod = PayPal;  // string? | Defines order payment method.<br/>Setting order_payment_method on Shopify will also change financial_status field value to 'paid' (optional) 
             var sendNotifications = true;  // bool? | Send notifications to customer after order was created (optional)  (default to false)
-            var origin = newsletter;  // string? | The source of the order (optional) 
             var createInvoice = true;  // bool? | Determines whether an invoice should be created if it has not already been created (optional) 
-            var invoiceAdminComment = Test admin comment;  // string? | Specifies admin's order invoice comment (optional) 
+            var origin = newsletter;  // string? | The source of the order (optional) 
 
             try
             {
                 // order.update
-                AccountConfigUpdate200Response result = apiInstance.OrderUpdate(orderId, storeId, orderStatus, cancellationReason, comment, adminComment, adminPrivateComment, dateModified, dateFinished, financialStatus, fulfillmentStatus, orderPaymentMethod, sendNotifications, origin, createInvoice, invoiceAdminComment);
+                AccountConfigUpdate200Response result = apiInstance.OrderUpdate(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2530,7 +2530,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.update
-    ApiResponse<AccountConfigUpdate200Response> response = apiInstance.OrderUpdateWithHttpInfo(orderId, storeId, orderStatus, cancellationReason, comment, adminComment, adminPrivateComment, dateModified, dateFinished, financialStatus, fulfillmentStatus, orderPaymentMethod, sendNotifications, origin, createInvoice, invoiceAdminComment);
+    ApiResponse<AccountConfigUpdate200Response> response = apiInstance.OrderUpdateWithHttpInfo(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2550,19 +2550,19 @@ catch (ApiException e)
 | **orderId** | **string** | Defines the orders specified by order id |  |
 | **storeId** | **string?** | Defines store id where the order should be found | [optional]  |
 | **orderStatus** | **string?** | Defines new order&#39;s status | [optional]  |
+| **financialStatus** | **string?** | Update order financial status to specified | [optional]  |
+| **fulfillmentStatus** | **string?** | Create order with fulfillment status | [optional]  |
 | **cancellationReason** | **string?** | Defines the cancellation reason when the order will be canceled | [optional]  |
+| **orderPaymentMethod** | **string?** | Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; | [optional]  |
 | **comment** | **string?** | Specifies order comment | [optional]  |
 | **adminComment** | **string?** | Specifies admin&#39;s order comment | [optional]  |
 | **adminPrivateComment** | **string?** | Specifies private admin&#39;s order comment | [optional]  |
+| **invoiceAdminComment** | **string?** | Specifies admin&#39;s order invoice comment | [optional]  |
 | **dateModified** | **string?** | Specifies order&#39;s  modification date | [optional]  |
 | **dateFinished** | **string?** | Specifies order&#39;s  finished date | [optional]  |
-| **financialStatus** | **string?** | Update order financial status to specified | [optional]  |
-| **fulfillmentStatus** | **string?** | Create order with fulfillment status | [optional]  |
-| **orderPaymentMethod** | **string?** | Defines order payment method.&lt;br/&gt;Setting order_payment_method on Shopify will also change financial_status field value to &#39;paid&#39; | [optional]  |
 | **sendNotifications** | **bool?** | Send notifications to customer after order was created | [optional] [default to false] |
-| **origin** | **string?** | The source of the order | [optional]  |
 | **createInvoice** | **bool?** | Determines whether an invoice should be created if it has not already been created | [optional]  |
-| **invoiceAdminComment** | **string?** | Specifies admin&#39;s order invoice comment | [optional]  |
+| **origin** | **string?** | The source of the order | [optional]  |
 
 ### Return type
 

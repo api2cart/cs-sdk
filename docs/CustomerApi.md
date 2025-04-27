@@ -219,7 +219,7 @@ catch (ApiException e)
 
 <a id="customerattributelist"></a>
 # **CustomerAttributeList**
-> ModelResponseCustomerAttributeList CustomerAttributeList (string customerId, int? count = null, string? pageCursor = null, string? storeId = null, string? langId = null, string? varParams = null, string? exclude = null, string? responseFields = null)
+> ModelResponseCustomerAttributeList CustomerAttributeList (string customerId, int? count = null, string? pageCursor = null, string? storeId = null, string? langId = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 customer.attribute.list
 
@@ -256,14 +256,14 @@ namespace Example
             var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
             var langId = 3;  // string? | Language id (optional) 
+            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "force_all")
             var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
 
             try
             {
                 // customer.attribute.list
-                ModelResponseCustomerAttributeList result = apiInstance.CustomerAttributeList(customerId, count, pageCursor, storeId, langId, varParams, exclude, responseFields);
+                ModelResponseCustomerAttributeList result = apiInstance.CustomerAttributeList(customerId, count, pageCursor, storeId, langId, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -284,7 +284,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // customer.attribute.list
-    ApiResponse<ModelResponseCustomerAttributeList> response = apiInstance.CustomerAttributeListWithHttpInfo(customerId, count, pageCursor, storeId, langId, varParams, exclude, responseFields);
+    ApiResponse<ModelResponseCustomerAttributeList> response = apiInstance.CustomerAttributeListWithHttpInfo(customerId, count, pageCursor, storeId, langId, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -306,9 +306,9 @@ catch (ApiException e)
 | **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;force_all&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 
 ### Return type
 
@@ -333,7 +333,7 @@ catch (ApiException e)
 
 <a id="customercount"></a>
 # **CustomerCount**
-> CustomerCount200Response CustomerCount (string? groupId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? storeId = null, string? customerListId = null, bool? avail = null, string? findValue = null, string? findWhere = null, string? ids = null, string? sinceId = null)
+> CustomerCount200Response CustomerCount (string? ids = null, string? sinceId = null, string? customerListId = null, string? groupId = null, string? storeId = null, bool? avail = null, string? findValue = null, string? findWhere = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null)
 
 customer.count
 
@@ -365,23 +365,23 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new CustomerApi(config);
+            var ids = 24,25;  // string? | Counts customers specified by ids (optional) 
+            var sinceId = 56;  // string? | Retrieve entities starting from the specified id. (optional) 
+            var customerListId = exampleListId;  // string? | The numeric ID of the customer list in Demandware. (optional) 
             var groupId = 3;  // string? | Customer group_id (optional) 
+            var storeId = 1;  // string? | Counts customer specified by store id (optional) 
+            var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
+            var findValue = mail@gmail.com;  // string? | Entity search that is specified by some value (optional) 
+            var findWhere = email;  // string? | Counts customers that are searched specified by field (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-            var storeId = 1;  // string? | Counts customer specified by store id (optional) 
-            var customerListId = exampleListId;  // string? | The numeric ID of the customer list in Demandware. (optional) 
-            var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
-            var findValue = mail@gmail.com;  // string? | Entity search that is specified by some value (optional) 
-            var findWhere = email;  // string? | Counts customers that are searched specified by field (optional) 
-            var ids = 24,25;  // string? | Counts customers specified by ids (optional) 
-            var sinceId = 56;  // string? | Retrieve entities starting from the specified id. (optional) 
 
             try
             {
                 // customer.count
-                CustomerCount200Response result = apiInstance.CustomerCount(groupId, createdFrom, createdTo, modifiedFrom, modifiedTo, storeId, customerListId, avail, findValue, findWhere, ids, sinceId);
+                CustomerCount200Response result = apiInstance.CustomerCount(ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -402,7 +402,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // customer.count
-    ApiResponse<CustomerCount200Response> response = apiInstance.CustomerCountWithHttpInfo(groupId, createdFrom, createdTo, modifiedFrom, modifiedTo, storeId, customerListId, avail, findValue, findWhere, ids, sinceId);
+    ApiResponse<CustomerCount200Response> response = apiInstance.CustomerCountWithHttpInfo(ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -419,18 +419,18 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
+| **ids** | **string?** | Counts customers specified by ids | [optional]  |
+| **sinceId** | **string?** | Retrieve entities starting from the specified id. | [optional]  |
+| **customerListId** | **string?** | The numeric ID of the customer list in Demandware. | [optional]  |
 | **groupId** | **string?** | Customer group_id | [optional]  |
+| **storeId** | **string?** | Counts customer specified by store id | [optional]  |
+| **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
+| **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
+| **findWhere** | **string?** | Counts customers that are searched specified by field | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-| **storeId** | **string?** | Counts customer specified by store id | [optional]  |
-| **customerListId** | **string?** | The numeric ID of the customer list in Demandware. | [optional]  |
-| **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
-| **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
-| **findWhere** | **string?** | Counts customers that are searched specified by field | [optional]  |
-| **ids** | **string?** | Counts customers specified by ids | [optional]  |
-| **sinceId** | **string?** | Retrieve entities starting from the specified id. | [optional]  |
 
 ### Return type
 
@@ -765,7 +765,7 @@ catch (ApiException e)
 
 <a id="customergrouplist"></a>
 # **CustomerGroupList**
-> ModelResponseCustomerGroupList CustomerGroupList (bool? disableCache = null, string? pageCursor = null, int? start = null, int? count = null, string? storeId = null, string? langId = null, string? groupIds = null, string? varParams = null, string? exclude = null, string? responseFields = null)
+> ModelResponseCustomerGroupList CustomerGroupList (int? start = null, int? count = null, string? pageCursor = null, string? groupIds = null, string? storeId = null, string? langId = null, string? responseFields = null, string? varParams = null, string? exclude = null, bool? disableCache = null)
 
 customer.group.list
 
@@ -797,21 +797,21 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new CustomerApi(config);
-            var disableCache = false;  // bool? | Disable cache for current request (optional)  (default to false)
-            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
+            var groupIds = 1,2,3;  // string? | Groups that will be assigned to a customer (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
             var langId = 3;  // string? | Language id (optional) 
-            var groupIds = 1,2,3;  // string? | Groups that will be assigned to a customer (optional) 
+            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,additional_fields")
             var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var disableCache = false;  // bool? | Disable cache for current request (optional)  (default to false)
 
             try
             {
                 // customer.group.list
-                ModelResponseCustomerGroupList result = apiInstance.CustomerGroupList(disableCache, pageCursor, start, count, storeId, langId, groupIds, varParams, exclude, responseFields);
+                ModelResponseCustomerGroupList result = apiInstance.CustomerGroupList(start, count, pageCursor, groupIds, storeId, langId, responseFields, varParams, exclude, disableCache);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -832,7 +832,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // customer.group.list
-    ApiResponse<ModelResponseCustomerGroupList> response = apiInstance.CustomerGroupListWithHttpInfo(disableCache, pageCursor, start, count, storeId, langId, groupIds, varParams, exclude, responseFields);
+    ApiResponse<ModelResponseCustomerGroupList> response = apiInstance.CustomerGroupListWithHttpInfo(start, count, pageCursor, groupIds, storeId, langId, responseFields, varParams, exclude, disableCache);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -849,16 +849,16 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **disableCache** | **bool?** | Disable cache for current request | [optional] [default to false] |
-| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
+| **groupIds** | **string?** | Groups that will be assigned to a customer | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
-| **groupIds** | **string?** | Groups that will be assigned to a customer | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,additional_fields&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **disableCache** | **bool?** | Disable cache for current request | [optional] [default to false] |
 
 ### Return type
 
@@ -883,7 +883,7 @@ catch (ApiException e)
 
 <a id="customerinfo"></a>
 # **CustomerInfo**
-> CustomerInfo200Response CustomerInfo (string id, string? varParams = null, string? responseFields = null, string? exclude = null, string? storeId = null)
+> CustomerInfo200Response CustomerInfo (string id, string? storeId = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 customer.info
 
@@ -916,15 +916,15 @@ namespace Example
 
             var apiInstance = new CustomerApi(config);
             var id = 10;  // string | Retrieves customer's info specified by customer id
-            var varParams = id,email;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,email,first_name,last_name")
-            var responseFields = {result{id,parent_id,sku,upc,images,combination}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var exclude = id,email;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var storeId = 1;  // string? | Retrieves customer info specified by store id (optional) 
+            var responseFields = {result{id,parent_id,sku,upc,images,combination}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,email;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,email,first_name,last_name")
+            var exclude = id,email;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // customer.info
-                CustomerInfo200Response result = apiInstance.CustomerInfo(id, varParams, responseFields, exclude, storeId);
+                CustomerInfo200Response result = apiInstance.CustomerInfo(id, storeId, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -945,7 +945,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // customer.info
-    ApiResponse<CustomerInfo200Response> response = apiInstance.CustomerInfoWithHttpInfo(id, varParams, responseFields, exclude, storeId);
+    ApiResponse<CustomerInfo200Response> response = apiInstance.CustomerInfoWithHttpInfo(id, storeId, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -963,10 +963,10 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **string** | Retrieves customer&#39;s info specified by customer id |  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,email,first_name,last_name&quot;] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **storeId** | **string?** | Retrieves customer info specified by store id | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,email,first_name,last_name&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 
@@ -991,7 +991,7 @@ catch (ApiException e)
 
 <a id="customerlist"></a>
 # **CustomerList**
-> ModelResponseCustomerList CustomerList (string? pageCursor = null, int? start = null, int? count = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? groupId = null, string? storeId = null, string? customerListId = null, bool? avail = null, string? findValue = null, string? findWhere = null, string? sortBy = null, string? sortDirection = null, string? ids = null, string? sinceId = null)
+> ModelResponseCustomerList CustomerList (int? start = null, int? count = null, string? pageCursor = null, string? ids = null, string? sinceId = null, string? customerListId = null, string? groupId = null, string? storeId = null, bool? avail = null, string? findValue = null, string? findWhere = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? sortBy = null, string? sortDirection = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 customer.list
 
@@ -1023,31 +1023,31 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new CustomerApi(config);
-            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
+            var ids = 24,25;  // string? | Retrieves customers specified by ids (optional) 
+            var sinceId = 56;  // string? | Retrieve entities starting from the specified id. (optional) 
+            var customerListId = exampleListId;  // string? | The numeric ID of the customer list in Demandware. (optional) 
+            var groupId = 3;  // string? | Customer group_id (optional) 
+            var storeId = 1;  // string? | Retrieves customers specified by store id (optional) 
+            var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
+            var findValue = mail@gmail.com;  // string? | Entity search that is specified by some value (optional) 
+            var findWhere = email;  // string? | Customer search that is specified by field (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-            var varParams = id,email;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,email,first_name,last_name")
-            var responseFields = {result{customer}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var exclude = id,email;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var groupId = 3;  // string? | Customer group_id (optional) 
-            var storeId = 1;  // string? | Retrieves customers specified by store id (optional) 
-            var customerListId = exampleListId;  // string? | The numeric ID of the customer list in Demandware. (optional) 
-            var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
-            var findValue = mail@gmail.com;  // string? | Entity search that is specified by some value (optional) 
-            var findWhere = email;  // string? | Customer search that is specified by field (optional) 
             var sortBy = value_id;  // string? | Set field to sort by (optional)  (default to "created_time")
             var sortDirection = asc;  // string? | Set sorting direction (optional)  (default to "asc")
-            var ids = 24,25;  // string? | Retrieves customers specified by ids (optional) 
-            var sinceId = 56;  // string? | Retrieve entities starting from the specified id. (optional) 
+            var responseFields = {result{customer}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,email;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,email,first_name,last_name")
+            var exclude = id,email;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // customer.list
-                ModelResponseCustomerList result = apiInstance.CustomerList(pageCursor, start, count, createdFrom, createdTo, modifiedFrom, modifiedTo, varParams, responseFields, exclude, groupId, storeId, customerListId, avail, findValue, findWhere, sortBy, sortDirection, ids, sinceId);
+                ModelResponseCustomerList result = apiInstance.CustomerList(start, count, pageCursor, ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, sortBy, sortDirection, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1068,7 +1068,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // customer.list
-    ApiResponse<ModelResponseCustomerList> response = apiInstance.CustomerListWithHttpInfo(pageCursor, start, count, createdFrom, createdTo, modifiedFrom, modifiedTo, varParams, responseFields, exclude, groupId, storeId, customerListId, avail, findValue, findWhere, sortBy, sortDirection, ids, sinceId);
+    ApiResponse<ModelResponseCustomerList> response = apiInstance.CustomerListWithHttpInfo(start, count, pageCursor, ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, sortBy, sortDirection, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1085,26 +1085,26 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
+| **ids** | **string?** | Retrieves customers specified by ids | [optional]  |
+| **sinceId** | **string?** | Retrieve entities starting from the specified id. | [optional]  |
+| **customerListId** | **string?** | The numeric ID of the customer list in Demandware. | [optional]  |
+| **groupId** | **string?** | Customer group_id | [optional]  |
+| **storeId** | **string?** | Retrieves customers specified by store id | [optional]  |
+| **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
+| **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
+| **findWhere** | **string?** | Customer search that is specified by field | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,email,first_name,last_name&quot;] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **groupId** | **string?** | Customer group_id | [optional]  |
-| **storeId** | **string?** | Retrieves customers specified by store id | [optional]  |
-| **customerListId** | **string?** | The numeric ID of the customer list in Demandware. | [optional]  |
-| **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
-| **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
-| **findWhere** | **string?** | Customer search that is specified by field | [optional]  |
 | **sortBy** | **string?** | Set field to sort by | [optional] [default to &quot;created_time&quot;] |
 | **sortDirection** | **string?** | Set sorting direction | [optional] [default to &quot;asc&quot;] |
-| **ids** | **string?** | Retrieves customers specified by ids | [optional]  |
-| **sinceId** | **string?** | Retrieve entities starting from the specified id. | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,email,first_name,last_name&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 
@@ -1229,7 +1229,7 @@ catch (ApiException e)
 
 <a id="customerwishlistlist"></a>
 # **CustomerWishlistList**
-> ModelResponseCustomerWishlistList CustomerWishlistList (string customerId, string? id = null, string? storeId = null, int? start = null, int? count = null, string? pageCursor = null, string? responseFields = null)
+> ModelResponseCustomerWishlistList CustomerWishlistList (string customerId, int? start = null, int? count = null, string? pageCursor = null, string? id = null, string? storeId = null, string? responseFields = null)
 
 customer.wishlist.list
 
@@ -1262,17 +1262,17 @@ namespace Example
 
             var apiInstance = new CustomerApi(config);
             var customerId = 5;  // string | Retrieves orders specified by customer id
-            var id = 10;  // string? | Entity id (optional) 
-            var storeId = 1;  // string? | Store Id (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
             var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
+            var id = 10;  // string? | Entity id (optional) 
+            var storeId = 1;  // string? | Store Id (optional) 
             var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "{return_code,return_message,pagination,result}")
 
             try
             {
                 // customer.wishlist.list
-                ModelResponseCustomerWishlistList result = apiInstance.CustomerWishlistList(customerId, id, storeId, start, count, pageCursor, responseFields);
+                ModelResponseCustomerWishlistList result = apiInstance.CustomerWishlistList(customerId, start, count, pageCursor, id, storeId, responseFields);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1293,7 +1293,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // customer.wishlist.list
-    ApiResponse<ModelResponseCustomerWishlistList> response = apiInstance.CustomerWishlistListWithHttpInfo(customerId, id, storeId, start, count, pageCursor, responseFields);
+    ApiResponse<ModelResponseCustomerWishlistList> response = apiInstance.CustomerWishlistListWithHttpInfo(customerId, start, count, pageCursor, id, storeId, responseFields);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1311,11 +1311,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **customerId** | **string** | Retrieves orders specified by customer id |  |
-| **id** | **string?** | Entity id | [optional]  |
-| **storeId** | **string?** | Store Id | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
 | **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
+| **id** | **string?** | Entity id | [optional]  |
+| **storeId** | **string?** | Store Id | [optional]  |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;{return_code,return_message,pagination,result}&quot;] |
 
 ### Return type

@@ -64,10 +64,10 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //string? storeId = null;
+            //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //string? responseFields = null;
-            //var response = instance.BasketInfo(id, storeId, varParams, exclude, responseFields);
+            //var response = instance.BasketInfo(id, storeId, responseFields, varParams, exclude);
             //Assert.IsType<BasketInfo200Response>(response);
         }
 
@@ -120,10 +120,10 @@ namespace Org.OpenAPITools.Test.Api
         public void BasketLiveShippingServiceListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? storeId = null;
             //int? start = null;
             //int? count = null;
-            //var response = instance.BasketLiveShippingServiceList(storeId, start, count);
+            //string? storeId = null;
+            //var response = instance.BasketLiveShippingServiceList(start, count, storeId);
             //Assert.IsType<BasketLiveShippingServiceList200Response>(response);
         }
     }

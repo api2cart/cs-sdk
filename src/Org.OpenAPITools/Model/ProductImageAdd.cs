@@ -82,52 +82,42 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProductImageAdd" /> class.
         /// </summary>
-        /// <param name="productId">Defines product id where the image should be added.</param>
-        /// <param name="imageName">Defines image&#39;s name (required).</param>
         /// <param name="type">Defines image&#39;s types that are specified by comma-separated list (required).</param>
-        /// <param name="url">Defines URL of the image that has to be added.</param>
-        /// <param name="label">Defines alternative text that has to be attached to the picture.</param>
-        /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type..</param>
-        /// <param name="position">Defines image’s position in the list (default to 0).</param>
-        /// <param name="content">Content(body) encoded in base64 of image file.</param>
+        /// <param name="imageName">Defines image&#39;s name (required).</param>
+        /// <param name="productId">Defines product id where the image should be added.</param>
         /// <param name="productVariantId">Defines product&#39;s variants specified by variant id.</param>
         /// <param name="variantIds">Defines product&#39;s variants ids.</param>
         /// <param name="optionValueIds">Defines product&#39;s option values ids.</param>
         /// <param name="storeId">Store Id.</param>
         /// <param name="langId">Add product image on specified language id.</param>
+        /// <param name="url">Defines URL of the image that has to be added.</param>
+        /// <param name="content">Content(body) encoded in base64 of image file.</param>
+        /// <param name="label">Defines alternative text that has to be attached to the picture.</param>
+        /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type..</param>
+        /// <param name="position">Defines image’s position in the list (default to 0).</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (default to false).</param>
-        public ProductImageAdd(string productId = default(string), string imageName = default(string), TypeEnum type = default(TypeEnum), string url = default(string), string label = default(string), string mime = default(string), int position = 0, string content = default(string), string productVariantId = default(string), string variantIds = default(string), string optionValueIds = default(string), string storeId = default(string), string langId = default(string), bool useLatestApiVersion = false)
+        public ProductImageAdd(TypeEnum type = default(TypeEnum), string imageName = default(string), string productId = default(string), string productVariantId = default(string), string variantIds = default(string), string optionValueIds = default(string), string storeId = default(string), string langId = default(string), string url = default(string), string content = default(string), string label = default(string), string mime = default(string), int position = 0, bool useLatestApiVersion = false)
         {
+            this.Type = type;
             // to ensure "imageName" is required (not null)
             if (imageName == null)
             {
                 throw new ArgumentNullException("imageName is a required property for ProductImageAdd and cannot be null");
             }
             this.ImageName = imageName;
-            this.Type = type;
             this.ProductId = productId;
-            this.Url = url;
-            this.Label = label;
-            this.Mime = mime;
-            this.Position = position;
-            this.Content = content;
             this.ProductVariantId = productVariantId;
             this.VariantIds = variantIds;
             this.OptionValueIds = optionValueIds;
             this.StoreId = storeId;
             this.LangId = langId;
+            this.Url = url;
+            this.Content = content;
+            this.Label = label;
+            this.Mime = mime;
+            this.Position = position;
             this.UseLatestApiVersion = useLatestApiVersion;
         }
-
-        /// <summary>
-        /// Defines product id where the image should be added
-        /// </summary>
-        /// <value>Defines product id where the image should be added</value>
-        /*
-        <example>10</example>
-        */
-        [DataMember(Name = "product_id", EmitDefaultValue = false)]
-        public string ProductId { get; set; }
 
         /// <summary>
         /// Defines image&#39;s name
@@ -140,54 +130,14 @@ namespace Org.OpenAPITools.Model
         public string ImageName { get; set; }
 
         /// <summary>
-        /// Defines URL of the image that has to be added
+        /// Defines product id where the image should be added
         /// </summary>
-        /// <value>Defines URL of the image that has to be added</value>
+        /// <value>Defines product id where the image should be added</value>
         /*
-        <example>http://docs.api2cart.com/img/logo.png</example>
+        <example>10</example>
         */
-        [DataMember(Name = "url", EmitDefaultValue = false)]
-        public string Url { get; set; }
-
-        /// <summary>
-        /// Defines alternative text that has to be attached to the picture
-        /// </summary>
-        /// <value>Defines alternative text that has to be attached to the picture</value>
-        /*
-        <example>This cool image</example>
-        */
-        [DataMember(Name = "label", EmitDefaultValue = false)]
-        public string Label { get; set; }
-
-        /// <summary>
-        /// Mime type of image http://en.wikipedia.org/wiki/Internet_media_type.
-        /// </summary>
-        /// <value>Mime type of image http://en.wikipedia.org/wiki/Internet_media_type.</value>
-        /*
-        <example>image/jpeg</example>
-        */
-        [DataMember(Name = "mime", EmitDefaultValue = false)]
-        public string Mime { get; set; }
-
-        /// <summary>
-        /// Defines image’s position in the list
-        /// </summary>
-        /// <value>Defines image’s position in the list</value>
-        /*
-        <example>5</example>
-        */
-        [DataMember(Name = "position", EmitDefaultValue = false)]
-        public int Position { get; set; }
-
-        /// <summary>
-        /// Content(body) encoded in base64 of image file
-        /// </summary>
-        /// <value>Content(body) encoded in base64 of image file</value>
-        /*
-        <example>/9j/4AAQSkZ...gD/2Q&#x3D;&#x3D;</example>
-        */
-        [DataMember(Name = "content", EmitDefaultValue = false)]
-        public string Content { get; set; }
+        [DataMember(Name = "product_id", EmitDefaultValue = false)]
+        public string ProductId { get; set; }
 
         /// <summary>
         /// Defines product&#39;s variants specified by variant id
@@ -240,6 +190,56 @@ namespace Org.OpenAPITools.Model
         public string LangId { get; set; }
 
         /// <summary>
+        /// Defines URL of the image that has to be added
+        /// </summary>
+        /// <value>Defines URL of the image that has to be added</value>
+        /*
+        <example>http://docs.api2cart.com/img/logo.png</example>
+        */
+        [DataMember(Name = "url", EmitDefaultValue = false)]
+        public string Url { get; set; }
+
+        /// <summary>
+        /// Content(body) encoded in base64 of image file
+        /// </summary>
+        /// <value>Content(body) encoded in base64 of image file</value>
+        /*
+        <example>/9j/4AAQSkZ...gD/2Q&#x3D;&#x3D;</example>
+        */
+        [DataMember(Name = "content", EmitDefaultValue = false)]
+        public string Content { get; set; }
+
+        /// <summary>
+        /// Defines alternative text that has to be attached to the picture
+        /// </summary>
+        /// <value>Defines alternative text that has to be attached to the picture</value>
+        /*
+        <example>This cool image</example>
+        */
+        [DataMember(Name = "label", EmitDefaultValue = false)]
+        public string Label { get; set; }
+
+        /// <summary>
+        /// Mime type of image http://en.wikipedia.org/wiki/Internet_media_type.
+        /// </summary>
+        /// <value>Mime type of image http://en.wikipedia.org/wiki/Internet_media_type.</value>
+        /*
+        <example>image/jpeg</example>
+        */
+        [DataMember(Name = "mime", EmitDefaultValue = false)]
+        public string Mime { get; set; }
+
+        /// <summary>
+        /// Defines image’s position in the list
+        /// </summary>
+        /// <value>Defines image’s position in the list</value>
+        /*
+        <example>5</example>
+        */
+        [DataMember(Name = "position", EmitDefaultValue = false)]
+        public int Position { get; set; }
+
+        /// <summary>
         /// Use the latest platform API version
         /// </summary>
         /// <value>Use the latest platform API version</value>
@@ -257,19 +257,19 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ProductImageAdd {\n");
-            sb.Append("  ProductId: ").Append(ProductId).Append("\n");
-            sb.Append("  ImageName: ").Append(ImageName).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Url: ").Append(Url).Append("\n");
-            sb.Append("  Label: ").Append(Label).Append("\n");
-            sb.Append("  Mime: ").Append(Mime).Append("\n");
-            sb.Append("  Position: ").Append(Position).Append("\n");
-            sb.Append("  Content: ").Append(Content).Append("\n");
+            sb.Append("  ImageName: ").Append(ImageName).Append("\n");
+            sb.Append("  ProductId: ").Append(ProductId).Append("\n");
             sb.Append("  ProductVariantId: ").Append(ProductVariantId).Append("\n");
             sb.Append("  VariantIds: ").Append(VariantIds).Append("\n");
             sb.Append("  OptionValueIds: ").Append(OptionValueIds).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  LangId: ").Append(LangId).Append("\n");
+            sb.Append("  Url: ").Append(Url).Append("\n");
+            sb.Append("  Content: ").Append(Content).Append("\n");
+            sb.Append("  Label: ").Append(Label).Append("\n");
+            sb.Append("  Mime: ").Append(Mime).Append("\n");
+            sb.Append("  Position: ").Append(Position).Append("\n");
             sb.Append("  UseLatestApiVersion: ").Append(UseLatestApiVersion).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

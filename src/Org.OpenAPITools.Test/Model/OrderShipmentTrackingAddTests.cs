@@ -56,15 +56,6 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'StoreId'
-        /// </summary>
-        [Fact]
-        public void StoreIdTest()
-        {
-            // TODO unit test for the property 'StoreId'
-        }
-
-        /// <summary>
         /// Test the property 'OrderId'
         /// </summary>
         [Fact]
@@ -89,6 +80,15 @@ namespace Org.OpenAPITools.Test.Model
         public void CarrierIdTest()
         {
             // TODO unit test for the property 'CarrierId'
+        }
+
+        /// <summary>
+        /// Test the property 'StoreId'
+        /// </summary>
+        [Fact]
+        public void StoreIdTest()
+        {
+            // TODO unit test for the property 'StoreId'
         }
 
         /// <summary>

@@ -9,7 +9,7 @@ All URIs are relative to *https://api.api2cart.com/v1.1*
 
 <a id="batchjoblist"></a>
 # **BatchJobList**
-> ModelResponseBatchJobList BatchJobList (int? count = null, string? pageCursor = null, string? createdFrom = null, string? createdTo = null, string? processedFrom = null, string? processedTo = null, string? ids = null, string? responseFields = null)
+> ModelResponseBatchJobList BatchJobList (int? count = null, string? pageCursor = null, string? ids = null, string? createdFrom = null, string? createdTo = null, string? processedFrom = null, string? processedTo = null, string? responseFields = null)
 
 batch.job.list
 
@@ -43,17 +43,17 @@ namespace Example
             var apiInstance = new BatchApi(config);
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
             var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
+            var ids = 24,25;  // string? | Filter batch jobs by ids (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var processedFrom = 2100-08-29 13:45:52;  // string? | Retrieve entities according to their processing datetime (optional) 
             var processedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities according to their processing datetime (optional) 
-            var ids = 24,25;  // string? | Filter batch jobs by ids (optional) 
             var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "{return_code,return_message,pagination,result}")
 
             try
             {
                 // batch.job.list
-                ModelResponseBatchJobList result = apiInstance.BatchJobList(count, pageCursor, createdFrom, createdTo, processedFrom, processedTo, ids, responseFields);
+                ModelResponseBatchJobList result = apiInstance.BatchJobList(count, pageCursor, ids, createdFrom, createdTo, processedFrom, processedTo, responseFields);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -74,7 +74,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // batch.job.list
-    ApiResponse<ModelResponseBatchJobList> response = apiInstance.BatchJobListWithHttpInfo(count, pageCursor, createdFrom, createdTo, processedFrom, processedTo, ids, responseFields);
+    ApiResponse<ModelResponseBatchJobList> response = apiInstance.BatchJobListWithHttpInfo(count, pageCursor, ids, createdFrom, createdTo, processedFrom, processedTo, responseFields);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -93,11 +93,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
 | **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
+| **ids** | **string?** | Filter batch jobs by ids | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **processedFrom** | **string?** | Retrieve entities according to their processing datetime | [optional]  |
 | **processedTo** | **string?** | Retrieve entities according to their processing datetime | [optional]  |
-| **ids** | **string?** | Filter batch jobs by ids | [optional]  |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;{return_code,return_message,pagination,result}&quot;] |
 
 ### Return type

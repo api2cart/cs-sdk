@@ -56,39 +56,12 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'StoreId'
-        /// </summary>
-        [Fact]
-        public void StoreIdTest()
-        {
-            // TODO unit test for the property 'StoreId'
-        }
-
-        /// <summary>
         /// Test the property 'Code'
         /// </summary>
         [Fact]
         public void CodeTest()
         {
             // TODO unit test for the property 'Code'
-        }
-
-        /// <summary>
-        /// Test the property 'Name'
-        /// </summary>
-        [Fact]
-        public void NameTest()
-        {
-            // TODO unit test for the property 'Name'
-        }
-
-        /// <summary>
-        /// Test the property 'Codes'
-        /// </summary>
-        [Fact]
-        public void CodesTest()
-        {
-            // TODO unit test for the property 'Codes'
         }
 
         /// <summary>
@@ -125,6 +98,24 @@ namespace Org.OpenAPITools.Test.Model
         public void ActionAmountTest()
         {
             // TODO unit test for the property 'ActionAmount'
+        }
+
+        /// <summary>
+        /// Test the property 'Codes'
+        /// </summary>
+        [Fact]
+        public void CodesTest()
+        {
+            // TODO unit test for the property 'Codes'
+        }
+
+        /// <summary>
+        /// Test the property 'Name'
+        /// </summary>
+        [Fact]
+        public void NameTest()
+        {
+            // TODO unit test for the property 'Name'
         }
 
         /// <summary>
@@ -206,6 +197,15 @@ namespace Org.OpenAPITools.Test.Model
         public void IncludeTaxTest()
         {
             // TODO unit test for the property 'IncludeTax'
+        }
+
+        /// <summary>
+        /// Test the property 'StoreId'
+        /// </summary>
+        [Fact]
+        public void StoreIdTest()
+        {
+            // TODO unit test for the property 'StoreId'
         }
     }
 }

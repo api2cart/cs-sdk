@@ -259,7 +259,7 @@ catch (ApiException e)
 
 <a id="productattributelist"></a>
 # **ProductAttributeList**
-> ModelResponseProductAttributeList ProductAttributeList (string productId, string? attributeId = null, string? variantId = null, string? pageCursor = null, int? start = null, int? count = null, string? attributeGroupId = null, string? setName = null, string? langId = null, string? storeId = null, string? sortBy = null, string? sortDirection = null, string? varParams = null, string? responseFields = null, string? exclude = null)
+> ModelResponseProductAttributeList ProductAttributeList (string productId, int? start = null, int? count = null, string? pageCursor = null, string? attributeId = null, string? variantId = null, string? attributeGroupId = null, string? langId = null, string? storeId = null, string? setName = null, string? sortBy = null, string? sortDirection = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 product.attribute.list
 
@@ -292,25 +292,25 @@ namespace Example
 
             var apiInstance = new ProductApi(config);
             var productId = 10;  // string | Retrieves attributes specified by product id
-            var attributeId = 156;  // string? | Retrieves info for specified attribute_id (optional) 
-            var variantId = 45;  // string? | Defines product's variants specified by variant id (optional) 
-            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
+            var attributeId = 156;  // string? | Retrieves info for specified attribute_id (optional) 
+            var variantId = 45;  // string? | Defines product's variants specified by variant id (optional) 
             var attributeGroupId = 202;  // string? | Filter by attribute_group_id (optional) 
-            var setName = Shoes;  // string? | Retrieves attributes specified by set_name in Magento (optional) 
             var langId = 3;  // string? | Retrieves attributes specified by language id (optional) 
             var storeId = 1;  // string? | Retrieves attributes specified by store id (optional) 
+            var setName = Shoes;  // string? | Retrieves attributes specified by set_name in Magento (optional) 
             var sortBy = value;  // string? | Set field to sort by (optional)  (default to "attribute_id")
             var sortDirection = asc;  // string? | Set sorting direction (optional)  (default to "asc")
-            var varParams = attribute_id,name;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "attribute_id,name")
             var responseFields = {pagination,result{attribute}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = attribute_id,name;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "attribute_id,name")
             var exclude = attribute_id,name;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // product.attribute.list
-                ModelResponseProductAttributeList result = apiInstance.ProductAttributeList(productId, attributeId, variantId, pageCursor, start, count, attributeGroupId, setName, langId, storeId, sortBy, sortDirection, varParams, responseFields, exclude);
+                ModelResponseProductAttributeList result = apiInstance.ProductAttributeList(productId, start, count, pageCursor, attributeId, variantId, attributeGroupId, langId, storeId, setName, sortBy, sortDirection, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -331,7 +331,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.attribute.list
-    ApiResponse<ModelResponseProductAttributeList> response = apiInstance.ProductAttributeListWithHttpInfo(productId, attributeId, variantId, pageCursor, start, count, attributeGroupId, setName, langId, storeId, sortBy, sortDirection, varParams, responseFields, exclude);
+    ApiResponse<ModelResponseProductAttributeList> response = apiInstance.ProductAttributeListWithHttpInfo(productId, start, count, pageCursor, attributeId, variantId, attributeGroupId, langId, storeId, setName, sortBy, sortDirection, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -349,19 +349,19 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **productId** | **string** | Retrieves attributes specified by product id |  |
-| **attributeId** | **string?** | Retrieves info for specified attribute_id | [optional]  |
-| **variantId** | **string?** | Defines product&#39;s variants specified by variant id | [optional]  |
-| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
+| **attributeId** | **string?** | Retrieves info for specified attribute_id | [optional]  |
+| **variantId** | **string?** | Defines product&#39;s variants specified by variant id | [optional]  |
 | **attributeGroupId** | **string?** | Filter by attribute_group_id | [optional]  |
-| **setName** | **string?** | Retrieves attributes specified by set_name in Magento | [optional]  |
 | **langId** | **string?** | Retrieves attributes specified by language id | [optional]  |
 | **storeId** | **string?** | Retrieves attributes specified by store id | [optional]  |
+| **setName** | **string?** | Retrieves attributes specified by set_name in Magento | [optional]  |
 | **sortBy** | **string?** | Set field to sort by | [optional] [default to &quot;attribute_id&quot;] |
 | **sortDirection** | **string?** | Set sorting direction | [optional] [default to &quot;asc&quot;] |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;attribute_id,name&quot;] |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;attribute_id,name&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
@@ -611,7 +611,7 @@ catch (ApiException e)
 
 <a id="productbrandlist"></a>
 # **ProductBrandList**
-> ModelResponseProductBrandList ProductBrandList (int? start = null, int? count = null, string? pageCursor = null, string? varParams = null, string? brandIds = null, string? exclude = null, string? categoryId = null, string? storeId = null, string? langId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? parentId = null, string? responseFields = null, string? findWhere = null, string? findValue = null)
+> ModelResponseProductBrandList ProductBrandList (int? start = null, int? count = null, string? pageCursor = null, string? brandIds = null, string? categoryId = null, string? parentId = null, string? storeId = null, string? langId = null, string? findWhere = null, string? findValue = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 product.brand.list
 
@@ -646,25 +646,25 @@ namespace Example
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
             var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,short_description,active,url")
             var brandIds = 4,5;  // string? | Retrieves brands specified by brand ids (optional) 
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var categoryId = 6;  // string? | Retrieves product brands specified by category id (optional) 
+            var parentId = 6;  // string? | Retrieves brands specified by parent id (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
             var langId = 3;  // string? | Language id (optional) 
+            var findWhere = name;  // string? | Entity search that is specified by the comma-separated unique fields (optional) 
+            var findValue = Phone;  // string? | Entity search that is specified by some value (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-            var parentId = 6;  // string? | Retrieves brands specified by parent id (optional) 
             var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var findWhere = name;  // string? | Entity search that is specified by the comma-separated unique fields (optional) 
-            var findValue = Phone;  // string? | Entity search that is specified by some value (optional) 
+            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,short_description,active,url")
+            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // product.brand.list
-                ModelResponseProductBrandList result = apiInstance.ProductBrandList(start, count, pageCursor, varParams, brandIds, exclude, categoryId, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, parentId, responseFields, findWhere, findValue);
+                ModelResponseProductBrandList result = apiInstance.ProductBrandList(start, count, pageCursor, brandIds, categoryId, parentId, storeId, langId, findWhere, findValue, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -685,7 +685,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.brand.list
-    ApiResponse<ModelResponseProductBrandList> response = apiInstance.ProductBrandListWithHttpInfo(start, count, pageCursor, varParams, brandIds, exclude, categoryId, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, parentId, responseFields, findWhere, findValue);
+    ApiResponse<ModelResponseProductBrandList> response = apiInstance.ProductBrandListWithHttpInfo(start, count, pageCursor, brandIds, categoryId, parentId, storeId, langId, findWhere, findValue, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -705,20 +705,20 @@ catch (ApiException e)
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
 | **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,short_description,active,url&quot;] |
 | **brandIds** | **string?** | Retrieves brands specified by brand ids | [optional]  |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **categoryId** | **string?** | Retrieves product brands specified by category id | [optional]  |
+| **parentId** | **string?** | Retrieves brands specified by parent id | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
+| **findWhere** | **string?** | Entity search that is specified by the comma-separated unique fields | [optional]  |
+| **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-| **parentId** | **string?** | Retrieves brands specified by parent id | [optional]  |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **findWhere** | **string?** | Entity search that is specified by the comma-separated unique fields | [optional]  |
-| **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,short_description,active,url&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 
@@ -849,7 +849,7 @@ catch (ApiException e)
 
 <a id="productchilditeminfo"></a>
 # **ProductChildItemInfo**
-> ProductChildItemInfo200Response ProductChildItemInfo (string productId, string id, string? varParams = null, string? responseFields = null, string? exclude = null, string? storeId = null, string? langId = null, string? currencyId = null, bool? useLatestApiVersion = null)
+> ProductChildItemInfo200Response ProductChildItemInfo (string productId, string id, string? storeId = null, string? langId = null, string? currencyId = null, string? responseFields = null, string? varParams = null, string? exclude = null, bool? useLatestApiVersion = null)
 
 product.child_item.info
 
@@ -883,18 +883,18 @@ namespace Example
             var apiInstance = new ProductApi(config);
             var productId = 10;  // string | Filter by parent product id
             var id = 10;  // string | Entity id
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "force_all")
-            var responseFields = {result{id,parent_id,sku,upc,images,combination}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
             var langId = 3;  // string? | Language id (optional) 
             var currencyId = usd;  // string? | Currency Id (optional) 
+            var responseFields = {result{id,parent_id,sku,upc,images,combination}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "force_all")
+            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
 
             try
             {
                 // product.child_item.info
-                ProductChildItemInfo200Response result = apiInstance.ProductChildItemInfo(productId, id, varParams, responseFields, exclude, storeId, langId, currencyId, useLatestApiVersion);
+                ProductChildItemInfo200Response result = apiInstance.ProductChildItemInfo(productId, id, storeId, langId, currencyId, responseFields, varParams, exclude, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -915,7 +915,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.child_item.info
-    ApiResponse<ProductChildItemInfo200Response> response = apiInstance.ProductChildItemInfoWithHttpInfo(productId, id, varParams, responseFields, exclude, storeId, langId, currencyId, useLatestApiVersion);
+    ApiResponse<ProductChildItemInfo200Response> response = apiInstance.ProductChildItemInfoWithHttpInfo(productId, id, storeId, langId, currencyId, responseFields, varParams, exclude, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -934,12 +934,12 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **productId** | **string** | Filter by parent product id |  |
 | **id** | **string** | Entity id |  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;force_all&quot;] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
 | **currencyId** | **string?** | Currency Id | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;force_all&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
 
 ### Return type
@@ -965,7 +965,7 @@ catch (ApiException e)
 
 <a id="productchilditemlist"></a>
 # **ProductChildItemList**
-> ModelResponseProductChildItemList ProductChildItemList (string? pageCursor = null, int? start = null, int? count = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? productId = null, string? productIds = null, string? sku = null, string? storeId = null, string? langId = null, string? currencyId = null, bool? availSale = null, string? findValue = null, string? findWhere = null, string? reportRequestId = null, bool? disableReportCache = null, bool? useLatestApiVersion = null, bool? returnGlobal = null)
+> ModelResponseProductChildItemList ProductChildItemList (int? start = null, int? count = null, string? pageCursor = null, string? productId = null, string? productIds = null, string? sku = null, string? storeId = null, string? langId = null, string? currencyId = null, bool? availSale = null, string? findValue = null, string? findWhere = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, bool? returnGlobal = null, string? responseFields = null, string? varParams = null, string? exclude = null, string? reportRequestId = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
 
 product.child_item.list
 
@@ -997,16 +997,9 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new ProductApi(config);
-            var pageCursor = ;  // string? | Used to retrieve products child items via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "force_all")
-            var responseFields = {result{children{id,parent_id,sku,upc,images,combination}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
-            var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
-            var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
-            var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
+            var pageCursor = ;  // string? | Used to retrieve products child items via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var productId = 10;  // string? | Filter by parent product id (optional) 
             var productIds = 4,5;  // string? | Filter by parent product ids (optional) 
             var sku = bag_01;  // string? | Filter by products variant's sku (optional) 
@@ -1016,15 +1009,22 @@ namespace Example
             var availSale = false;  // bool? | Specifies the set of available/not available products for sale (optional) 
             var findValue = bundled-item-123-;  // string? | Entity search that is specified by some value (optional) 
             var findWhere = sku;  // string? | Child products search that is specified by field (optional) 
+            var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
+            var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
+            var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
+            var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
+            var returnGlobal = false;  // bool? | Determines the type of products to be returned. If set to 'true', only global products will be returned; if set to 'false', only local products will be returned. (optional)  (default to false)
+            var responseFields = {result{children{id,parent_id,sku,upc,images,combination}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "force_all")
+            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var reportRequestId = 105245017661;  // string? | Report request id (optional) 
             var disableReportCache = false;  // bool? | Disable report cache for current request (optional)  (default to false)
             var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
-            var returnGlobal = false;  // bool? | Determines the type of products to be returned. If set to 'true', only global products will be returned; if set to 'false', only local products will be returned. (optional)  (default to false)
 
             try
             {
                 // product.child_item.list
-                ModelResponseProductChildItemList result = apiInstance.ProductChildItemList(pageCursor, start, count, varParams, responseFields, exclude, createdFrom, createdTo, modifiedFrom, modifiedTo, productId, productIds, sku, storeId, langId, currencyId, availSale, findValue, findWhere, reportRequestId, disableReportCache, useLatestApiVersion, returnGlobal);
+                ModelResponseProductChildItemList result = apiInstance.ProductChildItemList(start, count, pageCursor, productId, productIds, sku, storeId, langId, currencyId, availSale, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, returnGlobal, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1045,7 +1045,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.child_item.list
-    ApiResponse<ModelResponseProductChildItemList> response = apiInstance.ProductChildItemListWithHttpInfo(pageCursor, start, count, varParams, responseFields, exclude, createdFrom, createdTo, modifiedFrom, modifiedTo, productId, productIds, sku, storeId, langId, currencyId, availSale, findValue, findWhere, reportRequestId, disableReportCache, useLatestApiVersion, returnGlobal);
+    ApiResponse<ModelResponseProductChildItemList> response = apiInstance.ProductChildItemListWithHttpInfo(start, count, pageCursor, productId, productIds, sku, storeId, langId, currencyId, availSale, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, returnGlobal, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1062,16 +1062,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **pageCursor** | **string?** | Used to retrieve products child items via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;force_all&quot;] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
-| **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
-| **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
-| **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
+| **pageCursor** | **string?** | Used to retrieve products child items via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **productId** | **string?** | Filter by parent product id | [optional]  |
 | **productIds** | **string?** | Filter by parent product ids | [optional]  |
 | **sku** | **string?** | Filter by products variant&#39;s sku | [optional]  |
@@ -1081,10 +1074,17 @@ catch (ApiException e)
 | **availSale** | **bool?** | Specifies the set of available/not available products for sale | [optional]  |
 | **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
 | **findWhere** | **string?** | Child products search that is specified by field | [optional]  |
+| **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
+| **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
+| **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
+| **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
+| **returnGlobal** | **bool?** | Determines the type of products to be returned. If set to &#39;true&#39;, only global products will be returned; if set to &#39;false&#39;, only local products will be returned. | [optional] [default to false] |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;force_all&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **reportRequestId** | **string?** | Report request id | [optional]  |
 | **disableReportCache** | **bool?** | Disable report cache for current request | [optional] [default to false] |
 | **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
-| **returnGlobal** | **bool?** | Determines the type of products to be returned. If set to &#39;true&#39;, only global products will be returned; if set to &#39;false&#39;, only local products will be returned. | [optional] [default to false] |
 
 ### Return type
 
@@ -1109,7 +1109,7 @@ catch (ApiException e)
 
 <a id="productcount"></a>
 # **ProductCount**
-> ProductCount200Response ProductCount (string? categoryId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, bool? availView = null, bool? availSale = null, string? storeId = null, string? langId = null, string? productIds = null, string? sinceId = null, string? reportRequestId = null, bool? disableReportCache = null, string? brandName = null, List<string>? productAttributes = null, string? status = null, string? type = null, string? findValue = null, string? findWhere = null, bool? useLatestApiVersion = null, bool? returnGlobal = null, string? categoriesIds = null)
+> ProductCount200Response ProductCount (string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? langId = null, bool? availView = null, bool? availSale = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? brandName = null, List<string>? productAttributes = null, string? status = null, string? type = null, string? findValue = null, string? findWhere = null, string? reportRequestId = null, bool? returnGlobal = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
 
 product.count
 
@@ -1141,33 +1141,33 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new ProductApi(config);
+            var productIds = 4,5;  // string? | Counts products specified by product ids (optional) 
+            var sinceId = 56;  // string? | Retrieve entities starting from the specified id. (optional) 
+            var categoriesIds = 23,56;  // string? | Defines product add that is specified by comma-separated categories id (optional) 
             var categoryId = 6;  // string? | Counts products specified by category id (optional) 
+            var storeId = 1;  // string? | Counts products specified by store id (optional) 
+            var langId = 3;  // string? | Counts products specified by language id (optional) 
+            var availView = true;  // bool? | Specifies the set of visible/invisible products (optional) 
+            var availSale = false;  // bool? | Specifies the set of available/not available products for sale (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-            var availView = true;  // bool? | Specifies the set of visible/invisible products (optional) 
-            var availSale = false;  // bool? | Specifies the set of available/not available products for sale (optional) 
-            var storeId = 1;  // string? | Counts products specified by store id (optional) 
-            var langId = 3;  // string? | Counts products specified by language id (optional) 
-            var productIds = 4,5;  // string? | Counts products specified by product ids (optional) 
-            var sinceId = 56;  // string? | Retrieve entities starting from the specified id. (optional) 
-            var reportRequestId = 105245017661;  // string? | Report request id (optional) 
-            var disableReportCache = false;  // bool? | Disable report cache for current request (optional)  (default to false)
             var brandName = Abidas;  // string? | Retrieves brands specified by brand name (optional) 
             var productAttributes = new List<string>?(); // List<string>? | Defines product attributes (optional) 
             var status = disabled;  // string? | Defines product's status (optional) 
             var type = simple;  // string? | Defines products's type (optional) 
             var findValue = Phone;  // string? | Entity search that is specified by some value (optional) 
             var findWhere = name;  // string? | Counts products that are searched specified by field (optional) 
-            var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
+            var reportRequestId = 105245017661;  // string? | Report request id (optional) 
             var returnGlobal = false;  // bool? | Determines the type of products to be returned. If set to 'true', only global products will be returned; if set to 'false', only local products will be returned. (optional)  (default to false)
-            var categoriesIds = 23,56;  // string? | Defines product add that is specified by comma-separated categories id (optional) 
+            var disableReportCache = false;  // bool? | Disable report cache for current request (optional)  (default to false)
+            var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
 
             try
             {
                 // product.count
-                ProductCount200Response result = apiInstance.ProductCount(categoryId, createdFrom, createdTo, modifiedFrom, modifiedTo, availView, availSale, storeId, langId, productIds, sinceId, reportRequestId, disableReportCache, brandName, productAttributes, status, type, findValue, findWhere, useLatestApiVersion, returnGlobal, categoriesIds);
+                ProductCount200Response result = apiInstance.ProductCount(productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, productAttributes, status, type, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1188,7 +1188,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.count
-    ApiResponse<ProductCount200Response> response = apiInstance.ProductCountWithHttpInfo(categoryId, createdFrom, createdTo, modifiedFrom, modifiedTo, availView, availSale, storeId, langId, productIds, sinceId, reportRequestId, disableReportCache, brandName, productAttributes, status, type, findValue, findWhere, useLatestApiVersion, returnGlobal, categoriesIds);
+    ApiResponse<ProductCount200Response> response = apiInstance.ProductCountWithHttpInfo(productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, productAttributes, status, type, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1205,28 +1205,28 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
+| **productIds** | **string?** | Counts products specified by product ids | [optional]  |
+| **sinceId** | **string?** | Retrieve entities starting from the specified id. | [optional]  |
+| **categoriesIds** | **string?** | Defines product add that is specified by comma-separated categories id | [optional]  |
 | **categoryId** | **string?** | Counts products specified by category id | [optional]  |
+| **storeId** | **string?** | Counts products specified by store id | [optional]  |
+| **langId** | **string?** | Counts products specified by language id | [optional]  |
+| **availView** | **bool?** | Specifies the set of visible/invisible products | [optional]  |
+| **availSale** | **bool?** | Specifies the set of available/not available products for sale | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-| **availView** | **bool?** | Specifies the set of visible/invisible products | [optional]  |
-| **availSale** | **bool?** | Specifies the set of available/not available products for sale | [optional]  |
-| **storeId** | **string?** | Counts products specified by store id | [optional]  |
-| **langId** | **string?** | Counts products specified by language id | [optional]  |
-| **productIds** | **string?** | Counts products specified by product ids | [optional]  |
-| **sinceId** | **string?** | Retrieve entities starting from the specified id. | [optional]  |
-| **reportRequestId** | **string?** | Report request id | [optional]  |
-| **disableReportCache** | **bool?** | Disable report cache for current request | [optional] [default to false] |
 | **brandName** | **string?** | Retrieves brands specified by brand name | [optional]  |
 | **productAttributes** | [**List&lt;string&gt;?**](string.md) | Defines product attributes | [optional]  |
 | **status** | **string?** | Defines product&#39;s status | [optional]  |
 | **type** | **string?** | Defines products&#39;s type | [optional]  |
 | **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
 | **findWhere** | **string?** | Counts products that are searched specified by field | [optional]  |
-| **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
+| **reportRequestId** | **string?** | Report request id | [optional]  |
 | **returnGlobal** | **bool?** | Determines the type of products to be returned. If set to &#39;true&#39;, only global products will be returned; if set to &#39;false&#39;, only local products will be returned. | [optional] [default to false] |
-| **categoriesIds** | **string?** | Defines product add that is specified by comma-separated categories id | [optional]  |
+| **disableReportCache** | **bool?** | Disable report cache for current request | [optional] [default to false] |
+| **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
 
 ### Return type
 
@@ -1363,7 +1363,7 @@ catch (ApiException e)
 
 <a id="productcurrencylist"></a>
 # **ProductCurrencyList**
-> ModelResponseProductCurrencyList ProductCurrencyList (int? start = null, int? count = null, string? varParams = null, string? pageCursor = null, string? exclude = null, string? responseFields = null, bool? varDefault = null, bool? avail = null)
+> ModelResponseProductCurrencyList ProductCurrencyList (int? start = null, int? count = null, string? pageCursor = null, bool? varDefault = null, bool? avail = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 product.currency.list
 
@@ -1397,17 +1397,17 @@ namespace Example
             var apiInstance = new ProductApi(config);
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
-            var varParams = name,iso3,default,avail;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "name,iso3,default,avail")
             var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
-            var exclude = name,iso3,default,avail;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var responseFields = {return_message,pagination,result{currency}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var varDefault = true;  // bool? | Specifies the set of default/not default currencies (optional) 
             var avail = false;  // bool? | Specifies the set of available/not available currencies (optional) 
+            var responseFields = {return_message,pagination,result{currency}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = name,iso3,default,avail;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "name,iso3,default,avail")
+            var exclude = name,iso3,default,avail;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // product.currency.list
-                ModelResponseProductCurrencyList result = apiInstance.ProductCurrencyList(start, count, varParams, pageCursor, exclude, responseFields, varDefault, avail);
+                ModelResponseProductCurrencyList result = apiInstance.ProductCurrencyList(start, count, pageCursor, varDefault, avail, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1428,7 +1428,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.currency.list
-    ApiResponse<ModelResponseProductCurrencyList> response = apiInstance.ProductCurrencyListWithHttpInfo(start, count, varParams, pageCursor, exclude, responseFields, varDefault, avail);
+    ApiResponse<ModelResponseProductCurrencyList> response = apiInstance.ProductCurrencyListWithHttpInfo(start, count, pageCursor, varDefault, avail, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1447,12 +1447,12 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;name,iso3,default,avail&quot;] |
 | **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **varDefault** | **bool?** | Specifies the set of default/not default currencies | [optional]  |
 | **avail** | **bool?** | Specifies the set of available/not available currencies | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;name,iso3,default,avail&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 
@@ -2088,7 +2088,7 @@ catch (ApiException e)
 
 <a id="productimageupdate"></a>
 # **ProductImageUpdate**
-> ProductImageUpdate200Response ProductImageUpdate (string productId, string id, string? variantIds = null, string? imageName = null, string? type = null, string? label = null, int? position = null, string? storeId = null, string? langId = null, bool? hidden = null)
+> ProductImageUpdate200Response ProductImageUpdate (string productId, string id, string? variantIds = null, string? storeId = null, string? langId = null, string? imageName = null, string? type = null, string? label = null, int? position = null, bool? hidden = null)
 
 product.image.update
 
@@ -2123,18 +2123,18 @@ namespace Example
             var productId = 10;  // string | Defines product id where the image should be updated
             var id = 10;  // string | Defines image update specified by image id
             var variantIds = 1,2,3,4,5;  // string? | Defines product's variants ids (optional) 
+            var storeId = 1;  // string? | Store Id (optional) 
+            var langId = 3;  // string? | Language id (optional) 
             var imageName = data/product/main/product_69_bag-gray.png;  // string? | Defines image's name (optional) 
             var type = thumbnail;  // string? | Defines image's types that are specified by comma-separated list (optional)  (default to "additional")
             var label = This cool image;  // string? | Defines alternative text that has to be attached to the picture (optional) 
             var position = 5;  // int? | Defines image’s position in the list (optional) 
-            var storeId = 1;  // string? | Store Id (optional) 
-            var langId = 3;  // string? | Language id (optional) 
             var hidden = true;  // bool? | Define is hide image (optional) 
 
             try
             {
                 // product.image.update
-                ProductImageUpdate200Response result = apiInstance.ProductImageUpdate(productId, id, variantIds, imageName, type, label, position, storeId, langId, hidden);
+                ProductImageUpdate200Response result = apiInstance.ProductImageUpdate(productId, id, variantIds, storeId, langId, imageName, type, label, position, hidden);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2155,7 +2155,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.image.update
-    ApiResponse<ProductImageUpdate200Response> response = apiInstance.ProductImageUpdateWithHttpInfo(productId, id, variantIds, imageName, type, label, position, storeId, langId, hidden);
+    ApiResponse<ProductImageUpdate200Response> response = apiInstance.ProductImageUpdateWithHttpInfo(productId, id, variantIds, storeId, langId, imageName, type, label, position, hidden);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2175,12 +2175,12 @@ catch (ApiException e)
 | **productId** | **string** | Defines product id where the image should be updated |  |
 | **id** | **string** | Defines image update specified by image id |  |
 | **variantIds** | **string?** | Defines product&#39;s variants ids | [optional]  |
+| **storeId** | **string?** | Store Id | [optional]  |
+| **langId** | **string?** | Language id | [optional]  |
 | **imageName** | **string?** | Defines image&#39;s name | [optional]  |
 | **type** | **string?** | Defines image&#39;s types that are specified by comma-separated list | [optional] [default to &quot;additional&quot;] |
 | **label** | **string?** | Defines alternative text that has to be attached to the picture | [optional]  |
 | **position** | **int?** | Defines image’s position in the list | [optional]  |
-| **storeId** | **string?** | Store Id | [optional]  |
-| **langId** | **string?** | Language id | [optional]  |
 | **hidden** | **bool?** | Define is hide image | [optional]  |
 
 ### Return type
@@ -2206,7 +2206,7 @@ catch (ApiException e)
 
 <a id="productinfo"></a>
 # **ProductInfo**
-> ProductInfo200Response ProductInfo (string id, string? varParams = null, string? responseFields = null, string? exclude = null, string? storeId = null, string? langId = null, string? currencyId = null, string? reportRequestId = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
+> ProductInfo200Response ProductInfo (string id, string? storeId = null, string? langId = null, string? currencyId = null, string? responseFields = null, string? varParams = null, string? exclude = null, string? reportRequestId = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
 
 product.info
 
@@ -2239,12 +2239,12 @@ namespace Example
 
             var apiInstance = new ProductApi(config);
             var id = 10;  // string | Retrieves product's info specified by product id
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description,price,categories_ids")
-            var responseFields = {result{id,name,price,images}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var storeId = 1;  // string? | Retrieves product info specified by store id (optional) 
             var langId = 3;  // string? | Retrieves product info specified by language id (optional) 
             var currencyId = usd;  // string? | Currency Id (optional) 
+            var responseFields = {result{id,name,price,images}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description,price,categories_ids")
+            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var reportRequestId = 105245017661;  // string? | Report request id (optional) 
             var disableReportCache = false;  // bool? | Disable report cache for current request (optional)  (default to false)
             var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
@@ -2252,7 +2252,7 @@ namespace Example
             try
             {
                 // product.info
-                ProductInfo200Response result = apiInstance.ProductInfo(id, varParams, responseFields, exclude, storeId, langId, currencyId, reportRequestId, disableReportCache, useLatestApiVersion);
+                ProductInfo200Response result = apiInstance.ProductInfo(id, storeId, langId, currencyId, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2273,7 +2273,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.info
-    ApiResponse<ProductInfo200Response> response = apiInstance.ProductInfoWithHttpInfo(id, varParams, responseFields, exclude, storeId, langId, currencyId, reportRequestId, disableReportCache, useLatestApiVersion);
+    ApiResponse<ProductInfo200Response> response = apiInstance.ProductInfoWithHttpInfo(id, storeId, langId, currencyId, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2291,12 +2291,12 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **string** | Retrieves product&#39;s info specified by product id |  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description,price,categories_ids&quot;] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **storeId** | **string?** | Retrieves product info specified by store id | [optional]  |
 | **langId** | **string?** | Retrieves product info specified by language id | [optional]  |
 | **currencyId** | **string?** | Currency Id | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description,price,categories_ids&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **reportRequestId** | **string?** | Report request id | [optional]  |
 | **disableReportCache** | **bool?** | Disable report cache for current request | [optional] [default to false] |
 | **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
@@ -2324,7 +2324,7 @@ catch (ApiException e)
 
 <a id="productlist"></a>
 # **ProductList**
-> ModelResponseProductList ProductList (string? pageCursor = null, int? start = null, int? count = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? categoryId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, bool? availView = null, bool? availSale = null, string? storeId = null, string? langId = null, string? currencyId = null, string? productIds = null, string? sinceId = null, string? reportRequestId = null, bool? disableReportCache = null, string? sortBy = null, string? sortDirection = null, string? sku = null, bool? disableCache = null, string? brandName = null, List<string>? productAttributes = null, string? status = null, string? type = null, string? findValue = null, string? findWhere = null, bool? useLatestApiVersion = null, bool? returnGlobal = null, string? categoriesIds = null)
+> ModelResponseProductList ProductList (int? start = null, int? count = null, string? pageCursor = null, string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? langId = null, string? currencyId = null, bool? availView = null, bool? availSale = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? sku = null, string? brandName = null, List<string>? productAttributes = null, string? status = null, string? type = null, string? findValue = null, string? findWhere = null, bool? returnGlobal = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? sortBy = null, string? sortDirection = null, string? reportRequestId = null, bool? disableCache = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
 
 product.list
 
@@ -2356,44 +2356,44 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new ProductApi(config);
-            var pageCursor = ;  // string? | Used to retrieve products via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description,price,categories_ids")
-            var responseFields = {return_code,pagination,result{product{id,name,price,images}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var pageCursor = ;  // string? | Used to retrieve products via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
+            var productIds = 4,5;  // string? | Retrieves products specified by product ids (optional) 
+            var sinceId = 56;  // string? | Retrieve entities starting from the specified id. (optional) 
+            var categoriesIds = 23,56;  // string? | Retrieves products specified by categories ids (optional) 
             var categoryId = 6;  // string? | Retrieves products specified by category id (optional) 
+            var storeId = 1;  // string? | Retrieves products specified by store id (optional) 
+            var langId = 3;  // string? | Retrieves products specified by language id (optional) 
+            var currencyId = usd;  // string? | Currency Id (optional) 
+            var availView = true;  // bool? | Specifies the set of visible/invisible products (optional) 
+            var availSale = false;  // bool? | Specifies the set of available/not available products for sale (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-            var availView = true;  // bool? | Specifies the set of visible/invisible products (optional) 
-            var availSale = false;  // bool? | Specifies the set of available/not available products for sale (optional) 
-            var storeId = 1;  // string? | Retrieves products specified by store id (optional) 
-            var langId = 3;  // string? | Retrieves products specified by language id (optional) 
-            var currencyId = usd;  // string? | Currency Id (optional) 
-            var productIds = 4,5;  // string? | Retrieves products specified by product ids (optional) 
-            var sinceId = 56;  // string? | Retrieve entities starting from the specified id. (optional) 
-            var reportRequestId = 105245017661;  // string? | Report request id (optional) 
-            var disableReportCache = false;  // bool? | Disable report cache for current request (optional)  (default to false)
-            var sortBy = value_id;  // string? | Set field to sort by (optional)  (default to "id")
-            var sortDirection = asc;  // string? | Set sorting direction (optional)  (default to "asc")
             var sku = bag_01;  // string? | Filter by product's sku (optional) 
-            var disableCache = false;  // bool? | Disable cache for current request (optional)  (default to false)
             var brandName = Abidas;  // string? | Retrieves brands specified by brand name (optional) 
             var productAttributes = new List<string>?(); // List<string>? | Defines product attributes (optional) 
             var status = disabled;  // string? | Defines product's status (optional) 
             var type = simple;  // string? | Defines products's type (optional) 
             var findValue = Phone;  // string? | Entity search that is specified by some value (optional) 
             var findWhere = name;  // string? | Product search that is specified by field (optional) 
-            var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
             var returnGlobal = false;  // bool? | Determines the type of products to be returned. If set to 'true', only global products will be returned; if set to 'false', only local products will be returned. (optional)  (default to false)
-            var categoriesIds = 23,56;  // string? | Retrieves products specified by categories ids (optional) 
+            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description,price,categories_ids")
+            var responseFields = {return_code,pagination,result{product{id,name,price,images}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var sortBy = value_id;  // string? | Set field to sort by (optional)  (default to "id")
+            var sortDirection = asc;  // string? | Set sorting direction (optional)  (default to "asc")
+            var reportRequestId = 105245017661;  // string? | Report request id (optional) 
+            var disableCache = false;  // bool? | Disable cache for current request (optional)  (default to false)
+            var disableReportCache = false;  // bool? | Disable report cache for current request (optional)  (default to false)
+            var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
 
             try
             {
                 // product.list
-                ModelResponseProductList result = apiInstance.ProductList(pageCursor, start, count, varParams, responseFields, exclude, categoryId, createdFrom, createdTo, modifiedFrom, modifiedTo, availView, availSale, storeId, langId, currencyId, productIds, sinceId, reportRequestId, disableReportCache, sortBy, sortDirection, sku, disableCache, brandName, productAttributes, status, type, findValue, findWhere, useLatestApiVersion, returnGlobal, categoriesIds);
+                ModelResponseProductList result = apiInstance.ProductList(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, status, type, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2414,7 +2414,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.list
-    ApiResponse<ModelResponseProductList> response = apiInstance.ProductListWithHttpInfo(pageCursor, start, count, varParams, responseFields, exclude, categoryId, createdFrom, createdTo, modifiedFrom, modifiedTo, availView, availSale, storeId, langId, currencyId, productIds, sinceId, reportRequestId, disableReportCache, sortBy, sortDirection, sku, disableCache, brandName, productAttributes, status, type, findValue, findWhere, useLatestApiVersion, returnGlobal, categoriesIds);
+    ApiResponse<ModelResponseProductList> response = apiInstance.ProductListWithHttpInfo(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, status, type, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2431,39 +2431,39 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **pageCursor** | **string?** | Used to retrieve products via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description,price,categories_ids&quot;] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **pageCursor** | **string?** | Used to retrieve products via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
+| **productIds** | **string?** | Retrieves products specified by product ids | [optional]  |
+| **sinceId** | **string?** | Retrieve entities starting from the specified id. | [optional]  |
+| **categoriesIds** | **string?** | Retrieves products specified by categories ids | [optional]  |
 | **categoryId** | **string?** | Retrieves products specified by category id | [optional]  |
+| **storeId** | **string?** | Retrieves products specified by store id | [optional]  |
+| **langId** | **string?** | Retrieves products specified by language id | [optional]  |
+| **currencyId** | **string?** | Currency Id | [optional]  |
+| **availView** | **bool?** | Specifies the set of visible/invisible products | [optional]  |
+| **availSale** | **bool?** | Specifies the set of available/not available products for sale | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-| **availView** | **bool?** | Specifies the set of visible/invisible products | [optional]  |
-| **availSale** | **bool?** | Specifies the set of available/not available products for sale | [optional]  |
-| **storeId** | **string?** | Retrieves products specified by store id | [optional]  |
-| **langId** | **string?** | Retrieves products specified by language id | [optional]  |
-| **currencyId** | **string?** | Currency Id | [optional]  |
-| **productIds** | **string?** | Retrieves products specified by product ids | [optional]  |
-| **sinceId** | **string?** | Retrieve entities starting from the specified id. | [optional]  |
-| **reportRequestId** | **string?** | Report request id | [optional]  |
-| **disableReportCache** | **bool?** | Disable report cache for current request | [optional] [default to false] |
-| **sortBy** | **string?** | Set field to sort by | [optional] [default to &quot;id&quot;] |
-| **sortDirection** | **string?** | Set sorting direction | [optional] [default to &quot;asc&quot;] |
 | **sku** | **string?** | Filter by product&#39;s sku | [optional]  |
-| **disableCache** | **bool?** | Disable cache for current request | [optional] [default to false] |
 | **brandName** | **string?** | Retrieves brands specified by brand name | [optional]  |
 | **productAttributes** | [**List&lt;string&gt;?**](string.md) | Defines product attributes | [optional]  |
 | **status** | **string?** | Defines product&#39;s status | [optional]  |
 | **type** | **string?** | Defines products&#39;s type | [optional]  |
 | **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
 | **findWhere** | **string?** | Product search that is specified by field | [optional]  |
-| **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
 | **returnGlobal** | **bool?** | Determines the type of products to be returned. If set to &#39;true&#39;, only global products will be returned; if set to &#39;false&#39;, only local products will be returned. | [optional] [default to false] |
-| **categoriesIds** | **string?** | Retrieves products specified by categories ids | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description,price,categories_ids&quot;] |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **sortBy** | **string?** | Set field to sort by | [optional] [default to &quot;id&quot;] |
+| **sortDirection** | **string?** | Set sorting direction | [optional] [default to &quot;asc&quot;] |
+| **reportRequestId** | **string?** | Report request id | [optional]  |
+| **disableCache** | **bool?** | Disable cache for current request | [optional] [default to false] |
+| **disableReportCache** | **bool?** | Disable report cache for current request | [optional] [default to false] |
+| **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
 
 ### Return type
 
@@ -2906,7 +2906,7 @@ catch (ApiException e)
 
 <a id="productoptionlist"></a>
 # **ProductOptionList**
-> ModelResponseProductOptionList ProductOptionList (int? start = null, int? count = null, string? varParams = null, string? exclude = null, string? responseFields = null, string? productId = null, string? langId = null, string? storeId = null)
+> ModelResponseProductOptionList ProductOptionList (int? start = null, int? count = null, string? productId = null, string? langId = null, string? storeId = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 product.option.list
 
@@ -2940,17 +2940,17 @@ namespace Example
             var apiInstance = new ProductApi(config);
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
-            var varParams = id,name,sort_order;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description")
-            var exclude = id,name,sort_order;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var productId = 10;  // string? | Retrieves products' options specified by product id (optional) 
             var langId = 3;  // string? | Language id (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
+            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,name,sort_order;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description")
+            var exclude = id,name,sort_order;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // product.option.list
-                ModelResponseProductOptionList result = apiInstance.ProductOptionList(start, count, varParams, exclude, responseFields, productId, langId, storeId);
+                ModelResponseProductOptionList result = apiInstance.ProductOptionList(start, count, productId, langId, storeId, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2971,7 +2971,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.option.list
-    ApiResponse<ModelResponseProductOptionList> response = apiInstance.ProductOptionListWithHttpInfo(start, count, varParams, exclude, responseFields, productId, langId, storeId);
+    ApiResponse<ModelResponseProductOptionList> response = apiInstance.ProductOptionListWithHttpInfo(start, count, productId, langId, storeId, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2990,12 +2990,12 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **productId** | **string?** | Retrieves products&#39; options specified by product id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 
@@ -3760,7 +3760,7 @@ catch (ApiException e)
 
 <a id="productreviewlist"></a>
 # **ProductReviewList**
-> ModelResponseProductReviewList ProductReviewList (string productId, int? start = null, string? pageCursor = null, int? count = null, string? ids = null, string? storeId = null, string? status = null, string? varParams = null, string? exclude = null, string? responseFields = null)
+> ModelResponseProductReviewList ProductReviewList (string productId, int? start = null, int? count = null, string? pageCursor = null, string? ids = null, string? storeId = null, string? status = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 product.review.list
 
@@ -3794,19 +3794,19 @@ namespace Example
             var apiInstance = new ProductApi(config);
             var productId = 10;  // string | Product id
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
-            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var ids = 24,25;  // string? | Retrieves reviews specified by ids (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
             var status = disabled;  // string? | Defines status (optional) 
+            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time")
             var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
 
             try
             {
                 // product.review.list
-                ModelResponseProductReviewList result = apiInstance.ProductReviewList(productId, start, pageCursor, count, ids, storeId, status, varParams, exclude, responseFields);
+                ModelResponseProductReviewList result = apiInstance.ProductReviewList(productId, start, count, pageCursor, ids, storeId, status, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3827,7 +3827,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.review.list
-    ApiResponse<ModelResponseProductReviewList> response = apiInstance.ProductReviewListWithHttpInfo(productId, start, pageCursor, count, ids, storeId, status, varParams, exclude, responseFields);
+    ApiResponse<ModelResponseProductReviewList> response = apiInstance.ProductReviewListWithHttpInfo(productId, start, count, pageCursor, ids, storeId, status, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -3846,14 +3846,14 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **productId** | **string** | Product id |  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
-| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **ids** | **string?** | Retrieves reviews specified by ids | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **status** | **string?** | Defines status | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 
 ### Return type
 
@@ -4480,7 +4480,7 @@ catch (ApiException e)
 
 <a id="productvariantcount"></a>
 # **ProductVariantCount**
-> ProductVariantCount200Response ProductVariantCount (string productId, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? categoryId = null, string? storeId = null)
+> ProductVariantCount200Response ProductVariantCount (string productId, string? categoryId = null, string? storeId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null)
 
 product.variant.count
 
@@ -4513,17 +4513,17 @@ namespace Example
 
             var apiInstance = new ProductApi(config);
             var productId = 10;  // string | Retrieves products' variants specified by product id
+            var categoryId = 6;  // string? | Counts products’ variants specified by category id (optional) 
+            var storeId = 1;  // string? | Retrieves variants specified by store id (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-            var categoryId = 6;  // string? | Counts products’ variants specified by category id (optional) 
-            var storeId = 1;  // string? | Retrieves variants specified by store id (optional) 
 
             try
             {
                 // product.variant.count
-                ProductVariantCount200Response result = apiInstance.ProductVariantCount(productId, createdFrom, createdTo, modifiedFrom, modifiedTo, categoryId, storeId);
+                ProductVariantCount200Response result = apiInstance.ProductVariantCount(productId, categoryId, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -4544,7 +4544,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.variant.count
-    ApiResponse<ProductVariantCount200Response> response = apiInstance.ProductVariantCountWithHttpInfo(productId, createdFrom, createdTo, modifiedFrom, modifiedTo, categoryId, storeId);
+    ApiResponse<ProductVariantCount200Response> response = apiInstance.ProductVariantCountWithHttpInfo(productId, categoryId, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -4562,12 +4562,12 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **productId** | **string** | Retrieves products&#39; variants specified by product id |  |
+| **categoryId** | **string?** | Counts products’ variants specified by category id | [optional]  |
+| **storeId** | **string?** | Retrieves variants specified by store id | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-| **categoryId** | **string?** | Counts products’ variants specified by category id | [optional]  |
-| **storeId** | **string?** | Retrieves variants specified by store id | [optional]  |
 
 ### Return type
 
@@ -5002,7 +5002,7 @@ catch (ApiException e)
 
 <a id="productvariantinfo"></a>
 # **ProductVariantInfo**
-> ProductInfo200Response ProductVariantInfo (string id, string? varParams = null, string? exclude = null, string? storeId = null)
+> ProductInfo200Response ProductVariantInfo (string id, string? storeId = null, string? varParams = null, string? exclude = null)
 
 product.variant.info
 
@@ -5035,14 +5035,14 @@ namespace Example
 
             var apiInstance = new ProductApi(config);
             var id = 10;  // string | Retrieves variant's info specified by variant id
+            var storeId = 1;  // string? | Retrieves variant info specified by store id (optional) 
             var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description,price")
             var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var storeId = 1;  // string? | Retrieves variant info specified by store id (optional) 
 
             try
             {
                 // product.variant.info
-                ProductInfo200Response result = apiInstance.ProductVariantInfo(id, varParams, exclude, storeId);
+                ProductInfo200Response result = apiInstance.ProductVariantInfo(id, storeId, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5063,7 +5063,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.variant.info
-    ApiResponse<ProductInfo200Response> response = apiInstance.ProductVariantInfoWithHttpInfo(id, varParams, exclude, storeId);
+    ApiResponse<ProductInfo200Response> response = apiInstance.ProductVariantInfoWithHttpInfo(id, storeId, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -5081,9 +5081,9 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **string** | Retrieves variant&#39;s info specified by variant id |  |
+| **storeId** | **string?** | Retrieves variant info specified by store id | [optional]  |
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description,price&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **storeId** | **string?** | Retrieves variant info specified by store id | [optional]  |
 
 ### Return type
 
@@ -5108,7 +5108,7 @@ catch (ApiException e)
 
 <a id="productvariantlist"></a>
 # **ProductVariantList**
-> ProductVariantList200Response ProductVariantList (int? start = null, int? count = null, string? varParams = null, string? exclude = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? categoryId = null, string? productId = null, string? storeId = null)
+> ProductVariantList200Response ProductVariantList (int? start = null, int? count = null, string? productId = null, string? categoryId = null, string? storeId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? varParams = null, string? exclude = null)
 
 product.variant.list
 
@@ -5142,20 +5142,20 @@ namespace Example
             var apiInstance = new ProductApi(config);
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description,price")
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var productId = 10;  // string? | Retrieves products' variants specified by product id (optional) 
+            var categoryId = 6;  // string? | Retrieves products’ variants specified by category id (optional) 
+            var storeId = 1;  // string? | Retrieves variants specified by store id (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-            var categoryId = 6;  // string? | Retrieves products’ variants specified by category id (optional) 
-            var productId = 10;  // string? | Retrieves products' variants specified by product id (optional) 
-            var storeId = 1;  // string? | Retrieves variants specified by store id (optional) 
+            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description,price")
+            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // product.variant.list
-                ProductVariantList200Response result = apiInstance.ProductVariantList(start, count, varParams, exclude, createdFrom, createdTo, modifiedFrom, modifiedTo, categoryId, productId, storeId);
+                ProductVariantList200Response result = apiInstance.ProductVariantList(start, count, productId, categoryId, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5176,7 +5176,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.variant.list
-    ApiResponse<ProductVariantList200Response> response = apiInstance.ProductVariantListWithHttpInfo(start, count, varParams, exclude, createdFrom, createdTo, modifiedFrom, modifiedTo, categoryId, productId, storeId);
+    ApiResponse<ProductVariantList200Response> response = apiInstance.ProductVariantListWithHttpInfo(start, count, productId, categoryId, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -5195,15 +5195,15 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description,price&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **productId** | **string?** | Retrieves products&#39; variants specified by product id | [optional]  |
+| **categoryId** | **string?** | Retrieves products’ variants specified by category id | [optional]  |
+| **storeId** | **string?** | Retrieves variants specified by store id | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-| **categoryId** | **string?** | Retrieves products’ variants specified by category id | [optional]  |
-| **productId** | **string?** | Retrieves products&#39; variants specified by product id | [optional]  |
-| **storeId** | **string?** | Retrieves variants specified by store id | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description,price&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 

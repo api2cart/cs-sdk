@@ -124,10 +124,10 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int? start = null;
             //int? count = null;
+            //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //string? responseFields = null;
-            //var response = instance.AttributeAttributesetList(start, count, varParams, exclude, responseFields);
+            //var response = instance.AttributeAttributesetList(start, count, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseAttributeAttributesetList>(response);
         }
 
@@ -171,12 +171,12 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int? start = null;
             //int? count = null;
+            //string? attributeSetId = null;
             //string? langId = null;
+            //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //string? responseFields = null;
-            //string? attributeSetId = null;
-            //var response = instance.AttributeGroupList(start, count, langId, varParams, exclude, responseFields, attributeSetId);
+            //var response = instance.AttributeGroupList(start, count, attributeSetId, langId, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseAttributeGroupList>(response);
         }
 
@@ -191,10 +191,10 @@ namespace Org.OpenAPITools.Test.Api
             //string? attributeSetId = null;
             //string? storeId = null;
             //string? langId = null;
+            //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //string? responseFields = null;
-            //var response = instance.AttributeInfo(id, attributeSetId, storeId, langId, varParams, exclude, responseFields);
+            //var response = instance.AttributeInfo(id, attributeSetId, storeId, langId, responseFields, varParams, exclude);
             //Assert.IsType<AttributeInfo200Response>(response);
         }
 
@@ -207,18 +207,18 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int? start = null;
             //int? count = null;
-            //string? type = null;
             //string? attributeIds = null;
             //string? attributeSetId = null;
             //string? storeId = null;
             //string? langId = null;
-            //string? varParams = null;
-            //string? exclude = null;
-            //string? responseFields = null;
+            //string? type = null;
             //bool? visible = null;
             //bool? required = null;
             //bool? varSystem = null;
-            //var response = instance.AttributeList(start, count, type, attributeIds, attributeSetId, storeId, langId, varParams, exclude, responseFields, visible, required, varSystem);
+            //string? responseFields = null;
+            //string? varParams = null;
+            //string? exclude = null;
+            //var response = instance.AttributeList(start, count, attributeIds, attributeSetId, storeId, langId, type, visible, required, varSystem, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseAttributeList>(response);
         }
 

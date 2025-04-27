@@ -87,21 +87,21 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string productId = null;
-            //string? attributeId = null;
-            //string? variantId = null;
-            //string? pageCursor = null;
             //int? start = null;
             //int? count = null;
+            //string? pageCursor = null;
+            //string? attributeId = null;
+            //string? variantId = null;
             //string? attributeGroupId = null;
-            //string? setName = null;
             //string? langId = null;
             //string? storeId = null;
+            //string? setName = null;
             //string? sortBy = null;
             //string? sortDirection = null;
-            //string? varParams = null;
             //string? responseFields = null;
+            //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.ProductAttributeList(productId, attributeId, variantId, pageCursor, start, count, attributeGroupId, setName, langId, storeId, sortBy, sortDirection, varParams, responseFields, exclude);
+            //var response = instance.ProductAttributeList(productId, start, count, pageCursor, attributeId, variantId, attributeGroupId, langId, storeId, setName, sortBy, sortDirection, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseProductAttributeList>(response);
         }
 
@@ -151,21 +151,21 @@ namespace Org.OpenAPITools.Test.Api
             //int? start = null;
             //int? count = null;
             //string? pageCursor = null;
-            //string? varParams = null;
             //string? brandIds = null;
-            //string? exclude = null;
             //string? categoryId = null;
+            //string? parentId = null;
             //string? storeId = null;
             //string? langId = null;
+            //string? findWhere = null;
+            //string? findValue = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
-            //string? parentId = null;
             //string? responseFields = null;
-            //string? findWhere = null;
-            //string? findValue = null;
-            //var response = instance.ProductBrandList(start, count, pageCursor, varParams, brandIds, exclude, categoryId, storeId, langId, createdFrom, createdTo, modifiedFrom, modifiedTo, parentId, responseFields, findWhere, findValue);
+            //string? varParams = null;
+            //string? exclude = null;
+            //var response = instance.ProductBrandList(start, count, pageCursor, brandIds, categoryId, parentId, storeId, langId, findWhere, findValue, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseProductBrandList>(response);
         }
 
@@ -193,14 +193,14 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string productId = null;
             //string id = null;
-            //string? varParams = null;
-            //string? responseFields = null;
-            //string? exclude = null;
             //string? storeId = null;
             //string? langId = null;
             //string? currencyId = null;
+            //string? responseFields = null;
+            //string? varParams = null;
+            //string? exclude = null;
             //bool? useLatestApiVersion = null;
-            //var response = instance.ProductChildItemInfo(productId, id, varParams, responseFields, exclude, storeId, langId, currencyId, useLatestApiVersion);
+            //var response = instance.ProductChildItemInfo(productId, id, storeId, langId, currencyId, responseFields, varParams, exclude, useLatestApiVersion);
             //Assert.IsType<ProductChildItemInfo200Response>(response);
         }
 
@@ -211,16 +211,9 @@ namespace Org.OpenAPITools.Test.Api
         public void ProductChildItemListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? pageCursor = null;
             //int? start = null;
             //int? count = null;
-            //string? varParams = null;
-            //string? responseFields = null;
-            //string? exclude = null;
-            //string? createdFrom = null;
-            //string? createdTo = null;
-            //string? modifiedFrom = null;
-            //string? modifiedTo = null;
+            //string? pageCursor = null;
             //string? productId = null;
             //string? productIds = null;
             //string? sku = null;
@@ -230,11 +223,18 @@ namespace Org.OpenAPITools.Test.Api
             //bool? availSale = null;
             //string? findValue = null;
             //string? findWhere = null;
+            //string? createdFrom = null;
+            //string? createdTo = null;
+            //string? modifiedFrom = null;
+            //string? modifiedTo = null;
+            //bool? returnGlobal = null;
+            //string? responseFields = null;
+            //string? varParams = null;
+            //string? exclude = null;
             //string? reportRequestId = null;
             //bool? disableReportCache = null;
             //bool? useLatestApiVersion = null;
-            //bool? returnGlobal = null;
-            //var response = instance.ProductChildItemList(pageCursor, start, count, varParams, responseFields, exclude, createdFrom, createdTo, modifiedFrom, modifiedTo, productId, productIds, sku, storeId, langId, currencyId, availSale, findValue, findWhere, reportRequestId, disableReportCache, useLatestApiVersion, returnGlobal);
+            //var response = instance.ProductChildItemList(start, count, pageCursor, productId, productIds, sku, storeId, langId, currencyId, availSale, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, returnGlobal, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
             //Assert.IsType<ModelResponseProductChildItemList>(response);
         }
 
@@ -245,29 +245,29 @@ namespace Org.OpenAPITools.Test.Api
         public void ProductCountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string? productIds = null;
+            //string? sinceId = null;
+            //string? categoriesIds = null;
             //string? categoryId = null;
+            //string? storeId = null;
+            //string? langId = null;
+            //bool? availView = null;
+            //bool? availSale = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
-            //bool? availView = null;
-            //bool? availSale = null;
-            //string? storeId = null;
-            //string? langId = null;
-            //string? productIds = null;
-            //string? sinceId = null;
-            //string? reportRequestId = null;
-            //bool? disableReportCache = null;
             //string? brandName = null;
             //List<string>? productAttributes = null;
             //string? status = null;
             //string? type = null;
             //string? findValue = null;
             //string? findWhere = null;
-            //bool? useLatestApiVersion = null;
+            //string? reportRequestId = null;
             //bool? returnGlobal = null;
-            //string? categoriesIds = null;
-            //var response = instance.ProductCount(categoryId, createdFrom, createdTo, modifiedFrom, modifiedTo, availView, availSale, storeId, langId, productIds, sinceId, reportRequestId, disableReportCache, brandName, productAttributes, status, type, findValue, findWhere, useLatestApiVersion, returnGlobal, categoriesIds);
+            //bool? disableReportCache = null;
+            //bool? useLatestApiVersion = null;
+            //var response = instance.ProductCount(productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, productAttributes, status, type, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
             //Assert.IsType<ProductCount200Response>(response);
         }
 
@@ -298,13 +298,13 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int? start = null;
             //int? count = null;
-            //string? varParams = null;
             //string? pageCursor = null;
-            //string? exclude = null;
-            //string? responseFields = null;
             //bool? varDefault = null;
             //bool? avail = null;
-            //var response = instance.ProductCurrencyList(start, count, varParams, pageCursor, exclude, responseFields, varDefault, avail);
+            //string? responseFields = null;
+            //string? varParams = null;
+            //string? exclude = null;
+            //var response = instance.ProductCurrencyList(start, count, pageCursor, varDefault, avail, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseProductCurrencyList>(response);
         }
 
@@ -397,14 +397,14 @@ namespace Org.OpenAPITools.Test.Api
             //string productId = null;
             //string id = null;
             //string? variantIds = null;
+            //string? storeId = null;
+            //string? langId = null;
             //string? imageName = null;
             //string? type = null;
             //string? label = null;
             //int? position = null;
-            //string? storeId = null;
-            //string? langId = null;
             //bool? hidden = null;
-            //var response = instance.ProductImageUpdate(productId, id, variantIds, imageName, type, label, position, storeId, langId, hidden);
+            //var response = instance.ProductImageUpdate(productId, id, variantIds, storeId, langId, imageName, type, label, position, hidden);
             //Assert.IsType<ProductImageUpdate200Response>(response);
         }
 
@@ -416,16 +416,16 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
-            //string? varParams = null;
-            //string? responseFields = null;
-            //string? exclude = null;
             //string? storeId = null;
             //string? langId = null;
             //string? currencyId = null;
+            //string? responseFields = null;
+            //string? varParams = null;
+            //string? exclude = null;
             //string? reportRequestId = null;
             //bool? disableReportCache = null;
             //bool? useLatestApiVersion = null;
-            //var response = instance.ProductInfo(id, varParams, responseFields, exclude, storeId, langId, currencyId, reportRequestId, disableReportCache, useLatestApiVersion);
+            //var response = instance.ProductInfo(id, storeId, langId, currencyId, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
             //Assert.IsType<ProductInfo200Response>(response);
         }
 
@@ -436,40 +436,40 @@ namespace Org.OpenAPITools.Test.Api
         public void ProductListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? pageCursor = null;
             //int? start = null;
             //int? count = null;
-            //string? varParams = null;
-            //string? responseFields = null;
-            //string? exclude = null;
+            //string? pageCursor = null;
+            //string? productIds = null;
+            //string? sinceId = null;
+            //string? categoriesIds = null;
             //string? categoryId = null;
+            //string? storeId = null;
+            //string? langId = null;
+            //string? currencyId = null;
+            //bool? availView = null;
+            //bool? availSale = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
-            //bool? availView = null;
-            //bool? availSale = null;
-            //string? storeId = null;
-            //string? langId = null;
-            //string? currencyId = null;
-            //string? productIds = null;
-            //string? sinceId = null;
-            //string? reportRequestId = null;
-            //bool? disableReportCache = null;
-            //string? sortBy = null;
-            //string? sortDirection = null;
             //string? sku = null;
-            //bool? disableCache = null;
             //string? brandName = null;
             //List<string>? productAttributes = null;
             //string? status = null;
             //string? type = null;
             //string? findValue = null;
             //string? findWhere = null;
-            //bool? useLatestApiVersion = null;
             //bool? returnGlobal = null;
-            //string? categoriesIds = null;
-            //var response = instance.ProductList(pageCursor, start, count, varParams, responseFields, exclude, categoryId, createdFrom, createdTo, modifiedFrom, modifiedTo, availView, availSale, storeId, langId, currencyId, productIds, sinceId, reportRequestId, disableReportCache, sortBy, sortDirection, sku, disableCache, brandName, productAttributes, status, type, findValue, findWhere, useLatestApiVersion, returnGlobal, categoriesIds);
+            //string? varParams = null;
+            //string? responseFields = null;
+            //string? exclude = null;
+            //string? sortBy = null;
+            //string? sortDirection = null;
+            //string? reportRequestId = null;
+            //bool? disableCache = null;
+            //bool? disableReportCache = null;
+            //bool? useLatestApiVersion = null;
+            //var response = instance.ProductList(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, status, type, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion);
             //Assert.IsType<ModelResponseProductList>(response);
         }
 
@@ -539,13 +539,13 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int? start = null;
             //int? count = null;
-            //string? varParams = null;
-            //string? exclude = null;
-            //string? responseFields = null;
             //string? productId = null;
             //string? langId = null;
             //string? storeId = null;
-            //var response = instance.ProductOptionList(start, count, varParams, exclude, responseFields, productId, langId, storeId);
+            //string? responseFields = null;
+            //string? varParams = null;
+            //string? exclude = null;
+            //var response = instance.ProductOptionList(start, count, productId, langId, storeId, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseProductOptionList>(response);
         }
 
@@ -662,15 +662,15 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string productId = null;
             //int? start = null;
-            //string? pageCursor = null;
             //int? count = null;
+            //string? pageCursor = null;
             //string? ids = null;
             //string? storeId = null;
             //string? status = null;
+            //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //string? responseFields = null;
-            //var response = instance.ProductReviewList(productId, start, pageCursor, count, ids, storeId, status, varParams, exclude, responseFields);
+            //var response = instance.ProductReviewList(productId, start, count, pageCursor, ids, storeId, status, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseProductReviewList>(response);
         }
 
@@ -755,13 +755,13 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string productId = null;
+            //string? categoryId = null;
+            //string? storeId = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
-            //string? categoryId = null;
-            //string? storeId = null;
-            //var response = instance.ProductVariantCount(productId, createdFrom, createdTo, modifiedFrom, modifiedTo, categoryId, storeId);
+            //var response = instance.ProductVariantCount(productId, categoryId, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo);
             //Assert.IsType<ProductVariantCount200Response>(response);
         }
 
@@ -826,10 +826,10 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
+            //string? storeId = null;
             //string? varParams = null;
             //string? exclude = null;
-            //string? storeId = null;
-            //var response = instance.ProductVariantInfo(id, varParams, exclude, storeId);
+            //var response = instance.ProductVariantInfo(id, storeId, varParams, exclude);
             //Assert.IsType<ProductInfo200Response>(response);
         }
 
@@ -842,16 +842,16 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int? start = null;
             //int? count = null;
-            //string? varParams = null;
-            //string? exclude = null;
+            //string? productId = null;
+            //string? categoryId = null;
+            //string? storeId = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
-            //string? categoryId = null;
-            //string? productId = null;
-            //string? storeId = null;
-            //var response = instance.ProductVariantList(start, count, varParams, exclude, createdFrom, createdTo, modifiedFrom, modifiedTo, categoryId, productId, storeId);
+            //string? varParams = null;
+            //string? exclude = null;
+            //var response = instance.ProductVariantList(start, count, productId, categoryId, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, varParams, exclude);
             //Assert.IsType<ProductVariantList200Response>(response);
         }
 

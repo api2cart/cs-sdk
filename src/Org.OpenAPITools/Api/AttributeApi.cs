@@ -153,12 +153,12 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseAttributeAttributesetList</returns>
-        ModelResponseAttributeAttributesetList AttributeAttributesetList(int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        ModelResponseAttributeAttributesetList AttributeAttributesetList(int? start = default(int?), int? count = default(int?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// attribute.attributeset.list
@@ -169,12 +169,12 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseAttributeAttributesetList</returns>
-        ApiResponse<ModelResponseAttributeAttributesetList> AttributeAttributesetListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseAttributeAttributesetList> AttributeAttributesetListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// attribute.count
         /// </summary>
@@ -244,14 +244,14 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseAttributeGroupList</returns>
-        ModelResponseAttributeGroupList AttributeGroupList(int? start = default(int?), int? count = default(int?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? attributeSetId = default(string?), int operationIndex = 0);
+        ModelResponseAttributeGroupList AttributeGroupList(int? start = default(int?), int? count = default(int?), string? attributeSetId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// attribute.group.list
@@ -262,14 +262,14 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseAttributeGroupList</returns>
-        ApiResponse<ModelResponseAttributeGroupList> AttributeGroupListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? attributeSetId = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseAttributeGroupList> AttributeGroupListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? attributeSetId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// attribute.info
         /// </summary>
@@ -281,12 +281,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AttributeInfo200Response</returns>
-        AttributeInfo200Response AttributeInfo(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        AttributeInfo200Response AttributeInfo(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// attribute.info
@@ -299,12 +299,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttributeInfo200Response</returns>
-        ApiResponse<AttributeInfo200Response> AttributeInfoWithHttpInfo(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        ApiResponse<AttributeInfo200Response> AttributeInfoWithHttpInfo(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// attribute.list
         /// </summary>
@@ -314,20 +314,20 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Retrieves attributes on specified language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="visible">Filter items by visibility status (optional)</param>
         /// <param name="required">Defines if the option is required (optional)</param>
         /// <param name="varSystem">True if attribute is system (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseAttributeList</returns>
-        ModelResponseAttributeList AttributeList(int? start = default(int?), int? count = default(int?), string? type = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0);
+        ModelResponseAttributeList AttributeList(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// attribute.list
@@ -338,20 +338,20 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Retrieves attributes on specified language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="visible">Filter items by visibility status (optional)</param>
         /// <param name="required">Defines if the option is required (optional)</param>
         /// <param name="varSystem">True if attribute is system (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseAttributeList</returns>
-        ApiResponse<ModelResponseAttributeList> AttributeListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? type = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0);
+        ApiResponse<ModelResponseAttributeList> AttributeListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// attribute.type.list
         /// </summary>
@@ -688,13 +688,13 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseAttributeAttributesetList</returns>
-        System.Threading.Tasks.Task<ModelResponseAttributeAttributesetList> AttributeAttributesetListAsync(int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseAttributeAttributesetList> AttributeAttributesetListAsync(int? start = default(int?), int? count = default(int?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// attribute.attributeset.list
@@ -705,13 +705,13 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseAttributeAttributesetList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseAttributeAttributesetList>> AttributeAttributesetListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseAttributeAttributesetList>> AttributeAttributesetListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// attribute.count
         /// </summary>
@@ -785,15 +785,15 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseAttributeGroupList</returns>
-        System.Threading.Tasks.Task<ModelResponseAttributeGroupList> AttributeGroupListAsync(int? start = default(int?), int? count = default(int?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? attributeSetId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseAttributeGroupList> AttributeGroupListAsync(int? start = default(int?), int? count = default(int?), string? attributeSetId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// attribute.group.list
@@ -804,15 +804,15 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseAttributeGroupList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseAttributeGroupList>> AttributeGroupListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? attributeSetId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseAttributeGroupList>> AttributeGroupListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? attributeSetId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// attribute.info
         /// </summary>
@@ -824,13 +824,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttributeInfo200Response</returns>
-        System.Threading.Tasks.Task<AttributeInfo200Response> AttributeInfoAsync(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AttributeInfo200Response> AttributeInfoAsync(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// attribute.info
@@ -843,13 +843,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttributeInfo200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttributeInfo200Response>> AttributeInfoWithHttpInfoAsync(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AttributeInfo200Response>> AttributeInfoWithHttpInfoAsync(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// attribute.list
         /// </summary>
@@ -859,21 +859,21 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Retrieves attributes on specified language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="visible">Filter items by visibility status (optional)</param>
         /// <param name="required">Defines if the option is required (optional)</param>
         /// <param name="varSystem">True if attribute is system (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseAttributeList</returns>
-        System.Threading.Tasks.Task<ModelResponseAttributeList> AttributeListAsync(int? start = default(int?), int? count = default(int?), string? type = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseAttributeList> AttributeListAsync(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// attribute.list
@@ -884,21 +884,21 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Retrieves attributes on specified language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="visible">Filter items by visibility status (optional)</param>
         /// <param name="required">Defines if the option is required (optional)</param>
         /// <param name="varSystem">True if attribute is system (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseAttributeList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseAttributeList>> AttributeListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? type = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseAttributeList>> AttributeListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// attribute.type.list
         /// </summary>
@@ -1326,11 +1326,11 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
             if (code != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "code", code));
             }
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
@@ -1532,11 +1532,11 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
             if (code != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "code", code));
             }
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
@@ -2035,14 +2035,14 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseAttributeAttributesetList</returns>
-        public ModelResponseAttributeAttributesetList AttributeAttributesetList(int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        public ModelResponseAttributeAttributesetList AttributeAttributesetList(int? start = default(int?), int? count = default(int?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeAttributesetList> localVarResponse = AttributeAttributesetListWithHttpInfo(start, count, varParams, exclude, responseFields);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeAttributesetList> localVarResponse = AttributeAttributesetListWithHttpInfo(start, count, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -2052,12 +2052,12 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseAttributeAttributesetList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeAttributesetList> AttributeAttributesetListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeAttributesetList> AttributeAttributesetListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2090,6 +2090,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
@@ -2097,10 +2101,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
 
             localVarRequestOptions.Operation = "AttributeApi.AttributeAttributesetList";
@@ -2137,15 +2137,15 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseAttributeAttributesetList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseAttributeAttributesetList> AttributeAttributesetListAsync(int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseAttributeAttributesetList> AttributeAttributesetListAsync(int? start = default(int?), int? count = default(int?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeAttributesetList> localVarResponse = await AttributeAttributesetListWithHttpInfoAsync(start, count, varParams, exclude, responseFields, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeAttributesetList> localVarResponse = await AttributeAttributesetListWithHttpInfoAsync(start, count, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2155,13 +2155,13 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseAttributeAttributesetList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeAttributesetList>> AttributeAttributesetListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeAttributesetList>> AttributeAttributesetListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2194,6 +2194,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
@@ -2201,10 +2205,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
 
             localVarRequestOptions.Operation = "AttributeApi.AttributeAttributesetList";
@@ -2520,11 +2520,11 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
 
             localVarRequestOptions.Operation = "AttributeApi.AttributeDelete";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2609,11 +2609,11 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
 
             localVarRequestOptions.Operation = "AttributeApi.AttributeDelete";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2650,16 +2650,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseAttributeGroupList</returns>
-        public ModelResponseAttributeGroupList AttributeGroupList(int? start = default(int?), int? count = default(int?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? attributeSetId = default(string?), int operationIndex = 0)
+        public ModelResponseAttributeGroupList AttributeGroupList(int? start = default(int?), int? count = default(int?), string? attributeSetId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeGroupList> localVarResponse = AttributeGroupListWithHttpInfo(start, count, langId, varParams, exclude, responseFields, attributeSetId);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeGroupList> localVarResponse = AttributeGroupListWithHttpInfo(start, count, attributeSetId, langId, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -2669,14 +2669,14 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseAttributeGroupList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeGroupList> AttributeGroupListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? attributeSetId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeGroupList> AttributeGroupListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? attributeSetId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2709,9 +2709,17 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
+            if (attributeSetId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "attribute_set_id", attributeSetId));
+            }
             if (langId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
+            }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (varParams != null)
             {
@@ -2720,14 +2728,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
-            }
-            if (attributeSetId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "attribute_set_id", attributeSetId));
             }
 
             localVarRequestOptions.Operation = "AttributeApi.AttributeGroupList";
@@ -2764,17 +2764,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseAttributeGroupList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseAttributeGroupList> AttributeGroupListAsync(int? start = default(int?), int? count = default(int?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? attributeSetId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseAttributeGroupList> AttributeGroupListAsync(int? start = default(int?), int? count = default(int?), string? attributeSetId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeGroupList> localVarResponse = await AttributeGroupListWithHttpInfoAsync(start, count, langId, varParams, exclude, responseFields, attributeSetId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeGroupList> localVarResponse = await AttributeGroupListWithHttpInfoAsync(start, count, attributeSetId, langId, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2784,15 +2784,15 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseAttributeGroupList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeGroupList>> AttributeGroupListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? attributeSetId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeGroupList>> AttributeGroupListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? attributeSetId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2825,9 +2825,17 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
+            if (attributeSetId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "attribute_set_id", attributeSetId));
+            }
             if (langId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
+            }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (varParams != null)
             {
@@ -2836,14 +2844,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
-            }
-            if (attributeSetId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "attribute_set_id", attributeSetId));
             }
 
             localVarRequestOptions.Operation = "AttributeApi.AttributeGroupList";
@@ -2883,14 +2883,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AttributeInfo200Response</returns>
-        public AttributeInfo200Response AttributeInfo(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        public AttributeInfo200Response AttributeInfo(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeInfo200Response> localVarResponse = AttributeInfoWithHttpInfo(id, attributeSetId, storeId, langId, varParams, exclude, responseFields);
+            Org.OpenAPITools.Client.ApiResponse<AttributeInfo200Response> localVarResponse = AttributeInfoWithHttpInfo(id, attributeSetId, storeId, langId, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -2902,12 +2902,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttributeInfo200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AttributeInfo200Response> AttributeInfoWithHttpInfo(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AttributeInfo200Response> AttributeInfoWithHttpInfo(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -2951,6 +2951,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
@@ -2958,10 +2962,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
 
             localVarRequestOptions.Operation = "AttributeApi.AttributeInfo";
@@ -3000,15 +3000,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttributeInfo200Response</returns>
-        public async System.Threading.Tasks.Task<AttributeInfo200Response> AttributeInfoAsync(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AttributeInfo200Response> AttributeInfoAsync(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeInfo200Response> localVarResponse = await AttributeInfoWithHttpInfoAsync(id, attributeSetId, storeId, langId, varParams, exclude, responseFields, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<AttributeInfo200Response> localVarResponse = await AttributeInfoWithHttpInfoAsync(id, attributeSetId, storeId, langId, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3020,13 +3020,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="attributeSetId">Attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttributeInfo200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeInfo200Response>> AttributeInfoWithHttpInfoAsync(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeInfo200Response>> AttributeInfoWithHttpInfoAsync(string id, string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3070,6 +3070,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
@@ -3077,10 +3081,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
 
             localVarRequestOptions.Operation = "AttributeApi.AttributeInfo";
@@ -3118,22 +3118,22 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Retrieves attributes on specified language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="visible">Filter items by visibility status (optional)</param>
         /// <param name="required">Defines if the option is required (optional)</param>
         /// <param name="varSystem">True if attribute is system (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseAttributeList</returns>
-        public ModelResponseAttributeList AttributeList(int? start = default(int?), int? count = default(int?), string? type = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0)
+        public ModelResponseAttributeList AttributeList(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList> localVarResponse = AttributeListWithHttpInfo(start, count, type, attributeIds, attributeSetId, storeId, langId, varParams, exclude, responseFields, visible, required, varSystem);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList> localVarResponse = AttributeListWithHttpInfo(start, count, attributeIds, attributeSetId, storeId, langId, type, visible, required, varSystem, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -3143,20 +3143,20 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Retrieves attributes on specified language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="visible">Filter items by visibility status (optional)</param>
         /// <param name="required">Defines if the option is required (optional)</param>
         /// <param name="varSystem">True if attribute is system (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseAttributeList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList> AttributeListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? type = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList> AttributeListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3189,10 +3189,6 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
-            if (type != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
-            }
             if (attributeIds != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "attribute_ids", attributeIds));
@@ -3209,17 +3205,9 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
-            if (varParams != null)
+            if (type != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (exclude != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
             }
             if (visible != null)
             {
@@ -3232,6 +3220,18 @@ namespace Org.OpenAPITools.Api
             if (varSystem != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "system", varSystem));
+            }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
+            if (exclude != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
             }
 
             localVarRequestOptions.Operation = "AttributeApi.AttributeList";
@@ -3268,23 +3268,23 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Retrieves attributes on specified language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="visible">Filter items by visibility status (optional)</param>
         /// <param name="required">Defines if the option is required (optional)</param>
         /// <param name="varSystem">True if attribute is system (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseAttributeList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseAttributeList> AttributeListAsync(int? start = default(int?), int? count = default(int?), string? type = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseAttributeList> AttributeListAsync(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList> localVarResponse = await AttributeListWithHttpInfoAsync(start, count, type, attributeIds, attributeSetId, storeId, langId, varParams, exclude, responseFields, visible, required, varSystem, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList> localVarResponse = await AttributeListWithHttpInfoAsync(start, count, attributeIds, attributeSetId, storeId, langId, type, visible, required, varSystem, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3294,21 +3294,21 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
-        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Retrieves attributes on specified language id (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="type">Defines attribute&#39;s type (optional)</param>
         /// <param name="visible">Filter items by visibility status (optional)</param>
         /// <param name="required">Defines if the option is required (optional)</param>
         /// <param name="varSystem">True if attribute is system (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,name,code,type&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseAttributeList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList>> AttributeListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? type = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList>> AttributeListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3341,10 +3341,6 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
             }
-            if (type != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
-            }
             if (attributeIds != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "attribute_ids", attributeIds));
@@ -3361,17 +3357,9 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
-            if (varParams != null)
+            if (type != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (exclude != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
             }
             if (visible != null)
             {
@@ -3384,6 +3372,18 @@ namespace Org.OpenAPITools.Api
             if (varSystem != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "system", varSystem));
+            }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
+            if (exclude != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
             }
 
             localVarRequestOptions.Operation = "AttributeApi.AttributeList";

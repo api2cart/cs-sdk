@@ -40,15 +40,15 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderShipmentTrackingAdd" /> class.
         /// </summary>
-        /// <param name="storeId">Store Id.</param>
         /// <param name="orderId">Defines the order id.</param>
         /// <param name="shipmentId">Shipment id indicates the number of delivery (required).</param>
         /// <param name="carrierId">Defines tracking carrier id.</param>
+        /// <param name="storeId">Store Id.</param>
         /// <param name="trackingProvider">Defines name of the company which provides shipment tracking.</param>
         /// <param name="trackingNumber">Defines tracking number (required).</param>
         /// <param name="trackingLink">Defines custom tracking link.</param>
         /// <param name="sendNotifications">Send notifications to customer after tracking was created (default to false).</param>
-        public OrderShipmentTrackingAdd(string storeId = default(string), string orderId = default(string), string shipmentId = default(string), string carrierId = default(string), string trackingProvider = default(string), string trackingNumber = default(string), string trackingLink = default(string), bool sendNotifications = false)
+        public OrderShipmentTrackingAdd(string orderId = default(string), string shipmentId = default(string), string carrierId = default(string), string storeId = default(string), string trackingProvider = default(string), string trackingNumber = default(string), string trackingLink = default(string), bool sendNotifications = false)
         {
             // to ensure "shipmentId" is required (not null)
             if (shipmentId == null)
@@ -62,23 +62,13 @@ namespace Org.OpenAPITools.Model
                 throw new ArgumentNullException("trackingNumber is a required property for OrderShipmentTrackingAdd and cannot be null");
             }
             this.TrackingNumber = trackingNumber;
-            this.StoreId = storeId;
             this.OrderId = orderId;
             this.CarrierId = carrierId;
+            this.StoreId = storeId;
             this.TrackingProvider = trackingProvider;
             this.TrackingLink = trackingLink;
             this.SendNotifications = sendNotifications;
         }
-
-        /// <summary>
-        /// Store Id
-        /// </summary>
-        /// <value>Store Id</value>
-        /*
-        <example>1</example>
-        */
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
-        public string StoreId { get; set; }
 
         /// <summary>
         /// Defines the order id
@@ -109,6 +99,16 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "carrier_id", EmitDefaultValue = false)]
         public string CarrierId { get; set; }
+
+        /// <summary>
+        /// Store Id
+        /// </summary>
+        /// <value>Store Id</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        public string StoreId { get; set; }
 
         /// <summary>
         /// Defines name of the company which provides shipment tracking
@@ -158,10 +158,10 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class OrderShipmentTrackingAdd {\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
             sb.Append("  ShipmentId: ").Append(ShipmentId).Append("\n");
             sb.Append("  CarrierId: ").Append(CarrierId).Append("\n");
+            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  TrackingProvider: ").Append(TrackingProvider).Append("\n");
             sb.Append("  TrackingNumber: ").Append(TrackingNumber).Append("\n");
             sb.Append("  TrackingLink: ").Append(TrackingLink).Append("\n");

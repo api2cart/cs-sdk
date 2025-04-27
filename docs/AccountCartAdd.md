@@ -77,6 +77,7 @@ Name | Type | Description | Notes
 **ShoplineAccessToken** | **string** | Shopline APP Key | [optional] 
 **ShoplineAppKey** | **string** | Shopline APP Key | [optional] 
 **ShoplineAppSecret** | **string** | Shopline App Secret | [optional] 
+**ShoplineSharedSecret** | **string** | Shopline Shared Secret | [optional] 
 **ShopifyAccessToken** | **string** | Access token authorizing the app to access resources on behalf of a user | [optional] 
 **ShopifyApiKey** | **string** | Shopify API Key | [optional] 
 **ShopifyApiPassword** | **string** | Shopify API Password | [optional] 

@@ -36,33 +36,33 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="OrderShipmentAdd" /> class.
         /// </summary>
         /// <param name="orderId">Defines the order for which the shipment will be created.</param>
-        /// <param name="storeId">Store Id.</param>
         /// <param name="warehouseId">This parameter is used for selecting a warehouse where you need to set/modify a product quantity..</param>
+        /// <param name="storeId">Store Id.</param>
         /// <param name="shipmentProvider">Defines company name that provide tracking of shipment.</param>
         /// <param name="shippingMethod">Define shipping method.</param>
         /// <param name="items">Defines items in the order that will be shipped.</param>
-        /// <param name="sendNotifications">Send notifications to customer after shipment was created (default to false).</param>
         /// <param name="trackingNumbers">Defines shipment&#39;s tracking numbers that have to be added&lt;/br&gt; How set tracking numbers to appropriate carrier:&lt;ul&gt;&lt;li&gt;tracking_numbers[]&#x3D;a2c.demo1,a2c.demo2 - set default carrier&lt;/li&gt;&lt;li&gt;tracking_numbers[&lt;b&gt;carrier_id&lt;/b&gt;]&#x3D;a2c.demo - set appropriate carrier&lt;/li&gt;&lt;/ul&gt;To get the list of carriers IDs that are available in your store, use the &lt;a href &#x3D; \&quot;https://api2cart.com/docs/#/cart/CartInfo\&quot;&gt;cart.info&lt;/a &gt; method.</param>
-        /// <param name="adjustStock">This parameter is used for adjust stock. (default to false).</param>
-        /// <param name="enableCache">If the value is &#39;true&#39; and order exist in our cache, we will use order.info from cache to prepare shipment items. (default to false).</param>
         /// <param name="trackingLink">Defines custom tracking link.</param>
         /// <param name="isShipped">Defines shipment&#39;s status (default to true).</param>
+        /// <param name="sendNotifications">Send notifications to customer after shipment was created (default to false).</param>
+        /// <param name="adjustStock">This parameter is used for adjust stock. (default to false).</param>
+        /// <param name="enableCache">If the value is &#39;true&#39; and order exist in our cache, we will use order.info from cache to prepare shipment items. (default to false).</param>
         /// <param name="checkProcessStatus">Disable or enable check process status. Please note that the response will be slower due to additional requests to the store. (default to false).</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (default to false).</param>
-        public OrderShipmentAdd(string orderId = default(string), string storeId = default(string), string warehouseId = default(string), string shipmentProvider = default(string), string shippingMethod = default(string), List<OrderShipmentAddItemsInner> items = default(List<OrderShipmentAddItemsInner>), bool sendNotifications = false, List<OrderShipmentAddTrackingNumbersInner> trackingNumbers = default(List<OrderShipmentAddTrackingNumbersInner>), bool adjustStock = false, bool enableCache = false, string trackingLink = default(string), bool isShipped = true, bool checkProcessStatus = false, bool useLatestApiVersion = false)
+        public OrderShipmentAdd(string orderId = default(string), string warehouseId = default(string), string storeId = default(string), string shipmentProvider = default(string), string shippingMethod = default(string), List<OrderShipmentAddItemsInner> items = default(List<OrderShipmentAddItemsInner>), List<OrderShipmentAddTrackingNumbersInner> trackingNumbers = default(List<OrderShipmentAddTrackingNumbersInner>), string trackingLink = default(string), bool isShipped = true, bool sendNotifications = false, bool adjustStock = false, bool enableCache = false, bool checkProcessStatus = false, bool useLatestApiVersion = false)
         {
             this.OrderId = orderId;
-            this.StoreId = storeId;
             this.WarehouseId = warehouseId;
+            this.StoreId = storeId;
             this.ShipmentProvider = shipmentProvider;
             this.ShippingMethod = shippingMethod;
             this.Items = items;
-            this.SendNotifications = sendNotifications;
             this.TrackingNumbers = trackingNumbers;
-            this.AdjustStock = adjustStock;
-            this.EnableCache = enableCache;
             this.TrackingLink = trackingLink;
             this.IsShipped = isShipped;
+            this.SendNotifications = sendNotifications;
+            this.AdjustStock = adjustStock;
+            this.EnableCache = enableCache;
             this.CheckProcessStatus = checkProcessStatus;
             this.UseLatestApiVersion = useLatestApiVersion;
         }
@@ -78,16 +78,6 @@ namespace Org.OpenAPITools.Model
         public string OrderId { get; set; }
 
         /// <summary>
-        /// Store Id
-        /// </summary>
-        /// <value>Store Id</value>
-        /*
-        <example>1</example>
-        */
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
-        public string StoreId { get; set; }
-
-        /// <summary>
         /// This parameter is used for selecting a warehouse where you need to set/modify a product quantity.
         /// </summary>
         /// <value>This parameter is used for selecting a warehouse where you need to set/modify a product quantity.</value>
@@ -96,6 +86,16 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "warehouse_id", EmitDefaultValue = false)]
         public string WarehouseId { get; set; }
+
+        /// <summary>
+        /// Store Id
+        /// </summary>
+        /// <value>Store Id</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        public string StoreId { get; set; }
 
         /// <summary>
         /// Defines company name that provide tracking of shipment
@@ -125,41 +125,11 @@ namespace Org.OpenAPITools.Model
         public List<OrderShipmentAddItemsInner> Items { get; set; }
 
         /// <summary>
-        /// Send notifications to customer after shipment was created
-        /// </summary>
-        /// <value>Send notifications to customer after shipment was created</value>
-        /*
-        <example>true</example>
-        */
-        [DataMember(Name = "send_notifications", EmitDefaultValue = true)]
-        public bool SendNotifications { get; set; }
-
-        /// <summary>
         /// Defines shipment&#39;s tracking numbers that have to be added&lt;/br&gt; How set tracking numbers to appropriate carrier:&lt;ul&gt;&lt;li&gt;tracking_numbers[]&#x3D;a2c.demo1,a2c.demo2 - set default carrier&lt;/li&gt;&lt;li&gt;tracking_numbers[&lt;b&gt;carrier_id&lt;/b&gt;]&#x3D;a2c.demo - set appropriate carrier&lt;/li&gt;&lt;/ul&gt;To get the list of carriers IDs that are available in your store, use the &lt;a href &#x3D; \&quot;https://api2cart.com/docs/#/cart/CartInfo\&quot;&gt;cart.info&lt;/a &gt; method
         /// </summary>
         /// <value>Defines shipment&#39;s tracking numbers that have to be added&lt;/br&gt; How set tracking numbers to appropriate carrier:&lt;ul&gt;&lt;li&gt;tracking_numbers[]&#x3D;a2c.demo1,a2c.demo2 - set default carrier&lt;/li&gt;&lt;li&gt;tracking_numbers[&lt;b&gt;carrier_id&lt;/b&gt;]&#x3D;a2c.demo - set appropriate carrier&lt;/li&gt;&lt;/ul&gt;To get the list of carriers IDs that are available in your store, use the &lt;a href &#x3D; \&quot;https://api2cart.com/docs/#/cart/CartInfo\&quot;&gt;cart.info&lt;/a &gt; method</value>
         [DataMember(Name = "tracking_numbers", EmitDefaultValue = false)]
         public List<OrderShipmentAddTrackingNumbersInner> TrackingNumbers { get; set; }
-
-        /// <summary>
-        /// This parameter is used for adjust stock.
-        /// </summary>
-        /// <value>This parameter is used for adjust stock.</value>
-        /*
-        <example>true</example>
-        */
-        [DataMember(Name = "adjust_stock", EmitDefaultValue = true)]
-        public bool AdjustStock { get; set; }
-
-        /// <summary>
-        /// If the value is &#39;true&#39; and order exist in our cache, we will use order.info from cache to prepare shipment items.
-        /// </summary>
-        /// <value>If the value is &#39;true&#39; and order exist in our cache, we will use order.info from cache to prepare shipment items.</value>
-        /*
-        <example>true</example>
-        */
-        [DataMember(Name = "enable_cache", EmitDefaultValue = true)]
-        public bool EnableCache { get; set; }
 
         /// <summary>
         /// Defines custom tracking link
@@ -180,6 +150,36 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "is_shipped", EmitDefaultValue = true)]
         public bool IsShipped { get; set; }
+
+        /// <summary>
+        /// Send notifications to customer after shipment was created
+        /// </summary>
+        /// <value>Send notifications to customer after shipment was created</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "send_notifications", EmitDefaultValue = true)]
+        public bool SendNotifications { get; set; }
+
+        /// <summary>
+        /// This parameter is used for adjust stock.
+        /// </summary>
+        /// <value>This parameter is used for adjust stock.</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "adjust_stock", EmitDefaultValue = true)]
+        public bool AdjustStock { get; set; }
+
+        /// <summary>
+        /// If the value is &#39;true&#39; and order exist in our cache, we will use order.info from cache to prepare shipment items.
+        /// </summary>
+        /// <value>If the value is &#39;true&#39; and order exist in our cache, we will use order.info from cache to prepare shipment items.</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "enable_cache", EmitDefaultValue = true)]
+        public bool EnableCache { get; set; }
 
         /// <summary>
         /// Disable or enable check process status. Please note that the response will be slower due to additional requests to the store.
@@ -210,17 +210,17 @@ namespace Org.OpenAPITools.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class OrderShipmentAdd {\n");
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  WarehouseId: ").Append(WarehouseId).Append("\n");
+            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  ShipmentProvider: ").Append(ShipmentProvider).Append("\n");
             sb.Append("  ShippingMethod: ").Append(ShippingMethod).Append("\n");
             sb.Append("  Items: ").Append(Items).Append("\n");
-            sb.Append("  SendNotifications: ").Append(SendNotifications).Append("\n");
             sb.Append("  TrackingNumbers: ").Append(TrackingNumbers).Append("\n");
-            sb.Append("  AdjustStock: ").Append(AdjustStock).Append("\n");
-            sb.Append("  EnableCache: ").Append(EnableCache).Append("\n");
             sb.Append("  TrackingLink: ").Append(TrackingLink).Append("\n");
             sb.Append("  IsShipped: ").Append(IsShipped).Append("\n");
+            sb.Append("  SendNotifications: ").Append(SendNotifications).Append("\n");
+            sb.Append("  AdjustStock: ").Append(AdjustStock).Append("\n");
+            sb.Append("  EnableCache: ").Append(EnableCache).Append("\n");
             sb.Append("  CheckProcessStatus: ").Append(CheckProcessStatus).Append("\n");
             sb.Append("  UseLatestApiVersion: ").Append(UseLatestApiVersion).Append("\n");
             sb.Append("}\n");

@@ -64,18 +64,18 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int? start = null;
             //int? count = null;
+            //string? pageCursor = null;
             //bool? subscribed = null;
             //string? storeId = null;
             //string? email = null;
-            //string? varParams = null;
-            //string? exclude = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
-            //string? pageCursor = null;
             //string? responseFields = null;
-            //var response = instance.SubscriberList(start, count, subscribed, storeId, email, varParams, exclude, createdFrom, createdTo, modifiedFrom, modifiedTo, pageCursor, responseFields);
+            //string? varParams = null;
+            //string? exclude = null;
+            //var response = instance.SubscriberList(start, count, pageCursor, subscribed, storeId, email, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseSubscriberList>(response);
         }
     }

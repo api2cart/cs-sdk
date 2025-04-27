@@ -110,6 +110,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Status'
+        /// </summary>
+        [Fact]
+        public void StatusTest()
+        {
+            // TODO unit test for the property 'Status'
+        }
+
+        /// <summary>
         /// Test the property 'CreatedTime'
         /// </summary>
         [Fact]
@@ -155,15 +164,6 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Status'
-        /// </summary>
-        [Fact]
-        public void StatusTest()
-        {
-            // TODO unit test for the property 'Status'
-        }
-
-        /// <summary>
         /// Test the property 'NewsLetterSubscription'
         /// </summary>
         [Fact]
@@ -197,15 +197,6 @@ namespace Org.OpenAPITools.Test.Model
         public void WebsiteTest()
         {
             // TODO unit test for the property 'Website'
-        }
-
-        /// <summary>
-        /// Test the property 'StoreId'
-        /// </summary>
-        [Fact]
-        public void StoreIdTest()
-        {
-            // TODO unit test for the property 'StoreId'
         }
 
         /// <summary>
@@ -251,6 +242,15 @@ namespace Org.OpenAPITools.Test.Model
         public void CountryTest()
         {
             // TODO unit test for the property 'Country'
+        }
+
+        /// <summary>
+        /// Test the property 'StoreId'
+        /// </summary>
+        [Fact]
+        public void StoreIdTest()
+        {
+            // TODO unit test for the property 'StoreId'
         }
 
         /// <summary>

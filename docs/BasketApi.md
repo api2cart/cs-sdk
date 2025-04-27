@@ -12,7 +12,7 @@ All URIs are relative to *https://api.api2cart.com/v1.1*
 
 <a id="basketinfo"></a>
 # **BasketInfo**
-> BasketInfo200Response BasketInfo (string id, string? storeId = null, string? varParams = null, string? exclude = null, string? responseFields = null)
+> BasketInfo200Response BasketInfo (string id, string? storeId = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 basket.info
 
@@ -46,14 +46,14 @@ namespace Example
             var apiInstance = new BasketApi(config);
             var id = 10;  // string | Entity id
             var storeId = 1;  // string? | Store Id (optional) 
+            var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "force_all")
             var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
 
             try
             {
                 // basket.info
-                BasketInfo200Response result = apiInstance.BasketInfo(id, storeId, varParams, exclude, responseFields);
+                BasketInfo200Response result = apiInstance.BasketInfo(id, storeId, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -74,7 +74,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // basket.info
-    ApiResponse<BasketInfo200Response> response = apiInstance.BasketInfoWithHttpInfo(id, storeId, varParams, exclude, responseFields);
+    ApiResponse<BasketInfo200Response> response = apiInstance.BasketInfoWithHttpInfo(id, storeId, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -93,9 +93,9 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **string** | Entity id |  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;force_all&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 
 ### Return type
 
@@ -432,7 +432,7 @@ catch (ApiException e)
 
 <a id="basketliveshippingservicelist"></a>
 # **BasketLiveShippingServiceList**
-> BasketLiveShippingServiceList200Response BasketLiveShippingServiceList (string? storeId = null, int? start = null, int? count = null)
+> BasketLiveShippingServiceList200Response BasketLiveShippingServiceList (int? start = null, int? count = null, string? storeId = null)
 
 basket.live_shipping_service.list
 
@@ -464,14 +464,14 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new BasketApi(config);
-            var storeId = 1;  // string? | Store Id (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var storeId = 1;  // string? | Store Id (optional) 
 
             try
             {
                 // basket.live_shipping_service.list
-                BasketLiveShippingServiceList200Response result = apiInstance.BasketLiveShippingServiceList(storeId, start, count);
+                BasketLiveShippingServiceList200Response result = apiInstance.BasketLiveShippingServiceList(start, count, storeId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -492,7 +492,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // basket.live_shipping_service.list
-    ApiResponse<BasketLiveShippingServiceList200Response> response = apiInstance.BasketLiveShippingServiceListWithHttpInfo(storeId, start, count);
+    ApiResponse<BasketLiveShippingServiceList200Response> response = apiInstance.BasketLiveShippingServiceListWithHttpInfo(start, count, storeId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -509,9 +509,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **storeId** | **string?** | Store Id | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **storeId** | **string?** | Store Id | [optional]  |
 
 ### Return type
 

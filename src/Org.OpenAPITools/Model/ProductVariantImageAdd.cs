@@ -84,6 +84,7 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <param name="productId">Defines product id where the variant image has to be added.</param>
         /// <param name="productVariantId">Defines product&#39;s variants specified by variant id (required).</param>
+        /// <param name="storeId">Store Id.</param>
         /// <param name="imageName">Defines image&#39;s name (required).</param>
         /// <param name="type">Defines image&#39;s types that are specified by comma-separated list (required) (default to TypeEnum.Base).</param>
         /// <param name="url">Defines URL of the image that has to be added.</param>
@@ -91,9 +92,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="label">Defines alternative text that has to be attached to the picture.</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type..</param>
         /// <param name="position">Defines image’s position in the list (default to 0).</param>
-        /// <param name="storeId">Store Id.</param>
         /// <param name="optionId">Defines option id of the product variant for which the image will be added.</param>
-        public ProductVariantImageAdd(string productId = default(string), string productVariantId = default(string), string imageName = default(string), TypeEnum type = TypeEnum.Base, string url = default(string), string content = default(string), string label = default(string), string mime = default(string), int position = 0, string storeId = default(string), string optionId = default(string))
+        public ProductVariantImageAdd(string productId = default(string), string productVariantId = default(string), string storeId = default(string), string imageName = default(string), TypeEnum type = TypeEnum.Base, string url = default(string), string content = default(string), string label = default(string), string mime = default(string), int position = 0, string optionId = default(string))
         {
             // to ensure "productVariantId" is required (not null)
             if (productVariantId == null)
@@ -109,12 +109,12 @@ namespace Org.OpenAPITools.Model
             this.ImageName = imageName;
             this.Type = type;
             this.ProductId = productId;
+            this.StoreId = storeId;
             this.Url = url;
             this.Content = content;
             this.Label = label;
             this.Mime = mime;
             this.Position = position;
-            this.StoreId = storeId;
             this.OptionId = optionId;
         }
 
@@ -137,6 +137,16 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "product_variant_id", IsRequired = true, EmitDefaultValue = true)]
         public string ProductVariantId { get; set; }
+
+        /// <summary>
+        /// Store Id
+        /// </summary>
+        /// <value>Store Id</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        public string StoreId { get; set; }
 
         /// <summary>
         /// Defines image&#39;s name
@@ -199,16 +209,6 @@ namespace Org.OpenAPITools.Model
         public int Position { get; set; }
 
         /// <summary>
-        /// Store Id
-        /// </summary>
-        /// <value>Store Id</value>
-        /*
-        <example>1</example>
-        */
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
-        public string StoreId { get; set; }
-
-        /// <summary>
         /// Defines option id of the product variant for which the image will be added
         /// </summary>
         /// <value>Defines option id of the product variant for which the image will be added</value>
@@ -228,6 +228,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("class ProductVariantImageAdd {\n");
             sb.Append("  ProductId: ").Append(ProductId).Append("\n");
             sb.Append("  ProductVariantId: ").Append(ProductVariantId).Append("\n");
+            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  ImageName: ").Append(ImageName).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
@@ -235,7 +236,6 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Mime: ").Append(Mime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  OptionId: ").Append(OptionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

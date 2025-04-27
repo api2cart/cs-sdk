@@ -228,7 +228,7 @@ catch (ApiException e)
 
 <a id="returninfo"></a>
 # **ReturnInfo**
-> ReturnInfo200Response ReturnInfo (string id, string? orderId = null, string? storeId = null, string? varParams = null, string? exclude = null, string? responseFields = null)
+> ReturnInfo200Response ReturnInfo (string id, string? orderId = null, string? storeId = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 return.info
 
@@ -263,14 +263,14 @@ namespace Example
             var id = 10;  // string | Entity id
             var orderId = 25;  // string? | Defines the order id (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
+            var responseFields = {return_code,return_message,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var varParams = id,order_products;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,order_products")
             var exclude = id,order_id;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var responseFields = {return_code,return_message,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
 
             try
             {
                 // return.info
-                ReturnInfo200Response result = apiInstance.ReturnInfo(id, orderId, storeId, varParams, exclude, responseFields);
+                ReturnInfo200Response result = apiInstance.ReturnInfo(id, orderId, storeId, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -291,7 +291,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // return.info
-    ApiResponse<ReturnInfo200Response> response = apiInstance.ReturnInfoWithHttpInfo(id, orderId, storeId, varParams, exclude, responseFields);
+    ApiResponse<ReturnInfo200Response> response = apiInstance.ReturnInfoWithHttpInfo(id, orderId, storeId, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -311,9 +311,9 @@ catch (ApiException e)
 | **id** | **string** | Entity id |  |
 | **orderId** | **string?** | Defines the order id | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,order_products&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 
 ### Return type
 
@@ -338,7 +338,7 @@ catch (ApiException e)
 
 <a id="returnlist"></a>
 # **ReturnList**
-> ModelResponseReturnList ReturnList (int? start = null, int? count = null, string? pageCursor = null, string? varParams = null, string? exclude = null, string? responseFields = null, string? orderId = null, string? orderIds = null, string? customerId = null, string? storeId = null, string? status = null, string? returnType = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? reportRequestId = null, bool? disableReportCache = null)
+> ModelResponseReturnList ReturnList (int? start = null, int? count = null, string? pageCursor = null, string? orderId = null, string? orderIds = null, string? customerId = null, string? storeId = null, string? status = null, string? returnType = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? responseFields = null, string? varParams = null, string? exclude = null, string? reportRequestId = null, bool? disableReportCache = null)
 
 return.list
 
@@ -373,9 +373,6 @@ namespace Example
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
             var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
-            var varParams = id,order_products;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,order_products")
-            var exclude = id,order_id;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var orderId = 25;  // string? | Defines the order id (optional) 
             var orderIds = 24,25;  // string? | Retrieves return requests specified by order ids (optional) 
             var customerId = 5;  // string? | Retrieves return requests specified by customer id (optional) 
@@ -386,13 +383,16 @@ namespace Example
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
+            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,order_products;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,order_products")
+            var exclude = id,order_id;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var reportRequestId = 105245017661;  // string? | Report request id (optional) 
             var disableReportCache = false;  // bool? | Disable report cache for current request (optional)  (default to false)
 
             try
             {
                 // return.list
-                ModelResponseReturnList result = apiInstance.ReturnList(start, count, pageCursor, varParams, exclude, responseFields, orderId, orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, reportRequestId, disableReportCache);
+                ModelResponseReturnList result = apiInstance.ReturnList(start, count, pageCursor, orderId, orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude, reportRequestId, disableReportCache);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -413,7 +413,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // return.list
-    ApiResponse<ModelResponseReturnList> response = apiInstance.ReturnListWithHttpInfo(start, count, pageCursor, varParams, exclude, responseFields, orderId, orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, reportRequestId, disableReportCache);
+    ApiResponse<ModelResponseReturnList> response = apiInstance.ReturnListWithHttpInfo(start, count, pageCursor, orderId, orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude, reportRequestId, disableReportCache);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -433,9 +433,6 @@ catch (ApiException e)
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
 | **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,order_products&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **orderId** | **string?** | Defines the order id | [optional]  |
 | **orderIds** | **string?** | Retrieves return requests specified by order ids | [optional]  |
 | **customerId** | **string?** | Retrieves return requests specified by customer id | [optional]  |
@@ -446,6 +443,9 @@ catch (ApiException e)
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,order_products&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **reportRequestId** | **string?** | Report request id | [optional]  |
 | **disableReportCache** | **bool?** | Disable report cache for current request | [optional] [default to false] |
 

@@ -84,14 +84,14 @@ namespace Org.OpenAPITools.Test.Api
         public void CartCatalogPriceRulesListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? pageCursor = null;
             //int? start = null;
             //int? count = null;
+            //string? pageCursor = null;
             //string? ids = null;
-            //string? varParams = null;
             //string? responseFields = null;
+            //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.CartCatalogPriceRulesList(pageCursor, start, count, ids, varParams, responseFields, exclude);
+            //var response = instance.CartCatalogPriceRulesList(start, count, pageCursor, ids, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseCartCatalogPriceRulesList>(response);
         }
 
@@ -156,11 +156,11 @@ namespace Org.OpenAPITools.Test.Api
             //string key = null;
             //string varOperator = null;
             //string value = null;
-            //string? storeId = null;
             //string? target = null;
             //bool? includeTax = null;
             //bool? includeShipping = null;
-            //var response = instance.CartCouponConditionAdd(couponId, entity, key, varOperator, value, storeId, target, includeTax, includeShipping);
+            //string? storeId = null;
+            //var response = instance.CartCouponConditionAdd(couponId, entity, key, varOperator, value, target, includeTax, includeShipping, storeId);
             //Assert.IsType<BasketLiveShippingServiceDelete200Response>(response);
         }
 
@@ -172,12 +172,12 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string? storeId = null;
+            //bool? avail = null;
             //string? dateStartFrom = null;
             //string? dateStartTo = null;
             //string? dateEndFrom = null;
             //string? dateEndTo = null;
-            //bool? avail = null;
-            //var response = instance.CartCouponCount(storeId, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, avail);
+            //var response = instance.CartCouponCount(storeId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo);
             //Assert.IsType<CartCouponCount200Response>(response);
         }
 
@@ -201,21 +201,21 @@ namespace Org.OpenAPITools.Test.Api
         public void CartCouponListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? pageCursor = null;
             //int? start = null;
             //int? count = null;
+            //string? pageCursor = null;
             //string? couponsIds = null;
             //string? storeId = null;
+            //string? langId = null;
+            //bool? avail = null;
             //string? dateStartFrom = null;
             //string? dateStartTo = null;
             //string? dateEndFrom = null;
             //string? dateEndTo = null;
-            //bool? avail = null;
-            //string? langId = null;
-            //string? varParams = null;
             //string? responseFields = null;
+            //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.CartCouponList(pageCursor, start, count, couponsIds, storeId, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, avail, langId, varParams, responseFields, exclude);
+            //var response = instance.CartCouponList(start, count, pageCursor, couponsIds, storeId, langId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseCartCouponList>(response);
         }
 
@@ -303,14 +303,14 @@ namespace Org.OpenAPITools.Test.Api
         public void CartGiftcardListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? pageCursor = null;
             //int? start = null;
             //int? count = null;
+            //string? pageCursor = null;
             //string? storeId = null;
-            //string? varParams = null;
             //string? responseFields = null;
+            //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.CartGiftcardList(pageCursor, start, count, storeId, varParams, responseFields, exclude);
+            //var response = instance.CartGiftcardList(start, count, pageCursor, storeId, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseCartGiftCardList>(response);
         }
 
@@ -321,11 +321,11 @@ namespace Org.OpenAPITools.Test.Api
         public void CartInfoTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? varParams = null;
-            //string? responseFields = null;
-            //string? exclude = null;
             //string? storeId = null;
-            //var response = instance.CartInfo(varParams, responseFields, exclude, storeId);
+            //string? responseFields = null;
+            //string? varParams = null;
+            //string? exclude = null;
+            //var response = instance.CartInfo(storeId, responseFields, varParams, exclude);
             //Assert.IsType<CartInfo200Response>(response);
         }
 
@@ -348,16 +348,16 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string entityId = null;
+            //int? count = null;
+            //string? pageCursor = null;
             //string? entity = null;
             //string? storeId = null;
             //string? langId = null;
             //string? key = null;
-            //int? count = null;
-            //string? pageCursor = null;
-            //string? varParams = null;
             //string? responseFields = null;
+            //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.CartMetaDataList(entityId, entity, storeId, langId, key, count, pageCursor, varParams, responseFields, exclude);
+            //var response = instance.CartMetaDataList(entityId, count, pageCursor, entity, storeId, langId, key, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseCartMetaDataList>(response);
         }
 
@@ -413,10 +413,10 @@ namespace Org.OpenAPITools.Test.Api
         public void CartPluginListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? storeId = null;
             //int? start = null;
             //int? count = null;
-            //var response = instance.CartPluginList(storeId, start, count);
+            //string? storeId = null;
+            //var response = instance.CartPluginList(start, count, storeId);
             //Assert.IsType<CartPluginList200Response>(response);
         }
 
@@ -459,19 +459,19 @@ namespace Org.OpenAPITools.Test.Api
         public void CartScriptListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? pageCursor = null;
             //int? start = null;
             //int? count = null;
+            //string? pageCursor = null;
+            //string? scriptIds = null;
+            //string? storeId = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
-            //string? scriptIds = null;
-            //string? storeId = null;
-            //string? varParams = null;
             //string? responseFields = null;
+            //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.CartScriptList(pageCursor, start, count, createdFrom, createdTo, modifiedFrom, modifiedTo, scriptIds, storeId, varParams, responseFields, exclude);
+            //var response = instance.CartScriptList(start, count, pageCursor, scriptIds, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseCartScriptList>(response);
         }
 
@@ -482,13 +482,13 @@ namespace Org.OpenAPITools.Test.Api
         public void CartShippingZonesListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? storeId = null;
             //int? start = null;
             //int? count = null;
-            //string? varParams = null;
+            //string? storeId = null;
             //string? responseFields = null;
+            //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.CartShippingZonesList(storeId, start, count, varParams, responseFields, exclude);
+            //var response = instance.CartShippingZonesList(start, count, storeId, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseCartShippingZonesList>(response);
         }
 

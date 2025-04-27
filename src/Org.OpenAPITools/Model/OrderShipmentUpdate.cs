@@ -40,16 +40,16 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderShipmentUpdate" /> class.
         /// </summary>
-        /// <param name="storeId">Store Id.</param>
         /// <param name="shipmentId">Shipment id indicates the number of delivery (required).</param>
         /// <param name="orderId">Defines the order that will be updated.</param>
-        /// <param name="trackingNumbers">Defines shipment&#39;s tracking numbers that have to be added&lt;/br&gt; How set tracking numbers to appropriate carrier:&lt;ul&gt;&lt;li&gt;tracking_numbers[]&#x3D;a2c.demo1,a2c.demo2 - set default carrier&lt;/li&gt;&lt;li&gt;tracking_numbers[&lt;b&gt;carrier_id&lt;/b&gt;]&#x3D;a2c.demo - set appropriate carrier&lt;/li&gt;&lt;/ul&gt;To get the list of carriers IDs that are available in your store, use the &lt;a href &#x3D; \&quot;https://api2cart.com/docs/#/cart/CartInfo\&quot;&gt;cart.info&lt;/a &gt; method.</param>
-        /// <param name="replace">Allows rewrite tracking numbers (default to true).</param>
-        /// <param name="isShipped">Defines shipment&#39;s status (default to true).</param>
-        /// <param name="trackingLink">Defines custom tracking link.</param>
-        /// <param name="deliveredAt">Defines the date of delivery.</param>
+        /// <param name="storeId">Store Id.</param>
         /// <param name="shipmentProvider">Defines company name that provide tracking of shipment.</param>
-        public OrderShipmentUpdate(string storeId = default(string), string shipmentId = default(string), string orderId = default(string), List<OrderShipmentAddTrackingNumbersInner> trackingNumbers = default(List<OrderShipmentAddTrackingNumbersInner>), bool replace = true, bool isShipped = true, string trackingLink = default(string), string deliveredAt = default(string), string shipmentProvider = default(string))
+        /// <param name="trackingNumbers">Defines shipment&#39;s tracking numbers that have to be added&lt;/br&gt; How set tracking numbers to appropriate carrier:&lt;ul&gt;&lt;li&gt;tracking_numbers[]&#x3D;a2c.demo1,a2c.demo2 - set default carrier&lt;/li&gt;&lt;li&gt;tracking_numbers[&lt;b&gt;carrier_id&lt;/b&gt;]&#x3D;a2c.demo - set appropriate carrier&lt;/li&gt;&lt;/ul&gt;To get the list of carriers IDs that are available in your store, use the &lt;a href &#x3D; \&quot;https://api2cart.com/docs/#/cart/CartInfo\&quot;&gt;cart.info&lt;/a &gt; method.</param>
+        /// <param name="trackingLink">Defines custom tracking link.</param>
+        /// <param name="isShipped">Defines shipment&#39;s status (default to true).</param>
+        /// <param name="deliveredAt">Defines the date of delivery.</param>
+        /// <param name="replace">Allows rewrite tracking numbers (default to true).</param>
+        public OrderShipmentUpdate(string shipmentId = default(string), string orderId = default(string), string storeId = default(string), string shipmentProvider = default(string), List<OrderShipmentAddTrackingNumbersInner> trackingNumbers = default(List<OrderShipmentAddTrackingNumbersInner>), string trackingLink = default(string), bool isShipped = true, string deliveredAt = default(string), bool replace = true)
         {
             // to ensure "shipmentId" is required (not null)
             if (shipmentId == null)
@@ -57,25 +57,15 @@ namespace Org.OpenAPITools.Model
                 throw new ArgumentNullException("shipmentId is a required property for OrderShipmentUpdate and cannot be null");
             }
             this.ShipmentId = shipmentId;
-            this.StoreId = storeId;
             this.OrderId = orderId;
-            this.TrackingNumbers = trackingNumbers;
-            this.Replace = replace;
-            this.IsShipped = isShipped;
-            this.TrackingLink = trackingLink;
-            this.DeliveredAt = deliveredAt;
+            this.StoreId = storeId;
             this.ShipmentProvider = shipmentProvider;
+            this.TrackingNumbers = trackingNumbers;
+            this.TrackingLink = trackingLink;
+            this.IsShipped = isShipped;
+            this.DeliveredAt = deliveredAt;
+            this.Replace = replace;
         }
-
-        /// <summary>
-        /// Store Id
-        /// </summary>
-        /// <value>Store Id</value>
-        /*
-        <example>1</example>
-        */
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
-        public string StoreId { get; set; }
 
         /// <summary>
         /// Shipment id indicates the number of delivery
@@ -98,51 +88,14 @@ namespace Org.OpenAPITools.Model
         public string OrderId { get; set; }
 
         /// <summary>
-        /// Defines shipment&#39;s tracking numbers that have to be added&lt;/br&gt; How set tracking numbers to appropriate carrier:&lt;ul&gt;&lt;li&gt;tracking_numbers[]&#x3D;a2c.demo1,a2c.demo2 - set default carrier&lt;/li&gt;&lt;li&gt;tracking_numbers[&lt;b&gt;carrier_id&lt;/b&gt;]&#x3D;a2c.demo - set appropriate carrier&lt;/li&gt;&lt;/ul&gt;To get the list of carriers IDs that are available in your store, use the &lt;a href &#x3D; \&quot;https://api2cart.com/docs/#/cart/CartInfo\&quot;&gt;cart.info&lt;/a &gt; method
+        /// Store Id
         /// </summary>
-        /// <value>Defines shipment&#39;s tracking numbers that have to be added&lt;/br&gt; How set tracking numbers to appropriate carrier:&lt;ul&gt;&lt;li&gt;tracking_numbers[]&#x3D;a2c.demo1,a2c.demo2 - set default carrier&lt;/li&gt;&lt;li&gt;tracking_numbers[&lt;b&gt;carrier_id&lt;/b&gt;]&#x3D;a2c.demo - set appropriate carrier&lt;/li&gt;&lt;/ul&gt;To get the list of carriers IDs that are available in your store, use the &lt;a href &#x3D; \&quot;https://api2cart.com/docs/#/cart/CartInfo\&quot;&gt;cart.info&lt;/a &gt; method</value>
-        [DataMember(Name = "tracking_numbers", EmitDefaultValue = false)]
-        public List<OrderShipmentAddTrackingNumbersInner> TrackingNumbers { get; set; }
-
-        /// <summary>
-        /// Allows rewrite tracking numbers
-        /// </summary>
-        /// <value>Allows rewrite tracking numbers</value>
+        /// <value>Store Id</value>
         /*
-        <example>false</example>
+        <example>1</example>
         */
-        [DataMember(Name = "replace", EmitDefaultValue = true)]
-        public bool Replace { get; set; }
-
-        /// <summary>
-        /// Defines shipment&#39;s status
-        /// </summary>
-        /// <value>Defines shipment&#39;s status</value>
-        /*
-        <example>true</example>
-        */
-        [DataMember(Name = "is_shipped", EmitDefaultValue = true)]
-        public bool IsShipped { get; set; }
-
-        /// <summary>
-        /// Defines custom tracking link
-        /// </summary>
-        /// <value>Defines custom tracking link</value>
-        /*
-        <example>http://example.com?someParam&#x3D;value</example>
-        */
-        [DataMember(Name = "tracking_link", EmitDefaultValue = false)]
-        public string TrackingLink { get; set; }
-
-        /// <summary>
-        /// Defines the date of delivery
-        /// </summary>
-        /// <value>Defines the date of delivery</value>
-        /*
-        <example>2024-08-25T23:56:12+00:00</example>
-        */
-        [DataMember(Name = "delivered_at", EmitDefaultValue = false)]
-        public string DeliveredAt { get; set; }
+        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        public string StoreId { get; set; }
 
         /// <summary>
         /// Defines company name that provide tracking of shipment
@@ -155,6 +108,53 @@ namespace Org.OpenAPITools.Model
         public string ShipmentProvider { get; set; }
 
         /// <summary>
+        /// Defines shipment&#39;s tracking numbers that have to be added&lt;/br&gt; How set tracking numbers to appropriate carrier:&lt;ul&gt;&lt;li&gt;tracking_numbers[]&#x3D;a2c.demo1,a2c.demo2 - set default carrier&lt;/li&gt;&lt;li&gt;tracking_numbers[&lt;b&gt;carrier_id&lt;/b&gt;]&#x3D;a2c.demo - set appropriate carrier&lt;/li&gt;&lt;/ul&gt;To get the list of carriers IDs that are available in your store, use the &lt;a href &#x3D; \&quot;https://api2cart.com/docs/#/cart/CartInfo\&quot;&gt;cart.info&lt;/a &gt; method
+        /// </summary>
+        /// <value>Defines shipment&#39;s tracking numbers that have to be added&lt;/br&gt; How set tracking numbers to appropriate carrier:&lt;ul&gt;&lt;li&gt;tracking_numbers[]&#x3D;a2c.demo1,a2c.demo2 - set default carrier&lt;/li&gt;&lt;li&gt;tracking_numbers[&lt;b&gt;carrier_id&lt;/b&gt;]&#x3D;a2c.demo - set appropriate carrier&lt;/li&gt;&lt;/ul&gt;To get the list of carriers IDs that are available in your store, use the &lt;a href &#x3D; \&quot;https://api2cart.com/docs/#/cart/CartInfo\&quot;&gt;cart.info&lt;/a &gt; method</value>
+        [DataMember(Name = "tracking_numbers", EmitDefaultValue = false)]
+        public List<OrderShipmentAddTrackingNumbersInner> TrackingNumbers { get; set; }
+
+        /// <summary>
+        /// Defines custom tracking link
+        /// </summary>
+        /// <value>Defines custom tracking link</value>
+        /*
+        <example>http://example.com?someParam&#x3D;value</example>
+        */
+        [DataMember(Name = "tracking_link", EmitDefaultValue = false)]
+        public string TrackingLink { get; set; }
+
+        /// <summary>
+        /// Defines shipment&#39;s status
+        /// </summary>
+        /// <value>Defines shipment&#39;s status</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "is_shipped", EmitDefaultValue = true)]
+        public bool IsShipped { get; set; }
+
+        /// <summary>
+        /// Defines the date of delivery
+        /// </summary>
+        /// <value>Defines the date of delivery</value>
+        /*
+        <example>2024-08-25T23:56:12+00:00</example>
+        */
+        [DataMember(Name = "delivered_at", EmitDefaultValue = false)]
+        public string DeliveredAt { get; set; }
+
+        /// <summary>
+        /// Allows rewrite tracking numbers
+        /// </summary>
+        /// <value>Allows rewrite tracking numbers</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "replace", EmitDefaultValue = true)]
+        public bool Replace { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -162,15 +162,15 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class OrderShipmentUpdate {\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  ShipmentId: ").Append(ShipmentId).Append("\n");
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
-            sb.Append("  TrackingNumbers: ").Append(TrackingNumbers).Append("\n");
-            sb.Append("  Replace: ").Append(Replace).Append("\n");
-            sb.Append("  IsShipped: ").Append(IsShipped).Append("\n");
-            sb.Append("  TrackingLink: ").Append(TrackingLink).Append("\n");
-            sb.Append("  DeliveredAt: ").Append(DeliveredAt).Append("\n");
+            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  ShipmentProvider: ").Append(ShipmentProvider).Append("\n");
+            sb.Append("  TrackingNumbers: ").Append(TrackingNumbers).Append("\n");
+            sb.Append("  TrackingLink: ").Append(TrackingLink).Append("\n");
+            sb.Append("  IsShipped: ").Append(IsShipped).Append("\n");
+            sb.Append("  DeliveredAt: ").Append(DeliveredAt).Append("\n");
+            sb.Append("  Replace: ").Append(Replace).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

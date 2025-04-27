@@ -65,21 +65,21 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'StoreId'
-        /// </summary>
-        [Fact]
-        public void StoreIdTest()
-        {
-            // TODO unit test for the property 'StoreId'
-        }
-
-        /// <summary>
         /// Test the property 'WarehouseId'
         /// </summary>
         [Fact]
         public void WarehouseIdTest()
         {
             // TODO unit test for the property 'WarehouseId'
+        }
+
+        /// <summary>
+        /// Test the property 'StoreId'
+        /// </summary>
+        [Fact]
+        public void StoreIdTest()
+        {
+            // TODO unit test for the property 'StoreId'
         }
 
         /// <summary>
@@ -110,39 +110,12 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'SendNotifications'
-        /// </summary>
-        [Fact]
-        public void SendNotificationsTest()
-        {
-            // TODO unit test for the property 'SendNotifications'
-        }
-
-        /// <summary>
         /// Test the property 'TrackingNumbers'
         /// </summary>
         [Fact]
         public void TrackingNumbersTest()
         {
             // TODO unit test for the property 'TrackingNumbers'
-        }
-
-        /// <summary>
-        /// Test the property 'AdjustStock'
-        /// </summary>
-        [Fact]
-        public void AdjustStockTest()
-        {
-            // TODO unit test for the property 'AdjustStock'
-        }
-
-        /// <summary>
-        /// Test the property 'EnableCache'
-        /// </summary>
-        [Fact]
-        public void EnableCacheTest()
-        {
-            // TODO unit test for the property 'EnableCache'
         }
 
         /// <summary>
@@ -161,6 +134,33 @@ namespace Org.OpenAPITools.Test.Model
         public void IsShippedTest()
         {
             // TODO unit test for the property 'IsShipped'
+        }
+
+        /// <summary>
+        /// Test the property 'SendNotifications'
+        /// </summary>
+        [Fact]
+        public void SendNotificationsTest()
+        {
+            // TODO unit test for the property 'SendNotifications'
+        }
+
+        /// <summary>
+        /// Test the property 'AdjustStock'
+        /// </summary>
+        [Fact]
+        public void AdjustStockTest()
+        {
+            // TODO unit test for the property 'AdjustStock'
+        }
+
+        /// <summary>
+        /// Test the property 'EnableCache'
+        /// </summary>
+        [Fact]
+        public void EnableCacheTest()
+        {
+            // TODO unit test for the property 'EnableCache'
         }
 
         /// <summary>

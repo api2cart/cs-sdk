@@ -424,7 +424,7 @@ This endpoint does not need any parameter.
 
 <a id="webhooklist"></a>
 # **WebhookList**
-> WebhookList200Response WebhookList (string? varParams = null, int? start = null, int? count = null, string? entity = null, string? action = null, bool? active = null, string? ids = null)
+> WebhookList200Response WebhookList (int? start = null, int? count = null, string? entity = null, string? action = null, bool? active = null, string? ids = null, string? varParams = null)
 
 webhook.list
 
@@ -456,18 +456,18 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new WebhookApi(config);
-            var varParams = id,entity,callback,fields;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,entity,action,callback")
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
             var entity = product;  // string? | The entity you want to filter webhooks by (e.g. order or product) (optional) 
             var action = add;  // string? | The action you want to filter webhooks by (e.g. add, update, or delete) (optional) 
             var active = true;  // bool? | The webhook status you want to filter webhooks by (optional) 
             var ids = 3,14,25;  // string? | List of сomma-separated webhook ids (optional) 
+            var varParams = id,entity,callback,fields;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,entity,action,callback")
 
             try
             {
                 // webhook.list
-                WebhookList200Response result = apiInstance.WebhookList(varParams, start, count, entity, action, active, ids);
+                WebhookList200Response result = apiInstance.WebhookList(start, count, entity, action, active, ids, varParams);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -488,7 +488,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // webhook.list
-    ApiResponse<WebhookList200Response> response = apiInstance.WebhookListWithHttpInfo(varParams, start, count, entity, action, active, ids);
+    ApiResponse<WebhookList200Response> response = apiInstance.WebhookListWithHttpInfo(start, count, entity, action, active, ids, varParams);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -505,13 +505,13 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,entity,action,callback&quot;] |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
 | **entity** | **string?** | The entity you want to filter webhooks by (e.g. order or product) | [optional]  |
 | **action** | **string?** | The action you want to filter webhooks by (e.g. add, update, or delete) | [optional]  |
 | **active** | **bool?** | The webhook status you want to filter webhooks by | [optional]  |
 | **ids** | **string?** | List of сomma-separated webhook ids | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,entity,action,callback&quot;] |
 
 ### Return type
 

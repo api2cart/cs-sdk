@@ -62,21 +62,21 @@ namespace Org.OpenAPITools.Test.Api
         public void OrderAbandonedListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int? start = null;
+            //int? count = null;
+            //string? pageCursor = null;
             //string? customerId = null;
             //string? customerEmail = null;
-            //string? createdTo = null;
-            //string? createdFrom = null;
-            //string? modifiedTo = null;
-            //string? modifiedFrom = null;
-            //bool? skipEmptyEmail = null;
             //string? storeId = null;
-            //string? pageCursor = null;
-            //int? count = null;
-            //int? start = null;
-            //string? varParams = null;
+            //string? createdFrom = null;
+            //string? createdTo = null;
+            //string? modifiedFrom = null;
+            //string? modifiedTo = null;
+            //bool? skipEmptyEmail = null;
             //string? responseFields = null;
+            //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.OrderAbandonedList(customerId, customerEmail, createdTo, createdFrom, modifiedTo, modifiedFrom, skipEmptyEmail, storeId, pageCursor, count, start, varParams, responseFields, exclude);
+            //var response = instance.OrderAbandonedList(start, count, pageCursor, customerId, customerEmail, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, skipEmptyEmail, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseOrderAbandonedList>(response);
         }
 
@@ -99,17 +99,13 @@ namespace Org.OpenAPITools.Test.Api
         public void OrderCountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string? orderIds = null;
+            //string? ids = null;
             //string? customerId = null;
+            //string? storeId = null;
             //string? customerEmail = null;
             //string? orderStatus = null;
             //List<string>? orderStatusIds = null;
-            //string? createdTo = null;
-            //string? createdFrom = null;
-            //string? modifiedTo = null;
-            //string? modifiedFrom = null;
-            //string? storeId = null;
-            //string? ids = null;
-            //string? orderIds = null;
             //string? ebayOrderStatus = null;
             //string? financialStatus = null;
             //List<string>? financialStatusIds = null;
@@ -119,7 +115,11 @@ namespace Org.OpenAPITools.Test.Api
             //string? deliveryMethod = null;
             //string? tags = null;
             //string? shipNodeType = null;
-            //var response = instance.OrderCount(customerId, customerEmail, orderStatus, orderStatusIds, createdTo, createdFrom, modifiedTo, modifiedFrom, storeId, ids, orderIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType);
+            //string? createdFrom = null;
+            //string? createdTo = null;
+            //string? modifiedFrom = null;
+            //string? modifiedTo = null;
+            //var response = instance.OrderCount(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo);
             //Assert.IsType<OrderCount200Response>(response);
         }
 
@@ -141,19 +141,19 @@ namespace Org.OpenAPITools.Test.Api
         public void OrderFindTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int? start = null;
+            //int? count = null;
             //string? customerId = null;
             //string? customerEmail = null;
             //string? orderStatus = null;
-            //int? start = null;
-            //int? count = null;
-            //string? varParams = null;
-            //string? exclude = null;
+            //string? financialStatus = null;
             //string? createdTo = null;
             //string? createdFrom = null;
             //string? modifiedTo = null;
             //string? modifiedFrom = null;
-            //string? financialStatus = null;
-            //var response = instance.OrderFind(customerId, customerEmail, orderStatus, start, count, varParams, exclude, createdTo, createdFrom, modifiedTo, modifiedFrom, financialStatus);
+            //string? varParams = null;
+            //string? exclude = null;
+            //var response = instance.OrderFind(start, count, customerId, customerEmail, orderStatus, financialStatus, createdTo, createdFrom, modifiedTo, modifiedFrom, varParams, exclude);
             //Assert.IsType<OrderFind200Response>(response);
         }
 
@@ -176,15 +176,15 @@ namespace Org.OpenAPITools.Test.Api
         public void OrderInfoTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? orderId = null;
             //string? id = null;
+            //string? orderId = null;
+            //string? storeId = null;
             //string? varParams = null;
             //string? responseFields = null;
             //string? exclude = null;
-            //string? storeId = null;
             //bool? enableCache = null;
             //bool? useLatestApiVersion = null;
-            //var response = instance.OrderInfo(orderId, id, varParams, responseFields, exclude, storeId, enableCache, useLatestApiVersion);
+            //var response = instance.OrderInfo(id, orderId, storeId, varParams, responseFields, exclude, enableCache, useLatestApiVersion);
             //Assert.IsType<OrderInfo200Response>(response);
         }
 
@@ -195,45 +195,45 @@ namespace Org.OpenAPITools.Test.Api
         public void OrderListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? customerId = null;
-            //string? customerEmail = null;
-            //string? phone = null;
-            //string? orderStatus = null;
-            //List<string>? orderStatusIds = null;
             //int? start = null;
             //int? count = null;
             //string? pageCursor = null;
+            //string? ids = null;
+            //string? orderIds = null;
+            //string? sinceId = null;
+            //string? storeId = null;
+            //string? customerId = null;
+            //string? customerEmail = null;
+            //string? basketId = null;
+            //string? currencyId = null;
+            //string? phone = null;
+            //string? orderStatus = null;
+            //List<string>? orderStatusIds = null;
+            //string? ebayOrderStatus = null;
+            //string? financialStatus = null;
+            //List<string>? financialStatusIds = null;
+            //string? fulfillmentStatus = null;
+            //string? returnStatus = null;
+            //string? fulfillmentChannel = null;
+            //string? shippingMethod = null;
+            //string? skipOrderIds = null;
+            //bool? isDeleted = null;
+            //string? shippingCountryIso3 = null;
+            //string? deliveryMethod = null;
+            //string? shipNodeType = null;
+            //string? createdTo = null;
+            //string? createdFrom = null;
+            //string? modifiedTo = null;
+            //string? modifiedFrom = null;
+            //string? tags = null;
             //string? sortBy = null;
             //string? sortDirection = null;
             //string? varParams = null;
             //string? responseFields = null;
             //string? exclude = null;
-            //string? createdTo = null;
-            //string? createdFrom = null;
-            //string? modifiedTo = null;
-            //string? modifiedFrom = null;
-            //string? storeId = null;
-            //string? ids = null;
-            //string? orderIds = null;
-            //string? ebayOrderStatus = null;
-            //string? basketId = null;
-            //string? financialStatus = null;
-            //List<string>? financialStatusIds = null;
-            //string? fulfillmentStatus = null;
-            //string? fulfillmentChannel = null;
-            //string? shippingMethod = null;
-            //string? skipOrderIds = null;
-            //string? sinceId = null;
-            //bool? isDeleted = null;
-            //string? shippingCountryIso3 = null;
             //bool? enableCache = null;
-            //string? deliveryMethod = null;
-            //string? tags = null;
-            //string? shipNodeType = null;
-            //string? currencyId = null;
-            //string? returnStatus = null;
             //bool? useLatestApiVersion = null;
-            //var response = instance.OrderList(customerId, customerEmail, phone, orderStatus, orderStatusIds, start, count, pageCursor, sortBy, sortDirection, varParams, responseFields, exclude, createdTo, createdFrom, modifiedTo, modifiedFrom, storeId, ids, orderIds, ebayOrderStatus, basketId, financialStatus, financialStatusIds, fulfillmentStatus, fulfillmentChannel, shippingMethod, skipOrderIds, sinceId, isDeleted, shippingCountryIso3, enableCache, deliveryMethod, tags, shipNodeType, currencyId, returnStatus, useLatestApiVersion);
+            //var response = instance.OrderList(start, count, pageCursor, ids, orderIds, sinceId, storeId, customerId, customerEmail, basketId, currencyId, phone, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentStatus, returnStatus, fulfillmentChannel, shippingMethod, skipOrderIds, isDeleted, shippingCountryIso3, deliveryMethod, shipNodeType, createdTo, createdFrom, modifiedTo, modifiedFrom, tags, sortBy, sortDirection, varParams, responseFields, exclude, enableCache, useLatestApiVersion);
             //Assert.IsType<ModelResponseOrderList>(response);
         }
 
@@ -347,11 +347,11 @@ namespace Org.OpenAPITools.Test.Api
             //string id = null;
             //string orderId = null;
             //int? start = null;
-            //string? varParams = null;
-            //string? responseFields = null;
-            //string? exclude = null;
             //string? storeId = null;
-            //var response = instance.OrderShipmentInfo(id, orderId, start, varParams, responseFields, exclude, storeId);
+            //string? responseFields = null;
+            //string? varParams = null;
+            //string? exclude = null;
+            //var response = instance.OrderShipmentInfo(id, orderId, start, storeId, responseFields, varParams, exclude);
             //Assert.IsType<OrderShipmentInfo200Response>(response);
         }
 
@@ -363,18 +363,18 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string orderId = null;
-            //string? pageCursor = null;
             //int? start = null;
             //int? count = null;
-            //string? varParams = null;
-            //string? responseFields = null;
-            //string? exclude = null;
+            //string? pageCursor = null;
+            //string? storeId = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
-            //string? storeId = null;
-            //var response = instance.OrderShipmentList(orderId, pageCursor, start, count, varParams, responseFields, exclude, createdFrom, createdTo, modifiedFrom, modifiedTo, storeId);
+            //string? responseFields = null;
+            //string? varParams = null;
+            //string? exclude = null;
+            //var response = instance.OrderShipmentList(orderId, start, count, pageCursor, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseOrderShipmentList>(response);
         }
 
@@ -425,12 +425,12 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string orderIds = null;
             //int? count = null;
+            //string? pageCursor = null;
             //string? storeId = null;
             //string? varParams = null;
             //string? responseFields = null;
             //string? exclude = null;
-            //string? pageCursor = null;
-            //var response = instance.OrderTransactionList(orderIds, count, storeId, varParams, responseFields, exclude, pageCursor);
+            //var response = instance.OrderTransactionList(orderIds, count, pageCursor, storeId, varParams, responseFields, exclude);
             //Assert.IsType<ModelResponseOrderTransactionList>(response);
         }
 
@@ -444,20 +444,20 @@ namespace Org.OpenAPITools.Test.Api
             //string orderId = null;
             //string? storeId = null;
             //string? orderStatus = null;
+            //string? financialStatus = null;
+            //string? fulfillmentStatus = null;
             //string? cancellationReason = null;
+            //string? orderPaymentMethod = null;
             //string? comment = null;
             //string? adminComment = null;
             //string? adminPrivateComment = null;
+            //string? invoiceAdminComment = null;
             //string? dateModified = null;
             //string? dateFinished = null;
-            //string? financialStatus = null;
-            //string? fulfillmentStatus = null;
-            //string? orderPaymentMethod = null;
             //bool? sendNotifications = null;
-            //string? origin = null;
             //bool? createInvoice = null;
-            //string? invoiceAdminComment = null;
-            //var response = instance.OrderUpdate(orderId, storeId, orderStatus, cancellationReason, comment, adminComment, adminPrivateComment, dateModified, dateFinished, financialStatus, fulfillmentStatus, orderPaymentMethod, sendNotifications, origin, createInvoice, invoiceAdminComment);
+            //string? origin = null;
+            //var response = instance.OrderUpdate(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin);
             //Assert.IsType<AccountConfigUpdate200Response>(response);
         }
     }

@@ -117,14 +117,14 @@ namespace Org.OpenAPITools.Test.Api
         public void WebhookListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? varParams = null;
             //int? start = null;
             //int? count = null;
             //string? entity = null;
             //string? action = null;
             //bool? active = null;
             //string? ids = null;
-            //var response = instance.WebhookList(varParams, start, count, entity, action, active, ids);
+            //string? varParams = null;
+            //var response = instance.WebhookList(start, count, entity, action, active, ids, varParams);
             //Assert.IsType<WebhookList200Response>(response);
         }
 

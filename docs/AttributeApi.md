@@ -371,7 +371,7 @@ catch (ApiException e)
 
 <a id="attributeattributesetlist"></a>
 # **AttributeAttributesetList**
-> ModelResponseAttributeAttributesetList AttributeAttributesetList (int? start = null, int? count = null, string? varParams = null, string? exclude = null, string? responseFields = null)
+> ModelResponseAttributeAttributesetList AttributeAttributesetList (int? start = null, int? count = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 attribute.attributeset.list
 
@@ -405,14 +405,14 @@ namespace Example
             var apiInstance = new AttributeApi(config);
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var varParams = id,name;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name")
             var exclude = id,name;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
 
             try
             {
                 // attribute.attributeset.list
-                ModelResponseAttributeAttributesetList result = apiInstance.AttributeAttributesetList(start, count, varParams, exclude, responseFields);
+                ModelResponseAttributeAttributesetList result = apiInstance.AttributeAttributesetList(start, count, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -433,7 +433,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.attributeset.list
-    ApiResponse<ModelResponseAttributeAttributesetList> response = apiInstance.AttributeAttributesetListWithHttpInfo(start, count, varParams, exclude, responseFields);
+    ApiResponse<ModelResponseAttributeAttributesetList> response = apiInstance.AttributeAttributesetListWithHttpInfo(start, count, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -452,9 +452,9 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 
 ### Return type
 
@@ -693,7 +693,7 @@ catch (ApiException e)
 
 <a id="attributegrouplist"></a>
 # **AttributeGroupList**
-> ModelResponseAttributeGroupList AttributeGroupList (int? start = null, int? count = null, string? langId = null, string? varParams = null, string? exclude = null, string? responseFields = null, string? attributeSetId = null)
+> ModelResponseAttributeGroupList AttributeGroupList (int? start = null, int? count = null, string? attributeSetId = null, string? langId = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 attribute.group.list
 
@@ -727,16 +727,16 @@ namespace Example
             var apiInstance = new AttributeApi(config);
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var attributeSetId = 4;  // string? | Attribute set id (optional) 
             var langId = 3;  // string? | Language id (optional) 
+            var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var varParams = id,name;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name")
             var exclude = id,name;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var attributeSetId = 4;  // string? | Attribute set id (optional) 
 
             try
             {
                 // attribute.group.list
-                ModelResponseAttributeGroupList result = apiInstance.AttributeGroupList(start, count, langId, varParams, exclude, responseFields, attributeSetId);
+                ModelResponseAttributeGroupList result = apiInstance.AttributeGroupList(start, count, attributeSetId, langId, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -757,7 +757,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.group.list
-    ApiResponse<ModelResponseAttributeGroupList> response = apiInstance.AttributeGroupListWithHttpInfo(start, count, langId, varParams, exclude, responseFields, attributeSetId);
+    ApiResponse<ModelResponseAttributeGroupList> response = apiInstance.AttributeGroupListWithHttpInfo(start, count, attributeSetId, langId, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -776,11 +776,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **attributeSetId** | **string?** | Attribute set id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **attributeSetId** | **string?** | Attribute set id | [optional]  |
 
 ### Return type
 
@@ -805,7 +805,7 @@ catch (ApiException e)
 
 <a id="attributeinfo"></a>
 # **AttributeInfo**
-> AttributeInfo200Response AttributeInfo (string id, string? attributeSetId = null, string? storeId = null, string? langId = null, string? varParams = null, string? exclude = null, string? responseFields = null)
+> AttributeInfo200Response AttributeInfo (string id, string? attributeSetId = null, string? storeId = null, string? langId = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 attribute.info
 
@@ -841,14 +841,14 @@ namespace Example
             var attributeSetId = 4;  // string? | Attribute set id (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
             var langId = 3;  // string? | Language id (optional) 
+            var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var varParams = force_all;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "force_all")
             var exclude = name;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
 
             try
             {
                 // attribute.info
-                AttributeInfo200Response result = apiInstance.AttributeInfo(id, attributeSetId, storeId, langId, varParams, exclude, responseFields);
+                AttributeInfo200Response result = apiInstance.AttributeInfo(id, attributeSetId, storeId, langId, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -869,7 +869,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.info
-    ApiResponse<AttributeInfo200Response> response = apiInstance.AttributeInfoWithHttpInfo(id, attributeSetId, storeId, langId, varParams, exclude, responseFields);
+    ApiResponse<AttributeInfo200Response> response = apiInstance.AttributeInfoWithHttpInfo(id, attributeSetId, storeId, langId, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -890,9 +890,9 @@ catch (ApiException e)
 | **attributeSetId** | **string?** | Attribute set id | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;force_all&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 
 ### Return type
 
@@ -917,7 +917,7 @@ catch (ApiException e)
 
 <a id="attributelist"></a>
 # **AttributeList**
-> ModelResponseAttributeList AttributeList (int? start = null, int? count = null, string? type = null, string? attributeIds = null, string? attributeSetId = null, string? storeId = null, string? langId = null, string? varParams = null, string? exclude = null, string? responseFields = null, bool? visible = null, bool? required = null, bool? varSystem = null)
+> ModelResponseAttributeList AttributeList (int? start = null, int? count = null, string? attributeIds = null, string? attributeSetId = null, string? storeId = null, string? langId = null, string? type = null, bool? visible = null, bool? required = null, bool? varSystem = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 attribute.list
 
@@ -951,22 +951,22 @@ namespace Example
             var apiInstance = new AttributeApi(config);
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
-            var type = text;  // string? | Defines attribute's type (optional) 
             var attributeIds = 1,2,3;  // string? | Filter attributes by ids (optional) 
             var attributeSetId = 4;  // string? | Filter items by attribute set id (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
             var langId = 3;  // string? | Retrieves attributes on specified language id (optional) 
-            var varParams = id,name;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,code,type")
-            var exclude = id,name;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var type = text;  // string? | Defines attribute's type (optional) 
             var visible = true;  // bool? | Filter items by visibility status (optional) 
             var required = true;  // bool? | Defines if the option is required (optional) 
             var varSystem = false;  // bool? | True if attribute is system (optional) 
+            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+            var varParams = id,name;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,code,type")
+            var exclude = id,name;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
                 // attribute.list
-                ModelResponseAttributeList result = apiInstance.AttributeList(start, count, type, attributeIds, attributeSetId, storeId, langId, varParams, exclude, responseFields, visible, required, varSystem);
+                ModelResponseAttributeList result = apiInstance.AttributeList(start, count, attributeIds, attributeSetId, storeId, langId, type, visible, required, varSystem, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -987,7 +987,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.list
-    ApiResponse<ModelResponseAttributeList> response = apiInstance.AttributeListWithHttpInfo(start, count, type, attributeIds, attributeSetId, storeId, langId, varParams, exclude, responseFields, visible, required, varSystem);
+    ApiResponse<ModelResponseAttributeList> response = apiInstance.AttributeListWithHttpInfo(start, count, attributeIds, attributeSetId, storeId, langId, type, visible, required, varSystem, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1006,17 +1006,17 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
-| **type** | **string?** | Defines attribute&#39;s type | [optional]  |
 | **attributeIds** | **string?** | Filter attributes by ids | [optional]  |
 | **attributeSetId** | **string?** | Filter items by attribute set id | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **langId** | **string?** | Retrieves attributes on specified language id | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,code,type&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **type** | **string?** | Defines attribute&#39;s type | [optional]  |
 | **visible** | **bool?** | Filter items by visibility status | [optional]  |
 | **required** | **bool?** | Defines if the option is required | [optional]  |
 | **varSystem** | **bool?** | True if attribute is system | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,code,type&quot;] |
+| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 

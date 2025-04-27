@@ -34,23 +34,23 @@ namespace Org.OpenAPITools.Api
         /// Search product in global catalog.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
         /// <param name="keyword">Defines search keyword (optional)</param>
+        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="asin">Amazon Standard Identification Number. (optional)</param>
         /// <param name="ean">European Article Number. An EAN is a unique 8 or 13-digit identifier that many industries (such as book publishers) use to identify products. (optional)</param>
         /// <param name="gtin">Global Trade Item Number. An GTIN is an identifier for trade items. (optional)</param>
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseMarketplaceProductFind</returns>
-        ModelResponseMarketplaceProductFind MarketplaceProductFind(string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? categoriesIds = default(string?), string? keyword = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        ModelResponseMarketplaceProductFind MarketplaceProductFind(int? count = default(int?), string? pageCursor = default(string?), string? keyword = default(string?), string? categoriesIds = default(string?), string? storeId = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// marketplace.product.find
@@ -59,23 +59,23 @@ namespace Org.OpenAPITools.Api
         /// Search product in global catalog.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
         /// <param name="keyword">Defines search keyword (optional)</param>
+        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="asin">Amazon Standard Identification Number. (optional)</param>
         /// <param name="ean">European Article Number. An EAN is a unique 8 or 13-digit identifier that many industries (such as book publishers) use to identify products. (optional)</param>
         /// <param name="gtin">Global Trade Item Number. An GTIN is an identifier for trade items. (optional)</param>
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseMarketplaceProductFind</returns>
-        ApiResponse<ModelResponseMarketplaceProductFind> MarketplaceProductFindWithHttpInfo(string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? categoriesIds = default(string?), string? keyword = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseMarketplaceProductFind> MarketplaceProductFindWithHttpInfo(int? count = default(int?), string? pageCursor = default(string?), string? keyword = default(string?), string? categoriesIds = default(string?), string? storeId = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -92,24 +92,24 @@ namespace Org.OpenAPITools.Api
         /// Search product in global catalog.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
         /// <param name="keyword">Defines search keyword (optional)</param>
+        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="asin">Amazon Standard Identification Number. (optional)</param>
         /// <param name="ean">European Article Number. An EAN is a unique 8 or 13-digit identifier that many industries (such as book publishers) use to identify products. (optional)</param>
         /// <param name="gtin">Global Trade Item Number. An GTIN is an identifier for trade items. (optional)</param>
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseMarketplaceProductFind</returns>
-        System.Threading.Tasks.Task<ModelResponseMarketplaceProductFind> MarketplaceProductFindAsync(string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? categoriesIds = default(string?), string? keyword = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseMarketplaceProductFind> MarketplaceProductFindAsync(int? count = default(int?), string? pageCursor = default(string?), string? keyword = default(string?), string? categoriesIds = default(string?), string? storeId = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// marketplace.product.find
@@ -118,24 +118,24 @@ namespace Org.OpenAPITools.Api
         /// Search product in global catalog.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
         /// <param name="keyword">Defines search keyword (optional)</param>
+        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="asin">Amazon Standard Identification Number. (optional)</param>
         /// <param name="ean">European Article Number. An EAN is a unique 8 or 13-digit identifier that many industries (such as book publishers) use to identify products. (optional)</param>
         /// <param name="gtin">Global Trade Item Number. An GTIN is an identifier for trade items. (optional)</param>
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseMarketplaceProductFind)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseMarketplaceProductFind>> MarketplaceProductFindWithHttpInfoAsync(string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? categoriesIds = default(string?), string? keyword = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseMarketplaceProductFind>> MarketplaceProductFindWithHttpInfoAsync(int? count = default(int?), string? pageCursor = default(string?), string? keyword = default(string?), string? categoriesIds = default(string?), string? storeId = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -260,25 +260,25 @@ namespace Org.OpenAPITools.Api
         /// marketplace.product.find Search product in global catalog.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
         /// <param name="keyword">Defines search keyword (optional)</param>
+        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="asin">Amazon Standard Identification Number. (optional)</param>
         /// <param name="ean">European Article Number. An EAN is a unique 8 or 13-digit identifier that many industries (such as book publishers) use to identify products. (optional)</param>
         /// <param name="gtin">Global Trade Item Number. An GTIN is an identifier for trade items. (optional)</param>
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseMarketplaceProductFind</returns>
-        public ModelResponseMarketplaceProductFind MarketplaceProductFind(string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? categoriesIds = default(string?), string? keyword = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        public ModelResponseMarketplaceProductFind MarketplaceProductFind(int? count = default(int?), string? pageCursor = default(string?), string? keyword = default(string?), string? categoriesIds = default(string?), string? storeId = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseMarketplaceProductFind> localVarResponse = MarketplaceProductFindWithHttpInfo(storeId, count, pageCursor, categoriesIds, keyword, asin, ean, gtin, upc, mpn, isbn, varParams, exclude, responseFields);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseMarketplaceProductFind> localVarResponse = MarketplaceProductFindWithHttpInfo(count, pageCursor, keyword, categoriesIds, storeId, asin, ean, gtin, upc, mpn, isbn, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -286,23 +286,23 @@ namespace Org.OpenAPITools.Api
         /// marketplace.product.find Search product in global catalog.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
         /// <param name="keyword">Defines search keyword (optional)</param>
+        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="asin">Amazon Standard Identification Number. (optional)</param>
         /// <param name="ean">European Article Number. An EAN is a unique 8 or 13-digit identifier that many industries (such as book publishers) use to identify products. (optional)</param>
         /// <param name="gtin">Global Trade Item Number. An GTIN is an identifier for trade items. (optional)</param>
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseMarketplaceProductFind</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseMarketplaceProductFind> MarketplaceProductFindWithHttpInfo(string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? categoriesIds = default(string?), string? keyword = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseMarketplaceProductFind> MarketplaceProductFindWithHttpInfo(int? count = default(int?), string? pageCursor = default(string?), string? keyword = default(string?), string? categoriesIds = default(string?), string? storeId = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -327,10 +327,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
             if (count != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
@@ -339,13 +335,17 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
             }
+            if (keyword != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "keyword", keyword));
+            }
             if (categoriesIds != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "categories_ids", categoriesIds));
             }
-            if (keyword != null)
+            if (storeId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "keyword", keyword));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (asin != null)
             {
@@ -371,6 +371,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "isbn", isbn));
             }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
@@ -378,10 +382,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
 
             localVarRequestOptions.Operation = "MarketplaceApi.MarketplaceProductFind";
@@ -416,26 +416,26 @@ namespace Org.OpenAPITools.Api
         /// marketplace.product.find Search product in global catalog.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
         /// <param name="keyword">Defines search keyword (optional)</param>
+        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="asin">Amazon Standard Identification Number. (optional)</param>
         /// <param name="ean">European Article Number. An EAN is a unique 8 or 13-digit identifier that many industries (such as book publishers) use to identify products. (optional)</param>
         /// <param name="gtin">Global Trade Item Number. An GTIN is an identifier for trade items. (optional)</param>
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseMarketplaceProductFind</returns>
-        public async System.Threading.Tasks.Task<ModelResponseMarketplaceProductFind> MarketplaceProductFindAsync(string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? categoriesIds = default(string?), string? keyword = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseMarketplaceProductFind> MarketplaceProductFindAsync(int? count = default(int?), string? pageCursor = default(string?), string? keyword = default(string?), string? categoriesIds = default(string?), string? storeId = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseMarketplaceProductFind> localVarResponse = await MarketplaceProductFindWithHttpInfoAsync(storeId, count, pageCursor, categoriesIds, keyword, asin, ean, gtin, upc, mpn, isbn, varParams, exclude, responseFields, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseMarketplaceProductFind> localVarResponse = await MarketplaceProductFindWithHttpInfoAsync(count, pageCursor, keyword, categoriesIds, storeId, asin, ean, gtin, upc, mpn, isbn, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -443,24 +443,24 @@ namespace Org.OpenAPITools.Api
         /// marketplace.product.find Search product in global catalog.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
         /// <param name="keyword">Defines search keyword (optional)</param>
+        /// <param name="categoriesIds">Defines product add that is specified by comma-separated categories id (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="asin">Amazon Standard Identification Number. (optional)</param>
         /// <param name="ean">European Article Number. An EAN is a unique 8 or 13-digit identifier that many industries (such as book publishers) use to identify products. (optional)</param>
         /// <param name="gtin">Global Trade Item Number. An GTIN is an identifier for trade items. (optional)</param>
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseMarketplaceProductFind)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseMarketplaceProductFind>> MarketplaceProductFindWithHttpInfoAsync(string? storeId = default(string?), int? count = default(int?), string? pageCursor = default(string?), string? categoriesIds = default(string?), string? keyword = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseMarketplaceProductFind>> MarketplaceProductFindWithHttpInfoAsync(int? count = default(int?), string? pageCursor = default(string?), string? keyword = default(string?), string? categoriesIds = default(string?), string? storeId = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -485,10 +485,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
             if (count != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
@@ -497,13 +493,17 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
             }
+            if (keyword != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "keyword", keyword));
+            }
             if (categoriesIds != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "categories_ids", categoriesIds));
             }
-            if (keyword != null)
+            if (storeId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "keyword", keyword));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
             if (asin != null)
             {
@@ -529,6 +529,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "isbn", isbn));
             }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
@@ -536,10 +540,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
 
             localVarRequestOptions.Operation = "MarketplaceApi.MarketplaceProductFind";

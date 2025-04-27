@@ -101,12 +101,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ReturnInfo200Response</returns>
-        ReturnInfo200Response ReturnInfo(string id, string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        ReturnInfo200Response ReturnInfo(string id, string? orderId = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// return.info
@@ -118,12 +118,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ReturnInfo200Response</returns>
-        ApiResponse<ReturnInfo200Response> ReturnInfoWithHttpInfo(string id, string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        ApiResponse<ReturnInfo200Response> ReturnInfoWithHttpInfo(string id, string? orderId = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// return.list
         /// </summary>
@@ -134,9 +134,6 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="orderIds">Retrieves return requests specified by order ids (optional)</param>
         /// <param name="customerId">Retrieves return requests specified by customer id (optional)</param>
@@ -147,11 +144,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseReturnList</returns>
-        ModelResponseReturnList ReturnList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
+        ModelResponseReturnList ReturnList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// return.list
@@ -163,9 +163,6 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="orderIds">Retrieves return requests specified by order ids (optional)</param>
         /// <param name="customerId">Retrieves return requests specified by customer id (optional)</param>
@@ -176,11 +173,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseReturnList</returns>
-        ApiResponse<ModelResponseReturnList> ReturnListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
+        ApiResponse<ModelResponseReturnList> ReturnListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
         /// <summary>
         /// return.reason.list
         /// </summary>
@@ -312,13 +312,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReturnInfo200Response</returns>
-        System.Threading.Tasks.Task<ReturnInfo200Response> ReturnInfoAsync(string id, string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ReturnInfo200Response> ReturnInfoAsync(string id, string? orderId = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// return.info
@@ -330,13 +330,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReturnInfo200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReturnInfo200Response>> ReturnInfoWithHttpInfoAsync(string id, string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ReturnInfo200Response>> ReturnInfoWithHttpInfoAsync(string id, string? orderId = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// return.list
         /// </summary>
@@ -347,9 +347,6 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="orderIds">Retrieves return requests specified by order ids (optional)</param>
         /// <param name="customerId">Retrieves return requests specified by customer id (optional)</param>
@@ -360,12 +357,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseReturnList</returns>
-        System.Threading.Tasks.Task<ModelResponseReturnList> ReturnListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseReturnList> ReturnListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// return.list
@@ -377,9 +377,6 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="orderIds">Retrieves return requests specified by order ids (optional)</param>
         /// <param name="customerId">Retrieves return requests specified by customer id (optional)</param>
@@ -390,12 +387,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseReturnList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseReturnList>> ReturnListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseReturnList>> ReturnListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// return.reason.list
         /// </summary>
@@ -997,14 +997,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ReturnInfo200Response</returns>
-        public ReturnInfo200Response ReturnInfo(string id, string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        public ReturnInfo200Response ReturnInfo(string id, string? orderId = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ReturnInfo200Response> localVarResponse = ReturnInfoWithHttpInfo(id, orderId, storeId, varParams, exclude, responseFields);
+            Org.OpenAPITools.Client.ApiResponse<ReturnInfo200Response> localVarResponse = ReturnInfoWithHttpInfo(id, orderId, storeId, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -1015,12 +1015,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ReturnInfo200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ReturnInfo200Response> ReturnInfoWithHttpInfo(string id, string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ReturnInfo200Response> ReturnInfoWithHttpInfo(string id, string? orderId = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1060,6 +1060,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
@@ -1067,10 +1071,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
 
             localVarRequestOptions.Operation = "ReturnApi.ReturnInfo";
@@ -1108,15 +1108,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReturnInfo200Response</returns>
-        public async System.Threading.Tasks.Task<ReturnInfo200Response> ReturnInfoAsync(string id, string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ReturnInfo200Response> ReturnInfoAsync(string id, string? orderId = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ReturnInfo200Response> localVarResponse = await ReturnInfoWithHttpInfoAsync(id, orderId, storeId, varParams, exclude, responseFields, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ReturnInfo200Response> localVarResponse = await ReturnInfoWithHttpInfoAsync(id, orderId, storeId, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1127,13 +1127,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="id">Entity id</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReturnInfo200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ReturnInfo200Response>> ReturnInfoWithHttpInfoAsync(string id, string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ReturnInfo200Response>> ReturnInfoWithHttpInfoAsync(string id, string? orderId = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1173,6 +1173,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
             if (varParams != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
@@ -1180,10 +1184,6 @@ namespace Org.OpenAPITools.Api
             if (exclude != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
 
             localVarRequestOptions.Operation = "ReturnApi.ReturnInfo";
@@ -1222,9 +1222,6 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="orderIds">Retrieves return requests specified by order ids (optional)</param>
         /// <param name="customerId">Retrieves return requests specified by customer id (optional)</param>
@@ -1235,13 +1232,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseReturnList</returns>
-        public ModelResponseReturnList ReturnList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
+        public ModelResponseReturnList ReturnList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnList> localVarResponse = ReturnListWithHttpInfo(start, count, pageCursor, varParams, exclude, responseFields, orderId, orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, reportRequestId, disableReportCache);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnList> localVarResponse = ReturnListWithHttpInfo(start, count, pageCursor, orderId, orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude, reportRequestId, disableReportCache);
             return localVarResponse.Data;
         }
 
@@ -1252,9 +1252,6 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="orderIds">Retrieves return requests specified by order ids (optional)</param>
         /// <param name="customerId">Retrieves return requests specified by customer id (optional)</param>
@@ -1265,11 +1262,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseReturnList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnList> ReturnListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnList> ReturnListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1305,18 +1305,6 @@ namespace Org.OpenAPITools.Api
             if (pageCursor != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
-            }
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (exclude != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (orderId != null)
             {
@@ -1357,6 +1345,18 @@ namespace Org.OpenAPITools.Api
             if (modifiedTo != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
+            }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
+            if (exclude != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
             }
             if (reportRequestId != null)
             {
@@ -1402,9 +1402,6 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="orderIds">Retrieves return requests specified by order ids (optional)</param>
         /// <param name="customerId">Retrieves return requests specified by customer id (optional)</param>
@@ -1415,14 +1412,17 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseReturnList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseReturnList> ReturnListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseReturnList> ReturnListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnList> localVarResponse = await ReturnListWithHttpInfoAsync(start, count, pageCursor, varParams, exclude, responseFields, orderId, orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, reportRequestId, disableReportCache, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnList> localVarResponse = await ReturnListWithHttpInfoAsync(start, count, pageCursor, orderId, orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude, reportRequestId, disableReportCache, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1433,9 +1433,6 @@ namespace Org.OpenAPITools.Api
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="orderId">Defines the order id (optional)</param>
         /// <param name="orderIds">Retrieves return requests specified by order ids (optional)</param>
         /// <param name="customerId">Retrieves return requests specified by customer id (optional)</param>
@@ -1446,12 +1443,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,order_products&quot;)</param>
+        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseReturnList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnList>> ReturnListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? responseFields = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnList>> ReturnListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? orderId = default(string?), string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1487,18 +1487,6 @@ namespace Org.OpenAPITools.Api
             if (pageCursor != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
-            }
-            if (varParams != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
-            }
-            if (exclude != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
             }
             if (orderId != null)
             {
@@ -1539,6 +1527,18 @@ namespace Org.OpenAPITools.Api
             if (modifiedTo != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
+            }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+            if (varParams != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "params", varParams));
+            }
+            if (exclude != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "exclude", exclude));
             }
             if (reportRequestId != null)
             {
