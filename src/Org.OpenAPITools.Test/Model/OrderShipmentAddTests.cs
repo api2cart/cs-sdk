@@ -173,6 +173,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'TrackingProvider'
+        /// </summary>
+        [Fact]
+        public void TrackingProviderTest()
+        {
+            // TODO unit test for the property 'TrackingProvider'
+        }
+
+        /// <summary>
         /// Test the property 'UseLatestApiVersion'
         /// </summary>
         [Fact]

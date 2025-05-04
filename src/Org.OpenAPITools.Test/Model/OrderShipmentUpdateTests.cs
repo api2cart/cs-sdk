@@ -135,5 +135,32 @@ namespace Org.OpenAPITools.Test.Model
         {
             // TODO unit test for the property 'Replace'
         }
+
+        /// <summary>
+        /// Test the property 'SendNotifications'
+        /// </summary>
+        [Fact]
+        public void SendNotificationsTest()
+        {
+            // TODO unit test for the property 'SendNotifications'
+        }
+
+        /// <summary>
+        /// Test the property 'TrackingProvider'
+        /// </summary>
+        [Fact]
+        public void TrackingProviderTest()
+        {
+            // TODO unit test for the property 'TrackingProvider'
+        }
+
+        /// <summary>
+        /// Test the property 'Items'
+        /// </summary>
+        [Fact]
+        public void ItemsTest()
+        {
+            // TODO unit test for the property 'Items'
+        }
     }
 }

@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **AdjustStock** | **bool** | This parameter is used for adjust stock. | [optional] [default to false]
 **EnableCache** | **bool** | If the value is &#39;true&#39; and order exist in our cache, we will use order.info from cache to prepare shipment items. | [optional] [default to false]
 **CheckProcessStatus** | **bool** | Disable or enable check process status. Please note that the response will be slower due to additional requests to the store. | [optional] [default to false]
+**TrackingProvider** | **string** | Defines name of the company which provides shipment tracking | [optional] 
 **UseLatestApiVersion** | **bool** | Use the latest platform API version | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

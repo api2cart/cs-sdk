@@ -48,8 +48,9 @@ namespace Org.OpenAPITools.Model
         /// <param name="adjustStock">This parameter is used for adjust stock. (default to false).</param>
         /// <param name="enableCache">If the value is &#39;true&#39; and order exist in our cache, we will use order.info from cache to prepare shipment items. (default to false).</param>
         /// <param name="checkProcessStatus">Disable or enable check process status. Please note that the response will be slower due to additional requests to the store. (default to false).</param>
+        /// <param name="trackingProvider">Defines name of the company which provides shipment tracking.</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (default to false).</param>
-        public OrderShipmentAdd(string orderId = default(string), string warehouseId = default(string), string storeId = default(string), string shipmentProvider = default(string), string shippingMethod = default(string), List<OrderShipmentAddItemsInner> items = default(List<OrderShipmentAddItemsInner>), List<OrderShipmentAddTrackingNumbersInner> trackingNumbers = default(List<OrderShipmentAddTrackingNumbersInner>), string trackingLink = default(string), bool isShipped = true, bool sendNotifications = false, bool adjustStock = false, bool enableCache = false, bool checkProcessStatus = false, bool useLatestApiVersion = false)
+        public OrderShipmentAdd(string orderId = default(string), string warehouseId = default(string), string storeId = default(string), string shipmentProvider = default(string), string shippingMethod = default(string), List<OrderShipmentAddItemsInner> items = default(List<OrderShipmentAddItemsInner>), List<OrderShipmentAddTrackingNumbersInner> trackingNumbers = default(List<OrderShipmentAddTrackingNumbersInner>), string trackingLink = default(string), bool isShipped = true, bool sendNotifications = false, bool adjustStock = false, bool enableCache = false, bool checkProcessStatus = false, string trackingProvider = default(string), bool useLatestApiVersion = false)
         {
             this.OrderId = orderId;
             this.WarehouseId = warehouseId;
@@ -64,6 +65,7 @@ namespace Org.OpenAPITools.Model
             this.AdjustStock = adjustStock;
             this.EnableCache = enableCache;
             this.CheckProcessStatus = checkProcessStatus;
+            this.TrackingProvider = trackingProvider;
             this.UseLatestApiVersion = useLatestApiVersion;
         }
 
@@ -192,6 +194,16 @@ namespace Org.OpenAPITools.Model
         public bool CheckProcessStatus { get; set; }
 
         /// <summary>
+        /// Defines name of the company which provides shipment tracking
+        /// </summary>
+        /// <value>Defines name of the company which provides shipment tracking</value>
+        /*
+        <example>Custom tracker</example>
+        */
+        [DataMember(Name = "tracking_provider", EmitDefaultValue = false)]
+        public string TrackingProvider { get; set; }
+
+        /// <summary>
         /// Use the latest platform API version
         /// </summary>
         /// <value>Use the latest platform API version</value>
@@ -222,6 +234,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  AdjustStock: ").Append(AdjustStock).Append("\n");
             sb.Append("  EnableCache: ").Append(EnableCache).Append("\n");
             sb.Append("  CheckProcessStatus: ").Append(CheckProcessStatus).Append("\n");
+            sb.Append("  TrackingProvider: ").Append(TrackingProvider).Append("\n");
             sb.Append("  UseLatestApiVersion: ").Append(UseLatestApiVersion).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

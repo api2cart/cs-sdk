@@ -49,7 +49,10 @@ namespace Org.OpenAPITools.Model
         /// <param name="isShipped">Defines shipment&#39;s status (default to true).</param>
         /// <param name="deliveredAt">Defines the date of delivery.</param>
         /// <param name="replace">Allows rewrite tracking numbers (default to true).</param>
-        public OrderShipmentUpdate(string shipmentId = default(string), string orderId = default(string), string storeId = default(string), string shipmentProvider = default(string), List<OrderShipmentAddTrackingNumbersInner> trackingNumbers = default(List<OrderShipmentAddTrackingNumbersInner>), string trackingLink = default(string), bool isShipped = true, string deliveredAt = default(string), bool replace = true)
+        /// <param name="sendNotifications">Send notifications to customer after order was created (default to false).</param>
+        /// <param name="trackingProvider">Defines name of the company which provides shipment tracking.</param>
+        /// <param name="items">Defines items in the order that will be shipped.</param>
+        public OrderShipmentUpdate(string shipmentId = default(string), string orderId = default(string), string storeId = default(string), string shipmentProvider = default(string), List<OrderShipmentAddTrackingNumbersInner> trackingNumbers = default(List<OrderShipmentAddTrackingNumbersInner>), string trackingLink = default(string), bool isShipped = true, string deliveredAt = default(string), bool replace = true, bool sendNotifications = false, string trackingProvider = default(string), List<OrderShipmentAddItemsInner> items = default(List<OrderShipmentAddItemsInner>))
         {
             // to ensure "shipmentId" is required (not null)
             if (shipmentId == null)
@@ -65,6 +68,9 @@ namespace Org.OpenAPITools.Model
             this.IsShipped = isShipped;
             this.DeliveredAt = deliveredAt;
             this.Replace = replace;
+            this.SendNotifications = sendNotifications;
+            this.TrackingProvider = trackingProvider;
+            this.Items = items;
         }
 
         /// <summary>
@@ -155,6 +161,33 @@ namespace Org.OpenAPITools.Model
         public bool Replace { get; set; }
 
         /// <summary>
+        /// Send notifications to customer after order was created
+        /// </summary>
+        /// <value>Send notifications to customer after order was created</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "send_notifications", EmitDefaultValue = true)]
+        public bool SendNotifications { get; set; }
+
+        /// <summary>
+        /// Defines name of the company which provides shipment tracking
+        /// </summary>
+        /// <value>Defines name of the company which provides shipment tracking</value>
+        /*
+        <example>Custom tracker</example>
+        */
+        [DataMember(Name = "tracking_provider", EmitDefaultValue = false)]
+        public string TrackingProvider { get; set; }
+
+        /// <summary>
+        /// Defines items in the order that will be shipped
+        /// </summary>
+        /// <value>Defines items in the order that will be shipped</value>
+        [DataMember(Name = "items", EmitDefaultValue = false)]
+        public List<OrderShipmentAddItemsInner> Items { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -171,6 +204,9 @@ namespace Org.OpenAPITools.Model
             sb.Append("  IsShipped: ").Append(IsShipped).Append("\n");
             sb.Append("  DeliveredAt: ").Append(DeliveredAt).Append("\n");
             sb.Append("  Replace: ").Append(Replace).Append("\n");
+            sb.Append("  SendNotifications: ").Append(SendNotifications).Append("\n");
+            sb.Append("  TrackingProvider: ").Append(TrackingProvider).Append("\n");
+            sb.Append("  Items: ").Append(Items).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

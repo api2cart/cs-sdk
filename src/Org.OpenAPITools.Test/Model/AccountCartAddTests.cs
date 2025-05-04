@@ -362,6 +362,24 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BigcartelUserName'
+        /// </summary>
+        [Fact]
+        public void BigcartelUserNameTest()
+        {
+            // TODO unit test for the property 'BigcartelUserName'
+        }
+
+        /// <summary>
+        /// Test the property 'BigcartelPassword'
+        /// </summary>
+        [Fact]
+        public void BigcartelPasswordTest()
+        {
+            // TODO unit test for the property 'BigcartelPassword'
+        }
+
+        /// <summary>
         /// Test the property 'DemandwareClientId'
         /// </summary>
         [Fact]
