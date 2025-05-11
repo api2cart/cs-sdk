@@ -62,6 +62,7 @@ namespace Org.OpenAPITools.Test.Api
         public void SubscriberListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string? ids = null;
             //int? start = null;
             //int? count = null;
             //string? pageCursor = null;
@@ -75,7 +76,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.SubscriberList(start, count, pageCursor, subscribed, storeId, email, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
+            //var response = instance.SubscriberList(ids, start, count, pageCursor, subscribed, storeId, email, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseSubscriberList>(response);
         }
     }

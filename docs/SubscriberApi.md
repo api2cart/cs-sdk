@@ -8,7 +8,7 @@ All URIs are relative to *https://api.api2cart.com/v1.1*
 
 <a id="subscriberlist"></a>
 # **SubscriberList**
-> ModelResponseSubscriberList SubscriberList (int? start = null, int? count = null, string? pageCursor = null, bool? subscribed = null, string? storeId = null, string? email = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? responseFields = null, string? varParams = null, string? exclude = null)
+> ModelResponseSubscriberList SubscriberList (string? ids = null, int? start = null, int? count = null, string? pageCursor = null, bool? subscribed = null, string? storeId = null, string? email = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 subscriber.list
 
@@ -40,6 +40,7 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new SubscriberApi(config);
+            var ids = 24,25;  // string? | Retrieves subscribers specified by ids (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
             var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
@@ -57,7 +58,7 @@ namespace Example
             try
             {
                 // subscriber.list
-                ModelResponseSubscriberList result = apiInstance.SubscriberList(start, count, pageCursor, subscribed, storeId, email, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
+                ModelResponseSubscriberList result = apiInstance.SubscriberList(ids, start, count, pageCursor, subscribed, storeId, email, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -78,7 +79,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // subscriber.list
-    ApiResponse<ModelResponseSubscriberList> response = apiInstance.SubscriberListWithHttpInfo(start, count, pageCursor, subscribed, storeId, email, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
+    ApiResponse<ModelResponseSubscriberList> response = apiInstance.SubscriberListWithHttpInfo(ids, start, count, pageCursor, subscribed, storeId, email, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -95,6 +96,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
+| **ids** | **string?** | Retrieves subscribers specified by ids | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
 | **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |

@@ -287,6 +287,7 @@ docs/ProductAddGroupPricesInner.md
 docs/ProductAddLogisticInfoInner.md
 docs/ProductAddManufacturerInfo.md
 docs/ProductAddPackageDetails.md
+docs/ProductAddPersonalizationDetails.md
 docs/ProductAddSalesTax.md
 docs/ProductAddSellerProfiles.md
 docs/ProductAddShippingDetailsInner.md
@@ -743,6 +744,7 @@ src/Org.OpenAPITools.Test/Model/ProductAddGroupPricesInnerTests.cs
 src/Org.OpenAPITools.Test/Model/ProductAddLogisticInfoInnerTests.cs
 src/Org.OpenAPITools.Test/Model/ProductAddManufacturerInfoTests.cs
 src/Org.OpenAPITools.Test/Model/ProductAddPackageDetailsTests.cs
+src/Org.OpenAPITools.Test/Model/ProductAddPersonalizationDetailsTests.cs
 src/Org.OpenAPITools.Test/Model/ProductAddSalesTaxTests.cs
 src/Org.OpenAPITools.Test/Model/ProductAddSellerProfilesTests.cs
 src/Org.OpenAPITools.Test/Model/ProductAddShippingDetailsInnerTests.cs
@@ -1215,6 +1217,7 @@ src/Org.OpenAPITools/Model/ProductAddGroupPricesInner.cs
 src/Org.OpenAPITools/Model/ProductAddLogisticInfoInner.cs
 src/Org.OpenAPITools/Model/ProductAddManufacturerInfo.cs
 src/Org.OpenAPITools/Model/ProductAddPackageDetails.cs
+src/Org.OpenAPITools/Model/ProductAddPersonalizationDetails.cs
 src/Org.OpenAPITools/Model/ProductAddSalesTax.cs
 src/Org.OpenAPITools/Model/ProductAddSellerProfiles.cs
 src/Org.OpenAPITools/Model/ProductAddShippingDetailsInner.cs

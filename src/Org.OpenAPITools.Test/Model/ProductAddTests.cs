@@ -1062,5 +1062,32 @@ namespace Org.OpenAPITools.Test.Model
         {
             // TODO unit test for the property 'OrderedCount'
         }
+
+        /// <summary>
+        /// Test the property 'ShopSectionId'
+        /// </summary>
+        [Fact]
+        public void ShopSectionIdTest()
+        {
+            // TODO unit test for the property 'ShopSectionId'
+        }
+
+        /// <summary>
+        /// Test the property 'ReturnPolicyId'
+        /// </summary>
+        [Fact]
+        public void ReturnPolicyIdTest()
+        {
+            // TODO unit test for the property 'ReturnPolicyId'
+        }
+
+        /// <summary>
+        /// Test the property 'PersonalizationDetails'
+        /// </summary>
+        [Fact]
+        public void PersonalizationDetailsTest()
+        {
+            // TODO unit test for the property 'PersonalizationDetails'
+        }
     }
 }

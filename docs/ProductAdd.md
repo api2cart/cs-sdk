@@ -116,6 +116,9 @@ Name | Type | Description | Notes
 **ClearCache** | **bool** | Is cache clear required | [optional] [default to true]
 **ViewedCount** | **int** | Specifies the number of product&#39;s reviews | [optional] [default to 0]
 **OrderedCount** | **int** | Defines how many times the product was ordered | [optional] [default to 0]
+**ShopSectionId** | **int** | Add Shop Section Id | [optional] 
+**ReturnPolicyId** | **int** | Add Return Policy Id | [optional] 
+**PersonalizationDetails** | [**ProductAddPersonalizationDetails**](ProductAddPersonalizationDetails.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

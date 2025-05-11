@@ -792,5 +792,32 @@ namespace Org.OpenAPITools.Test.Model
         {
             // TODO unit test for the property 'CheckProcessStatus'
         }
+
+        /// <summary>
+        /// Test the property 'Specifics'
+        /// </summary>
+        [Fact]
+        public void SpecificsTest()
+        {
+            // TODO unit test for the property 'Specifics'
+        }
+
+        /// <summary>
+        /// Test the property 'ShopSectionId'
+        /// </summary>
+        [Fact]
+        public void ShopSectionIdTest()
+        {
+            // TODO unit test for the property 'ShopSectionId'
+        }
+
+        /// <summary>
+        /// Test the property 'PersonalizationDetails'
+        /// </summary>
+        [Fact]
+        public void PersonalizationDetailsTest()
+        {
+            // TODO unit test for the property 'PersonalizationDetails'
+        }
     }
 }

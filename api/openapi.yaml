@@ -12918,6 +12918,15 @@ paths:
       description: Get subscribers list
       operationId: SubscriberList
       parameters:
+      - description: Retrieves subscribers specified by ids
+        example: "24,25"
+        explode: true
+        in: query
+        name: ids
+        required: false
+        schema:
+          type: string
+        style: form
       - description: This parameter sets the number from which you want to get entities
         example: 0
         explode: true
@@ -30629,6 +30638,11 @@ components:
         is_free_shipping: true
         sku: bag_01
         height: 56.12
+        personalization_details:
+          personalization_instructions: personalization_instructions
+          is_personalizable: true
+          personalization_is_required: true
+          personalization_char_count_max: 6
         additional_image_urls:
         - https://openapi-generator.tech
         - https://openapi-generator.tech
@@ -30690,6 +30704,7 @@ components:
         manage_stock: false
         tax_class_id: 9
         auction_confidentiality_level: public
+        shop_section_id: '`12345678`'
         min_order_quantity: 1
         url: /product_slug
         auto_renew: false
@@ -30859,6 +30874,7 @@ components:
           - url: url
           - url: url
           id: id
+        return_policy_id: '`12345678`'
         buyitnow_price: 65.9
         group_prices:
         - group_id: group_id
@@ -31481,6 +31497,18 @@ components:
           example: 15
           type: integer
           name: ordered_count
+        shop_section_id:
+          description: Add Shop Section Id
+          example: '`12345678`'
+          type: integer
+          name: shop_section_id
+        return_policy_id:
+          description: Add Return Policy Id
+          example: '`12345678`'
+          type: integer
+          name: return_policy_id
+        personalization_details:
+          $ref: '#/components/schemas/ProductAdd_personalization_details'
       required:
       - description
       - model
@@ -32062,6 +32090,11 @@ components:
         sku: bag_01
         barcode: "9770317847001"
         height: 56.12
+        personalization_details:
+          personalization_instructions: personalization_instructions
+          is_personalizable: true
+          personalization_is_required: true
+          personalization_char_count_max: 6
         manufacturer_id: "1"
         visible: search
         shipping_template_id: 40256592690
@@ -32125,6 +32158,7 @@ components:
         tax_class_id: 9
         length: 56.12
         lang_id: 3
+        shop_section_id: '`12345678`'
         buyitnow_price: 65.9
         report_request_id: "105245017661"
         delivery_code: 24uurs-23
@@ -32137,6 +32171,91 @@ components:
         categories_ids: "23,56"
         available_for_view: false
         warehouse_id: "1"
+        specifics:
+        - group_products_details:
+          - quantity: 1
+            id: id
+          - quantity: 1
+            id: id
+          values:
+          - values
+          - values
+          scale_id: 5
+          name: name
+          used_for_variations: false
+          booking_details:
+            time_strict_value: 2.027123023002322
+            session_gap: 9
+            sessions_count: 3
+            time_strict_type: days
+            availabilities:
+            - times:
+              - from: from
+                to: to
+              - from: from
+                to: to
+              day: sunday
+              is_available: true
+            - times:
+              - from: from
+                to: to
+              - from: from
+                to: to
+              day: sunday
+              is_available: true
+            location: location
+            overrides:
+            - date: date
+              day: sunday
+            - date: date
+              day: sunday
+            type: date
+            session_duration: 7
+          food_details:
+            calories: 5.637376656633329
+          value: value
+        - group_products_details:
+          - quantity: 1
+            id: id
+          - quantity: 1
+            id: id
+          values:
+          - values
+          - values
+          scale_id: 5
+          name: name
+          used_for_variations: false
+          booking_details:
+            time_strict_value: 2.027123023002322
+            session_gap: 9
+            sessions_count: 3
+            time_strict_type: days
+            availabilities:
+            - times:
+              - from: from
+                to: to
+              - from: from
+                to: to
+              day: sunday
+              is_available: true
+            - times:
+              - from: from
+                to: to
+              - from: from
+                to: to
+              day: sunday
+              is_available: true
+            location: location
+            overrides:
+            - date: date
+              day: sunday
+            - date: date
+              day: sunday
+            type: date
+            session_duration: 7
+          food_details:
+            calories: 5.637376656633329
+          value: value
       properties:
         id:
           description: Defines product id that has to be updated
@@ -32575,6 +32694,21 @@ components:
           example: false
           type: boolean
           name: check_process_status
+        specifics:
+          description: |-
+            An array of Item Specific Name/Value pairs used by the seller to provide descriptive details of an item in a structured manner.
+                    The list of possible specifications can be obtained using the category.info method (additional_fields->product_specifics).
+                    <b>The structure of the parameter is different for specific platforms.</b>
+          items:
+            $ref: '#/components/schemas/ProductAdd_specifics_inner'
+          type: array
+        shop_section_id:
+          description: Add Shop Section Id
+          example: '`12345678`'
+          type: integer
+          name: shop_section_id
+        personalization_details:
+          $ref: '#/components/schemas/ProductAdd_personalization_details'
     ProductUpdateBatch:
       example:
         clear_cache: false
@@ -47576,6 +47710,31 @@ components:
           type: number
         auto_accept_price:
           type: number
+    ProductAdd_personalization_details:
+      description: "Defines personalization settings for the listing. To enable personalization,\
+        \ is_personalizable must be set to true. When enabled, additional fields may\
+        \ be used to configure the personalization experience, including whether it\
+        \ is required (personalization_is_required), the maximum character limit (personalization_char_count_max),\
+        \ and buyer instructions (personalization_instructions). All related fields\
+        \ are only applicable if personalization is enabled."
+      example:
+        personalization_instructions: personalization_instructions
+        is_personalizable: true
+        personalization_is_required: true
+        personalization_char_count_max: 6
+      properties:
+        is_personalizable:
+          type: boolean
+        personalization_is_required:
+          type: boolean
+        personalization_char_count_max:
+          type: integer
+          minValue: "1"
+          maxValue: "1024"
+        personalization_instructions:
+          type: string
+      required:
+      - is_personalizable
     ProductAddBatch_payload_inner_advanced_prices_inner:
       example:
         start_time: start_time
