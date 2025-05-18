@@ -788,9 +788,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountConfigUpdate200Response</returns>
-        AccountConfigUpdate200Response OrderUpdate(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0);
+        AccountConfigUpdate200Response OrderUpdate(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), string? tags = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// order.update
@@ -815,9 +816,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountConfigUpdate200Response</returns>
-        ApiResponse<AccountConfigUpdate200Response> OrderUpdateWithHttpInfo(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0);
+        ApiResponse<AccountConfigUpdate200Response> OrderUpdateWithHttpInfo(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), string? tags = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -1632,10 +1634,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountConfigUpdate200Response</returns>
-        System.Threading.Tasks.Task<AccountConfigUpdate200Response> OrderUpdateAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountConfigUpdate200Response> OrderUpdateAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), string? tags = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// order.update
@@ -1660,10 +1663,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountConfigUpdate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountConfigUpdate200Response>> OrderUpdateWithHttpInfoAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountConfigUpdate200Response>> OrderUpdateWithHttpInfoAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), string? tags = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -6806,11 +6810,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountConfigUpdate200Response</returns>
-        public AccountConfigUpdate200Response OrderUpdate(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0)
+        public AccountConfigUpdate200Response OrderUpdate(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), string? tags = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = OrderUpdateWithHttpInfo(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin);
+            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = OrderUpdateWithHttpInfo(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin, tags);
             return localVarResponse.Data;
         }
 
@@ -6834,9 +6839,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountConfigUpdate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> OrderUpdateWithHttpInfo(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> OrderUpdateWithHttpInfo(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), string? tags = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
@@ -6928,6 +6934,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "origin", origin));
             }
+            if (tags != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "tags", tags));
+            }
 
             localVarRequestOptions.Operation = "OrderApi.OrderUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -6977,12 +6987,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountConfigUpdate200Response</returns>
-        public async System.Threading.Tasks.Task<AccountConfigUpdate200Response> OrderUpdateAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountConfigUpdate200Response> OrderUpdateAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), string? tags = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = await OrderUpdateWithHttpInfoAsync(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = await OrderUpdateWithHttpInfoAsync(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin, tags, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -7006,10 +7017,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
+        /// <param name="tags">Order tags (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountConfigUpdate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response>> OrderUpdateWithHttpInfoAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response>> OrderUpdateWithHttpInfoAsync(string orderId, string? storeId = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? fulfillmentStatus = default(string?), string? cancellationReason = default(string?), string? orderPaymentMethod = default(string?), string? comment = default(string?), string? adminComment = default(string?), string? adminPrivateComment = default(string?), string? invoiceAdminComment = default(string?), string? dateModified = default(string?), string? dateFinished = default(string?), bool? sendNotifications = default(bool?), bool? createInvoice = default(bool?), string? origin = default(string?), string? tags = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
@@ -7100,6 +7112,10 @@ namespace Org.OpenAPITools.Api
             if (origin != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "origin", origin));
+            }
+            if (tags != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "tags", tags));
             }
 
             localVarRequestOptions.Operation = "OrderApi.OrderUpdate";

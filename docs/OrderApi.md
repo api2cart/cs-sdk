@@ -2457,7 +2457,7 @@ catch (ApiException e)
 
 <a id="orderupdate"></a>
 # **OrderUpdate**
-> AccountConfigUpdate200Response OrderUpdate (string orderId, string? storeId = null, string? orderStatus = null, string? financialStatus = null, string? fulfillmentStatus = null, string? cancellationReason = null, string? orderPaymentMethod = null, string? comment = null, string? adminComment = null, string? adminPrivateComment = null, string? invoiceAdminComment = null, string? dateModified = null, string? dateFinished = null, bool? sendNotifications = null, bool? createInvoice = null, string? origin = null)
+> AccountConfigUpdate200Response OrderUpdate (string orderId, string? storeId = null, string? orderStatus = null, string? financialStatus = null, string? fulfillmentStatus = null, string? cancellationReason = null, string? orderPaymentMethod = null, string? comment = null, string? adminComment = null, string? adminPrivateComment = null, string? invoiceAdminComment = null, string? dateModified = null, string? dateFinished = null, bool? sendNotifications = null, bool? createInvoice = null, string? origin = null, string? tags = null)
 
 order.update
 
@@ -2505,11 +2505,12 @@ namespace Example
             var sendNotifications = true;  // bool? | Send notifications to customer after order was created (optional)  (default to false)
             var createInvoice = true;  // bool? | Determines whether an invoice should be created if it has not already been created (optional) 
             var origin = newsletter;  // string? | The source of the order (optional) 
+            var tags = tag1,tag2;  // string? | Order tags (optional) 
 
             try
             {
                 // order.update
-                AccountConfigUpdate200Response result = apiInstance.OrderUpdate(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin);
+                AccountConfigUpdate200Response result = apiInstance.OrderUpdate(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin, tags);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2530,7 +2531,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.update
-    ApiResponse<AccountConfigUpdate200Response> response = apiInstance.OrderUpdateWithHttpInfo(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin);
+    ApiResponse<AccountConfigUpdate200Response> response = apiInstance.OrderUpdateWithHttpInfo(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin, tags);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2563,6 +2564,7 @@ catch (ApiException e)
 | **sendNotifications** | **bool?** | Send notifications to customer after order was created | [optional] [default to false] |
 | **createInvoice** | **bool?** | Determines whether an invoice should be created if it has not already been created | [optional]  |
 | **origin** | **string?** | The source of the order | [optional]  |
+| **tags** | **string?** | Order tags | [optional]  |
 
 ### Return type
 
