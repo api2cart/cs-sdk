@@ -794,6 +794,60 @@ paths:
         schema:
           type: string
         style: form
+      - description: Shopee Partner ID
+        example: "1276777"
+        explode: true
+        in: query
+        name: shopee_partner_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Shopee Partner Key
+        example: 6a46494b4d746576554646626775617a577542774850636375464d6a736d5598
+        explode: true
+        in: query
+        name: shopee_partner_key
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Shopee SHOP ID
+        example: "137968"
+        explode: true
+        in: query
+        name: shopee_shop_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Shopee Refresh Token
+        example: EAAPP06rM2n8BO4mZBuMPnu9zS0MaMbN7ue8aUkcxw4zewU987mVVb5br
+        explode: true
+        in: query
+        name: shopee_refresh_token
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Shopee API endpoint Region. Use for Chinese Mainland or Brazil.
+        example: CN
+        explode: true
+        in: query
+        name: shopee_region
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Shopee Environment
+        example: sandbox
+        explode: true
+        in: query
+        name: shopee_environment
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Access token authorizing the app to access resources on behalf
           of a user
         example: igse8e4rdmzkxdi937qe69d59en1imw
@@ -1521,6 +1575,43 @@ paths:
         name: salla_access_token
         required: false
         schema:
+          type: string
+        style: form
+      - description: Temu App Key
+        example: 4ebbc9190ae410443d65b4c2faca9811
+        explode: true
+        in: query
+        name: temu_app_key
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Temu App Secret
+        example: 4782d2d827276688bf4758bed55dbdd4bbe79a78
+        explode: true
+        in: query
+        name: temu_app_secret
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Temu Access Token
+        example: uplv3hfyt5kcwoymrgnajnbl1ow5qxlz4sqhev6hl3xosz5dejrtyl2jre6
+        explode: true
+        in: query
+        name: temu_access_token
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Temu API endpoint Region.
+        example: US
+        explode: true
+        in: query
+        name: temu_region
+        required: false
+        schema:
+          default: US
           type: string
         style: form
       responses:
@@ -13659,6 +13750,7 @@ components:
         lazada_region: Malaysia
         miva_access_token: 227cbe434a1e358d72db0de993x9d9fd
         ebay_environment: sandbox
+        shopee_partner_id: "1276777"
         ecwid_acess_token: igse8e4rdmzkxdi937qe69d59en1imw
         shopline_shared_secret: 1701d123bb5cc14cd2732dcaed90638316c0a09
         hybris_websites:
@@ -13673,14 +13765,17 @@ components:
           - storeIds
           - storeIds
         otto_client_id: 911a3dbf-d261-4763-cc81-052876465b55
+        temu_region: US
         walmart_region: us
         hybris_client_id: api_client_1
         aspdotnetstorefront_api_user: admin
         facebook_business_id: "294042786906655"
         ecwid_store_id: "1"
+        temu_access_token: uplv3hfyt5kcwoymrgnajnbl1ow5qxlz4sqhev6hl3xosz5dejrtyl2jre6
         verify: false
         tiktokshop_app_secret: d95820a05a0cd54fb394fcd26fgat63999b183bc
         shopline_app_key: 737cf6bd2879cb6c7e5a8ff9cd63f3d46b0b5b7b
+        temu_app_key: 4ebbc9190ae410443d65b4c2faca9811
         salla_access_token: oxy_rt_zxxxxiY2xxZWWxxxxlU-tROxxxxx2JzS2fwzxxxxxkU.p3xxxkCIyFexxxxP50WwZYfhw5_wg1xxxxV5F-8xxXc
         walmart_environment: production
         demandware_user_password: "12345"
@@ -13699,6 +13794,7 @@ components:
         magento_consumer_secret: a46abc3kxyinlbggy06i9g975xqo6gjq
         store_root: /home/www/stores/magento1922
         ftp_store_dir: /public
+        shopee_shop_id: "137968"
         tiktokshop_access_token: TTP_Fw8r12345kW03FYd09DG-9INtpw361hWthei12345iPJ5AUv99fLSCYD9-Uu12345TgNRzKZxi5-tfFMtdWqglEt5_iCk
         zid_access_token: def50eyfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe657e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65de64a0c865d
         otto_access_token: eyJhbGciOiJS34535f45f54f5656deyJ1c2VyX25hbWUiOiI5NDUxMzE1MSIsInNjb3BlIjpbImFsbGVncm86YXBpOm9yZGVyczpyZWFkIiwiYWxsZWdybzphcGk6cHJvZmlsZTp3cml0ZSIsImFsbGVncm86YXBpOnNhbGU6b2ZmZXJzOndyaXRlIiwiYWxsZWdybzphcGk6YmlsbGluZzpyZWFkIiwiYWxsZWdybzphcGk6Y2FtcGFpZ25zIiwiYWxsZWdybzphcGk6ZGlzcHV0ZXMiLCJhbGxlZ3JvOmFwaTpzYWxlOm9mZmVyczpyZWFkIiwiYWxsZWdybzphcGk6YmlkcyIsImFsbGVncm86YXBpOm9yZGVyczp3cml0ZSIsImFsbGVncm86YXBpOnBheW1lbnRzOndyaXRlIiwiYWxsZWdybzphcGk6c2FsZTpzZXR0aW5nczp3cml0ZSIsImFsbGVncm86YXBpOnByb2ZpbGU6cmVhZCIsImFsbGVncm86YXBpOnJhdGluZ3MiLCJhbGxlZ3JvOmFwaTpzYWxlOnNldHRpbmdzOnJlYWQiLCJhbGxlZ3JvOmFwaTpwYXltZW50czpyZWFkIiwiYWxsZWdybzphcGk6bWVzc2FnaW5nIl0sI
@@ -13727,6 +13823,8 @@ components:
         etsy_refresh_token: 223577551.L07_RE-y7unmKf2dox4djsHkVxwpUfs1ikG_uQmHhF-aASEReNn_Qns1Wqn3dDa0ZMxrt9CIael3dgudeDZb31ZUdS
         salla_client_id: 1bxxxcf9-5xx4-xxx-bxxf-929b8xxxxe11
         ftp_password: "G4}q215D4_H9$Be"
+        shopee_refresh_token: EAAPP06rM2n8BO4mZBuMPnu9zS0MaMbN7ue8aUkcxw4zewU987mVVb5br
+        shopee_environment: sandbox
         ftp_port: 22
         shoplazza_access_token: igse8e4rdmzkxdi937qe69d59en1imw
         magento_token_secret: igse8e4rdmzkxdi937qe69d59en1imw
@@ -13738,6 +13836,7 @@ components:
         bol_retailer_id: "145001"
         hybris_password: nimda
         shopify_api_key: bbca57d8ff3c3677128112c15556d9e3
+        shopee_partner_key: 6a46494b4d746576554646626775617a577542774850636375464d6a736d5598
         otto_environment: sandbox
         zoho_client_secret: c8d7077fce7b2b111111111898170695a01473a2ad
         shopline_app_secret: 1701d123bb5cc14cd2732dcaed90638316c0a09
@@ -13745,6 +13844,7 @@ components:
         hybris_client_secret: secret_phrase_1
         otto_client_secret: 9887a82a-2879-421e-a6wc-54e986b3458c
         etsy_token_secret: igse8e4rdmzkxdi937qe69d59en1imw
+        temu_app_secret: 4782d2d827276688bf4758bed55dbdd4bbe79a78
         store_url: http://mystore.com
         tiendanube_user_id: 1234
         otto_refresh_token: eyJhbGciOiJSUzI1NiIsInR5cCI6IsfddfdfdeyJ1c2VyX25hbWUiOiI5NDUxMzE1MSIsInNjb3BlIjpbImFsbGVncm86YXBpOm9yZGVyczpyZWFkIiwiYWxsZWdybzphcGk6cHJvZmlsZTp3cml0ZSIsImFsbGVncm86YXBpOnNhbGU6b2ZmZXJzOndyaXRlIiwiYWxsZWdybzphcGk6YmlsbGluZzpyZWFkIiwiYWxsZWdybzphcGk6Y2FtcGFpZ25zIiwiYWxsZWdybzphcGk6ZGlzcHV0ZXMiLCJhbGxlZ3JvOmFwaTpzYWxlOm9mZmVyczpyZWFkIiwiYWxsZWdybzphcGk6YmlkcyIsImFsbGVncm86YXBpOm9yZGVyczp3cml0ZSIsImFsbGVncm86YXBpOnBheW1lbnRzOndyaXRlIiwiYWxsZWdybzphcGk6c2FsZTpzZXR0aW5nczp3cml0ZSIsImFsbGVncm86YXBpOnByb2ZpbGU6cmVhZCIsImFsbGVncm86YXBpOnJhdGluZ3MiLCJhbGxlZ3JvOmFwaTpzYWxlOnNldHRpbmdzOnJlYWQiLCJhbGxlZ3JvOmFwaTpwYXltZW50czpyZWFkIiwiYWxsZWdybzphcGk6bWVzc2FnaW5nIl0sI
@@ -13756,6 +13856,7 @@ components:
         tiktokshop_refresh_token: TTP_NTUxZTNhYTQ2ZDk2YmRmZWNmYWY2YWY12345NGYwNjQ3YjkzYTllYjA0YmNlMw
         bridge_url: https://your-store.com/custom/bridge/path/bridge.php
         allegro_access_token: eyJhbGciOiJSUzI1NiIsInR5cCI6IsfddfdfdeyJ1c2VyX25hbWUiOiI5NDUxMzE1MSIsInNjb3BlIjpbImFsbGVncm86YXBpOm9yZGVyczpyZWFkIiwiYWxsZWdybzphcGk6cHJvZmlsZTp3cml0ZSIsImFsbGVncm86YXBpOnNhbGU6b2ZmZXJzOndyaXRlIiwiYWxsZWdybzphcGk6YmlsbGluZzpyZWFkIiwiYWxsZWdybzphcGk6Y2FtcGFpZ25zIiwiYWxsZWdybzphcGk6ZGlzcHV0ZXMiLCJhbGxlZ3JvOmFwaTpzYWxlOm9mZmVyczpyZWFkIiwiYWxsZWdybzphcGk6YmlkcyIsImFsbGVncm86YXBpOm9yZGVyczp3cml0ZSIsImFsbGVncm86YXBpOnBheW1lbnRzOndyaXRlIiwiYWxsZWdybzphcGk6c2FsZTpzZXR0aW5nczp3cml0ZSIsImFsbGVncm86YXBpOnByb2ZpbGU6cmVhZCIsImFsbGVncm86YXBpOnJhdGluZ3MiLCJhbGxlZ3JvOmFwaTpzYWxlOnNldHRpbmdzOnJlYWQiLCJhbGxlZ3JvOmFwaTpwYXltZW50czpyZWFkIiwiYWxsZWdybzphcGk6bWVzc2FnaW5nIl0sI
+        shopee_region: CN
         user_agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101
           Firefox/47.0
         shopware_access_key: SWSCS3O1RJBSRNBYQLFIYJN2ZQ
@@ -13823,6 +13924,7 @@ components:
           - SSPremium
           - Salla
           - Shopify
+          - Shopee
           - Shoplazza
           - Shopline
           - Shopware
@@ -14265,6 +14367,37 @@ components:
           example: gmz3iz45x2
           type: string
           name: shopify_shared_secret
+        shopee_partner_id:
+          description: Shopee Partner ID
+          example: "1276777"
+          type: string
+          name: shopee_partner_id
+        shopee_partner_key:
+          description: Shopee Partner Key
+          example: 6a46494b4d746576554646626775617a577542774850636375464d6a736d5598
+          type: string
+          name: shopee_partner_key
+        shopee_shop_id:
+          description: Shopee SHOP ID
+          example: "137968"
+          type: string
+          name: shopee_shop_id
+        shopee_refresh_token:
+          description: Shopee Refresh Token
+          example: EAAPP06rM2n8BO4mZBuMPnu9zS0MaMbN7ue8aUkcxw4zewU987mVVb5br
+          type: string
+          name: shopee_refresh_token
+        shopee_region:
+          description: Shopee API endpoint Region. Use for Chinese Mainland or Brazil.
+          example: CN
+          type: string
+          name: shopee_region
+        shopee_environment:
+          default: production
+          description: Shopee Environment
+          example: sandbox
+          type: string
+          name: shopee_environment
         shoplazza_access_token:
           description: Access token authorizing the app to access resources on behalf
             of a user
@@ -14627,10 +14760,32 @@ components:
           example: oxy_rt_zxxxxiY2xxZWWxxxxlU-tROxxxxx2JzS2fwzxxxxxkU.p3xxxkCIyFexxxxP50WwZYfhw5_wg1xxxxV5F-8xxXc
           type: string
           name: salla_access_token
+        temu_app_key:
+          description: Temu App Key
+          example: 4ebbc9190ae410443d65b4c2faca9811
+          type: string
+          name: temu_app_key
+        temu_app_secret:
+          description: Temu App Secret
+          example: 4782d2d827276688bf4758bed55dbdd4bbe79a78
+          type: string
+          name: temu_app_secret
+        temu_access_token:
+          description: Temu Access Token
+          example: uplv3hfyt5kcwoymrgnajnbl1ow5qxlz4sqhev6hl3xosz5dejrtyl2jre6
+          type: string
+          name: temu_access_token
+        temu_region:
+          default: US
+          description: Temu API endpoint Region.
+          example: US
+          type: string
+          name: temu_region
       required:
       - bigcartel_password
       - bigcartel_user_name
       - cart_id
+      - temu_access_token
       - wix_app_id
       - wix_app_secret_key
     StoreAttribute:
@@ -16566,6 +16721,7 @@ components:
           - SSPremium
           - Salla
           - Shopify
+          - Shopee
           - Shoplazza
           - Shopline
           - Shopware

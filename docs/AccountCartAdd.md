@@ -84,6 +84,12 @@ Name | Type | Description | Notes
 **ShopifyApiKey** | **string** | Shopify API Key | [optional] 
 **ShopifyApiPassword** | **string** | Shopify API Password | [optional] 
 **ShopifySharedSecret** | **string** | Shared secret | [optional] 
+**ShopeePartnerId** | **string** | Shopee Partner ID | [optional] 
+**ShopeePartnerKey** | **string** | Shopee Partner Key | [optional] 
+**ShopeeShopId** | **string** | Shopee SHOP ID | [optional] 
+**ShopeeRefreshToken** | **string** | Shopee Refresh Token | [optional] 
+**ShopeeRegion** | **string** | Shopee API endpoint Region. Use for Chinese Mainland or Brazil. | [optional] 
+**ShopeeEnvironment** | **string** | Shopee Environment | [optional] [default to "production"]
 **ShoplazzaAccessToken** | **string** | Access token authorizing the app to access resources on behalf of a user | [optional] 
 **ShoplazzaSharedSecret** | **string** | Shared secret | [optional] 
 **ShopwareAccessKey** | **string** | Shopware access key | [optional] 
@@ -155,6 +161,10 @@ Name | Type | Description | Notes
 **SallaClientSecret** | **string** | Salla Client Secret | [optional] 
 **SallaRefreshToken** | **string** | Salla Refresh Token | [optional] 
 **SallaAccessToken** | **string** | Salla Access Token | [optional] 
+**TemuAppKey** | **string** | Temu App Key | [optional] 
+**TemuAppSecret** | **string** | Temu App Secret | [optional] 
+**TemuAccessToken** | **string** | Temu Access Token | 
+**TemuRegion** | **string** | Temu API endpoint Region. | [optional] [default to "US"]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

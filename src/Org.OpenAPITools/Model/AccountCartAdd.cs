@@ -274,154 +274,160 @@ namespace Org.OpenAPITools.Model
             Shopify = 39,
 
             /// <summary>
+            /// Enum Shopee for value: Shopee
+            /// </summary>
+            [EnumMember(Value = "Shopee")]
+            Shopee = 40,
+
+            /// <summary>
             /// Enum Shoplazza for value: Shoplazza
             /// </summary>
             [EnumMember(Value = "Shoplazza")]
-            Shoplazza = 40,
+            Shoplazza = 41,
 
             /// <summary>
             /// Enum Shopline for value: Shopline
             /// </summary>
             [EnumMember(Value = "Shopline")]
-            Shopline = 41,
+            Shopline = 42,
 
             /// <summary>
             /// Enum Shopware for value: Shopware
             /// </summary>
             [EnumMember(Value = "Shopware")]
-            Shopware = 42,
+            Shopware = 43,
 
             /// <summary>
             /// Enum ShopwareApi for value: ShopwareApi
             /// </summary>
             [EnumMember(Value = "ShopwareApi")]
-            ShopwareApi = 43,
+            ShopwareApi = 44,
 
             /// <summary>
             /// Enum Square for value: Square
             /// </summary>
             [EnumMember(Value = "Square")]
-            Square = 44,
+            Square = 45,
 
             /// <summary>
             /// Enum Squarespace for value: Squarespace
             /// </summary>
             [EnumMember(Value = "Squarespace")]
-            Squarespace = 45,
+            Squarespace = 46,
 
             /// <summary>
             /// Enum Tiendanube for value: Tiendanube
             /// </summary>
             [EnumMember(Value = "Tiendanube")]
-            Tiendanube = 46,
+            Tiendanube = 47,
 
             /// <summary>
             /// Enum TikTokShop for value: TikTokShop
             /// </summary>
             [EnumMember(Value = "TikTokShop")]
-            TikTokShop = 47,
+            TikTokShop = 48,
 
             /// <summary>
             /// Enum Tomatocart for value: Tomatocart
             /// </summary>
             [EnumMember(Value = "Tomatocart")]
-            Tomatocart = 48,
+            Tomatocart = 49,
 
             /// <summary>
             /// Enum Ubercart for value: Ubercart
             /// </summary>
             [EnumMember(Value = "Ubercart")]
-            Ubercart = 49,
+            Ubercart = 50,
 
             /// <summary>
             /// Enum Virtuemart for value: Virtuemart
             /// </summary>
             [EnumMember(Value = "Virtuemart")]
-            Virtuemart = 50,
+            Virtuemart = 51,
 
             /// <summary>
             /// Enum Volusion for value: Volusion
             /// </summary>
             [EnumMember(Value = "Volusion")]
-            Volusion = 51,
+            Volusion = 52,
 
             /// <summary>
             /// Enum WPecommerce for value: WPecommerce
             /// </summary>
             [EnumMember(Value = "WPecommerce")]
-            WPecommerce = 52,
+            WPecommerce = 53,
 
             /// <summary>
             /// Enum Walmart for value: Walmart
             /// </summary>
             [EnumMember(Value = "Walmart")]
-            Walmart = 53,
+            Walmart = 54,
 
             /// <summary>
             /// Enum WebAsyst for value: WebAsyst
             /// </summary>
             [EnumMember(Value = "WebAsyst")]
-            WebAsyst = 54,
+            WebAsyst = 55,
 
             /// <summary>
             /// Enum Wix for value: Wix
             /// </summary>
             [EnumMember(Value = "Wix")]
-            Wix = 55,
+            Wix = 56,
 
             /// <summary>
             /// Enum Woocommerce for value: Woocommerce
             /// </summary>
             [EnumMember(Value = "Woocommerce")]
-            Woocommerce = 56,
+            Woocommerce = 57,
 
             /// <summary>
             /// Enum WoocommerceApi for value: WoocommerceApi
             /// </summary>
             [EnumMember(Value = "WoocommerceApi")]
-            WoocommerceApi = 57,
+            WoocommerceApi = 58,
 
             /// <summary>
             /// Enum Xcart for value: Xcart
             /// </summary>
             [EnumMember(Value = "Xcart")]
-            Xcart = 58,
+            Xcart = 59,
 
             /// <summary>
             /// Enum Xtcommerce for value: Xtcommerce
             /// </summary>
             [EnumMember(Value = "Xtcommerce")]
-            Xtcommerce = 59,
+            Xtcommerce = 60,
 
             /// <summary>
             /// Enum XtcommerceVeyton for value: XtcommerceVeyton
             /// </summary>
             [EnumMember(Value = "XtcommerceVeyton")]
-            XtcommerceVeyton = 60,
+            XtcommerceVeyton = 61,
 
             /// <summary>
             /// Enum Zencart137 for value: Zencart137
             /// </summary>
             [EnumMember(Value = "Zencart137")]
-            Zencart137 = 61,
+            Zencart137 = 62,
 
             /// <summary>
             /// Enum Zid for value: Zid
             /// </summary>
             [EnumMember(Value = "Zid")]
-            Zid = 62,
+            Zid = 63,
 
             /// <summary>
             /// Enum Zoey for value: Zoey
             /// </summary>
             [EnumMember(Value = "Zoey")]
-            Zoey = 63,
+            Zoey = 64,
 
             /// <summary>
             /// Enum Zoho for value: Zoho
             /// </summary>
             [EnumMember(Value = "Zoho")]
-            Zoho = 64
+            Zoho = 65
         }
 
 
@@ -522,6 +528,12 @@ namespace Org.OpenAPITools.Model
         /// <param name="shopifyApiKey">Shopify API Key.</param>
         /// <param name="shopifyApiPassword">Shopify API Password.</param>
         /// <param name="shopifySharedSecret">Shared secret.</param>
+        /// <param name="shopeePartnerId">Shopee Partner ID.</param>
+        /// <param name="shopeePartnerKey">Shopee Partner Key.</param>
+        /// <param name="shopeeShopId">Shopee SHOP ID.</param>
+        /// <param name="shopeeRefreshToken">Shopee Refresh Token.</param>
+        /// <param name="shopeeRegion">Shopee API endpoint Region. Use for Chinese Mainland or Brazil..</param>
+        /// <param name="shopeeEnvironment">Shopee Environment (default to &quot;production&quot;).</param>
         /// <param name="shoplazzaAccessToken">Access token authorizing the app to access resources on behalf of a user.</param>
         /// <param name="shoplazzaSharedSecret">Shared secret.</param>
         /// <param name="shopwareAccessKey">Shopware access key.</param>
@@ -593,7 +605,11 @@ namespace Org.OpenAPITools.Model
         /// <param name="sallaClientSecret">Salla Client Secret.</param>
         /// <param name="sallaRefreshToken">Salla Refresh Token.</param>
         /// <param name="sallaAccessToken">Salla Access Token.</param>
-        public AccountCartAdd(CartIdEnum cartId = default(CartIdEnum), string storeUrl = default(string), string bridgeUrl = default(string), string storeRoot = default(string), string storeKey = default(string), bool validateVersion = false, bool verify = true, string dbTablesPrefix = default(string), string userAgent = default(string), string ftpHost = default(string), string ftpUser = default(string), string ftpPassword = default(string), int ftpPort = default(int), string ftpStoreDir = default(string), string var3dcartPrivateKey = default(string), string var3dcartAccessToken = default(string), string var3dcartapiApiKey = default(string), string amazonSpClientId = default(string), string amazonSpClientSecret = default(string), string amazonSpRefreshToken = default(string), string amazonSpAwsRegion = default(string), string amazonSpApiEnvironment = @"production", string amazonSellerId = default(string), string aspdotnetstorefrontApiUser = default(string), string aspdotnetstorefrontApiPass = default(string), string bigcommerceapiAdminAccount = default(string), string bigcommerceapiApiPath = default(string), string bigcommerceapiApiKey = default(string), string bigcommerceapiClientId = default(string), string bigcommerceapiAccessToken = default(string), string bigcommerceapiContext = default(string), string bolApiKey = default(string), string bolApiSecret = default(string), int bolRetailerId = default(int), string bigcartelUserName = default(string), string bigcartelPassword = default(string), string demandwareClientId = default(string), string demandwareApiPassword = default(string), string demandwareUserName = default(string), string demandwareUserPassword = default(string), string ebayClientId = default(string), string ebayClientSecret = default(string), string ebayRuname = default(string), string ebayAccessToken = default(string), string ebayRefreshToken = default(string), string ebayEnvironment = @"production", int ebaySiteId = 0, string walmartClientId = default(string), string walmartClientSecret = default(string), string walmartEnvironment = @"production", string walmartChannelType = default(string), string walmartRegion = @"us", string ecwidAcessToken = default(string), string ecwidStoreId = default(string), string lazadaAppId = default(string), string lazadaAppSecret = default(string), string lazadaRefreshToken = default(string), string lazadaRegion = default(string), string lightspeedApiKey = default(string), string lightspeedApiSecret = default(string), string etsyKeystring = default(string), string etsySharedSecret = default(string), string etsyAccessToken = default(string), string etsyTokenSecret = default(string), string etsyClientId = default(string), string etsyRefreshToken = default(string), string facebookAppId = default(string), string facebookAppSecret = default(string), string facebookAccessToken = default(string), string facebookBusinessId = default(string), string netoApiKey = default(string), string netoApiUsername = default(string), string shoplineAccessToken = default(string), string shoplineAppKey = default(string), string shoplineAppSecret = default(string), string shoplineSharedSecret = default(string), string shopifyAccessToken = default(string), string shopifyApiKey = default(string), string shopifyApiPassword = default(string), string shopifySharedSecret = default(string), string shoplazzaAccessToken = default(string), string shoplazzaSharedSecret = default(string), string shopwareAccessKey = default(string), string shopwareApiKey = default(string), string shopwareApiSecret = default(string), string mivaAccessToken = default(string), string mivaSignature = default(string), int tiendanubeUserId = default(int), string tiendanubeAccessToken = default(string), string tiendanubeClientSecret = default(string), string volusionLogin = default(string), string volusionPassword = default(string), string hybrisClientId = default(string), string hybrisClientSecret = default(string), string hybrisUsername = default(string), string hybrisPassword = default(string), List<AccountCartAddHybrisWebsitesInner> hybrisWebsites = default(List<AccountCartAddHybrisWebsitesInner>), string squareClientId = default(string), string squareClientSecret = default(string), string squareRefreshToken = default(string), string squarespaceApiKey = default(string), string squarespaceClientId = default(string), string squarespaceClientSecret = default(string), string squarespaceAccessToken = default(string), string squarespaceRefreshToken = default(string), string commercehqApiKey = default(string), string commercehqApiPassword = default(string), string wcConsumerKey = default(string), string wcConsumerSecret = default(string), string magentoConsumerKey = default(string), string magentoConsumerSecret = default(string), string magentoAccessToken = default(string), string magentoTokenSecret = default(string), string prestashopWebserviceKey = default(string), string wixAppId = default(string), string wixAppSecretKey = default(string), string wixInstanceId = default(string), string wixRefreshToken = default(string), string mercadoLibreAppId = default(string), string mercadoLibreAppSecretKey = default(string), string mercadoLibreRefreshToken = default(string), int zidClientId = default(int), string zidClientSecret = default(string), string zidAccessToken = default(string), string zidAuthorization = default(string), string zidRefreshToken = default(string), string flipkartClientId = default(string), string flipkartClientSecret = default(string), string allegroClientId = default(string), string allegroClientSecret = default(string), string allegroAccessToken = default(string), string allegroRefreshToken = default(string), string allegroEnvironment = @"production", string zohoClientId = default(string), string zohoClientSecret = default(string), string zohoRefreshToken = default(string), string zohoRegion = default(string), string ottoClientId = default(string), string ottoClientSecret = default(string), string ottoAppId = default(string), string ottoRefreshToken = default(string), string ottoEnvironment = @"production", string ottoAccessToken = default(string), string tiktokshopAppKey = default(string), string tiktokshopAppSecret = default(string), string tiktokshopRefreshToken = default(string), string tiktokshopAccessToken = default(string), string sallaClientId = default(string), string sallaClientSecret = default(string), string sallaRefreshToken = default(string), string sallaAccessToken = default(string))
+        /// <param name="temuAppKey">Temu App Key.</param>
+        /// <param name="temuAppSecret">Temu App Secret.</param>
+        /// <param name="temuAccessToken">Temu Access Token (required).</param>
+        /// <param name="temuRegion">Temu API endpoint Region. (default to &quot;US&quot;).</param>
+        public AccountCartAdd(CartIdEnum cartId = default(CartIdEnum), string storeUrl = default(string), string bridgeUrl = default(string), string storeRoot = default(string), string storeKey = default(string), bool validateVersion = false, bool verify = true, string dbTablesPrefix = default(string), string userAgent = default(string), string ftpHost = default(string), string ftpUser = default(string), string ftpPassword = default(string), int ftpPort = default(int), string ftpStoreDir = default(string), string var3dcartPrivateKey = default(string), string var3dcartAccessToken = default(string), string var3dcartapiApiKey = default(string), string amazonSpClientId = default(string), string amazonSpClientSecret = default(string), string amazonSpRefreshToken = default(string), string amazonSpAwsRegion = default(string), string amazonSpApiEnvironment = @"production", string amazonSellerId = default(string), string aspdotnetstorefrontApiUser = default(string), string aspdotnetstorefrontApiPass = default(string), string bigcommerceapiAdminAccount = default(string), string bigcommerceapiApiPath = default(string), string bigcommerceapiApiKey = default(string), string bigcommerceapiClientId = default(string), string bigcommerceapiAccessToken = default(string), string bigcommerceapiContext = default(string), string bolApiKey = default(string), string bolApiSecret = default(string), int bolRetailerId = default(int), string bigcartelUserName = default(string), string bigcartelPassword = default(string), string demandwareClientId = default(string), string demandwareApiPassword = default(string), string demandwareUserName = default(string), string demandwareUserPassword = default(string), string ebayClientId = default(string), string ebayClientSecret = default(string), string ebayRuname = default(string), string ebayAccessToken = default(string), string ebayRefreshToken = default(string), string ebayEnvironment = @"production", int ebaySiteId = 0, string walmartClientId = default(string), string walmartClientSecret = default(string), string walmartEnvironment = @"production", string walmartChannelType = default(string), string walmartRegion = @"us", string ecwidAcessToken = default(string), string ecwidStoreId = default(string), string lazadaAppId = default(string), string lazadaAppSecret = default(string), string lazadaRefreshToken = default(string), string lazadaRegion = default(string), string lightspeedApiKey = default(string), string lightspeedApiSecret = default(string), string etsyKeystring = default(string), string etsySharedSecret = default(string), string etsyAccessToken = default(string), string etsyTokenSecret = default(string), string etsyClientId = default(string), string etsyRefreshToken = default(string), string facebookAppId = default(string), string facebookAppSecret = default(string), string facebookAccessToken = default(string), string facebookBusinessId = default(string), string netoApiKey = default(string), string netoApiUsername = default(string), string shoplineAccessToken = default(string), string shoplineAppKey = default(string), string shoplineAppSecret = default(string), string shoplineSharedSecret = default(string), string shopifyAccessToken = default(string), string shopifyApiKey = default(string), string shopifyApiPassword = default(string), string shopifySharedSecret = default(string), string shopeePartnerId = default(string), string shopeePartnerKey = default(string), string shopeeShopId = default(string), string shopeeRefreshToken = default(string), string shopeeRegion = default(string), string shopeeEnvironment = @"production", string shoplazzaAccessToken = default(string), string shoplazzaSharedSecret = default(string), string shopwareAccessKey = default(string), string shopwareApiKey = default(string), string shopwareApiSecret = default(string), string mivaAccessToken = default(string), string mivaSignature = default(string), int tiendanubeUserId = default(int), string tiendanubeAccessToken = default(string), string tiendanubeClientSecret = default(string), string volusionLogin = default(string), string volusionPassword = default(string), string hybrisClientId = default(string), string hybrisClientSecret = default(string), string hybrisUsername = default(string), string hybrisPassword = default(string), List<AccountCartAddHybrisWebsitesInner> hybrisWebsites = default(List<AccountCartAddHybrisWebsitesInner>), string squareClientId = default(string), string squareClientSecret = default(string), string squareRefreshToken = default(string), string squarespaceApiKey = default(string), string squarespaceClientId = default(string), string squarespaceClientSecret = default(string), string squarespaceAccessToken = default(string), string squarespaceRefreshToken = default(string), string commercehqApiKey = default(string), string commercehqApiPassword = default(string), string wcConsumerKey = default(string), string wcConsumerSecret = default(string), string magentoConsumerKey = default(string), string magentoConsumerSecret = default(string), string magentoAccessToken = default(string), string magentoTokenSecret = default(string), string prestashopWebserviceKey = default(string), string wixAppId = default(string), string wixAppSecretKey = default(string), string wixInstanceId = default(string), string wixRefreshToken = default(string), string mercadoLibreAppId = default(string), string mercadoLibreAppSecretKey = default(string), string mercadoLibreRefreshToken = default(string), int zidClientId = default(int), string zidClientSecret = default(string), string zidAccessToken = default(string), string zidAuthorization = default(string), string zidRefreshToken = default(string), string flipkartClientId = default(string), string flipkartClientSecret = default(string), string allegroClientId = default(string), string allegroClientSecret = default(string), string allegroAccessToken = default(string), string allegroRefreshToken = default(string), string allegroEnvironment = @"production", string zohoClientId = default(string), string zohoClientSecret = default(string), string zohoRefreshToken = default(string), string zohoRegion = default(string), string ottoClientId = default(string), string ottoClientSecret = default(string), string ottoAppId = default(string), string ottoRefreshToken = default(string), string ottoEnvironment = @"production", string ottoAccessToken = default(string), string tiktokshopAppKey = default(string), string tiktokshopAppSecret = default(string), string tiktokshopRefreshToken = default(string), string tiktokshopAccessToken = default(string), string sallaClientId = default(string), string sallaClientSecret = default(string), string sallaRefreshToken = default(string), string sallaAccessToken = default(string), string temuAppKey = default(string), string temuAppSecret = default(string), string temuAccessToken = default(string), string temuRegion = @"US")
         {
             this.CartId = cartId;
             // to ensure "bigcartelUserName" is required (not null)
@@ -620,6 +636,12 @@ namespace Org.OpenAPITools.Model
                 throw new ArgumentNullException("wixAppSecretKey is a required property for AccountCartAdd and cannot be null");
             }
             this.WixAppSecretKey = wixAppSecretKey;
+            // to ensure "temuAccessToken" is required (not null)
+            if (temuAccessToken == null)
+            {
+                throw new ArgumentNullException("temuAccessToken is a required property for AccountCartAdd and cannot be null");
+            }
+            this.TemuAccessToken = temuAccessToken;
             this.StoreUrl = storeUrl;
             this.BridgeUrl = bridgeUrl;
             this.StoreRoot = storeRoot;
@@ -701,6 +723,13 @@ namespace Org.OpenAPITools.Model
             this.ShopifyApiKey = shopifyApiKey;
             this.ShopifyApiPassword = shopifyApiPassword;
             this.ShopifySharedSecret = shopifySharedSecret;
+            this.ShopeePartnerId = shopeePartnerId;
+            this.ShopeePartnerKey = shopeePartnerKey;
+            this.ShopeeShopId = shopeeShopId;
+            this.ShopeeRefreshToken = shopeeRefreshToken;
+            this.ShopeeRegion = shopeeRegion;
+            // use default value if no "shopeeEnvironment" provided
+            this.ShopeeEnvironment = shopeeEnvironment ?? @"production";
             this.ShoplazzaAccessToken = shoplazzaAccessToken;
             this.ShoplazzaSharedSecret = shoplazzaSharedSecret;
             this.ShopwareAccessKey = shopwareAccessKey;
@@ -772,6 +801,10 @@ namespace Org.OpenAPITools.Model
             this.SallaClientSecret = sallaClientSecret;
             this.SallaRefreshToken = sallaRefreshToken;
             this.SallaAccessToken = sallaAccessToken;
+            this.TemuAppKey = temuAppKey;
+            this.TemuAppSecret = temuAppSecret;
+            // use default value if no "temuRegion" provided
+            this.TemuRegion = temuRegion ?? @"US";
         }
 
         /// <summary>
@@ -1565,6 +1598,66 @@ namespace Org.OpenAPITools.Model
         public string ShopifySharedSecret { get; set; }
 
         /// <summary>
+        /// Shopee Partner ID
+        /// </summary>
+        /// <value>Shopee Partner ID</value>
+        /*
+        <example>1276777</example>
+        */
+        [DataMember(Name = "shopee_partner_id", EmitDefaultValue = false)]
+        public string ShopeePartnerId { get; set; }
+
+        /// <summary>
+        /// Shopee Partner Key
+        /// </summary>
+        /// <value>Shopee Partner Key</value>
+        /*
+        <example>6a46494b4d746576554646626775617a577542774850636375464d6a736d5598</example>
+        */
+        [DataMember(Name = "shopee_partner_key", EmitDefaultValue = false)]
+        public string ShopeePartnerKey { get; set; }
+
+        /// <summary>
+        /// Shopee SHOP ID
+        /// </summary>
+        /// <value>Shopee SHOP ID</value>
+        /*
+        <example>137968</example>
+        */
+        [DataMember(Name = "shopee_shop_id", EmitDefaultValue = false)]
+        public string ShopeeShopId { get; set; }
+
+        /// <summary>
+        /// Shopee Refresh Token
+        /// </summary>
+        /// <value>Shopee Refresh Token</value>
+        /*
+        <example>EAAPP06rM2n8BO4mZBuMPnu9zS0MaMbN7ue8aUkcxw4zewU987mVVb5br</example>
+        */
+        [DataMember(Name = "shopee_refresh_token", EmitDefaultValue = false)]
+        public string ShopeeRefreshToken { get; set; }
+
+        /// <summary>
+        /// Shopee API endpoint Region. Use for Chinese Mainland or Brazil.
+        /// </summary>
+        /// <value>Shopee API endpoint Region. Use for Chinese Mainland or Brazil.</value>
+        /*
+        <example>CN</example>
+        */
+        [DataMember(Name = "shopee_region", EmitDefaultValue = false)]
+        public string ShopeeRegion { get; set; }
+
+        /// <summary>
+        /// Shopee Environment
+        /// </summary>
+        /// <value>Shopee Environment</value>
+        /*
+        <example>sandbox</example>
+        */
+        [DataMember(Name = "shopee_environment", EmitDefaultValue = false)]
+        public string ShopeeEnvironment { get; set; }
+
+        /// <summary>
         /// Access token authorizing the app to access resources on behalf of a user
         /// </summary>
         /// <value>Access token authorizing the app to access resources on behalf of a user</value>
@@ -2277,6 +2370,46 @@ namespace Org.OpenAPITools.Model
         public string SallaAccessToken { get; set; }
 
         /// <summary>
+        /// Temu App Key
+        /// </summary>
+        /// <value>Temu App Key</value>
+        /*
+        <example>4ebbc9190ae410443d65b4c2faca9811</example>
+        */
+        [DataMember(Name = "temu_app_key", EmitDefaultValue = false)]
+        public string TemuAppKey { get; set; }
+
+        /// <summary>
+        /// Temu App Secret
+        /// </summary>
+        /// <value>Temu App Secret</value>
+        /*
+        <example>4782d2d827276688bf4758bed55dbdd4bbe79a78</example>
+        */
+        [DataMember(Name = "temu_app_secret", EmitDefaultValue = false)]
+        public string TemuAppSecret { get; set; }
+
+        /// <summary>
+        /// Temu Access Token
+        /// </summary>
+        /// <value>Temu Access Token</value>
+        /*
+        <example>uplv3hfyt5kcwoymrgnajnbl1ow5qxlz4sqhev6hl3xosz5dejrtyl2jre6</example>
+        */
+        [DataMember(Name = "temu_access_token", IsRequired = true, EmitDefaultValue = true)]
+        public string TemuAccessToken { get; set; }
+
+        /// <summary>
+        /// Temu API endpoint Region.
+        /// </summary>
+        /// <value>Temu API endpoint Region.</value>
+        /*
+        <example>US</example>
+        */
+        [DataMember(Name = "temu_region", EmitDefaultValue = false)]
+        public string TemuRegion { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -2364,6 +2497,12 @@ namespace Org.OpenAPITools.Model
             sb.Append("  ShopifyApiKey: ").Append(ShopifyApiKey).Append("\n");
             sb.Append("  ShopifyApiPassword: ").Append(ShopifyApiPassword).Append("\n");
             sb.Append("  ShopifySharedSecret: ").Append(ShopifySharedSecret).Append("\n");
+            sb.Append("  ShopeePartnerId: ").Append(ShopeePartnerId).Append("\n");
+            sb.Append("  ShopeePartnerKey: ").Append(ShopeePartnerKey).Append("\n");
+            sb.Append("  ShopeeShopId: ").Append(ShopeeShopId).Append("\n");
+            sb.Append("  ShopeeRefreshToken: ").Append(ShopeeRefreshToken).Append("\n");
+            sb.Append("  ShopeeRegion: ").Append(ShopeeRegion).Append("\n");
+            sb.Append("  ShopeeEnvironment: ").Append(ShopeeEnvironment).Append("\n");
             sb.Append("  ShoplazzaAccessToken: ").Append(ShoplazzaAccessToken).Append("\n");
             sb.Append("  ShoplazzaSharedSecret: ").Append(ShoplazzaSharedSecret).Append("\n");
             sb.Append("  ShopwareAccessKey: ").Append(ShopwareAccessKey).Append("\n");
@@ -2435,6 +2574,10 @@ namespace Org.OpenAPITools.Model
             sb.Append("  SallaClientSecret: ").Append(SallaClientSecret).Append("\n");
             sb.Append("  SallaRefreshToken: ").Append(SallaRefreshToken).Append("\n");
             sb.Append("  SallaAccessToken: ").Append(SallaAccessToken).Append("\n");
+            sb.Append("  TemuAppKey: ").Append(TemuAppKey).Append("\n");
+            sb.Append("  TemuAppSecret: ").Append(TemuAppSecret).Append("\n");
+            sb.Append("  TemuAccessToken: ").Append(TemuAccessToken).Append("\n");
+            sb.Append("  TemuRegion: ").Append(TemuRegion).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

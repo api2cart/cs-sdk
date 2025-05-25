@@ -776,6 +776,60 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ShopeePartnerId'
+        /// </summary>
+        [Fact]
+        public void ShopeePartnerIdTest()
+        {
+            // TODO unit test for the property 'ShopeePartnerId'
+        }
+
+        /// <summary>
+        /// Test the property 'ShopeePartnerKey'
+        /// </summary>
+        [Fact]
+        public void ShopeePartnerKeyTest()
+        {
+            // TODO unit test for the property 'ShopeePartnerKey'
+        }
+
+        /// <summary>
+        /// Test the property 'ShopeeShopId'
+        /// </summary>
+        [Fact]
+        public void ShopeeShopIdTest()
+        {
+            // TODO unit test for the property 'ShopeeShopId'
+        }
+
+        /// <summary>
+        /// Test the property 'ShopeeRefreshToken'
+        /// </summary>
+        [Fact]
+        public void ShopeeRefreshTokenTest()
+        {
+            // TODO unit test for the property 'ShopeeRefreshToken'
+        }
+
+        /// <summary>
+        /// Test the property 'ShopeeRegion'
+        /// </summary>
+        [Fact]
+        public void ShopeeRegionTest()
+        {
+            // TODO unit test for the property 'ShopeeRegion'
+        }
+
+        /// <summary>
+        /// Test the property 'ShopeeEnvironment'
+        /// </summary>
+        [Fact]
+        public void ShopeeEnvironmentTest()
+        {
+            // TODO unit test for the property 'ShopeeEnvironment'
+        }
+
+        /// <summary>
         /// Test the property 'ShoplazzaAccessToken'
         /// </summary>
         [Fact]
@@ -1412,6 +1466,42 @@ namespace Org.OpenAPITools.Test.Model
         public void SallaAccessTokenTest()
         {
             // TODO unit test for the property 'SallaAccessToken'
+        }
+
+        /// <summary>
+        /// Test the property 'TemuAppKey'
+        /// </summary>
+        [Fact]
+        public void TemuAppKeyTest()
+        {
+            // TODO unit test for the property 'TemuAppKey'
+        }
+
+        /// <summary>
+        /// Test the property 'TemuAppSecret'
+        /// </summary>
+        [Fact]
+        public void TemuAppSecretTest()
+        {
+            // TODO unit test for the property 'TemuAppSecret'
+        }
+
+        /// <summary>
+        /// Test the property 'TemuAccessToken'
+        /// </summary>
+        [Fact]
+        public void TemuAccessTokenTest()
+        {
+            // TODO unit test for the property 'TemuAccessToken'
+        }
+
+        /// <summary>
+        /// Test the property 'TemuRegion'
+        /// </summary>
+        [Fact]
+        public void TemuRegionTest()
+        {
+            // TODO unit test for the property 'TemuRegion'
         }
     }
 }
