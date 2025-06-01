@@ -404,7 +404,7 @@ namespace Example
             var temuAppKey = 4ebbc9190ae410443d65b4c2faca9811;  // string? | Temu App Key (optional) 
             var temuAppSecret = 4782d2d827276688bf4758bed55dbdd4bbe79a78;  // string? | Temu App Secret (optional) 
             var temuAccessToken = uplv3hfyt5kcwoymrgnajnbl1ow5qxlz4sqhev6hl3xosz5dejrtyl2jre6;  // string? | Temu Access Token (optional) 
-            var temuRegion = US;  // string? | Temu API endpoint Region. (optional)  (default to "US")
+            var temuRegion = US;  // string? | Temu API endpoint Region. (optional) 
 
             try
             {
@@ -600,7 +600,7 @@ catch (ApiException e)
 | **temuAppKey** | **string?** | Temu App Key | [optional]  |
 | **temuAppSecret** | **string?** | Temu App Secret | [optional]  |
 | **temuAccessToken** | **string?** | Temu Access Token | [optional]  |
-| **temuRegion** | **string?** | Temu API endpoint Region. | [optional] [default to &quot;US&quot;] |
+| **temuRegion** | **string?** | Temu API endpoint Region. | [optional]  |
 
 ### Return type
 

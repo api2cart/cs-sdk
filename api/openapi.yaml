@@ -1611,7 +1611,6 @@ paths:
         name: temu_region
         required: false
         schema:
-          default: US
           type: string
         style: form
       responses:
@@ -14776,8 +14775,11 @@ components:
           type: string
           name: temu_access_token
         temu_region:
-          default: US
           description: Temu API endpoint Region.
+          enum:
+          - US
+          - EU
+          - GLOBAL
           example: US
           type: string
           name: temu_region
@@ -14786,6 +14788,7 @@ components:
       - bigcartel_user_name
       - cart_id
       - temu_access_token
+      - temu_region
       - wix_app_id
       - wix_app_secret_key
     StoreAttribute:
