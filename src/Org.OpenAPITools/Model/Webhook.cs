@@ -38,6 +38,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="id">id.</param>
         /// <param name="label">label.</param>
         /// <param name="storeId">storeId.</param>
+        /// <param name="langId">langId.</param>
         /// <param name="active">active.</param>
         /// <param name="callback">callback.</param>
         /// <param name="fields">fields.</param>
@@ -47,11 +48,12 @@ namespace Org.OpenAPITools.Model
         /// <param name="action">action.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Webhook(int id = default(int), string label = default(string), string storeId = default(string), bool active = default(bool), string callback = default(string), string fields = default(string), string createdAt = default(string), string updatedAt = default(string), string entity = default(string), string action = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Webhook(int id = default(int), string label = default(string), string storeId = default(string), string langId = default(string), bool active = default(bool), string callback = default(string), string fields = default(string), string createdAt = default(string), string updatedAt = default(string), string entity = default(string), string action = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Label = label;
             this.StoreId = storeId;
+            this.LangId = langId;
             this.Active = active;
             this.Callback = callback;
             this.Fields = fields;
@@ -80,6 +82,12 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         [DataMember(Name = "store_id", EmitDefaultValue = false)]
         public string StoreId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets LangId
+        /// </summary>
+        [DataMember(Name = "lang_id", EmitDefaultValue = false)]
+        public string LangId { get; set; }
 
         /// <summary>
         /// Gets or Sets Active
@@ -146,6 +154,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  LangId: ").Append(LangId).Append("\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("  Callback: ").Append(Callback).Append("\n");
             sb.Append("  Fields: ").Append(Fields).Append("\n");

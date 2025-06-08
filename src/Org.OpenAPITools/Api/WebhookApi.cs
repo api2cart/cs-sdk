@@ -67,10 +67,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
         /// <param name="active">Webhook status (optional, default to true)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketLiveShippingServiceCreate200Response</returns>
-        BasketLiveShippingServiceCreate200Response WebhookCreate(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? storeId = default(string?), int operationIndex = 0);
+        BasketLiveShippingServiceCreate200Response WebhookCreate(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// webhook.create
@@ -85,10 +86,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
         /// <param name="active">Webhook status (optional, default to true)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketLiveShippingServiceCreate200Response</returns>
-        ApiResponse<BasketLiveShippingServiceCreate200Response> WebhookCreateWithHttpInfo(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<BasketLiveShippingServiceCreate200Response> WebhookCreateWithHttpInfo(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0);
         /// <summary>
         /// webhook.delete
         /// </summary>
@@ -180,9 +182,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional)</param>
         /// <param name="active">Webhook status (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductImageUpdate200Response</returns>
-        ProductImageUpdate200Response WebhookUpdate(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), int operationIndex = 0);
+        ProductImageUpdate200Response WebhookUpdate(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// webhook.update
@@ -196,9 +199,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional)</param>
         /// <param name="active">Webhook status (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductImageUpdate200Response</returns>
-        ApiResponse<ProductImageUpdate200Response> WebhookUpdateWithHttpInfo(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), int operationIndex = 0);
+        ApiResponse<ProductImageUpdate200Response> WebhookUpdateWithHttpInfo(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -250,11 +254,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
         /// <param name="active">Webhook status (optional, default to true)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketLiveShippingServiceCreate200Response</returns>
-        System.Threading.Tasks.Task<BasketLiveShippingServiceCreate200Response> WebhookCreateAsync(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BasketLiveShippingServiceCreate200Response> WebhookCreateAsync(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// webhook.create
@@ -269,11 +274,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
         /// <param name="active">Webhook status (optional, default to true)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketLiveShippingServiceCreate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BasketLiveShippingServiceCreate200Response>> WebhookCreateWithHttpInfoAsync(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BasketLiveShippingServiceCreate200Response>> WebhookCreateWithHttpInfoAsync(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// webhook.delete
         /// </summary>
@@ -371,10 +377,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional)</param>
         /// <param name="active">Webhook status (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductImageUpdate200Response</returns>
-        System.Threading.Tasks.Task<ProductImageUpdate200Response> WebhookUpdateAsync(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductImageUpdate200Response> WebhookUpdateAsync(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// webhook.update
@@ -388,10 +395,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional)</param>
         /// <param name="active">Webhook status (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductImageUpdate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductImageUpdate200Response>> WebhookUpdateWithHttpInfoAsync(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductImageUpdate200Response>> WebhookUpdateWithHttpInfoAsync(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -705,12 +713,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
         /// <param name="active">Webhook status (optional, default to true)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketLiveShippingServiceCreate200Response</returns>
-        public BasketLiveShippingServiceCreate200Response WebhookCreate(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? storeId = default(string?), int operationIndex = 0)
+        public BasketLiveShippingServiceCreate200Response WebhookCreate(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> localVarResponse = WebhookCreateWithHttpInfo(entity, action, callback, label, fields, active, storeId);
+            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> localVarResponse = WebhookCreateWithHttpInfo(entity, action, callback, label, fields, active, langId, storeId);
             return localVarResponse.Data;
         }
 
@@ -724,10 +733,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
         /// <param name="active">Webhook status (optional, default to true)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketLiveShippingServiceCreate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> WebhookCreateWithHttpInfo(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> WebhookCreateWithHttpInfo(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'entity' is set
             if (entity == null)
@@ -782,6 +792,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "active", active));
             }
+            if (langId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
+            }
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
@@ -825,13 +839,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
         /// <param name="active">Webhook status (optional, default to true)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketLiveShippingServiceCreate200Response</returns>
-        public async System.Threading.Tasks.Task<BasketLiveShippingServiceCreate200Response> WebhookCreateAsync(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BasketLiveShippingServiceCreate200Response> WebhookCreateAsync(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> localVarResponse = await WebhookCreateWithHttpInfoAsync(entity, action, callback, label, fields, active, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> localVarResponse = await WebhookCreateWithHttpInfoAsync(entity, action, callback, label, fields, active, langId, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -845,11 +860,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
         /// <param name="active">Webhook status (optional, default to true)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketLiveShippingServiceCreate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response>> WebhookCreateWithHttpInfoAsync(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response>> WebhookCreateWithHttpInfoAsync(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'entity' is set
             if (entity == null)
@@ -903,6 +919,10 @@ namespace Org.OpenAPITools.Api
             if (active != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "active", active));
+            }
+            if (langId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
             if (storeId != null)
             {
@@ -1490,11 +1510,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional)</param>
         /// <param name="active">Webhook status (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductImageUpdate200Response</returns>
-        public ProductImageUpdate200Response WebhookUpdate(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), int operationIndex = 0)
+        public ProductImageUpdate200Response WebhookUpdate(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> localVarResponse = WebhookUpdateWithHttpInfo(id, callback, label, fields, active);
+            Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> localVarResponse = WebhookUpdateWithHttpInfo(id, callback, label, fields, active, langId);
             return localVarResponse.Data;
         }
 
@@ -1507,9 +1528,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional)</param>
         /// <param name="active">Webhook status (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductImageUpdate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> WebhookUpdateWithHttpInfo(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> WebhookUpdateWithHttpInfo(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1557,6 +1579,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "active", active));
             }
+            if (langId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
+            }
 
             localVarRequestOptions.Operation = "WebhookApi.WebhookUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1595,12 +1621,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional)</param>
         /// <param name="active">Webhook status (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductImageUpdate200Response</returns>
-        public async System.Threading.Tasks.Task<ProductImageUpdate200Response> WebhookUpdateAsync(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductImageUpdate200Response> WebhookUpdateAsync(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> localVarResponse = await WebhookUpdateWithHttpInfoAsync(id, callback, label, fields, active, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> localVarResponse = await WebhookUpdateWithHttpInfoAsync(id, callback, label, fields, active, langId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1613,10 +1640,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">The name you give to the webhook (optional)</param>
         /// <param name="fields">Fields the webhook should send (optional)</param>
         /// <param name="active">Webhook status (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductImageUpdate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response>> WebhookUpdateWithHttpInfoAsync(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response>> WebhookUpdateWithHttpInfoAsync(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), bool? active = default(bool?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1663,6 +1691,10 @@ namespace Org.OpenAPITools.Api
             if (active != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "active", active));
+            }
+            if (langId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
 
             localVarRequestOptions.Operation = "WebhookApi.WebhookUpdate";

@@ -83,6 +83,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'LangId'
+        /// </summary>
+        [Fact]
+        public void LangIdTest()
+        {
+            // TODO unit test for the property 'LangId'
+        }
+
+        /// <summary>
         /// Test the property 'Active'
         /// </summary>
         [Fact]

@@ -117,7 +117,7 @@ catch (ApiException e)
 
 <a id="webhookcreate"></a>
 # **WebhookCreate**
-> BasketLiveShippingServiceCreate200Response WebhookCreate (string entity, string action, string? callback = null, string? label = null, string? fields = null, bool? active = null, string? storeId = null)
+> BasketLiveShippingServiceCreate200Response WebhookCreate (string entity, string action, string? callback = null, string? label = null, string? fields = null, bool? active = null, string? langId = null, string? storeId = null)
 
 webhook.create
 
@@ -155,12 +155,13 @@ namespace Example
             var label = Super webhook;  // string? | The name you give to the webhook (optional) 
             var fields = id, name, description;  // string? | Fields the webhook should send (optional)  (default to "force_all")
             var active = true;  // bool? | Webhook status (optional)  (default to true)
+            var langId = 3;  // string? | Language id (optional) 
             var storeId = 1;  // string? | Defines store id where the webhook should be assigned (optional) 
 
             try
             {
                 // webhook.create
-                BasketLiveShippingServiceCreate200Response result = apiInstance.WebhookCreate(entity, action, callback, label, fields, active, storeId);
+                BasketLiveShippingServiceCreate200Response result = apiInstance.WebhookCreate(entity, action, callback, label, fields, active, langId, storeId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -181,7 +182,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // webhook.create
-    ApiResponse<BasketLiveShippingServiceCreate200Response> response = apiInstance.WebhookCreateWithHttpInfo(entity, action, callback, label, fields, active, storeId);
+    ApiResponse<BasketLiveShippingServiceCreate200Response> response = apiInstance.WebhookCreateWithHttpInfo(entity, action, callback, label, fields, active, langId, storeId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -204,6 +205,7 @@ catch (ApiException e)
 | **label** | **string?** | The name you give to the webhook | [optional]  |
 | **fields** | **string?** | Fields the webhook should send | [optional] [default to &quot;force_all&quot;] |
 | **active** | **bool?** | Webhook status | [optional] [default to true] |
+| **langId** | **string?** | Language id | [optional]  |
 | **storeId** | **string?** | Defines store id where the webhook should be assigned | [optional]  |
 
 ### Return type
@@ -536,7 +538,7 @@ catch (ApiException e)
 
 <a id="webhookupdate"></a>
 # **WebhookUpdate**
-> ProductImageUpdate200Response WebhookUpdate (string id, string? callback = null, string? label = null, string? fields = null, bool? active = null)
+> ProductImageUpdate200Response WebhookUpdate (string id, string? callback = null, string? label = null, string? fields = null, bool? active = null, string? langId = null)
 
 webhook.update
 
@@ -573,11 +575,12 @@ namespace Example
             var label = Super webhook;  // string? | The name you give to the webhook (optional) 
             var fields = id, name, description;  // string? | Fields the webhook should send (optional) 
             var active = true;  // bool? | Webhook status (optional) 
+            var langId = 3;  // string? | Language id (optional) 
 
             try
             {
                 // webhook.update
-                ProductImageUpdate200Response result = apiInstance.WebhookUpdate(id, callback, label, fields, active);
+                ProductImageUpdate200Response result = apiInstance.WebhookUpdate(id, callback, label, fields, active, langId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -598,7 +601,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // webhook.update
-    ApiResponse<ProductImageUpdate200Response> response = apiInstance.WebhookUpdateWithHttpInfo(id, callback, label, fields, active);
+    ApiResponse<ProductImageUpdate200Response> response = apiInstance.WebhookUpdateWithHttpInfo(id, callback, label, fields, active, langId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -620,6 +623,7 @@ catch (ApiException e)
 | **label** | **string?** | The name you give to the webhook | [optional]  |
 | **fields** | **string?** | Fields the webhook should send | [optional]  |
 | **active** | **bool?** | Webhook status | [optional]  |
+| **langId** | **string?** | Language id | [optional]  |
 
 ### Return type
 

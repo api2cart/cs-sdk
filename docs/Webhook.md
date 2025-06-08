@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Id** | **int** |  | [optional] 
 **Label** | **string** |  | [optional] 
 **StoreId** | **string** |  | [optional] 
+**LangId** | **string** |  | [optional] 
 **Active** | **bool** |  | [optional] 
 **Callback** | **string** |  | [optional] 
 **Fields** | **string** |  | [optional] 

@@ -13573,6 +13573,15 @@ paths:
           default: true
           type: boolean
         style: form
+      - description: Language id
+        example: 3
+        explode: true
+        in: query
+        name: lang_id
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Defines store id where the webhook should be assigned
         example: "1"
         explode: true
@@ -13645,6 +13654,15 @@ paths:
         required: false
         schema:
           type: boolean
+        style: form
+      - description: Language id
+        example: 3
+        explode: true
+        in: query
+        name: lang_id
+        required: false
+        schema:
+          type: string
         style: form
       responses:
         "200":
@@ -39693,15 +39711,16 @@ components:
     Webhook:
       example:
         store_id: store_id
-        updated_at: updated_at
         custom_fields: "{}"
+        lang_id: lang_id
         active: true
-        callback: callback
         created_at: created_at
-        action: action
         additional_fields: "{}"
-        id: 6
         label: label
+        updated_at: updated_at
+        callback: callback
+        action: action
+        id: 6
         fields: fields
         entity: entity
       properties:
@@ -39710,6 +39729,8 @@ components:
         label:
           type: string
         store_id:
+          type: string
+        lang_id:
           type: string
         active:
           type: boolean
@@ -46509,27 +46530,29 @@ components:
       example:
         webhook:
         - store_id: store_id
-          updated_at: updated_at
           custom_fields: "{}"
+          lang_id: lang_id
           active: true
-          callback: callback
           created_at: created_at
-          action: action
           additional_fields: "{}"
-          id: 6
           label: label
+          updated_at: updated_at
+          callback: callback
+          action: action
+          id: 6
           fields: fields
           entity: entity
         - store_id: store_id
-          updated_at: updated_at
           custom_fields: "{}"
+          lang_id: lang_id
           active: true
-          callback: callback
           created_at: created_at
-          action: action
           additional_fields: "{}"
-          id: 6
           label: label
+          updated_at: updated_at
+          callback: callback
+          action: action
+          id: 6
           fields: fields
           entity: entity
       properties:
@@ -46542,27 +46565,29 @@ components:
         result:
           webhook:
           - store_id: store_id
-            updated_at: updated_at
             custom_fields: "{}"
+            lang_id: lang_id
             active: true
-            callback: callback
             created_at: created_at
-            action: action
             additional_fields: "{}"
-            id: 6
             label: label
+            updated_at: updated_at
+            callback: callback
+            action: action
+            id: 6
             fields: fields
             entity: entity
           - store_id: store_id
-            updated_at: updated_at
             custom_fields: "{}"
+            lang_id: lang_id
             active: true
-            callback: callback
             created_at: created_at
-            action: action
             additional_fields: "{}"
-            id: 6
             label: label
+            updated_at: updated_at
+            callback: callback
+            action: action
+            id: 6
             fields: fields
             entity: entity
         return_message: return_message
