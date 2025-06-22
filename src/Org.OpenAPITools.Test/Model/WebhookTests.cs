@@ -119,6 +119,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ResponseFields'
+        /// </summary>
+        [Fact]
+        public void ResponseFieldsTest()
+        {
+            // TODO unit test for the property 'ResponseFields'
+        }
+
+        /// <summary>
         /// Test the property 'CreatedAt'
         /// </summary>
         [Fact]

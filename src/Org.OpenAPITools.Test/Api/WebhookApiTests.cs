@@ -81,10 +81,11 @@ namespace Org.OpenAPITools.Test.Api
             //string? callback = null;
             //string? label = null;
             //string? fields = null;
+            //string? responseFields = null;
             //bool? active = null;
             //string? langId = null;
             //string? storeId = null;
-            //var response = instance.WebhookCreate(entity, action, callback, label, fields, active, langId, storeId);
+            //var response = instance.WebhookCreate(entity, action, callback, label, fields, responseFields, active, langId, storeId);
             //Assert.IsType<BasketLiveShippingServiceCreate200Response>(response);
         }
 
@@ -140,9 +141,10 @@ namespace Org.OpenAPITools.Test.Api
             //string? callback = null;
             //string? label = null;
             //string? fields = null;
+            //string? responseFields = null;
             //bool? active = null;
             //string? langId = null;
-            //var response = instance.WebhookUpdate(id, callback, label, fields, active, langId);
+            //var response = instance.WebhookUpdate(id, callback, label, fields, responseFields, active, langId);
             //Assert.IsType<ProductImageUpdate200Response>(response);
         }
     }

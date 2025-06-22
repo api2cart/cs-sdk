@@ -117,7 +117,7 @@ catch (ApiException e)
 
 <a id="webhookcreate"></a>
 # **WebhookCreate**
-> BasketLiveShippingServiceCreate200Response WebhookCreate (string entity, string action, string? callback = null, string? label = null, string? fields = null, bool? active = null, string? langId = null, string? storeId = null)
+> BasketLiveShippingServiceCreate200Response WebhookCreate (string entity, string action, string? callback = null, string? label = null, string? fields = null, string? responseFields = null, bool? active = null, string? langId = null, string? storeId = null)
 
 webhook.create
 
@@ -154,6 +154,7 @@ namespace Example
             var callback = https://example.com/callback;  // string? | Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional) 
             var label = Super webhook;  // string? | The name you give to the webhook (optional) 
             var fields = id, name, description;  // string? | Fields the webhook should send (optional)  (default to "force_all")
+            var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var active = true;  // bool? | Webhook status (optional)  (default to true)
             var langId = 3;  // string? | Language id (optional) 
             var storeId = 1;  // string? | Defines store id where the webhook should be assigned (optional) 
@@ -161,7 +162,7 @@ namespace Example
             try
             {
                 // webhook.create
-                BasketLiveShippingServiceCreate200Response result = apiInstance.WebhookCreate(entity, action, callback, label, fields, active, langId, storeId);
+                BasketLiveShippingServiceCreate200Response result = apiInstance.WebhookCreate(entity, action, callback, label, fields, responseFields, active, langId, storeId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -182,7 +183,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // webhook.create
-    ApiResponse<BasketLiveShippingServiceCreate200Response> response = apiInstance.WebhookCreateWithHttpInfo(entity, action, callback, label, fields, active, langId, storeId);
+    ApiResponse<BasketLiveShippingServiceCreate200Response> response = apiInstance.WebhookCreateWithHttpInfo(entity, action, callback, label, fields, responseFields, active, langId, storeId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -204,6 +205,7 @@ catch (ApiException e)
 | **callback** | **string?** | Callback url that returns shipping rates. It should be able to accept POST requests with json data. | [optional]  |
 | **label** | **string?** | The name you give to the webhook | [optional]  |
 | **fields** | **string?** | Fields the webhook should send | [optional] [default to &quot;force_all&quot;] |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **active** | **bool?** | Webhook status | [optional] [default to true] |
 | **langId** | **string?** | Language id | [optional]  |
 | **storeId** | **string?** | Defines store id where the webhook should be assigned | [optional]  |
@@ -538,7 +540,7 @@ catch (ApiException e)
 
 <a id="webhookupdate"></a>
 # **WebhookUpdate**
-> ProductImageUpdate200Response WebhookUpdate (string id, string? callback = null, string? label = null, string? fields = null, bool? active = null, string? langId = null)
+> ProductImageUpdate200Response WebhookUpdate (string id, string? callback = null, string? label = null, string? fields = null, string? responseFields = null, bool? active = null, string? langId = null)
 
 webhook.update
 
@@ -574,13 +576,14 @@ namespace Example
             var callback = https://example.com/callback;  // string? | Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional) 
             var label = Super webhook;  // string? | The name you give to the webhook (optional) 
             var fields = id, name, description;  // string? | Fields the webhook should send (optional) 
+            var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var active = true;  // bool? | Webhook status (optional) 
             var langId = 3;  // string? | Language id (optional) 
 
             try
             {
                 // webhook.update
-                ProductImageUpdate200Response result = apiInstance.WebhookUpdate(id, callback, label, fields, active, langId);
+                ProductImageUpdate200Response result = apiInstance.WebhookUpdate(id, callback, label, fields, responseFields, active, langId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -601,7 +604,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // webhook.update
-    ApiResponse<ProductImageUpdate200Response> response = apiInstance.WebhookUpdateWithHttpInfo(id, callback, label, fields, active, langId);
+    ApiResponse<ProductImageUpdate200Response> response = apiInstance.WebhookUpdateWithHttpInfo(id, callback, label, fields, responseFields, active, langId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -622,6 +625,7 @@ catch (ApiException e)
 | **callback** | **string?** | Callback url that returns shipping rates. It should be able to accept POST requests with json data. | [optional]  |
 | **label** | **string?** | The name you give to the webhook | [optional]  |
 | **fields** | **string?** | Fields the webhook should send | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **active** | **bool?** | Webhook status | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
 

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **Active** | **bool** |  | [optional] 
 **Callback** | **string** |  | [optional] 
 **Fields** | **string** |  | [optional] 
+**ResponseFields** | **string** |  | [optional] 
 **CreatedAt** | **string** |  | [optional] 
 **UpdatedAt** | **string** |  | [optional] 
 **Entity** | **string** |  | [optional] 

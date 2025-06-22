@@ -42,13 +42,14 @@ namespace Org.OpenAPITools.Model
         /// <param name="active">active.</param>
         /// <param name="callback">callback.</param>
         /// <param name="fields">fields.</param>
+        /// <param name="responseFields">responseFields.</param>
         /// <param name="createdAt">createdAt.</param>
         /// <param name="updatedAt">updatedAt.</param>
         /// <param name="entity">entity.</param>
         /// <param name="action">action.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Webhook(int id = default(int), string label = default(string), string storeId = default(string), string langId = default(string), bool active = default(bool), string callback = default(string), string fields = default(string), string createdAt = default(string), string updatedAt = default(string), string entity = default(string), string action = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Webhook(int id = default(int), string label = default(string), string storeId = default(string), string langId = default(string), bool active = default(bool), string callback = default(string), string fields = default(string), string responseFields = default(string), string createdAt = default(string), string updatedAt = default(string), string entity = default(string), string action = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Label = label;
@@ -57,6 +58,7 @@ namespace Org.OpenAPITools.Model
             this.Active = active;
             this.Callback = callback;
             this.Fields = fields;
+            this.ResponseFields = responseFields;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.Entity = entity;
@@ -106,6 +108,12 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         [DataMember(Name = "fields", EmitDefaultValue = false)]
         public string Fields { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ResponseFields
+        /// </summary>
+        [DataMember(Name = "response_fields", EmitDefaultValue = false)]
+        public string ResponseFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
@@ -158,6 +166,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("  Callback: ").Append(Callback).Append("\n");
             sb.Append("  Fields: ").Append(Fields).Append("\n");
+            sb.Append("  ResponseFields: ").Append(ResponseFields).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
             sb.Append("  Entity: ").Append(Entity).Append("\n");

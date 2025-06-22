@@ -13563,6 +13563,16 @@ paths:
           default: force_all
           type: string
         style: form
+      - description: Set this parameter in order to choose which entity fields you
+          want to retrieve
+        example: "{result}"
+        explode: true
+        in: query
+        name: response_fields
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Webhook status
         example: true
         explode: true
@@ -13642,6 +13652,16 @@ paths:
         explode: true
         in: query
         name: fields
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Set this parameter in order to choose which entity fields you
+          want to retrieve
+        example: "{result}"
+        explode: true
+        in: query
+        name: response_fields
         required: false
         schema:
           type: string
@@ -34017,6 +34037,7 @@ components:
         id: id
         sku: sku
         sort_order: 6
+        on_sale: true
         combination:
         - option_value_id: option_value_id
           custom_fields: "{}"
@@ -34191,6 +34212,8 @@ components:
           type: boolean
         in_stock:
           type: boolean
+        on_sale:
+          type: boolean
         manage_stock:
           type: boolean
         inventory_level:
@@ -34309,6 +34332,7 @@ components:
             id: id
             sku: sku
             sort_order: 6
+            on_sale: true
             combination:
             - option_value_id: option_value_id
               custom_fields: "{}"
@@ -34479,6 +34503,7 @@ components:
             id: id
             sku: sku
             sort_order: 6
+            on_sale: true
             combination:
             - option_value_id: option_value_id
               custom_fields: "{}"
@@ -34677,6 +34702,7 @@ components:
           id: id
           sku: sku
           sort_order: 6
+          on_sale: true
           combination:
           - option_value_id: option_value_id
             custom_fields: "{}"
@@ -34847,6 +34873,7 @@ components:
           id: id
           sku: sku
           sort_order: 6
+          on_sale: true
           combination:
           - option_value_id: option_value_id
             custom_fields: "{}"
@@ -39721,6 +39748,7 @@ components:
         callback: callback
         action: action
         id: 6
+        response_fields: response_fields
         fields: fields
         entity: entity
       properties:
@@ -39737,6 +39765,8 @@ components:
         callback:
           type: string
         fields:
+          type: string
+        response_fields:
           type: string
         created_at:
           type: string
@@ -44670,6 +44700,7 @@ components:
           id: id
           sku: sku
           sort_order: 6
+          on_sale: true
           combination:
           - option_value_id: option_value_id
             custom_fields: "{}"
@@ -46540,6 +46571,7 @@ components:
           callback: callback
           action: action
           id: 6
+          response_fields: response_fields
           fields: fields
           entity: entity
         - store_id: store_id
@@ -46553,6 +46585,7 @@ components:
           callback: callback
           action: action
           id: 6
+          response_fields: response_fields
           fields: fields
           entity: entity
       properties:
@@ -46575,6 +46608,7 @@ components:
             callback: callback
             action: action
             id: 6
+            response_fields: response_fields
             fields: fields
             entity: entity
           - store_id: store_id
@@ -46588,6 +46622,7 @@ components:
             callback: callback
             action: action
             id: 6
+            response_fields: response_fields
             fields: fields
             entity: entity
         return_message: return_message

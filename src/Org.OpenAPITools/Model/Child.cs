@@ -62,6 +62,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="availForSale">availForSale.</param>
         /// <param name="allowBackorders">allowBackorders.</param>
         /// <param name="inStock">inStock.</param>
+        /// <param name="onSale">onSale.</param>
         /// <param name="manageStock">manageStock.</param>
         /// <param name="inventoryLevel">inventoryLevel.</param>
         /// <param name="inventory">inventory.</param>
@@ -81,7 +82,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="isVirtual">isVirtual.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Child(string id = default(string), string parentId = default(string), string sku = default(string), string upc = default(string), string ean = default(string), string mpn = default(string), string gtin = default(string), string isbn = default(string), string url = default(string), string seoUrl = default(string), int sortOrder = default(int), A2CDateTime createdTime = default(A2CDateTime), A2CDateTime modifiedTime = default(A2CDateTime), string name = default(string), string shortDescription = default(string), string fullDescription = default(string), List<Image> images = default(List<Image>), List<ProductChildItemCombination> combination = default(List<ProductChildItemCombination>), decimal defaultPrice = default(decimal), decimal costPrice = default(decimal), decimal listPrice = default(decimal), decimal wholesalePrice = default(decimal), List<ProductAdvancedPrice> advancedPrice = default(List<ProductAdvancedPrice>), string taxClassId = default(string), bool availForSale = default(bool), bool allowBackorders = default(bool), bool inStock = default(bool), bool manageStock = default(bool), decimal inventoryLevel = default(decimal), List<ProductInventory> inventory = default(List<ProductInventory>), decimal minQuantity = default(decimal), decimal defaultQtyInPack = default(decimal), bool isQtyInPackFixed = default(bool), string weightUnit = default(string), decimal weight = default(decimal), string dimensionsUnit = default(string), decimal width = default(decimal), decimal height = default(decimal), decimal length = default(decimal), string metaTitle = default(string), string metaDescription = default(string), string metaKeywords = default(string), List<Discount> discounts = default(List<Discount>), bool isVirtual = default(bool), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Child(string id = default(string), string parentId = default(string), string sku = default(string), string upc = default(string), string ean = default(string), string mpn = default(string), string gtin = default(string), string isbn = default(string), string url = default(string), string seoUrl = default(string), int sortOrder = default(int), A2CDateTime createdTime = default(A2CDateTime), A2CDateTime modifiedTime = default(A2CDateTime), string name = default(string), string shortDescription = default(string), string fullDescription = default(string), List<Image> images = default(List<Image>), List<ProductChildItemCombination> combination = default(List<ProductChildItemCombination>), decimal defaultPrice = default(decimal), decimal costPrice = default(decimal), decimal listPrice = default(decimal), decimal wholesalePrice = default(decimal), List<ProductAdvancedPrice> advancedPrice = default(List<ProductAdvancedPrice>), string taxClassId = default(string), bool availForSale = default(bool), bool allowBackorders = default(bool), bool inStock = default(bool), bool onSale = default(bool), bool manageStock = default(bool), decimal inventoryLevel = default(decimal), List<ProductInventory> inventory = default(List<ProductInventory>), decimal minQuantity = default(decimal), decimal defaultQtyInPack = default(decimal), bool isQtyInPackFixed = default(bool), string weightUnit = default(string), decimal weight = default(decimal), string dimensionsUnit = default(string), decimal width = default(decimal), decimal height = default(decimal), decimal length = default(decimal), string metaTitle = default(string), string metaDescription = default(string), string metaKeywords = default(string), List<Discount> discounts = default(List<Discount>), bool isVirtual = default(bool), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.ParentId = parentId;
@@ -110,6 +111,7 @@ namespace Org.OpenAPITools.Model
             this.AvailForSale = availForSale;
             this.AllowBackorders = allowBackorders;
             this.InStock = inStock;
+            this.OnSale = onSale;
             this.ManageStock = manageStock;
             this.InventoryLevel = inventoryLevel;
             this.Inventory = inventory;
@@ -294,6 +296,12 @@ namespace Org.OpenAPITools.Model
         public bool InStock { get; set; }
 
         /// <summary>
+        /// Gets or Sets OnSale
+        /// </summary>
+        [DataMember(Name = "on_sale", EmitDefaultValue = true)]
+        public bool OnSale { get; set; }
+
+        /// <summary>
         /// Gets or Sets ManageStock
         /// </summary>
         [DataMember(Name = "manage_stock", EmitDefaultValue = true)]
@@ -442,6 +450,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  AvailForSale: ").Append(AvailForSale).Append("\n");
             sb.Append("  AllowBackorders: ").Append(AllowBackorders).Append("\n");
             sb.Append("  InStock: ").Append(InStock).Append("\n");
+            sb.Append("  OnSale: ").Append(OnSale).Append("\n");
             sb.Append("  ManageStock: ").Append(ManageStock).Append("\n");
             sb.Append("  InventoryLevel: ").Append(InventoryLevel).Append("\n");
             sb.Append("  Inventory: ").Append(Inventory).Append("\n");
