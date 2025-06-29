@@ -616,7 +616,7 @@ namespace Org.OpenAPITools.Api
         /// order.shipment.list
         /// </summary>
         /// <remarks>
-        /// Get list of shipments by orders.
+        /// Get list of shipments per order.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>
@@ -639,7 +639,7 @@ namespace Org.OpenAPITools.Api
         /// order.shipment.list
         /// </summary>
         /// <remarks>
-        /// Get list of shipments by orders.
+        /// Get list of shipments per order.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>
@@ -1452,7 +1452,7 @@ namespace Org.OpenAPITools.Api
         /// order.shipment.list
         /// </summary>
         /// <remarks>
-        /// Get list of shipments by orders.
+        /// Get list of shipments per order.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>
@@ -1476,7 +1476,7 @@ namespace Org.OpenAPITools.Api
         /// order.shipment.list
         /// </summary>
         /// <remarks>
-        /// Get list of shipments by orders.
+        /// Get list of shipments per order.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>
@@ -5740,7 +5740,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// order.shipment.list Get list of shipments by orders.
+        /// order.shipment.list Get list of shipments per order.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>
@@ -5764,7 +5764,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// order.shipment.list Get list of shipments by orders.
+        /// order.shipment.list Get list of shipments per order.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>
@@ -5887,7 +5887,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// order.shipment.list Get list of shipments by orders.
+        /// order.shipment.list Get list of shipments per order.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>
@@ -5912,7 +5912,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// order.shipment.list Get list of shipments by orders.
+        /// order.shipment.list Get list of shipments per order.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId">Retrieves shipments specified by order id</param>

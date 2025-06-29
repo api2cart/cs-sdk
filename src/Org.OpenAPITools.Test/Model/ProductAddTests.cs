@@ -983,6 +983,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'CategoryType'
+        /// </summary>
+        [Fact]
+        public void CategoryTypeTest()
+        {
+            // TODO unit test for the property 'CategoryType'
+        }
+
+        /// <summary>
         /// Test the property 'ReturnAccepted'
         /// </summary>
         [Fact]

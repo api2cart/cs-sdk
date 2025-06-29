@@ -153,7 +153,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="actionConditionValue">Defines condition attribute value/s. Can be comma separated string..</param>
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (default to false).</param>
         /// <param name="storeId">Store Id.</param>
-        public CartCouponAdd(string code = default(string), ActionTypeEnum actionType = default(ActionTypeEnum), ActionApplyToEnum actionApplyTo = default(ActionApplyToEnum), ActionScopeEnum actionScope = default(ActionScopeEnum), decimal actionAmount = default(decimal), List<string> codes = default(List<string>), string name = default(string), string dateStart = @"now", string dateEnd = default(string), int usageLimit = default(int), int usageLimitPerCustomer = default(int), string actionConditionEntity = default(string), string actionConditionKey = default(string), string actionConditionOperator = default(string), string actionConditionValue = default(string), bool includeTax = false, string storeId = default(string))
+        /// <param name="freeCashOnDelivery">Defines whether the coupon provides free cash on delivery.</param>
+        public CartCouponAdd(string code = default(string), ActionTypeEnum actionType = default(ActionTypeEnum), ActionApplyToEnum actionApplyTo = default(ActionApplyToEnum), ActionScopeEnum actionScope = default(ActionScopeEnum), decimal actionAmount = default(decimal), List<string> codes = default(List<string>), string name = default(string), string dateStart = @"now", string dateEnd = default(string), int usageLimit = default(int), int usageLimitPerCustomer = default(int), string actionConditionEntity = default(string), string actionConditionKey = default(string), string actionConditionOperator = default(string), string actionConditionValue = default(string), bool includeTax = false, string storeId = default(string), bool freeCashOnDelivery = default(bool))
         {
             // to ensure "code" is required (not null)
             if (code == null)
@@ -178,6 +179,7 @@ namespace Org.OpenAPITools.Model
             this.ActionConditionValue = actionConditionValue;
             this.IncludeTax = includeTax;
             this.StoreId = storeId;
+            this.FreeCashOnDelivery = freeCashOnDelivery;
         }
 
         /// <summary>
@@ -321,6 +323,16 @@ namespace Org.OpenAPITools.Model
         public string StoreId { get; set; }
 
         /// <summary>
+        /// Defines whether the coupon provides free cash on delivery
+        /// </summary>
+        /// <value>Defines whether the coupon provides free cash on delivery</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "free_cash_on_delivery", EmitDefaultValue = true)]
+        public bool FreeCashOnDelivery { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -345,6 +357,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  ActionConditionValue: ").Append(ActionConditionValue).Append("\n");
             sb.Append("  IncludeTax: ").Append(IncludeTax).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  FreeCashOnDelivery: ").Append(FreeCashOnDelivery).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

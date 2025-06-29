@@ -107,6 +107,7 @@ Name | Type | Description | Notes
 **LogisticInfo** | [**List&lt;ProductAddLogisticInfoInner&gt;**](ProductAddLogisticInfoInner.md) | Defines product&#39;s logistic channel settings | [optional] 
 **ListingDuration** | **string** | Describes the number of days the seller wants the listing to be active. Look at cart.info method response for allowed values. | [optional] 
 **ListingType** | **string** | Indicates the selling format of the marketplace listing. | [optional] [default to "FixedPrice"]
+**CategoryType** | **string** | Specifies the type of category (e.g., apparel or other) for the product being added. | [optional] 
 **ReturnAccepted** | **bool** | Indicates whether the seller allows the buyer to return the item. | [optional] 
 **SellerProfiles** | [**ProductAddSellerProfiles**](ProductAddSellerProfiles.md) |  | [optional] 
 **AuctionConfidentialityLevel** | **string** | This allows buyers to remain anonymous when the bid or buy an item. | [optional] 

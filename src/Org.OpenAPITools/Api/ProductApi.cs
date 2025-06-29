@@ -407,6 +407,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts products that are searched specified by field (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
@@ -415,7 +416,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductCount200Response</returns>
-        ProductCount200Response ProductCount(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
+        ProductCount200Response ProductCount(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// product.count
@@ -440,6 +441,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts products that are searched specified by field (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
@@ -448,7 +450,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductCount200Response</returns>
-        ApiResponse<ProductCount200Response> ProductCountWithHttpInfo(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
+        ApiResponse<ProductCount200Response> ProductCountWithHttpInfo(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
         /// <summary>
         /// product.currency.add
         /// </summary>
@@ -785,6 +787,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Product search that is specified by field (optional)</param>
         /// <param name="returnGlobal">Determines the type of products to be returned. If set to &#39;true&#39;, only global products will be returned; if set to &#39;false&#39;, only local products will be returned. (optional, default to false)</param>
@@ -799,7 +802,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseProductList</returns>
-        ModelResponseProductList ProductList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
+        ModelResponseProductList ProductList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// product.list
@@ -829,6 +832,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Product search that is specified by field (optional)</param>
         /// <param name="returnGlobal">Determines the type of products to be returned. If set to &#39;true&#39;, only global products will be returned; if set to &#39;false&#39;, only local products will be returned. (optional, default to false)</param>
@@ -843,7 +847,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseProductList</returns>
-        ApiResponse<ModelResponseProductList> ProductListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
+        ApiResponse<ModelResponseProductList> ProductListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
         /// <summary>
         /// product.manufacturer.add
         /// </summary>
@@ -2116,6 +2120,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts products that are searched specified by field (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
@@ -2125,7 +2130,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCount200Response</returns>
-        System.Threading.Tasks.Task<ProductCount200Response> ProductCountAsync(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductCount200Response> ProductCountAsync(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.count
@@ -2150,6 +2155,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts products that are searched specified by field (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
@@ -2159,7 +2165,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCount200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductCount200Response>> ProductCountWithHttpInfoAsync(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductCount200Response>> ProductCountWithHttpInfoAsync(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.currency.add
         /// </summary>
@@ -2516,6 +2522,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Product search that is specified by field (optional)</param>
         /// <param name="returnGlobal">Determines the type of products to be returned. If set to &#39;true&#39;, only global products will be returned; if set to &#39;false&#39;, only local products will be returned. (optional, default to false)</param>
@@ -2531,7 +2538,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseProductList</returns>
-        System.Threading.Tasks.Task<ModelResponseProductList> ProductListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseProductList> ProductListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.list
@@ -2561,6 +2568,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Product search that is specified by field (optional)</param>
         /// <param name="returnGlobal">Determines the type of products to be returned. If set to &#39;true&#39;, only global products will be returned; if set to &#39;false&#39;, only local products will be returned. (optional, default to false)</param>
@@ -2576,7 +2584,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseProductList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseProductList>> ProductListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseProductList>> ProductListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.manufacturer.add
         /// </summary>
@@ -6027,6 +6035,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts products that are searched specified by field (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
@@ -6035,9 +6044,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductCount200Response</returns>
-        public ProductCount200Response ProductCount(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
+        public ProductCount200Response ProductCount(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductCount200Response> localVarResponse = ProductCountWithHttpInfo(productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, productAttributes, status, type, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
+            Org.OpenAPITools.Client.ApiResponse<ProductCount200Response> localVarResponse = ProductCountWithHttpInfo(productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
             return localVarResponse.Data;
         }
 
@@ -6061,6 +6070,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts products that are searched specified by field (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
@@ -6069,7 +6079,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductCount200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ProductCount200Response> ProductCountWithHttpInfo(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ProductCount200Response> ProductCountWithHttpInfo(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -6158,6 +6168,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
             }
+            if (visible != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "visible", visible));
+            }
             if (findValue != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "find_value", findValue));
@@ -6231,6 +6245,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts products that are searched specified by field (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
@@ -6240,9 +6255,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCount200Response</returns>
-        public async System.Threading.Tasks.Task<ProductCount200Response> ProductCountAsync(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductCount200Response> ProductCountAsync(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductCount200Response> localVarResponse = await ProductCountWithHttpInfoAsync(productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, productAttributes, status, type, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ProductCount200Response> localVarResponse = await ProductCountWithHttpInfoAsync(productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6266,6 +6281,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts products that are searched specified by field (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
@@ -6275,7 +6291,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCount200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductCount200Response>> ProductCountWithHttpInfoAsync(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductCount200Response>> ProductCountWithHttpInfoAsync(string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? returnGlobal = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -6363,6 +6379,10 @@ namespace Org.OpenAPITools.Api
             if (type != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
+            }
+            if (visible != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "visible", visible));
             }
             if (findValue != null)
             {
@@ -8551,6 +8571,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Product search that is specified by field (optional)</param>
         /// <param name="returnGlobal">Determines the type of products to be returned. If set to &#39;true&#39;, only global products will be returned; if set to &#39;false&#39;, only local products will be returned. (optional, default to false)</param>
@@ -8565,9 +8586,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseProductList</returns>
-        public ModelResponseProductList ProductList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
+        public ModelResponseProductList ProductList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseProductList> localVarResponse = ProductListWithHttpInfo(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, status, type, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseProductList> localVarResponse = ProductListWithHttpInfo(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion);
             return localVarResponse.Data;
         }
 
@@ -8596,6 +8617,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Product search that is specified by field (optional)</param>
         /// <param name="returnGlobal">Determines the type of products to be returned. If set to &#39;true&#39;, only global products will be returned; if set to &#39;false&#39;, only local products will be returned. (optional, default to false)</param>
@@ -8610,7 +8632,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseProductList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseProductList> ProductListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseProductList> ProductListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -8719,6 +8741,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
             }
+            if (visible != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "visible", visible));
+            }
             if (findValue != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "find_value", findValue));
@@ -8821,6 +8847,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Product search that is specified by field (optional)</param>
         /// <param name="returnGlobal">Determines the type of products to be returned. If set to &#39;true&#39;, only global products will be returned; if set to &#39;false&#39;, only local products will be returned. (optional, default to false)</param>
@@ -8836,9 +8863,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseProductList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseProductList> ProductListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseProductList> ProductListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseProductList> localVarResponse = await ProductListWithHttpInfoAsync(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, status, type, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseProductList> localVarResponse = await ProductListWithHttpInfoAsync(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -8867,6 +8894,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productAttributes">Defines product attributes (optional)</param>
         /// <param name="status">Defines product&#39;s status (optional)</param>
         /// <param name="type">Defines products&#39;s type (optional)</param>
+        /// <param name="visible">Filter items by visibility status (optional, default to &quot;everywhere&quot;)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Product search that is specified by field (optional)</param>
         /// <param name="returnGlobal">Determines the type of products to be returned. If set to &#39;true&#39;, only global products will be returned; if set to &#39;false&#39;, only local products will be returned. (optional, default to false)</param>
@@ -8882,7 +8910,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseProductList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseProductList>> ProductListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseProductList>> ProductListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? productIds = default(string?), string? sinceId = default(string?), string? categoriesIds = default(string?), string? categoryId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? currencyId = default(string?), bool? availView = default(bool?), bool? availSale = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sku = default(string?), string? brandName = default(string?), List<string>? productAttributes = default(List<string>?), string? status = default(string?), string? type = default(string?), string? visible = default(string?), string? findValue = default(string?), string? findWhere = default(string?), bool? returnGlobal = default(bool?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? reportRequestId = default(string?), bool? disableCache = default(bool?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -8990,6 +9018,10 @@ namespace Org.OpenAPITools.Api
             if (type != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
+            }
+            if (visible != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "visible", visible));
             }
             if (findValue != null)
             {

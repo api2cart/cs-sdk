@@ -128,6 +128,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'OrderItemTaxClass'
+        /// </summary>
+        [Fact]
+        public void OrderItemTaxClassTest()
+        {
+            // TODO unit test for the property 'OrderItemTaxClass'
+        }
+
+        /// <summary>
         /// Test the property 'OrderItemPriceIncludesTax'
         /// </summary>
         [Fact]

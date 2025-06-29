@@ -1109,7 +1109,7 @@ catch (ApiException e)
 
 <a id="productcount"></a>
 # **ProductCount**
-> ProductCount200Response ProductCount (string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? langId = null, bool? availView = null, bool? availSale = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? brandName = null, List<string>? productAttributes = null, string? status = null, string? type = null, string? findValue = null, string? findWhere = null, string? reportRequestId = null, bool? returnGlobal = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
+> ProductCount200Response ProductCount (string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? langId = null, bool? availView = null, bool? availSale = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? brandName = null, List<string>? productAttributes = null, string? status = null, string? type = null, string? visible = null, string? findValue = null, string? findWhere = null, string? reportRequestId = null, bool? returnGlobal = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
 
 product.count
 
@@ -1157,6 +1157,7 @@ namespace Example
             var productAttributes = new List<string>?(); // List<string>? | Defines product attributes (optional) 
             var status = disabled;  // string? | Defines product's status (optional) 
             var type = simple;  // string? | Defines products's type (optional) 
+            var visible = everywhere;  // string? | Filter items by visibility status (optional)  (default to "everywhere")
             var findValue = Phone;  // string? | Entity search that is specified by some value (optional) 
             var findWhere = name;  // string? | Counts products that are searched specified by field (optional) 
             var reportRequestId = 105245017661;  // string? | Report request id (optional) 
@@ -1167,7 +1168,7 @@ namespace Example
             try
             {
                 // product.count
-                ProductCount200Response result = apiInstance.ProductCount(productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, productAttributes, status, type, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
+                ProductCount200Response result = apiInstance.ProductCount(productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1188,7 +1189,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.count
-    ApiResponse<ProductCount200Response> response = apiInstance.ProductCountWithHttpInfo(productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, productAttributes, status, type, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
+    ApiResponse<ProductCount200Response> response = apiInstance.ProductCountWithHttpInfo(productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1221,6 +1222,7 @@ catch (ApiException e)
 | **productAttributes** | [**List&lt;string&gt;?**](string.md) | Defines product attributes | [optional]  |
 | **status** | **string?** | Defines product&#39;s status | [optional]  |
 | **type** | **string?** | Defines products&#39;s type | [optional]  |
+| **visible** | **string?** | Filter items by visibility status | [optional] [default to &quot;everywhere&quot;] |
 | **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
 | **findWhere** | **string?** | Counts products that are searched specified by field | [optional]  |
 | **reportRequestId** | **string?** | Report request id | [optional]  |
@@ -2324,7 +2326,7 @@ catch (ApiException e)
 
 <a id="productlist"></a>
 # **ProductList**
-> ModelResponseProductList ProductList (int? start = null, int? count = null, string? pageCursor = null, string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? langId = null, string? currencyId = null, bool? availView = null, bool? availSale = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? sku = null, string? brandName = null, List<string>? productAttributes = null, string? status = null, string? type = null, string? findValue = null, string? findWhere = null, bool? returnGlobal = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? sortBy = null, string? sortDirection = null, string? reportRequestId = null, bool? disableCache = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
+> ModelResponseProductList ProductList (int? start = null, int? count = null, string? pageCursor = null, string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? langId = null, string? currencyId = null, bool? availView = null, bool? availSale = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? sku = null, string? brandName = null, List<string>? productAttributes = null, string? status = null, string? type = null, string? visible = null, string? findValue = null, string? findWhere = null, bool? returnGlobal = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? sortBy = null, string? sortDirection = null, string? reportRequestId = null, bool? disableCache = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
 
 product.list
 
@@ -2377,6 +2379,7 @@ namespace Example
             var productAttributes = new List<string>?(); // List<string>? | Defines product attributes (optional) 
             var status = disabled;  // string? | Defines product's status (optional) 
             var type = simple;  // string? | Defines products's type (optional) 
+            var visible = everywhere;  // string? | Filter items by visibility status (optional)  (default to "everywhere")
             var findValue = Phone;  // string? | Entity search that is specified by some value (optional) 
             var findWhere = name;  // string? | Product search that is specified by field (optional) 
             var returnGlobal = false;  // bool? | Determines the type of products to be returned. If set to 'true', only global products will be returned; if set to 'false', only local products will be returned. (optional)  (default to false)
@@ -2393,7 +2396,7 @@ namespace Example
             try
             {
                 // product.list
-                ModelResponseProductList result = apiInstance.ProductList(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, status, type, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion);
+                ModelResponseProductList result = apiInstance.ProductList(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2414,7 +2417,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.list
-    ApiResponse<ModelResponseProductList> response = apiInstance.ProductListWithHttpInfo(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, status, type, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion);
+    ApiResponse<ModelResponseProductList> response = apiInstance.ProductListWithHttpInfo(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2452,6 +2455,7 @@ catch (ApiException e)
 | **productAttributes** | [**List&lt;string&gt;?**](string.md) | Defines product attributes | [optional]  |
 | **status** | **string?** | Defines product&#39;s status | [optional]  |
 | **type** | **string?** | Defines products&#39;s type | [optional]  |
+| **visible** | **string?** | Filter items by visibility status | [optional] [default to &quot;everywhere&quot;] |
 | **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
 | **findWhere** | **string?** | Product search that is specified by field | [optional]  |
 | **returnGlobal** | **bool?** | Determines the type of products to be returned. If set to &#39;true&#39;, only global products will be returned; if set to &#39;false&#39;, only local products will be returned. | [optional] [default to false] |

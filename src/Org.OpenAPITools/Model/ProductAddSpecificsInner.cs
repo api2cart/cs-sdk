@@ -40,16 +40,18 @@ namespace Org.OpenAPITools.Model
         /// <param name="values">values.</param>
         /// <param name="usedForVariations">usedForVariations (default to false).</param>
         /// <param name="scaleId">scaleId.</param>
+        /// <param name="inputValue">inputValue.</param>
         /// <param name="foodDetails">foodDetails.</param>
         /// <param name="groupProductsDetails">groupProductsDetails.</param>
         /// <param name="bookingDetails">bookingDetails.</param>
-        public ProductAddSpecificsInner(string name = default(string), string value = default(string), List<string> values = default(List<string>), bool usedForVariations = false, int? scaleId = default(int?), ProductAddSpecificsInnerFoodDetails foodDetails = default(ProductAddSpecificsInnerFoodDetails), List<ProductAddSpecificsInnerGroupProductsDetailsInner> groupProductsDetails = default(List<ProductAddSpecificsInnerGroupProductsDetailsInner>), ProductAddSpecificsInnerBookingDetails bookingDetails = default(ProductAddSpecificsInnerBookingDetails))
+        public ProductAddSpecificsInner(string name = default(string), string value = default(string), List<string> values = default(List<string>), bool usedForVariations = false, int? scaleId = default(int?), string inputValue = default(string), ProductAddSpecificsInnerFoodDetails foodDetails = default(ProductAddSpecificsInnerFoodDetails), List<ProductAddSpecificsInnerGroupProductsDetailsInner> groupProductsDetails = default(List<ProductAddSpecificsInnerGroupProductsDetailsInner>), ProductAddSpecificsInnerBookingDetails bookingDetails = default(ProductAddSpecificsInnerBookingDetails))
         {
             this.Name = name;
             this.Value = value;
             this.Values = values;
             this.UsedForVariations = usedForVariations;
             this.ScaleId = scaleId;
+            this.InputValue = inputValue;
             this.FoodDetails = foodDetails;
             this.GroupProductsDetails = groupProductsDetails;
             this.BookingDetails = bookingDetails;
@@ -86,6 +88,12 @@ namespace Org.OpenAPITools.Model
         public int? ScaleId { get; set; }
 
         /// <summary>
+        /// Gets or Sets InputValue
+        /// </summary>
+        [DataMember(Name = "input_value", EmitDefaultValue = true)]
+        public string InputValue { get; set; }
+
+        /// <summary>
         /// Gets or Sets FoodDetails
         /// </summary>
         [DataMember(Name = "food_details", EmitDefaultValue = false)]
@@ -116,6 +124,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("  UsedForVariations: ").Append(UsedForVariations).Append("\n");
             sb.Append("  ScaleId: ").Append(ScaleId).Append("\n");
+            sb.Append("  InputValue: ").Append(InputValue).Append("\n");
             sb.Append("  FoodDetails: ").Append(FoodDetails).Append("\n");
             sb.Append("  GroupProductsDetails: ").Append(GroupProductsDetails).Append("\n");
             sb.Append("  BookingDetails: ").Append(BookingDetails).Append("\n");

@@ -48,6 +48,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="orderItemWeight">Defines orders specified by order item weight.</param>
         /// <param name="orderItemVariantId">Ordered product variant. Where x is order item ID.</param>
         /// <param name="orderItemTax">Percentage of tax for product order (default to 0M).</param>
+        /// <param name="orderItemTaxClass">Id of the tax class of product..</param>
         /// <param name="orderItemPriceIncludesTax">Defines if item price includes tax (default to false).</param>
         /// <param name="orderItemParent">Index of the parent grouped/bundle product.</param>
         /// <param name="orderItemParentOptionName">Option name of the parent grouped/bundle product.</param>
@@ -55,7 +56,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="orderItemAllowShipItemsSeparately">Indicates whether subitems of the grouped/bundle product can be shipped separately.</param>
         /// <param name="orderItemOption">orderItemOption.</param>
         /// <param name="orderItemProperty">orderItemProperty.</param>
-        public OrderAddOrderItemInner(string orderItemId = default(string), string orderItemName = default(string), string orderItemModel = default(string), decimal orderItemPrice = default(decimal), int orderItemQuantity = default(int), decimal orderItemWeight = default(decimal), string orderItemVariantId = default(string), decimal orderItemTax = 0M, bool orderItemPriceIncludesTax = false, int orderItemParent = default(int), string orderItemParentOptionName = default(string), bool orderItemAllowRefundItemsSeparately = default(bool), bool orderItemAllowShipItemsSeparately = default(bool), List<OrderAddOrderItemInnerOrderItemOptionInner> orderItemOption = default(List<OrderAddOrderItemInnerOrderItemOptionInner>), List<OrderAddOrderItemInnerOrderItemPropertyInner> orderItemProperty = default(List<OrderAddOrderItemInnerOrderItemPropertyInner>))
+        public OrderAddOrderItemInner(string orderItemId = default(string), string orderItemName = default(string), string orderItemModel = default(string), decimal orderItemPrice = default(decimal), int orderItemQuantity = default(int), decimal orderItemWeight = default(decimal), string orderItemVariantId = default(string), decimal orderItemTax = 0M, string orderItemTaxClass = default(string), bool orderItemPriceIncludesTax = false, int orderItemParent = default(int), string orderItemParentOptionName = default(string), bool orderItemAllowRefundItemsSeparately = default(bool), bool orderItemAllowShipItemsSeparately = default(bool), List<OrderAddOrderItemInnerOrderItemOptionInner> orderItemOption = default(List<OrderAddOrderItemInnerOrderItemOptionInner>), List<OrderAddOrderItemInnerOrderItemPropertyInner> orderItemProperty = default(List<OrderAddOrderItemInnerOrderItemPropertyInner>))
         {
             // to ensure "orderItemId" is required (not null)
             if (orderItemId == null)
@@ -75,6 +76,7 @@ namespace Org.OpenAPITools.Model
             this.OrderItemWeight = orderItemWeight;
             this.OrderItemVariantId = orderItemVariantId;
             this.OrderItemTax = orderItemTax;
+            this.OrderItemTaxClass = orderItemTaxClass;
             this.OrderItemPriceIncludesTax = orderItemPriceIncludesTax;
             this.OrderItemParent = orderItemParent;
             this.OrderItemParentOptionName = orderItemParentOptionName;
@@ -165,6 +167,16 @@ namespace Org.OpenAPITools.Model
         public decimal OrderItemTax { get; set; }
 
         /// <summary>
+        /// Id of the tax class of product.
+        /// </summary>
+        /// <value>Id of the tax class of product.</value>
+        /*
+        <example>standard</example>
+        */
+        [DataMember(Name = "order_item_tax_class", EmitDefaultValue = false)]
+        public string OrderItemTaxClass { get; set; }
+
+        /// <summary>
         /// Defines if item price includes tax
         /// </summary>
         /// <value>Defines if item price includes tax</value>
@@ -239,6 +251,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  OrderItemWeight: ").Append(OrderItemWeight).Append("\n");
             sb.Append("  OrderItemVariantId: ").Append(OrderItemVariantId).Append("\n");
             sb.Append("  OrderItemTax: ").Append(OrderItemTax).Append("\n");
+            sb.Append("  OrderItemTaxClass: ").Append(OrderItemTaxClass).Append("\n");
             sb.Append("  OrderItemPriceIncludesTax: ").Append(OrderItemPriceIncludesTax).Append("\n");
             sb.Append("  OrderItemParent: ").Append(OrderItemParent).Append("\n");
             sb.Append("  OrderItemParentOptionName: ").Append(OrderItemParentOptionName).Append("\n");

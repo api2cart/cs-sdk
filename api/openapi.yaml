@@ -8541,7 +8541,7 @@ paths:
       - order
   /order.shipment.list.json:
     get:
-      description: Get list of shipments by orders.
+      description: Get list of shipments per order.
       operationId: OrderShipmentList
       parameters:
       - description: This parameter sets the number from which you want to get entities
@@ -9213,6 +9213,16 @@ paths:
         schema:
           type: string
         style: form
+      - description: Filter items by visibility status
+        example: everywhere
+        explode: true
+        in: query
+        name: visible
+        required: false
+        schema:
+          default: everywhere
+          type: string
+        style: form
       - description: Entity search that is specified by some value
         example: Phone
         explode: true
@@ -9484,6 +9494,16 @@ paths:
         name: type
         required: false
         schema:
+          type: string
+        style: form
+      - description: Filter items by visibility status
+        example: everywhere
+        explode: true
+        in: query
+        name: visible
+        required: false
+        schema:
+          default: everywhere
           type: string
         style: form
       - description: Entity search that is specified by some value
@@ -19021,6 +19041,7 @@ components:
       example:
         store_id: "1"
         codes: "codes[0]=000_BIG_SALE_000&codes[1]=000_BIG_SALE_001&codes[2]=000_BIG_SALE_002"
+        free_cash_on_delivery: true
         action_scope: matching_items
         usage_limit: 99
         code: 000_BIG_SALE_000
@@ -19139,6 +19160,11 @@ components:
           example: "1"
           type: string
           name: store_id
+        free_cash_on_delivery:
+          description: Defines whether the coupon provides free cash on delivery
+          example: true
+          type: boolean
+          name: free_cash_on_delivery
       required:
       - action_amount
       - action_apply_to
@@ -26240,6 +26266,7 @@ components:
           order_item_id: "125, where {x} - 1,2,3,... etc"
           order_item_price: "1.32, where {x} - 1,2,3,... etc"
           order_item_allow_ship_items_separately: true
+          order_item_tax_class: standard
           order_item_option:
           - order_item_option_value: green
             order_item_option_name: Color
@@ -26265,6 +26292,7 @@ components:
           order_item_id: "125, where {x} - 1,2,3,... etc"
           order_item_price: "1.32, where {x} - 1,2,3,... etc"
           order_item_allow_ship_items_separately: true
+          order_item_tax_class: standard
           order_item_option:
           - order_item_option_value: green
             order_item_option_name: Color
@@ -30964,6 +30992,7 @@ components:
           food_details:
             calories: 5.637376656633329
           value: value
+          input_value: input_value
         - group_products_details:
           - quantity: 1
             id: id
@@ -31006,6 +31035,7 @@ components:
           food_details:
             calories: 5.637376656633329
           value: value
+          input_value: input_value
         ordered_count: 15
         seo_url: some seo url
         delivery_time: 1
@@ -31065,6 +31095,7 @@ components:
         quantity: 6
         length: 56.12
         lang_id: 3
+        category_type: Apparel
         certifications:
         - images:
           - url: url
@@ -31657,6 +31688,12 @@ components:
           example: Auction
           type: string
           name: listing_type
+        category_type:
+          description: "Specifies the type of category (e.g., apparel or other) for\
+            \ the product being added."
+          example: Apparel
+          type: string
+          name: category_type
         return_accepted:
           description: Indicates whether the seller allows the buyer to return the
             item.
@@ -32420,6 +32457,7 @@ components:
           food_details:
             calories: 5.637376656633329
           value: value
+          input_value: input_value
         - group_products_details:
           - quantity: 1
             id: id
@@ -32462,6 +32500,7 @@ components:
           food_details:
             calories: 5.637376656633329
           value: value
+          input_value: input_value
       properties:
         id:
           description: Defines product id that has to be updated
@@ -47106,6 +47145,7 @@ components:
         order_item_id: "125, where {x} - 1,2,3,... etc"
         order_item_price: "1.32, where {x} - 1,2,3,... etc"
         order_item_allow_ship_items_separately: true
+        order_item_tax_class: standard
         order_item_option:
         - order_item_option_value: green
           order_item_option_name: Color
@@ -47157,6 +47197,11 @@ components:
           example: 5.5
           type: number
           name: "order_item_tax_{x}"
+        order_item_tax_class:
+          description: Id of the tax class of product.
+          example: standard
+          type: string
+          name: "order_item_tax_class_{x}"
         order_item_price_includes_tax:
           default: false
           description: Defines if item price includes tax
@@ -47792,6 +47837,7 @@ components:
         food_details:
           calories: 5.637376656633329
         value: value
+        input_value: input_value
       properties:
         name:
           type: string
@@ -47812,6 +47858,9 @@ components:
         scale_id:
           nullable: true
           type: integer
+        input_value:
+          nullable: true
+          type: string
         food_details:
           $ref: '#/components/schemas/ProductAdd_specifics_inner_food_details'
         group_products_details:

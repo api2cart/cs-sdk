@@ -101,6 +101,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'InputValue'
+        /// </summary>
+        [Fact]
+        public void InputValueTest()
+        {
+            // TODO unit test for the property 'InputValue'
+        }
+
+        /// <summary>
         /// Test the property 'FoodDetails'
         /// </summary>
         [Fact]
