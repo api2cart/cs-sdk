@@ -111,13 +111,14 @@ namespace Org.OpenAPITools.Test.Api
             //string? groupId = null;
             //string? storeId = null;
             //bool? avail = null;
+            //bool? includeGuests = null;
             //string? findValue = null;
             //string? findWhere = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
-            //var response = instance.CustomerCount(ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
+            //var response = instance.CustomerCount(ids, sinceId, customerListId, groupId, storeId, avail, includeGuests, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
             //Assert.IsType<CustomerCount200Response>(response);
         }
 
@@ -144,7 +145,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? findWhere = null;
             //string? findParams = null;
             //string? storeId = null;
-            //var response = instance.CustomerFind(findValue, findWhere, findParams, storeId);
+            //bool? includeGuests = null;
+            //var response = instance.CustomerFind(findValue, findWhere, findParams, storeId, includeGuests);
             //Assert.IsType<CustomerFind200Response>(response);
         }
 
@@ -215,6 +217,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? groupId = null;
             //string? storeId = null;
             //bool? avail = null;
+            //bool? includeGuests = null;
             //string? findValue = null;
             //string? findWhere = null;
             //string? createdFrom = null;
@@ -226,7 +229,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.CustomerList(start, count, pageCursor, ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, sortBy, sortDirection, responseFields, varParams, exclude);
+            //var response = instance.CustomerList(start, count, pageCursor, ids, sinceId, customerListId, groupId, storeId, avail, includeGuests, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, sortBy, sortDirection, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseCustomerList>(response);
         }
 

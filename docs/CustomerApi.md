@@ -333,7 +333,7 @@ catch (ApiException e)
 
 <a id="customercount"></a>
 # **CustomerCount**
-> CustomerCount200Response CustomerCount (string? ids = null, string? sinceId = null, string? customerListId = null, string? groupId = null, string? storeId = null, bool? avail = null, string? findValue = null, string? findWhere = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null)
+> CustomerCount200Response CustomerCount (string? ids = null, string? sinceId = null, string? customerListId = null, string? groupId = null, string? storeId = null, bool? avail = null, bool? includeGuests = null, string? findValue = null, string? findWhere = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null)
 
 customer.count
 
@@ -371,6 +371,7 @@ namespace Example
             var groupId = 3;  // string? | Customer group_id (optional) 
             var storeId = 1;  // string? | Counts customer specified by store id (optional) 
             var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
+            var includeGuests = true;  // bool? | Indicates whether to include guest customers in the total count. (optional)  (default to false)
             var findValue = mail@gmail.com;  // string? | Entity search that is specified by some value (optional) 
             var findWhere = email;  // string? | Counts customers that are searched specified by field (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
@@ -381,7 +382,7 @@ namespace Example
             try
             {
                 // customer.count
-                CustomerCount200Response result = apiInstance.CustomerCount(ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
+                CustomerCount200Response result = apiInstance.CustomerCount(ids, sinceId, customerListId, groupId, storeId, avail, includeGuests, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -402,7 +403,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // customer.count
-    ApiResponse<CustomerCount200Response> response = apiInstance.CustomerCountWithHttpInfo(ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
+    ApiResponse<CustomerCount200Response> response = apiInstance.CustomerCountWithHttpInfo(ids, sinceId, customerListId, groupId, storeId, avail, includeGuests, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -425,6 +426,7 @@ catch (ApiException e)
 | **groupId** | **string?** | Customer group_id | [optional]  |
 | **storeId** | **string?** | Counts customer specified by store id | [optional]  |
 | **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
+| **includeGuests** | **bool?** | Indicates whether to include guest customers in the total count. | [optional] [default to false] |
 | **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
 | **findWhere** | **string?** | Counts customers that are searched specified by field | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
@@ -555,7 +557,7 @@ catch (ApiException e)
 
 <a id="customerfind"></a>
 # **CustomerFind**
-> CustomerFind200Response CustomerFind (string findValue, string? findWhere = null, string? findParams = null, string? storeId = null)
+> CustomerFind200Response CustomerFind (string findValue, string? findWhere = null, string? findParams = null, string? storeId = null, bool? includeGuests = null)
 
 customer.find
 
@@ -591,11 +593,12 @@ namespace Example
             var findWhere = email;  // string? | Entity search that is specified by the comma-separated unique fields (optional)  (default to "email")
             var findParams = regex;  // string? | Entity search that is specified by comma-separated parameters (optional)  (default to "whole_words")
             var storeId = 1;  // string? | Store Id (optional) 
+            var includeGuests = true;  // bool? | Indicates whether to search among guest customers when looking up a customer. (optional)  (default to false)
 
             try
             {
                 // customer.find
-                CustomerFind200Response result = apiInstance.CustomerFind(findValue, findWhere, findParams, storeId);
+                CustomerFind200Response result = apiInstance.CustomerFind(findValue, findWhere, findParams, storeId, includeGuests);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -616,7 +619,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // customer.find
-    ApiResponse<CustomerFind200Response> response = apiInstance.CustomerFindWithHttpInfo(findValue, findWhere, findParams, storeId);
+    ApiResponse<CustomerFind200Response> response = apiInstance.CustomerFindWithHttpInfo(findValue, findWhere, findParams, storeId, includeGuests);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -637,6 +640,7 @@ catch (ApiException e)
 | **findWhere** | **string?** | Entity search that is specified by the comma-separated unique fields | [optional] [default to &quot;email&quot;] |
 | **findParams** | **string?** | Entity search that is specified by comma-separated parameters | [optional] [default to &quot;whole_words&quot;] |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **includeGuests** | **bool?** | Indicates whether to search among guest customers when looking up a customer. | [optional] [default to false] |
 
 ### Return type
 
@@ -991,7 +995,7 @@ catch (ApiException e)
 
 <a id="customerlist"></a>
 # **CustomerList**
-> ModelResponseCustomerList CustomerList (int? start = null, int? count = null, string? pageCursor = null, string? ids = null, string? sinceId = null, string? customerListId = null, string? groupId = null, string? storeId = null, bool? avail = null, string? findValue = null, string? findWhere = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? sortBy = null, string? sortDirection = null, string? responseFields = null, string? varParams = null, string? exclude = null)
+> ModelResponseCustomerList CustomerList (int? start = null, int? count = null, string? pageCursor = null, string? ids = null, string? sinceId = null, string? customerListId = null, string? groupId = null, string? storeId = null, bool? avail = null, bool? includeGuests = null, string? findValue = null, string? findWhere = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? sortBy = null, string? sortDirection = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 customer.list
 
@@ -1032,6 +1036,7 @@ namespace Example
             var groupId = 3;  // string? | Customer group_id (optional) 
             var storeId = 1;  // string? | Retrieves customers specified by store id (optional) 
             var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
+            var includeGuests = true;  // bool? | Indicates whether to include guest customers in the list results. (optional)  (default to false)
             var findValue = mail@gmail.com;  // string? | Entity search that is specified by some value (optional) 
             var findWhere = email;  // string? | Customer search that is specified by field (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
@@ -1047,7 +1052,7 @@ namespace Example
             try
             {
                 // customer.list
-                ModelResponseCustomerList result = apiInstance.CustomerList(start, count, pageCursor, ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, sortBy, sortDirection, responseFields, varParams, exclude);
+                ModelResponseCustomerList result = apiInstance.CustomerList(start, count, pageCursor, ids, sinceId, customerListId, groupId, storeId, avail, includeGuests, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, sortBy, sortDirection, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1068,7 +1073,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // customer.list
-    ApiResponse<ModelResponseCustomerList> response = apiInstance.CustomerListWithHttpInfo(start, count, pageCursor, ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, sortBy, sortDirection, responseFields, varParams, exclude);
+    ApiResponse<ModelResponseCustomerList> response = apiInstance.CustomerListWithHttpInfo(start, count, pageCursor, ids, sinceId, customerListId, groupId, storeId, avail, includeGuests, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, sortBy, sortDirection, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1094,6 +1099,7 @@ catch (ApiException e)
 | **groupId** | **string?** | Customer group_id | [optional]  |
 | **storeId** | **string?** | Retrieves customers specified by store id | [optional]  |
 | **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
+| **includeGuests** | **bool?** | Indicates whether to include guest customers in the list results. | [optional] [default to false] |
 | **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
 | **findWhere** | **string?** | Customer search that is specified by field | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |

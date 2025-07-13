@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **LastLogin** | [**A2CDateTime**](A2CDateTime.md) |  | [optional] 
 **BirthDay** | [**A2CDateTime**](A2CDateTime.md) |  | [optional] 
 **Status** | **string** |  | [optional] 
+**IsGuest** | **bool** |  | [optional] 
 **NewsLetterSubscription** | **bool** |  | [optional] 
 **Consents** | [**List&lt;CustomerConsent&gt;**](CustomerConsent.md) |  | [optional] 
 **Gender** | **string** |  | [optional] 

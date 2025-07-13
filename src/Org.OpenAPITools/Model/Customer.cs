@@ -47,6 +47,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="lastLogin">lastLogin.</param>
         /// <param name="birthDay">birthDay.</param>
         /// <param name="status">status.</param>
+        /// <param name="isGuest">isGuest.</param>
         /// <param name="newsLetterSubscription">newsLetterSubscription.</param>
         /// <param name="consents">consents.</param>
         /// <param name="gender">gender.</param>
@@ -61,7 +62,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="lastOrderId">lastOrderId.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Customer(string id = default(string), string email = default(string), string firstName = default(string), string lastName = default(string), string phone = default(string), A2CDateTime createdTime = default(A2CDateTime), A2CDateTime modifiedTime = default(A2CDateTime), List<CustomerGroup> group = default(List<CustomerGroup>), string login = default(string), A2CDateTime lastLogin = default(A2CDateTime), A2CDateTime birthDay = default(A2CDateTime), string status = default(string), bool newsLetterSubscription = default(bool), List<CustomerConsent> consents = default(List<CustomerConsent>), string gender = default(string), List<string> storesIds = default(List<string>), string website = default(string), string fax = default(string), string company = default(string), string ipAddress = default(string), List<CustomerAddress> addressBook = default(List<CustomerAddress>), string langId = default(string), int ordersCount = default(int), string lastOrderId = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Customer(string id = default(string), string email = default(string), string firstName = default(string), string lastName = default(string), string phone = default(string), A2CDateTime createdTime = default(A2CDateTime), A2CDateTime modifiedTime = default(A2CDateTime), List<CustomerGroup> group = default(List<CustomerGroup>), string login = default(string), A2CDateTime lastLogin = default(A2CDateTime), A2CDateTime birthDay = default(A2CDateTime), string status = default(string), bool isGuest = default(bool), bool newsLetterSubscription = default(bool), List<CustomerConsent> consents = default(List<CustomerConsent>), string gender = default(string), List<string> storesIds = default(List<string>), string website = default(string), string fax = default(string), string company = default(string), string ipAddress = default(string), List<CustomerAddress> addressBook = default(List<CustomerAddress>), string langId = default(string), int ordersCount = default(int), string lastOrderId = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Email = email;
@@ -75,6 +76,7 @@ namespace Org.OpenAPITools.Model
             this.LastLogin = lastLogin;
             this.BirthDay = birthDay;
             this.Status = status;
+            this.IsGuest = isGuest;
             this.NewsLetterSubscription = newsLetterSubscription;
             this.Consents = consents;
             this.Gender = gender;
@@ -162,6 +164,12 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         [DataMember(Name = "status", EmitDefaultValue = false)]
         public string Status { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsGuest
+        /// </summary>
+        [DataMember(Name = "is_guest", EmitDefaultValue = true)]
+        public bool IsGuest { get; set; }
 
         /// <summary>
         /// Gets or Sets NewsLetterSubscription
@@ -267,6 +275,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  LastLogin: ").Append(LastLogin).Append("\n");
             sb.Append("  BirthDay: ").Append(BirthDay).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  IsGuest: ").Append(IsGuest).Append("\n");
             sb.Append("  NewsLetterSubscription: ").Append(NewsLetterSubscription).Append("\n");
             sb.Append("  Consents: ").Append(Consents).Append("\n");
             sb.Append("  Gender: ").Append(Gender).Append("\n");

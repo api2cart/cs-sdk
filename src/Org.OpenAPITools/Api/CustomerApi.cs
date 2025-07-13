@@ -123,6 +123,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Counts customer specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the total count. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts customers that are searched specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -131,7 +132,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomerCount200Response</returns>
-        CustomerCount200Response CustomerCount(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0);
+        CustomerCount200Response CustomerCount(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// customer.count
@@ -146,6 +147,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Counts customer specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the total count. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts customers that are searched specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -154,7 +156,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomerCount200Response</returns>
-        ApiResponse<CustomerCount200Response> CustomerCountWithHttpInfo(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0);
+        ApiResponse<CustomerCount200Response> CustomerCountWithHttpInfo(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0);
         /// <summary>
         /// customer.delete
         /// </summary>
@@ -189,9 +191,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="findWhere">Entity search that is specified by the comma-separated unique fields (optional, default to &quot;email&quot;)</param>
         /// <param name="findParams">Entity search that is specified by comma-separated parameters (optional, default to &quot;whole_words&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="includeGuests">Indicates whether to search among guest customers when looking up a customer. (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomerFind200Response</returns>
-        CustomerFind200Response CustomerFind(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), int operationIndex = 0);
+        CustomerFind200Response CustomerFind(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), bool? includeGuests = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// customer.find
@@ -204,9 +207,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="findWhere">Entity search that is specified by the comma-separated unique fields (optional, default to &quot;email&quot;)</param>
         /// <param name="findParams">Entity search that is specified by comma-separated parameters (optional, default to &quot;whole_words&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="includeGuests">Indicates whether to search among guest customers when looking up a customer. (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomerFind200Response</returns>
-        ApiResponse<CustomerFind200Response> CustomerFindWithHttpInfo(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<CustomerFind200Response> CustomerFindWithHttpInfo(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), bool? includeGuests = default(bool?), int operationIndex = 0);
         /// <summary>
         /// customer.group.add
         /// </summary>
@@ -322,6 +326,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Retrieves customers specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the list results. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Customer search that is specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -335,7 +340,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCustomerList</returns>
-        ModelResponseCustomerList CustomerList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ModelResponseCustomerList CustomerList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// customer.list
@@ -353,6 +358,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Retrieves customers specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the list results. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Customer search that is specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -366,7 +372,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCustomerList</returns>
-        ApiResponse<ModelResponseCustomerList> CustomerListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseCustomerList> CustomerListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// customer.update
         /// </summary>
@@ -536,6 +542,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Counts customer specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the total count. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts customers that are searched specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -545,7 +552,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerCount200Response</returns>
-        System.Threading.Tasks.Task<CustomerCount200Response> CustomerCountAsync(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomerCount200Response> CustomerCountAsync(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// customer.count
@@ -560,6 +567,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Counts customer specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the total count. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts customers that are searched specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -569,7 +577,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerCount200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomerCount200Response>> CustomerCountWithHttpInfoAsync(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomerCount200Response>> CustomerCountWithHttpInfoAsync(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// customer.delete
         /// </summary>
@@ -606,10 +614,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="findWhere">Entity search that is specified by the comma-separated unique fields (optional, default to &quot;email&quot;)</param>
         /// <param name="findParams">Entity search that is specified by comma-separated parameters (optional, default to &quot;whole_words&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="includeGuests">Indicates whether to search among guest customers when looking up a customer. (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerFind200Response</returns>
-        System.Threading.Tasks.Task<CustomerFind200Response> CustomerFindAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomerFind200Response> CustomerFindAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), bool? includeGuests = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// customer.find
@@ -622,10 +631,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="findWhere">Entity search that is specified by the comma-separated unique fields (optional, default to &quot;email&quot;)</param>
         /// <param name="findParams">Entity search that is specified by comma-separated parameters (optional, default to &quot;whole_words&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="includeGuests">Indicates whether to search among guest customers when looking up a customer. (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerFind200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomerFind200Response>> CustomerFindWithHttpInfoAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomerFind200Response>> CustomerFindWithHttpInfoAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), bool? includeGuests = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// customer.group.add
         /// </summary>
@@ -747,6 +757,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Retrieves customers specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the list results. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Customer search that is specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -761,7 +772,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCustomerList</returns>
-        System.Threading.Tasks.Task<ModelResponseCustomerList> CustomerListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseCustomerList> CustomerListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// customer.list
@@ -779,6 +790,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Retrieves customers specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the list results. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Customer search that is specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -793,7 +805,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCustomerList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseCustomerList>> CustomerListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCustomerList>> CustomerListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// customer.update
         /// </summary>
@@ -1569,6 +1581,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Counts customer specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the total count. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts customers that are searched specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -1577,9 +1590,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomerCount200Response</returns>
-        public CustomerCount200Response CustomerCount(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0)
+        public CustomerCount200Response CustomerCount(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CustomerCount200Response> localVarResponse = CustomerCountWithHttpInfo(ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
+            Org.OpenAPITools.Client.ApiResponse<CustomerCount200Response> localVarResponse = CustomerCountWithHttpInfo(ids, sinceId, customerListId, groupId, storeId, avail, includeGuests, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
             return localVarResponse.Data;
         }
 
@@ -1593,6 +1606,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Counts customer specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the total count. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts customers that are searched specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -1601,7 +1615,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomerCount200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CustomerCount200Response> CustomerCountWithHttpInfo(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CustomerCount200Response> CustomerCountWithHttpInfo(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1649,6 +1663,10 @@ namespace Org.OpenAPITools.Api
             if (avail != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
+            }
+            if (includeGuests != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "include_guests", includeGuests));
             }
             if (findValue != null)
             {
@@ -1713,6 +1731,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Counts customer specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the total count. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts customers that are searched specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -1722,9 +1741,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerCount200Response</returns>
-        public async System.Threading.Tasks.Task<CustomerCount200Response> CustomerCountAsync(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomerCount200Response> CustomerCountAsync(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CustomerCount200Response> localVarResponse = await CustomerCountWithHttpInfoAsync(ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CustomerCount200Response> localVarResponse = await CustomerCountWithHttpInfoAsync(ids, sinceId, customerListId, groupId, storeId, avail, includeGuests, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1738,6 +1757,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Counts customer specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the total count. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Counts customers that are searched specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -1747,7 +1767,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerCount200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CustomerCount200Response>> CustomerCountWithHttpInfoAsync(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CustomerCount200Response>> CustomerCountWithHttpInfoAsync(string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1795,6 +1815,10 @@ namespace Org.OpenAPITools.Api
             if (avail != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
+            }
+            if (includeGuests != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "include_guests", includeGuests));
             }
             if (findValue != null)
             {
@@ -2023,11 +2047,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="findWhere">Entity search that is specified by the comma-separated unique fields (optional, default to &quot;email&quot;)</param>
         /// <param name="findParams">Entity search that is specified by comma-separated parameters (optional, default to &quot;whole_words&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="includeGuests">Indicates whether to search among guest customers when looking up a customer. (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomerFind200Response</returns>
-        public CustomerFind200Response CustomerFind(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), int operationIndex = 0)
+        public CustomerFind200Response CustomerFind(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), bool? includeGuests = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CustomerFind200Response> localVarResponse = CustomerFindWithHttpInfo(findValue, findWhere, findParams, storeId);
+            Org.OpenAPITools.Client.ApiResponse<CustomerFind200Response> localVarResponse = CustomerFindWithHttpInfo(findValue, findWhere, findParams, storeId, includeGuests);
             return localVarResponse.Data;
         }
 
@@ -2039,9 +2064,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="findWhere">Entity search that is specified by the comma-separated unique fields (optional, default to &quot;email&quot;)</param>
         /// <param name="findParams">Entity search that is specified by comma-separated parameters (optional, default to &quot;whole_words&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="includeGuests">Indicates whether to search among guest customers when looking up a customer. (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomerFind200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CustomerFind200Response> CustomerFindWithHttpInfo(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CustomerFind200Response> CustomerFindWithHttpInfo(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), bool? includeGuests = default(bool?), int operationIndex = 0)
         {
             // verify the required parameter 'findValue' is set
             if (findValue == null)
@@ -2085,6 +2111,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (includeGuests != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "include_guests", includeGuests));
+            }
 
             localVarRequestOptions.Operation = "CustomerApi.CustomerFind";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2122,12 +2152,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="findWhere">Entity search that is specified by the comma-separated unique fields (optional, default to &quot;email&quot;)</param>
         /// <param name="findParams">Entity search that is specified by comma-separated parameters (optional, default to &quot;whole_words&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="includeGuests">Indicates whether to search among guest customers when looking up a customer. (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerFind200Response</returns>
-        public async System.Threading.Tasks.Task<CustomerFind200Response> CustomerFindAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomerFind200Response> CustomerFindAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), bool? includeGuests = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CustomerFind200Response> localVarResponse = await CustomerFindWithHttpInfoAsync(findValue, findWhere, findParams, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CustomerFind200Response> localVarResponse = await CustomerFindWithHttpInfoAsync(findValue, findWhere, findParams, storeId, includeGuests, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2139,10 +2170,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="findWhere">Entity search that is specified by the comma-separated unique fields (optional, default to &quot;email&quot;)</param>
         /// <param name="findParams">Entity search that is specified by comma-separated parameters (optional, default to &quot;whole_words&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="includeGuests">Indicates whether to search among guest customers when looking up a customer. (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerFind200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CustomerFind200Response>> CustomerFindWithHttpInfoAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CustomerFind200Response>> CustomerFindWithHttpInfoAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), bool? includeGuests = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'findValue' is set
             if (findValue == null)
@@ -2185,6 +2217,10 @@ namespace Org.OpenAPITools.Api
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (includeGuests != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "include_guests", includeGuests));
             }
 
             localVarRequestOptions.Operation = "CustomerApi.CustomerFind";
@@ -2898,6 +2934,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Retrieves customers specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the list results. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Customer search that is specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -2911,9 +2948,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCustomerList</returns>
-        public ModelResponseCustomerList CustomerList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public ModelResponseCustomerList CustomerList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerList> localVarResponse = CustomerListWithHttpInfo(start, count, pageCursor, ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, sortBy, sortDirection, responseFields, varParams, exclude);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerList> localVarResponse = CustomerListWithHttpInfo(start, count, pageCursor, ids, sinceId, customerListId, groupId, storeId, avail, includeGuests, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, sortBy, sortDirection, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -2930,6 +2967,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Retrieves customers specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the list results. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Customer search that is specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -2943,7 +2981,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCustomerList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerList> CustomerListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerList> CustomerListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3003,6 +3041,10 @@ namespace Org.OpenAPITools.Api
             if (avail != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
+            }
+            if (includeGuests != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "include_guests", includeGuests));
             }
             if (findValue != null)
             {
@@ -3090,6 +3132,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Retrieves customers specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the list results. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Customer search that is specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -3104,9 +3147,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCustomerList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseCustomerList> CustomerListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseCustomerList> CustomerListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerList> localVarResponse = await CustomerListWithHttpInfoAsync(start, count, pageCursor, ids, sinceId, customerListId, groupId, storeId, avail, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, sortBy, sortDirection, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerList> localVarResponse = await CustomerListWithHttpInfoAsync(start, count, pageCursor, ids, sinceId, customerListId, groupId, storeId, avail, includeGuests, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo, sortBy, sortDirection, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3123,6 +3166,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="groupId">Customer group_id (optional)</param>
         /// <param name="storeId">Retrieves customers specified by store id (optional)</param>
         /// <param name="avail">Defines category&#39;s visibility status (optional, default to true)</param>
+        /// <param name="includeGuests">Indicates whether to include guest customers in the list results. (optional, default to false)</param>
         /// <param name="findValue">Entity search that is specified by some value (optional)</param>
         /// <param name="findWhere">Customer search that is specified by field (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
@@ -3137,7 +3181,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCustomerList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerList>> CustomerListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerList>> CustomerListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? sinceId = default(string?), string? customerListId = default(string?), string? groupId = default(string?), string? storeId = default(string?), bool? avail = default(bool?), bool? includeGuests = default(bool?), string? findValue = default(string?), string? findWhere = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3197,6 +3241,10 @@ namespace Org.OpenAPITools.Api
             if (avail != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
+            }
+            if (includeGuests != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "include_guests", includeGuests));
             }
             if (findValue != null)
             {
