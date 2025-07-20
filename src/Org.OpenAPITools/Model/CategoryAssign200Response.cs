@@ -27,49 +27,41 @@ using OpenAPIDateConverter = Org.OpenAPITools.Client.OpenAPIDateConverter;
 namespace Org.OpenAPITools.Model
 {
     /// <summary>
-    /// ResponseReturnListResult
+    /// CategoryAssign200Response
     /// </summary>
-    [DataContract(Name = "Response_Return_List_Result")]
-    public partial class ResponseReturnListResult : IValidatableObject
+    [DataContract(Name = "CategoryAssign_200_response")]
+    public partial class CategoryAssign200Response : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResponseReturnListResult" /> class.
+        /// Initializes a new instance of the <see cref="CategoryAssign200Response" /> class.
         /// </summary>
-        /// <param name="totalCount">totalCount.</param>
-        /// <param name="returns">returns.</param>
-        /// <param name="additionalFields">additionalFields.</param>
-        /// <param name="customFields">customFields.</param>
-        public ResponseReturnListResult(int? totalCount = default(int?), List<Return> returns = default(List<Return>), Object additionalFields = default(Object), Object customFields = default(Object))
+        /// <param name="returnCode">returnCode.</param>
+        /// <param name="returnMessage">returnMessage.</param>
+        /// <param name="result">result.</param>
+        public CategoryAssign200Response(int returnCode = default(int), string returnMessage = default(string), Object result = default(Object))
         {
-            this.TotalCount = totalCount;
-            this.Returns = returns;
-            this.AdditionalFields = additionalFields;
-            this.CustomFields = customFields;
+            this.ReturnCode = returnCode;
+            this.ReturnMessage = returnMessage;
+            this.Result = result;
         }
 
         /// <summary>
-        /// Gets or Sets TotalCount
+        /// Gets or Sets ReturnCode
         /// </summary>
-        [DataMember(Name = "total_count", EmitDefaultValue = true)]
-        public int? TotalCount { get; set; }
+        [DataMember(Name = "return_code", EmitDefaultValue = false)]
+        public int ReturnCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets Returns
+        /// Gets or Sets ReturnMessage
         /// </summary>
-        [DataMember(Name = "returns", EmitDefaultValue = false)]
-        public List<Return> Returns { get; set; }
+        [DataMember(Name = "return_message", EmitDefaultValue = false)]
+        public string ReturnMessage { get; set; }
 
         /// <summary>
-        /// Gets or Sets AdditionalFields
+        /// Gets or Sets Result
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
-        public Object AdditionalFields { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CustomFields
-        /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
-        public Object CustomFields { get; set; }
+        [DataMember(Name = "result", EmitDefaultValue = false)]
+        public Object Result { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -78,11 +70,10 @@ namespace Org.OpenAPITools.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class ResponseReturnListResult {\n");
-            sb.Append("  TotalCount: ").Append(TotalCount).Append("\n");
-            sb.Append("  Returns: ").Append(Returns).Append("\n");
-            sb.Append("  AdditionalFields: ").Append(AdditionalFields).Append("\n");
-            sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
+            sb.Append("class CategoryAssign200Response {\n");
+            sb.Append("  ReturnCode: ").Append(ReturnCode).Append("\n");
+            sb.Append("  ReturnMessage: ").Append(ReturnMessage).Append("\n");
+            sb.Append("  Result: ").Append(Result).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

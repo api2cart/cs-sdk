@@ -50,25 +50,25 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Previous
         /// </summary>
-        [DataMember(Name = "previous", EmitDefaultValue = false)]
+        [DataMember(Name = "previous", EmitDefaultValue = true)]
         public string Previous { get; set; }
 
         /// <summary>
         /// Gets or Sets Next
         /// </summary>
-        [DataMember(Name = "next", EmitDefaultValue = false)]
+        [DataMember(Name = "next", EmitDefaultValue = true)]
         public string Next { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

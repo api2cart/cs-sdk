@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Id** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
-**Avail** | **bool** |  | [optional] 
+**Avail** | **bool?** |  | [optional] 
 **Address** | [**CustomerAddress**](CustomerAddress.md) |  | [optional] 
 **CarriersIds** | **List&lt;string&gt;** |  | [optional] 
 **StoresIds** | **List&lt;string&gt;** |  | [optional] 

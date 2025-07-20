@@ -56,17 +56,6 @@ namespace Org.OpenAPITools.Test.Api
         }
 
         /// <summary>
-        /// Test CartBridge
-        /// </summary>
-        [Fact]
-        public void CartBridgeTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.CartBridge();
-            //Assert.IsType<CartBridge200Response>(response);
-        }
-
-        /// <summary>
         /// Test CartCatalogPriceRulesCount
         /// </summary>
         [Fact]
@@ -93,43 +82,6 @@ namespace Org.OpenAPITools.Test.Api
             //string? exclude = null;
             //var response = instance.CartCatalogPriceRulesList(start, count, pageCursor, ids, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseCartCatalogPriceRulesList>(response);
-        }
-
-        /// <summary>
-        /// Test CartClearCache
-        /// </summary>
-        [Fact]
-        public void CartClearCacheTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string cacheType = null;
-            //var response = instance.CartClearCache(cacheType);
-            //Assert.IsType<CartClearCache200Response>(response);
-        }
-
-        /// <summary>
-        /// Test CartConfig
-        /// </summary>
-        [Fact]
-        public void CartConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string? varParams = null;
-            //string? exclude = null;
-            //var response = instance.CartConfig(varParams, exclude);
-            //Assert.IsType<CartConfig200Response>(response);
-        }
-
-        /// <summary>
-        /// Test CartConfigUpdate
-        /// </summary>
-        [Fact]
-        public void CartConfigUpdateTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //CartConfigUpdate cartConfigUpdate = null;
-            //var response = instance.CartConfigUpdate(cartConfigUpdate);
-            //Assert.IsType<CartConfigUpdate200Response>(response);
         }
 
         /// <summary>
@@ -220,18 +172,6 @@ namespace Org.OpenAPITools.Test.Api
         }
 
         /// <summary>
-        /// Test CartCreate
-        /// </summary>
-        [Fact]
-        public void CartCreateTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //CartCreate cartCreate = null;
-            //var response = instance.CartCreate(cartCreate);
-            //Assert.IsType<AccountCartAdd200Response>(response);
-        }
-
-        /// <summary>
         /// Test CartDelete
         /// </summary>
         [Fact]
@@ -241,18 +181,6 @@ namespace Org.OpenAPITools.Test.Api
             //bool? deleteBridge = null;
             //var response = instance.CartDelete(deleteBridge);
             //Assert.IsType<CartDelete200Response>(response);
-        }
-
-        /// <summary>
-        /// Test CartDisconnect
-        /// </summary>
-        [Fact]
-        public void CartDisconnectTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //bool? deleteBridge = null;
-            //var response = instance.CartDisconnect(deleteBridge);
-            //Assert.IsType<CartDisconnect200Response>(response);
         }
 
         /// <summary>
@@ -327,17 +255,6 @@ namespace Org.OpenAPITools.Test.Api
             //string? exclude = null;
             //var response = instance.CartInfo(storeId, responseFields, varParams, exclude);
             //Assert.IsType<CartInfo200Response>(response);
-        }
-
-        /// <summary>
-        /// Test CartList
-        /// </summary>
-        [Fact]
-        public void CartListTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.CartList();
-            //Assert.IsType<CartList200Response>(response);
         }
 
         /// <summary>

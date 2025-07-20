@@ -41,7 +41,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="priority">priority.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ProductInventory(string warehouseId = default(string), decimal quantity = default(decimal), bool inStock = default(bool), int priority = default(int), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ProductInventory(string warehouseId = default(string), decimal quantity = default(decimal), bool? inStock = default(bool?), int? priority = default(int?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.WarehouseId = warehouseId;
             this.Quantity = quantity;
@@ -67,24 +67,24 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets InStock
         /// </summary>
         [DataMember(Name = "in_stock", EmitDefaultValue = true)]
-        public bool InStock { get; set; }
+        public bool? InStock { get; set; }
 
         /// <summary>
         /// Gets or Sets Priority
         /// </summary>
-        [DataMember(Name = "priority", EmitDefaultValue = false)]
-        public int Priority { get; set; }
+        [DataMember(Name = "priority", EmitDefaultValue = true)]
+        public int? Priority { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

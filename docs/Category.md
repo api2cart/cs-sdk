@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **Avail** | **bool** |  | [optional] 
 **Path** | **string** |  | [optional] 
 **SeoUrl** | **string** |  | [optional] 
-**SortOrder** | **int** |  | [optional] 
+**SortOrder** | **int?** |  | [optional] 
 **Images** | [**List&lt;Image&gt;**](Image.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

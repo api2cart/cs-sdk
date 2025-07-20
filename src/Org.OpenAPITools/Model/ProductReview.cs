@@ -49,7 +49,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="medias">medias.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ProductReview(string id = default(string), string productId = default(string), string customerId = default(string), string nickName = default(string), string email = default(string), string summary = default(string), string message = default(string), decimal rating = default(decimal), List<ProductReviewRating> ratings = default(List<ProductReviewRating>), string status = default(string), A2CDateTime createdTime = default(A2CDateTime), List<Media> medias = default(List<Media>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ProductReview(string id = default(string), string productId = default(string), string customerId = default(string), string nickName = default(string), string email = default(string), string summary = default(string), string message = default(string), decimal? rating = default(decimal?), List<ProductReviewRating> ratings = default(List<ProductReviewRating>), string status = default(string), A2CDateTime createdTime = default(A2CDateTime), List<Media> medias = default(List<Media>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.ProductId = productId;
@@ -76,44 +76,44 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets ProductId
         /// </summary>
-        [DataMember(Name = "product_id", EmitDefaultValue = false)]
+        [DataMember(Name = "product_id", EmitDefaultValue = true)]
         public string ProductId { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomerId
         /// </summary>
-        [DataMember(Name = "customer_id", EmitDefaultValue = false)]
+        [DataMember(Name = "customer_id", EmitDefaultValue = true)]
         public string CustomerId { get; set; }
 
         /// <summary>
         /// Gets or Sets NickName
         /// </summary>
-        [DataMember(Name = "nick_name", EmitDefaultValue = false)]
+        [DataMember(Name = "nick_name", EmitDefaultValue = true)]
         public string NickName { get; set; }
 
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
-        [DataMember(Name = "email", EmitDefaultValue = false)]
+        [DataMember(Name = "email", EmitDefaultValue = true)]
         public string Email { get; set; }
 
         /// <summary>
         /// Gets or Sets Summary
         /// </summary>
-        [DataMember(Name = "summary", EmitDefaultValue = false)]
+        [DataMember(Name = "summary", EmitDefaultValue = true)]
         public string Summary { get; set; }
 
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
-        [DataMember(Name = "message", EmitDefaultValue = false)]
+        [DataMember(Name = "message", EmitDefaultValue = true)]
         public string Message { get; set; }
 
         /// <summary>
         /// Gets or Sets Rating
         /// </summary>
-        [DataMember(Name = "rating", EmitDefaultValue = false)]
-        public decimal Rating { get; set; }
+        [DataMember(Name = "rating", EmitDefaultValue = true)]
+        public decimal? Rating { get; set; }
 
         /// <summary>
         /// Gets or Sets Ratings
@@ -124,13 +124,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name = "status", EmitDefaultValue = false)]
+        [DataMember(Name = "status", EmitDefaultValue = true)]
         public string Status { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedTime
         /// </summary>
-        [DataMember(Name = "created_time", EmitDefaultValue = false)]
+        [DataMember(Name = "created_time", EmitDefaultValue = true)]
         public A2CDateTime CreatedTime { get; set; }
 
         /// <summary>
@@ -142,13 +142,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

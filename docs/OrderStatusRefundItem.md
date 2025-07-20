@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **ProductId** | **string** |  | [optional] 
 **VariantId** | **string** |  | [optional] 
 **OrderProductId** | **string** |  | [optional] 
-**Qty** | **decimal** |  | [optional] 
-**Refund** | **decimal** |  | [optional] 
+**Qty** | **decimal?** |  | [optional] 
+**Refund** | **decimal?** |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 
 

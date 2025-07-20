@@ -47,7 +47,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="isDefault">isDefault.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ProductOptionItem(string id = default(string), string productOptionItemId = default(string), string name = default(string), int sortOrder = default(int), string price = default(string), string weight = default(string), int quantity = default(int), string typePrice = default(string), string sku = default(string), bool isDefault = default(bool), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ProductOptionItem(string id = default(string), string productOptionItemId = default(string), string name = default(string), int? sortOrder = default(int?), string price = default(string), string weight = default(string), int? quantity = default(int?), string typePrice = default(string), string sku = default(string), bool? isDefault = default(bool?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.ProductOptionItemId = productOptionItemId;
@@ -72,7 +72,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets ProductOptionItemId
         /// </summary>
-        [DataMember(Name = "product_option_item_id", EmitDefaultValue = false)]
+        [DataMember(Name = "product_option_item_id", EmitDefaultValue = true)]
         public string ProductOptionItemId { get; set; }
 
         /// <summary>
@@ -84,55 +84,55 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets SortOrder
         /// </summary>
-        [DataMember(Name = "sort_order", EmitDefaultValue = false)]
-        public int SortOrder { get; set; }
+        [DataMember(Name = "sort_order", EmitDefaultValue = true)]
+        public int? SortOrder { get; set; }
 
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
-        [DataMember(Name = "price", EmitDefaultValue = false)]
+        [DataMember(Name = "price", EmitDefaultValue = true)]
         public string Price { get; set; }
 
         /// <summary>
         /// Gets or Sets Weight
         /// </summary>
-        [DataMember(Name = "weight", EmitDefaultValue = false)]
+        [DataMember(Name = "weight", EmitDefaultValue = true)]
         public string Weight { get; set; }
 
         /// <summary>
         /// Gets or Sets Quantity
         /// </summary>
-        [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public int Quantity { get; set; }
+        [DataMember(Name = "quantity", EmitDefaultValue = true)]
+        public int? Quantity { get; set; }
 
         /// <summary>
         /// Gets or Sets TypePrice
         /// </summary>
-        [DataMember(Name = "type_price", EmitDefaultValue = false)]
+        [DataMember(Name = "type_price", EmitDefaultValue = true)]
         public string TypePrice { get; set; }
 
         /// <summary>
         /// Gets or Sets Sku
         /// </summary>
-        [DataMember(Name = "sku", EmitDefaultValue = false)]
+        [DataMember(Name = "sku", EmitDefaultValue = true)]
         public string Sku { get; set; }
 
         /// <summary>
         /// Gets or Sets IsDefault
         /// </summary>
         [DataMember(Name = "is_default", EmitDefaultValue = true)]
-        public bool IsDefault { get; set; }
+        public bool? IsDefault { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

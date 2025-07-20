@@ -68,7 +68,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets EntityId
         /// </summary>
-        [DataMember(Name = "entity_id", EmitDefaultValue = false)]
+        [DataMember(Name = "entity_id", EmitDefaultValue = true)]
         public string EntityId { get; set; }
 
         /// <summary>
@@ -86,13 +86,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

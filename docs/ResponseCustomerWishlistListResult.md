@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TotalCount** | **int** |  | [optional] 
+**TotalCount** | **int?** |  | [optional] 
 **WishLists** | [**List&lt;CustomerWishList&gt;**](CustomerWishList.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

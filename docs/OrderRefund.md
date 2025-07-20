@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** |  | [optional] 
-**Shipping** | **decimal** |  | [optional] 
-**Fee** | **decimal** |  | [optional] 
-**Tax** | **decimal** |  | [optional] 
-**Total** | **decimal** |  | [optional] 
+**Shipping** | **decimal?** |  | [optional] 
+**Fee** | **decimal?** |  | [optional] 
+**Tax** | **decimal?** |  | [optional] 
+**Total** | **decimal?** |  | [optional] 
 **ModifiedTime** | [**A2CDateTime**](A2CDateTime.md) |  | [optional] 
 **Comment** | **string** |  | [optional] 
 **Items** | [**List&lt;OrderStatusRefundItem&gt;**](OrderStatusRefundItem.md) |  | [optional] 

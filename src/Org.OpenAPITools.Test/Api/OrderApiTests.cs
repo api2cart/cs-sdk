@@ -135,29 +135,6 @@ namespace Org.OpenAPITools.Test.Api
         }
 
         /// <summary>
-        /// Test OrderFind
-        /// </summary>
-        [Fact]
-        public void OrderFindTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? start = null;
-            //int? count = null;
-            //string? customerId = null;
-            //string? customerEmail = null;
-            //string? orderStatus = null;
-            //string? financialStatus = null;
-            //string? createdTo = null;
-            //string? createdFrom = null;
-            //string? modifiedTo = null;
-            //string? modifiedFrom = null;
-            //string? varParams = null;
-            //string? exclude = null;
-            //var response = instance.OrderFind(start, count, customerId, customerEmail, orderStatus, financialStatus, createdTo, createdFrom, modifiedTo, modifiedFrom, varParams, exclude);
-            //Assert.IsType<OrderFind200Response>(response);
-        }
-
-        /// <summary>
         /// Test OrderFulfillmentStatusList
         /// </summary>
         [Fact]

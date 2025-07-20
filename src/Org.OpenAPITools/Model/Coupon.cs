@@ -53,7 +53,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="usageHistory">usageHistory.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Coupon(string id = default(string), string code = default(string), List<CouponCode> codes = default(List<CouponCode>), string name = default(string), string description = default(string), List<CouponAction> actions = default(List<CouponAction>), A2CDateTime dateStart = default(A2CDateTime), A2CDateTime dateEnd = default(A2CDateTime), bool avail = default(bool), int priority = default(int), int usedTimes = default(int), int usageLimit = default(int), int usageLimitPerCustomer = default(int), string logicOperator = default(string), List<CouponCondition> conditions = default(List<CouponCondition>), List<CouponHistory> usageHistory = default(List<CouponHistory>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Coupon(string id = default(string), string code = default(string), List<CouponCode> codes = default(List<CouponCode>), string name = default(string), string description = default(string), List<CouponAction> actions = default(List<CouponAction>), A2CDateTime dateStart = default(A2CDateTime), A2CDateTime dateEnd = default(A2CDateTime), bool? avail = default(bool?), int? priority = default(int?), int? usedTimes = default(int?), int? usageLimit = default(int?), int? usageLimitPerCustomer = default(int?), string logicOperator = default(string), List<CouponCondition> conditions = default(List<CouponCondition>), List<CouponHistory> usageHistory = default(List<CouponHistory>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Code = code;
@@ -84,7 +84,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name = "code", EmitDefaultValue = false)]
+        [DataMember(Name = "code", EmitDefaultValue = true)]
         public string Code { get; set; }
 
         /// <summary>
@@ -96,13 +96,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
@@ -114,49 +114,49 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets DateStart
         /// </summary>
-        [DataMember(Name = "date_start", EmitDefaultValue = false)]
+        [DataMember(Name = "date_start", EmitDefaultValue = true)]
         public A2CDateTime DateStart { get; set; }
 
         /// <summary>
         /// Gets or Sets DateEnd
         /// </summary>
-        [DataMember(Name = "date_end", EmitDefaultValue = false)]
+        [DataMember(Name = "date_end", EmitDefaultValue = true)]
         public A2CDateTime DateEnd { get; set; }
 
         /// <summary>
         /// Gets or Sets Avail
         /// </summary>
         [DataMember(Name = "avail", EmitDefaultValue = true)]
-        public bool Avail { get; set; }
+        public bool? Avail { get; set; }
 
         /// <summary>
         /// Gets or Sets Priority
         /// </summary>
-        [DataMember(Name = "priority", EmitDefaultValue = false)]
-        public int Priority { get; set; }
+        [DataMember(Name = "priority", EmitDefaultValue = true)]
+        public int? Priority { get; set; }
 
         /// <summary>
         /// Gets or Sets UsedTimes
         /// </summary>
-        [DataMember(Name = "used_times", EmitDefaultValue = false)]
-        public int UsedTimes { get; set; }
+        [DataMember(Name = "used_times", EmitDefaultValue = true)]
+        public int? UsedTimes { get; set; }
 
         /// <summary>
         /// Gets or Sets UsageLimit
         /// </summary>
-        [DataMember(Name = "usage_limit", EmitDefaultValue = false)]
-        public int UsageLimit { get; set; }
+        [DataMember(Name = "usage_limit", EmitDefaultValue = true)]
+        public int? UsageLimit { get; set; }
 
         /// <summary>
         /// Gets or Sets UsageLimitPerCustomer
         /// </summary>
-        [DataMember(Name = "usage_limit_per_customer", EmitDefaultValue = false)]
-        public int UsageLimitPerCustomer { get; set; }
+        [DataMember(Name = "usage_limit_per_customer", EmitDefaultValue = true)]
+        public int? UsageLimitPerCustomer { get; set; }
 
         /// <summary>
         /// Gets or Sets LogicOperator
         /// </summary>
-        [DataMember(Name = "logic_operator", EmitDefaultValue = false)]
+        [DataMember(Name = "logic_operator", EmitDefaultValue = true)]
         public string LogicOperator { get; set; }
 
         /// <summary>
@@ -174,13 +174,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

@@ -48,7 +48,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="type">type.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Image(string id = default(string), string httpPath = default(string), string fileName = default(string), string mimeType = default(string), int size = default(int), A2CDateTime createAt = default(A2CDateTime), A2CDateTime modifiedAt = default(A2CDateTime), string alt = default(string), bool avail = default(bool), int sortOrder = default(int), string type = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Image(string id = default(string), string httpPath = default(string), string fileName = default(string), string mimeType = default(string), int? size = default(int?), A2CDateTime createAt = default(A2CDateTime), A2CDateTime modifiedAt = default(A2CDateTime), string alt = default(string), bool avail = default(bool), int? sortOrder = default(int?), string type = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.HttpPath = httpPath;
@@ -68,7 +68,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name = "id", EmitDefaultValue = false)]
+        [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
@@ -80,37 +80,37 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets FileName
         /// </summary>
-        [DataMember(Name = "file_name", EmitDefaultValue = false)]
+        [DataMember(Name = "file_name", EmitDefaultValue = true)]
         public string FileName { get; set; }
 
         /// <summary>
         /// Gets or Sets MimeType
         /// </summary>
-        [DataMember(Name = "mime-type", EmitDefaultValue = false)]
+        [DataMember(Name = "mime-type", EmitDefaultValue = true)]
         public string MimeType { get; set; }
 
         /// <summary>
         /// Gets or Sets Size
         /// </summary>
-        [DataMember(Name = "size", EmitDefaultValue = false)]
-        public int Size { get; set; }
+        [DataMember(Name = "size", EmitDefaultValue = true)]
+        public int? Size { get; set; }
 
         /// <summary>
         /// Gets or Sets CreateAt
         /// </summary>
-        [DataMember(Name = "create_at", EmitDefaultValue = false)]
+        [DataMember(Name = "create_at", EmitDefaultValue = true)]
         public A2CDateTime CreateAt { get; set; }
 
         /// <summary>
         /// Gets or Sets ModifiedAt
         /// </summary>
-        [DataMember(Name = "modified_at", EmitDefaultValue = false)]
+        [DataMember(Name = "modified_at", EmitDefaultValue = true)]
         public A2CDateTime ModifiedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Alt
         /// </summary>
-        [DataMember(Name = "alt", EmitDefaultValue = false)]
+        [DataMember(Name = "alt", EmitDefaultValue = true)]
         public string Alt { get; set; }
 
         /// <summary>
@@ -122,8 +122,8 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets SortOrder
         /// </summary>
-        [DataMember(Name = "sort_order", EmitDefaultValue = false)]
-        public int SortOrder { get; set; }
+        [DataMember(Name = "sort_order", EmitDefaultValue = true)]
+        public int? SortOrder { get; set; }
 
         /// <summary>
         /// Gets or Sets Type
@@ -134,13 +134,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

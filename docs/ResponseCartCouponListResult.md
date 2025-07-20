@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CouponCount** | **int** |  | [optional] 
+**CouponCount** | **int?** |  | [optional] 
 **Coupon** | [**List&lt;Coupon&gt;**](Coupon.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

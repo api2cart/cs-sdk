@@ -84,25 +84,25 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets CreatedTime
         /// </summary>
-        [DataMember(Name = "created_time", EmitDefaultValue = false)]
+        [DataMember(Name = "created_time", EmitDefaultValue = true)]
         public string CreatedTime { get; set; }
 
         /// <summary>
         /// Gets or Sets ModifiedTime
         /// </summary>
-        [DataMember(Name = "modified_time", EmitDefaultValue = false)]
+        [DataMember(Name = "modified_time", EmitDefaultValue = true)]
         public string ModifiedTime { get; set; }
 
         /// <summary>
         /// Gets or Sets FullDescription
         /// </summary>
-        [DataMember(Name = "full_description", EmitDefaultValue = false)]
+        [DataMember(Name = "full_description", EmitDefaultValue = true)]
         public string FullDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets ShortDescription
         /// </summary>
-        [DataMember(Name = "short_description", EmitDefaultValue = false)]
+        [DataMember(Name = "short_description", EmitDefaultValue = true)]
         public string ShortDescription { get; set; }
 
         /// <summary>
@@ -126,19 +126,19 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets MetaTitle
         /// </summary>
-        [DataMember(Name = "meta_title", EmitDefaultValue = false)]
+        [DataMember(Name = "meta_title", EmitDefaultValue = true)]
         public string MetaTitle { get; set; }
 
         /// <summary>
         /// Gets or Sets MetaKeywords
         /// </summary>
-        [DataMember(Name = "meta_keywords", EmitDefaultValue = false)]
+        [DataMember(Name = "meta_keywords", EmitDefaultValue = true)]
         public string MetaKeywords { get; set; }
 
         /// <summary>
         /// Gets or Sets MetaDescription
         /// </summary>
-        [DataMember(Name = "meta_description", EmitDefaultValue = false)]
+        [DataMember(Name = "meta_description", EmitDefaultValue = true)]
         public string MetaDescription { get; set; }
 
         /// <summary>
@@ -150,13 +150,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

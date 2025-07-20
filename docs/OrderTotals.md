@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **Total** | **decimal** |  | [optional] 
 **Subtotal** | **decimal** |  | [optional] 
 **Shipping** | **decimal** |  | [optional] 
-**Tax** | **decimal** |  | [optional] 
-**Discount** | **decimal** |  | [optional] 
+**Tax** | **decimal?** |  | [optional] 
+**Discount** | **decimal?** |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupCount** | **int** |  | [optional] 
+**GroupCount** | **int?** |  | [optional] 
 **Group** | [**List&lt;CustomerGroup&gt;**](CustomerGroup.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

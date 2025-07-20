@@ -44,7 +44,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="expireTime">expireTime.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ProductAdvancedPrice(string id = default(string), decimal value = default(decimal), bool avail = default(bool), string groupId = default(string), decimal quantityFrom = default(decimal), A2CDateTime startTime = default(A2CDateTime), A2CDateTime expireTime = default(A2CDateTime), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ProductAdvancedPrice(string id = default(string), decimal value = default(decimal), bool? avail = default(bool?), string groupId = default(string), decimal? quantityFrom = default(decimal?), A2CDateTime startTime = default(A2CDateTime), A2CDateTime expireTime = default(A2CDateTime), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Value = value;
@@ -73,42 +73,42 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets Avail
         /// </summary>
         [DataMember(Name = "avail", EmitDefaultValue = true)]
-        public bool Avail { get; set; }
+        public bool? Avail { get; set; }
 
         /// <summary>
         /// Gets or Sets GroupId
         /// </summary>
-        [DataMember(Name = "group_id", EmitDefaultValue = false)]
+        [DataMember(Name = "group_id", EmitDefaultValue = true)]
         public string GroupId { get; set; }
 
         /// <summary>
         /// Gets or Sets QuantityFrom
         /// </summary>
-        [DataMember(Name = "quantity_from", EmitDefaultValue = false)]
-        public decimal QuantityFrom { get; set; }
+        [DataMember(Name = "quantity_from", EmitDefaultValue = true)]
+        public decimal? QuantityFrom { get; set; }
 
         /// <summary>
         /// Gets or Sets StartTime
         /// </summary>
-        [DataMember(Name = "start_time", EmitDefaultValue = false)]
+        [DataMember(Name = "start_time", EmitDefaultValue = true)]
         public A2CDateTime StartTime { get; set; }
 
         /// <summary>
         /// Gets or Sets ExpireTime
         /// </summary>
-        [DataMember(Name = "expire_time", EmitDefaultValue = false)]
+        [DataMember(Name = "expire_time", EmitDefaultValue = true)]
         public A2CDateTime ExpireTime { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

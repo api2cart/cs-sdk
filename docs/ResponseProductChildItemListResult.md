@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TotalCount** | **int** |  | [optional] 
+**TotalCount** | **int?** |  | [optional] 
 **Children** | [**List&lt;Child&gt;**](Child.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

@@ -5,12 +5,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SubtotalExTax** | **decimal** |  | [optional] 
-**WrappingExTax** | **decimal** |  | [optional] 
+**WrappingExTax** | **decimal?** |  | [optional] 
 **ShippingExTax** | **decimal** |  | [optional] 
 **TotalDiscount** | **decimal** |  | [optional] 
 **TotalTax** | **decimal** |  | [optional] 
 **Total** | **decimal** |  | [optional] 
-**TotalPaid** | **decimal** |  | [optional] 
+**TotalPaid** | **decimal?** |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 
 

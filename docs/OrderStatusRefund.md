@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Shipping** | **decimal** |  | [optional] 
-**Fee** | **decimal** |  | [optional] 
-**Tax** | **decimal** |  | [optional] 
-**TotalRefunded** | **decimal** |  | [optional] 
+**Shipping** | **decimal?** |  | [optional] 
+**Fee** | **decimal?** |  | [optional] 
+**Tax** | **decimal?** |  | [optional] 
+**TotalRefunded** | **decimal?** |  | [optional] 
 **Time** | [**A2CDateTime**](A2CDateTime.md) |  | [optional] 
 **Comment** | **string** |  | [optional] 
 **RefundedItems** | [**List&lt;OrderStatusRefundItem&gt;**](OrderStatusRefundItem.md) |  | [optional] 

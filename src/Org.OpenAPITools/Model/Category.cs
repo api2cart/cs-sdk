@@ -53,7 +53,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="images">images.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Category(string id = default(string), string parentId = default(string), A2CDateTime createdAt = default(A2CDateTime), A2CDateTime modifiedAt = default(A2CDateTime), string name = default(string), string shortDescription = default(string), string description = default(string), List<string> storesIds = default(List<string>), string keywords = default(string), string metaDescription = default(string), string metaTitle = default(string), bool avail = default(bool), string path = default(string), string seoUrl = default(string), int sortOrder = default(int), List<Image> images = default(List<Image>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Category(string id = default(string), string parentId = default(string), A2CDateTime createdAt = default(A2CDateTime), A2CDateTime modifiedAt = default(A2CDateTime), string name = default(string), string shortDescription = default(string), string description = default(string), List<string> storesIds = default(List<string>), string keywords = default(string), string metaDescription = default(string), string metaTitle = default(string), bool avail = default(bool), string path = default(string), string seoUrl = default(string), int? sortOrder = default(int?), List<Image> images = default(List<Image>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.ParentId = parentId;
@@ -84,19 +84,19 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets ParentId
         /// </summary>
-        [DataMember(Name = "parent_id", EmitDefaultValue = false)]
+        [DataMember(Name = "parent_id", EmitDefaultValue = true)]
         public string ParentId { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
-        [DataMember(Name = "created_at", EmitDefaultValue = false)]
+        [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public A2CDateTime CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets ModifiedAt
         /// </summary>
-        [DataMember(Name = "modified_at", EmitDefaultValue = false)]
+        [DataMember(Name = "modified_at", EmitDefaultValue = true)]
         public A2CDateTime ModifiedAt { get; set; }
 
         /// <summary>
@@ -108,13 +108,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets ShortDescription
         /// </summary>
-        [DataMember(Name = "short_description", EmitDefaultValue = false)]
+        [DataMember(Name = "short_description", EmitDefaultValue = true)]
         public string ShortDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
@@ -126,19 +126,19 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Keywords
         /// </summary>
-        [DataMember(Name = "keywords", EmitDefaultValue = false)]
+        [DataMember(Name = "keywords", EmitDefaultValue = true)]
         public string Keywords { get; set; }
 
         /// <summary>
         /// Gets or Sets MetaDescription
         /// </summary>
-        [DataMember(Name = "meta_description", EmitDefaultValue = false)]
+        [DataMember(Name = "meta_description", EmitDefaultValue = true)]
         public string MetaDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets MetaTitle
         /// </summary>
-        [DataMember(Name = "meta_title", EmitDefaultValue = false)]
+        [DataMember(Name = "meta_title", EmitDefaultValue = true)]
         public string MetaTitle { get; set; }
 
         /// <summary>
@@ -150,20 +150,20 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Path
         /// </summary>
-        [DataMember(Name = "path", EmitDefaultValue = false)]
+        [DataMember(Name = "path", EmitDefaultValue = true)]
         public string Path { get; set; }
 
         /// <summary>
         /// Gets or Sets SeoUrl
         /// </summary>
-        [DataMember(Name = "seo_url", EmitDefaultValue = false)]
+        [DataMember(Name = "seo_url", EmitDefaultValue = true)]
         public string SeoUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets SortOrder
         /// </summary>
-        [DataMember(Name = "sort_order", EmitDefaultValue = false)]
-        public int SortOrder { get; set; }
+        [DataMember(Name = "sort_order", EmitDefaultValue = true)]
+        public int? SortOrder { get; set; }
 
         /// <summary>
         /// Gets or Sets Images
@@ -174,13 +174,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

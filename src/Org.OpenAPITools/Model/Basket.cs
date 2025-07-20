@@ -72,19 +72,19 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets BasketUrl
         /// </summary>
-        [DataMember(Name = "basket_url", EmitDefaultValue = false)]
+        [DataMember(Name = "basket_url", EmitDefaultValue = true)]
         public string BasketUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
-        [DataMember(Name = "created_at", EmitDefaultValue = false)]
+        [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public A2CDateTime CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets ModifiedAt
         /// </summary>
-        [DataMember(Name = "modified_at", EmitDefaultValue = false)]
+        [DataMember(Name = "modified_at", EmitDefaultValue = true)]
         public A2CDateTime ModifiedAt { get; set; }
 
         /// <summary>
@@ -102,13 +102,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

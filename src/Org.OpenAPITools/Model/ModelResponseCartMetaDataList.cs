@@ -41,7 +41,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="result">result.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ModelResponseCartMetaDataList(int returnCode = default(int), string returnMessage = default(string), Pagination pagination = default(Pagination), ResponseCartMetaDataListResult result = default(ResponseCartMetaDataListResult), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ModelResponseCartMetaDataList(int? returnCode = default(int?), string returnMessage = default(string), Pagination pagination = default(Pagination), ResponseCartMetaDataListResult result = default(ResponseCartMetaDataListResult), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.ReturnCode = returnCode;
             this.ReturnMessage = returnMessage;
@@ -54,37 +54,37 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets ReturnCode
         /// </summary>
-        [DataMember(Name = "return_code", EmitDefaultValue = false)]
-        public int ReturnCode { get; set; }
+        [DataMember(Name = "return_code", EmitDefaultValue = true)]
+        public int? ReturnCode { get; set; }
 
         /// <summary>
         /// Gets or Sets ReturnMessage
         /// </summary>
-        [DataMember(Name = "return_message", EmitDefaultValue = false)]
+        [DataMember(Name = "return_message", EmitDefaultValue = true)]
         public string ReturnMessage { get; set; }
 
         /// <summary>
         /// Gets or Sets Pagination
         /// </summary>
-        [DataMember(Name = "pagination", EmitDefaultValue = false)]
+        [DataMember(Name = "pagination", EmitDefaultValue = true)]
         public Pagination Pagination { get; set; }
 
         /// <summary>
         /// Gets or Sets Result
         /// </summary>
-        [DataMember(Name = "result", EmitDefaultValue = false)]
+        [DataMember(Name = "result", EmitDefaultValue = true)]
         public ResponseCartMetaDataListResult Result { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

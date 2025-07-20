@@ -44,7 +44,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="totalPaid">totalPaid.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public OrderTotal(decimal subtotalExTax = default(decimal), decimal wrappingExTax = default(decimal), decimal shippingExTax = default(decimal), decimal totalDiscount = default(decimal), decimal totalTax = default(decimal), decimal total = default(decimal), decimal totalPaid = default(decimal), Object additionalFields = default(Object), Object customFields = default(Object))
+        public OrderTotal(decimal subtotalExTax = default(decimal), decimal? wrappingExTax = default(decimal?), decimal shippingExTax = default(decimal), decimal totalDiscount = default(decimal), decimal totalTax = default(decimal), decimal total = default(decimal), decimal? totalPaid = default(decimal?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.SubtotalExTax = subtotalExTax;
             this.WrappingExTax = wrappingExTax;
@@ -66,8 +66,8 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets WrappingExTax
         /// </summary>
-        [DataMember(Name = "wrapping_ex_tax", EmitDefaultValue = false)]
-        public decimal WrappingExTax { get; set; }
+        [DataMember(Name = "wrapping_ex_tax", EmitDefaultValue = true)]
+        public decimal? WrappingExTax { get; set; }
 
         /// <summary>
         /// Gets or Sets ShippingExTax
@@ -96,19 +96,19 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets TotalPaid
         /// </summary>
-        [DataMember(Name = "total_paid", EmitDefaultValue = false)]
-        public decimal TotalPaid { get; set; }
+        [DataMember(Name = "total_paid", EmitDefaultValue = true)]
+        public decimal? TotalPaid { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

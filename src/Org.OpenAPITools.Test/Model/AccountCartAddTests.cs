@@ -380,6 +380,42 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BricklinkConsumerKey'
+        /// </summary>
+        [Fact]
+        public void BricklinkConsumerKeyTest()
+        {
+            // TODO unit test for the property 'BricklinkConsumerKey'
+        }
+
+        /// <summary>
+        /// Test the property 'BricklinkConsumerSecret'
+        /// </summary>
+        [Fact]
+        public void BricklinkConsumerSecretTest()
+        {
+            // TODO unit test for the property 'BricklinkConsumerSecret'
+        }
+
+        /// <summary>
+        /// Test the property 'BricklinkToken'
+        /// </summary>
+        [Fact]
+        public void BricklinkTokenTest()
+        {
+            // TODO unit test for the property 'BricklinkToken'
+        }
+
+        /// <summary>
+        /// Test the property 'BricklinkTokenSecret'
+        /// </summary>
+        [Fact]
+        public void BricklinkTokenSecretTest()
+        {
+            // TODO unit test for the property 'BricklinkTokenSecret'
+        }
+
+        /// <summary>
         /// Test the property 'DemandwareClientId'
         /// </summary>
         [Fact]

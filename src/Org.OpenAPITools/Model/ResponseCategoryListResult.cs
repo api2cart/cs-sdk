@@ -39,7 +39,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="category">category.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ResponseCategoryListResult(int categoriesCount = default(int), List<Category> category = default(List<Category>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ResponseCategoryListResult(int? categoriesCount = default(int?), List<Category> category = default(List<Category>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.CategoriesCount = categoriesCount;
             this.Category = category;
@@ -50,8 +50,8 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets CategoriesCount
         /// </summary>
-        [DataMember(Name = "categories_count", EmitDefaultValue = false)]
-        public int CategoriesCount { get; set; }
+        [DataMember(Name = "categories_count", EmitDefaultValue = true)]
+        public int? CategoriesCount { get; set; }
 
         /// <summary>
         /// Gets or Sets Category
@@ -62,13 +62,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

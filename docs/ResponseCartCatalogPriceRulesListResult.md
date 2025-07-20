@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CatalogPriceRulesCount** | **int** |  | [optional] 
+**CatalogPriceRulesCount** | **int?** |  | [optional] 
 **CatalogPriceRules** | [**List&lt;CatalogPriceRule&gt;**](CatalogPriceRule.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TotalCount** | **int** |  | [optional] 
+**TotalCount** | **int?** |  | [optional] 
 **Scripts** | [**List&lt;Script&gt;**](Script.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

@@ -72,67 +72,67 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets Src
         /// </summary>
-        [DataMember(Name = "src", EmitDefaultValue = false)]
+        [DataMember(Name = "src", EmitDefaultValue = true)]
         public string Src { get; set; }
 
         /// <summary>
         /// Gets or Sets Scope
         /// </summary>
-        [DataMember(Name = "scope", EmitDefaultValue = false)]
+        [DataMember(Name = "scope", EmitDefaultValue = true)]
         public string Scope { get; set; }
 
         /// <summary>
         /// Gets or Sets Event
         /// </summary>
-        [DataMember(Name = "event", EmitDefaultValue = false)]
+        [DataMember(Name = "event", EmitDefaultValue = true)]
         public string Event { get; set; }
 
         /// <summary>
         /// Gets or Sets LoadMethod
         /// </summary>
-        [DataMember(Name = "load_method", EmitDefaultValue = false)]
+        [DataMember(Name = "load_method", EmitDefaultValue = true)]
         public string LoadMethod { get; set; }
 
         /// <summary>
         /// Gets or Sets Html
         /// </summary>
-        [DataMember(Name = "html", EmitDefaultValue = false)]
+        [DataMember(Name = "html", EmitDefaultValue = true)]
         public string Html { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedTime
         /// </summary>
-        [DataMember(Name = "created_time", EmitDefaultValue = false)]
+        [DataMember(Name = "created_time", EmitDefaultValue = true)]
         public A2CDateTime CreatedTime { get; set; }
 
         /// <summary>
         /// Gets or Sets ModifiedTime
         /// </summary>
-        [DataMember(Name = "modified_time", EmitDefaultValue = false)]
+        [DataMember(Name = "modified_time", EmitDefaultValue = true)]
         public A2CDateTime ModifiedTime { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

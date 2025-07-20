@@ -50,25 +50,25 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets CarrierId
         /// </summary>
-        [DataMember(Name = "carrier_id", EmitDefaultValue = false)]
+        [DataMember(Name = "carrier_id", EmitDefaultValue = true)]
         public string CarrierId { get; set; }
 
         /// <summary>
         /// Gets or Sets TrackingNumber
         /// </summary>
-        [DataMember(Name = "tracking_number", EmitDefaultValue = false)]
+        [DataMember(Name = "tracking_number", EmitDefaultValue = true)]
         public string TrackingNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

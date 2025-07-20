@@ -44,7 +44,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="refundedItems">refundedItems.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public OrderStatusRefund(decimal shipping = default(decimal), decimal fee = default(decimal), decimal tax = default(decimal), decimal totalRefunded = default(decimal), A2CDateTime time = default(A2CDateTime), string comment = default(string), List<OrderStatusRefundItem> refundedItems = default(List<OrderStatusRefundItem>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public OrderStatusRefund(decimal? shipping = default(decimal?), decimal? fee = default(decimal?), decimal? tax = default(decimal?), decimal? totalRefunded = default(decimal?), A2CDateTime time = default(A2CDateTime), string comment = default(string), List<OrderStatusRefundItem> refundedItems = default(List<OrderStatusRefundItem>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Shipping = shipping;
             this.Fee = fee;
@@ -60,37 +60,37 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Shipping
         /// </summary>
-        [DataMember(Name = "shipping", EmitDefaultValue = false)]
-        public decimal Shipping { get; set; }
+        [DataMember(Name = "shipping", EmitDefaultValue = true)]
+        public decimal? Shipping { get; set; }
 
         /// <summary>
         /// Gets or Sets Fee
         /// </summary>
-        [DataMember(Name = "fee", EmitDefaultValue = false)]
-        public decimal Fee { get; set; }
+        [DataMember(Name = "fee", EmitDefaultValue = true)]
+        public decimal? Fee { get; set; }
 
         /// <summary>
         /// Gets or Sets Tax
         /// </summary>
-        [DataMember(Name = "tax", EmitDefaultValue = false)]
-        public decimal Tax { get; set; }
+        [DataMember(Name = "tax", EmitDefaultValue = true)]
+        public decimal? Tax { get; set; }
 
         /// <summary>
         /// Gets or Sets TotalRefunded
         /// </summary>
-        [DataMember(Name = "total_refunded", EmitDefaultValue = false)]
-        public decimal TotalRefunded { get; set; }
+        [DataMember(Name = "total_refunded", EmitDefaultValue = true)]
+        public decimal? TotalRefunded { get; set; }
 
         /// <summary>
         /// Gets or Sets Time
         /// </summary>
-        [DataMember(Name = "time", EmitDefaultValue = false)]
+        [DataMember(Name = "time", EmitDefaultValue = true)]
         public A2CDateTime Time { get; set; }
 
         /// <summary>
         /// Gets or Sets Comment
         /// </summary>
-        [DataMember(Name = "comment", EmitDefaultValue = false)]
+        [DataMember(Name = "comment", EmitDefaultValue = true)]
         public string Comment { get; set; }
 
         /// <summary>
@@ -102,13 +102,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

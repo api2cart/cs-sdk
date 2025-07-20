@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CategoriesCount** | **int** |  | [optional] 
+**CategoriesCount** | **int?** |  | [optional] 
 **Category** | [**List&lt;Category&gt;**](Category.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

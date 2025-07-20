@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TotalCount** | **int** |  | [optional] 
+**TotalCount** | **int?** |  | [optional] 
 **Reviews** | [**List&lt;ProductReview&gt;**](ProductReview.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

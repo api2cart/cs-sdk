@@ -45,7 +45,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="sortOrder">sortOrder.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Discount(string id = default(string), string name = default(string), string modifierType = default(string), decimal value = default(decimal), string fromTime = default(string), string toTime = default(string), string customerGroupIds = default(string), int sortOrder = default(int), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Discount(string id = default(string), string name = default(string), string modifierType = default(string), decimal value = default(decimal), string fromTime = default(string), string toTime = default(string), string customerGroupIds = default(string), int? sortOrder = default(int?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Name = name;
@@ -86,37 +86,37 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets FromTime
         /// </summary>
-        [DataMember(Name = "from_time", EmitDefaultValue = false)]
+        [DataMember(Name = "from_time", EmitDefaultValue = true)]
         public string FromTime { get; set; }
 
         /// <summary>
         /// Gets or Sets ToTime
         /// </summary>
-        [DataMember(Name = "to_time", EmitDefaultValue = false)]
+        [DataMember(Name = "to_time", EmitDefaultValue = true)]
         public string ToTime { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomerGroupIds
         /// </summary>
-        [DataMember(Name = "customer_group_ids", EmitDefaultValue = false)]
+        [DataMember(Name = "customer_group_ids", EmitDefaultValue = true)]
         public string CustomerGroupIds { get; set; }
 
         /// <summary>
         /// Gets or Sets SortOrder
         /// </summary>
-        [DataMember(Name = "sort_order", EmitDefaultValue = false)]
-        public int SortOrder { get; set; }
+        [DataMember(Name = "sort_order", EmitDefaultValue = true)]
+        public int? SortOrder { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

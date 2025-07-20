@@ -74,31 +74,31 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets MatchItems
         /// </summary>
-        [DataMember(Name = "match_items", EmitDefaultValue = false)]
+        [DataMember(Name = "match_items", EmitDefaultValue = true)]
         public string MatchItems { get; set; }
 
         /// <summary>
         /// Gets or Sets Key
         /// </summary>
-        [DataMember(Name = "key", EmitDefaultValue = false)]
+        [DataMember(Name = "key", EmitDefaultValue = true)]
         public string Key { get; set; }
 
         /// <summary>
         /// Gets or Sets Operator
         /// </summary>
-        [DataMember(Name = "operator", EmitDefaultValue = false)]
+        [DataMember(Name = "operator", EmitDefaultValue = true)]
         public string Operator { get; set; }
 
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
-        [DataMember(Name = "value", EmitDefaultValue = false)]
+        [DataMember(Name = "value", EmitDefaultValue = true)]
         public string Value { get; set; }
 
         /// <summary>
         /// Gets or Sets LogicOperator
         /// </summary>
-        [DataMember(Name = "logic_operator", EmitDefaultValue = false)]
+        [DataMember(Name = "logic_operator", EmitDefaultValue = true)]
         public string LogicOperator { get; set; }
 
         /// <summary>
@@ -110,13 +110,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

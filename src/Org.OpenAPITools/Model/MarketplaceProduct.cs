@@ -59,7 +59,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="length">length.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public MarketplaceProduct(string id = default(string), string type = default(string), string uAsin = default(string), string uEan = default(string), string uGtin = default(string), string uIsbn = default(string), string uMpn = default(string), string uUpc = default(string), string name = default(string), string description = default(string), string url = default(string), decimal price = default(decimal), List<Image> images = default(List<Image>), List<ProductOption> productOptions = default(List<ProductOption>), string manufacturer = default(string), string brand = default(string), decimal weight = default(decimal), string weightUnit = default(string), string dimensionsUnit = default(string), decimal width = default(decimal), decimal height = default(decimal), decimal length = default(decimal), Object additionalFields = default(Object), Object customFields = default(Object))
+        public MarketplaceProduct(string id = default(string), string type = default(string), string uAsin = default(string), string uEan = default(string), string uGtin = default(string), string uIsbn = default(string), string uMpn = default(string), string uUpc = default(string), string name = default(string), string description = default(string), string url = default(string), decimal? price = default(decimal?), List<Image> images = default(List<Image>), List<ProductOption> productOptions = default(List<ProductOption>), string manufacturer = default(string), string brand = default(string), decimal? weight = default(decimal?), string weightUnit = default(string), string dimensionsUnit = default(string), decimal? width = default(decimal?), decimal? height = default(decimal?), decimal? length = default(decimal?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Type = type;
@@ -96,68 +96,68 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name = "type", EmitDefaultValue = false)]
+        [DataMember(Name = "type", EmitDefaultValue = true)]
         public string Type { get; set; }
 
         /// <summary>
         /// Gets or Sets UAsin
         /// </summary>
-        [DataMember(Name = "u_asin", EmitDefaultValue = false)]
+        [DataMember(Name = "u_asin", EmitDefaultValue = true)]
         public string UAsin { get; set; }
 
         /// <summary>
         /// Gets or Sets UEan
         /// </summary>
-        [DataMember(Name = "u_ean", EmitDefaultValue = false)]
+        [DataMember(Name = "u_ean", EmitDefaultValue = true)]
         public string UEan { get; set; }
 
         /// <summary>
         /// Gets or Sets UGtin
         /// </summary>
-        [DataMember(Name = "u_gtin", EmitDefaultValue = false)]
+        [DataMember(Name = "u_gtin", EmitDefaultValue = true)]
         public string UGtin { get; set; }
 
         /// <summary>
         /// Gets or Sets UIsbn
         /// </summary>
-        [DataMember(Name = "u_isbn", EmitDefaultValue = false)]
+        [DataMember(Name = "u_isbn", EmitDefaultValue = true)]
         public string UIsbn { get; set; }
 
         /// <summary>
         /// Gets or Sets UMpn
         /// </summary>
-        [DataMember(Name = "u_mpn", EmitDefaultValue = false)]
+        [DataMember(Name = "u_mpn", EmitDefaultValue = true)]
         public string UMpn { get; set; }
 
         /// <summary>
         /// Gets or Sets UUpc
         /// </summary>
-        [DataMember(Name = "u_upc", EmitDefaultValue = false)]
+        [DataMember(Name = "u_upc", EmitDefaultValue = true)]
         public string UUpc { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
-        [DataMember(Name = "url", EmitDefaultValue = false)]
+        [DataMember(Name = "url", EmitDefaultValue = true)]
         public string Url { get; set; }
 
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
-        [DataMember(Name = "price", EmitDefaultValue = false)]
-        public decimal Price { get; set; }
+        [DataMember(Name = "price", EmitDefaultValue = true)]
+        public decimal? Price { get; set; }
 
         /// <summary>
         /// Gets or Sets Images
@@ -174,61 +174,61 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Manufacturer
         /// </summary>
-        [DataMember(Name = "manufacturer", EmitDefaultValue = false)]
+        [DataMember(Name = "manufacturer", EmitDefaultValue = true)]
         public string Manufacturer { get; set; }
 
         /// <summary>
         /// Gets or Sets Brand
         /// </summary>
-        [DataMember(Name = "brand", EmitDefaultValue = false)]
+        [DataMember(Name = "brand", EmitDefaultValue = true)]
         public string Brand { get; set; }
 
         /// <summary>
         /// Gets or Sets Weight
         /// </summary>
-        [DataMember(Name = "weight", EmitDefaultValue = false)]
-        public decimal Weight { get; set; }
+        [DataMember(Name = "weight", EmitDefaultValue = true)]
+        public decimal? Weight { get; set; }
 
         /// <summary>
         /// Gets or Sets WeightUnit
         /// </summary>
-        [DataMember(Name = "weight_unit", EmitDefaultValue = false)]
+        [DataMember(Name = "weight_unit", EmitDefaultValue = true)]
         public string WeightUnit { get; set; }
 
         /// <summary>
         /// Gets or Sets DimensionsUnit
         /// </summary>
-        [DataMember(Name = "dimensions_unit", EmitDefaultValue = false)]
+        [DataMember(Name = "dimensions_unit", EmitDefaultValue = true)]
         public string DimensionsUnit { get; set; }
 
         /// <summary>
         /// Gets or Sets Width
         /// </summary>
-        [DataMember(Name = "width", EmitDefaultValue = false)]
-        public decimal Width { get; set; }
+        [DataMember(Name = "width", EmitDefaultValue = true)]
+        public decimal? Width { get; set; }
 
         /// <summary>
         /// Gets or Sets Height
         /// </summary>
-        [DataMember(Name = "height", EmitDefaultValue = false)]
-        public decimal Height { get; set; }
+        [DataMember(Name = "height", EmitDefaultValue = true)]
+        public decimal? Height { get; set; }
 
         /// <summary>
         /// Gets or Sets Length
         /// </summary>
-        [DataMember(Name = "length", EmitDefaultValue = false)]
-        public decimal Length { get; set; }
+        [DataMember(Name = "length", EmitDefaultValue = true)]
+        public decimal? Length { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

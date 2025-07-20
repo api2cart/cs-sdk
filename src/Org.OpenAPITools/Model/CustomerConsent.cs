@@ -64,43 +64,43 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name = "type", EmitDefaultValue = false)]
+        [DataMember(Name = "type", EmitDefaultValue = true)]
         public string Type { get; set; }
 
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name = "status", EmitDefaultValue = false)]
+        [DataMember(Name = "status", EmitDefaultValue = true)]
         public string Status { get; set; }
 
         /// <summary>
         /// Gets or Sets Source
         /// </summary>
-        [DataMember(Name = "source", EmitDefaultValue = false)]
+        [DataMember(Name = "source", EmitDefaultValue = true)]
         public string Source { get; set; }
 
         /// <summary>
         /// Gets or Sets OptInLevel
         /// </summary>
-        [DataMember(Name = "opt_in_level", EmitDefaultValue = false)]
+        [DataMember(Name = "opt_in_level", EmitDefaultValue = true)]
         public string OptInLevel { get; set; }
 
         /// <summary>
         /// Gets or Sets ModifiedTime
         /// </summary>
-        [DataMember(Name = "modified_time", EmitDefaultValue = false)]
+        [DataMember(Name = "modified_time", EmitDefaultValue = true)]
         public string ModifiedTime { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

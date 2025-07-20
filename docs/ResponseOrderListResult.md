@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OrdersCount** | **int** |  | [optional] 
+**OrdersCount** | **int?** |  | [optional] 
 **Order** | [**List&lt;Order&gt;**](Order.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

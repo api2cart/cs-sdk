@@ -50,7 +50,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="variantId">variantId.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ProductAttribute(string attributeId = default(string), string code = default(string), string name = default(string), string langId = default(string), string storeId = default(string), string value = default(string), bool required = default(bool), bool visible = default(bool), string type = default(string), int position = default(int), string attributeGroupId = default(string), string productId = default(string), string variantId = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ProductAttribute(string attributeId = default(string), string code = default(string), string name = default(string), string langId = default(string), string storeId = default(string), string value = default(string), bool? required = default(bool?), bool? visible = default(bool?), string type = default(string), int? position = default(int?), string attributeGroupId = default(string), string productId = default(string), string variantId = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.AttributeId = attributeId;
             this.Code = code;
@@ -90,73 +90,73 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets LangId
         /// </summary>
-        [DataMember(Name = "lang_id", EmitDefaultValue = false)]
+        [DataMember(Name = "lang_id", EmitDefaultValue = true)]
         public string LangId { get; set; }
 
         /// <summary>
         /// Gets or Sets StoreId
         /// </summary>
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        [DataMember(Name = "store_id", EmitDefaultValue = true)]
         public string StoreId { get; set; }
 
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
-        [DataMember(Name = "value", EmitDefaultValue = false)]
+        [DataMember(Name = "value", EmitDefaultValue = true)]
         public string Value { get; set; }
 
         /// <summary>
         /// Gets or Sets Required
         /// </summary>
         [DataMember(Name = "required", EmitDefaultValue = true)]
-        public bool Required { get; set; }
+        public bool? Required { get; set; }
 
         /// <summary>
         /// Gets or Sets Visible
         /// </summary>
         [DataMember(Name = "visible", EmitDefaultValue = true)]
-        public bool Visible { get; set; }
+        public bool? Visible { get; set; }
 
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name = "type", EmitDefaultValue = false)]
+        [DataMember(Name = "type", EmitDefaultValue = true)]
         public string Type { get; set; }
 
         /// <summary>
         /// Gets or Sets Position
         /// </summary>
-        [DataMember(Name = "position", EmitDefaultValue = false)]
-        public int Position { get; set; }
+        [DataMember(Name = "position", EmitDefaultValue = true)]
+        public int? Position { get; set; }
 
         /// <summary>
         /// Gets or Sets AttributeGroupId
         /// </summary>
-        [DataMember(Name = "attribute_group_id", EmitDefaultValue = false)]
+        [DataMember(Name = "attribute_group_id", EmitDefaultValue = true)]
         public string AttributeGroupId { get; set; }
 
         /// <summary>
         /// Gets or Sets ProductId
         /// </summary>
-        [DataMember(Name = "product_id", EmitDefaultValue = false)]
+        [DataMember(Name = "product_id", EmitDefaultValue = true)]
         public string ProductId { get; set; }
 
         /// <summary>
         /// Gets or Sets VariantId
         /// </summary>
-        [DataMember(Name = "variant_id", EmitDefaultValue = false)]
+        [DataMember(Name = "variant_id", EmitDefaultValue = true)]
         public string VariantId { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

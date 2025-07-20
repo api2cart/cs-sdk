@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **Id** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **Callback** | **string** |  | [optional] 
-**CallbackErrCnt** | **int** |  | [optional] 
-**EnabledOnStore** | **bool** |  | [optional] 
+**CallbackErrCnt** | **int?** |  | [optional] 
+**EnabledOnStore** | **bool?** |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 
 

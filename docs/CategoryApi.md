@@ -1,6 +1,6 @@
 # Org.OpenAPITools.Api.CategoryApi
 
-All URIs are relative to *https://api.api2cart.com/v1.1*
+All URIs are relative to *https://api.api2cart.local.com/v1.1*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -40,7 +40,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -168,7 +168,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -247,7 +247,7 @@ catch (ApiException e)
 
 <a id="categoryassign"></a>
 # **CategoryAssign**
-> CartConfigUpdate200Response CategoryAssign (string categoryId, string productId, string? storeId = null)
+> CategoryAssign200Response CategoryAssign (string categoryId, string productId, string? storeId = null)
 
 category.assign
 
@@ -268,7 +268,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -286,7 +286,7 @@ namespace Example
             try
             {
                 // category.assign
-                CartConfigUpdate200Response result = apiInstance.CategoryAssign(categoryId, productId, storeId);
+                CategoryAssign200Response result = apiInstance.CategoryAssign(categoryId, productId, storeId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -307,7 +307,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.assign
-    ApiResponse<CartConfigUpdate200Response> response = apiInstance.CategoryAssignWithHttpInfo(categoryId, productId, storeId);
+    ApiResponse<CategoryAssign200Response> response = apiInstance.CategoryAssignWithHttpInfo(categoryId, productId, storeId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -330,7 +330,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CartConfigUpdate200Response**](CartConfigUpdate200Response.md)
+[**CategoryAssign200Response**](CategoryAssign200Response.md)
 
 ### Authorization
 
@@ -372,7 +372,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -496,7 +496,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -598,7 +598,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -706,7 +706,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -820,7 +820,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -924,7 +924,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1040,7 +1040,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1157,7 +1157,7 @@ catch (ApiException e)
 
 <a id="categoryunassign"></a>
 # **CategoryUnassign**
-> CartConfigUpdate200Response CategoryUnassign (string categoryId, string productId, string? storeId = null)
+> CategoryAssign200Response CategoryUnassign (string categoryId, string productId, string? storeId = null)
 
 category.unassign
 
@@ -1178,7 +1178,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1196,7 +1196,7 @@ namespace Example
             try
             {
                 // category.unassign
-                CartConfigUpdate200Response result = apiInstance.CategoryUnassign(categoryId, productId, storeId);
+                CategoryAssign200Response result = apiInstance.CategoryUnassign(categoryId, productId, storeId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1217,7 +1217,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.unassign
-    ApiResponse<CartConfigUpdate200Response> response = apiInstance.CategoryUnassignWithHttpInfo(categoryId, productId, storeId);
+    ApiResponse<CategoryAssign200Response> response = apiInstance.CategoryUnassignWithHttpInfo(categoryId, productId, storeId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1240,7 +1240,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CartConfigUpdate200Response**](CartConfigUpdate200Response.md)
+[**CategoryAssign200Response**](CategoryAssign200Response.md)
 
 ### Authorization
 
@@ -1282,7 +1282,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed

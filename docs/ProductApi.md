@@ -1,6 +1,6 @@
 # Org.OpenAPITools.Api.ProductApi
 
-All URIs are relative to *https://api.api2cart.com/v1.1*
+All URIs are relative to *https://api.api2cart.local.com/v1.1*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -18,7 +18,6 @@ All URIs are relative to *https://api.api2cart.com/v1.1*
 | [**ProductCurrencyList**](ProductApi.md#productcurrencylist) | **GET** /product.currency.list.json | product.currency.list |
 | [**ProductDelete**](ProductApi.md#productdelete) | **DELETE** /product.delete.json | product.delete |
 | [**ProductDeleteBatch**](ProductApi.md#productdeletebatch) | **POST** /product.delete.batch.json | product.delete.batch |
-| [**ProductFields**](ProductApi.md#productfields) | **GET** /product.fields.json | product.fields |
 | [**ProductFind**](ProductApi.md#productfind) | **GET** /product.find.json | product.find |
 | [**ProductImageAdd**](ProductApi.md#productimageadd) | **POST** /product.image.add.json | product.image.add |
 | [**ProductImageDelete**](ProductApi.md#productimagedelete) | **DELETE** /product.image.delete.json | product.image.delete |
@@ -44,13 +43,10 @@ All URIs are relative to *https://api.api2cart.com/v1.1*
 | [**ProductUpdateBatch**](ProductApi.md#productupdatebatch) | **POST** /product.update.batch.json | product.update.batch |
 | [**ProductVariantAdd**](ProductApi.md#productvariantadd) | **POST** /product.variant.add.json | product.variant.add |
 | [**ProductVariantAddBatch**](ProductApi.md#productvariantaddbatch) | **POST** /product.variant.add.batch.json | product.variant.add.batch |
-| [**ProductVariantCount**](ProductApi.md#productvariantcount) | **GET** /product.variant.count.json | product.variant.count |
 | [**ProductVariantDelete**](ProductApi.md#productvariantdelete) | **DELETE** /product.variant.delete.json | product.variant.delete |
 | [**ProductVariantDeleteBatch**](ProductApi.md#productvariantdeletebatch) | **POST** /product.variant.delete.batch.json | product.variant.delete.batch |
 | [**ProductVariantImageAdd**](ProductApi.md#productvariantimageadd) | **POST** /product.variant.image.add.json | product.variant.image.add |
 | [**ProductVariantImageDelete**](ProductApi.md#productvariantimagedelete) | **DELETE** /product.variant.image.delete.json | product.variant.image.delete |
-| [**ProductVariantInfo**](ProductApi.md#productvariantinfo) | **GET** /product.variant.info.json | product.variant.info |
-| [**ProductVariantList**](ProductApi.md#productvariantlist) | **GET** /product.variant.list.json | product.variant.list |
 | [**ProductVariantPriceAdd**](ProductApi.md#productvariantpriceadd) | **POST** /product.variant.price.add.json | product.variant.price.add |
 | [**ProductVariantPriceDelete**](ProductApi.md#productvariantpricedelete) | **DELETE** /product.variant.price.delete.json | product.variant.price.delete |
 | [**ProductVariantPriceUpdate**](ProductApi.md#productvariantpriceupdate) | **PUT** /product.variant.price.update.json | product.variant.price.update |
@@ -80,7 +76,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -180,7 +176,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -280,7 +276,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -408,7 +404,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -522,7 +518,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -632,7 +628,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -764,7 +760,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -870,7 +866,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -986,7 +982,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1130,7 +1126,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1274,7 +1270,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1386,7 +1382,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1500,7 +1496,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1602,7 +1598,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1679,101 +1675,6 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="productfields"></a>
-# **ProductFields**
-> CartConfigUpdate200Response ProductFields ()
-
-product.fields
-
-Retrieve all available fields for product item in store.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
-
-namespace Example
-{
-    public class ProductFieldsExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
-            // Configure API key authorization: StoreKeyAuth
-            config.AddApiKey("x-store-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-store-key", "Bearer");
-            // Configure API key authorization: ApiKeyAuth
-            config.AddApiKey("x-api-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-api-key", "Bearer");
-
-            var apiInstance = new ProductApi(config);
-
-            try
-            {
-                // product.fields
-                CartConfigUpdate200Response result = apiInstance.ProductFields();
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ProductApi.ProductFields: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the ProductFieldsWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // product.fields
-    ApiResponse<CartConfigUpdate200Response> response = apiInstance.ProductFieldsWithHttpInfo();
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ProductApi.ProductFieldsWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-### Return type
-
-[**CartConfigUpdate200Response**](CartConfigUpdate200Response.md)
-
-### Authorization
-
-[StoreKeyAuth](../README.md#StoreKeyAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a id="productfind"></a>
 # **ProductFind**
 > ProductFind200Response ProductFind (string findValue, string? findWhere = null, string? findParams = null, string? findWhat = null, string? langId = null, string? storeId = null)
@@ -1797,7 +1698,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1907,7 +1808,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2007,7 +1908,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2111,7 +2012,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2229,7 +2130,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2347,7 +2248,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2513,7 +2414,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2617,7 +2518,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2717,7 +2618,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2827,7 +2728,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2931,7 +2832,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -3045,7 +2946,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -3157,7 +3058,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -3261,7 +3162,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -3367,7 +3268,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -3481,7 +3382,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -3581,7 +3482,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -3685,7 +3586,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -3785,7 +3686,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -3903,7 +3804,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -4005,7 +3906,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -4105,7 +4006,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -4205,7 +4106,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -4305,7 +4206,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -4405,7 +4306,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -4482,118 +4383,6 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="productvariantcount"></a>
-# **ProductVariantCount**
-> ProductVariantCount200Response ProductVariantCount (string productId, string? categoryId = null, string? storeId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null)
-
-product.variant.count
-
-Get count variants.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
-
-namespace Example
-{
-    public class ProductVariantCountExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
-            // Configure API key authorization: StoreKeyAuth
-            config.AddApiKey("x-store-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-store-key", "Bearer");
-            // Configure API key authorization: ApiKeyAuth
-            config.AddApiKey("x-api-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-api-key", "Bearer");
-
-            var apiInstance = new ProductApi(config);
-            var productId = 10;  // string | Retrieves products' variants specified by product id
-            var categoryId = 6;  // string? | Counts products’ variants specified by category id (optional) 
-            var storeId = 1;  // string? | Retrieves variants specified by store id (optional) 
-            var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
-            var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
-            var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
-            var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-
-            try
-            {
-                // product.variant.count
-                ProductVariantCount200Response result = apiInstance.ProductVariantCount(productId, categoryId, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ProductApi.ProductVariantCount: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the ProductVariantCountWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // product.variant.count
-    ApiResponse<ProductVariantCount200Response> response = apiInstance.ProductVariantCountWithHttpInfo(productId, categoryId, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ProductApi.ProductVariantCountWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **productId** | **string** | Retrieves products&#39; variants specified by product id |  |
-| **categoryId** | **string?** | Counts products’ variants specified by category id | [optional]  |
-| **storeId** | **string?** | Retrieves variants specified by store id | [optional]  |
-| **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
-| **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
-| **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
-| **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-
-### Return type
-
-[**ProductVariantCount200Response**](ProductVariantCount200Response.md)
-
-### Authorization
-
-[StoreKeyAuth](../README.md#StoreKeyAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a id="productvariantdelete"></a>
 # **ProductVariantDelete**
 > AttributeValueDelete200Response ProductVariantDelete (string id, string productId, string? storeId = null)
@@ -4617,7 +4406,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -4721,7 +4510,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -4821,7 +4610,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -4921,7 +4710,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -5004,232 +4793,6 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="productvariantinfo"></a>
-# **ProductVariantInfo**
-> ProductInfo200Response ProductVariantInfo (string id, string? storeId = null, string? varParams = null, string? exclude = null)
-
-product.variant.info
-
-Get variant info. This method is deprecated, and its development is stopped. Please use \"product.child_item.info\" instead.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
-
-namespace Example
-{
-    public class ProductVariantInfoExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
-            // Configure API key authorization: StoreKeyAuth
-            config.AddApiKey("x-store-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-store-key", "Bearer");
-            // Configure API key authorization: ApiKeyAuth
-            config.AddApiKey("x-api-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-api-key", "Bearer");
-
-            var apiInstance = new ProductApi(config);
-            var id = 10;  // string | Retrieves variant's info specified by variant id
-            var storeId = 1;  // string? | Retrieves variant info specified by store id (optional) 
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description,price")
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-
-            try
-            {
-                // product.variant.info
-                ProductInfo200Response result = apiInstance.ProductVariantInfo(id, storeId, varParams, exclude);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ProductApi.ProductVariantInfo: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the ProductVariantInfoWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // product.variant.info
-    ApiResponse<ProductInfo200Response> response = apiInstance.ProductVariantInfoWithHttpInfo(id, storeId, varParams, exclude);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ProductApi.ProductVariantInfoWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **string** | Retrieves variant&#39;s info specified by variant id |  |
-| **storeId** | **string?** | Retrieves variant info specified by store id | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description,price&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-
-### Return type
-
-[**ProductInfo200Response**](ProductInfo200Response.md)
-
-### Authorization
-
-[StoreKeyAuth](../README.md#StoreKeyAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="productvariantlist"></a>
-# **ProductVariantList**
-> ProductVariantList200Response ProductVariantList (int? start = null, int? count = null, string? productId = null, string? categoryId = null, string? storeId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? varParams = null, string? exclude = null)
-
-product.variant.list
-
-Get a list of variants. This method is deprecated, and its development is stopped. Please use \"product.child_item.list\" instead.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
-
-namespace Example
-{
-    public class ProductVariantListExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
-            // Configure API key authorization: StoreKeyAuth
-            config.AddApiKey("x-store-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-store-key", "Bearer");
-            // Configure API key authorization: ApiKeyAuth
-            config.AddApiKey("x-api-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-api-key", "Bearer");
-
-            var apiInstance = new ProductApi(config);
-            var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
-            var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
-            var productId = 10;  // string? | Retrieves products' variants specified by product id (optional) 
-            var categoryId = 6;  // string? | Retrieves products’ variants specified by category id (optional) 
-            var storeId = 1;  // string? | Retrieves variants specified by store id (optional) 
-            var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
-            var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
-            var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
-            var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description,price")
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-
-            try
-            {
-                // product.variant.list
-                ProductVariantList200Response result = apiInstance.ProductVariantList(start, count, productId, categoryId, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, varParams, exclude);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ProductApi.ProductVariantList: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the ProductVariantListWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // product.variant.list
-    ApiResponse<ProductVariantList200Response> response = apiInstance.ProductVariantListWithHttpInfo(start, count, productId, categoryId, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, varParams, exclude);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ProductApi.ProductVariantListWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
-| **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
-| **productId** | **string?** | Retrieves products&#39; variants specified by product id | [optional]  |
-| **categoryId** | **string?** | Retrieves products’ variants specified by category id | [optional]  |
-| **storeId** | **string?** | Retrieves variants specified by store id | [optional]  |
-| **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
-| **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
-| **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
-| **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description,price&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-
-### Return type
-
-[**ProductVariantList200Response**](ProductVariantList200Response.md)
-
-### Authorization
-
-[StoreKeyAuth](../README.md#StoreKeyAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a id="productvariantpriceadd"></a>
 # **ProductVariantPriceAdd**
 > CartValidate200Response ProductVariantPriceAdd (ProductVariantPriceAdd productVariantPriceAdd)
@@ -5253,7 +4816,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -5353,7 +4916,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -5459,7 +5022,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -5559,7 +5122,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -5659,7 +5222,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed

@@ -112,8 +112,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CartConfigUpdate200Response</returns>
-        CartConfigUpdate200Response CategoryAssign(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0);
+        /// <returns>CategoryAssign200Response</returns>
+        CategoryAssign200Response CategoryAssign(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// category.assign
@@ -126,8 +126,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CartConfigUpdate200Response</returns>
-        ApiResponse<CartConfigUpdate200Response> CategoryAssignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0);
+        /// <returns>ApiResponse of CategoryAssign200Response</returns>
+        ApiResponse<CategoryAssign200Response> CategoryAssignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0);
         /// <summary>
         /// category.count
         /// </summary>
@@ -406,8 +406,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines category unassign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CartConfigUpdate200Response</returns>
-        CartConfigUpdate200Response CategoryUnassign(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0);
+        /// <returns>CategoryAssign200Response</returns>
+        CategoryAssign200Response CategoryUnassign(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// category.unassign
@@ -420,8 +420,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines category unassign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CartConfigUpdate200Response</returns>
-        ApiResponse<CartConfigUpdate200Response> CategoryUnassignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0);
+        /// <returns>ApiResponse of CategoryAssign200Response</returns>
+        ApiResponse<CategoryAssign200Response> CategoryUnassignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0);
         /// <summary>
         /// category.update
         /// </summary>
@@ -572,8 +572,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CartConfigUpdate200Response</returns>
-        System.Threading.Tasks.Task<CartConfigUpdate200Response> CategoryAssignAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of CategoryAssign200Response</returns>
+        System.Threading.Tasks.Task<CategoryAssign200Response> CategoryAssignAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.assign
@@ -587,8 +587,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CartConfigUpdate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartConfigUpdate200Response>> CategoryAssignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CategoryAssign200Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CategoryAssign200Response>> CategoryAssignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.count
         /// </summary>
@@ -882,8 +882,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CartConfigUpdate200Response</returns>
-        System.Threading.Tasks.Task<CartConfigUpdate200Response> CategoryUnassignAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of CategoryAssign200Response</returns>
+        System.Threading.Tasks.Task<CategoryAssign200Response> CategoryUnassignAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.unassign
@@ -897,8 +897,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CartConfigUpdate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartConfigUpdate200Response>> CategoryUnassignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CategoryAssign200Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CategoryAssign200Response>> CategoryUnassignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.update
         /// </summary>
@@ -1580,10 +1580,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CartConfigUpdate200Response</returns>
-        public CartConfigUpdate200Response CategoryAssign(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0)
+        /// <returns>CategoryAssign200Response</returns>
+        public CategoryAssign200Response CategoryAssign(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response> localVarResponse = CategoryAssignWithHttpInfo(categoryId, productId, storeId);
+            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = CategoryAssignWithHttpInfo(categoryId, productId, storeId);
             return localVarResponse.Data;
         }
 
@@ -1595,8 +1595,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CartConfigUpdate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response> CategoryAssignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0)
+        /// <returns>ApiResponse of CategoryAssign200Response</returns>
+        public Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> CategoryAssignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -1655,7 +1655,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<CartConfigUpdate200Response>("/category.assign.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<CategoryAssign200Response>("/category.assign.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CategoryAssign", localVarResponse);
@@ -1677,10 +1677,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CartConfigUpdate200Response</returns>
-        public async System.Threading.Tasks.Task<CartConfigUpdate200Response> CategoryAssignAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of CategoryAssign200Response</returns>
+        public async System.Threading.Tasks.Task<CategoryAssign200Response> CategoryAssignAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response> localVarResponse = await CategoryAssignWithHttpInfoAsync(categoryId, productId, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = await CategoryAssignWithHttpInfoAsync(categoryId, productId, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1693,8 +1693,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CartConfigUpdate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response>> CategoryAssignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CategoryAssign200Response)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response>> CategoryAssignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -1753,7 +1753,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CartConfigUpdate200Response>("/category.assign.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<CategoryAssign200Response>("/category.assign.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3578,10 +3578,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines category unassign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CartConfigUpdate200Response</returns>
-        public CartConfigUpdate200Response CategoryUnassign(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0)
+        /// <returns>CategoryAssign200Response</returns>
+        public CategoryAssign200Response CategoryUnassign(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response> localVarResponse = CategoryUnassignWithHttpInfo(categoryId, productId, storeId);
+            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = CategoryUnassignWithHttpInfo(categoryId, productId, storeId);
             return localVarResponse.Data;
         }
 
@@ -3593,8 +3593,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines category unassign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CartConfigUpdate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response> CategoryUnassignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0)
+        /// <returns>ApiResponse of CategoryAssign200Response</returns>
+        public Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> CategoryUnassignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -3653,7 +3653,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<CartConfigUpdate200Response>("/category.unassign.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<CategoryAssign200Response>("/category.unassign.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CategoryUnassign", localVarResponse);
@@ -3675,10 +3675,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CartConfigUpdate200Response</returns>
-        public async System.Threading.Tasks.Task<CartConfigUpdate200Response> CategoryUnassignAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of CategoryAssign200Response</returns>
+        public async System.Threading.Tasks.Task<CategoryAssign200Response> CategoryUnassignAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response> localVarResponse = await CategoryUnassignWithHttpInfoAsync(categoryId, productId, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = await CategoryUnassignWithHttpInfoAsync(categoryId, productId, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3691,8 +3691,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CartConfigUpdate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartConfigUpdate200Response>> CategoryUnassignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CategoryAssign200Response)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response>> CategoryUnassignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -3751,7 +3751,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CartConfigUpdate200Response>("/category.unassign.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<CategoryAssign200Response>("/category.unassign.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

@@ -44,7 +44,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="modifiedAt">modifiedAt.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public TaxClass(string id = default(string), string name = default(string), bool avail = default(bool), decimal tax = default(decimal), int taxType = default(int), A2CDateTime createdAt = default(A2CDateTime), A2CDateTime modifiedAt = default(A2CDateTime), Object additionalFields = default(Object), Object customFields = default(Object))
+        public TaxClass(string id = default(string), string name = default(string), bool? avail = default(bool?), decimal? tax = default(decimal?), int? taxType = default(int?), A2CDateTime createdAt = default(A2CDateTime), A2CDateTime modifiedAt = default(A2CDateTime), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Name = name;
@@ -73,42 +73,42 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets Avail
         /// </summary>
         [DataMember(Name = "avail", EmitDefaultValue = true)]
-        public bool Avail { get; set; }
+        public bool? Avail { get; set; }
 
         /// <summary>
         /// Gets or Sets Tax
         /// </summary>
-        [DataMember(Name = "tax", EmitDefaultValue = false)]
-        public decimal Tax { get; set; }
+        [DataMember(Name = "tax", EmitDefaultValue = true)]
+        public decimal? Tax { get; set; }
 
         /// <summary>
         /// Gets or Sets TaxType
         /// </summary>
-        [DataMember(Name = "tax_type", EmitDefaultValue = false)]
-        public int TaxType { get; set; }
+        [DataMember(Name = "tax_type", EmitDefaultValue = true)]
+        public int? TaxType { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
-        [DataMember(Name = "created_at", EmitDefaultValue = false)]
+        [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public A2CDateTime CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets ModifiedAt
         /// </summary>
-        [DataMember(Name = "modified_at", EmitDefaultValue = false)]
+        [DataMember(Name = "modified_at", EmitDefaultValue = true)]
         public A2CDateTime ModifiedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

@@ -66,73 +66,73 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Owner
         /// </summary>
-        [DataMember(Name = "owner", EmitDefaultValue = false)]
+        [DataMember(Name = "owner", EmitDefaultValue = true)]
         public string Owner { get; set; }
 
         /// <summary>
         /// Gets or Sets Country
         /// </summary>
-        [DataMember(Name = "country", EmitDefaultValue = false)]
+        [DataMember(Name = "country", EmitDefaultValue = true)]
         public string Country { get; set; }
 
         /// <summary>
         /// Gets or Sets State
         /// </summary>
-        [DataMember(Name = "state", EmitDefaultValue = false)]
+        [DataMember(Name = "state", EmitDefaultValue = true)]
         public string State { get; set; }
 
         /// <summary>
         /// Gets or Sets StateCode
         /// </summary>
-        [DataMember(Name = "state_code", EmitDefaultValue = false)]
+        [DataMember(Name = "state_code", EmitDefaultValue = true)]
         public string StateCode { get; set; }
 
         /// <summary>
         /// Gets or Sets City
         /// </summary>
-        [DataMember(Name = "city", EmitDefaultValue = false)]
+        [DataMember(Name = "city", EmitDefaultValue = true)]
         public string City { get; set; }
 
         /// <summary>
         /// Gets or Sets StreetAddress
         /// </summary>
-        [DataMember(Name = "street_address", EmitDefaultValue = false)]
+        [DataMember(Name = "street_address", EmitDefaultValue = true)]
         public string StreetAddress { get; set; }
 
         /// <summary>
         /// Gets or Sets StreetAddressLine2
         /// </summary>
-        [DataMember(Name = "street_address_line_2", EmitDefaultValue = false)]
+        [DataMember(Name = "street_address_line_2", EmitDefaultValue = true)]
         public string StreetAddressLine2 { get; set; }
 
         /// <summary>
         /// Gets or Sets ZipCode
         /// </summary>
-        [DataMember(Name = "zip_code", EmitDefaultValue = false)]
+        [DataMember(Name = "zip_code", EmitDefaultValue = true)]
         public string ZipCode { get; set; }
 
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
-        [DataMember(Name = "email", EmitDefaultValue = false)]
+        [DataMember(Name = "email", EmitDefaultValue = true)]
         public string Email { get; set; }
 
         /// <summary>
         /// Gets or Sets Phone
         /// </summary>
-        [DataMember(Name = "phone", EmitDefaultValue = false)]
+        [DataMember(Name = "phone", EmitDefaultValue = true)]
         public string Phone { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllPlugins** | **int** |  | [optional] 
+**AllPlugins** | **int?** |  | [optional] 
 **Plugins** | [**List&lt;Plugin&gt;**](Plugin.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

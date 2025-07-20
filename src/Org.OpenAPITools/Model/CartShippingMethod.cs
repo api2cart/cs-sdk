@@ -66,55 +66,55 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets HandlingFee
         /// </summary>
-        [DataMember(Name = "handling_fee", EmitDefaultValue = false)]
+        [DataMember(Name = "handling_fee", EmitDefaultValue = true)]
         public string HandlingFee { get; set; }
 
         /// <summary>
         /// Gets or Sets HandlingEnabled
         /// </summary>
-        [DataMember(Name = "handling_enabled", EmitDefaultValue = false)]
+        [DataMember(Name = "handling_enabled", EmitDefaultValue = true)]
         public string HandlingEnabled { get; set; }
 
         /// <summary>
         /// Gets or Sets HandlingType
         /// </summary>
-        [DataMember(Name = "handling_type", EmitDefaultValue = false)]
+        [DataMember(Name = "handling_type", EmitDefaultValue = true)]
         public string HandlingType { get; set; }
 
         /// <summary>
         /// Gets or Sets DefaultPrice
         /// </summary>
-        [DataMember(Name = "default_price", EmitDefaultValue = false)]
+        [DataMember(Name = "default_price", EmitDefaultValue = true)]
         public string DefaultPrice { get; set; }
 
         /// <summary>
         /// Gets or Sets DefaultPriceType
         /// </summary>
-        [DataMember(Name = "default_price_type", EmitDefaultValue = false)]
+        [DataMember(Name = "default_price_type", EmitDefaultValue = true)]
         public string DefaultPriceType { get; set; }
 
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name = "type", EmitDefaultValue = false)]
+        [DataMember(Name = "type", EmitDefaultValue = true)]
         public string Type { get; set; }
 
         /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
-        [DataMember(Name = "enabled", EmitDefaultValue = false)]
+        [DataMember(Name = "enabled", EmitDefaultValue = true)]
         public string Enabled { get; set; }
 
         /// <summary>
         /// Gets or Sets MinOrderAmount
         /// </summary>
-        [DataMember(Name = "min_order_amount", EmitDefaultValue = false)]
+        [DataMember(Name = "min_order_amount", EmitDefaultValue = true)]
         public string MinOrderAmount { get; set; }
 
         /// <summary>
@@ -126,13 +126,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

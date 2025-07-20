@@ -92,7 +92,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets CurrencyCode
         /// </summary>
-        [DataMember(Name = "currency_code", EmitDefaultValue = false)]
+        [DataMember(Name = "currency_code", EmitDefaultValue = true)]
         public string CurrencyCode { get; set; }
 
         /// <summary>
@@ -128,49 +128,49 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
-        [DataMember(Name = "created_at", EmitDefaultValue = false)]
+        [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public string CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets AvailTo
         /// </summary>
-        [DataMember(Name = "avail_to", EmitDefaultValue = false)]
+        [DataMember(Name = "avail_to", EmitDefaultValue = true)]
         public string AvailTo { get; set; }
 
         /// <summary>
         /// Gets or Sets FreeProductIds
         /// </summary>
-        [DataMember(Name = "free_product_ids", EmitDefaultValue = false)]
+        [DataMember(Name = "free_product_ids", EmitDefaultValue = true)]
         public string FreeProductIds { get; set; }
 
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
-        [DataMember(Name = "message", EmitDefaultValue = false)]
+        [DataMember(Name = "message", EmitDefaultValue = true)]
         public string Message { get; set; }
 
         /// <summary>
         /// Gets or Sets IssuerEmail
         /// </summary>
-        [DataMember(Name = "issuer_email", EmitDefaultValue = false)]
+        [DataMember(Name = "issuer_email", EmitDefaultValue = true)]
         public string IssuerEmail { get; set; }
 
         /// <summary>
         /// Gets or Sets RecipientEmail
         /// </summary>
-        [DataMember(Name = "recipient_email", EmitDefaultValue = false)]
+        [DataMember(Name = "recipient_email", EmitDefaultValue = true)]
         public string RecipientEmail { get; set; }
 
         /// <summary>
         /// Gets or Sets IssuerName
         /// </summary>
-        [DataMember(Name = "issuer_name", EmitDefaultValue = false)]
+        [DataMember(Name = "issuer_name", EmitDefaultValue = true)]
         public string IssuerName { get; set; }
 
         /// <summary>
         /// Gets or Sets RecipientName
         /// </summary>
-        [DataMember(Name = "recipient_name", EmitDefaultValue = false)]
+        [DataMember(Name = "recipient_name", EmitDefaultValue = true)]
         public string RecipientName { get; set; }
 
         /// <summary>
@@ -182,13 +182,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

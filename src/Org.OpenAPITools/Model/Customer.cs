@@ -62,7 +62,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="lastOrderId">lastOrderId.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Customer(string id = default(string), string email = default(string), string firstName = default(string), string lastName = default(string), string phone = default(string), A2CDateTime createdTime = default(A2CDateTime), A2CDateTime modifiedTime = default(A2CDateTime), List<CustomerGroup> group = default(List<CustomerGroup>), string login = default(string), A2CDateTime lastLogin = default(A2CDateTime), A2CDateTime birthDay = default(A2CDateTime), string status = default(string), bool isGuest = default(bool), bool newsLetterSubscription = default(bool), List<CustomerConsent> consents = default(List<CustomerConsent>), string gender = default(string), List<string> storesIds = default(List<string>), string website = default(string), string fax = default(string), string company = default(string), string ipAddress = default(string), List<CustomerAddress> addressBook = default(List<CustomerAddress>), string langId = default(string), int ordersCount = default(int), string lastOrderId = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Customer(string id = default(string), string email = default(string), string firstName = default(string), string lastName = default(string), string phone = default(string), A2CDateTime createdTime = default(A2CDateTime), A2CDateTime modifiedTime = default(A2CDateTime), List<CustomerGroup> group = default(List<CustomerGroup>), string login = default(string), A2CDateTime lastLogin = default(A2CDateTime), A2CDateTime birthDay = default(A2CDateTime), string status = default(string), bool? isGuest = default(bool?), bool? newsLetterSubscription = default(bool?), List<CustomerConsent> consents = default(List<CustomerConsent>), string gender = default(string), List<string> storesIds = default(List<string>), string website = default(string), string fax = default(string), string company = default(string), string ipAddress = default(string), List<CustomerAddress> addressBook = default(List<CustomerAddress>), string langId = default(string), int? ordersCount = default(int?), string lastOrderId = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Email = email;
@@ -108,31 +108,31 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets FirstName
         /// </summary>
-        [DataMember(Name = "first_name", EmitDefaultValue = false)]
+        [DataMember(Name = "first_name", EmitDefaultValue = true)]
         public string FirstName { get; set; }
 
         /// <summary>
         /// Gets or Sets LastName
         /// </summary>
-        [DataMember(Name = "last_name", EmitDefaultValue = false)]
+        [DataMember(Name = "last_name", EmitDefaultValue = true)]
         public string LastName { get; set; }
 
         /// <summary>
         /// Gets or Sets Phone
         /// </summary>
-        [DataMember(Name = "phone", EmitDefaultValue = false)]
+        [DataMember(Name = "phone", EmitDefaultValue = true)]
         public string Phone { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedTime
         /// </summary>
-        [DataMember(Name = "created_time", EmitDefaultValue = false)]
+        [DataMember(Name = "created_time", EmitDefaultValue = true)]
         public A2CDateTime CreatedTime { get; set; }
 
         /// <summary>
         /// Gets or Sets ModifiedTime
         /// </summary>
-        [DataMember(Name = "modified_time", EmitDefaultValue = false)]
+        [DataMember(Name = "modified_time", EmitDefaultValue = true)]
         public A2CDateTime ModifiedTime { get; set; }
 
         /// <summary>
@@ -144,38 +144,38 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Login
         /// </summary>
-        [DataMember(Name = "login", EmitDefaultValue = false)]
+        [DataMember(Name = "login", EmitDefaultValue = true)]
         public string Login { get; set; }
 
         /// <summary>
         /// Gets or Sets LastLogin
         /// </summary>
-        [DataMember(Name = "last_login", EmitDefaultValue = false)]
+        [DataMember(Name = "last_login", EmitDefaultValue = true)]
         public A2CDateTime LastLogin { get; set; }
 
         /// <summary>
         /// Gets or Sets BirthDay
         /// </summary>
-        [DataMember(Name = "birth_day", EmitDefaultValue = false)]
+        [DataMember(Name = "birth_day", EmitDefaultValue = true)]
         public A2CDateTime BirthDay { get; set; }
 
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name = "status", EmitDefaultValue = false)]
+        [DataMember(Name = "status", EmitDefaultValue = true)]
         public string Status { get; set; }
 
         /// <summary>
         /// Gets or Sets IsGuest
         /// </summary>
         [DataMember(Name = "is_guest", EmitDefaultValue = true)]
-        public bool IsGuest { get; set; }
+        public bool? IsGuest { get; set; }
 
         /// <summary>
         /// Gets or Sets NewsLetterSubscription
         /// </summary>
         [DataMember(Name = "news_letter_subscription", EmitDefaultValue = true)]
-        public bool NewsLetterSubscription { get; set; }
+        public bool? NewsLetterSubscription { get; set; }
 
         /// <summary>
         /// Gets or Sets Consents
@@ -186,7 +186,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Gender
         /// </summary>
-        [DataMember(Name = "gender", EmitDefaultValue = false)]
+        [DataMember(Name = "gender", EmitDefaultValue = true)]
         public string Gender { get; set; }
 
         /// <summary>
@@ -198,25 +198,25 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Website
         /// </summary>
-        [DataMember(Name = "website", EmitDefaultValue = false)]
+        [DataMember(Name = "website", EmitDefaultValue = true)]
         public string Website { get; set; }
 
         /// <summary>
         /// Gets or Sets Fax
         /// </summary>
-        [DataMember(Name = "fax", EmitDefaultValue = false)]
+        [DataMember(Name = "fax", EmitDefaultValue = true)]
         public string Fax { get; set; }
 
         /// <summary>
         /// Gets or Sets Company
         /// </summary>
-        [DataMember(Name = "company", EmitDefaultValue = false)]
+        [DataMember(Name = "company", EmitDefaultValue = true)]
         public string Company { get; set; }
 
         /// <summary>
         /// Gets or Sets IpAddress
         /// </summary>
-        [DataMember(Name = "ip_address", EmitDefaultValue = false)]
+        [DataMember(Name = "ip_address", EmitDefaultValue = true)]
         public string IpAddress { get; set; }
 
         /// <summary>
@@ -228,31 +228,31 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets LangId
         /// </summary>
-        [DataMember(Name = "lang_id", EmitDefaultValue = false)]
+        [DataMember(Name = "lang_id", EmitDefaultValue = true)]
         public string LangId { get; set; }
 
         /// <summary>
         /// Gets or Sets OrdersCount
         /// </summary>
-        [DataMember(Name = "orders_count", EmitDefaultValue = false)]
-        public int OrdersCount { get; set; }
+        [DataMember(Name = "orders_count", EmitDefaultValue = true)]
+        public int? OrdersCount { get; set; }
 
         /// <summary>
         /// Gets or Sets LastOrderId
         /// </summary>
-        [DataMember(Name = "last_order_id", EmitDefaultValue = false)]
+        [DataMember(Name = "last_order_id", EmitDefaultValue = true)]
         public string LastOrderId { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

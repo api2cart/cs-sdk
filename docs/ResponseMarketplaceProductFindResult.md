@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MarketplaceProductsCount** | **int** |  | [optional] 
+**MarketplaceProductsCount** | **int?** |  | [optional] 
 **MarketplaceProduct** | [**List&lt;MarketplaceProduct&gt;**](MarketplaceProduct.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

@@ -48,7 +48,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="deliveredAt">deliveredAt.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Shipment(string id = default(string), string orderId = default(string), string name = default(string), string warehouseId = default(string), string shipmentProvider = default(string), List<ShipmentTrackingNumber> trackingNumbers = default(List<ShipmentTrackingNumber>), A2CDateTime createdAt = default(A2CDateTime), A2CDateTime modifiedTime = default(A2CDateTime), List<ShipmentItem> items = default(List<ShipmentItem>), bool isShipped = default(bool), A2CDateTime deliveredAt = default(A2CDateTime), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Shipment(string id = default(string), string orderId = default(string), string name = default(string), string warehouseId = default(string), string shipmentProvider = default(string), List<ShipmentTrackingNumber> trackingNumbers = default(List<ShipmentTrackingNumber>), A2CDateTime createdAt = default(A2CDateTime), A2CDateTime modifiedTime = default(A2CDateTime), List<ShipmentItem> items = default(List<ShipmentItem>), bool? isShipped = default(bool?), A2CDateTime deliveredAt = default(A2CDateTime), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.OrderId = orderId;
@@ -80,19 +80,19 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets WarehouseId
         /// </summary>
-        [DataMember(Name = "warehouse_id", EmitDefaultValue = false)]
+        [DataMember(Name = "warehouse_id", EmitDefaultValue = true)]
         public string WarehouseId { get; set; }
 
         /// <summary>
         /// Gets or Sets ShipmentProvider
         /// </summary>
-        [DataMember(Name = "shipment_provider", EmitDefaultValue = false)]
+        [DataMember(Name = "shipment_provider", EmitDefaultValue = true)]
         public string ShipmentProvider { get; set; }
 
         /// <summary>
@@ -104,13 +104,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
-        [DataMember(Name = "created_at", EmitDefaultValue = false)]
+        [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public A2CDateTime CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets ModifiedTime
         /// </summary>
-        [DataMember(Name = "modified_time", EmitDefaultValue = false)]
+        [DataMember(Name = "modified_time", EmitDefaultValue = true)]
         public A2CDateTime ModifiedTime { get; set; }
 
         /// <summary>
@@ -123,24 +123,24 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets IsShipped
         /// </summary>
         [DataMember(Name = "is_shipped", EmitDefaultValue = true)]
-        public bool IsShipped { get; set; }
+        public bool? IsShipped { get; set; }
 
         /// <summary>
         /// Gets or Sets DeliveredAt
         /// </summary>
-        [DataMember(Name = "delivered_at", EmitDefaultValue = false)]
+        [DataMember(Name = "delivered_at", EmitDefaultValue = true)]
         public A2CDateTime DeliveredAt { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

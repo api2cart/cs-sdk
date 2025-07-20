@@ -1,13 +1,12 @@
-# Org.OpenAPITools.Model.ResponseCustomerListResult
+# Org.OpenAPITools.Model.CategoryAssign200Response
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CustomersCount** | **int?** |  | [optional] 
-**Customer** | [**List&lt;Customer&gt;**](Customer.md) |  | [optional] 
-**AdditionalFields** | **Object** |  | [optional] 
-**CustomFields** | **Object** |  | [optional] 
+**ReturnCode** | **int** |  | [optional] 
+**ReturnMessage** | **string** |  | [optional] 
+**Result** | **Object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

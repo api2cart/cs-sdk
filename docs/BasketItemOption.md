@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **ValueId** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **Value** | **string** |  | [optional] 
-**UsedInCombination** | **bool** |  | [optional] 
+**UsedInCombination** | **bool?** |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 
 

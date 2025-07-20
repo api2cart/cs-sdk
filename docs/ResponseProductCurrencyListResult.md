@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TotalCount** | **int** |  | [optional] 
+**TotalCount** | **int?** |  | [optional] 
 **Currency** | [**List&lt;Currency&gt;**](Currency.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

@@ -72,19 +72,19 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets RefundInfo
         /// </summary>
-        [DataMember(Name = "refund_info", EmitDefaultValue = false)]
+        [DataMember(Name = "refund_info", EmitDefaultValue = true)]
         public OrderStatusRefund RefundInfo { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

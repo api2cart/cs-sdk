@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
-**Enabled** | **bool** |  | [optional] 
+**Enabled** | **bool?** |  | [optional] 
 **Countries** | [**List&lt;Country&gt;**](Country.md) |  | [optional] 
 **ShippingMethods** | [**List&lt;CartShippingMethod&gt;**](CartShippingMethod.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 

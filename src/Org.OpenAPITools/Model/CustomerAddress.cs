@@ -100,13 +100,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets FirstName
         /// </summary>
-        [DataMember(Name = "first_name", EmitDefaultValue = false)]
+        [DataMember(Name = "first_name", EmitDefaultValue = true)]
         public string FirstName { get; set; }
 
         /// <summary>
         /// Gets or Sets LastName
         /// </summary>
-        [DataMember(Name = "last_name", EmitDefaultValue = false)]
+        [DataMember(Name = "last_name", EmitDefaultValue = true)]
         public string LastName { get; set; }
 
         /// <summary>
@@ -124,19 +124,19 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Address2
         /// </summary>
-        [DataMember(Name = "address2", EmitDefaultValue = false)]
+        [DataMember(Name = "address2", EmitDefaultValue = true)]
         public string Address2 { get; set; }
 
         /// <summary>
         /// Gets or Sets Phone
         /// </summary>
-        [DataMember(Name = "phone", EmitDefaultValue = false)]
+        [DataMember(Name = "phone", EmitDefaultValue = true)]
         public string Phone { get; set; }
 
         /// <summary>
         /// Gets or Sets PhoneMobile
         /// </summary>
-        [DataMember(Name = "phone_mobile", EmitDefaultValue = false)]
+        [DataMember(Name = "phone_mobile", EmitDefaultValue = true)]
         public string PhoneMobile { get; set; }
 
         /// <summary>
@@ -154,37 +154,37 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets State
         /// </summary>
-        [DataMember(Name = "state", EmitDefaultValue = false)]
+        [DataMember(Name = "state", EmitDefaultValue = true)]
         public State State { get; set; }
 
         /// <summary>
         /// Gets or Sets Company
         /// </summary>
-        [DataMember(Name = "company", EmitDefaultValue = false)]
+        [DataMember(Name = "company", EmitDefaultValue = true)]
         public string Company { get; set; }
 
         /// <summary>
         /// Gets or Sets Fax
         /// </summary>
-        [DataMember(Name = "fax", EmitDefaultValue = false)]
+        [DataMember(Name = "fax", EmitDefaultValue = true)]
         public string Fax { get; set; }
 
         /// <summary>
         /// Gets or Sets Website
         /// </summary>
-        [DataMember(Name = "website", EmitDefaultValue = false)]
+        [DataMember(Name = "website", EmitDefaultValue = true)]
         public string Website { get; set; }
 
         /// <summary>
         /// Gets or Sets Gender
         /// </summary>
-        [DataMember(Name = "gender", EmitDefaultValue = false)]
+        [DataMember(Name = "gender", EmitDefaultValue = true)]
         public string Gender { get; set; }
 
         /// <summary>
         /// Gets or Sets Region
         /// </summary>
-        [DataMember(Name = "region", EmitDefaultValue = false)]
+        [DataMember(Name = "region", EmitDefaultValue = true)]
         public string Region { get; set; }
 
         /// <summary>
@@ -196,31 +196,31 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets TaxId
         /// </summary>
-        [DataMember(Name = "tax_id", EmitDefaultValue = false)]
+        [DataMember(Name = "tax_id", EmitDefaultValue = true)]
         public string TaxId { get; set; }
 
         /// <summary>
         /// Gets or Sets IdentificationNumber
         /// </summary>
-        [DataMember(Name = "identification_number", EmitDefaultValue = false)]
+        [DataMember(Name = "identification_number", EmitDefaultValue = true)]
         public string IdentificationNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets Alias
         /// </summary>
-        [DataMember(Name = "alias", EmitDefaultValue = false)]
+        [DataMember(Name = "alias", EmitDefaultValue = true)]
         public string Alias { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

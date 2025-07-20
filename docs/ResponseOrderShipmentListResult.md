@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ShipmentCount** | **int** |  | [optional] 
+**ShipmentCount** | **int?** |  | [optional] 
 **Shipment** | [**List&lt;Shipment&gt;**](Shipment.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

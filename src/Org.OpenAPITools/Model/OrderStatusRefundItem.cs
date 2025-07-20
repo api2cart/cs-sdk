@@ -42,7 +42,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="refund">refund.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public OrderStatusRefundItem(string productId = default(string), string variantId = default(string), string orderProductId = default(string), decimal qty = default(decimal), decimal refund = default(decimal), Object additionalFields = default(Object), Object customFields = default(Object))
+        public OrderStatusRefundItem(string productId = default(string), string variantId = default(string), string orderProductId = default(string), decimal? qty = default(decimal?), decimal? refund = default(decimal?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.ProductId = productId;
             this.VariantId = variantId;
@@ -56,43 +56,43 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets ProductId
         /// </summary>
-        [DataMember(Name = "product_id", EmitDefaultValue = false)]
+        [DataMember(Name = "product_id", EmitDefaultValue = true)]
         public string ProductId { get; set; }
 
         /// <summary>
         /// Gets or Sets VariantId
         /// </summary>
-        [DataMember(Name = "variant_id", EmitDefaultValue = false)]
+        [DataMember(Name = "variant_id", EmitDefaultValue = true)]
         public string VariantId { get; set; }
 
         /// <summary>
         /// Gets or Sets OrderProductId
         /// </summary>
-        [DataMember(Name = "order_product_id", EmitDefaultValue = false)]
+        [DataMember(Name = "order_product_id", EmitDefaultValue = true)]
         public string OrderProductId { get; set; }
 
         /// <summary>
         /// Gets or Sets Qty
         /// </summary>
-        [DataMember(Name = "qty", EmitDefaultValue = false)]
-        public decimal Qty { get; set; }
+        [DataMember(Name = "qty", EmitDefaultValue = true)]
+        public decimal? Qty { get; set; }
 
         /// <summary>
         /// Gets or Sets Refund
         /// </summary>
-        [DataMember(Name = "refund", EmitDefaultValue = false)]
-        public decimal Refund { get; set; }
+        [DataMember(Name = "refund", EmitDefaultValue = true)]
+        public decimal? Refund { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

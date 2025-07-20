@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Id** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **ModifiedTime** | [**A2CDateTime**](A2CDateTime.md) |  | [optional] 
-**Notify** | **bool** |  | [optional] 
+**Notify** | **bool?** |  | [optional] 
 **Comment** | **string** |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

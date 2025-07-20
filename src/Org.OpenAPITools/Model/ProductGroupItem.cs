@@ -42,7 +42,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="price">price.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ProductGroupItem(string childItemId = default(string), string productId = default(string), string defaultQtyInPack = default(string), bool isQtyInPackFixed = default(bool), decimal price = default(decimal), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ProductGroupItem(string childItemId = default(string), string productId = default(string), string defaultQtyInPack = default(string), bool? isQtyInPackFixed = default(bool?), decimal? price = default(decimal?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.ChildItemId = childItemId;
             this.ProductId = productId;
@@ -56,7 +56,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets ChildItemId
         /// </summary>
-        [DataMember(Name = "child_item_id", EmitDefaultValue = false)]
+        [DataMember(Name = "child_item_id", EmitDefaultValue = true)]
         public string ChildItemId { get; set; }
 
         /// <summary>
@@ -75,24 +75,24 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets IsQtyInPackFixed
         /// </summary>
         [DataMember(Name = "is_qty_in_pack_fixed", EmitDefaultValue = true)]
-        public bool IsQtyInPackFixed { get; set; }
+        public bool? IsQtyInPackFixed { get; set; }
 
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
-        [DataMember(Name = "price", EmitDefaultValue = false)]
-        public decimal Price { get; set; }
+        [DataMember(Name = "price", EmitDefaultValue = true)]
+        public decimal? Price { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

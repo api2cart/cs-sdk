@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
-**Position** | **int** |  | [optional] 
+**Position** | **int?** |  | [optional] 
 **AttributeSetId** | **string** |  | [optional] 
 **AssignedAttributeIds** | **List&lt;string&gt;** |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 

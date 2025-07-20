@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **FromTime** | **string** |  | [optional] 
 **ToTime** | **string** |  | [optional] 
 **CustomerGroupIds** | **string** |  | [optional] 
-**SortOrder** | **int** |  | [optional] 
+**SortOrder** | **int?** |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 
 

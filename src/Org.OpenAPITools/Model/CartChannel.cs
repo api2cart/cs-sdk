@@ -41,7 +41,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="isEnabled">isEnabled.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public CartChannel(string id = default(string), string name = default(string), string platform = default(string), bool isEnabled = default(bool), Object additionalFields = default(Object), Object customFields = default(Object))
+        public CartChannel(string id = default(string), string name = default(string), string platform = default(string), bool? isEnabled = default(bool?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Name = name;
@@ -60,31 +60,31 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Platform
         /// </summary>
-        [DataMember(Name = "platform", EmitDefaultValue = false)]
+        [DataMember(Name = "platform", EmitDefaultValue = true)]
         public string Platform { get; set; }
 
         /// <summary>
         /// Gets or Sets IsEnabled
         /// </summary>
         [DataMember(Name = "is_enabled", EmitDefaultValue = true)]
-        public bool IsEnabled { get; set; }
+        public bool? IsEnabled { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

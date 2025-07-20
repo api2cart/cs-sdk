@@ -55,7 +55,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="channels">channels.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public CartStoreInfo(string storeId = default(string), string name = default(string), string language = default(string), List<Language> storeLanguages = default(List<Language>), Currency currency = default(Currency), List<Currency> storeCurrencies = default(List<Currency>), string timezone = default(string), string country = default(string), string rootCategoryId = default(string), string multiStoreUrl = default(string), bool active = default(bool), string weightUnit = default(string), string dimensionUnit = default(string), bool pricesIncludeTax = default(bool), List<Carrier> carrierInfo = default(List<Carrier>), Info storeOwnerInfo = default(Info), string defaultWarehouseId = default(string), List<CartChannel> channels = default(List<CartChannel>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public CartStoreInfo(string storeId = default(string), string name = default(string), string language = default(string), List<Language> storeLanguages = default(List<Language>), Currency currency = default(Currency), List<Currency> storeCurrencies = default(List<Currency>), string timezone = default(string), string country = default(string), string rootCategoryId = default(string), string multiStoreUrl = default(string), bool? active = default(bool?), string weightUnit = default(string), string dimensionUnit = default(string), bool? pricesIncludeTax = default(bool?), List<Carrier> carrierInfo = default(List<Carrier>), Info storeOwnerInfo = default(Info), string defaultWarehouseId = default(string), List<CartChannel> channels = default(List<CartChannel>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.StoreId = storeId;
             this.Name = name;
@@ -88,13 +88,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Language
         /// </summary>
-        [DataMember(Name = "language", EmitDefaultValue = false)]
+        [DataMember(Name = "language", EmitDefaultValue = true)]
         public string Language { get; set; }
 
         /// <summary>
@@ -118,50 +118,50 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Timezone
         /// </summary>
-        [DataMember(Name = "timezone", EmitDefaultValue = false)]
+        [DataMember(Name = "timezone", EmitDefaultValue = true)]
         public string Timezone { get; set; }
 
         /// <summary>
         /// Gets or Sets Country
         /// </summary>
-        [DataMember(Name = "country", EmitDefaultValue = false)]
+        [DataMember(Name = "country", EmitDefaultValue = true)]
         public string Country { get; set; }
 
         /// <summary>
         /// Gets or Sets RootCategoryId
         /// </summary>
-        [DataMember(Name = "root_category_id", EmitDefaultValue = false)]
+        [DataMember(Name = "root_category_id", EmitDefaultValue = true)]
         public string RootCategoryId { get; set; }
 
         /// <summary>
         /// Gets or Sets MultiStoreUrl
         /// </summary>
-        [DataMember(Name = "multi_store_url", EmitDefaultValue = false)]
+        [DataMember(Name = "multi_store_url", EmitDefaultValue = true)]
         public string MultiStoreUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name = "active", EmitDefaultValue = true)]
-        public bool Active { get; set; }
+        public bool? Active { get; set; }
 
         /// <summary>
         /// Gets or Sets WeightUnit
         /// </summary>
-        [DataMember(Name = "weight_unit", EmitDefaultValue = false)]
+        [DataMember(Name = "weight_unit", EmitDefaultValue = true)]
         public string WeightUnit { get; set; }
 
         /// <summary>
         /// Gets or Sets DimensionUnit
         /// </summary>
-        [DataMember(Name = "dimension_unit", EmitDefaultValue = false)]
+        [DataMember(Name = "dimension_unit", EmitDefaultValue = true)]
         public string DimensionUnit { get; set; }
 
         /// <summary>
         /// Gets or Sets PricesIncludeTax
         /// </summary>
         [DataMember(Name = "prices_include_tax", EmitDefaultValue = true)]
-        public bool PricesIncludeTax { get; set; }
+        public bool? PricesIncludeTax { get; set; }
 
         /// <summary>
         /// Gets or Sets CarrierInfo
@@ -172,13 +172,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets StoreOwnerInfo
         /// </summary>
-        [DataMember(Name = "store_owner_info", EmitDefaultValue = false)]
+        [DataMember(Name = "store_owner_info", EmitDefaultValue = true)]
         public Info StoreOwnerInfo { get; set; }
 
         /// <summary>
         /// Gets or Sets DefaultWarehouseId
         /// </summary>
-        [DataMember(Name = "default_warehouse_id", EmitDefaultValue = false)]
+        [DataMember(Name = "default_warehouse_id", EmitDefaultValue = true)]
         public string DefaultWarehouseId { get; set; }
 
         /// <summary>
@@ -190,13 +190,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

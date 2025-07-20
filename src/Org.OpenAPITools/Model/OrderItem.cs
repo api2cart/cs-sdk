@@ -55,7 +55,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="parentOrderProductId">parentOrderProductId.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public OrderItem(string productId = default(string), string orderProductId = default(string), string model = default(string), string name = default(string), decimal price = default(decimal), decimal priceIncTax = default(decimal), decimal quantity = default(decimal), decimal discountAmount = default(decimal), decimal totalPrice = default(decimal), decimal taxPercent = default(decimal), decimal taxValue = default(decimal), decimal taxValueAfterDiscount = default(decimal), List<OrderItemOption> options = default(List<OrderItemOption>), string variantId = default(string), string weightUnit = default(string), decimal weight = default(decimal), string barcode = default(string), string parentOrderProductId = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
+        public OrderItem(string productId = default(string), string orderProductId = default(string), string model = default(string), string name = default(string), decimal price = default(decimal), decimal? priceIncTax = default(decimal?), decimal? quantity = default(decimal?), decimal? discountAmount = default(decimal?), decimal? totalPrice = default(decimal?), decimal? taxPercent = default(decimal?), decimal? taxValue = default(decimal?), decimal? taxValueAfterDiscount = default(decimal?), List<OrderItemOption> options = default(List<OrderItemOption>), string variantId = default(string), string weightUnit = default(string), decimal? weight = default(decimal?), string barcode = default(string), string parentOrderProductId = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.ProductId = productId;
             this.OrderProductId = orderProductId;
@@ -82,19 +82,19 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets ProductId
         /// </summary>
-        [DataMember(Name = "product_id", EmitDefaultValue = false)]
+        [DataMember(Name = "product_id", EmitDefaultValue = true)]
         public string ProductId { get; set; }
 
         /// <summary>
         /// Gets or Sets OrderProductId
         /// </summary>
-        [DataMember(Name = "order_product_id", EmitDefaultValue = false)]
+        [DataMember(Name = "order_product_id", EmitDefaultValue = true)]
         public string OrderProductId { get; set; }
 
         /// <summary>
         /// Gets or Sets Model
         /// </summary>
-        [DataMember(Name = "model", EmitDefaultValue = false)]
+        [DataMember(Name = "model", EmitDefaultValue = true)]
         public string Model { get; set; }
 
         /// <summary>
@@ -112,44 +112,44 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets PriceIncTax
         /// </summary>
-        [DataMember(Name = "price_inc_tax", EmitDefaultValue = false)]
-        public decimal PriceIncTax { get; set; }
+        [DataMember(Name = "price_inc_tax", EmitDefaultValue = true)]
+        public decimal? PriceIncTax { get; set; }
 
         /// <summary>
         /// Gets or Sets Quantity
         /// </summary>
-        [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public decimal Quantity { get; set; }
+        [DataMember(Name = "quantity", EmitDefaultValue = true)]
+        public decimal? Quantity { get; set; }
 
         /// <summary>
         /// Gets or Sets DiscountAmount
         /// </summary>
-        [DataMember(Name = "discount_amount", EmitDefaultValue = false)]
-        public decimal DiscountAmount { get; set; }
+        [DataMember(Name = "discount_amount", EmitDefaultValue = true)]
+        public decimal? DiscountAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets TotalPrice
         /// </summary>
-        [DataMember(Name = "total_price", EmitDefaultValue = false)]
-        public decimal TotalPrice { get; set; }
+        [DataMember(Name = "total_price", EmitDefaultValue = true)]
+        public decimal? TotalPrice { get; set; }
 
         /// <summary>
         /// Gets or Sets TaxPercent
         /// </summary>
-        [DataMember(Name = "tax_percent", EmitDefaultValue = false)]
-        public decimal TaxPercent { get; set; }
+        [DataMember(Name = "tax_percent", EmitDefaultValue = true)]
+        public decimal? TaxPercent { get; set; }
 
         /// <summary>
         /// Gets or Sets TaxValue
         /// </summary>
-        [DataMember(Name = "tax_value", EmitDefaultValue = false)]
-        public decimal TaxValue { get; set; }
+        [DataMember(Name = "tax_value", EmitDefaultValue = true)]
+        public decimal? TaxValue { get; set; }
 
         /// <summary>
         /// Gets or Sets TaxValueAfterDiscount
         /// </summary>
-        [DataMember(Name = "tax_value_after_discount", EmitDefaultValue = false)]
-        public decimal TaxValueAfterDiscount { get; set; }
+        [DataMember(Name = "tax_value_after_discount", EmitDefaultValue = true)]
+        public decimal? TaxValueAfterDiscount { get; set; }
 
         /// <summary>
         /// Gets or Sets Options
@@ -160,43 +160,43 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets VariantId
         /// </summary>
-        [DataMember(Name = "variant_id", EmitDefaultValue = false)]
+        [DataMember(Name = "variant_id", EmitDefaultValue = true)]
         public string VariantId { get; set; }
 
         /// <summary>
         /// Gets or Sets WeightUnit
         /// </summary>
-        [DataMember(Name = "weight_unit", EmitDefaultValue = false)]
+        [DataMember(Name = "weight_unit", EmitDefaultValue = true)]
         public string WeightUnit { get; set; }
 
         /// <summary>
         /// Gets or Sets Weight
         /// </summary>
-        [DataMember(Name = "weight", EmitDefaultValue = false)]
-        public decimal Weight { get; set; }
+        [DataMember(Name = "weight", EmitDefaultValue = true)]
+        public decimal? Weight { get; set; }
 
         /// <summary>
         /// Gets or Sets Barcode
         /// </summary>
-        [DataMember(Name = "barcode", EmitDefaultValue = false)]
+        [DataMember(Name = "barcode", EmitDefaultValue = true)]
         public string Barcode { get; set; }
 
         /// <summary>
         /// Gets or Sets ParentOrderProductId
         /// </summary>
-        [DataMember(Name = "parent_order_product_id", EmitDefaultValue = false)]
+        [DataMember(Name = "parent_order_product_id", EmitDefaultValue = true)]
         public string ParentOrderProductId { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

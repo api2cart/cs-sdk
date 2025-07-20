@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProductsCount** | **int** |  | [optional] 
+**ProductsCount** | **int?** |  | [optional] 
 **Product** | [**List&lt;Product&gt;**](Product.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

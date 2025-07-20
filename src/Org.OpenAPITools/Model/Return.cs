@@ -74,37 +74,37 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets OrderId
         /// </summary>
-        [DataMember(Name = "order_id", EmitDefaultValue = false)]
+        [DataMember(Name = "order_id", EmitDefaultValue = true)]
         public string OrderId { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomerId
         /// </summary>
-        [DataMember(Name = "customer_id", EmitDefaultValue = false)]
+        [DataMember(Name = "customer_id", EmitDefaultValue = true)]
         public string CustomerId { get; set; }
 
         /// <summary>
         /// Gets or Sets StoreId
         /// </summary>
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        [DataMember(Name = "store_id", EmitDefaultValue = true)]
         public string StoreId { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
-        [DataMember(Name = "created_at", EmitDefaultValue = false)]
+        [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public string CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets ModifiedAt
         /// </summary>
-        [DataMember(Name = "modified_at", EmitDefaultValue = false)]
+        [DataMember(Name = "modified_at", EmitDefaultValue = true)]
         public string ModifiedAt { get; set; }
 
         /// <summary>
@@ -122,25 +122,25 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Comment
         /// </summary>
-        [DataMember(Name = "comment", EmitDefaultValue = false)]
+        [DataMember(Name = "comment", EmitDefaultValue = true)]
         public string Comment { get; set; }
 
         /// <summary>
         /// Gets or Sets StaffNote
         /// </summary>
-        [DataMember(Name = "staff_note", EmitDefaultValue = false)]
+        [DataMember(Name = "staff_note", EmitDefaultValue = true)]
         public string StaffNote { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

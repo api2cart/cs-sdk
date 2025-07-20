@@ -44,7 +44,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="quantity">quantity.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ShipmentItem(string orderProductId = default(string), string productId = default(string), string variantId = default(string), string model = default(string), string name = default(string), decimal price = default(decimal), decimal quantity = default(decimal), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ShipmentItem(string orderProductId = default(string), string productId = default(string), string variantId = default(string), string model = default(string), string name = default(string), decimal? price = default(decimal?), decimal? quantity = default(decimal?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.OrderProductId = orderProductId;
             this.ProductId = productId;
@@ -60,55 +60,55 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets OrderProductId
         /// </summary>
-        [DataMember(Name = "order_product_id", EmitDefaultValue = false)]
+        [DataMember(Name = "order_product_id", EmitDefaultValue = true)]
         public string OrderProductId { get; set; }
 
         /// <summary>
         /// Gets or Sets ProductId
         /// </summary>
-        [DataMember(Name = "product_id", EmitDefaultValue = false)]
+        [DataMember(Name = "product_id", EmitDefaultValue = true)]
         public string ProductId { get; set; }
 
         /// <summary>
         /// Gets or Sets VariantId
         /// </summary>
-        [DataMember(Name = "variant_id", EmitDefaultValue = false)]
+        [DataMember(Name = "variant_id", EmitDefaultValue = true)]
         public string VariantId { get; set; }
 
         /// <summary>
         /// Gets or Sets Model
         /// </summary>
-        [DataMember(Name = "model", EmitDefaultValue = false)]
+        [DataMember(Name = "model", EmitDefaultValue = true)]
         public string Model { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
-        [DataMember(Name = "price", EmitDefaultValue = false)]
-        public decimal Price { get; set; }
+        [DataMember(Name = "price", EmitDefaultValue = true)]
+        public decimal? Price { get; set; }
 
         /// <summary>
         /// Gets or Sets Quantity
         /// </summary>
-        [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public decimal Quantity { get; set; }
+        [DataMember(Name = "quantity", EmitDefaultValue = true)]
+        public decimal? Quantity { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

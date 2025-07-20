@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PreestimateShippingsCount** | **int** |  | [optional] 
+**PreestimateShippingsCount** | **int?** |  | [optional] 
 **PreestimateShippings** | [**List&lt;OrderPreestimateShipping&gt;**](OrderPreestimateShipping.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

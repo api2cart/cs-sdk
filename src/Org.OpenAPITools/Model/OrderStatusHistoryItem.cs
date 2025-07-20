@@ -42,7 +42,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="comment">comment.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public OrderStatusHistoryItem(string id = default(string), string name = default(string), A2CDateTime modifiedTime = default(A2CDateTime), bool notify = default(bool), string comment = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
+        public OrderStatusHistoryItem(string id = default(string), string name = default(string), A2CDateTime modifiedTime = default(A2CDateTime), bool? notify = default(bool?), string comment = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Name = name;
@@ -75,24 +75,24 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets Notify
         /// </summary>
         [DataMember(Name = "notify", EmitDefaultValue = true)]
-        public bool Notify { get; set; }
+        public bool? Notify { get; set; }
 
         /// <summary>
         /// Gets or Sets Comment
         /// </summary>
-        [DataMember(Name = "comment", EmitDefaultValue = false)]
+        [DataMember(Name = "comment", EmitDefaultValue = true)]
         public string Comment { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

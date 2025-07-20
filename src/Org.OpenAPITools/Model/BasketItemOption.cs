@@ -42,7 +42,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="usedInCombination">usedInCombination.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public BasketItemOption(string id = default(string), string valueId = default(string), string name = default(string), string value = default(string), bool usedInCombination = default(bool), Object additionalFields = default(Object), Object customFields = default(Object))
+        public BasketItemOption(string id = default(string), string valueId = default(string), string name = default(string), string value = default(string), bool? usedInCombination = default(bool?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.ValueId = valueId;
@@ -56,43 +56,43 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name = "id", EmitDefaultValue = false)]
+        [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets ValueId
         /// </summary>
-        [DataMember(Name = "value_id", EmitDefaultValue = false)]
+        [DataMember(Name = "value_id", EmitDefaultValue = true)]
         public string ValueId { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
-        [DataMember(Name = "value", EmitDefaultValue = false)]
+        [DataMember(Name = "value", EmitDefaultValue = true)]
         public string Value { get; set; }
 
         /// <summary>
         /// Gets or Sets UsedInCombination
         /// </summary>
         [DataMember(Name = "used_in_combination", EmitDefaultValue = true)]
-        public bool UsedInCombination { get; set; }
+        public bool? UsedInCombination { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

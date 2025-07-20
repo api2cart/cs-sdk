@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AttributesCount** | **int** |  | [optional] 
+**AttributesCount** | **int?** |  | [optional] 
 **Attribute** | [**List&lt;StoreAttribute&gt;**](StoreAttribute.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

@@ -39,7 +39,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="plugins">plugins.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public PluginList(int allPlugins = default(int), List<Plugin> plugins = default(List<Plugin>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public PluginList(int? allPlugins = default(int?), List<Plugin> plugins = default(List<Plugin>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.AllPlugins = allPlugins;
             this.Plugins = plugins;
@@ -50,8 +50,8 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AllPlugins
         /// </summary>
-        [DataMember(Name = "all_plugins", EmitDefaultValue = false)]
-        public int AllPlugins { get; set; }
+        [DataMember(Name = "all_plugins", EmitDefaultValue = true)]
+        public int? AllPlugins { get; set; }
 
         /// <summary>
         /// Gets or Sets Plugins
@@ -62,13 +62,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

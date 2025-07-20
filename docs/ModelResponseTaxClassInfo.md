@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ReturnCode** | **int** |  | [optional] 
+**ReturnCode** | **int?** |  | [optional] 
 **ReturnMessage** | **string** |  | [optional] 
 **Result** | [**ResponseTaxClassInfoResult**](ResponseTaxClassInfoResult.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 

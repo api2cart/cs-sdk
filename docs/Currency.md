@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 **Iso3** | **string** |  | [optional] 
 **SymbolLeft** | **string** |  | [optional] 
 **SymbolRight** | **string** |  | [optional] 
-**Rate** | **decimal** |  | [optional] 
-**Avail** | **bool** |  | [optional] 
-**Default** | **bool** |  | [optional] 
+**Rate** | **decimal?** |  | [optional] 
+**Avail** | **bool?** |  | [optional] 
+**Default** | **bool?** |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 
 

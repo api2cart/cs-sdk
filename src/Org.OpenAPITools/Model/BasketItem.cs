@@ -49,7 +49,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="options">options.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public BasketItem(string id = default(string), string parentId = default(string), string productId = default(string), string variantId = default(string), string sku = default(string), string name = default(string), decimal price = default(decimal), decimal tax = default(decimal), decimal quantity = default(decimal), string weightUnit = default(string), decimal weight = default(decimal), List<BasketItemOption> options = default(List<BasketItemOption>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public BasketItem(string id = default(string), string parentId = default(string), string productId = default(string), string variantId = default(string), string sku = default(string), string name = default(string), decimal price = default(decimal), decimal? tax = default(decimal?), decimal? quantity = default(decimal?), string weightUnit = default(string), decimal? weight = default(decimal?), List<BasketItemOption> options = default(List<BasketItemOption>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.ParentId = parentId;
@@ -70,13 +70,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name = "id", EmitDefaultValue = false)]
+        [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets ParentId
         /// </summary>
-        [DataMember(Name = "parent_id", EmitDefaultValue = false)]
+        [DataMember(Name = "parent_id", EmitDefaultValue = true)]
         public string ParentId { get; set; }
 
         /// <summary>
@@ -88,13 +88,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets VariantId
         /// </summary>
-        [DataMember(Name = "variant_id", EmitDefaultValue = false)]
+        [DataMember(Name = "variant_id", EmitDefaultValue = true)]
         public string VariantId { get; set; }
 
         /// <summary>
         /// Gets or Sets Sku
         /// </summary>
-        [DataMember(Name = "sku", EmitDefaultValue = false)]
+        [DataMember(Name = "sku", EmitDefaultValue = true)]
         public string Sku { get; set; }
 
         /// <summary>
@@ -112,26 +112,26 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Tax
         /// </summary>
-        [DataMember(Name = "tax", EmitDefaultValue = false)]
-        public decimal Tax { get; set; }
+        [DataMember(Name = "tax", EmitDefaultValue = true)]
+        public decimal? Tax { get; set; }
 
         /// <summary>
         /// Gets or Sets Quantity
         /// </summary>
-        [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public decimal Quantity { get; set; }
+        [DataMember(Name = "quantity", EmitDefaultValue = true)]
+        public decimal? Quantity { get; set; }
 
         /// <summary>
         /// Gets or Sets WeightUnit
         /// </summary>
-        [DataMember(Name = "weight_unit", EmitDefaultValue = false)]
+        [DataMember(Name = "weight_unit", EmitDefaultValue = true)]
         public string WeightUnit { get; set; }
 
         /// <summary>
         /// Gets or Sets Weight
         /// </summary>
-        [DataMember(Name = "weight", EmitDefaultValue = false)]
-        public decimal Weight { get; set; }
+        [DataMember(Name = "weight", EmitDefaultValue = true)]
+        public decimal? Weight { get; set; }
 
         /// <summary>
         /// Gets or Sets Options
@@ -142,13 +142,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

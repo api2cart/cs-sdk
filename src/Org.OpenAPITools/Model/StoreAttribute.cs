@@ -49,7 +49,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="langId">langId.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public StoreAttribute(string id = default(string), string code = default(string), string type = default(string), string name = default(string), List<string> defaultValues = default(List<string>), int position = default(int), bool visible = default(bool), bool required = default(bool), bool varSystem = default(bool), List<string> values = default(List<string>), string storeId = default(string), string langId = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
+        public StoreAttribute(string id = default(string), string code = default(string), string type = default(string), string name = default(string), List<string> defaultValues = default(List<string>), int? position = default(int?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), List<string> values = default(List<string>), string storeId = default(string), string langId = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Code = code;
@@ -76,7 +76,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name = "code", EmitDefaultValue = false)]
+        [DataMember(Name = "code", EmitDefaultValue = true)]
         public string Code { get; set; }
 
         /// <summary>
@@ -100,26 +100,26 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Position
         /// </summary>
-        [DataMember(Name = "position", EmitDefaultValue = false)]
-        public int Position { get; set; }
+        [DataMember(Name = "position", EmitDefaultValue = true)]
+        public int? Position { get; set; }
 
         /// <summary>
         /// Gets or Sets Visible
         /// </summary>
         [DataMember(Name = "visible", EmitDefaultValue = true)]
-        public bool Visible { get; set; }
+        public bool? Visible { get; set; }
 
         /// <summary>
         /// Gets or Sets Required
         /// </summary>
         [DataMember(Name = "required", EmitDefaultValue = true)]
-        public bool Required { get; set; }
+        public bool? Required { get; set; }
 
         /// <summary>
         /// Gets or Sets System
         /// </summary>
         [DataMember(Name = "system", EmitDefaultValue = true)]
-        public bool System { get; set; }
+        public bool? System { get; set; }
 
         /// <summary>
         /// Gets or Sets Values
@@ -130,25 +130,25 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets StoreId
         /// </summary>
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        [DataMember(Name = "store_id", EmitDefaultValue = true)]
         public string StoreId { get; set; }
 
         /// <summary>
         /// Gets or Sets LangId
         /// </summary>
-        [DataMember(Name = "lang_id", EmitDefaultValue = false)]
+        [DataMember(Name = "lang_id", EmitDefaultValue = true)]
         public string LangId { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

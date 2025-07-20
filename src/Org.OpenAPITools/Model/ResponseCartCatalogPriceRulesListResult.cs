@@ -39,7 +39,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="catalogPriceRules">catalogPriceRules.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ResponseCartCatalogPriceRulesListResult(int catalogPriceRulesCount = default(int), List<CatalogPriceRule> catalogPriceRules = default(List<CatalogPriceRule>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ResponseCartCatalogPriceRulesListResult(int? catalogPriceRulesCount = default(int?), List<CatalogPriceRule> catalogPriceRules = default(List<CatalogPriceRule>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.CatalogPriceRulesCount = catalogPriceRulesCount;
             this.CatalogPriceRules = catalogPriceRules;
@@ -50,8 +50,8 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets CatalogPriceRulesCount
         /// </summary>
-        [DataMember(Name = "catalog_price_rules_count", EmitDefaultValue = false)]
-        public int CatalogPriceRulesCount { get; set; }
+        [DataMember(Name = "catalog_price_rules_count", EmitDefaultValue = true)]
+        public int? CatalogPriceRulesCount { get; set; }
 
         /// <summary>
         /// Gets or Sets CatalogPriceRules
@@ -62,13 +62,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

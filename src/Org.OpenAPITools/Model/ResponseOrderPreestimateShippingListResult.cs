@@ -39,7 +39,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="preestimateShippings">preestimateShippings.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ResponseOrderPreestimateShippingListResult(int preestimateShippingsCount = default(int), List<OrderPreestimateShipping> preestimateShippings = default(List<OrderPreestimateShipping>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ResponseOrderPreestimateShippingListResult(int? preestimateShippingsCount = default(int?), List<OrderPreestimateShipping> preestimateShippings = default(List<OrderPreestimateShipping>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.PreestimateShippingsCount = preestimateShippingsCount;
             this.PreestimateShippings = preestimateShippings;
@@ -50,8 +50,8 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets PreestimateShippingsCount
         /// </summary>
-        [DataMember(Name = "preestimate_shippings_count", EmitDefaultValue = false)]
-        public int PreestimateShippingsCount { get; set; }
+        [DataMember(Name = "preestimate_shippings_count", EmitDefaultValue = true)]
+        public int? PreestimateShippingsCount { get; set; }
 
         /// <summary>
         /// Gets or Sets PreestimateShippings
@@ -62,13 +62,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

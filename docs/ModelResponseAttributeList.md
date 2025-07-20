@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ReturnCode** | **int** |  | [optional] 
+**ReturnCode** | **int?** |  | [optional] 
 **ReturnMessage** | **string** |  | [optional] 
 **Pagination** | [**Pagination**](Pagination.md) |  | [optional] 
 **Result** | [**ResponseAttributeListResult**](ResponseAttributeListResult.md) |  | [optional] 

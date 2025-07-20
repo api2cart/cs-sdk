@@ -39,7 +39,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="customer">customer.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ResponseCustomerListResult(int customersCount = default(int), List<Customer> customer = default(List<Customer>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ResponseCustomerListResult(int? customersCount = default(int?), List<Customer> customer = default(List<Customer>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.CustomersCount = customersCount;
             this.Customer = customer;
@@ -50,8 +50,8 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets CustomersCount
         /// </summary>
-        [DataMember(Name = "customers_count", EmitDefaultValue = false)]
-        public int CustomersCount { get; set; }
+        [DataMember(Name = "customers_count", EmitDefaultValue = true)]
+        public int? CustomersCount { get; set; }
 
         /// <summary>
         /// Gets or Sets Customer
@@ -62,13 +62,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

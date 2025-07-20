@@ -45,7 +45,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="conditions">conditions.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public CatalogPriceRuleAction(string scope = default(string), string applyTo = default(string), string type = default(string), decimal quantity = default(decimal), decimal value = default(decimal), string currencyCode = default(string), bool includeTax = default(bool), List<CouponCondition> conditions = default(List<CouponCondition>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public CatalogPriceRuleAction(string scope = default(string), string applyTo = default(string), string type = default(string), decimal? quantity = default(decimal?), decimal value = default(decimal), string currencyCode = default(string), bool? includeTax = default(bool?), List<CouponCondition> conditions = default(List<CouponCondition>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Scope = scope;
             this.ApplyTo = applyTo;
@@ -80,8 +80,8 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Quantity
         /// </summary>
-        [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public decimal Quantity { get; set; }
+        [DataMember(Name = "quantity", EmitDefaultValue = true)]
+        public decimal? Quantity { get; set; }
 
         /// <summary>
         /// Gets or Sets Value
@@ -92,14 +92,14 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets CurrencyCode
         /// </summary>
-        [DataMember(Name = "currency_code", EmitDefaultValue = false)]
+        [DataMember(Name = "currency_code", EmitDefaultValue = true)]
         public string CurrencyCode { get; set; }
 
         /// <summary>
         /// Gets or Sets IncludeTax
         /// </summary>
         [DataMember(Name = "include_tax", EmitDefaultValue = true)]
-        public bool IncludeTax { get; set; }
+        public bool? IncludeTax { get; set; }
 
         /// <summary>
         /// Gets or Sets Conditions
@@ -110,13 +110,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

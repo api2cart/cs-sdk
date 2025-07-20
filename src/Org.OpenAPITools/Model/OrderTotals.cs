@@ -42,7 +42,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="discount">discount.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public OrderTotals(decimal total = default(decimal), decimal subtotal = default(decimal), decimal shipping = default(decimal), decimal tax = default(decimal), decimal discount = default(decimal), Object additionalFields = default(Object), Object customFields = default(Object))
+        public OrderTotals(decimal total = default(decimal), decimal subtotal = default(decimal), decimal shipping = default(decimal), decimal? tax = default(decimal?), decimal? discount = default(decimal?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Total = total;
             this.Subtotal = subtotal;
@@ -74,25 +74,25 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Tax
         /// </summary>
-        [DataMember(Name = "tax", EmitDefaultValue = false)]
-        public decimal Tax { get; set; }
+        [DataMember(Name = "tax", EmitDefaultValue = true)]
+        public decimal? Tax { get; set; }
 
         /// <summary>
         /// Gets or Sets Discount
         /// </summary>
-        [DataMember(Name = "discount", EmitDefaultValue = false)]
-        public decimal Discount { get; set; }
+        [DataMember(Name = "discount", EmitDefaultValue = true)]
+        public decimal? Discount { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

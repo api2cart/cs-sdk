@@ -40,7 +40,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="usedTimes">usedTimes.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public CouponCode(string id = default(string), string code = default(string), int usedTimes = default(int), Object additionalFields = default(Object), Object customFields = default(Object))
+        public CouponCode(string id = default(string), string code = default(string), int? usedTimes = default(int?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Code = code;
@@ -64,19 +64,19 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets UsedTimes
         /// </summary>
-        [DataMember(Name = "used_times", EmitDefaultValue = false)]
-        public int UsedTimes { get; set; }
+        [DataMember(Name = "used_times", EmitDefaultValue = true)]
+        public int? UsedTimes { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

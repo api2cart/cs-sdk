@@ -104,7 +104,7 @@ namespace Org.OpenAPITools.Test.Api
             //string productId = null;
             //string? storeId = null;
             //var response = instance.CategoryAssign(categoryId, productId, storeId);
-            //Assert.IsType<CartConfigUpdate200Response>(response);
+            //Assert.IsType<CategoryAssign200Response>(response);
         }
 
         /// <summary>
@@ -255,7 +255,7 @@ namespace Org.OpenAPITools.Test.Api
             //string productId = null;
             //string? storeId = null;
             //var response = instance.CategoryUnassign(categoryId, productId, storeId);
-            //Assert.IsType<CartConfigUpdate200Response>(response);
+            //Assert.IsType<CategoryAssign200Response>(response);
         }
 
         /// <summary>

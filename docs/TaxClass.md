@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
-**Avail** | **bool** |  | [optional] 
-**Tax** | **decimal** |  | [optional] 
-**TaxType** | **int** |  | [optional] 
+**Avail** | **bool?** |  | [optional] 
+**Tax** | **decimal?** |  | [optional] 
+**TaxType** | **int?** |  | [optional] 
 **CreatedAt** | [**A2CDateTime**](A2CDateTime.md) |  | [optional] 
 **ModifiedAt** | [**A2CDateTime**](A2CDateTime.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 

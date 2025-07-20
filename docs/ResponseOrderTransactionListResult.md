@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TransactionsCount** | **int** |  | [optional] 
+**TransactionsCount** | **int?** |  | [optional] 
 **Transactions** | [**List&lt;OrderTransaction&gt;**](OrderTransaction.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

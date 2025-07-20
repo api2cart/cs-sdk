@@ -42,7 +42,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="assignedAttributeIds">assignedAttributeIds.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public StoreAttributeGroup(string id = default(string), string name = default(string), int position = default(int), string attributeSetId = default(string), List<string> assignedAttributeIds = default(List<string>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public StoreAttributeGroup(string id = default(string), string name = default(string), int? position = default(int?), string attributeSetId = default(string), List<string> assignedAttributeIds = default(List<string>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Name = name;
@@ -68,13 +68,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Position
         /// </summary>
-        [DataMember(Name = "position", EmitDefaultValue = false)]
-        public int Position { get; set; }
+        [DataMember(Name = "position", EmitDefaultValue = true)]
+        public int? Position { get; set; }
 
         /// <summary>
         /// Gets or Sets AttributeSetId
         /// </summary>
-        [DataMember(Name = "attribute_set_id", EmitDefaultValue = false)]
+        [DataMember(Name = "attribute_set_id", EmitDefaultValue = true)]
         public string AttributeSetId { get; set; }
 
         /// <summary>
@@ -86,13 +86,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

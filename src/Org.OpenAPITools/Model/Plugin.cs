@@ -39,7 +39,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="active">active.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Plugin(string name = default(string), bool active = default(bool), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Plugin(string name = default(string), bool? active = default(bool?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Name = name;
             this.Active = active;
@@ -57,18 +57,18 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name = "active", EmitDefaultValue = true)]
-        public bool Active { get; set; }
+        public bool? Active { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

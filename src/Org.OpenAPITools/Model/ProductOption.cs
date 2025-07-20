@@ -47,7 +47,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="optionItems">optionItems.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ProductOption(string id = default(string), string productOptionId = default(string), string name = default(string), string description = default(string), int sortOrder = default(int), string type = default(string), bool required = default(bool), bool available = default(bool), bool usedInCombination = default(bool), List<ProductOptionItem> optionItems = default(List<ProductOptionItem>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ProductOption(string id = default(string), string productOptionId = default(string), string name = default(string), string description = default(string), int? sortOrder = default(int?), string type = default(string), bool? required = default(bool?), bool? available = default(bool?), bool? usedInCombination = default(bool?), List<ProductOptionItem> optionItems = default(List<ProductOptionItem>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.ProductOptionId = productOptionId;
@@ -72,7 +72,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets ProductOptionId
         /// </summary>
-        [DataMember(Name = "product_option_id", EmitDefaultValue = false)]
+        [DataMember(Name = "product_option_id", EmitDefaultValue = true)]
         public string ProductOptionId { get; set; }
 
         /// <summary>
@@ -84,14 +84,14 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets SortOrder
         /// </summary>
-        [DataMember(Name = "sort_order", EmitDefaultValue = false)]
-        public int SortOrder { get; set; }
+        [DataMember(Name = "sort_order", EmitDefaultValue = true)]
+        public int? SortOrder { get; set; }
 
         /// <summary>
         /// Gets or Sets Type
@@ -103,19 +103,19 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets Required
         /// </summary>
         [DataMember(Name = "required", EmitDefaultValue = true)]
-        public bool Required { get; set; }
+        public bool? Required { get; set; }
 
         /// <summary>
         /// Gets or Sets Available
         /// </summary>
         [DataMember(Name = "available", EmitDefaultValue = true)]
-        public bool Available { get; set; }
+        public bool? Available { get; set; }
 
         /// <summary>
         /// Gets or Sets UsedInCombination
         /// </summary>
         [DataMember(Name = "used_in_combination", EmitDefaultValue = true)]
-        public bool UsedInCombination { get; set; }
+        public bool? UsedInCombination { get; set; }
 
         /// <summary>
         /// Gets or Sets OptionItems
@@ -126,13 +126,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

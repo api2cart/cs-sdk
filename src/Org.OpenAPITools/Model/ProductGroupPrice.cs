@@ -44,7 +44,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="expireTime">expireTime.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ProductGroupPrice(string id = default(string), string groupId = default(string), decimal price = default(decimal), string storeId = default(string), decimal quantity = default(decimal), string startTime = default(string), string expireTime = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ProductGroupPrice(string id = default(string), string groupId = default(string), decimal price = default(decimal), string storeId = default(string), decimal? quantity = default(decimal?), string startTime = default(string), string expireTime = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.GroupId = groupId;
@@ -60,7 +60,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name = "id", EmitDefaultValue = false)]
+        [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
@@ -78,37 +78,37 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets StoreId
         /// </summary>
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        [DataMember(Name = "store_id", EmitDefaultValue = true)]
         public string StoreId { get; set; }
 
         /// <summary>
         /// Gets or Sets Quantity
         /// </summary>
-        [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public decimal Quantity { get; set; }
+        [DataMember(Name = "quantity", EmitDefaultValue = true)]
+        public decimal? Quantity { get; set; }
 
         /// <summary>
         /// Gets or Sets StartTime
         /// </summary>
-        [DataMember(Name = "start_time", EmitDefaultValue = false)]
+        [DataMember(Name = "start_time", EmitDefaultValue = true)]
         public string StartTime { get; set; }
 
         /// <summary>
         /// Gets or Sets ExpireTime
         /// </summary>
-        [DataMember(Name = "expire_time", EmitDefaultValue = false)]
+        [DataMember(Name = "expire_time", EmitDefaultValue = true)]
         public string ExpireTime { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

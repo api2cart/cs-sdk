@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **VariantId** | **string** |  | [optional] 
 **Model** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
-**Price** | **decimal** |  | [optional] 
-**Quantity** | **decimal** |  | [optional] 
+**Price** | **decimal?** |  | [optional] 
+**Quantity** | **decimal?** |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 
 

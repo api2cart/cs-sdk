@@ -39,7 +39,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="marketplaceProduct">marketplaceProduct.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ResponseMarketplaceProductFindResult(int marketplaceProductsCount = default(int), List<MarketplaceProduct> marketplaceProduct = default(List<MarketplaceProduct>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ResponseMarketplaceProductFindResult(int? marketplaceProductsCount = default(int?), List<MarketplaceProduct> marketplaceProduct = default(List<MarketplaceProduct>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.MarketplaceProductsCount = marketplaceProductsCount;
             this.MarketplaceProduct = marketplaceProduct;
@@ -50,8 +50,8 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets MarketplaceProductsCount
         /// </summary>
-        [DataMember(Name = "marketplace_products_count", EmitDefaultValue = false)]
-        public int MarketplaceProductsCount { get; set; }
+        [DataMember(Name = "marketplace_products_count", EmitDefaultValue = true)]
+        public int? MarketplaceProductsCount { get; set; }
 
         /// <summary>
         /// Gets or Sets MarketplaceProduct
@@ -62,13 +62,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

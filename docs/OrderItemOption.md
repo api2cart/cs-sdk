@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Name** | **string** |  | [optional] 
 **Value** | **string** |  | [optional] 
 **Price** | **decimal** |  | [optional] 
-**Weight** | **decimal** |  | [optional] 
+**Weight** | **decimal?** |  | [optional] 
 **Type** | **string** |  | [optional] 
 **ProductOptionValueId** | **string** |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 

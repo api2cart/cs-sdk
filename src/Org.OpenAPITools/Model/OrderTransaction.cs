@@ -60,7 +60,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="isTestMode">isTestMode.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public OrderTransaction(string id = default(string), string transactionId = default(string), string orderId = default(string), string parentId = default(string), string description = default(string), string status = default(string), string gateway = default(string), string referenceNumber = default(string), string currency = default(string), decimal amount = default(decimal), A2CDateTime createdTime = default(A2CDateTime), string settlementCurrency = default(string), decimal settlementAmount = default(decimal), A2CDateTime settlementCreatedTime = default(A2CDateTime), string cardBrand = default(string), string cardBin = default(string), string cardLastFour = default(string), string avsStreetRespCode = default(string), string avsPostalRespCode = default(string), string avsMessage = default(string), string cvvCode = default(string), string cvvMessage = default(string), bool isTestMode = default(bool), Object additionalFields = default(Object), Object customFields = default(Object))
+        public OrderTransaction(string id = default(string), string transactionId = default(string), string orderId = default(string), string parentId = default(string), string description = default(string), string status = default(string), string gateway = default(string), string referenceNumber = default(string), string currency = default(string), decimal? amount = default(decimal?), A2CDateTime createdTime = default(A2CDateTime), string settlementCurrency = default(string), decimal? settlementAmount = default(decimal?), A2CDateTime settlementCreatedTime = default(A2CDateTime), string cardBrand = default(string), string cardBin = default(string), string cardLastFour = default(string), string avsStreetRespCode = default(string), string avsPostalRespCode = default(string), string avsMessage = default(string), string cvvCode = default(string), string cvvMessage = default(string), bool? isTestMode = default(bool?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.TransactionId = transactionId;
@@ -98,7 +98,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets TransactionId
         /// </summary>
-        [DataMember(Name = "transaction_id", EmitDefaultValue = false)]
+        [DataMember(Name = "transaction_id", EmitDefaultValue = true)]
         public string TransactionId { get; set; }
 
         /// <summary>
@@ -110,133 +110,133 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets ParentId
         /// </summary>
-        [DataMember(Name = "parent_id", EmitDefaultValue = false)]
+        [DataMember(Name = "parent_id", EmitDefaultValue = true)]
         public string ParentId { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name = "status", EmitDefaultValue = false)]
+        [DataMember(Name = "status", EmitDefaultValue = true)]
         public string Status { get; set; }
 
         /// <summary>
         /// Gets or Sets Gateway
         /// </summary>
-        [DataMember(Name = "gateway", EmitDefaultValue = false)]
+        [DataMember(Name = "gateway", EmitDefaultValue = true)]
         public string Gateway { get; set; }
 
         /// <summary>
         /// Gets or Sets ReferenceNumber
         /// </summary>
-        [DataMember(Name = "reference_number", EmitDefaultValue = false)]
+        [DataMember(Name = "reference_number", EmitDefaultValue = true)]
         public string ReferenceNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets Currency
         /// </summary>
-        [DataMember(Name = "currency", EmitDefaultValue = false)]
+        [DataMember(Name = "currency", EmitDefaultValue = true)]
         public string Currency { get; set; }
 
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
-        [DataMember(Name = "amount", EmitDefaultValue = false)]
-        public decimal Amount { get; set; }
+        [DataMember(Name = "amount", EmitDefaultValue = true)]
+        public decimal? Amount { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedTime
         /// </summary>
-        [DataMember(Name = "created_time", EmitDefaultValue = false)]
+        [DataMember(Name = "created_time", EmitDefaultValue = true)]
         public A2CDateTime CreatedTime { get; set; }
 
         /// <summary>
         /// Gets or Sets SettlementCurrency
         /// </summary>
-        [DataMember(Name = "settlement_currency", EmitDefaultValue = false)]
+        [DataMember(Name = "settlement_currency", EmitDefaultValue = true)]
         public string SettlementCurrency { get; set; }
 
         /// <summary>
         /// Gets or Sets SettlementAmount
         /// </summary>
-        [DataMember(Name = "settlement_amount", EmitDefaultValue = false)]
-        public decimal SettlementAmount { get; set; }
+        [DataMember(Name = "settlement_amount", EmitDefaultValue = true)]
+        public decimal? SettlementAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets SettlementCreatedTime
         /// </summary>
-        [DataMember(Name = "settlement_created_time", EmitDefaultValue = false)]
+        [DataMember(Name = "settlement_created_time", EmitDefaultValue = true)]
         public A2CDateTime SettlementCreatedTime { get; set; }
 
         /// <summary>
         /// Gets or Sets CardBrand
         /// </summary>
-        [DataMember(Name = "card_brand", EmitDefaultValue = false)]
+        [DataMember(Name = "card_brand", EmitDefaultValue = true)]
         public string CardBrand { get; set; }
 
         /// <summary>
         /// Gets or Sets CardBin
         /// </summary>
-        [DataMember(Name = "card_bin", EmitDefaultValue = false)]
+        [DataMember(Name = "card_bin", EmitDefaultValue = true)]
         public string CardBin { get; set; }
 
         /// <summary>
         /// Gets or Sets CardLastFour
         /// </summary>
-        [DataMember(Name = "card_last_four", EmitDefaultValue = false)]
+        [DataMember(Name = "card_last_four", EmitDefaultValue = true)]
         public string CardLastFour { get; set; }
 
         /// <summary>
         /// Gets or Sets AvsStreetRespCode
         /// </summary>
-        [DataMember(Name = "avs_street_resp_code", EmitDefaultValue = false)]
+        [DataMember(Name = "avs_street_resp_code", EmitDefaultValue = true)]
         public string AvsStreetRespCode { get; set; }
 
         /// <summary>
         /// Gets or Sets AvsPostalRespCode
         /// </summary>
-        [DataMember(Name = "avs_postal_resp_code", EmitDefaultValue = false)]
+        [DataMember(Name = "avs_postal_resp_code", EmitDefaultValue = true)]
         public string AvsPostalRespCode { get; set; }
 
         /// <summary>
         /// Gets or Sets AvsMessage
         /// </summary>
-        [DataMember(Name = "avs_message", EmitDefaultValue = false)]
+        [DataMember(Name = "avs_message", EmitDefaultValue = true)]
         public string AvsMessage { get; set; }
 
         /// <summary>
         /// Gets or Sets CvvCode
         /// </summary>
-        [DataMember(Name = "cvv_code", EmitDefaultValue = false)]
+        [DataMember(Name = "cvv_code", EmitDefaultValue = true)]
         public string CvvCode { get; set; }
 
         /// <summary>
         /// Gets or Sets CvvMessage
         /// </summary>
-        [DataMember(Name = "cvv_message", EmitDefaultValue = false)]
+        [DataMember(Name = "cvv_message", EmitDefaultValue = true)]
         public string CvvMessage { get; set; }
 
         /// <summary>
         /// Gets or Sets IsTestMode
         /// </summary>
         [DataMember(Name = "is_test_mode", EmitDefaultValue = true)]
-        public bool IsTestMode { get; set; }
+        public bool? IsTestMode { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

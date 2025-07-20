@@ -51,7 +51,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="usesPerOrderLimit">usesPerOrderLimit.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public CatalogPriceRule(string id = default(string), string gid = default(string), string type = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), bool avail = default(bool), List<CatalogPriceRuleAction> actions = default(List<CatalogPriceRuleAction>), A2CDateTime createdTime = default(A2CDateTime), A2CDateTime dateStart = default(A2CDateTime), A2CDateTime dateEnd = default(A2CDateTime), decimal usageCount = default(decimal), List<CouponCondition> conditions = default(List<CouponCondition>), int usesPerOrderLimit = default(int), Object additionalFields = default(Object), Object customFields = default(Object))
+        public CatalogPriceRule(string id = default(string), string gid = default(string), string type = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), bool? avail = default(bool?), List<CatalogPriceRuleAction> actions = default(List<CatalogPriceRuleAction>), A2CDateTime createdTime = default(A2CDateTime), A2CDateTime dateStart = default(A2CDateTime), A2CDateTime dateEnd = default(A2CDateTime), decimal? usageCount = default(decimal?), List<CouponCondition> conditions = default(List<CouponCondition>), int? usesPerOrderLimit = default(int?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Gid = gid;
@@ -80,38 +80,38 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Gid
         /// </summary>
-        [DataMember(Name = "gid", EmitDefaultValue = false)]
+        [DataMember(Name = "gid", EmitDefaultValue = true)]
         public string Gid { get; set; }
 
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name = "type", EmitDefaultValue = false)]
+        [DataMember(Name = "type", EmitDefaultValue = true)]
         public string Type { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets ShortDescription
         /// </summary>
-        [DataMember(Name = "short_description", EmitDefaultValue = false)]
+        [DataMember(Name = "short_description", EmitDefaultValue = true)]
         public string ShortDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets Avail
         /// </summary>
         [DataMember(Name = "avail", EmitDefaultValue = true)]
-        public bool Avail { get; set; }
+        public bool? Avail { get; set; }
 
         /// <summary>
         /// Gets or Sets Actions
@@ -122,26 +122,26 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets CreatedTime
         /// </summary>
-        [DataMember(Name = "created_time", EmitDefaultValue = false)]
+        [DataMember(Name = "created_time", EmitDefaultValue = true)]
         public A2CDateTime CreatedTime { get; set; }
 
         /// <summary>
         /// Gets or Sets DateStart
         /// </summary>
-        [DataMember(Name = "date_start", EmitDefaultValue = false)]
+        [DataMember(Name = "date_start", EmitDefaultValue = true)]
         public A2CDateTime DateStart { get; set; }
 
         /// <summary>
         /// Gets or Sets DateEnd
         /// </summary>
-        [DataMember(Name = "date_end", EmitDefaultValue = false)]
+        [DataMember(Name = "date_end", EmitDefaultValue = true)]
         public A2CDateTime DateEnd { get; set; }
 
         /// <summary>
         /// Gets or Sets UsageCount
         /// </summary>
-        [DataMember(Name = "usage_count", EmitDefaultValue = false)]
-        public decimal UsageCount { get; set; }
+        [DataMember(Name = "usage_count", EmitDefaultValue = true)]
+        public decimal? UsageCount { get; set; }
 
         /// <summary>
         /// Gets or Sets Conditions
@@ -152,19 +152,19 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets UsesPerOrderLimit
         /// </summary>
-        [DataMember(Name = "uses_per_order_limit", EmitDefaultValue = false)]
-        public int UsesPerOrderLimit { get; set; }
+        [DataMember(Name = "uses_per_order_limit", EmitDefaultValue = true)]
+        public int? UsesPerOrderLimit { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

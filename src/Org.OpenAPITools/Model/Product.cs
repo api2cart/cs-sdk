@@ -92,7 +92,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="discounts">discounts.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Product(string id = default(string), string type = default(string), string uModel = default(string), string uSku = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), decimal price = default(decimal), List<ProductAdvancedPrice> advancedPrice = default(List<ProductAdvancedPrice>), decimal costPrice = default(decimal), decimal quantity = default(decimal), List<ProductInventory> inventory = default(List<ProductInventory>), List<ProductGroupItem> groupItems = default(List<ProductGroupItem>), string uBrandId = default(string), string uBrand = default(string), List<string> categoriesIds = default(List<string>), List<string> storesIds = default(List<string>), string url = default(string), string seoUrl = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), bool availSale = default(bool), bool availView = default(bool), bool isVirtual = default(bool), bool isDownloadable = default(bool), decimal weight = default(decimal), string weightUnit = default(string), int sortOrder = default(int), bool inStock = default(bool), bool onSale = default(bool), string backorders = default(string), string manageStock = default(string), bool isStockManaged = default(bool), A2CDateTime createAt = default(A2CDateTime), A2CDateTime modifiedAt = default(A2CDateTime), string taxClassId = default(string), SpecialPrice specialPrice = default(SpecialPrice), List<ProductTierPrice> tierPrice = default(List<ProductTierPrice>), List<ProductGroupPrice> groupPrice = default(List<ProductGroupPrice>), List<Image> images = default(List<Image>), List<ProductOption> productOptions = default(List<ProductOption>), string uUpc = default(string), string uMpn = default(string), string uGtin = default(string), string uIsbn = default(string), string uEan = default(string), List<string> relatedProductsIds = default(List<string>), List<string> upSellProductsIds = default(List<string>), List<string> crossSellProductsIds = default(List<string>), string dimensionsUnit = default(string), decimal width = default(decimal), decimal height = default(decimal), decimal length = default(decimal), List<Discount> discounts = default(List<Discount>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Product(string id = default(string), string type = default(string), string uModel = default(string), string uSku = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), decimal? price = default(decimal?), List<ProductAdvancedPrice> advancedPrice = default(List<ProductAdvancedPrice>), decimal? costPrice = default(decimal?), decimal? quantity = default(decimal?), List<ProductInventory> inventory = default(List<ProductInventory>), List<ProductGroupItem> groupItems = default(List<ProductGroupItem>), string uBrandId = default(string), string uBrand = default(string), List<string> categoriesIds = default(List<string>), List<string> storesIds = default(List<string>), string url = default(string), string seoUrl = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), bool? availSale = default(bool?), bool? availView = default(bool?), bool? isVirtual = default(bool?), bool? isDownloadable = default(bool?), decimal? weight = default(decimal?), string weightUnit = default(string), int? sortOrder = default(int?), bool? inStock = default(bool?), bool? onSale = default(bool?), string backorders = default(string), string manageStock = default(string), bool? isStockManaged = default(bool?), A2CDateTime createAt = default(A2CDateTime), A2CDateTime modifiedAt = default(A2CDateTime), string taxClassId = default(string), SpecialPrice specialPrice = default(SpecialPrice), List<ProductTierPrice> tierPrice = default(List<ProductTierPrice>), List<ProductGroupPrice> groupPrice = default(List<ProductGroupPrice>), List<Image> images = default(List<Image>), List<ProductOption> productOptions = default(List<ProductOption>), string uUpc = default(string), string uMpn = default(string), string uGtin = default(string), string uIsbn = default(string), string uEan = default(string), List<string> relatedProductsIds = default(List<string>), List<string> upSellProductsIds = default(List<string>), List<string> crossSellProductsIds = default(List<string>), string dimensionsUnit = default(string), decimal? width = default(decimal?), decimal? height = default(decimal?), decimal? length = default(decimal?), List<Discount> discounts = default(List<Discount>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Type = type;
@@ -162,44 +162,44 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name = "type", EmitDefaultValue = false)]
+        [DataMember(Name = "type", EmitDefaultValue = true)]
         public string Type { get; set; }
 
         /// <summary>
         /// Gets or Sets UModel
         /// </summary>
-        [DataMember(Name = "u_model", EmitDefaultValue = false)]
+        [DataMember(Name = "u_model", EmitDefaultValue = true)]
         public string UModel { get; set; }
 
         /// <summary>
         /// Gets or Sets USku
         /// </summary>
-        [DataMember(Name = "u_sku", EmitDefaultValue = false)]
+        [DataMember(Name = "u_sku", EmitDefaultValue = true)]
         public string USku { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets ShortDescription
         /// </summary>
-        [DataMember(Name = "short_description", EmitDefaultValue = false)]
+        [DataMember(Name = "short_description", EmitDefaultValue = true)]
         public string ShortDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
-        [DataMember(Name = "price", EmitDefaultValue = false)]
-        public decimal Price { get; set; }
+        [DataMember(Name = "price", EmitDefaultValue = true)]
+        public decimal? Price { get; set; }
 
         /// <summary>
         /// Gets or Sets AdvancedPrice
@@ -210,14 +210,14 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets CostPrice
         /// </summary>
-        [DataMember(Name = "cost_price", EmitDefaultValue = false)]
-        public decimal CostPrice { get; set; }
+        [DataMember(Name = "cost_price", EmitDefaultValue = true)]
+        public decimal? CostPrice { get; set; }
 
         /// <summary>
         /// Gets or Sets Quantity
         /// </summary>
-        [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public decimal Quantity { get; set; }
+        [DataMember(Name = "quantity", EmitDefaultValue = true)]
+        public decimal? Quantity { get; set; }
 
         /// <summary>
         /// Gets or Sets Inventory
@@ -234,13 +234,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets UBrandId
         /// </summary>
-        [DataMember(Name = "u_brand_id", EmitDefaultValue = false)]
+        [DataMember(Name = "u_brand_id", EmitDefaultValue = true)]
         public string UBrandId { get; set; }
 
         /// <summary>
         /// Gets or Sets UBrand
         /// </summary>
-        [DataMember(Name = "u_brand", EmitDefaultValue = false)]
+        [DataMember(Name = "u_brand", EmitDefaultValue = true)]
         public string UBrand { get; set; }
 
         /// <summary>
@@ -258,127 +258,127 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
-        [DataMember(Name = "url", EmitDefaultValue = false)]
+        [DataMember(Name = "url", EmitDefaultValue = true)]
         public string Url { get; set; }
 
         /// <summary>
         /// Gets or Sets SeoUrl
         /// </summary>
-        [DataMember(Name = "seo_url", EmitDefaultValue = false)]
+        [DataMember(Name = "seo_url", EmitDefaultValue = true)]
         public string SeoUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets MetaTitle
         /// </summary>
-        [DataMember(Name = "meta_title", EmitDefaultValue = false)]
+        [DataMember(Name = "meta_title", EmitDefaultValue = true)]
         public string MetaTitle { get; set; }
 
         /// <summary>
         /// Gets or Sets MetaKeywords
         /// </summary>
-        [DataMember(Name = "meta_keywords", EmitDefaultValue = false)]
+        [DataMember(Name = "meta_keywords", EmitDefaultValue = true)]
         public string MetaKeywords { get; set; }
 
         /// <summary>
         /// Gets or Sets MetaDescription
         /// </summary>
-        [DataMember(Name = "meta_description", EmitDefaultValue = false)]
+        [DataMember(Name = "meta_description", EmitDefaultValue = true)]
         public string MetaDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets AvailSale
         /// </summary>
         [DataMember(Name = "avail_sale", EmitDefaultValue = true)]
-        public bool AvailSale { get; set; }
+        public bool? AvailSale { get; set; }
 
         /// <summary>
         /// Gets or Sets AvailView
         /// </summary>
         [DataMember(Name = "avail_view", EmitDefaultValue = true)]
-        public bool AvailView { get; set; }
+        public bool? AvailView { get; set; }
 
         /// <summary>
         /// Gets or Sets IsVirtual
         /// </summary>
         [DataMember(Name = "is_virtual", EmitDefaultValue = true)]
-        public bool IsVirtual { get; set; }
+        public bool? IsVirtual { get; set; }
 
         /// <summary>
         /// Gets or Sets IsDownloadable
         /// </summary>
         [DataMember(Name = "is_downloadable", EmitDefaultValue = true)]
-        public bool IsDownloadable { get; set; }
+        public bool? IsDownloadable { get; set; }
 
         /// <summary>
         /// Gets or Sets Weight
         /// </summary>
-        [DataMember(Name = "weight", EmitDefaultValue = false)]
-        public decimal Weight { get; set; }
+        [DataMember(Name = "weight", EmitDefaultValue = true)]
+        public decimal? Weight { get; set; }
 
         /// <summary>
         /// Gets or Sets WeightUnit
         /// </summary>
-        [DataMember(Name = "weight_unit", EmitDefaultValue = false)]
+        [DataMember(Name = "weight_unit", EmitDefaultValue = true)]
         public string WeightUnit { get; set; }
 
         /// <summary>
         /// Gets or Sets SortOrder
         /// </summary>
-        [DataMember(Name = "sort_order", EmitDefaultValue = false)]
-        public int SortOrder { get; set; }
+        [DataMember(Name = "sort_order", EmitDefaultValue = true)]
+        public int? SortOrder { get; set; }
 
         /// <summary>
         /// Gets or Sets InStock
         /// </summary>
         [DataMember(Name = "in_stock", EmitDefaultValue = true)]
-        public bool InStock { get; set; }
+        public bool? InStock { get; set; }
 
         /// <summary>
         /// Gets or Sets OnSale
         /// </summary>
         [DataMember(Name = "on_sale", EmitDefaultValue = true)]
-        public bool OnSale { get; set; }
+        public bool? OnSale { get; set; }
 
         /// <summary>
         /// Gets or Sets Backorders
         /// </summary>
-        [DataMember(Name = "backorders", EmitDefaultValue = false)]
+        [DataMember(Name = "backorders", EmitDefaultValue = true)]
         public string Backorders { get; set; }
 
         /// <summary>
         /// Gets or Sets ManageStock
         /// </summary>
-        [DataMember(Name = "manage_stock", EmitDefaultValue = false)]
+        [DataMember(Name = "manage_stock", EmitDefaultValue = true)]
         public string ManageStock { get; set; }
 
         /// <summary>
         /// Gets or Sets IsStockManaged
         /// </summary>
         [DataMember(Name = "is_stock_managed", EmitDefaultValue = true)]
-        public bool IsStockManaged { get; set; }
+        public bool? IsStockManaged { get; set; }
 
         /// <summary>
         /// Gets or Sets CreateAt
         /// </summary>
-        [DataMember(Name = "create_at", EmitDefaultValue = false)]
+        [DataMember(Name = "create_at", EmitDefaultValue = true)]
         public A2CDateTime CreateAt { get; set; }
 
         /// <summary>
         /// Gets or Sets ModifiedAt
         /// </summary>
-        [DataMember(Name = "modified_at", EmitDefaultValue = false)]
+        [DataMember(Name = "modified_at", EmitDefaultValue = true)]
         public A2CDateTime ModifiedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets TaxClassId
         /// </summary>
-        [DataMember(Name = "tax_class_id", EmitDefaultValue = false)]
+        [DataMember(Name = "tax_class_id", EmitDefaultValue = true)]
         public string TaxClassId { get; set; }
 
         /// <summary>
         /// Gets or Sets SpecialPrice
         /// </summary>
-        [DataMember(Name = "special_price", EmitDefaultValue = false)]
+        [DataMember(Name = "special_price", EmitDefaultValue = true)]
         public SpecialPrice SpecialPrice { get; set; }
 
         /// <summary>
@@ -408,31 +408,31 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets UUpc
         /// </summary>
-        [DataMember(Name = "u_upc", EmitDefaultValue = false)]
+        [DataMember(Name = "u_upc", EmitDefaultValue = true)]
         public string UUpc { get; set; }
 
         /// <summary>
         /// Gets or Sets UMpn
         /// </summary>
-        [DataMember(Name = "u_mpn", EmitDefaultValue = false)]
+        [DataMember(Name = "u_mpn", EmitDefaultValue = true)]
         public string UMpn { get; set; }
 
         /// <summary>
         /// Gets or Sets UGtin
         /// </summary>
-        [DataMember(Name = "u_gtin", EmitDefaultValue = false)]
+        [DataMember(Name = "u_gtin", EmitDefaultValue = true)]
         public string UGtin { get; set; }
 
         /// <summary>
         /// Gets or Sets UIsbn
         /// </summary>
-        [DataMember(Name = "u_isbn", EmitDefaultValue = false)]
+        [DataMember(Name = "u_isbn", EmitDefaultValue = true)]
         public string UIsbn { get; set; }
 
         /// <summary>
         /// Gets or Sets UEan
         /// </summary>
-        [DataMember(Name = "u_ean", EmitDefaultValue = false)]
+        [DataMember(Name = "u_ean", EmitDefaultValue = true)]
         public string UEan { get; set; }
 
         /// <summary>
@@ -456,26 +456,26 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets DimensionsUnit
         /// </summary>
-        [DataMember(Name = "dimensions_unit", EmitDefaultValue = false)]
+        [DataMember(Name = "dimensions_unit", EmitDefaultValue = true)]
         public string DimensionsUnit { get; set; }
 
         /// <summary>
         /// Gets or Sets Width
         /// </summary>
-        [DataMember(Name = "width", EmitDefaultValue = false)]
-        public decimal Width { get; set; }
+        [DataMember(Name = "width", EmitDefaultValue = true)]
+        public decimal? Width { get; set; }
 
         /// <summary>
         /// Gets or Sets Height
         /// </summary>
-        [DataMember(Name = "height", EmitDefaultValue = false)]
-        public decimal Height { get; set; }
+        [DataMember(Name = "height", EmitDefaultValue = true)]
+        public decimal? Height { get; set; }
 
         /// <summary>
         /// Gets or Sets Length
         /// </summary>
-        [DataMember(Name = "length", EmitDefaultValue = false)]
-        public decimal Length { get; set; }
+        [DataMember(Name = "length", EmitDefaultValue = true)]
+        public decimal? Length { get; set; }
 
         /// <summary>
         /// Gets or Sets Discounts
@@ -486,13 +486,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

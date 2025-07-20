@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **Email** | **string** |  | [optional] 
 **Summary** | **string** |  | [optional] 
 **Message** | **string** |  | [optional] 
-**Rating** | **decimal** |  | [optional] 
+**Rating** | **decimal?** |  | [optional] 
 **Ratings** | [**List&lt;ProductReviewRating&gt;**](ProductReviewRating.md) |  | [optional] 
 **Status** | **string** |  | [optional] 
 **CreatedTime** | [**A2CDateTime**](A2CDateTime.md) |  | [optional] 

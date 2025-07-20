@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **GroupId** | **string** |  | [optional] 
 **Price** | **decimal** |  | [optional] 
 **StoreId** | **string** |  | [optional] 
-**Quantity** | **decimal** |  | [optional] 
+**Quantity** | **decimal?** |  | [optional] 
 **StartTime** | **string** |  | [optional] 
 **ExpireTime** | **string** |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 

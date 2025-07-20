@@ -42,7 +42,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="enabledOnStore">enabledOnStore.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public BasketLiveShippingService(string id = default(string), string name = default(string), string callback = default(string), int callbackErrCnt = default(int), bool enabledOnStore = default(bool), Object additionalFields = default(Object), Object customFields = default(Object))
+        public BasketLiveShippingService(string id = default(string), string name = default(string), string callback = default(string), int? callbackErrCnt = default(int?), bool? enabledOnStore = default(bool?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Name = name;
@@ -62,7 +62,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
@@ -74,25 +74,25 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets CallbackErrCnt
         /// </summary>
-        [DataMember(Name = "callback_err_cnt", EmitDefaultValue = false)]
-        public int CallbackErrCnt { get; set; }
+        [DataMember(Name = "callback_err_cnt", EmitDefaultValue = true)]
+        public int? CallbackErrCnt { get; set; }
 
         /// <summary>
         /// Gets or Sets EnabledOnStore
         /// </summary>
         [DataMember(Name = "enabled_on_store", EmitDefaultValue = true)]
-        public bool EnabledOnStore { get; set; }
+        public bool? EnabledOnStore { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

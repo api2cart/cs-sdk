@@ -45,7 +45,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="varDefault">varDefault.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Currency(string id = default(string), string name = default(string), string iso3 = default(string), string symbolLeft = default(string), string symbolRight = default(string), decimal rate = default(decimal), bool avail = default(bool), bool varDefault = default(bool), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Currency(string id = default(string), string name = default(string), string iso3 = default(string), string symbolLeft = default(string), string symbolRight = default(string), decimal? rate = default(decimal?), bool? avail = default(bool?), bool? varDefault = default(bool?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Name = name;
@@ -68,7 +68,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
@@ -86,37 +86,37 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets SymbolRight
         /// </summary>
-        [DataMember(Name = "symbol_right", EmitDefaultValue = false)]
+        [DataMember(Name = "symbol_right", EmitDefaultValue = true)]
         public string SymbolRight { get; set; }
 
         /// <summary>
         /// Gets or Sets Rate
         /// </summary>
-        [DataMember(Name = "rate", EmitDefaultValue = false)]
-        public decimal Rate { get; set; }
+        [DataMember(Name = "rate", EmitDefaultValue = true)]
+        public decimal? Rate { get; set; }
 
         /// <summary>
         /// Gets or Sets Avail
         /// </summary>
         [DataMember(Name = "avail", EmitDefaultValue = true)]
-        public bool Avail { get; set; }
+        public bool? Avail { get; set; }
 
         /// <summary>
         /// Gets or Sets Default
         /// </summary>
         [DataMember(Name = "default", EmitDefaultValue = true)]
-        public bool Default { get; set; }
+        public bool? Default { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

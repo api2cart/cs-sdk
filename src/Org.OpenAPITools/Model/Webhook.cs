@@ -49,7 +49,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="action">action.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Webhook(int id = default(int), string label = default(string), string storeId = default(string), string langId = default(string), bool active = default(bool), string callback = default(string), string fields = default(string), string responseFields = default(string), string createdAt = default(string), string updatedAt = default(string), string entity = default(string), string action = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Webhook(int? id = default(int?), string label = default(string), string storeId = default(string), string langId = default(string), bool? active = default(bool?), string callback = default(string), string fields = default(string), string responseFields = default(string), string createdAt = default(string), string updatedAt = default(string), string entity = default(string), string action = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Label = label;
@@ -70,85 +70,85 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name = "id", EmitDefaultValue = false)]
-        public int Id { get; set; }
+        [DataMember(Name = "id", EmitDefaultValue = true)]
+        public int? Id { get; set; }
 
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
-        [DataMember(Name = "label", EmitDefaultValue = false)]
+        [DataMember(Name = "label", EmitDefaultValue = true)]
         public string Label { get; set; }
 
         /// <summary>
         /// Gets or Sets StoreId
         /// </summary>
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        [DataMember(Name = "store_id", EmitDefaultValue = true)]
         public string StoreId { get; set; }
 
         /// <summary>
         /// Gets or Sets LangId
         /// </summary>
-        [DataMember(Name = "lang_id", EmitDefaultValue = false)]
+        [DataMember(Name = "lang_id", EmitDefaultValue = true)]
         public string LangId { get; set; }
 
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name = "active", EmitDefaultValue = true)]
-        public bool Active { get; set; }
+        public bool? Active { get; set; }
 
         /// <summary>
         /// Gets or Sets Callback
         /// </summary>
-        [DataMember(Name = "callback", EmitDefaultValue = false)]
+        [DataMember(Name = "callback", EmitDefaultValue = true)]
         public string Callback { get; set; }
 
         /// <summary>
         /// Gets or Sets Fields
         /// </summary>
-        [DataMember(Name = "fields", EmitDefaultValue = false)]
+        [DataMember(Name = "fields", EmitDefaultValue = true)]
         public string Fields { get; set; }
 
         /// <summary>
         /// Gets or Sets ResponseFields
         /// </summary>
-        [DataMember(Name = "response_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "response_fields", EmitDefaultValue = true)]
         public string ResponseFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
-        [DataMember(Name = "created_at", EmitDefaultValue = false)]
+        [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public string CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
-        [DataMember(Name = "updated_at", EmitDefaultValue = false)]
+        [DataMember(Name = "updated_at", EmitDefaultValue = true)]
         public string UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Entity
         /// </summary>
-        [DataMember(Name = "entity", EmitDefaultValue = false)]
+        [DataMember(Name = "entity", EmitDefaultValue = true)]
         public string Entity { get; set; }
 
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
-        [DataMember(Name = "action", EmitDefaultValue = false)]
+        [DataMember(Name = "action", EmitDefaultValue = true)]
         public string Action { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

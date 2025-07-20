@@ -64,7 +64,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets ProductId
         /// </summary>
-        [DataMember(Name = "product_id", EmitDefaultValue = false)]
+        [DataMember(Name = "product_id", EmitDefaultValue = true)]
         public string ProductId { get; set; }
 
         /// <summary>
@@ -76,13 +76,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Sku
         /// </summary>
-        [DataMember(Name = "sku", EmitDefaultValue = false)]
+        [DataMember(Name = "sku", EmitDefaultValue = true)]
         public string Sku { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
@@ -100,31 +100,31 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
-        [DataMember(Name = "action", EmitDefaultValue = false)]
+        [DataMember(Name = "action", EmitDefaultValue = true)]
         public ReturnAction Action { get; set; }
 
         /// <summary>
         /// Gets or Sets Condition
         /// </summary>
-        [DataMember(Name = "condition", EmitDefaultValue = false)]
+        [DataMember(Name = "condition", EmitDefaultValue = true)]
         public string Condition { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomerComment
         /// </summary>
-        [DataMember(Name = "customer_comment", EmitDefaultValue = false)]
+        [DataMember(Name = "customer_comment", EmitDefaultValue = true)]
         public string CustomerComment { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

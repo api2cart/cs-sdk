@@ -1,29 +1,22 @@
 # Org.OpenAPITools.Api.CartApi
 
-All URIs are relative to *https://api.api2cart.com/v1.1*
+All URIs are relative to *https://api.api2cart.local.com/v1.1*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CartBridge**](CartApi.md#cartbridge) | **GET** /cart.bridge.json | cart.bridge |
 | [**CartCatalogPriceRulesCount**](CartApi.md#cartcatalogpricerulescount) | **GET** /cart.catalog_price_rules.count.json | cart.catalog_price_rules.count |
 | [**CartCatalogPriceRulesList**](CartApi.md#cartcatalogpriceruleslist) | **GET** /cart.catalog_price_rules.list.json | cart.catalog_price_rules.list |
-| [**CartClearCache**](CartApi.md#cartclearcache) | **POST** /cart.clear_cache.json | cart.clear_cache |
-| [**CartConfig**](CartApi.md#cartconfig) | **GET** /cart.config.json | cart.config |
-| [**CartConfigUpdate**](CartApi.md#cartconfigupdate) | **PUT** /cart.config.update.json | cart.config.update |
 | [**CartCouponAdd**](CartApi.md#cartcouponadd) | **POST** /cart.coupon.add.json | cart.coupon.add |
 | [**CartCouponConditionAdd**](CartApi.md#cartcouponconditionadd) | **POST** /cart.coupon.condition.add.json | cart.coupon.condition.add |
 | [**CartCouponCount**](CartApi.md#cartcouponcount) | **GET** /cart.coupon.count.json | cart.coupon.count |
 | [**CartCouponDelete**](CartApi.md#cartcoupondelete) | **DELETE** /cart.coupon.delete.json | cart.coupon.delete |
 | [**CartCouponList**](CartApi.md#cartcouponlist) | **GET** /cart.coupon.list.json | cart.coupon.list |
-| [**CartCreate**](CartApi.md#cartcreate) | **POST** /cart.create.json | cart.create |
 | [**CartDelete**](CartApi.md#cartdelete) | **DELETE** /cart.delete.json | cart.delete |
-| [**CartDisconnect**](CartApi.md#cartdisconnect) | **GET** /cart.disconnect.json | cart.disconnect |
 | [**CartGiftcardAdd**](CartApi.md#cartgiftcardadd) | **POST** /cart.giftcard.add.json | cart.giftcard.add |
 | [**CartGiftcardCount**](CartApi.md#cartgiftcardcount) | **GET** /cart.giftcard.count.json | cart.giftcard.count |
 | [**CartGiftcardDelete**](CartApi.md#cartgiftcarddelete) | **DELETE** /cart.giftcard.delete.json | cart.giftcard.delete |
 | [**CartGiftcardList**](CartApi.md#cartgiftcardlist) | **GET** /cart.giftcard.list.json | cart.giftcard.list |
 | [**CartInfo**](CartApi.md#cartinfo) | **GET** /cart.info.json | cart.info |
-| [**CartList**](CartApi.md#cartlist) | **GET** /cart.list.json | cart.list |
 | [**CartMetaDataList**](CartApi.md#cartmetadatalist) | **GET** /cart.meta_data.list.json | cart.meta_data.list |
 | [**CartMetaDataSet**](CartApi.md#cartmetadataset) | **POST** /cart.meta_data.set.json | cart.meta_data.set |
 | [**CartMetaDataUnset**](CartApi.md#cartmetadataunset) | **DELETE** /cart.meta_data.unset.json | cart.meta_data.unset |
@@ -34,97 +27,6 @@ All URIs are relative to *https://api.api2cart.com/v1.1*
 | [**CartScriptList**](CartApi.md#cartscriptlist) | **GET** /cart.script.list.json | cart.script.list |
 | [**CartShippingZonesList**](CartApi.md#cartshippingzoneslist) | **GET** /cart.shipping_zones.list.json | cart.shipping_zones.list |
 | [**CartValidate**](CartApi.md#cartvalidate) | **GET** /cart.validate.json | cart.validate |
-
-<a id="cartbridge"></a>
-# **CartBridge**
-> CartBridge200Response CartBridge ()
-
-cart.bridge
-
-Get bridge key and store key
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
-
-namespace Example
-{
-    public class CartBridgeExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
-            // Configure API key authorization: ApiKeyAuth
-            config.AddApiKey("x-api-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-api-key", "Bearer");
-
-            var apiInstance = new CartApi(config);
-
-            try
-            {
-                // cart.bridge
-                CartBridge200Response result = apiInstance.CartBridge();
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CartApi.CartBridge: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the CartBridgeWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // cart.bridge
-    ApiResponse<CartBridge200Response> response = apiInstance.CartBridgeWithHttpInfo();
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CartApi.CartBridgeWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-### Return type
-
-[**CartBridge200Response**](CartBridge200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="cartcatalogpricerulescount"></a>
 # **CartCatalogPriceRulesCount**
@@ -149,7 +51,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -244,7 +146,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -333,308 +235,6 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="cartclearcache"></a>
-# **CartClearCache**
-> CartClearCache200Response CartClearCache (string cacheType)
-
-cart.clear_cache
-
-Clear cache on store.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
-
-namespace Example
-{
-    public class CartClearCacheExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
-            // Configure API key authorization: StoreKeyAuth
-            config.AddApiKey("x-store-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-store-key", "Bearer");
-            // Configure API key authorization: ApiKeyAuth
-            config.AddApiKey("x-api-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-api-key", "Bearer");
-
-            var apiInstance = new CartApi(config);
-            var cacheType = storage_cache;  // string | Defines which cache should be cleared.
-
-            try
-            {
-                // cart.clear_cache
-                CartClearCache200Response result = apiInstance.CartClearCache(cacheType);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CartApi.CartClearCache: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the CartClearCacheWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // cart.clear_cache
-    ApiResponse<CartClearCache200Response> response = apiInstance.CartClearCacheWithHttpInfo(cacheType);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CartApi.CartClearCacheWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **cacheType** | **string** | Defines which cache should be cleared. |  |
-
-### Return type
-
-[**CartClearCache200Response**](CartClearCache200Response.md)
-
-### Authorization
-
-[StoreKeyAuth](../README.md#StoreKeyAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="cartconfig"></a>
-# **CartConfig**
-> CartConfig200Response CartConfig (string? varParams = null, string? exclude = null)
-
-cart.config
-
-Get list of cart configs
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
-
-namespace Example
-{
-    public class CartConfigExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
-            // Configure API key authorization: StoreKeyAuth
-            config.AddApiKey("x-store-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-store-key", "Bearer");
-            // Configure API key authorization: ApiKeyAuth
-            config.AddApiKey("x-api-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-api-key", "Bearer");
-
-            var apiInstance = new CartApi(config);
-            var varParams = store_name,store_url,db_prefix;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "store_name,store_url,db_prefix")
-            var exclude = store_name,store_url,db_prefix;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
-
-            try
-            {
-                // cart.config
-                CartConfig200Response result = apiInstance.CartConfig(varParams, exclude);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CartApi.CartConfig: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the CartConfigWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // cart.config
-    ApiResponse<CartConfig200Response> response = apiInstance.CartConfigWithHttpInfo(varParams, exclude);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CartApi.CartConfigWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;store_name,store_url,db_prefix&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
-
-### Return type
-
-[**CartConfig200Response**](CartConfig200Response.md)
-
-### Authorization
-
-[StoreKeyAuth](../README.md#StoreKeyAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="cartconfigupdate"></a>
-# **CartConfigUpdate**
-> CartConfigUpdate200Response CartConfigUpdate (CartConfigUpdate cartConfigUpdate)
-
-cart.config.update
-
-Use this API method to update custom data in client database.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
-
-namespace Example
-{
-    public class CartConfigUpdateExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
-            // Configure API key authorization: StoreKeyAuth
-            config.AddApiKey("x-store-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-store-key", "Bearer");
-            // Configure API key authorization: ApiKeyAuth
-            config.AddApiKey("x-api-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-api-key", "Bearer");
-
-            var apiInstance = new CartApi(config);
-            var cartConfigUpdate = new CartConfigUpdate(); // CartConfigUpdate | 
-
-            try
-            {
-                // cart.config.update
-                CartConfigUpdate200Response result = apiInstance.CartConfigUpdate(cartConfigUpdate);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CartApi.CartConfigUpdate: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the CartConfigUpdateWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // cart.config.update
-    ApiResponse<CartConfigUpdate200Response> response = apiInstance.CartConfigUpdateWithHttpInfo(cartConfigUpdate);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CartApi.CartConfigUpdateWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **cartConfigUpdate** | [**CartConfigUpdate**](CartConfigUpdate.md) |  |  |
-
-### Return type
-
-[**CartConfigUpdate200Response**](CartConfigUpdate200Response.md)
-
-### Authorization
-
-[StoreKeyAuth](../README.md#StoreKeyAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a id="cartcouponadd"></a>
 # **CartCouponAdd**
 > CartCouponAdd200Response CartCouponAdd (CartCouponAdd cartCouponAdd)
@@ -658,7 +258,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -758,7 +358,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -874,7 +474,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -984,7 +584,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1086,7 +686,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1189,102 +789,6 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="cartcreate"></a>
-# **CartCreate**
-> AccountCartAdd200Response CartCreate (CartCreate cartCreate)
-
-cart.create
-
-Add store to the account
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
-
-namespace Example
-{
-    public class CartCreateExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
-            // Configure API key authorization: ApiKeyAuth
-            config.AddApiKey("x-api-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-api-key", "Bearer");
-
-            var apiInstance = new CartApi(config);
-            var cartCreate = new CartCreate(); // CartCreate | 
-
-            try
-            {
-                // cart.create
-                AccountCartAdd200Response result = apiInstance.CartCreate(cartCreate);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CartApi.CartCreate: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the CartCreateWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // cart.create
-    ApiResponse<AccountCartAdd200Response> response = apiInstance.CartCreateWithHttpInfo(cartCreate);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CartApi.CartCreateWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **cartCreate** | [**CartCreate**](CartCreate.md) |  |  |
-
-### Return type
-
-[**AccountCartAdd200Response**](AccountCartAdd200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a id="cartdelete"></a>
 # **CartDelete**
 > CartDelete200Response CartDelete (bool? deleteBridge = null)
@@ -1308,7 +812,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1385,106 +889,6 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="cartdisconnect"></a>
-# **CartDisconnect**
-> CartDisconnect200Response CartDisconnect (bool? deleteBridge = null)
-
-cart.disconnect
-
-Disconnect with the store and clear store session data.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
-
-namespace Example
-{
-    public class CartDisconnectExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
-            // Configure API key authorization: StoreKeyAuth
-            config.AddApiKey("x-store-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-store-key", "Bearer");
-            // Configure API key authorization: ApiKeyAuth
-            config.AddApiKey("x-api-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-api-key", "Bearer");
-
-            var apiInstance = new CartApi(config);
-            var deleteBridge = true;  // bool? | Identifies if there is a necessity to delete bridge (optional)  (default to false)
-
-            try
-            {
-                // cart.disconnect
-                CartDisconnect200Response result = apiInstance.CartDisconnect(deleteBridge);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CartApi.CartDisconnect: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the CartDisconnectWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // cart.disconnect
-    ApiResponse<CartDisconnect200Response> response = apiInstance.CartDisconnectWithHttpInfo(deleteBridge);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CartApi.CartDisconnectWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **deleteBridge** | **bool?** | Identifies if there is a necessity to delete bridge | [optional] [default to false] |
-
-### Return type
-
-[**CartDisconnect200Response**](CartDisconnect200Response.md)
-
-### Authorization
-
-[StoreKeyAuth](../README.md#StoreKeyAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a id="cartgiftcardadd"></a>
 # **CartGiftcardAdd**
 > CartGiftcardAdd200Response CartGiftcardAdd (decimal amount, string? code = null, string? ownerEmail = null, string? recipientEmail = null, string? recipientName = null, string? ownerName = null)
@@ -1508,7 +912,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1618,7 +1022,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1718,7 +1122,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1818,7 +1222,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1930,7 +1334,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2013,97 +1417,6 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="cartlist"></a>
-# **CartList**
-> CartList200Response CartList ()
-
-cart.list
-
-Get list of supported carts
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
-
-namespace Example
-{
-    public class CartListExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
-            // Configure API key authorization: ApiKeyAuth
-            config.AddApiKey("x-api-key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("x-api-key", "Bearer");
-
-            var apiInstance = new CartApi(config);
-
-            try
-            {
-                // cart.list
-                CartList200Response result = apiInstance.CartList();
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CartApi.CartList: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the CartListWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // cart.list
-    ApiResponse<CartList200Response> response = apiInstance.CartListWithHttpInfo();
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CartApi.CartListWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-### Return type
-
-[**CartList200Response**](CartList200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a id="cartmetadatalist"></a>
 # **CartMetaDataList**
 > ModelResponseCartMetaDataList CartMetaDataList (string entityId, int? count = null, string? pageCursor = null, string? entity = null, string? storeId = null, string? langId = null, string? key = null, string? responseFields = null, string? varParams = null, string? exclude = null)
@@ -2127,7 +1440,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2245,7 +1558,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2357,7 +1670,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2465,7 +1778,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2560,7 +1873,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2664,7 +1977,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2778,7 +2091,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -2880,7 +2193,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -3002,7 +2315,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -3112,7 +2425,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.api2cart.com/v1.1";
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
             // Configure API key authorization: StoreKeyAuth
             config.AddApiKey("x-store-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed

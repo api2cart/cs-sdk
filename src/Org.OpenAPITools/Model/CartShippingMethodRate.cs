@@ -60,55 +60,55 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets MinWeight
         /// </summary>
-        [DataMember(Name = "min_weight", EmitDefaultValue = false)]
+        [DataMember(Name = "min_weight", EmitDefaultValue = true)]
         public string MinWeight { get; set; }
 
         /// <summary>
         /// Gets or Sets MaxWeight
         /// </summary>
-        [DataMember(Name = "max_weight", EmitDefaultValue = false)]
+        [DataMember(Name = "max_weight", EmitDefaultValue = true)]
         public string MaxWeight { get; set; }
 
         /// <summary>
         /// Gets or Sets MinOrderAmount
         /// </summary>
-        [DataMember(Name = "min_order_amount", EmitDefaultValue = false)]
+        [DataMember(Name = "min_order_amount", EmitDefaultValue = true)]
         public string MinOrderAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets MaxOrderAmount
         /// </summary>
-        [DataMember(Name = "max_order_amount", EmitDefaultValue = false)]
+        [DataMember(Name = "max_order_amount", EmitDefaultValue = true)]
         public string MaxOrderAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets MinItemsCount
         /// </summary>
-        [DataMember(Name = "min_items_count", EmitDefaultValue = false)]
+        [DataMember(Name = "min_items_count", EmitDefaultValue = true)]
         public string MinItemsCount { get; set; }
 
         /// <summary>
         /// Gets or Sets MaxItemsCount
         /// </summary>
-        [DataMember(Name = "max_items_count", EmitDefaultValue = false)]
+        [DataMember(Name = "max_items_count", EmitDefaultValue = true)]
         public string MaxItemsCount { get; set; }
 
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
-        [DataMember(Name = "price", EmitDefaultValue = false)]
+        [DataMember(Name = "price", EmitDefaultValue = true)]
         public string Price { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

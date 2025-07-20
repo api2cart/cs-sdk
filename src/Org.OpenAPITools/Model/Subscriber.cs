@@ -48,7 +48,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="gender">gender.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Subscriber(string id = default(string), string customerId = default(string), string email = default(string), bool subscribed = default(bool), string firstName = default(string), string lastName = default(string), List<string> storesIds = default(List<string>), string createdTime = default(string), string modifiedTime = default(string), string langId = default(string), string gender = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Subscriber(string id = default(string), string customerId = default(string), string email = default(string), bool? subscribed = default(bool?), string firstName = default(string), string lastName = default(string), List<string> storesIds = default(List<string>), string createdTime = default(string), string modifiedTime = default(string), string langId = default(string), string gender = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.CustomerId = customerId;
@@ -74,31 +74,31 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets CustomerId
         /// </summary>
-        [DataMember(Name = "customer_id", EmitDefaultValue = false)]
+        [DataMember(Name = "customer_id", EmitDefaultValue = true)]
         public string CustomerId { get; set; }
 
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
-        [DataMember(Name = "email", EmitDefaultValue = false)]
+        [DataMember(Name = "email", EmitDefaultValue = true)]
         public string Email { get; set; }
 
         /// <summary>
         /// Gets or Sets Subscribed
         /// </summary>
         [DataMember(Name = "subscribed", EmitDefaultValue = true)]
-        public bool Subscribed { get; set; }
+        public bool? Subscribed { get; set; }
 
         /// <summary>
         /// Gets or Sets FirstName
         /// </summary>
-        [DataMember(Name = "first_name", EmitDefaultValue = false)]
+        [DataMember(Name = "first_name", EmitDefaultValue = true)]
         public string FirstName { get; set; }
 
         /// <summary>
         /// Gets or Sets LastName
         /// </summary>
-        [DataMember(Name = "last_name", EmitDefaultValue = false)]
+        [DataMember(Name = "last_name", EmitDefaultValue = true)]
         public string LastName { get; set; }
 
         /// <summary>
@@ -110,37 +110,37 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets CreatedTime
         /// </summary>
-        [DataMember(Name = "created_time", EmitDefaultValue = false)]
+        [DataMember(Name = "created_time", EmitDefaultValue = true)]
         public string CreatedTime { get; set; }
 
         /// <summary>
         /// Gets or Sets ModifiedTime
         /// </summary>
-        [DataMember(Name = "modified_time", EmitDefaultValue = false)]
+        [DataMember(Name = "modified_time", EmitDefaultValue = true)]
         public string ModifiedTime { get; set; }
 
         /// <summary>
         /// Gets or Sets LangId
         /// </summary>
-        [DataMember(Name = "lang_id", EmitDefaultValue = false)]
+        [DataMember(Name = "lang_id", EmitDefaultValue = true)]
         public string LangId { get; set; }
 
         /// <summary>
         /// Gets or Sets Gender
         /// </summary>
-        [DataMember(Name = "gender", EmitDefaultValue = false)]
+        [DataMember(Name = "gender", EmitDefaultValue = true)]
         public string Gender { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

@@ -45,7 +45,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="deliveryTime">deliveryTime.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public OrderPreestimateShipping(string methodCode = default(string), string methodName = default(string), string carrierCode = default(string), string carrierName = default(string), string description = default(string), decimal price = default(decimal), decimal priceIncTax = default(decimal), string deliveryTime = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
+        public OrderPreestimateShipping(string methodCode = default(string), string methodName = default(string), string carrierCode = default(string), string carrierName = default(string), string description = default(string), decimal? price = default(decimal?), decimal? priceIncTax = default(decimal?), string deliveryTime = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.MethodCode = methodCode;
             this.MethodName = methodName;
@@ -68,55 +68,55 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets MethodName
         /// </summary>
-        [DataMember(Name = "method_name", EmitDefaultValue = false)]
+        [DataMember(Name = "method_name", EmitDefaultValue = true)]
         public string MethodName { get; set; }
 
         /// <summary>
         /// Gets or Sets CarrierCode
         /// </summary>
-        [DataMember(Name = "carrier_code", EmitDefaultValue = false)]
+        [DataMember(Name = "carrier_code", EmitDefaultValue = true)]
         public string CarrierCode { get; set; }
 
         /// <summary>
         /// Gets or Sets CarrierName
         /// </summary>
-        [DataMember(Name = "carrier_name", EmitDefaultValue = false)]
+        [DataMember(Name = "carrier_name", EmitDefaultValue = true)]
         public string CarrierName { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
-        [DataMember(Name = "price", EmitDefaultValue = false)]
-        public decimal Price { get; set; }
+        [DataMember(Name = "price", EmitDefaultValue = true)]
+        public decimal? Price { get; set; }
 
         /// <summary>
         /// Gets or Sets PriceIncTax
         /// </summary>
-        [DataMember(Name = "price_inc_tax", EmitDefaultValue = false)]
-        public decimal PriceIncTax { get; set; }
+        [DataMember(Name = "price_inc_tax", EmitDefaultValue = true)]
+        public decimal? PriceIncTax { get; set; }
 
         /// <summary>
         /// Gets or Sets DeliveryTime
         /// </summary>
-        [DataMember(Name = "delivery_time", EmitDefaultValue = false)]
+        [DataMember(Name = "delivery_time", EmitDefaultValue = true)]
         public string DeliveryTime { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

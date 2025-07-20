@@ -110,13 +110,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets BasketId
         /// </summary>
-        [DataMember(Name = "basket_id", EmitDefaultValue = false)]
+        [DataMember(Name = "basket_id", EmitDefaultValue = true)]
         public string BasketId { get; set; }
 
         /// <summary>
         /// Gets or Sets ChannelId
         /// </summary>
-        [DataMember(Name = "channel_id", EmitDefaultValue = false)]
+        [DataMember(Name = "channel_id", EmitDefaultValue = true)]
         public string ChannelId { get; set; }
 
         /// <summary>
@@ -134,31 +134,31 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Currency
         /// </summary>
-        [DataMember(Name = "currency", EmitDefaultValue = false)]
+        [DataMember(Name = "currency", EmitDefaultValue = true)]
         public Currency Currency { get; set; }
 
         /// <summary>
         /// Gets or Sets ShippingAddress
         /// </summary>
-        [DataMember(Name = "shipping_address", EmitDefaultValue = false)]
+        [DataMember(Name = "shipping_address", EmitDefaultValue = true)]
         public CustomerAddress ShippingAddress { get; set; }
 
         /// <summary>
         /// Gets or Sets BillingAddress
         /// </summary>
-        [DataMember(Name = "billing_address", EmitDefaultValue = false)]
+        [DataMember(Name = "billing_address", EmitDefaultValue = true)]
         public CustomerAddress BillingAddress { get; set; }
 
         /// <summary>
         /// Gets or Sets PaymentMethod
         /// </summary>
-        [DataMember(Name = "payment_method", EmitDefaultValue = false)]
+        [DataMember(Name = "payment_method", EmitDefaultValue = true)]
         public OrderPaymentMethod PaymentMethod { get; set; }
 
         /// <summary>
         /// Gets or Sets ShippingMethod
         /// </summary>
-        [DataMember(Name = "shipping_method", EmitDefaultValue = false)]
+        [DataMember(Name = "shipping_method", EmitDefaultValue = true)]
         public OrderShippingMethod ShippingMethod { get; set; }
 
         /// <summary>
@@ -176,13 +176,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Totals
         /// </summary>
-        [DataMember(Name = "totals", EmitDefaultValue = false)]
+        [DataMember(Name = "totals", EmitDefaultValue = true)]
         public OrderTotals Totals { get; set; }
 
         /// <summary>
         /// Gets or Sets Total
         /// </summary>
-        [DataMember(Name = "total", EmitDefaultValue = false)]
+        [DataMember(Name = "total", EmitDefaultValue = true)]
         public OrderTotal Total { get; set; }
 
         /// <summary>
@@ -206,25 +206,25 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets ModifiedAt
         /// </summary>
-        [DataMember(Name = "modified_at", EmitDefaultValue = false)]
+        [DataMember(Name = "modified_at", EmitDefaultValue = true)]
         public A2CDateTime ModifiedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets FinishedTime
         /// </summary>
-        [DataMember(Name = "finished_time", EmitDefaultValue = false)]
+        [DataMember(Name = "finished_time", EmitDefaultValue = true)]
         public A2CDateTime FinishedTime { get; set; }
 
         /// <summary>
         /// Gets or Sets Comment
         /// </summary>
-        [DataMember(Name = "comment", EmitDefaultValue = false)]
+        [DataMember(Name = "comment", EmitDefaultValue = true)]
         public string Comment { get; set; }
 
         /// <summary>
         /// Gets or Sets StoreId
         /// </summary>
-        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        [DataMember(Name = "store_id", EmitDefaultValue = true)]
         public string StoreId { get; set; }
 
         /// <summary>
@@ -242,25 +242,25 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets GiftMessage
         /// </summary>
-        [DataMember(Name = "gift_message", EmitDefaultValue = false)]
+        [DataMember(Name = "gift_message", EmitDefaultValue = true)]
         public string GiftMessage { get; set; }
 
         /// <summary>
         /// Gets or Sets OrderDetailsUrl
         /// </summary>
-        [DataMember(Name = "order_details_url", EmitDefaultValue = false)]
+        [DataMember(Name = "order_details_url", EmitDefaultValue = true)]
         public string OrderDetailsUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

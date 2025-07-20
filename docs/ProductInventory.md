@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **WarehouseId** | **string** |  | [optional] 
 **Quantity** | **decimal** |  | [optional] 
-**InStock** | **bool** |  | [optional] 
-**Priority** | **int** |  | [optional] 
+**InStock** | **bool?** |  | [optional] 
+**Priority** | **int?** |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 
 

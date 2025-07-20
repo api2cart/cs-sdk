@@ -119,7 +119,7 @@ namespace Org.OpenAPITools.Client
         {
             Proxy = null;
             UserAgent = WebUtility.UrlEncode("OpenAPI-Generator/1.0.0/csharp");
-            BasePath = "https://api.api2cart.com/v1.1";
+            BasePath = "https://api.api2cart.local.com/v1.1";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
             ApiKeyPrefix = new ConcurrentDictionary<string, string>();
@@ -127,7 +127,7 @@ namespace Org.OpenAPITools.Client
             {
                 {
                     new Dictionary<string, object> {
-                        {"url", "https://api.api2cart.com/v1.1"},
+                        {"url", "https://api.api2cart.local.com/v1.1"},
                         {"description", "API2Cart Production Server"},
                     }
                 }
@@ -148,7 +148,7 @@ namespace Org.OpenAPITools.Client
             IDictionary<string, string> defaultHeaders,
             IDictionary<string, string> apiKey,
             IDictionary<string, string> apiKeyPrefix,
-            string basePath = "https://api.api2cart.com/v1.1") : this()
+            string basePath = "https://api.api2cart.local.com/v1.1") : this()
         {
             if (string.IsNullOrWhiteSpace(basePath))
                 throw new ArgumentException("The provided basePath is invalid.", "basePath");

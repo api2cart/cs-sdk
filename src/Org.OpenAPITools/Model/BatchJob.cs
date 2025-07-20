@@ -80,19 +80,19 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets ProcessedTime
         /// </summary>
-        [DataMember(Name = "processed_time", EmitDefaultValue = false)]
+        [DataMember(Name = "processed_time", EmitDefaultValue = true)]
         public A2CDateTime ProcessedTime { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

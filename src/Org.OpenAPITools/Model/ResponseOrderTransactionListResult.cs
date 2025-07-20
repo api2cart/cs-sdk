@@ -39,7 +39,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="transactions">transactions.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ResponseOrderTransactionListResult(int transactionsCount = default(int), List<OrderTransaction> transactions = default(List<OrderTransaction>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ResponseOrderTransactionListResult(int? transactionsCount = default(int?), List<OrderTransaction> transactions = default(List<OrderTransaction>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.TransactionsCount = transactionsCount;
             this.Transactions = transactions;
@@ -50,8 +50,8 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets TransactionsCount
         /// </summary>
-        [DataMember(Name = "transactions_count", EmitDefaultValue = false)]
-        public int TransactionsCount { get; set; }
+        [DataMember(Name = "transactions_count", EmitDefaultValue = true)]
+        public int? TransactionsCount { get; set; }
 
         /// <summary>
         /// Gets or Sets Transactions
@@ -62,13 +62,13 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
-        [DataMember(Name = "additional_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
         public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public Object CustomFields { get; set; }
 
         /// <summary>

@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** |  | [optional] 
 **Value** | **decimal** |  | [optional] 
-**Avail** | **bool** |  | [optional] 
+**Avail** | **bool?** |  | [optional] 
 **GroupId** | **string** |  | [optional] 
-**QuantityFrom** | **decimal** |  | [optional] 
+**QuantityFrom** | **decimal?** |  | [optional] 
 **StartTime** | [**A2CDateTime**](A2CDateTime.md) |  | [optional] 
 **ExpireTime** | [**A2CDateTime**](A2CDateTime.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 

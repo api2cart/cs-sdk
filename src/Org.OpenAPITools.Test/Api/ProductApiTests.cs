@@ -335,17 +335,6 @@ namespace Org.OpenAPITools.Test.Api
         }
 
         /// <summary>
-        /// Test ProductFields
-        /// </summary>
-        [Fact]
-        public void ProductFieldsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ProductFields();
-            //Assert.IsType<CartConfigUpdate200Response>(response);
-        }
-
-        /// <summary>
         /// Test ProductFind
         /// </summary>
         [Fact]
@@ -750,24 +739,6 @@ namespace Org.OpenAPITools.Test.Api
         }
 
         /// <summary>
-        /// Test ProductVariantCount
-        /// </summary>
-        [Fact]
-        public void ProductVariantCountTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string productId = null;
-            //string? categoryId = null;
-            //string? storeId = null;
-            //string? createdFrom = null;
-            //string? createdTo = null;
-            //string? modifiedFrom = null;
-            //string? modifiedTo = null;
-            //var response = instance.ProductVariantCount(productId, categoryId, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo);
-            //Assert.IsType<ProductVariantCount200Response>(response);
-        }
-
-        /// <summary>
         /// Test ProductVariantDelete
         /// </summary>
         [Fact]
@@ -818,43 +789,6 @@ namespace Org.OpenAPITools.Test.Api
             //string? storeId = null;
             //var response = instance.ProductVariantImageDelete(productId, productVariantId, id, storeId);
             //Assert.IsType<AttributeDelete200Response>(response);
-        }
-
-        /// <summary>
-        /// Test ProductVariantInfo
-        /// </summary>
-        [Fact]
-        public void ProductVariantInfoTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string id = null;
-            //string? storeId = null;
-            //string? varParams = null;
-            //string? exclude = null;
-            //var response = instance.ProductVariantInfo(id, storeId, varParams, exclude);
-            //Assert.IsType<ProductInfo200Response>(response);
-        }
-
-        /// <summary>
-        /// Test ProductVariantList
-        /// </summary>
-        [Fact]
-        public void ProductVariantListTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? start = null;
-            //int? count = null;
-            //string? productId = null;
-            //string? categoryId = null;
-            //string? storeId = null;
-            //string? createdFrom = null;
-            //string? createdTo = null;
-            //string? modifiedFrom = null;
-            //string? modifiedTo = null;
-            //string? varParams = null;
-            //string? exclude = null;
-            //var response = instance.ProductVariantList(start, count, productId, categoryId, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, varParams, exclude);
-            //Assert.IsType<ProductVariantList200Response>(response);
         }
 
         /// <summary>
