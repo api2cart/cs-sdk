@@ -72,6 +72,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="backorderStatus">Set backorder status.</param>
         /// <param name="increaseQuantity">Defines the incremental changes in product quantity.</param>
         /// <param name="reduceQuantity">Defines the decrement changes in product quantity.</param>
+        /// <param name="lowStockThreshold">Specify the quantity threshold below which the product is considered low in stock.</param>
         /// <param name="warehouseId">This parameter is used for selecting a warehouse where you need to set/modify a product quantity..</param>
         /// <param name="weight">Weight.</param>
         /// <param name="weightUnit">Weight Unit.</param>
@@ -120,7 +121,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="specifics">An array of Item Specific Name/Value pairs used by the seller to provide descriptive details of an item in a structured manner.         The list of possible specifications can be obtained using the category.info method (additional_fields-&gt;product_specifics).         &lt;b&gt;The structure of the parameter is different for specific platforms.&lt;/b&gt;.</param>
         /// <param name="shopSectionId">Add Shop Section Id.</param>
         /// <param name="personalizationDetails">personalizationDetails.</param>
-        public ProductUpdate(string id = default(string), string model = default(string), string sku = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), decimal price = default(decimal), decimal oldPrice = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), decimal retailPrice = default(decimal), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), decimal reservePrice = default(decimal), decimal buyitnowPrice = default(decimal), bool taxable = true, string taxClassId = default(string), string type = default(string), string status = default(string), string condition = default(string), string visible = default(string), bool inStock = default(bool), bool avail = true, string availFrom = default(string), string productClass = default(string), bool availableForView = default(bool), string storesIds = default(string), string storeId = default(string), string langId = default(string), decimal quantity = default(decimal), decimal reserveQuantity = default(decimal), bool manageStock = default(bool), string backorderStatus = default(string), decimal increaseQuantity = default(decimal), decimal reduceQuantity = default(decimal), string warehouseId = default(string), decimal weight = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), decimal width = default(decimal), string dimensionsUnit = default(string), bool isVirtual = false, bool isFreeShipping = default(bool), string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), string barcode = default(string), string manufacturer = default(string), string manufacturerId = default(string), string categoriesIds = default(string), string relatedProductsIds = default(string), string upSellProductsIds = default(string), string crossSellProductsIds = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string seoUrl = default(string), string searchKeywords = default(string), string tags = default(string), string deliveryCode = default(string), ProductAddPackageDetails packageDetails = default(ProductAddPackageDetails), string countryOfOrigin = default(string), string harmonizedSystemCode = default(string), int shippingTemplateId = 0, string whenMade = @"made_to_order", bool isSupply = true, bool downloadable = false, List<string> materials = default(List<string>), bool autoRenew = false, bool onSale = false, string productionPartnerIds = default(string), ProductAddManufacturerInfo manufacturerInfo = default(ProductAddManufacturerInfo), string reportRequestId = default(string), bool disableReportCache = false, bool reindex = true, bool clearCache = true, bool checkProcessStatus = false, List<ProductAddSpecificsInner> specifics = default(List<ProductAddSpecificsInner>), int shopSectionId = default(int), ProductAddPersonalizationDetails personalizationDetails = default(ProductAddPersonalizationDetails))
+        public ProductUpdate(string id = default(string), string model = default(string), string sku = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), decimal price = default(decimal), decimal oldPrice = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), decimal retailPrice = default(decimal), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), decimal reservePrice = default(decimal), decimal buyitnowPrice = default(decimal), bool taxable = true, string taxClassId = default(string), string type = default(string), string status = default(string), string condition = default(string), string visible = default(string), bool inStock = default(bool), bool avail = true, string availFrom = default(string), string productClass = default(string), bool availableForView = default(bool), string storesIds = default(string), string storeId = default(string), string langId = default(string), decimal quantity = default(decimal), decimal reserveQuantity = default(decimal), bool manageStock = default(bool), string backorderStatus = default(string), decimal increaseQuantity = default(decimal), decimal reduceQuantity = default(decimal), decimal lowStockThreshold = default(decimal), string warehouseId = default(string), decimal weight = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), decimal width = default(decimal), string dimensionsUnit = default(string), bool isVirtual = false, bool isFreeShipping = default(bool), string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), string barcode = default(string), string manufacturer = default(string), string manufacturerId = default(string), string categoriesIds = default(string), string relatedProductsIds = default(string), string upSellProductsIds = default(string), string crossSellProductsIds = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string seoUrl = default(string), string searchKeywords = default(string), string tags = default(string), string deliveryCode = default(string), ProductAddPackageDetails packageDetails = default(ProductAddPackageDetails), string countryOfOrigin = default(string), string harmonizedSystemCode = default(string), int shippingTemplateId = 0, string whenMade = @"made_to_order", bool isSupply = true, bool downloadable = false, List<string> materials = default(List<string>), bool autoRenew = false, bool onSale = false, string productionPartnerIds = default(string), ProductAddManufacturerInfo manufacturerInfo = default(ProductAddManufacturerInfo), string reportRequestId = default(string), bool disableReportCache = false, bool reindex = true, bool clearCache = true, bool checkProcessStatus = false, List<ProductAddSpecificsInner> specifics = default(List<ProductAddSpecificsInner>), int shopSectionId = default(int), ProductAddPersonalizationDetails personalizationDetails = default(ProductAddPersonalizationDetails))
         {
             this.Id = id;
             this.Model = model;
@@ -159,6 +160,7 @@ namespace Org.OpenAPITools.Model
             this.BackorderStatus = backorderStatus;
             this.IncreaseQuantity = increaseQuantity;
             this.ReduceQuantity = reduceQuantity;
+            this.LowStockThreshold = lowStockThreshold;
             this.WarehouseId = warehouseId;
             this.Weight = weight;
             this.WeightUnit = weightUnit;
@@ -576,6 +578,16 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "reduce_quantity", EmitDefaultValue = false)]
         public decimal ReduceQuantity { get; set; }
+
+        /// <summary>
+        /// Specify the quantity threshold below which the product is considered low in stock
+        /// </summary>
+        /// <value>Specify the quantity threshold below which the product is considered low in stock</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "low_stock_threshold", EmitDefaultValue = false)]
+        public decimal LowStockThreshold { get; set; }
 
         /// <summary>
         /// This parameter is used for selecting a warehouse where you need to set/modify a product quantity.
@@ -1087,6 +1099,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  BackorderStatus: ").Append(BackorderStatus).Append("\n");
             sb.Append("  IncreaseQuantity: ").Append(IncreaseQuantity).Append("\n");
             sb.Append("  ReduceQuantity: ").Append(ReduceQuantity).Append("\n");
+            sb.Append("  LowStockThreshold: ").Append(LowStockThreshold).Append("\n");
             sb.Append("  WarehouseId: ").Append(WarehouseId).Append("\n");
             sb.Append("  Weight: ").Append(Weight).Append("\n");
             sb.Append("  WeightUnit: ").Append(WeightUnit).Append("\n");

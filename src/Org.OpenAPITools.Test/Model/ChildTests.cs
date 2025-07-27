@@ -344,6 +344,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'LowStockThreshold'
+        /// </summary>
+        [Fact]
+        public void LowStockThresholdTest()
+        {
+            // TODO unit test for the property 'LowStockThreshold'
+        }
+
+        /// <summary>
         /// Test the property 'DefaultQtyInPack'
         /// </summary>
         [Fact]

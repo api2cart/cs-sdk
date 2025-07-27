@@ -9379,6 +9379,15 @@ paths:
           default: false
           type: boolean
         style: form
+      - description: A categorization for the product
+        example: BICYCLE
+        explode: true
+        in: query
+        name: product_type
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -30322,6 +30331,7 @@ components:
         sprice_create: 2018-08-25 23:56:12
         type: configurable
         listing_duration: Days_3
+        low_stock_threshold: 1
         image_name: abibas.png
         clear_cache: false
         marketplace_item_properties: "{\"color\":[\"Silver\"],\"manufacturer\":\"\
@@ -30789,6 +30799,12 @@ components:
           example: 1
           type: number
           name: max_order_quantity
+        low_stock_threshold:
+          description: Specify the quantity threshold below which the product is considered
+            low in stock
+          example: 1
+          type: number
+          name: low_stock_threshold
         weight:
           default: 0
           description: Weight
@@ -31786,6 +31802,7 @@ components:
           email: email
         retail_price: 6.9
         product_class: Shirts
+        low_stock_threshold: 1
         clear_cache: false
         increase_quantity: 4
         price: 99.9
@@ -32155,6 +32172,12 @@ components:
           example: 4
           type: number
           name: reduce_quantity
+        low_stock_threshold:
+          description: Specify the quantity threshold below which the product is considered
+            low in stock
+          example: 1
+          type: number
+          name: low_stock_threshold
         warehouse_id:
           description: This parameter is used for selecting a warehouse where you
             need to set/modify a product quantity.
@@ -33519,7 +33542,7 @@ components:
         is_virtual: true
         short_description: short_description
         seo_url: seo_url
-        default_qty_in_pack: 3.616076749251911
+        default_qty_in_pack: 2.027123023002322
         isbn: isbn
         default_price: 1.4658129805029452
         additional_fields: "{}"
@@ -33538,6 +33561,7 @@ components:
           priority: 9
           warehouse_id: warehouse_id
         meta_keywords: meta_keywords
+        low_stock_threshold: 3.616076749251911
         ean: ean
         modified_time:
           custom_fields: "{}"
@@ -33584,7 +33608,7 @@ components:
           option_id: option_id
           additional_fields: "{}"
         cost_price: 5.962133916683182
-        height: 7.386281948385884
+        height: 1.2315135367772556
         allow_backorders: true
         created_time:
           custom_fields: "{}"
@@ -33674,9 +33698,9 @@ components:
           value: 1.4658129805029452
         custom_fields: "{}"
         tax_class_id: tax_class_id
-        length: 1.2315135367772556
+        length: 1.0246457001441578
         upc: upc
-        weight: 2.027123023002322
+        weight: 4.145608029883936
         mpn: mpn
         list_price: 5.637376656633329
         url: url
@@ -33685,7 +33709,7 @@ components:
         inventory_level: 7.061401241503109
         parent_id: parent_id
         name: name
-        width: 4.145608029883936
+        width: 7.386281948385884
         avail_for_sale: true
       properties:
         id:
@@ -33784,6 +33808,9 @@ components:
         min_quantity:
           nullable: true
           type: number
+        low_stock_threshold:
+          nullable: true
+          type: number
         default_qty_in_pack:
           nullable: true
           type: number
@@ -33854,7 +33881,7 @@ components:
           - is_virtual: true
             short_description: short_description
             seo_url: seo_url
-            default_qty_in_pack: 3.616076749251911
+            default_qty_in_pack: 2.027123023002322
             isbn: isbn
             default_price: 1.4658129805029452
             additional_fields: "{}"
@@ -33873,6 +33900,7 @@ components:
               priority: 9
               warehouse_id: warehouse_id
             meta_keywords: meta_keywords
+            low_stock_threshold: 3.616076749251911
             ean: ean
             modified_time:
               custom_fields: "{}"
@@ -33919,7 +33947,7 @@ components:
               option_id: option_id
               additional_fields: "{}"
             cost_price: 5.962133916683182
-            height: 7.386281948385884
+            height: 1.2315135367772556
             allow_backorders: true
             created_time:
               custom_fields: "{}"
@@ -34009,9 +34037,9 @@ components:
               value: 1.4658129805029452
             custom_fields: "{}"
             tax_class_id: tax_class_id
-            length: 1.2315135367772556
+            length: 1.0246457001441578
             upc: upc
-            weight: 2.027123023002322
+            weight: 4.145608029883936
             mpn: mpn
             list_price: 5.637376656633329
             url: url
@@ -34020,12 +34048,12 @@ components:
             inventory_level: 7.061401241503109
             parent_id: parent_id
             name: name
-            width: 4.145608029883936
+            width: 7.386281948385884
             avail_for_sale: true
           - is_virtual: true
             short_description: short_description
             seo_url: seo_url
-            default_qty_in_pack: 3.616076749251911
+            default_qty_in_pack: 2.027123023002322
             isbn: isbn
             default_price: 1.4658129805029452
             additional_fields: "{}"
@@ -34044,6 +34072,7 @@ components:
               priority: 9
               warehouse_id: warehouse_id
             meta_keywords: meta_keywords
+            low_stock_threshold: 3.616076749251911
             ean: ean
             modified_time:
               custom_fields: "{}"
@@ -34090,7 +34119,7 @@ components:
               option_id: option_id
               additional_fields: "{}"
             cost_price: 5.962133916683182
-            height: 7.386281948385884
+            height: 1.2315135367772556
             allow_backorders: true
             created_time:
               custom_fields: "{}"
@@ -34180,9 +34209,9 @@ components:
               value: 1.4658129805029452
             custom_fields: "{}"
             tax_class_id: tax_class_id
-            length: 1.2315135367772556
+            length: 1.0246457001441578
             upc: upc
-            weight: 2.027123023002322
+            weight: 4.145608029883936
             mpn: mpn
             list_price: 5.637376656633329
             url: url
@@ -34191,7 +34220,7 @@ components:
             inventory_level: 7.061401241503109
             parent_id: parent_id
             name: name
-            width: 4.145608029883936
+            width: 7.386281948385884
             avail_for_sale: true
           total_count: 6
           custom_fields: "{}"
@@ -34228,7 +34257,7 @@ components:
         - is_virtual: true
           short_description: short_description
           seo_url: seo_url
-          default_qty_in_pack: 3.616076749251911
+          default_qty_in_pack: 2.027123023002322
           isbn: isbn
           default_price: 1.4658129805029452
           additional_fields: "{}"
@@ -34247,6 +34276,7 @@ components:
             priority: 9
             warehouse_id: warehouse_id
           meta_keywords: meta_keywords
+          low_stock_threshold: 3.616076749251911
           ean: ean
           modified_time:
             custom_fields: "{}"
@@ -34293,7 +34323,7 @@ components:
             option_id: option_id
             additional_fields: "{}"
           cost_price: 5.962133916683182
-          height: 7.386281948385884
+          height: 1.2315135367772556
           allow_backorders: true
           created_time:
             custom_fields: "{}"
@@ -34383,9 +34413,9 @@ components:
             value: 1.4658129805029452
           custom_fields: "{}"
           tax_class_id: tax_class_id
-          length: 1.2315135367772556
+          length: 1.0246457001441578
           upc: upc
-          weight: 2.027123023002322
+          weight: 4.145608029883936
           mpn: mpn
           list_price: 5.637376656633329
           url: url
@@ -34394,12 +34424,12 @@ components:
           inventory_level: 7.061401241503109
           parent_id: parent_id
           name: name
-          width: 4.145608029883936
+          width: 7.386281948385884
           avail_for_sale: true
         - is_virtual: true
           short_description: short_description
           seo_url: seo_url
-          default_qty_in_pack: 3.616076749251911
+          default_qty_in_pack: 2.027123023002322
           isbn: isbn
           default_price: 1.4658129805029452
           additional_fields: "{}"
@@ -34418,6 +34448,7 @@ components:
             priority: 9
             warehouse_id: warehouse_id
           meta_keywords: meta_keywords
+          low_stock_threshold: 3.616076749251911
           ean: ean
           modified_time:
             custom_fields: "{}"
@@ -34464,7 +34495,7 @@ components:
             option_id: option_id
             additional_fields: "{}"
           cost_price: 5.962133916683182
-          height: 7.386281948385884
+          height: 1.2315135367772556
           allow_backorders: true
           created_time:
             custom_fields: "{}"
@@ -34554,9 +34585,9 @@ components:
             value: 1.4658129805029452
           custom_fields: "{}"
           tax_class_id: tax_class_id
-          length: 1.2315135367772556
+          length: 1.0246457001441578
           upc: upc
-          weight: 2.027123023002322
+          weight: 4.145608029883936
           mpn: mpn
           list_price: 5.637376656633329
           url: url
@@ -34565,7 +34596,7 @@ components:
           inventory_level: 7.061401241503109
           parent_id: parent_id
           name: name
-          width: 4.145608029883936
+          width: 7.386281948385884
           avail_for_sale: true
         total_count: 6
         custom_fields: "{}"
@@ -35486,6 +35517,7 @@ components:
       example:
         sprice_create: 2018-08-25 23:56:12
         in_stock: true
+        low_stock_threshold: 1
         clear_cache: false
         marketplace_item_properties: "{\"color\":[\"Silver\"],\"manufacturer\":\"\
           Philips\",\"features\":[\"3 way\"],\"countPerPack\":1,\"watts\":{\"unit\"\
@@ -35687,6 +35719,12 @@ components:
           example: false
           type: boolean
           name: manage_stock
+        low_stock_threshold:
+          description: Specify the quantity threshold below which the product is considered
+            low in stock
+          example: 1
+          type: number
+          name: low_stock_threshold
         weight:
           default: 0
           description: Weight
@@ -36276,6 +36314,7 @@ components:
         sprice_create: 2018-08-25 23:56:12
         in_stock: true
         retail_price: 6.9
+        low_stock_threshold: 1
         clear_cache: false
         increase_quantity: 4
         price: 99.9
@@ -36394,6 +36433,12 @@ components:
           example: "true"
           type: string
           name: backorder_status
+        low_stock_threshold:
+          description: Specify the quantity threshold below which the product is considered
+            low in stock
+          example: 1
+          type: number
+          name: low_stock_threshold
         available_for_sale:
           default: true
           description: Specifies the set of visible/invisible product's variants for
@@ -42495,7 +42540,7 @@ components:
           is_virtual: true
           short_description: short_description
           seo_url: seo_url
-          default_qty_in_pack: 3.616076749251911
+          default_qty_in_pack: 2.027123023002322
           isbn: isbn
           default_price: 1.4658129805029452
           additional_fields: "{}"
@@ -42514,6 +42559,7 @@ components:
             priority: 9
             warehouse_id: warehouse_id
           meta_keywords: meta_keywords
+          low_stock_threshold: 3.616076749251911
           ean: ean
           modified_time:
             custom_fields: "{}"
@@ -42560,7 +42606,7 @@ components:
             option_id: option_id
             additional_fields: "{}"
           cost_price: 5.962133916683182
-          height: 7.386281948385884
+          height: 1.2315135367772556
           allow_backorders: true
           created_time:
             custom_fields: "{}"
@@ -42650,9 +42696,9 @@ components:
             value: 1.4658129805029452
           custom_fields: "{}"
           tax_class_id: tax_class_id
-          length: 1.2315135367772556
+          length: 1.0246457001441578
           upc: upc
-          weight: 2.027123023002322
+          weight: 4.145608029883936
           mpn: mpn
           list_price: 5.637376656633329
           url: url
@@ -42661,7 +42707,7 @@ components:
           inventory_level: 7.061401241503109
           parent_id: parent_id
           name: name
-          width: 4.145608029883936
+          width: 7.386281948385884
           avail_for_sale: true
         return_message: return_message
         return_code: 0

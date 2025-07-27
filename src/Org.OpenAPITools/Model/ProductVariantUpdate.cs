@@ -48,6 +48,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="visible">Set visibility status.</param>
         /// <param name="status">Defines product variant&#39;s status.</param>
         /// <param name="backorderStatus">Set backorder status.</param>
+        /// <param name="lowStockThreshold">Specify the quantity threshold below which the product is considered low in stock.</param>
         /// <param name="availableForSale">Specifies the set of visible/invisible product&#39;s variants for sale (default to true).</param>
         /// <param name="avail">Defines category&#39;s visibility status (default to true).</param>
         /// <param name="isDefault">Defines as a default variant.</param>
@@ -88,7 +89,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="metaKeywords">Defines unique meta keywords for each entity.</param>
         /// <param name="reindex">Is reindex required (default to true).</param>
         /// <param name="clearCache">Is cache clear required (default to true).</param>
-        public ProductVariantUpdate(string id = default(string), string productId = default(string), string storeId = default(string), string langId = default(string), List<ProductVariantUpdateOptionsInner> options = default(List<ProductVariantUpdateOptionsInner>), string name = default(string), string description = default(string), string shortDescription = default(string), string model = default(string), string sku = default(string), string visible = default(string), string status = default(string), string backorderStatus = default(string), bool availableForSale = true, bool avail = true, bool isDefault = default(bool), bool isFreeShipping = default(bool), bool taxable = true, string taxClassId = default(string), bool isVirtual = false, bool manageStock = default(bool), bool inStock = default(bool), string warehouseId = default(string), decimal reserveQuantity = default(decimal), decimal quantity = default(decimal), decimal increaseQuantity = 0M, decimal reduceQuantity = 0M, decimal price = default(decimal), decimal specialPrice = default(decimal), decimal retailPrice = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal weight = 0M, string barcode = default(string), decimal width = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), string metaTitle = default(string), string metaDescription = default(string), string metaKeywords = default(string), bool reindex = true, bool clearCache = true)
+        public ProductVariantUpdate(string id = default(string), string productId = default(string), string storeId = default(string), string langId = default(string), List<ProductVariantUpdateOptionsInner> options = default(List<ProductVariantUpdateOptionsInner>), string name = default(string), string description = default(string), string shortDescription = default(string), string model = default(string), string sku = default(string), string visible = default(string), string status = default(string), string backorderStatus = default(string), decimal lowStockThreshold = default(decimal), bool availableForSale = true, bool avail = true, bool isDefault = default(bool), bool isFreeShipping = default(bool), bool taxable = true, string taxClassId = default(string), bool isVirtual = false, bool manageStock = default(bool), bool inStock = default(bool), string warehouseId = default(string), decimal reserveQuantity = default(decimal), decimal quantity = default(decimal), decimal increaseQuantity = 0M, decimal reduceQuantity = 0M, decimal price = default(decimal), decimal specialPrice = default(decimal), decimal retailPrice = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal weight = 0M, string barcode = default(string), decimal width = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), string metaTitle = default(string), string metaDescription = default(string), string metaKeywords = default(string), bool reindex = true, bool clearCache = true)
         {
             this.Id = id;
             this.ProductId = productId;
@@ -103,6 +104,7 @@ namespace Org.OpenAPITools.Model
             this.Visible = visible;
             this.Status = status;
             this.BackorderStatus = backorderStatus;
+            this.LowStockThreshold = lowStockThreshold;
             this.AvailableForSale = availableForSale;
             this.Avail = avail;
             this.IsDefault = isDefault;
@@ -271,6 +273,16 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "backorder_status", EmitDefaultValue = false)]
         public string BackorderStatus { get; set; }
+
+        /// <summary>
+        /// Specify the quantity threshold below which the product is considered low in stock
+        /// </summary>
+        /// <value>Specify the quantity threshold below which the product is considered low in stock</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "low_stock_threshold", EmitDefaultValue = false)]
+        public decimal LowStockThreshold { get; set; }
 
         /// <summary>
         /// Specifies the set of visible/invisible product&#39;s variants for sale
@@ -693,6 +705,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Visible: ").Append(Visible).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  BackorderStatus: ").Append(BackorderStatus).Append("\n");
+            sb.Append("  LowStockThreshold: ").Append(LowStockThreshold).Append("\n");
             sb.Append("  AvailableForSale: ").Append(AvailableForSale).Append("\n");
             sb.Append("  Avail: ").Append(Avail).Append("\n");
             sb.Append("  IsDefault: ").Append(IsDefault).Append("\n");

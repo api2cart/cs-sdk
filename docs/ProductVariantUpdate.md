@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **Visible** | **string** | Set visibility status | [optional] 
 **Status** | **string** | Defines product variant&#39;s status | [optional] 
 **BackorderStatus** | **string** | Set backorder status | [optional] 
+**LowStockThreshold** | **decimal** | Specify the quantity threshold below which the product is considered low in stock | [optional] 
 **AvailableForSale** | **bool** | Specifies the set of visible/invisible product&#39;s variants for sale | [optional] [default to true]
 **Avail** | **bool** | Defines category&#39;s visibility status | [optional] [default to true]
 **IsDefault** | **bool** | Defines as a default variant | [optional] 

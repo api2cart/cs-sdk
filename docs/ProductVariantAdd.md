@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **InStock** | **bool** | Set stock status | [optional] 
 **BackorderStatus** | **string** | Set backorder status | [optional] 
 **ManageStock** | **bool** | Defines inventory tracking for product variant | [optional] 
+**LowStockThreshold** | **decimal** | Specify the quantity threshold below which the product is considered low in stock | [optional] 
 **Weight** | **decimal** | Weight | [optional] [default to 0M]
 **Width** | **decimal** | Defines product&#39;s width | [optional] 
 **Height** | **decimal** | Defines product&#39;s height | [optional] 

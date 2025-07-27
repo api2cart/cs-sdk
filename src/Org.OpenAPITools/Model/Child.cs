@@ -67,6 +67,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="inventoryLevel">inventoryLevel.</param>
         /// <param name="inventory">inventory.</param>
         /// <param name="minQuantity">minQuantity.</param>
+        /// <param name="lowStockThreshold">lowStockThreshold.</param>
         /// <param name="defaultQtyInPack">defaultQtyInPack.</param>
         /// <param name="isQtyInPackFixed">isQtyInPackFixed.</param>
         /// <param name="weightUnit">weightUnit.</param>
@@ -82,7 +83,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="isVirtual">isVirtual.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Child(string id = default(string), string parentId = default(string), string sku = default(string), string upc = default(string), string ean = default(string), string mpn = default(string), string gtin = default(string), string isbn = default(string), string url = default(string), string seoUrl = default(string), int? sortOrder = default(int?), A2CDateTime createdTime = default(A2CDateTime), A2CDateTime modifiedTime = default(A2CDateTime), string name = default(string), string shortDescription = default(string), string fullDescription = default(string), List<Image> images = default(List<Image>), List<ProductChildItemCombination> combination = default(List<ProductChildItemCombination>), decimal? defaultPrice = default(decimal?), decimal? costPrice = default(decimal?), decimal? listPrice = default(decimal?), decimal? wholesalePrice = default(decimal?), List<ProductAdvancedPrice> advancedPrice = default(List<ProductAdvancedPrice>), string taxClassId = default(string), bool? availForSale = default(bool?), bool? allowBackorders = default(bool?), bool? inStock = default(bool?), bool? onSale = default(bool?), bool? manageStock = default(bool?), decimal? inventoryLevel = default(decimal?), List<ProductInventory> inventory = default(List<ProductInventory>), decimal? minQuantity = default(decimal?), decimal? defaultQtyInPack = default(decimal?), bool? isQtyInPackFixed = default(bool?), string weightUnit = default(string), decimal? weight = default(decimal?), string dimensionsUnit = default(string), decimal? width = default(decimal?), decimal? height = default(decimal?), decimal? length = default(decimal?), string metaTitle = default(string), string metaDescription = default(string), string metaKeywords = default(string), List<Discount> discounts = default(List<Discount>), bool? isVirtual = default(bool?), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Child(string id = default(string), string parentId = default(string), string sku = default(string), string upc = default(string), string ean = default(string), string mpn = default(string), string gtin = default(string), string isbn = default(string), string url = default(string), string seoUrl = default(string), int? sortOrder = default(int?), A2CDateTime createdTime = default(A2CDateTime), A2CDateTime modifiedTime = default(A2CDateTime), string name = default(string), string shortDescription = default(string), string fullDescription = default(string), List<Image> images = default(List<Image>), List<ProductChildItemCombination> combination = default(List<ProductChildItemCombination>), decimal? defaultPrice = default(decimal?), decimal? costPrice = default(decimal?), decimal? listPrice = default(decimal?), decimal? wholesalePrice = default(decimal?), List<ProductAdvancedPrice> advancedPrice = default(List<ProductAdvancedPrice>), string taxClassId = default(string), bool? availForSale = default(bool?), bool? allowBackorders = default(bool?), bool? inStock = default(bool?), bool? onSale = default(bool?), bool? manageStock = default(bool?), decimal? inventoryLevel = default(decimal?), List<ProductInventory> inventory = default(List<ProductInventory>), decimal? minQuantity = default(decimal?), decimal? lowStockThreshold = default(decimal?), decimal? defaultQtyInPack = default(decimal?), bool? isQtyInPackFixed = default(bool?), string weightUnit = default(string), decimal? weight = default(decimal?), string dimensionsUnit = default(string), decimal? width = default(decimal?), decimal? height = default(decimal?), decimal? length = default(decimal?), string metaTitle = default(string), string metaDescription = default(string), string metaKeywords = default(string), List<Discount> discounts = default(List<Discount>), bool? isVirtual = default(bool?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.ParentId = parentId;
@@ -116,6 +117,7 @@ namespace Org.OpenAPITools.Model
             this.InventoryLevel = inventoryLevel;
             this.Inventory = inventory;
             this.MinQuantity = minQuantity;
+            this.LowStockThreshold = lowStockThreshold;
             this.DefaultQtyInPack = defaultQtyInPack;
             this.IsQtyInPackFixed = isQtyInPackFixed;
             this.WeightUnit = weightUnit;
@@ -326,6 +328,12 @@ namespace Org.OpenAPITools.Model
         public decimal? MinQuantity { get; set; }
 
         /// <summary>
+        /// Gets or Sets LowStockThreshold
+        /// </summary>
+        [DataMember(Name = "low_stock_threshold", EmitDefaultValue = true)]
+        public decimal? LowStockThreshold { get; set; }
+
+        /// <summary>
         /// Gets or Sets DefaultQtyInPack
         /// </summary>
         [DataMember(Name = "default_qty_in_pack", EmitDefaultValue = true)]
@@ -455,6 +463,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  InventoryLevel: ").Append(InventoryLevel).Append("\n");
             sb.Append("  Inventory: ").Append(Inventory).Append("\n");
             sb.Append("  MinQuantity: ").Append(MinQuantity).Append("\n");
+            sb.Append("  LowStockThreshold: ").Append(LowStockThreshold).Append("\n");
             sb.Append("  DefaultQtyInPack: ").Append(DefaultQtyInPack).Append("\n");
             sb.Append("  IsQtyInPackFixed: ").Append(IsQtyInPackFixed).Append("\n");
             sb.Append("  WeightUnit: ").Append(WeightUnit).Append("\n");
