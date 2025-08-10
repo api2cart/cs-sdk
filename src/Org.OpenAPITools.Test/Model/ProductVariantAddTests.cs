@@ -128,6 +128,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Status'
+        /// </summary>
+        [Fact]
+        public void StatusTest()
+        {
+            // TODO unit test for the property 'Status'
+        }
+
+        /// <summary>
         /// Test the property 'IsVirtual'
         /// </summary>
         [Fact]
@@ -404,6 +413,15 @@ namespace Org.OpenAPITools.Test.Model
         public void IsbnTest()
         {
             // TODO unit test for the property 'Isbn'
+        }
+
+        /// <summary>
+        /// Test the property 'SeoUrl'
+        /// </summary>
+        [Fact]
+        public void SeoUrlTest()
+        {
+            // TODO unit test for the property 'SeoUrl'
         }
 
         /// <summary>

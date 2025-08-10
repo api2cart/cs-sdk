@@ -326,15 +326,6 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'OnSale'
-        /// </summary>
-        [Fact]
-        public void OnSaleTest()
-        {
-            // TODO unit test for the property 'OnSale'
-        }
-
-        /// <summary>
         /// Test the property 'Backorders'
         /// </summary>
         [Fact]
@@ -359,6 +350,15 @@ namespace Org.OpenAPITools.Test.Model
         public void IsStockManagedTest()
         {
             // TODO unit test for the property 'IsStockManaged'
+        }
+
+        /// <summary>
+        /// Test the property 'OnSale'
+        /// </summary>
+        [Fact]
+        public void OnSaleTest()
+        {
+            // TODO unit test for the property 'OnSale'
         }
 
         /// <summary>

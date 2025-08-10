@@ -447,42 +447,6 @@ namespace Org.OpenAPITools.Model
         [DataMember(Name = "cart_id", IsRequired = true, EmitDefaultValue = true)]
         public CartIdEnum CartId { get; set; }
         /// <summary>
-        /// Temu API endpoint Region.
-        /// </summary>
-        /// <value>Temu API endpoint Region.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum TemuRegionEnum
-        {
-            /// <summary>
-            /// Enum US for value: US
-            /// </summary>
-            [EnumMember(Value = "US")]
-            US = 1,
-
-            /// <summary>
-            /// Enum EU for value: EU
-            /// </summary>
-            [EnumMember(Value = "EU")]
-            EU = 2,
-
-            /// <summary>
-            /// Enum GLOBAL for value: GLOBAL
-            /// </summary>
-            [EnumMember(Value = "GLOBAL")]
-            GLOBAL = 3
-        }
-
-
-        /// <summary>
-        /// Temu API endpoint Region.
-        /// </summary>
-        /// <value>Temu API endpoint Region.</value>
-        /*
-        <example>US</example>
-        */
-        [DataMember(Name = "temu_region", IsRequired = true, EmitDefaultValue = true)]
-        public TemuRegionEnum TemuRegion { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="AccountCartAdd" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -524,12 +488,12 @@ namespace Org.OpenAPITools.Model
         /// <param name="bolApiKey">Bol API Key.</param>
         /// <param name="bolApiSecret">Bol API Secret.</param>
         /// <param name="bolRetailerId">Bol Retailer ID.</param>
-        /// <param name="bigcartelUserName">Subdomain of store (required).</param>
-        /// <param name="bigcartelPassword">BigCartel account password (required).</param>
-        /// <param name="bricklinkConsumerKey">Bricklink Consumer Key (required).</param>
-        /// <param name="bricklinkConsumerSecret">Bricklink Consumer Secret (required).</param>
-        /// <param name="bricklinkToken">Bricklink Access Token (required).</param>
-        /// <param name="bricklinkTokenSecret">Bricklink Access Token Secret (required).</param>
+        /// <param name="bigcartelUserName">Subdomain of store.</param>
+        /// <param name="bigcartelPassword">BigCartel account password.</param>
+        /// <param name="bricklinkConsumerKey">Bricklink Consumer Key.</param>
+        /// <param name="bricklinkConsumerSecret">Bricklink Consumer Secret.</param>
+        /// <param name="bricklinkToken">Bricklink Access Token.</param>
+        /// <param name="bricklinkTokenSecret">Bricklink Access Token Secret.</param>
         /// <param name="demandwareClientId">Demandware client id.</param>
         /// <param name="demandwareApiPassword">Demandware api password.</param>
         /// <param name="demandwareUserName">Demandware user name.</param>
@@ -614,8 +578,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="magentoAccessToken">Magento Access Token.</param>
         /// <param name="magentoTokenSecret">Magento Token Secret.</param>
         /// <param name="prestashopWebserviceKey">Prestashop webservice key.</param>
-        /// <param name="wixAppId">Wix App ID (required).</param>
-        /// <param name="wixAppSecretKey">Wix App Secret Key (required).</param>
+        /// <param name="wixAppId">Wix App ID.</param>
+        /// <param name="wixAppSecretKey">Wix App Secret Key.</param>
         /// <param name="wixInstanceId">Wix Instance ID.</param>
         /// <param name="wixRefreshToken">Wix refresh token.</param>
         /// <param name="mercadoLibreAppId">Mercado Libre App ID.</param>
@@ -653,66 +617,11 @@ namespace Org.OpenAPITools.Model
         /// <param name="sallaAccessToken">Salla Access Token.</param>
         /// <param name="temuAppKey">Temu App Key.</param>
         /// <param name="temuAppSecret">Temu App Secret.</param>
-        /// <param name="temuAccessToken">Temu Access Token (required).</param>
-        /// <param name="temuRegion">Temu API endpoint Region. (required).</param>
-        public AccountCartAdd(CartIdEnum cartId = default(CartIdEnum), string storeUrl = default(string), string bridgeUrl = default(string), string storeRoot = default(string), string storeKey = default(string), bool validateVersion = false, bool verify = true, string dbTablesPrefix = default(string), string userAgent = default(string), string ftpHost = default(string), string ftpUser = default(string), string ftpPassword = default(string), int ftpPort = default(int), string ftpStoreDir = default(string), string var3dcartPrivateKey = default(string), string var3dcartAccessToken = default(string), string var3dcartapiApiKey = default(string), string amazonSpClientId = default(string), string amazonSpClientSecret = default(string), string amazonSpRefreshToken = default(string), string amazonSpAwsRegion = default(string), string amazonSpApiEnvironment = @"production", string amazonSellerId = default(string), string aspdotnetstorefrontApiUser = default(string), string aspdotnetstorefrontApiPass = default(string), string bigcommerceapiAdminAccount = default(string), string bigcommerceapiApiPath = default(string), string bigcommerceapiApiKey = default(string), string bigcommerceapiClientId = default(string), string bigcommerceapiAccessToken = default(string), string bigcommerceapiContext = default(string), string bolApiKey = default(string), string bolApiSecret = default(string), int bolRetailerId = default(int), string bigcartelUserName = default(string), string bigcartelPassword = default(string), string bricklinkConsumerKey = default(string), string bricklinkConsumerSecret = default(string), string bricklinkToken = default(string), string bricklinkTokenSecret = default(string), string demandwareClientId = default(string), string demandwareApiPassword = default(string), string demandwareUserName = default(string), string demandwareUserPassword = default(string), string ebayClientId = default(string), string ebayClientSecret = default(string), string ebayRuname = default(string), string ebayAccessToken = default(string), string ebayRefreshToken = default(string), string ebayEnvironment = @"production", int ebaySiteId = 0, string walmartClientId = default(string), string walmartClientSecret = default(string), string walmartEnvironment = @"production", string walmartChannelType = default(string), string walmartRegion = @"us", string ecwidAcessToken = default(string), string ecwidStoreId = default(string), string lazadaAppId = default(string), string lazadaAppSecret = default(string), string lazadaRefreshToken = default(string), string lazadaRegion = default(string), string lightspeedApiKey = default(string), string lightspeedApiSecret = default(string), string etsyKeystring = default(string), string etsySharedSecret = default(string), string etsyAccessToken = default(string), string etsyTokenSecret = default(string), string etsyClientId = default(string), string etsyRefreshToken = default(string), string facebookAppId = default(string), string facebookAppSecret = default(string), string facebookAccessToken = default(string), string facebookBusinessId = default(string), string netoApiKey = default(string), string netoApiUsername = default(string), string shoplineAccessToken = default(string), string shoplineAppKey = default(string), string shoplineAppSecret = default(string), string shoplineSharedSecret = default(string), string shopifyAccessToken = default(string), string shopifyApiKey = default(string), string shopifyApiPassword = default(string), string shopifySharedSecret = default(string), string shopeePartnerId = default(string), string shopeePartnerKey = default(string), string shopeeShopId = default(string), string shopeeRefreshToken = default(string), string shopeeRegion = default(string), string shopeeEnvironment = @"production", string shoplazzaAccessToken = default(string), string shoplazzaSharedSecret = default(string), string shopwareAccessKey = default(string), string shopwareApiKey = default(string), string shopwareApiSecret = default(string), string mivaAccessToken = default(string), string mivaSignature = default(string), int tiendanubeUserId = default(int), string tiendanubeAccessToken = default(string), string tiendanubeClientSecret = default(string), string volusionLogin = default(string), string volusionPassword = default(string), string hybrisClientId = default(string), string hybrisClientSecret = default(string), string hybrisUsername = default(string), string hybrisPassword = default(string), List<AccountCartAddHybrisWebsitesInner> hybrisWebsites = default(List<AccountCartAddHybrisWebsitesInner>), string squareClientId = default(string), string squareClientSecret = default(string), string squareRefreshToken = default(string), string squarespaceApiKey = default(string), string squarespaceClientId = default(string), string squarespaceClientSecret = default(string), string squarespaceAccessToken = default(string), string squarespaceRefreshToken = default(string), string commercehqApiKey = default(string), string commercehqApiPassword = default(string), string wcConsumerKey = default(string), string wcConsumerSecret = default(string), string magentoConsumerKey = default(string), string magentoConsumerSecret = default(string), string magentoAccessToken = default(string), string magentoTokenSecret = default(string), string prestashopWebserviceKey = default(string), string wixAppId = default(string), string wixAppSecretKey = default(string), string wixInstanceId = default(string), string wixRefreshToken = default(string), string mercadoLibreAppId = default(string), string mercadoLibreAppSecretKey = default(string), string mercadoLibreRefreshToken = default(string), int zidClientId = default(int), string zidClientSecret = default(string), string zidAccessToken = default(string), string zidAuthorization = default(string), string zidRefreshToken = default(string), string flipkartClientId = default(string), string flipkartClientSecret = default(string), string allegroClientId = default(string), string allegroClientSecret = default(string), string allegroAccessToken = default(string), string allegroRefreshToken = default(string), string allegroEnvironment = @"production", string zohoClientId = default(string), string zohoClientSecret = default(string), string zohoRefreshToken = default(string), string zohoRegion = default(string), string ottoClientId = default(string), string ottoClientSecret = default(string), string ottoAppId = default(string), string ottoRefreshToken = default(string), string ottoEnvironment = @"production", string ottoAccessToken = default(string), string tiktokshopAppKey = default(string), string tiktokshopAppSecret = default(string), string tiktokshopRefreshToken = default(string), string tiktokshopAccessToken = default(string), string sallaClientId = default(string), string sallaClientSecret = default(string), string sallaRefreshToken = default(string), string sallaAccessToken = default(string), string temuAppKey = default(string), string temuAppSecret = default(string), string temuAccessToken = default(string), TemuRegionEnum temuRegion = default(TemuRegionEnum))
+        /// <param name="temuAccessToken">Temu Access Token.</param>
+        /// <param name="temuRegion">Temu API endpoint Region..</param>
+        public AccountCartAdd(CartIdEnum cartId = default(CartIdEnum), string storeUrl = default(string), string bridgeUrl = default(string), string storeRoot = default(string), string storeKey = default(string), bool validateVersion = false, bool verify = true, string dbTablesPrefix = default(string), string userAgent = default(string), string ftpHost = default(string), string ftpUser = default(string), string ftpPassword = default(string), int ftpPort = default(int), string ftpStoreDir = default(string), string var3dcartPrivateKey = default(string), string var3dcartAccessToken = default(string), string var3dcartapiApiKey = default(string), string amazonSpClientId = default(string), string amazonSpClientSecret = default(string), string amazonSpRefreshToken = default(string), string amazonSpAwsRegion = default(string), string amazonSpApiEnvironment = @"production", string amazonSellerId = default(string), string aspdotnetstorefrontApiUser = default(string), string aspdotnetstorefrontApiPass = default(string), string bigcommerceapiAdminAccount = default(string), string bigcommerceapiApiPath = default(string), string bigcommerceapiApiKey = default(string), string bigcommerceapiClientId = default(string), string bigcommerceapiAccessToken = default(string), string bigcommerceapiContext = default(string), string bolApiKey = default(string), string bolApiSecret = default(string), int bolRetailerId = default(int), string bigcartelUserName = default(string), string bigcartelPassword = default(string), string bricklinkConsumerKey = default(string), string bricklinkConsumerSecret = default(string), string bricklinkToken = default(string), string bricklinkTokenSecret = default(string), string demandwareClientId = default(string), string demandwareApiPassword = default(string), string demandwareUserName = default(string), string demandwareUserPassword = default(string), string ebayClientId = default(string), string ebayClientSecret = default(string), string ebayRuname = default(string), string ebayAccessToken = default(string), string ebayRefreshToken = default(string), string ebayEnvironment = @"production", int ebaySiteId = 0, string walmartClientId = default(string), string walmartClientSecret = default(string), string walmartEnvironment = @"production", string walmartChannelType = default(string), string walmartRegion = @"us", string ecwidAcessToken = default(string), string ecwidStoreId = default(string), string lazadaAppId = default(string), string lazadaAppSecret = default(string), string lazadaRefreshToken = default(string), string lazadaRegion = default(string), string lightspeedApiKey = default(string), string lightspeedApiSecret = default(string), string etsyKeystring = default(string), string etsySharedSecret = default(string), string etsyAccessToken = default(string), string etsyTokenSecret = default(string), string etsyClientId = default(string), string etsyRefreshToken = default(string), string facebookAppId = default(string), string facebookAppSecret = default(string), string facebookAccessToken = default(string), string facebookBusinessId = default(string), string netoApiKey = default(string), string netoApiUsername = default(string), string shoplineAccessToken = default(string), string shoplineAppKey = default(string), string shoplineAppSecret = default(string), string shoplineSharedSecret = default(string), string shopifyAccessToken = default(string), string shopifyApiKey = default(string), string shopifyApiPassword = default(string), string shopifySharedSecret = default(string), string shopeePartnerId = default(string), string shopeePartnerKey = default(string), string shopeeShopId = default(string), string shopeeRefreshToken = default(string), string shopeeRegion = default(string), string shopeeEnvironment = @"production", string shoplazzaAccessToken = default(string), string shoplazzaSharedSecret = default(string), string shopwareAccessKey = default(string), string shopwareApiKey = default(string), string shopwareApiSecret = default(string), string mivaAccessToken = default(string), string mivaSignature = default(string), int tiendanubeUserId = default(int), string tiendanubeAccessToken = default(string), string tiendanubeClientSecret = default(string), string volusionLogin = default(string), string volusionPassword = default(string), string hybrisClientId = default(string), string hybrisClientSecret = default(string), string hybrisUsername = default(string), string hybrisPassword = default(string), List<AccountCartAddHybrisWebsitesInner> hybrisWebsites = default(List<AccountCartAddHybrisWebsitesInner>), string squareClientId = default(string), string squareClientSecret = default(string), string squareRefreshToken = default(string), string squarespaceApiKey = default(string), string squarespaceClientId = default(string), string squarespaceClientSecret = default(string), string squarespaceAccessToken = default(string), string squarespaceRefreshToken = default(string), string commercehqApiKey = default(string), string commercehqApiPassword = default(string), string wcConsumerKey = default(string), string wcConsumerSecret = default(string), string magentoConsumerKey = default(string), string magentoConsumerSecret = default(string), string magentoAccessToken = default(string), string magentoTokenSecret = default(string), string prestashopWebserviceKey = default(string), string wixAppId = default(string), string wixAppSecretKey = default(string), string wixInstanceId = default(string), string wixRefreshToken = default(string), string mercadoLibreAppId = default(string), string mercadoLibreAppSecretKey = default(string), string mercadoLibreRefreshToken = default(string), int zidClientId = default(int), string zidClientSecret = default(string), string zidAccessToken = default(string), string zidAuthorization = default(string), string zidRefreshToken = default(string), string flipkartClientId = default(string), string flipkartClientSecret = default(string), string allegroClientId = default(string), string allegroClientSecret = default(string), string allegroAccessToken = default(string), string allegroRefreshToken = default(string), string allegroEnvironment = @"production", string zohoClientId = default(string), string zohoClientSecret = default(string), string zohoRefreshToken = default(string), string zohoRegion = default(string), string ottoClientId = default(string), string ottoClientSecret = default(string), string ottoAppId = default(string), string ottoRefreshToken = default(string), string ottoEnvironment = @"production", string ottoAccessToken = default(string), string tiktokshopAppKey = default(string), string tiktokshopAppSecret = default(string), string tiktokshopRefreshToken = default(string), string tiktokshopAccessToken = default(string), string sallaClientId = default(string), string sallaClientSecret = default(string), string sallaRefreshToken = default(string), string sallaAccessToken = default(string), string temuAppKey = default(string), string temuAppSecret = default(string), string temuAccessToken = default(string), string temuRegion = default(string))
         {
             this.CartId = cartId;
-            // to ensure "bigcartelUserName" is required (not null)
-            if (bigcartelUserName == null)
-            {
-                throw new ArgumentNullException("bigcartelUserName is a required property for AccountCartAdd and cannot be null");
-            }
-            this.BigcartelUserName = bigcartelUserName;
-            // to ensure "bigcartelPassword" is required (not null)
-            if (bigcartelPassword == null)
-            {
-                throw new ArgumentNullException("bigcartelPassword is a required property for AccountCartAdd and cannot be null");
-            }
-            this.BigcartelPassword = bigcartelPassword;
-            // to ensure "bricklinkConsumerKey" is required (not null)
-            if (bricklinkConsumerKey == null)
-            {
-                throw new ArgumentNullException("bricklinkConsumerKey is a required property for AccountCartAdd and cannot be null");
-            }
-            this.BricklinkConsumerKey = bricklinkConsumerKey;
-            // to ensure "bricklinkConsumerSecret" is required (not null)
-            if (bricklinkConsumerSecret == null)
-            {
-                throw new ArgumentNullException("bricklinkConsumerSecret is a required property for AccountCartAdd and cannot be null");
-            }
-            this.BricklinkConsumerSecret = bricklinkConsumerSecret;
-            // to ensure "bricklinkToken" is required (not null)
-            if (bricklinkToken == null)
-            {
-                throw new ArgumentNullException("bricklinkToken is a required property for AccountCartAdd and cannot be null");
-            }
-            this.BricklinkToken = bricklinkToken;
-            // to ensure "bricklinkTokenSecret" is required (not null)
-            if (bricklinkTokenSecret == null)
-            {
-                throw new ArgumentNullException("bricklinkTokenSecret is a required property for AccountCartAdd and cannot be null");
-            }
-            this.BricklinkTokenSecret = bricklinkTokenSecret;
-            // to ensure "wixAppId" is required (not null)
-            if (wixAppId == null)
-            {
-                throw new ArgumentNullException("wixAppId is a required property for AccountCartAdd and cannot be null");
-            }
-            this.WixAppId = wixAppId;
-            // to ensure "wixAppSecretKey" is required (not null)
-            if (wixAppSecretKey == null)
-            {
-                throw new ArgumentNullException("wixAppSecretKey is a required property for AccountCartAdd and cannot be null");
-            }
-            this.WixAppSecretKey = wixAppSecretKey;
-            // to ensure "temuAccessToken" is required (not null)
-            if (temuAccessToken == null)
-            {
-                throw new ArgumentNullException("temuAccessToken is a required property for AccountCartAdd and cannot be null");
-            }
-            this.TemuAccessToken = temuAccessToken;
-            this.TemuRegion = temuRegion;
             this.StoreUrl = storeUrl;
             this.BridgeUrl = bridgeUrl;
             this.StoreRoot = storeRoot;
@@ -747,6 +656,12 @@ namespace Org.OpenAPITools.Model
             this.BolApiKey = bolApiKey;
             this.BolApiSecret = bolApiSecret;
             this.BolRetailerId = bolRetailerId;
+            this.BigcartelUserName = bigcartelUserName;
+            this.BigcartelPassword = bigcartelPassword;
+            this.BricklinkConsumerKey = bricklinkConsumerKey;
+            this.BricklinkConsumerSecret = bricklinkConsumerSecret;
+            this.BricklinkToken = bricklinkToken;
+            this.BricklinkTokenSecret = bricklinkTokenSecret;
             this.DemandwareClientId = demandwareClientId;
             this.DemandwareApiPassword = demandwareApiPassword;
             this.DemandwareUserName = demandwareUserName;
@@ -835,6 +750,8 @@ namespace Org.OpenAPITools.Model
             this.MagentoAccessToken = magentoAccessToken;
             this.MagentoTokenSecret = magentoTokenSecret;
             this.PrestashopWebserviceKey = prestashopWebserviceKey;
+            this.WixAppId = wixAppId;
+            this.WixAppSecretKey = wixAppSecretKey;
             this.WixInstanceId = wixInstanceId;
             this.WixRefreshToken = wixRefreshToken;
             this.MercadoLibreAppId = mercadoLibreAppId;
@@ -874,6 +791,8 @@ namespace Org.OpenAPITools.Model
             this.SallaAccessToken = sallaAccessToken;
             this.TemuAppKey = temuAppKey;
             this.TemuAppSecret = temuAppSecret;
+            this.TemuAccessToken = temuAccessToken;
+            this.TemuRegion = temuRegion;
         }
 
         /// <summary>
@@ -1213,7 +1132,7 @@ namespace Org.OpenAPITools.Model
         /*
         <example>subdomain</example>
         */
-        [DataMember(Name = "bigcartel_user_name", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "bigcartel_user_name", EmitDefaultValue = false)]
         public string BigcartelUserName { get; set; }
 
         /// <summary>
@@ -1223,7 +1142,7 @@ namespace Org.OpenAPITools.Model
         /*
         <example>4GrrZCLNNoSUuhAjesKuchxo9SL</example>
         */
-        [DataMember(Name = "bigcartel_password", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "bigcartel_password", EmitDefaultValue = false)]
         public string BigcartelPassword { get; set; }
 
         /// <summary>
@@ -1233,7 +1152,7 @@ namespace Org.OpenAPITools.Model
         /*
         <example>26F6CDA087D9444EAA71AC09E7A1D39A</example>
         */
-        [DataMember(Name = "bricklink_consumer_key", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "bricklink_consumer_key", EmitDefaultValue = false)]
         public string BricklinkConsumerKey { get; set; }
 
         /// <summary>
@@ -1243,7 +1162,7 @@ namespace Org.OpenAPITools.Model
         /*
         <example>a46abc3kxyinlbggy06i9g975xqo6gjq</example>
         */
-        [DataMember(Name = "bricklink_consumer_secret", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "bricklink_consumer_secret", EmitDefaultValue = false)]
         public string BricklinkConsumerSecret { get; set; }
 
         /// <summary>
@@ -1253,7 +1172,7 @@ namespace Org.OpenAPITools.Model
         /*
         <example>ktv4n9rgrj0evjuy2t6p2xlb1f8u5pmy</example>
         */
-        [DataMember(Name = "bricklink_token", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "bricklink_token", EmitDefaultValue = false)]
         public string BricklinkToken { get; set; }
 
         /// <summary>
@@ -1263,7 +1182,7 @@ namespace Org.OpenAPITools.Model
         /*
         <example>a46abc3kxyinlbggy06i9g975xqo6gjq</example>
         */
-        [DataMember(Name = "bricklink_token_secret", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "bricklink_token_secret", EmitDefaultValue = false)]
         public string BricklinkTokenSecret { get; set; }
 
         /// <summary>
@@ -2110,7 +2029,7 @@ namespace Org.OpenAPITools.Model
         /*
         <example>6b0b5b7b-7d87-45b5-bf34-ac6b438e63da</example>
         */
-        [DataMember(Name = "wix_app_id", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "wix_app_id", EmitDefaultValue = false)]
         public string WixAppId { get; set; }
 
         /// <summary>
@@ -2120,7 +2039,7 @@ namespace Org.OpenAPITools.Model
         /*
         <example>316c0a09-f195-42be-74f6-a02cebb9cae6</example>
         */
-        [DataMember(Name = "wix_app_secret_key", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "wix_app_secret_key", EmitDefaultValue = false)]
         public string WixAppSecretKey { get; set; }
 
         /// <summary>
@@ -2505,8 +2424,18 @@ namespace Org.OpenAPITools.Model
         /*
         <example>uplv3hfyt5kcwoymrgnajnbl1ow5qxlz4sqhev6hl3xosz5dejrtyl2jre6</example>
         */
-        [DataMember(Name = "temu_access_token", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "temu_access_token", EmitDefaultValue = false)]
         public string TemuAccessToken { get; set; }
+
+        /// <summary>
+        /// Temu API endpoint Region.
+        /// </summary>
+        /// <value>Temu API endpoint Region.</value>
+        /*
+        <example>US</example>
+        */
+        [DataMember(Name = "temu_region", EmitDefaultValue = false)]
+        public string TemuRegion { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

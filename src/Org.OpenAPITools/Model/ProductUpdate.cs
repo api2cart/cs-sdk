@@ -121,7 +121,9 @@ namespace Org.OpenAPITools.Model
         /// <param name="specifics">An array of Item Specific Name/Value pairs used by the seller to provide descriptive details of an item in a structured manner.         The list of possible specifications can be obtained using the category.info method (additional_fields-&gt;product_specifics).         &lt;b&gt;The structure of the parameter is different for specific platforms.&lt;/b&gt;.</param>
         /// <param name="shopSectionId">Add Shop Section Id.</param>
         /// <param name="personalizationDetails">personalizationDetails.</param>
-        public ProductUpdate(string id = default(string), string model = default(string), string sku = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), decimal price = default(decimal), decimal oldPrice = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), decimal retailPrice = default(decimal), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), decimal reservePrice = default(decimal), decimal buyitnowPrice = default(decimal), bool taxable = true, string taxClassId = default(string), string type = default(string), string status = default(string), string condition = default(string), string visible = default(string), bool inStock = default(bool), bool avail = true, string availFrom = default(string), string productClass = default(string), bool availableForView = default(bool), string storesIds = default(string), string storeId = default(string), string langId = default(string), decimal quantity = default(decimal), decimal reserveQuantity = default(decimal), bool manageStock = default(bool), string backorderStatus = default(string), decimal increaseQuantity = default(decimal), decimal reduceQuantity = default(decimal), decimal lowStockThreshold = default(decimal), string warehouseId = default(string), decimal weight = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), decimal width = default(decimal), string dimensionsUnit = default(string), bool isVirtual = false, bool isFreeShipping = default(bool), string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), string barcode = default(string), string manufacturer = default(string), string manufacturerId = default(string), string categoriesIds = default(string), string relatedProductsIds = default(string), string upSellProductsIds = default(string), string crossSellProductsIds = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string seoUrl = default(string), string searchKeywords = default(string), string tags = default(string), string deliveryCode = default(string), ProductAddPackageDetails packageDetails = default(ProductAddPackageDetails), string countryOfOrigin = default(string), string harmonizedSystemCode = default(string), int shippingTemplateId = 0, string whenMade = @"made_to_order", bool isSupply = true, bool downloadable = false, List<string> materials = default(List<string>), bool autoRenew = false, bool onSale = false, string productionPartnerIds = default(string), ProductAddManufacturerInfo manufacturerInfo = default(ProductAddManufacturerInfo), string reportRequestId = default(string), bool disableReportCache = false, bool reindex = true, bool clearCache = true, bool checkProcessStatus = false, List<ProductAddSpecificsInner> specifics = default(List<ProductAddSpecificsInner>), int shopSectionId = default(int), ProductAddPersonalizationDetails personalizationDetails = default(ProductAddPersonalizationDetails))
+        /// <param name="marketplaceItemProperties">String containing the JSON representation of the supplied data.</param>
+        /// <param name="minOrderQuantity">The minimum quantity an order must contain, to be eligible to purchase this product..</param>
+        public ProductUpdate(string id = default(string), string model = default(string), string sku = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), decimal price = default(decimal), decimal oldPrice = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), decimal retailPrice = default(decimal), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), decimal reservePrice = default(decimal), decimal buyitnowPrice = default(decimal), bool taxable = true, string taxClassId = default(string), string type = default(string), string status = default(string), string condition = default(string), string visible = default(string), bool inStock = default(bool), bool avail = true, string availFrom = default(string), string productClass = default(string), bool availableForView = default(bool), string storesIds = default(string), string storeId = default(string), string langId = default(string), decimal quantity = default(decimal), decimal reserveQuantity = default(decimal), bool manageStock = default(bool), string backorderStatus = default(string), decimal increaseQuantity = default(decimal), decimal reduceQuantity = default(decimal), decimal lowStockThreshold = default(decimal), string warehouseId = default(string), decimal weight = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), decimal width = default(decimal), string dimensionsUnit = default(string), bool isVirtual = false, bool isFreeShipping = default(bool), string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), string barcode = default(string), string manufacturer = default(string), string manufacturerId = default(string), string categoriesIds = default(string), string relatedProductsIds = default(string), string upSellProductsIds = default(string), string crossSellProductsIds = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string seoUrl = default(string), string searchKeywords = default(string), string tags = default(string), string deliveryCode = default(string), ProductAddPackageDetails packageDetails = default(ProductAddPackageDetails), string countryOfOrigin = default(string), string harmonizedSystemCode = default(string), int shippingTemplateId = 0, string whenMade = @"made_to_order", bool isSupply = true, bool downloadable = false, List<string> materials = default(List<string>), bool autoRenew = false, bool onSale = false, string productionPartnerIds = default(string), ProductAddManufacturerInfo manufacturerInfo = default(ProductAddManufacturerInfo), string reportRequestId = default(string), bool disableReportCache = false, bool reindex = true, bool clearCache = true, bool checkProcessStatus = false, List<ProductAddSpecificsInner> specifics = default(List<ProductAddSpecificsInner>), int shopSectionId = default(int), ProductAddPersonalizationDetails personalizationDetails = default(ProductAddPersonalizationDetails), string marketplaceItemProperties = default(string), decimal minOrderQuantity = default(decimal))
         {
             this.Id = id;
             this.Model = model;
@@ -210,6 +212,8 @@ namespace Org.OpenAPITools.Model
             this.Specifics = specifics;
             this.ShopSectionId = shopSectionId;
             this.PersonalizationDetails = personalizationDetails;
+            this.MarketplaceItemProperties = marketplaceItemProperties;
+            this.MinOrderQuantity = minOrderQuantity;
         }
 
         /// <summary>
@@ -1055,6 +1059,26 @@ namespace Org.OpenAPITools.Model
         public ProductAddPersonalizationDetails PersonalizationDetails { get; set; }
 
         /// <summary>
+        /// String containing the JSON representation of the supplied data
+        /// </summary>
+        /// <value>String containing the JSON representation of the supplied data</value>
+        /*
+        <example>{&quot;color&quot;:[&quot;Silver&quot;],&quot;manufacturer&quot;:&quot;Philips&quot;,&quot;features&quot;:[&quot;3 way&quot;],&quot;countPerPack&quot;:1,&quot;watts&quot;:{&quot;unit&quot;:&quot;W&quot;,&quot;measure&quot;:40}}</example>
+        */
+        [DataMember(Name = "marketplace_item_properties", EmitDefaultValue = false)]
+        public string MarketplaceItemProperties { get; set; }
+
+        /// <summary>
+        /// The minimum quantity an order must contain, to be eligible to purchase this product.
+        /// </summary>
+        /// <value>The minimum quantity an order must contain, to be eligible to purchase this product.</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "min_order_quantity", EmitDefaultValue = false)]
+        public decimal MinOrderQuantity { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -1148,6 +1172,8 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Specifics: ").Append(Specifics).Append("\n");
             sb.Append("  ShopSectionId: ").Append(ShopSectionId).Append("\n");
             sb.Append("  PersonalizationDetails: ").Append(PersonalizationDetails).Append("\n");
+            sb.Append("  MarketplaceItemProperties: ").Append(MarketplaceItemProperties).Append("\n");
+            sb.Append("  MinOrderQuantity: ").Append(MinOrderQuantity).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

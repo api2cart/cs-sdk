@@ -65,10 +65,10 @@ namespace Org.OpenAPITools.Model
         /// <param name="weightUnit">weightUnit.</param>
         /// <param name="sortOrder">sortOrder.</param>
         /// <param name="inStock">inStock.</param>
-        /// <param name="onSale">onSale.</param>
         /// <param name="backorders">backorders.</param>
         /// <param name="manageStock">manageStock.</param>
         /// <param name="isStockManaged">isStockManaged.</param>
+        /// <param name="onSale">onSale.</param>
         /// <param name="createAt">createAt.</param>
         /// <param name="modifiedAt">modifiedAt.</param>
         /// <param name="taxClassId">taxClassId.</param>
@@ -92,7 +92,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="discounts">discounts.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Product(string id = default(string), string type = default(string), string uModel = default(string), string uSku = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), decimal? price = default(decimal?), List<ProductAdvancedPrice> advancedPrice = default(List<ProductAdvancedPrice>), decimal? costPrice = default(decimal?), decimal? quantity = default(decimal?), List<ProductInventory> inventory = default(List<ProductInventory>), List<ProductGroupItem> groupItems = default(List<ProductGroupItem>), string uBrandId = default(string), string uBrand = default(string), List<string> categoriesIds = default(List<string>), List<string> storesIds = default(List<string>), string url = default(string), string seoUrl = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), bool? availSale = default(bool?), bool? availView = default(bool?), bool? isVirtual = default(bool?), bool? isDownloadable = default(bool?), decimal? weight = default(decimal?), string weightUnit = default(string), int? sortOrder = default(int?), bool? inStock = default(bool?), bool? onSale = default(bool?), string backorders = default(string), string manageStock = default(string), bool? isStockManaged = default(bool?), A2CDateTime createAt = default(A2CDateTime), A2CDateTime modifiedAt = default(A2CDateTime), string taxClassId = default(string), SpecialPrice specialPrice = default(SpecialPrice), List<ProductTierPrice> tierPrice = default(List<ProductTierPrice>), List<ProductGroupPrice> groupPrice = default(List<ProductGroupPrice>), List<Image> images = default(List<Image>), List<ProductOption> productOptions = default(List<ProductOption>), string uUpc = default(string), string uMpn = default(string), string uGtin = default(string), string uIsbn = default(string), string uEan = default(string), List<string> relatedProductsIds = default(List<string>), List<string> upSellProductsIds = default(List<string>), List<string> crossSellProductsIds = default(List<string>), string dimensionsUnit = default(string), decimal? width = default(decimal?), decimal? height = default(decimal?), decimal? length = default(decimal?), List<Discount> discounts = default(List<Discount>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Product(string id = default(string), string type = default(string), string uModel = default(string), string uSku = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), decimal? price = default(decimal?), List<ProductAdvancedPrice> advancedPrice = default(List<ProductAdvancedPrice>), decimal? costPrice = default(decimal?), decimal? quantity = default(decimal?), List<ProductInventory> inventory = default(List<ProductInventory>), List<ProductGroupItem> groupItems = default(List<ProductGroupItem>), string uBrandId = default(string), string uBrand = default(string), List<string> categoriesIds = default(List<string>), List<string> storesIds = default(List<string>), string url = default(string), string seoUrl = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), bool? availSale = default(bool?), bool? availView = default(bool?), bool? isVirtual = default(bool?), bool? isDownloadable = default(bool?), decimal? weight = default(decimal?), string weightUnit = default(string), int? sortOrder = default(int?), bool? inStock = default(bool?), string backorders = default(string), string manageStock = default(string), bool? isStockManaged = default(bool?), bool? onSale = default(bool?), A2CDateTime createAt = default(A2CDateTime), A2CDateTime modifiedAt = default(A2CDateTime), string taxClassId = default(string), SpecialPrice specialPrice = default(SpecialPrice), List<ProductTierPrice> tierPrice = default(List<ProductTierPrice>), List<ProductGroupPrice> groupPrice = default(List<ProductGroupPrice>), List<Image> images = default(List<Image>), List<ProductOption> productOptions = default(List<ProductOption>), string uUpc = default(string), string uMpn = default(string), string uGtin = default(string), string uIsbn = default(string), string uEan = default(string), List<string> relatedProductsIds = default(List<string>), List<string> upSellProductsIds = default(List<string>), List<string> crossSellProductsIds = default(List<string>), string dimensionsUnit = default(string), decimal? width = default(decimal?), decimal? height = default(decimal?), decimal? length = default(decimal?), List<Discount> discounts = default(List<Discount>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Type = type;
@@ -124,10 +124,10 @@ namespace Org.OpenAPITools.Model
             this.WeightUnit = weightUnit;
             this.SortOrder = sortOrder;
             this.InStock = inStock;
-            this.OnSale = onSale;
             this.Backorders = backorders;
             this.ManageStock = manageStock;
             this.IsStockManaged = isStockManaged;
+            this.OnSale = onSale;
             this.CreateAt = createAt;
             this.ModifiedAt = modifiedAt;
             this.TaxClassId = taxClassId;
@@ -334,12 +334,6 @@ namespace Org.OpenAPITools.Model
         public bool? InStock { get; set; }
 
         /// <summary>
-        /// Gets or Sets OnSale
-        /// </summary>
-        [DataMember(Name = "on_sale", EmitDefaultValue = true)]
-        public bool? OnSale { get; set; }
-
-        /// <summary>
         /// Gets or Sets Backorders
         /// </summary>
         [DataMember(Name = "backorders", EmitDefaultValue = true)]
@@ -356,6 +350,12 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         [DataMember(Name = "is_stock_managed", EmitDefaultValue = true)]
         public bool? IsStockManaged { get; set; }
+
+        /// <summary>
+        /// Gets or Sets OnSale
+        /// </summary>
+        [DataMember(Name = "on_sale", EmitDefaultValue = true)]
+        public bool? OnSale { get; set; }
 
         /// <summary>
         /// Gets or Sets CreateAt
@@ -533,10 +533,10 @@ namespace Org.OpenAPITools.Model
             sb.Append("  WeightUnit: ").Append(WeightUnit).Append("\n");
             sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
             sb.Append("  InStock: ").Append(InStock).Append("\n");
-            sb.Append("  OnSale: ").Append(OnSale).Append("\n");
             sb.Append("  Backorders: ").Append(Backorders).Append("\n");
             sb.Append("  ManageStock: ").Append(ManageStock).Append("\n");
             sb.Append("  IsStockManaged: ").Append(IsStockManaged).Append("\n");
+            sb.Append("  OnSale: ").Append(OnSale).Append("\n");
             sb.Append("  CreateAt: ").Append(CreateAt).Append("\n");
             sb.Append("  ModifiedAt: ").Append(ModifiedAt).Append("\n");
             sb.Append("  TaxClassId: ").Append(TaxClassId).Append("\n");

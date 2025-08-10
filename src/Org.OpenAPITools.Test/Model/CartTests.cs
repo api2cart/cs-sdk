@@ -83,6 +83,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BridgeVersion'
+        /// </summary>
+        [Fact]
+        public void BridgeVersionTest()
+        {
+            // TODO unit test for the property 'BridgeVersion'
+        }
+
+        /// <summary>
         /// Test the property 'DbPrefix'
         /// </summary>
         [Fact]

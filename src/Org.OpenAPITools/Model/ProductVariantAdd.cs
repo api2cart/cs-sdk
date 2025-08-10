@@ -48,6 +48,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="shortDescription">Defines short description.</param>
         /// <param name="availableForView">Specifies the set of visible/invisible product&#39;s variants for users (default to true).</param>
         /// <param name="availableForSale">Specifies the set of visible/invisible product&#39;s variants for sale (default to true).</param>
+        /// <param name="status">Defines status.</param>
         /// <param name="isVirtual">Defines whether the product is virtual (default to false).</param>
         /// <param name="isDefault">Defines as a default variant.</param>
         /// <param name="storeId">Add variants specified by store id.</param>
@@ -79,6 +80,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="ean">European Article Number. An EAN is a unique 8 or 13-digit identifier that many industries (such as book publishers) use to identify products..</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used..</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books..</param>
+        /// <param name="seoUrl">Defines unique URL for SEO.</param>
         /// <param name="manufacturer">Specifies the product variant&#39;s manufacturer.</param>
         /// <param name="createdAt">Defines the date of entity creation.</param>
         /// <param name="metaTitle">Defines unique meta title for each entity.</param>
@@ -93,7 +95,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="harmonizedSystemCode">Harmonized System Code. An HSC is a 6-digit identifier that allows participating countries to classify traded goods on a common basis for customs purposes.</param>
         /// <param name="marketplaceItemProperties">String containing the JSON representation of the supplied data.</param>
         /// <param name="clearCache">Is cache clear required (default to true).</param>
-        public ProductVariantAdd(string productId = default(string), List<ProductVariantAddAttributesInner> attributes = default(List<ProductVariantAddAttributesInner>), string name = default(string), string model = default(string), string description = default(string), string shortDescription = default(string), bool availableForView = true, bool availableForSale = true, bool isVirtual = false, bool isDefault = default(bool), string storeId = default(string), string storesIds = default(string), string langId = default(string), decimal price = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceModified = default(string), string spriceExpire = default(string), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), decimal quantity = 0M, string warehouseId = default(string), bool inStock = default(bool), string backorderStatus = default(string), bool manageStock = default(bool), decimal lowStockThreshold = default(decimal), decimal weight = 0M, decimal width = default(decimal), decimal height = default(decimal), decimal length = default(decimal), string weightUnit = default(string), string sku = default(string), string barcode = default(string), string gtin = default(string), string upc = default(string), string ean = default(string), string mpn = default(string), string isbn = default(string), string manufacturer = default(string), string createdAt = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string url = default(string), string taxClassId = default(string), bool taxable = true, decimal fixedCostShippingPrice = default(decimal), bool isFreeShipping = default(bool), string countryOfOrigin = default(string), string harmonizedSystemCode = default(string), string marketplaceItemProperties = default(string), bool clearCache = true)
+        public ProductVariantAdd(string productId = default(string), List<ProductVariantAddAttributesInner> attributes = default(List<ProductVariantAddAttributesInner>), string name = default(string), string model = default(string), string description = default(string), string shortDescription = default(string), bool availableForView = true, bool availableForSale = true, string status = default(string), bool isVirtual = false, bool isDefault = default(bool), string storeId = default(string), string storesIds = default(string), string langId = default(string), decimal price = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceModified = default(string), string spriceExpire = default(string), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), decimal quantity = 0M, string warehouseId = default(string), bool inStock = default(bool), string backorderStatus = default(string), bool manageStock = default(bool), decimal lowStockThreshold = default(decimal), decimal weight = 0M, decimal width = default(decimal), decimal height = default(decimal), decimal length = default(decimal), string weightUnit = default(string), string sku = default(string), string barcode = default(string), string gtin = default(string), string upc = default(string), string ean = default(string), string mpn = default(string), string isbn = default(string), string seoUrl = default(string), string manufacturer = default(string), string createdAt = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string url = default(string), string taxClassId = default(string), bool taxable = true, decimal fixedCostShippingPrice = default(decimal), bool isFreeShipping = default(bool), string countryOfOrigin = default(string), string harmonizedSystemCode = default(string), string marketplaceItemProperties = default(string), bool clearCache = true)
         {
             // to ensure "model" is required (not null)
             if (model == null)
@@ -108,6 +110,7 @@ namespace Org.OpenAPITools.Model
             this.ShortDescription = shortDescription;
             this.AvailableForView = availableForView;
             this.AvailableForSale = availableForSale;
+            this.Status = status;
             this.IsVirtual = isVirtual;
             this.IsDefault = isDefault;
             this.StoreId = storeId;
@@ -139,6 +142,7 @@ namespace Org.OpenAPITools.Model
             this.Ean = ean;
             this.Mpn = mpn;
             this.Isbn = isbn;
+            this.SeoUrl = seoUrl;
             this.Manufacturer = manufacturer;
             this.CreatedAt = createdAt;
             this.MetaTitle = metaTitle;
@@ -231,6 +235,16 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "available_for_sale", EmitDefaultValue = true)]
         public bool AvailableForSale { get; set; }
+
+        /// <summary>
+        /// Defines status
+        /// </summary>
+        /// <value>Defines status</value>
+        /*
+        <example>disabled</example>
+        */
+        [DataMember(Name = "status", EmitDefaultValue = false)]
+        public string Status { get; set; }
 
         /// <summary>
         /// Defines whether the product is virtual
@@ -540,6 +554,16 @@ namespace Org.OpenAPITools.Model
         public string Isbn { get; set; }
 
         /// <summary>
+        /// Defines unique URL for SEO
+        /// </summary>
+        /// <value>Defines unique URL for SEO</value>
+        /*
+        <example>some seo url</example>
+        */
+        [DataMember(Name = "seo_url", EmitDefaultValue = false)]
+        public string SeoUrl { get; set; }
+
+        /// <summary>
         /// Specifies the product variant&#39;s manufacturer
         /// </summary>
         /// <value>Specifies the product variant&#39;s manufacturer</value>
@@ -695,6 +719,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  ShortDescription: ").Append(ShortDescription).Append("\n");
             sb.Append("  AvailableForView: ").Append(AvailableForView).Append("\n");
             sb.Append("  AvailableForSale: ").Append(AvailableForSale).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  IsVirtual: ").Append(IsVirtual).Append("\n");
             sb.Append("  IsDefault: ").Append(IsDefault).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
@@ -726,6 +751,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Ean: ").Append(Ean).Append("\n");
             sb.Append("  Mpn: ").Append(Mpn).Append("\n");
             sb.Append("  Isbn: ").Append(Isbn).Append("\n");
+            sb.Append("  SeoUrl: ").Append(SeoUrl).Append("\n");
             sb.Append("  Manufacturer: ").Append(Manufacturer).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  MetaTitle: ").Append(MetaTitle).Append("\n");

@@ -828,5 +828,23 @@ namespace Org.OpenAPITools.Test.Model
         {
             // TODO unit test for the property 'PersonalizationDetails'
         }
+
+        /// <summary>
+        /// Test the property 'MarketplaceItemProperties'
+        /// </summary>
+        [Fact]
+        public void MarketplaceItemPropertiesTest()
+        {
+            // TODO unit test for the property 'MarketplaceItemProperties'
+        }
+
+        /// <summary>
+        /// Test the property 'MinOrderQuantity'
+        /// </summary>
+        [Fact]
+        public void MinOrderQuantityTest()
+        {
+            // TODO unit test for the property 'MinOrderQuantity'
+        }
     }
 }

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Name** | **string** |  | [optional] 
 **Url** | **string** |  | [optional] 
 **VarVersion** | **string** |  | [optional] 
+**BridgeVersion** | **string** |  | [optional] 
 **DbPrefix** | **string** |  | [optional] 
 **StoresInfo** | [**List&lt;CartStoreInfo&gt;**](CartStoreInfo.md) |  | [optional] 
 **Warehouses** | [**List&lt;CartWarehouse&gt;**](CartWarehouse.md) |  | [optional] 

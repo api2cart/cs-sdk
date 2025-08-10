@@ -14339,25 +14339,11 @@ components:
           name: temu_access_token
         temu_region:
           description: Temu API endpoint Region.
-          enum:
-          - US
-          - EU
-          - GLOBAL
           example: US
           type: string
           name: temu_region
       required:
-      - bigcartel_password
-      - bigcartel_user_name
-      - bricklink_consumer_key
-      - bricklink_consumer_secret
-      - bricklink_token
-      - bricklink_token_secret
       - cart_id
-      - temu_access_token
-      - temu_region
-      - wix_app_id
-      - wix_app_secret_key
     StoreAttribute:
       example:
         store_id: store_id
@@ -15378,6 +15364,7 @@ components:
     Cart:
       example:
         db_prefix: db_prefix
+        bridge_version: bridge_version
         shipping_zones:
         - country: country
           country_iso2_codes:
@@ -15718,6 +15705,9 @@ components:
           nullable: true
           type: string
         version:
+          nullable: true
+          type: string
+        bridge_version:
           nullable: true
           type: string
         db_prefix:
@@ -28702,9 +28692,6 @@ components:
         in_stock:
           nullable: true
           type: boolean
-        on_sale:
-          nullable: true
-          type: boolean
         backorders:
           nullable: true
           type: string
@@ -28712,6 +28699,9 @@ components:
           nullable: true
           type: string
         is_stock_managed:
+          nullable: true
+          type: boolean
+        on_sale:
           nullable: true
           type: boolean
         create_at:
@@ -31805,6 +31795,9 @@ components:
         low_stock_threshold: 1
         clear_cache: false
         increase_quantity: 4
+        marketplace_item_properties: "{\"color\":[\"Silver\"],\"manufacturer\":\"\
+          Philips\",\"features\":[\"3 way\"],\"countPerPack\":1,\"watts\":{\"unit\"\
+          :\"W\",\"measure\":40}}"
         price: 99.9
         dimensions_unit: cm
         model: bag_01
@@ -31882,6 +31875,7 @@ components:
         length: 56.12
         lang_id: 3
         shop_section_id: '`12345678`'
+        min_order_quantity: 1
         buyitnow_price: 65.9
         report_request_id: "105245017661"
         delivery_code: 24uurs-23
@@ -32440,6 +32434,19 @@ components:
           name: shop_section_id
         personalization_details:
           $ref: '#/components/schemas/ProductAdd_personalization_details'
+        marketplace_item_properties:
+          description: String containing the JSON representation of the supplied data
+          example: "{\"color\":[\"Silver\"],\"manufacturer\":\"Philips\",\"features\"\
+            :[\"3 way\"],\"countPerPack\":1,\"watts\":{\"unit\":\"W\",\"measure\"\
+            :40}}"
+          type: string
+          name: marketplace_item_properties
+        min_order_quantity:
+          description: "The minimum quantity an order must contain, to be eligible\
+            \ to purchase this product."
+          example: 1
+          type: number
+          name: min_order_quantity
     ProductUpdateBatch:
       example:
         clear_cache: false
@@ -35515,6 +35522,7 @@ components:
       - tax_rates
     ProductVariantAdd:
       example:
+        seo_url: some seo url
         sprice_create: 2018-08-25 23:56:12
         in_stock: true
         low_stock_threshold: 1
@@ -35543,6 +35551,7 @@ components:
         name: Bag Green XXL
         sprice_expire: 2018-08-25 23:56:12
         harmonized_system_code: "123456"
+        status: disabled
         is_virtual: false
         short_description: Short description. This is very short description
         isbn: "9783161484100"
@@ -35625,6 +35634,11 @@ components:
           example: false
           type: boolean
           name: available_for_sale
+        status:
+          description: Defines status
+          example: disabled
+          type: string
+          name: status
         is_virtual:
           default: false
           description: Defines whether the product is virtual
@@ -35792,6 +35806,11 @@ components:
           example: "9783161484100"
           type: string
           name: isbn
+        seo_url:
+          description: Defines unique URL for SEO
+          example: some seo url
+          type: string
+          name: seo_url
         manufacturer:
           description: Specifies the product variant's manufacturer
           example: Samsung
@@ -40277,6 +40296,7 @@ components:
       example:
         result:
           db_prefix: db_prefix
+          bridge_version: bridge_version
           shipping_zones:
           - country: country
             country_iso2_codes:

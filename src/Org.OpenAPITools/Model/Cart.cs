@@ -38,17 +38,19 @@ namespace Org.OpenAPITools.Model
         /// <param name="name">name.</param>
         /// <param name="url">url.</param>
         /// <param name="varVersion">varVersion.</param>
+        /// <param name="bridgeVersion">bridgeVersion.</param>
         /// <param name="dbPrefix">dbPrefix.</param>
         /// <param name="storesInfo">storesInfo.</param>
         /// <param name="warehouses">warehouses.</param>
         /// <param name="shippingZones">shippingZones.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Cart(string name = default(string), string url = default(string), string varVersion = default(string), string dbPrefix = default(string), List<CartStoreInfo> storesInfo = default(List<CartStoreInfo>), List<CartWarehouse> warehouses = default(List<CartWarehouse>), List<CartShippingZone> shippingZones = default(List<CartShippingZone>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Cart(string name = default(string), string url = default(string), string varVersion = default(string), string bridgeVersion = default(string), string dbPrefix = default(string), List<CartStoreInfo> storesInfo = default(List<CartStoreInfo>), List<CartWarehouse> warehouses = default(List<CartWarehouse>), List<CartShippingZone> shippingZones = default(List<CartShippingZone>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Name = name;
             this.Url = url;
             this.VarVersion = varVersion;
+            this.BridgeVersion = bridgeVersion;
             this.DbPrefix = dbPrefix;
             this.StoresInfo = storesInfo;
             this.Warehouses = warehouses;
@@ -74,6 +76,12 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         [DataMember(Name = "version", EmitDefaultValue = true)]
         public string VarVersion { get; set; }
+
+        /// <summary>
+        /// Gets or Sets BridgeVersion
+        /// </summary>
+        [DataMember(Name = "bridge_version", EmitDefaultValue = true)]
+        public string BridgeVersion { get; set; }
 
         /// <summary>
         /// Gets or Sets DbPrefix
@@ -122,6 +130,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  VarVersion: ").Append(VarVersion).Append("\n");
+            sb.Append("  BridgeVersion: ").Append(BridgeVersion).Append("\n");
             sb.Append("  DbPrefix: ").Append(DbPrefix).Append("\n");
             sb.Append("  StoresInfo: ").Append(StoresInfo).Append("\n");
             sb.Append("  Warehouses: ").Append(Warehouses).Append("\n");
