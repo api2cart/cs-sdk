@@ -3662,6 +3662,15 @@ paths:
         schema:
           type: boolean
         style: form
+      - description: Defines coupon's status
+        example: disabled
+        explode: true
+        in: query
+        name: status
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Filter entity by date_start (greater or equal)
         example: 2016-12-29 16:44:30
         explode: true
@@ -13432,6 +13441,7 @@ components:
           - AmazonSP
           - AspDotNetStorefront
           - BigCartel
+          - Bricklink
           - BigcommerceApi
           - Bol
           - CommerceHQ
@@ -18037,6 +18047,7 @@ components:
         name: Sale! -30%
         action_condition_entity: order
         action_condition_value: "17834222,45466663"
+        customer_id: "5"
         include_tax: true
       properties:
         code:
@@ -18146,6 +18157,11 @@ components:
           example: true
           type: boolean
           name: free_cash_on_delivery
+        customer_id:
+          description: Retrieves orders specified by customer id
+          example: "5"
+          type: string
+          name: customer_id
       required:
       - action_amount
       - action_apply_to
@@ -30359,6 +30375,7 @@ components:
           logistic_id: 1.1730742509559433
           is_free: true
           size_id: 5.025004791520295
+        external_product_link: http://example.com/t-shirt
         is_supply: false
         tags: "tag1,tag2"
         avail_from: avail_from=2029-10-25T15:54:37-0500
@@ -30872,6 +30889,11 @@ components:
           example: "5901234123457"
           type: string
           name: product_reference
+        external_product_link:
+          description: External product link
+          example: http://example.com/t-shirt
+          type: string
+          name: external_product_link
         harmonized_system_code:
           description: Harmonized System Code. An HSC is a 6-digit identifier that
             allows participating countries to classify traded goods on a common basis

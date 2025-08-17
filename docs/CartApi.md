@@ -665,7 +665,7 @@ catch (ApiException e)
 
 <a id="cartcouponlist"></a>
 # **CartCouponList**
-> ModelResponseCartCouponList CartCouponList (int? start = null, int? count = null, string? pageCursor = null, string? couponsIds = null, string? storeId = null, string? langId = null, bool? avail = null, string? dateStartFrom = null, string? dateStartTo = null, string? dateEndFrom = null, string? dateEndTo = null, string? responseFields = null, string? varParams = null, string? exclude = null)
+> ModelResponseCartCouponList CartCouponList (int? start = null, int? count = null, string? pageCursor = null, string? couponsIds = null, string? storeId = null, string? langId = null, bool? avail = null, string? status = null, string? dateStartFrom = null, string? dateStartTo = null, string? dateEndFrom = null, string? dateEndTo = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 cart.coupon.list
 
@@ -704,6 +704,7 @@ namespace Example
             var storeId = 1;  // string? | Filter coupons by store id (optional) 
             var langId = 3;  // string? | Language id (optional) 
             var avail = false;  // bool? | Filter coupons by avail status (optional) 
+            var status = disabled;  // string? | Defines coupon's status (optional) 
             var dateStartFrom = 2016-12-29 16:44:30;  // string? | Filter entity by date_start (greater or equal) (optional) 
             var dateStartTo = 2016-12-29 16:44:30;  // string? | Filter entity by date_start (less or equal) (optional) 
             var dateEndFrom = 2016-12-29 16:44:30;  // string? | Filter entity by date_end (greater or equal) (optional) 
@@ -715,7 +716,7 @@ namespace Example
             try
             {
                 // cart.coupon.list
-                ModelResponseCartCouponList result = apiInstance.CartCouponList(start, count, pageCursor, couponsIds, storeId, langId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, responseFields, varParams, exclude);
+                ModelResponseCartCouponList result = apiInstance.CartCouponList(start, count, pageCursor, couponsIds, storeId, langId, avail, status, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -736,7 +737,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.coupon.list
-    ApiResponse<ModelResponseCartCouponList> response = apiInstance.CartCouponListWithHttpInfo(start, count, pageCursor, couponsIds, storeId, langId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, responseFields, varParams, exclude);
+    ApiResponse<ModelResponseCartCouponList> response = apiInstance.CartCouponListWithHttpInfo(start, count, pageCursor, couponsIds, storeId, langId, avail, status, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -760,6 +761,7 @@ catch (ApiException e)
 | **storeId** | **string?** | Filter coupons by store id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
 | **avail** | **bool?** | Filter coupons by avail status | [optional]  |
+| **status** | **string?** | Defines coupon&#39;s status | [optional]  |
 | **dateStartFrom** | **string?** | Filter entity by date_start (greater or equal) | [optional]  |
 | **dateStartTo** | **string?** | Filter entity by date_start (less or equal) | [optional]  |
 | **dateEndFrom** | **string?** | Filter entity by date_end (greater or equal) | [optional]  |

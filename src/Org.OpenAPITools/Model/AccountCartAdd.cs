@@ -76,364 +76,370 @@ namespace Org.OpenAPITools.Model
             BigCartel = 6,
 
             /// <summary>
+            /// Enum Bricklink for value: Bricklink
+            /// </summary>
+            [EnumMember(Value = "Bricklink")]
+            Bricklink = 7,
+
+            /// <summary>
             /// Enum BigcommerceApi for value: BigcommerceApi
             /// </summary>
             [EnumMember(Value = "BigcommerceApi")]
-            BigcommerceApi = 7,
+            BigcommerceApi = 8,
 
             /// <summary>
             /// Enum Bol for value: Bol
             /// </summary>
             [EnumMember(Value = "Bol")]
-            Bol = 8,
+            Bol = 9,
 
             /// <summary>
             /// Enum CommerceHQ for value: CommerceHQ
             /// </summary>
             [EnumMember(Value = "CommerceHQ")]
-            CommerceHQ = 9,
+            CommerceHQ = 10,
 
             /// <summary>
             /// Enum Creloaded for value: Creloaded
             /// </summary>
             [EnumMember(Value = "Creloaded")]
-            Creloaded = 10,
+            Creloaded = 11,
 
             /// <summary>
             /// Enum Cscart for value: Cscart
             /// </summary>
             [EnumMember(Value = "Cscart")]
-            Cscart = 11,
+            Cscart = 12,
 
             /// <summary>
             /// Enum Cubecart for value: Cubecart
             /// </summary>
             [EnumMember(Value = "Cubecart")]
-            Cubecart = 12,
+            Cubecart = 13,
 
             /// <summary>
             /// Enum Demandware for value: Demandware
             /// </summary>
             [EnumMember(Value = "Demandware")]
-            Demandware = 13,
+            Demandware = 14,
 
             /// <summary>
             /// Enum EBay for value: EBay
             /// </summary>
             [EnumMember(Value = "EBay")]
-            EBay = 14,
+            EBay = 15,
 
             /// <summary>
             /// Enum Ecwid for value: Ecwid
             /// </summary>
             [EnumMember(Value = "Ecwid")]
-            Ecwid = 15,
+            Ecwid = 16,
 
             /// <summary>
             /// Enum EtsyAPIv3 for value: EtsyAPIv3
             /// </summary>
             [EnumMember(Value = "EtsyAPIv3")]
-            EtsyAPIv3 = 16,
+            EtsyAPIv3 = 17,
 
             /// <summary>
             /// Enum Flipkart for value: Flipkart
             /// </summary>
             [EnumMember(Value = "Flipkart")]
-            Flipkart = 17,
+            Flipkart = 18,
 
             /// <summary>
             /// Enum Gambio for value: Gambio
             /// </summary>
             [EnumMember(Value = "Gambio")]
-            Gambio = 18,
+            Gambio = 19,
 
             /// <summary>
             /// Enum Hybris for value: Hybris
             /// </summary>
             [EnumMember(Value = "Hybris")]
-            Hybris = 19,
+            Hybris = 20,
 
             /// <summary>
             /// Enum JooCart for value: JooCart
             /// </summary>
             [EnumMember(Value = "JooCart")]
-            JooCart = 20,
+            JooCart = 21,
 
             /// <summary>
             /// Enum Lazada for value: Lazada
             /// </summary>
             [EnumMember(Value = "Lazada")]
-            Lazada = 21,
+            Lazada = 22,
 
             /// <summary>
             /// Enum LightSpeed for value: LightSpeed
             /// </summary>
             [EnumMember(Value = "LightSpeed")]
-            LightSpeed = 22,
+            LightSpeed = 23,
 
             /// <summary>
             /// Enum Magento1212 for value: Magento1212
             /// </summary>
             [EnumMember(Value = "Magento1212")]
-            Magento1212 = 23,
+            Magento1212 = 24,
 
             /// <summary>
             /// Enum Magento2Api for value: Magento2Api
             /// </summary>
             [EnumMember(Value = "Magento2Api")]
-            Magento2Api = 24,
+            Magento2Api = 25,
 
             /// <summary>
             /// Enum MercadoLibre for value: MercadoLibre
             /// </summary>
             [EnumMember(Value = "MercadoLibre")]
-            MercadoLibre = 25,
+            MercadoLibre = 26,
 
             /// <summary>
             /// Enum MijoShop for value: MijoShop
             /// </summary>
             [EnumMember(Value = "MijoShop")]
-            MijoShop = 26,
+            MijoShop = 27,
 
             /// <summary>
             /// Enum Miva for value: Miva
             /// </summary>
             [EnumMember(Value = "Miva")]
-            Miva = 27,
+            Miva = 28,
 
             /// <summary>
             /// Enum Neto for value: Neto
             /// </summary>
             [EnumMember(Value = "Neto")]
-            Neto = 28,
+            Neto = 29,
 
             /// <summary>
             /// Enum Opencart14 for value: Opencart14
             /// </summary>
             [EnumMember(Value = "Opencart14")]
-            Opencart14 = 29,
+            Opencart14 = 30,
 
             /// <summary>
             /// Enum Oscmax2 for value: Oscmax2
             /// </summary>
             [EnumMember(Value = "Oscmax2")]
-            Oscmax2 = 30,
+            Oscmax2 = 31,
 
             /// <summary>
             /// Enum Oscommerce22ms2 for value: Oscommerce22ms2
             /// </summary>
             [EnumMember(Value = "Oscommerce22ms2")]
-            Oscommerce22ms2 = 31,
+            Oscommerce22ms2 = 32,
 
             /// <summary>
             /// Enum Otto for value: Otto
             /// </summary>
             [EnumMember(Value = "Otto")]
-            Otto = 32,
+            Otto = 33,
 
             /// <summary>
             /// Enum Oxid for value: Oxid
             /// </summary>
             [EnumMember(Value = "Oxid")]
-            Oxid = 33,
+            Oxid = 34,
 
             /// <summary>
             /// Enum Pinnacle for value: Pinnacle
             /// </summary>
             [EnumMember(Value = "Pinnacle")]
-            Pinnacle = 34,
+            Pinnacle = 35,
 
             /// <summary>
             /// Enum Prestashop for value: Prestashop
             /// </summary>
             [EnumMember(Value = "Prestashop")]
-            Prestashop = 35,
+            Prestashop = 36,
 
             /// <summary>
             /// Enum PrestashopApi for value: PrestashopApi
             /// </summary>
             [EnumMember(Value = "PrestashopApi")]
-            PrestashopApi = 36,
+            PrestashopApi = 37,
 
             /// <summary>
             /// Enum SSPremium for value: SSPremium
             /// </summary>
             [EnumMember(Value = "SSPremium")]
-            SSPremium = 37,
+            SSPremium = 38,
 
             /// <summary>
             /// Enum Salla for value: Salla
             /// </summary>
             [EnumMember(Value = "Salla")]
-            Salla = 38,
+            Salla = 39,
 
             /// <summary>
             /// Enum Shopify for value: Shopify
             /// </summary>
             [EnumMember(Value = "Shopify")]
-            Shopify = 39,
+            Shopify = 40,
 
             /// <summary>
             /// Enum Shopee for value: Shopee
             /// </summary>
             [EnumMember(Value = "Shopee")]
-            Shopee = 40,
+            Shopee = 41,
 
             /// <summary>
             /// Enum Shoplazza for value: Shoplazza
             /// </summary>
             [EnumMember(Value = "Shoplazza")]
-            Shoplazza = 41,
+            Shoplazza = 42,
 
             /// <summary>
             /// Enum Shopline for value: Shopline
             /// </summary>
             [EnumMember(Value = "Shopline")]
-            Shopline = 42,
+            Shopline = 43,
 
             /// <summary>
             /// Enum Shopware for value: Shopware
             /// </summary>
             [EnumMember(Value = "Shopware")]
-            Shopware = 43,
+            Shopware = 44,
 
             /// <summary>
             /// Enum ShopwareApi for value: ShopwareApi
             /// </summary>
             [EnumMember(Value = "ShopwareApi")]
-            ShopwareApi = 44,
+            ShopwareApi = 45,
 
             /// <summary>
             /// Enum Square for value: Square
             /// </summary>
             [EnumMember(Value = "Square")]
-            Square = 45,
+            Square = 46,
 
             /// <summary>
             /// Enum Squarespace for value: Squarespace
             /// </summary>
             [EnumMember(Value = "Squarespace")]
-            Squarespace = 46,
+            Squarespace = 47,
 
             /// <summary>
             /// Enum Temu for value: Temu
             /// </summary>
             [EnumMember(Value = "Temu")]
-            Temu = 47,
+            Temu = 48,
 
             /// <summary>
             /// Enum Tiendanube for value: Tiendanube
             /// </summary>
             [EnumMember(Value = "Tiendanube")]
-            Tiendanube = 48,
+            Tiendanube = 49,
 
             /// <summary>
             /// Enum TikTokShop for value: TikTokShop
             /// </summary>
             [EnumMember(Value = "TikTokShop")]
-            TikTokShop = 49,
+            TikTokShop = 50,
 
             /// <summary>
             /// Enum Tomatocart for value: Tomatocart
             /// </summary>
             [EnumMember(Value = "Tomatocart")]
-            Tomatocart = 50,
+            Tomatocart = 51,
 
             /// <summary>
             /// Enum Ubercart for value: Ubercart
             /// </summary>
             [EnumMember(Value = "Ubercart")]
-            Ubercart = 51,
+            Ubercart = 52,
 
             /// <summary>
             /// Enum Virtuemart for value: Virtuemart
             /// </summary>
             [EnumMember(Value = "Virtuemart")]
-            Virtuemart = 52,
+            Virtuemart = 53,
 
             /// <summary>
             /// Enum Volusion for value: Volusion
             /// </summary>
             [EnumMember(Value = "Volusion")]
-            Volusion = 53,
+            Volusion = 54,
 
             /// <summary>
             /// Enum WPecommerce for value: WPecommerce
             /// </summary>
             [EnumMember(Value = "WPecommerce")]
-            WPecommerce = 54,
+            WPecommerce = 55,
 
             /// <summary>
             /// Enum Walmart for value: Walmart
             /// </summary>
             [EnumMember(Value = "Walmart")]
-            Walmart = 55,
+            Walmart = 56,
 
             /// <summary>
             /// Enum WebAsyst for value: WebAsyst
             /// </summary>
             [EnumMember(Value = "WebAsyst")]
-            WebAsyst = 56,
+            WebAsyst = 57,
 
             /// <summary>
             /// Enum Wix for value: Wix
             /// </summary>
             [EnumMember(Value = "Wix")]
-            Wix = 57,
+            Wix = 58,
 
             /// <summary>
             /// Enum Woocommerce for value: Woocommerce
             /// </summary>
             [EnumMember(Value = "Woocommerce")]
-            Woocommerce = 58,
+            Woocommerce = 59,
 
             /// <summary>
             /// Enum WoocommerceApi for value: WoocommerceApi
             /// </summary>
             [EnumMember(Value = "WoocommerceApi")]
-            WoocommerceApi = 59,
+            WoocommerceApi = 60,
 
             /// <summary>
             /// Enum Xcart for value: Xcart
             /// </summary>
             [EnumMember(Value = "Xcart")]
-            Xcart = 60,
+            Xcart = 61,
 
             /// <summary>
             /// Enum Xtcommerce for value: Xtcommerce
             /// </summary>
             [EnumMember(Value = "Xtcommerce")]
-            Xtcommerce = 61,
+            Xtcommerce = 62,
 
             /// <summary>
             /// Enum XtcommerceVeyton for value: XtcommerceVeyton
             /// </summary>
             [EnumMember(Value = "XtcommerceVeyton")]
-            XtcommerceVeyton = 62,
+            XtcommerceVeyton = 63,
 
             /// <summary>
             /// Enum Zencart137 for value: Zencart137
             /// </summary>
             [EnumMember(Value = "Zencart137")]
-            Zencart137 = 63,
+            Zencart137 = 64,
 
             /// <summary>
             /// Enum Zid for value: Zid
             /// </summary>
             [EnumMember(Value = "Zid")]
-            Zid = 64,
+            Zid = 65,
 
             /// <summary>
             /// Enum Zoey for value: Zoey
             /// </summary>
             [EnumMember(Value = "Zoey")]
-            Zoey = 65,
+            Zoey = 66,
 
             /// <summary>
             /// Enum Zoho for value: Zoho
             /// </summary>
             [EnumMember(Value = "Zoho")]
-            Zoho = 66
+            Zoho = 67
         }
 
 

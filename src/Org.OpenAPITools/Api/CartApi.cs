@@ -217,6 +217,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Filter coupons by store id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="avail">Filter coupons by avail status (optional)</param>
+        /// <param name="status">Defines coupon&#39;s status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
@@ -226,7 +227,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartCouponList</returns>
-        ModelResponseCartCouponList CartCouponList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ModelResponseCartCouponList CartCouponList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? status = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.coupon.list
@@ -242,6 +243,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Filter coupons by store id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="avail">Filter coupons by avail status (optional)</param>
+        /// <param name="status">Defines coupon&#39;s status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
@@ -251,7 +253,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartCouponList</returns>
-        ApiResponse<ModelResponseCartCouponList> CartCouponListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseCartCouponList> CartCouponListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? status = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.delete
         /// </summary>
@@ -947,6 +949,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Filter coupons by store id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="avail">Filter coupons by avail status (optional)</param>
+        /// <param name="status">Defines coupon&#39;s status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
@@ -957,7 +960,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartCouponList</returns>
-        System.Threading.Tasks.Task<ModelResponseCartCouponList> CartCouponListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseCartCouponList> CartCouponListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? status = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.coupon.list
@@ -973,6 +976,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Filter coupons by store id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="avail">Filter coupons by avail status (optional)</param>
+        /// <param name="status">Defines coupon&#39;s status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
@@ -983,7 +987,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartCouponList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartCouponList>> CartCouponListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartCouponList>> CartCouponListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? status = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.delete
         /// </summary>
@@ -2857,6 +2861,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Filter coupons by store id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="avail">Filter coupons by avail status (optional)</param>
+        /// <param name="status">Defines coupon&#39;s status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
@@ -2866,9 +2871,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartCouponList</returns>
-        public ModelResponseCartCouponList CartCouponList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public ModelResponseCartCouponList CartCouponList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? status = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList> localVarResponse = CartCouponListWithHttpInfo(start, count, pageCursor, couponsIds, storeId, langId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, responseFields, varParams, exclude);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList> localVarResponse = CartCouponListWithHttpInfo(start, count, pageCursor, couponsIds, storeId, langId, avail, status, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -2883,6 +2888,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Filter coupons by store id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="avail">Filter coupons by avail status (optional)</param>
+        /// <param name="status">Defines coupon&#39;s status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
@@ -2892,7 +2898,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartCouponList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList> CartCouponListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList> CartCouponListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? status = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2944,6 +2950,10 @@ namespace Org.OpenAPITools.Api
             if (avail != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
+            }
+            if (status != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "status", status));
             }
             if (dateStartFrom != null)
             {
@@ -3013,6 +3023,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Filter coupons by store id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="avail">Filter coupons by avail status (optional)</param>
+        /// <param name="status">Defines coupon&#39;s status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
@@ -3023,9 +3034,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartCouponList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseCartCouponList> CartCouponListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseCartCouponList> CartCouponListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? status = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList> localVarResponse = await CartCouponListWithHttpInfoAsync(start, count, pageCursor, couponsIds, storeId, langId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList> localVarResponse = await CartCouponListWithHttpInfoAsync(start, count, pageCursor, couponsIds, storeId, langId, avail, status, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3040,6 +3051,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Filter coupons by store id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="avail">Filter coupons by avail status (optional)</param>
+        /// <param name="status">Defines coupon&#39;s status (optional)</param>
         /// <param name="dateStartFrom">Filter entity by date_start (greater or equal) (optional)</param>
         /// <param name="dateStartTo">Filter entity by date_start (less or equal) (optional)</param>
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
@@ -3050,7 +3062,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartCouponList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList>> CartCouponListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponList>> CartCouponListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? couponsIds = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? status = default(string?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3102,6 +3114,10 @@ namespace Org.OpenAPITools.Api
             if (avail != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "avail", avail));
+            }
+            if (status != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "status", status));
             }
             if (dateStartFrom != null)
             {

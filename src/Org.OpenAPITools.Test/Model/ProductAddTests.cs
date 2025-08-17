@@ -524,6 +524,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ExternalProductLink'
+        /// </summary>
+        [Fact]
+        public void ExternalProductLinkTest()
+        {
+            // TODO unit test for the property 'ExternalProductLink'
+        }
+
+        /// <summary>
         /// Test the property 'HarmonizedSystemCode'
         /// </summary>
         [Fact]

@@ -160,6 +160,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? storeId = null;
             //string? langId = null;
             //bool? avail = null;
+            //string? status = null;
             //string? dateStartFrom = null;
             //string? dateStartTo = null;
             //string? dateEndFrom = null;
@@ -167,7 +168,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.CartCouponList(start, count, pageCursor, couponsIds, storeId, langId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, responseFields, varParams, exclude);
+            //var response = instance.CartCouponList(start, count, pageCursor, couponsIds, storeId, langId, avail, status, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseCartCouponList>(response);
         }
 

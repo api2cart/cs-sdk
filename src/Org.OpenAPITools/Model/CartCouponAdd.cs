@@ -154,7 +154,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (default to false).</param>
         /// <param name="storeId">Store Id.</param>
         /// <param name="freeCashOnDelivery">Defines whether the coupon provides free cash on delivery.</param>
-        public CartCouponAdd(string code = default(string), ActionTypeEnum actionType = default(ActionTypeEnum), ActionApplyToEnum actionApplyTo = default(ActionApplyToEnum), ActionScopeEnum actionScope = default(ActionScopeEnum), decimal actionAmount = default(decimal), List<string> codes = default(List<string>), string name = default(string), string dateStart = @"now", string dateEnd = default(string), int usageLimit = default(int), int usageLimitPerCustomer = default(int), string actionConditionEntity = default(string), string actionConditionKey = default(string), string actionConditionOperator = default(string), string actionConditionValue = default(string), bool includeTax = false, string storeId = default(string), bool freeCashOnDelivery = default(bool))
+        /// <param name="customerId">Retrieves orders specified by customer id.</param>
+        public CartCouponAdd(string code = default(string), ActionTypeEnum actionType = default(ActionTypeEnum), ActionApplyToEnum actionApplyTo = default(ActionApplyToEnum), ActionScopeEnum actionScope = default(ActionScopeEnum), decimal actionAmount = default(decimal), List<string> codes = default(List<string>), string name = default(string), string dateStart = @"now", string dateEnd = default(string), int usageLimit = default(int), int usageLimitPerCustomer = default(int), string actionConditionEntity = default(string), string actionConditionKey = default(string), string actionConditionOperator = default(string), string actionConditionValue = default(string), bool includeTax = false, string storeId = default(string), bool freeCashOnDelivery = default(bool), string customerId = default(string))
         {
             // to ensure "code" is required (not null)
             if (code == null)
@@ -180,6 +181,7 @@ namespace Org.OpenAPITools.Model
             this.IncludeTax = includeTax;
             this.StoreId = storeId;
             this.FreeCashOnDelivery = freeCashOnDelivery;
+            this.CustomerId = customerId;
         }
 
         /// <summary>
@@ -333,6 +335,16 @@ namespace Org.OpenAPITools.Model
         public bool FreeCashOnDelivery { get; set; }
 
         /// <summary>
+        /// Retrieves orders specified by customer id
+        /// </summary>
+        /// <value>Retrieves orders specified by customer id</value>
+        /*
+        <example>5</example>
+        */
+        [DataMember(Name = "customer_id", EmitDefaultValue = false)]
+        public string CustomerId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -358,6 +370,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  IncludeTax: ").Append(IncludeTax).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  FreeCashOnDelivery: ").Append(FreeCashOnDelivery).Append("\n");
+            sb.Append("  CustomerId: ").Append(CustomerId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

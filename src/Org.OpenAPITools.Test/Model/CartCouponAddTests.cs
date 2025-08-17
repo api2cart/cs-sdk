@@ -216,5 +216,14 @@ namespace Org.OpenAPITools.Test.Model
         {
             // TODO unit test for the property 'FreeCashOnDelivery'
         }
+
+        /// <summary>
+        /// Test the property 'CustomerId'
+        /// </summary>
+        [Fact]
+        public void CustomerIdTest()
+        {
+            // TODO unit test for the property 'CustomerId'
+        }
     }
 }
