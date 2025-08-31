@@ -31845,6 +31845,7 @@ components:
         weight: 23.69
         upc: "9770317847001"
         mpn: "9770317847001"
+        external_product_link: http://example.com/t-shirt
         disable_report_cache: false
         avail_from: avail_from=2029-10-25T15:54:37-0500
         tags: "tag1,tag2"
@@ -32456,6 +32457,11 @@ components:
           name: shop_section_id
         personalization_details:
           $ref: '#/components/schemas/ProductAdd_personalization_details'
+        external_product_link:
+          description: External product link
+          example: http://example.com/t-shirt
+          type: string
+          name: external_product_link
         marketplace_item_properties:
           description: String containing the JSON representation of the supplied data
           example: "{\"color\":[\"Silver\"],\"manufacturer\":\"Philips\",\"features\"\
