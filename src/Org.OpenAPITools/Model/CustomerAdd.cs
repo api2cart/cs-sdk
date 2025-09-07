@@ -45,6 +45,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="lastName">Defines customer&#39;s last name.</param>
         /// <param name="password">Defines customer&#39;s unique password.</param>
         /// <param name="group">Defines the group where the customer.</param>
+        /// <param name="groupId">Customer group_id.</param>
         /// <param name="groupIds">Groups that will be assigned to a customer.</param>
         /// <param name="status">Defines customer&#39;s status (default to &quot;enabled&quot;).</param>
         /// <param name="createdTime">Entity&#39;s date creation.</param>
@@ -63,7 +64,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="country">Specifies ISO code or name of country.</param>
         /// <param name="storeId">Store Id.</param>
         /// <param name="address">address.</param>
-        public CustomerAdd(string email = default(string), string firstName = default(string), string lastName = default(string), string password = default(string), string group = default(string), string groupIds = default(string), string status = @"enabled", string createdTime = default(string), string modifiedTime = default(string), string login = default(string), string lastLogin = default(string), string birthDay = default(string), bool newsLetterSubscription = default(bool), List<CustomerAddConsentsInner> consents = default(List<CustomerAddConsentsInner>), string gender = default(string), string website = default(string), string fax = default(string), string company = default(string), string phone = default(string), string note = default(string), string country = default(string), string storeId = default(string), List<CustomerAddAddressInner> address = default(List<CustomerAddAddressInner>))
+        public CustomerAdd(string email = default(string), string firstName = default(string), string lastName = default(string), string password = default(string), string group = default(string), string groupId = default(string), string groupIds = default(string), string status = @"enabled", string createdTime = default(string), string modifiedTime = default(string), string login = default(string), string lastLogin = default(string), string birthDay = default(string), bool newsLetterSubscription = default(bool), List<CustomerAddConsentsInner> consents = default(List<CustomerAddConsentsInner>), string gender = default(string), string website = default(string), string fax = default(string), string company = default(string), string phone = default(string), string note = default(string), string country = default(string), string storeId = default(string), List<CustomerAddAddressInner> address = default(List<CustomerAddAddressInner>))
         {
             // to ensure "email" is required (not null)
             if (email == null)
@@ -75,6 +76,7 @@ namespace Org.OpenAPITools.Model
             this.LastName = lastName;
             this.Password = password;
             this.Group = group;
+            this.GroupId = groupId;
             this.GroupIds = groupIds;
             // use default value if no "status" provided
             this.Status = status ?? @"enabled";
@@ -145,6 +147,16 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "group", EmitDefaultValue = false)]
         public string Group { get; set; }
+
+        /// <summary>
+        /// Customer group_id
+        /// </summary>
+        /// <value>Customer group_id</value>
+        /*
+        <example>3</example>
+        */
+        [DataMember(Name = "group_id", EmitDefaultValue = false)]
+        public string GroupId { get; set; }
 
         /// <summary>
         /// Groups that will be assigned to a customer
@@ -332,6 +344,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  LastName: ").Append(LastName).Append("\n");
             sb.Append("  Password: ").Append(Password).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
+            sb.Append("  GroupId: ").Append(GroupId).Append("\n");
             sb.Append("  GroupIds: ").Append(GroupIds).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  CreatedTime: ").Append(CreatedTime).Append("\n");

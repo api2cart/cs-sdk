@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **Ratings** | [**List&lt;ProductReviewRating&gt;**](ProductReviewRating.md) |  | [optional] 
 **Status** | **string** |  | [optional] 
 **CreatedTime** | [**A2CDateTime**](A2CDateTime.md) |  | [optional] 
+**ModifiedTime** | [**A2CDateTime**](A2CDateTime.md) |  | [optional] 
 **Medias** | [**List&lt;Media&gt;**](Media.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

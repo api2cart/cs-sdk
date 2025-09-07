@@ -101,6 +101,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'GroupId'
+        /// </summary>
+        [Fact]
+        public void GroupIdTest()
+        {
+            // TODO unit test for the property 'GroupId'
+        }
+
+        /// <summary>
         /// Test the property 'GroupIds'
         /// </summary>
         [Fact]

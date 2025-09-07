@@ -263,6 +263,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Specifics'
+        /// </summary>
+        [Fact]
+        public void SpecificsTest()
+        {
+            // TODO unit test for the property 'Specifics'
+        }
+
+        /// <summary>
         /// Test the property 'IsFreeShipping'
         /// </summary>
         [Fact]
@@ -566,6 +575,15 @@ namespace Org.OpenAPITools.Test.Model
         public void SeoUrlTest()
         {
             // TODO unit test for the property 'SeoUrl'
+        }
+
+        /// <summary>
+        /// Test the property 'ExternalProductLink'
+        /// </summary>
+        [Fact]
+        public void ExternalProductLinkTest()
+        {
+            // TODO unit test for the property 'ExternalProductLink'
         }
 
         /// <summary>

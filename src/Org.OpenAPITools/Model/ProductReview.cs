@@ -46,10 +46,11 @@ namespace Org.OpenAPITools.Model
         /// <param name="ratings">ratings.</param>
         /// <param name="status">status.</param>
         /// <param name="createdTime">createdTime.</param>
+        /// <param name="modifiedTime">modifiedTime.</param>
         /// <param name="medias">medias.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ProductReview(string id = default(string), string productId = default(string), string customerId = default(string), string nickName = default(string), string email = default(string), string summary = default(string), string message = default(string), decimal? rating = default(decimal?), List<ProductReviewRating> ratings = default(List<ProductReviewRating>), string status = default(string), A2CDateTime createdTime = default(A2CDateTime), List<Media> medias = default(List<Media>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ProductReview(string id = default(string), string productId = default(string), string customerId = default(string), string nickName = default(string), string email = default(string), string summary = default(string), string message = default(string), decimal? rating = default(decimal?), List<ProductReviewRating> ratings = default(List<ProductReviewRating>), string status = default(string), A2CDateTime createdTime = default(A2CDateTime), A2CDateTime modifiedTime = default(A2CDateTime), List<Media> medias = default(List<Media>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.ProductId = productId;
@@ -62,6 +63,7 @@ namespace Org.OpenAPITools.Model
             this.Ratings = ratings;
             this.Status = status;
             this.CreatedTime = createdTime;
+            this.ModifiedTime = modifiedTime;
             this.Medias = medias;
             this.AdditionalFields = additionalFields;
             this.CustomFields = customFields;
@@ -134,6 +136,12 @@ namespace Org.OpenAPITools.Model
         public A2CDateTime CreatedTime { get; set; }
 
         /// <summary>
+        /// Gets or Sets ModifiedTime
+        /// </summary>
+        [DataMember(Name = "modified_time", EmitDefaultValue = true)]
+        public A2CDateTime ModifiedTime { get; set; }
+
+        /// <summary>
         /// Gets or Sets Medias
         /// </summary>
         [DataMember(Name = "medias", EmitDefaultValue = false)]
@@ -170,6 +178,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Ratings: ").Append(Ratings).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  CreatedTime: ").Append(CreatedTime).Append("\n");
+            sb.Append("  ModifiedTime: ").Append(ModifiedTime).Append("\n");
             sb.Append("  Medias: ").Append(Medias).Append("\n");
             sb.Append("  AdditionalFields: ").Append(AdditionalFields).Append("\n");
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");

@@ -837,9 +837,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
+        /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
+        /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
+        /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
+        /// <param name="imageUrl">Image Url (optional)</param>
+        /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductManufacturerAdd200Response</returns>
-        ProductManufacturerAdd200Response ProductManufacturerAdd(string productId, string manufacturer, string? storeId = default(string?), int operationIndex = 0);
+        ProductManufacturerAdd200Response ProductManufacturerAdd(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// product.manufacturer.add
@@ -851,9 +857,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
+        /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
+        /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
+        /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
+        /// <param name="imageUrl">Image Url (optional)</param>
+        /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductManufacturerAdd200Response</returns>
-        ApiResponse<ProductManufacturerAdd200Response> ProductManufacturerAddWithHttpInfo(string productId, string manufacturer, string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<ProductManufacturerAdd200Response> ProductManufacturerAddWithHttpInfo(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0);
         /// <summary>
         /// product.option.add
         /// </summary>
@@ -1188,13 +1200,19 @@ namespace Org.OpenAPITools.Api
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves reviews specified by ids (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="status">Defines status (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="sortBy">Set field to sort by (optional, default to &quot;id&quot;)</param>
+        /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseProductReviewList</returns>
-        ModelResponseProductReviewList ProductReviewList(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? status = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ModelResponseProductReviewList ProductReviewList(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? langId = default(string?), string? status = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? customerId = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// product.review.list
@@ -1209,13 +1227,19 @@ namespace Org.OpenAPITools.Api
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves reviews specified by ids (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="status">Defines status (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="sortBy">Set field to sort by (optional, default to &quot;id&quot;)</param>
+        /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseProductReviewList</returns>
-        ApiResponse<ModelResponseProductReviewList> ProductReviewListWithHttpInfo(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? status = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseProductReviewList> ProductReviewListWithHttpInfo(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? langId = default(string?), string? status = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? customerId = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// product.store.assign
         /// </summary>
@@ -2438,10 +2462,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
+        /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
+        /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
+        /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
+        /// <param name="imageUrl">Image Url (optional)</param>
+        /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductManufacturerAdd200Response</returns>
-        System.Threading.Tasks.Task<ProductManufacturerAdd200Response> ProductManufacturerAddAsync(string productId, string manufacturer, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductManufacturerAdd200Response> ProductManufacturerAddAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.manufacturer.add
@@ -2453,10 +2483,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
+        /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
+        /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
+        /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
+        /// <param name="imageUrl">Image Url (optional)</param>
+        /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductManufacturerAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductManufacturerAdd200Response>> ProductManufacturerAddWithHttpInfoAsync(string productId, string manufacturer, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductManufacturerAdd200Response>> ProductManufacturerAddWithHttpInfoAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.option.add
         /// </summary>
@@ -2813,14 +2849,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves reviews specified by ids (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="status">Defines status (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="sortBy">Set field to sort by (optional, default to &quot;id&quot;)</param>
+        /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseProductReviewList</returns>
-        System.Threading.Tasks.Task<ModelResponseProductReviewList> ProductReviewListAsync(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? status = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseProductReviewList> ProductReviewListAsync(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? langId = default(string?), string? status = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? customerId = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.review.list
@@ -2835,14 +2877,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves reviews specified by ids (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="status">Defines status (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="sortBy">Set field to sort by (optional, default to &quot;id&quot;)</param>
+        /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseProductReviewList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseProductReviewList>> ProductReviewListWithHttpInfoAsync(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? status = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseProductReviewList>> ProductReviewListWithHttpInfoAsync(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? langId = default(string?), string? status = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? customerId = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.store.assign
         /// </summary>
@@ -8693,11 +8741,17 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
+        /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
+        /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
+        /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
+        /// <param name="imageUrl">Image Url (optional)</param>
+        /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductManufacturerAdd200Response</returns>
-        public ProductManufacturerAdd200Response ProductManufacturerAdd(string productId, string manufacturer, string? storeId = default(string?), int operationIndex = 0)
+        public ProductManufacturerAdd200Response ProductManufacturerAdd(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> localVarResponse = ProductManufacturerAddWithHttpInfo(productId, manufacturer, storeId);
+            Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> localVarResponse = ProductManufacturerAddWithHttpInfo(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl);
             return localVarResponse.Data;
         }
 
@@ -8708,9 +8762,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
+        /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
+        /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
+        /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
+        /// <param name="imageUrl">Image Url (optional)</param>
+        /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductManufacturerAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> ProductManufacturerAddWithHttpInfo(string productId, string manufacturer, string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> ProductManufacturerAddWithHttpInfo(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -8753,6 +8813,30 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (metaTitle != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "meta_title", metaTitle));
+            }
+            if (metaKeywords != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "meta_keywords", metaKeywords));
+            }
+            if (metaDescription != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "meta_description", metaDescription));
+            }
+            if (searchKeywords != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "search_keywords", searchKeywords));
+            }
+            if (imageUrl != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "image_url", imageUrl));
+            }
+            if (seoUrl != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "seo_url", seoUrl));
+            }
 
             localVarRequestOptions.Operation = "ProductApi.ProductManufacturerAdd";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -8789,12 +8873,18 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
+        /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
+        /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
+        /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
+        /// <param name="imageUrl">Image Url (optional)</param>
+        /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductManufacturerAdd200Response</returns>
-        public async System.Threading.Tasks.Task<ProductManufacturerAdd200Response> ProductManufacturerAddAsync(string productId, string manufacturer, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductManufacturerAdd200Response> ProductManufacturerAddAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> localVarResponse = await ProductManufacturerAddWithHttpInfoAsync(productId, manufacturer, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> localVarResponse = await ProductManufacturerAddWithHttpInfoAsync(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -8805,10 +8895,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
+        /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
+        /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
+        /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
+        /// <param name="imageUrl">Image Url (optional)</param>
+        /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductManufacturerAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response>> ProductManufacturerAddWithHttpInfoAsync(string productId, string manufacturer, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response>> ProductManufacturerAddWithHttpInfoAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -8850,6 +8946,30 @@ namespace Org.OpenAPITools.Api
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (metaTitle != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "meta_title", metaTitle));
+            }
+            if (metaKeywords != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "meta_keywords", metaKeywords));
+            }
+            if (metaDescription != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "meta_description", metaDescription));
+            }
+            if (searchKeywords != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "search_keywords", searchKeywords));
+            }
+            if (imageUrl != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "image_url", imageUrl));
+            }
+            if (seoUrl != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "seo_url", seoUrl));
             }
 
             localVarRequestOptions.Operation = "ProductApi.ProductManufacturerAdd";
@@ -11150,15 +11270,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves reviews specified by ids (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="status">Defines status (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="sortBy">Set field to sort by (optional, default to &quot;id&quot;)</param>
+        /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseProductReviewList</returns>
-        public ModelResponseProductReviewList ProductReviewList(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? status = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public ModelResponseProductReviewList ProductReviewList(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? langId = default(string?), string? status = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? customerId = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseProductReviewList> localVarResponse = ProductReviewListWithHttpInfo(productId, start, count, pageCursor, ids, storeId, status, responseFields, varParams, exclude);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseProductReviewList> localVarResponse = ProductReviewListWithHttpInfo(productId, start, count, pageCursor, ids, storeId, langId, status, createdFrom, createdTo, customerId, sortBy, sortDirection, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -11172,13 +11298,19 @@ namespace Org.OpenAPITools.Api
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves reviews specified by ids (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="status">Defines status (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="sortBy">Set field to sort by (optional, default to &quot;id&quot;)</param>
+        /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseProductReviewList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseProductReviewList> ProductReviewListWithHttpInfo(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? status = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseProductReviewList> ProductReviewListWithHttpInfo(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? langId = default(string?), string? status = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? customerId = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -11230,9 +11362,33 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (langId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
+            }
             if (status != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "status", status));
+            }
+            if (createdFrom != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
+            }
+            if (createdTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
+            }
+            if (customerId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "customer_id", customerId));
+            }
+            if (sortBy != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "sort_by", sortBy));
+            }
+            if (sortDirection != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "sort_direction", sortDirection));
             }
             if (responseFields != null)
             {
@@ -11285,16 +11441,22 @@ namespace Org.OpenAPITools.Api
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves reviews specified by ids (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="status">Defines status (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="sortBy">Set field to sort by (optional, default to &quot;id&quot;)</param>
+        /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseProductReviewList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseProductReviewList> ProductReviewListAsync(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? status = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseProductReviewList> ProductReviewListAsync(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? langId = default(string?), string? status = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? customerId = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseProductReviewList> localVarResponse = await ProductReviewListWithHttpInfoAsync(productId, start, count, pageCursor, ids, storeId, status, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseProductReviewList> localVarResponse = await ProductReviewListWithHttpInfoAsync(productId, start, count, pageCursor, ids, storeId, langId, status, createdFrom, createdTo, customerId, sortBy, sortDirection, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -11308,14 +11470,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="ids">Retrieves reviews specified by ids (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="langId">Language id (optional)</param>
         /// <param name="status">Defines status (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="customerId">Retrieves orders specified by customer id (optional)</param>
+        /// <param name="sortBy">Set field to sort by (optional, default to &quot;id&quot;)</param>
+        /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time&quot;)</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseProductReviewList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseProductReviewList>> ProductReviewListWithHttpInfoAsync(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? status = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseProductReviewList>> ProductReviewListWithHttpInfoAsync(string productId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? storeId = default(string?), string? langId = default(string?), string? status = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? customerId = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -11367,9 +11535,33 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (langId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
+            }
             if (status != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "status", status));
+            }
+            if (createdFrom != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
+            }
+            if (createdTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
+            }
+            if (customerId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "customer_id", customerId));
+            }
+            if (sortBy != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "sort_by", sortBy));
+            }
+            if (sortDirection != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "sort_direction", sortDirection));
             }
             if (responseFields != null)
             {

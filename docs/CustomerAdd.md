@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **LastName** | **string** | Defines customer&#39;s last name | [optional] 
 **Password** | **string** | Defines customer&#39;s unique password | [optional] 
 **Group** | **string** | Defines the group where the customer | [optional] 
+**GroupId** | **string** | Customer group_id | [optional] 
 **GroupIds** | **string** | Groups that will be assigned to a customer | [optional] 
 **Status** | **string** | Defines customer&#39;s status | [optional] [default to "enabled"]
 **CreatedTime** | **string** | Entity&#39;s date creation | [optional] 

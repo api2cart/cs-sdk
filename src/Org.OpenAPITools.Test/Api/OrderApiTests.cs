@@ -93,6 +93,18 @@ namespace Org.OpenAPITools.Test.Api
         }
 
         /// <summary>
+        /// Test OrderCalculate
+        /// </summary>
+        [Fact]
+        public void OrderCalculateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //OrderCalculate orderCalculate = null;
+            //var response = instance.OrderCalculate(orderCalculate);
+            //Assert.IsType<OrderCalculate200Response>(response);
+        }
+
+        /// <summary>
         /// Test OrderCount
         /// </summary>
         [Fact]

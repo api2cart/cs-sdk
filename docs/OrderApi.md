@@ -6,6 +6,7 @@ All URIs are relative to *https://api.api2cart.local.com/v1.1*
 |--------|--------------|-------------|
 | [**OrderAbandonedList**](OrderApi.md#orderabandonedlist) | **GET** /order.abandoned.list.json | order.abandoned.list |
 | [**OrderAdd**](OrderApi.md#orderadd) | **POST** /order.add.json | order.add |
+| [**OrderCalculate**](OrderApi.md#ordercalculate) | **POST** /order.calculate.json | order.calculate |
 | [**OrderCount**](OrderApi.md#ordercount) | **GET** /order.count.json | order.count |
 | [**OrderFinancialStatusList**](OrderApi.md#orderfinancialstatuslist) | **GET** /order.financial_status.list.json | order.financial_status.list |
 | [**OrderFulfillmentStatusList**](OrderApi.md#orderfulfillmentstatuslist) | **GET** /order.fulfillment_status.list.json | order.fulfillment_status.list |
@@ -235,6 +236,106 @@ catch (ApiException e)
 ### Return type
 
 [**OrderAdd200Response**](OrderAdd200Response.md)
+
+### Authorization
+
+[StoreKeyAuth](../README.md#StoreKeyAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="ordercalculate"></a>
+# **OrderCalculate**
+> OrderCalculate200Response OrderCalculate (OrderCalculate orderCalculate)
+
+order.calculate
+
+<p>Calculates the total cost of an order for a given customer and a set of products, as well as the available shipping methods based on the specified address. The calculation takes into account store product prices, discounts, taxes, shipping costs, and other store settings. The result includes a detailed breakdown of the final order cost by its components.</p> <p>Note that the final totals, taxes, and other amounts must include the corresponding values for the selected shipping method.</p><p>The result of this method can be used when creating an order using the <strong>order.add</strong> method.</p>
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
+
+namespace Example
+{
+    public class OrderCalculateExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
+            // Configure API key authorization: StoreKeyAuth
+            config.AddApiKey("x-store-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-store-key", "Bearer");
+            // Configure API key authorization: ApiKeyAuth
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new OrderApi(config);
+            var orderCalculate = new OrderCalculate(); // OrderCalculate | 
+
+            try
+            {
+                // order.calculate
+                OrderCalculate200Response result = apiInstance.OrderCalculate(orderCalculate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling OrderApi.OrderCalculate: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the OrderCalculateWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // order.calculate
+    ApiResponse<OrderCalculate200Response> response = apiInstance.OrderCalculateWithHttpInfo(orderCalculate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling OrderApi.OrderCalculateWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **orderCalculate** | [**OrderCalculate**](OrderCalculate.md) |  |  |
+
+### Return type
+
+[**OrderCalculate200Response**](OrderCalculate200Response.md)
 
 ### Authorization
 

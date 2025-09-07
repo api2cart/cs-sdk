@@ -7682,6 +7682,37 @@ paths:
       summary: order.list
       tags:
       - order
+  /order.calculate.json:
+    post:
+      description: "<p>Calculates the total cost of an order for a given customer\
+        \ and a set of products, as well as the available shipping methods based on\
+        \ the specified address. The calculation takes into account store product\
+        \ prices, discounts, taxes, shipping costs, and other store settings. The\
+        \ result includes a detailed breakdown of the final order cost by its components.</p>\
+        \ <p>Note that the final totals, taxes, and other amounts must include the\
+        \ corresponding values for the selected shipping method.</p><p>The result\
+        \ of this method can be used when creating an order using the <strong>order.add</strong>\
+        \ method.</p>"
+      operationId: OrderCalculate
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrderCalculate'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderCalculate_200_response'
+          description: successful operation
+      security:
+      - ApiKeyAuth: []
+        StoreKeyAuth: []
+      summary: order.calculate
+      tags:
+      - order
   /order.add.json:
     post:
       description: Add a new order to the cart.
@@ -10942,6 +10973,60 @@ paths:
         schema:
           type: string
         style: form
+      - description: Defines unique meta title for each entity
+        example: "category,test"
+        explode: true
+        in: query
+        name: meta_title
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Defines unique meta keywords for each entity
+        example: "category,test"
+        explode: true
+        in: query
+        name: meta_keywords
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Defines unique meta description of a entity
+        example: "category,test"
+        explode: true
+        in: query
+        name: meta_description
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Defines unique search keywords
+        example: "key1,key2,key3"
+        explode: true
+        in: query
+        name: search_keywords
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Image Url
+        example: https://docs.api2cart.com/img/logo.png
+        explode: true
+        in: query
+        name: image_url
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Defines unique URL for SEO
+        example: some seo url
+        explode: true
+        in: query
+        name: seo_url
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -11623,6 +11708,15 @@ paths:
         schema:
           type: string
         style: form
+      - description: Language id
+        example: 3
+        explode: true
+        in: query
+        name: lang_id
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Defines status
         example: disabled
         explode: true
@@ -11630,6 +11724,53 @@ paths:
         name: status
         required: false
         schema:
+          type: string
+        style: form
+      - description: Retrieve entities from their creation date
+        example: 2010-07-29 13:45:52
+        explode: true
+        in: query
+        name: created_from
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Retrieve entities to their creation date
+        example: 2100-08-29 13:45:52
+        explode: true
+        in: query
+        name: created_to
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Retrieves orders specified by customer id
+        example: "5"
+        explode: true
+        in: query
+        name: customer_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Set field to sort by
+        example: value_id
+        explode: true
+        in: query
+        name: sort_by
+        required: false
+        schema:
+          default: id
+          type: string
+        style: form
+      - description: Set sorting direction
+        example: asc
+        explode: true
+        in: query
+        name: sort_direction
+        required: false
+        schema:
+          default: asc
           type: string
         style: form
       - description: Set this parameter in order to choose which entity fields you
@@ -13452,6 +13593,7 @@ components:
           - EBay
           - Ecwid
           - EtsyAPIv3
+          - Facebook
           - Flipkart
           - Gambio
           - Hybris
@@ -20847,6 +20989,7 @@ components:
         birth_day: 2013-02-26 15:00:00
         password: fd5gfd5g75fd
         modified_time: 2014-07-30 15:58:41
+        group_id: 3
         phone: "56686868654"
         group_ids: "1,2,3"
         consents:
@@ -20889,6 +21032,11 @@ components:
           example: Register
           type: string
           name: group
+        group_id:
+          description: Customer group_id
+          example: 3
+          type: string
+          name: group_id
         group_ids:
           description: Groups that will be assigned to a customer
           example: "1,2,3"
@@ -25489,6 +25637,531 @@ components:
         custom_fields:
           nullable: true
           type: object
+    Order_Calculate:
+      example:
+        tax_lines:
+        - code: code
+          rate: 1.4894159098541704
+          custom_fields: "{}"
+          additional_fields: "{}"
+          value: 6.84685269835264
+        - code: code
+          rate: 1.4894159098541704
+          custom_fields: "{}"
+          additional_fields: "{}"
+          value: 6.84685269835264
+        discounts:
+        - code: code
+          free_shipping: true
+          custom_fields: "{}"
+          additional_fields: "{}"
+          type: type
+          value: 7.457744773683766
+        - code: code
+          free_shipping: true
+          custom_fields: "{}"
+          additional_fields: "{}"
+          type: type
+          value: 7.457744773683766
+        subtotal:
+          custom_fields: "{}"
+          discount: 5.962133916683182
+          tax: 1.4658129805029452
+          additional_fields: "{}"
+          value: 6.027456183070403
+        custom_fields: "{}"
+        currency:
+          symbol_right: symbol_right
+          avail: true
+          default: true
+          rate: 6.027456183070403
+          custom_fields: "{}"
+          name: name
+          additional_fields: "{}"
+          id: id
+          symbol_left: symbol_left
+          iso3: iso3
+        additional_fields: "{}"
+        shipping_rates:
+        - price_inc_tax: 7.386281948385884
+          code: code
+          price: 4.145608029883936
+          custom_fields: "{}"
+          name: name
+          tax: 1.2315135367772556
+          additional_fields: "{}"
+          tax_rate: 1.0246457001441578
+        - price_inc_tax: 7.386281948385884
+          code: code
+          price: 4.145608029883936
+          custom_fields: "{}"
+          name: name
+          tax: 1.2315135367772556
+          additional_fields: "{}"
+          tax_rate: 1.0246457001441578
+        items:
+        - price_inc_tax: 7.061401241503109
+          quantity: 5
+          unit_discount: 3.616076749251911
+          custom_fields: "{}"
+          weight: 2.027123023002322
+          additional_fields: "{}"
+          tax_rate: 9.301444243932576
+          variant_id: variant_id
+          weight_unit: weight_unit
+          price: 2.3021358869347655
+          product_id: product_id
+          name: name
+          options:
+          - price: 1.284659006116532
+            custom_fields: "{}"
+            product_option_value_id: product_option_value_id
+            name: name
+            weight: 2.8841621266687802
+            option_id: option_id
+            additional_fields: "{}"
+            type: type
+            value: value
+          - price: 1.284659006116532
+            custom_fields: "{}"
+            product_option_value_id: product_option_value_id
+            name: name
+            weight: 2.8841621266687802
+            option_id: option_id
+            additional_fields: "{}"
+            type: type
+            value: value
+          sku: sku
+          barcode: barcode
+        - price_inc_tax: 7.061401241503109
+          quantity: 5
+          unit_discount: 3.616076749251911
+          custom_fields: "{}"
+          weight: 2.027123023002322
+          additional_fields: "{}"
+          tax_rate: 9.301444243932576
+          variant_id: variant_id
+          weight_unit: weight_unit
+          price: 2.3021358869347655
+          product_id: product_id
+          name: name
+          options:
+          - price: 1.284659006116532
+            custom_fields: "{}"
+            product_option_value_id: product_option_value_id
+            name: name
+            weight: 2.8841621266687802
+            option_id: option_id
+            additional_fields: "{}"
+            type: type
+            value: value
+          - price: 1.284659006116532
+            custom_fields: "{}"
+            product_option_value_id: product_option_value_id
+            name: name
+            weight: 2.8841621266687802
+            option_id: option_id
+            additional_fields: "{}"
+            type: type
+            value: value
+          sku: sku
+          barcode: barcode
+        customer:
+          phone: phone
+          custom_fields: "{}"
+          last_name: last_name
+          additional_fields: "{}"
+          id: id
+          first_name: first_name
+          email: email
+      properties:
+        customer:
+          $ref: '#/components/schemas/BaseCustomer'
+        subtotal:
+          $ref: '#/components/schemas/Order_Calculate_Subtotal'
+        items:
+          items:
+            $ref: '#/components/schemas/Order_Calculate_Item'
+          type: array
+        currency:
+          $ref: '#/components/schemas/Currency'
+        shipping_rates:
+          items:
+            $ref: '#/components/schemas/Order_Calculate_ShippingRate'
+          type: array
+        tax_lines:
+          items:
+            $ref: '#/components/schemas/Order_Calculate_Tax'
+          type: array
+        discounts:
+          items:
+            $ref: '#/components/schemas/Order_Calculate_Discount'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Order_Calculate_Subtotal:
+      example:
+        custom_fields: "{}"
+        discount: 5.962133916683182
+        tax: 1.4658129805029452
+        additional_fields: "{}"
+        value: 6.027456183070403
+      properties:
+        value:
+          type: number
+        tax:
+          type: number
+        discount:
+          type: number
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Order_Calculate_Item:
+      example:
+        price_inc_tax: 7.061401241503109
+        quantity: 5
+        unit_discount: 3.616076749251911
+        custom_fields: "{}"
+        weight: 2.027123023002322
+        additional_fields: "{}"
+        tax_rate: 9.301444243932576
+        variant_id: variant_id
+        weight_unit: weight_unit
+        price: 2.3021358869347655
+        product_id: product_id
+        name: name
+        options:
+        - price: 1.284659006116532
+          custom_fields: "{}"
+          product_option_value_id: product_option_value_id
+          name: name
+          weight: 2.8841621266687802
+          option_id: option_id
+          additional_fields: "{}"
+          type: type
+          value: value
+        - price: 1.284659006116532
+          custom_fields: "{}"
+          product_option_value_id: product_option_value_id
+          name: name
+          weight: 2.8841621266687802
+          option_id: option_id
+          additional_fields: "{}"
+          type: type
+          value: value
+        sku: sku
+        barcode: barcode
+      properties:
+        product_id:
+          type: string
+        sku:
+          type: string
+        name:
+          type: string
+        quantity:
+          type: integer
+        price:
+          type: number
+        price_inc_tax:
+          type: number
+        tax_rate:
+          type: number
+        unit_discount:
+          type: number
+        weight:
+          nullable: true
+          type: number
+        weight_unit:
+          nullable: true
+          type: string
+        barcode:
+          nullable: true
+          type: string
+        variant_id:
+          nullable: true
+          type: string
+        options:
+          items:
+            $ref: '#/components/schemas/Order_Item_Option'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Order_Calculate_ShippingRate:
+      example:
+        price_inc_tax: 7.386281948385884
+        code: code
+        price: 4.145608029883936
+        custom_fields: "{}"
+        name: name
+        tax: 1.2315135367772556
+        additional_fields: "{}"
+        tax_rate: 1.0246457001441578
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+        price:
+          type: number
+        price_inc_tax:
+          type: number
+        tax:
+          type: number
+        tax_rate:
+          type: number
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Order_Calculate_Tax:
+      example:
+        code: code
+        rate: 1.4894159098541704
+        custom_fields: "{}"
+        additional_fields: "{}"
+        value: 6.84685269835264
+      properties:
+        code:
+          type: string
+        rate:
+          type: number
+        value:
+          type: number
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Order_Calculate_Discount:
+      example:
+        code: code
+        free_shipping: true
+        custom_fields: "{}"
+        additional_fields: "{}"
+        type: type
+        value: 7.457744773683766
+      properties:
+        code:
+          nullable: true
+          type: string
+        value:
+          type: number
+        type:
+          nullable: true
+          type: string
+        free_shipping:
+          nullable: true
+          type: boolean
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    OrderCalculate:
+      example:
+        bill_city: Chicago
+        bill_postcode: "12345"
+        shipp_country: US
+        bill_first_name: Adam
+        shipp_address_1: Green str. 35
+        shipp_postcode: "24545"
+        shipp_address_2: Green str. 35
+        bill_last_name: Smith
+        shipp_state: IL
+        bill_country: US
+        coupons:
+        - coupons
+        - coupons
+        shipp_first_name: John
+        bill_address_2: "Red str, 2"
+        bill_address_1: Green str. 35
+        store_id: "1"
+        shipp_last_name: Smith
+        bill_company: Apple
+        bill_state: IL
+        shipp_company: Apple
+        bill_phone: 8 800 5659 6896
+        order_item:
+        - order_item_id: "125, where {x} - 1,2,3,... etc"
+          order_item_option:
+          - order_item_option_value: green
+            order_item_option_name: Color
+          - order_item_option_value: green
+            order_item_option_name: Color
+          order_item_quantity: "5, where {x} - 1,2,3,... etc"
+          order_item_variant_id: 52
+        - order_item_id: "125, where {x} - 1,2,3,... etc"
+          order_item_option:
+          - order_item_option_value: green
+            order_item_option_name: Color
+          - order_item_option_value: green
+            order_item_option_name: Color
+          order_item_quantity: "5, where {x} - 1,2,3,... etc"
+          order_item_variant_id: 52
+        customer_email: jubari@hannsgroup.com
+        shipp_phone: "880086544564"
+        response_fields: "{result}"
+        currency_id: usd
+        shipp_city: Chicago
+      properties:
+        customer_email:
+          description: Defines the customer specified by email for whom the order
+            needs to be calculated
+          example: jubari@hannsgroup.com
+          type: string
+          name: customer_email
+        currency_id:
+          description: Currency Id
+          example: usd
+          type: string
+          name: currency_id
+        store_id:
+          description: Store Id
+          example: "1"
+          type: string
+          name: store_id
+        coupons:
+          description: Coupons that will be applied to order. If the order isn't eligible
+            for any given discount code or there is no discount with such a code it
+            will be skipped during calculation
+          items:
+            type: string
+          minItems: 1
+          type: array
+        shipp_first_name:
+          description: Specifies shipping first name
+          example: John
+          type: string
+          name: shipp_first_name
+        shipp_last_name:
+          description: Specifies shipping last name
+          example: Smith
+          type: string
+          name: shipp_last_name
+        shipp_address_1:
+          description: Specifies first shipping address
+          example: Green str. 35
+          type: string
+          name: shipp_address_1
+        shipp_address_2:
+          description: Specifies second address line of a shipping street address
+          example: Green str. 35
+          type: string
+          name: shipp_address_2
+        shipp_city:
+          description: Specifies shipping city
+          example: Chicago
+          type: string
+          name: shipp_city
+        shipp_postcode:
+          description: Specifies shipping postcode
+          example: "24545"
+          type: string
+          name: shipp_postcode
+        shipp_state:
+          description: Specifies shipping state code
+          example: IL
+          type: string
+          name: shipp_state
+        shipp_country:
+          description: Specifies shipping country code
+          example: US
+          type: string
+          name: shipp_country
+        shipp_company:
+          description: Specifies shipping company
+          example: Apple
+          type: string
+          name: shipp_company
+        shipp_phone:
+          description: Specifies shipping phone
+          example: "880086544564"
+          type: string
+          name: shipp_phone
+        bill_first_name:
+          description: Specifies billing first name
+          example: Adam
+          type: string
+          name: bill_first_name
+        bill_last_name:
+          description: Specifies billing last name
+          example: Smith
+          type: string
+          name: bill_last_name
+        bill_address_1:
+          description: Specifies first billing address
+          example: Green str. 35
+          type: string
+          name: bill_address_1
+        bill_address_2:
+          description: Specifies second billing address
+          example: "Red str, 2"
+          type: string
+          name: bill_address_2
+        bill_city:
+          description: Specifies billing city
+          example: Chicago
+          type: string
+          name: bill_city
+        bill_postcode:
+          description: Specifies billing postcode
+          example: "12345"
+          type: string
+          name: bill_postcode
+        bill_state:
+          description: Specifies billing state code
+          example: IL
+          type: string
+          name: bill_state
+        bill_country:
+          description: Specifies billing country code
+          example: US
+          type: string
+          name: bill_country
+        bill_company:
+          description: Specifies billing company
+          example: Apple
+          type: string
+          name: bill_company
+        bill_phone:
+          description: Specifies billing phone
+          example: 8 800 5659 6896
+          type: string
+          name: bill_phone
+        response_fields:
+          description: Set this parameter in order to choose which entity fields you
+            want to retrieve
+          example: "{result}"
+          type: string
+          name: response_fields
+        order_item:
+          items:
+            $ref: '#/components/schemas/OrderCalculate_order_item_inner'
+          type: array
+      required:
+      - customer_email
+      - order_item
+      - shipp_address_1
+      - shipp_city
+      - shipp_country
+      - shipp_first_name
+      - shipp_last_name
+      - shipp_postcode
     OrderAdd:
       example:
         date: 2012-09-25 19:40:00
@@ -31298,6 +31971,7 @@ components:
           upc: upc
           weight: 2.027123023002322
           mpn: mpn
+          external_product_link: external_product_link
           tags:
           - tags
           - tags
@@ -31354,6 +32028,7 @@ components:
           - categories_ids
           - categories_ids
           backorder_status: backorder_status
+          specifics: "{}"
           available_for_view: true
           warehouse_id: warehouse_id
         - seo_url: seo_url
@@ -31401,6 +32076,7 @@ components:
           upc: upc
           weight: 2.027123023002322
           mpn: mpn
+          external_product_link: external_product_link
           tags:
           - tags
           - tags
@@ -31457,6 +32133,7 @@ components:
           - categories_ids
           - categories_ids
           backorder_status: backorder_status
+          specifics: "{}"
           available_for_view: true
           warehouse_id: warehouse_id
         - seo_url: seo_url
@@ -31504,6 +32181,7 @@ components:
           upc: upc
           weight: 2.027123023002322
           mpn: mpn
+          external_product_link: external_product_link
           tags:
           - tags
           - tags
@@ -31560,6 +32238,7 @@ components:
           - categories_ids
           - categories_ids
           backorder_status: backorder_status
+          specifics: "{}"
           available_for_view: true
           warehouse_id: warehouse_id
         - seo_url: seo_url
@@ -31607,6 +32286,7 @@ components:
           upc: upc
           weight: 2.027123023002322
           mpn: mpn
+          external_product_link: external_product_link
           tags:
           - tags
           - tags
@@ -31663,6 +32343,7 @@ components:
           - categories_ids
           - categories_ids
           backorder_status: backorder_status
+          specifics: "{}"
           available_for_view: true
           warehouse_id: warehouse_id
         - seo_url: seo_url
@@ -31710,6 +32391,7 @@ components:
           upc: upc
           weight: 2.027123023002322
           mpn: mpn
+          external_product_link: external_product_link
           tags:
           - tags
           - tags
@@ -31766,6 +32448,7 @@ components:
           - categories_ids
           - categories_ids
           backorder_status: backorder_status
+          specifics: "{}"
           available_for_view: true
           warehouse_id: warehouse_id
         nested_items_update_behaviour: replace
@@ -35201,6 +35884,11 @@ components:
               additional_fields: "{}"
               id: id
               type: type
+            modified_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
             ratings:
             - custom_fields: "{}"
               name: name
@@ -35241,6 +35929,11 @@ components:
               additional_fields: "{}"
               id: id
               type: type
+            modified_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
             ratings:
             - custom_fields: "{}"
               name: name
@@ -35313,6 +36006,11 @@ components:
             additional_fields: "{}"
             id: id
             type: type
+          modified_time:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
           ratings:
           - custom_fields: "{}"
             name: name
@@ -35353,6 +36051,11 @@ components:
             additional_fields: "{}"
             id: id
             type: type
+          modified_time:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
           ratings:
           - custom_fields: "{}"
             name: name
@@ -35412,6 +36115,11 @@ components:
           additional_fields: "{}"
           id: id
           type: type
+        modified_time:
+          custom_fields: "{}"
+          format: format
+          additional_fields: "{}"
+          value: value
         ratings:
         - custom_fields: "{}"
           name: name
@@ -35461,6 +36169,8 @@ components:
           nullable: true
           type: string
         created_time:
+          $ref: '#/components/schemas/A2CDateTime'
+        modified_time:
           $ref: '#/components/schemas/A2CDateTime'
         medias:
           items:
@@ -41861,6 +42571,153 @@ components:
           type: string
         result:
           $ref: '#/components/schemas/OrderCount_200_response_result'
+    OrderCalculate_200_response:
+      example:
+        result:
+          tax_lines:
+          - code: code
+            rate: 1.4894159098541704
+            custom_fields: "{}"
+            additional_fields: "{}"
+            value: 6.84685269835264
+          - code: code
+            rate: 1.4894159098541704
+            custom_fields: "{}"
+            additional_fields: "{}"
+            value: 6.84685269835264
+          discounts:
+          - code: code
+            free_shipping: true
+            custom_fields: "{}"
+            additional_fields: "{}"
+            type: type
+            value: 7.457744773683766
+          - code: code
+            free_shipping: true
+            custom_fields: "{}"
+            additional_fields: "{}"
+            type: type
+            value: 7.457744773683766
+          subtotal:
+            custom_fields: "{}"
+            discount: 5.962133916683182
+            tax: 1.4658129805029452
+            additional_fields: "{}"
+            value: 6.027456183070403
+          custom_fields: "{}"
+          currency:
+            symbol_right: symbol_right
+            avail: true
+            default: true
+            rate: 6.027456183070403
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+            symbol_left: symbol_left
+            iso3: iso3
+          additional_fields: "{}"
+          shipping_rates:
+          - price_inc_tax: 7.386281948385884
+            code: code
+            price: 4.145608029883936
+            custom_fields: "{}"
+            name: name
+            tax: 1.2315135367772556
+            additional_fields: "{}"
+            tax_rate: 1.0246457001441578
+          - price_inc_tax: 7.386281948385884
+            code: code
+            price: 4.145608029883936
+            custom_fields: "{}"
+            name: name
+            tax: 1.2315135367772556
+            additional_fields: "{}"
+            tax_rate: 1.0246457001441578
+          items:
+          - price_inc_tax: 7.061401241503109
+            quantity: 5
+            unit_discount: 3.616076749251911
+            custom_fields: "{}"
+            weight: 2.027123023002322
+            additional_fields: "{}"
+            tax_rate: 9.301444243932576
+            variant_id: variant_id
+            weight_unit: weight_unit
+            price: 2.3021358869347655
+            product_id: product_id
+            name: name
+            options:
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            sku: sku
+            barcode: barcode
+          - price_inc_tax: 7.061401241503109
+            quantity: 5
+            unit_discount: 3.616076749251911
+            custom_fields: "{}"
+            weight: 2.027123023002322
+            additional_fields: "{}"
+            tax_rate: 9.301444243932576
+            variant_id: variant_id
+            weight_unit: weight_unit
+            price: 2.3021358869347655
+            product_id: product_id
+            name: name
+            options:
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            sku: sku
+            barcode: barcode
+          customer:
+            phone: phone
+            custom_fields: "{}"
+            last_name: last_name
+            additional_fields: "{}"
+            id: id
+            first_name: first_name
+            email: email
+        return_message: return_message
+        return_code: 0
+      properties:
+        return_code:
+          type: integer
+        return_message:
+          type: string
+        result:
+          $ref: '#/components/schemas/Order_Calculate'
     OrderAdd_200_response_result:
       example:
         id: id
@@ -43685,6 +44542,56 @@ components:
           example: true
           type: boolean
           name: "address_book_default_{x}"
+    OrderCalculate_order_item_inner_order_item_option_inner:
+      example:
+        order_item_option_value: green
+        order_item_option_name: Color
+      properties:
+        order_item_option_name:
+          description: "Ordered Product Option Name. Where x is order item ID, y is\
+            \ order item option ID"
+          example: Color
+          type: string
+          name: "order_item_option_name_{x}_{y}"
+        order_item_option_value:
+          description: "Ordered product option value Where x is order item ID, y -\
+            \ order item option ID"
+          example: green
+          type: string
+          name: "order_item_option_value_{x}_{y}"
+    OrderCalculate_order_item_inner:
+      example:
+        order_item_id: "125, where {x} - 1,2,3,... etc"
+        order_item_option:
+        - order_item_option_value: green
+          order_item_option_name: Color
+        - order_item_option_value: green
+          order_item_option_name: Color
+        order_item_quantity: "5, where {x} - 1,2,3,... etc"
+        order_item_variant_id: 52
+      properties:
+        order_item_id:
+          description: Defines orders specified by order item id
+          example: "125, where {x} - 1,2,3,... etc"
+          type: string
+          name: "order_item_id_{x}"
+        order_item_quantity:
+          description: Defines orders specified by order item quantity
+          example: "5, where {x} - 1,2,3,... etc"
+          type: integer
+          name: "order_item_quantity_{x}"
+        order_item_variant_id:
+          description: Ordered product variant. Where x is order item ID
+          example: 52
+          type: string
+          name: "order_item_variant_id_{x}"
+        order_item_option:
+          items:
+            $ref: '#/components/schemas/OrderCalculate_order_item_inner_order_item_option_inner'
+          type: array
+      required:
+      - order_item_id
+      - order_item_quantity
     OrderAdd_note_attributes_inner:
       example:
         name: name
@@ -44708,6 +45615,7 @@ components:
         upc: upc
         weight: 2.027123023002322
         mpn: mpn
+        external_product_link: external_product_link
         tags:
         - tags
         - tags
@@ -44764,6 +45672,7 @@ components:
         - categories_ids
         - categories_ids
         backorder_status: backorder_status
+        specifics: "{}"
         available_for_view: true
         warehouse_id: warehouse_id
       properties:
@@ -44814,6 +45723,8 @@ components:
         product_type:
           type: string
         marketplace_item_properties:
+          type: object
+        specifics:
           type: object
         is_free_shipping:
           type: boolean
@@ -44910,6 +45821,8 @@ components:
         url:
           type: string
         seo_url:
+          type: string
+        external_product_link:
           type: string
         manufacturer:
           type: string

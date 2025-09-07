@@ -2395,7 +2395,7 @@ catch (ApiException e)
 
 <a id="productmanufactureradd"></a>
 # **ProductManufacturerAdd**
-> ProductManufacturerAdd200Response ProductManufacturerAdd (string productId, string manufacturer, string? storeId = null)
+> ProductManufacturerAdd200Response ProductManufacturerAdd (string productId, string manufacturer, string? storeId = null, string? metaTitle = null, string? metaKeywords = null, string? metaDescription = null, string? searchKeywords = null, string? imageUrl = null, string? seoUrl = null)
 
 product.manufacturer.add
 
@@ -2430,11 +2430,17 @@ namespace Example
             var productId = 10;  // string | Defines products specified by product id
             var manufacturer = Samsung;  // string | Defines product’s manufacturer's name
             var storeId = 1;  // string? | Store Id (optional) 
+            var metaTitle = category,test;  // string? | Defines unique meta title for each entity (optional) 
+            var metaKeywords = category,test;  // string? | Defines unique meta keywords for each entity (optional) 
+            var metaDescription = category,test;  // string? | Defines unique meta description of a entity (optional) 
+            var searchKeywords = key1,key2,key3;  // string? | Defines unique search keywords (optional) 
+            var imageUrl = https://docs.api2cart.com/img/logo.png;  // string? | Image Url (optional) 
+            var seoUrl = some seo url;  // string? | Defines unique URL for SEO (optional) 
 
             try
             {
                 // product.manufacturer.add
-                ProductManufacturerAdd200Response result = apiInstance.ProductManufacturerAdd(productId, manufacturer, storeId);
+                ProductManufacturerAdd200Response result = apiInstance.ProductManufacturerAdd(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2455,7 +2461,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.manufacturer.add
-    ApiResponse<ProductManufacturerAdd200Response> response = apiInstance.ProductManufacturerAddWithHttpInfo(productId, manufacturer, storeId);
+    ApiResponse<ProductManufacturerAdd200Response> response = apiInstance.ProductManufacturerAddWithHttpInfo(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2475,6 +2481,12 @@ catch (ApiException e)
 | **productId** | **string** | Defines products specified by product id |  |
 | **manufacturer** | **string** | Defines product’s manufacturer&#39;s name |  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **metaTitle** | **string?** | Defines unique meta title for each entity | [optional]  |
+| **metaKeywords** | **string?** | Defines unique meta keywords for each entity | [optional]  |
+| **metaDescription** | **string?** | Defines unique meta description of a entity | [optional]  |
+| **searchKeywords** | **string?** | Defines unique search keywords | [optional]  |
+| **imageUrl** | **string?** | Image Url | [optional]  |
+| **seoUrl** | **string?** | Defines unique URL for SEO | [optional]  |
 
 ### Return type
 
@@ -3667,7 +3679,7 @@ catch (ApiException e)
 
 <a id="productreviewlist"></a>
 # **ProductReviewList**
-> ModelResponseProductReviewList ProductReviewList (string productId, int? start = null, int? count = null, string? pageCursor = null, string? ids = null, string? storeId = null, string? status = null, string? responseFields = null, string? varParams = null, string? exclude = null)
+> ModelResponseProductReviewList ProductReviewList (string productId, int? start = null, int? count = null, string? pageCursor = null, string? ids = null, string? storeId = null, string? langId = null, string? status = null, string? createdFrom = null, string? createdTo = null, string? customerId = null, string? sortBy = null, string? sortDirection = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 product.review.list
 
@@ -3705,7 +3717,13 @@ namespace Example
             var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var ids = 24,25;  // string? | Retrieves reviews specified by ids (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
+            var langId = 3;  // string? | Language id (optional) 
             var status = disabled;  // string? | Defines status (optional) 
+            var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
+            var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
+            var customerId = 5;  // string? | Retrieves orders specified by customer id (optional) 
+            var sortBy = value_id;  // string? | Set field to sort by (optional)  (default to "id")
+            var sortDirection = asc;  // string? | Set sorting direction (optional)  (default to "asc")
             var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time")
             var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
@@ -3713,7 +3731,7 @@ namespace Example
             try
             {
                 // product.review.list
-                ModelResponseProductReviewList result = apiInstance.ProductReviewList(productId, start, count, pageCursor, ids, storeId, status, responseFields, varParams, exclude);
+                ModelResponseProductReviewList result = apiInstance.ProductReviewList(productId, start, count, pageCursor, ids, storeId, langId, status, createdFrom, createdTo, customerId, sortBy, sortDirection, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3734,7 +3752,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.review.list
-    ApiResponse<ModelResponseProductReviewList> response = apiInstance.ProductReviewListWithHttpInfo(productId, start, count, pageCursor, ids, storeId, status, responseFields, varParams, exclude);
+    ApiResponse<ModelResponseProductReviewList> response = apiInstance.ProductReviewListWithHttpInfo(productId, start, count, pageCursor, ids, storeId, langId, status, createdFrom, createdTo, customerId, sortBy, sortDirection, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -3757,7 +3775,13 @@ catch (ApiException e)
 | **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **ids** | **string?** | Retrieves reviews specified by ids | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **langId** | **string?** | Language id | [optional]  |
 | **status** | **string?** | Defines status | [optional]  |
+| **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
+| **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
+| **customerId** | **string?** | Retrieves orders specified by customer id | [optional]  |
+| **sortBy** | **string?** | Set field to sort by | [optional] [default to &quot;id&quot;] |
+| **sortDirection** | **string?** | Set sorting direction | [optional] [default to &quot;asc&quot;] |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |

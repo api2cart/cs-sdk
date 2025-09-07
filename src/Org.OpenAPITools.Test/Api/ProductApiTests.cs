@@ -475,7 +475,13 @@ namespace Org.OpenAPITools.Test.Api
             //string productId = null;
             //string manufacturer = null;
             //string? storeId = null;
-            //var response = instance.ProductManufacturerAdd(productId, manufacturer, storeId);
+            //string? metaTitle = null;
+            //string? metaKeywords = null;
+            //string? metaDescription = null;
+            //string? searchKeywords = null;
+            //string? imageUrl = null;
+            //string? seoUrl = null;
+            //var response = instance.ProductManufacturerAdd(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl);
             //Assert.IsType<ProductManufacturerAdd200Response>(response);
         }
 
@@ -658,11 +664,17 @@ namespace Org.OpenAPITools.Test.Api
             //string? pageCursor = null;
             //string? ids = null;
             //string? storeId = null;
+            //string? langId = null;
             //string? status = null;
+            //string? createdFrom = null;
+            //string? createdTo = null;
+            //string? customerId = null;
+            //string? sortBy = null;
+            //string? sortDirection = null;
             //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.ProductReviewList(productId, start, count, pageCursor, ids, storeId, status, responseFields, varParams, exclude);
+            //var response = instance.ProductReviewList(productId, start, count, pageCursor, ids, storeId, langId, status, createdFrom, createdTo, customerId, sortBy, sortDirection, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseProductReviewList>(response);
         }
 

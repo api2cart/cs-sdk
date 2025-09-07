@@ -58,6 +58,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="manageStock">manageStock.</param>
         /// <param name="productType">productType.</param>
         /// <param name="marketplaceItemProperties">marketplaceItemProperties.</param>
+        /// <param name="specifics">specifics.</param>
         /// <param name="isFreeShipping">isFreeShipping.</param>
         /// <param name="taxable">taxable.</param>
         /// <param name="status">status.</param>
@@ -92,13 +93,14 @@ namespace Org.OpenAPITools.Model
         /// <param name="harmonizedSystemCode">harmonizedSystemCode.</param>
         /// <param name="url">url.</param>
         /// <param name="seoUrl">seoUrl.</param>
+        /// <param name="externalProductLink">externalProductLink.</param>
         /// <param name="manufacturer">manufacturer.</param>
         /// <param name="manufacturerId">manufacturerId.</param>
         /// <param name="backorderStatus">backorderStatus.</param>
         /// <param name="images">images.</param>
         /// <param name="tags">tags.</param>
         /// <param name="files">files.</param>
-        public ProductAddBatchPayloadInner(string name = default(string), string description = default(string), string shortDescription = default(string), string sku = default(string), string model = default(string), string asin = default(string), string upc = default(string), string ean = default(string), string gtin = default(string), string mpn = default(string), string barcode = default(string), decimal price = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), List<ProductAddBatchPayloadInnerAdvancedPricesInner> advancedPrices = default(List<ProductAddBatchPayloadInnerAdvancedPricesInner>), decimal fixedCostShippingPrice = default(decimal), decimal quantity = default(decimal), bool manageStock = default(bool), string productType = default(string), Object marketplaceItemProperties = default(Object), bool isFreeShipping = default(bool), bool taxable = default(bool), string status = default(string), string condition = default(string), string visible = default(string), bool availableForView = default(bool), bool availableForSale = default(bool), bool isVirtual = default(bool), bool inStock = default(bool), string type = default(string), bool downloadable = default(bool), decimal weight = default(decimal), decimal length = default(decimal), decimal width = default(decimal), decimal height = default(decimal), string weightUnit = default(string), string dimensionsUnit = default(string), string storeId = default(string), string langId = default(string), string categoryId = default(string), string warehouseId = default(string), List<string> categoriesIds = default(List<string>), List<string> relatedProductsIds = default(List<string>), List<string> upSellProductsIds = default(List<string>), List<string> crossSellProductsIds = default(List<string>), List<string> storesIds = default(List<string>), string taxClassId = default(string), string metaTitle = default(string), string metaDescription = default(string), List<string> metaKeywords = default(List<string>), List<string> searchKeywords = default(List<string>), string harmonizedSystemCode = default(string), string url = default(string), string seoUrl = default(string), string manufacturer = default(string), string manufacturerId = default(string), string backorderStatus = default(string), List<ProductAddBatchPayloadInnerImagesInner> images = default(List<ProductAddBatchPayloadInnerImagesInner>), List<string> tags = default(List<string>), List<ProductAddFilesInner> files = default(List<ProductAddFilesInner>))
+        public ProductAddBatchPayloadInner(string name = default(string), string description = default(string), string shortDescription = default(string), string sku = default(string), string model = default(string), string asin = default(string), string upc = default(string), string ean = default(string), string gtin = default(string), string mpn = default(string), string barcode = default(string), decimal price = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), List<ProductAddBatchPayloadInnerAdvancedPricesInner> advancedPrices = default(List<ProductAddBatchPayloadInnerAdvancedPricesInner>), decimal fixedCostShippingPrice = default(decimal), decimal quantity = default(decimal), bool manageStock = default(bool), string productType = default(string), Object marketplaceItemProperties = default(Object), Object specifics = default(Object), bool isFreeShipping = default(bool), bool taxable = default(bool), string status = default(string), string condition = default(string), string visible = default(string), bool availableForView = default(bool), bool availableForSale = default(bool), bool isVirtual = default(bool), bool inStock = default(bool), string type = default(string), bool downloadable = default(bool), decimal weight = default(decimal), decimal length = default(decimal), decimal width = default(decimal), decimal height = default(decimal), string weightUnit = default(string), string dimensionsUnit = default(string), string storeId = default(string), string langId = default(string), string categoryId = default(string), string warehouseId = default(string), List<string> categoriesIds = default(List<string>), List<string> relatedProductsIds = default(List<string>), List<string> upSellProductsIds = default(List<string>), List<string> crossSellProductsIds = default(List<string>), List<string> storesIds = default(List<string>), string taxClassId = default(string), string metaTitle = default(string), string metaDescription = default(string), List<string> metaKeywords = default(List<string>), List<string> searchKeywords = default(List<string>), string harmonizedSystemCode = default(string), string url = default(string), string seoUrl = default(string), string externalProductLink = default(string), string manufacturer = default(string), string manufacturerId = default(string), string backorderStatus = default(string), List<ProductAddBatchPayloadInnerImagesInner> images = default(List<ProductAddBatchPayloadInnerImagesInner>), List<string> tags = default(List<string>), List<ProductAddFilesInner> files = default(List<ProductAddFilesInner>))
         {
             this.Name = name;
             this.Description = description;
@@ -123,6 +125,7 @@ namespace Org.OpenAPITools.Model
             this.ManageStock = manageStock;
             this.ProductType = productType;
             this.MarketplaceItemProperties = marketplaceItemProperties;
+            this.Specifics = specifics;
             this.IsFreeShipping = isFreeShipping;
             this.Taxable = taxable;
             this.Status = status;
@@ -157,6 +160,7 @@ namespace Org.OpenAPITools.Model
             this.HarmonizedSystemCode = harmonizedSystemCode;
             this.Url = url;
             this.SeoUrl = seoUrl;
+            this.ExternalProductLink = externalProductLink;
             this.Manufacturer = manufacturer;
             this.ManufacturerId = manufacturerId;
             this.BackorderStatus = backorderStatus;
@@ -302,6 +306,12 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         [DataMember(Name = "marketplace_item_properties", EmitDefaultValue = false)]
         public Object MarketplaceItemProperties { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Specifics
+        /// </summary>
+        [DataMember(Name = "specifics", EmitDefaultValue = false)]
+        public Object Specifics { get; set; }
 
         /// <summary>
         /// Gets or Sets IsFreeShipping
@@ -508,6 +518,12 @@ namespace Org.OpenAPITools.Model
         public string SeoUrl { get; set; }
 
         /// <summary>
+        /// Gets or Sets ExternalProductLink
+        /// </summary>
+        [DataMember(Name = "external_product_link", EmitDefaultValue = false)]
+        public string ExternalProductLink { get; set; }
+
+        /// <summary>
         /// Gets or Sets Manufacturer
         /// </summary>
         [DataMember(Name = "manufacturer", EmitDefaultValue = false)]
@@ -574,6 +590,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  ManageStock: ").Append(ManageStock).Append("\n");
             sb.Append("  ProductType: ").Append(ProductType).Append("\n");
             sb.Append("  MarketplaceItemProperties: ").Append(MarketplaceItemProperties).Append("\n");
+            sb.Append("  Specifics: ").Append(Specifics).Append("\n");
             sb.Append("  IsFreeShipping: ").Append(IsFreeShipping).Append("\n");
             sb.Append("  Taxable: ").Append(Taxable).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -608,6 +625,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  HarmonizedSystemCode: ").Append(HarmonizedSystemCode).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  SeoUrl: ").Append(SeoUrl).Append("\n");
+            sb.Append("  ExternalProductLink: ").Append(ExternalProductLink).Append("\n");
             sb.Append("  Manufacturer: ").Append(Manufacturer).Append("\n");
             sb.Append("  ManufacturerId: ").Append(ManufacturerId).Append("\n");
             sb.Append("  BackorderStatus: ").Append(BackorderStatus).Append("\n");
