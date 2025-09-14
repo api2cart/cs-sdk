@@ -31051,7 +31051,7 @@ components:
         external_product_link: http://example.com/t-shirt
         is_supply: false
         tags: "tag1,tag2"
-        avail_from: avail_from=2029-10-25T15:54:37-0500
+        avail_from: 2029-10-25T15:54:37-0500
         attribute_set_name: Shoes
         meta_description: "category,test"
         weight_unit: lb
@@ -31680,7 +31680,7 @@ components:
         avail_from:
           description: Allows to schedule a time in the future that the item becomes
             available. The value should be greater than the current date and time.
-          example: avail_from=2029-10-25T15:54:37-0500
+          example: 2029-10-25T15:54:37-0500
           type: string
           name: avail_from
         sprice_create:
@@ -32527,10 +32527,11 @@ components:
         country_of_origin: "123456"
         weight: 23.69
         upc: "9770317847001"
+        brand_name: Abidas
         mpn: "9770317847001"
         external_product_link: http://example.com/t-shirt
         disable_report_cache: false
-        avail_from: avail_from=2029-10-25T15:54:37-0500
+        avail_from: 2029-10-25T15:54:37-0500
         tags: "tag1,tag2"
         is_supply: false
         meta_description: "category,test"
@@ -32813,7 +32814,7 @@ components:
         avail_from:
           description: Allows to schedule a time in the future that the item becomes
             available. The value should be greater than the current date and time.
-          example: avail_from=2029-10-25T15:54:37-0500
+          example: 2029-10-25T15:54:37-0500
           type: string
           name: avail_from
         product_class:
@@ -32821,6 +32822,11 @@ components:
           example: Shirts
           type: string
           name: product_class
+        brand_name:
+          description: Retrieves brands specified by brand name
+          example: Abidas
+          type: string
+          name: brand_name
         available_for_view:
           description: Specifies the set of visible/invisible products for users
           example: false
@@ -33215,6 +33221,7 @@ components:
           weight_unit: weight_unit
           name: name
           sprice_expire: sprice_expire
+          condition_description: condition_description
           harmonized_system_code: harmonized_system_code
           status: status
           is_virtual: true
@@ -33310,6 +33317,7 @@ components:
           weight_unit: weight_unit
           name: name
           sprice_expire: sprice_expire
+          condition_description: condition_description
           harmonized_system_code: harmonized_system_code
           status: status
           is_virtual: true
@@ -33405,6 +33413,7 @@ components:
           weight_unit: weight_unit
           name: name
           sprice_expire: sprice_expire
+          condition_description: condition_description
           harmonized_system_code: harmonized_system_code
           status: status
           is_virtual: true
@@ -33500,6 +33509,7 @@ components:
           weight_unit: weight_unit
           name: name
           sprice_expire: sprice_expire
+          condition_description: condition_description
           harmonized_system_code: harmonized_system_code
           status: status
           is_virtual: true
@@ -33595,6 +33605,7 @@ components:
           weight_unit: weight_unit
           name: name
           sprice_expire: sprice_expire
+          condition_description: condition_description
           harmonized_system_code: harmonized_system_code
           status: status
           is_virtual: true
@@ -45938,6 +45949,7 @@ components:
         weight_unit: weight_unit
         name: name
         sprice_expire: sprice_expire
+        condition_description: condition_description
         harmonized_system_code: harmonized_system_code
         status: status
         is_virtual: true
@@ -46031,6 +46043,8 @@ components:
         type:
           type: string
         condition:
+          type: string
+        condition_description:
           type: string
         visible:
           type: string

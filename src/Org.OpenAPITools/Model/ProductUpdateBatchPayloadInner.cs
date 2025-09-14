@@ -63,6 +63,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="status">status.</param>
         /// <param name="type">type.</param>
         /// <param name="condition">condition.</param>
+        /// <param name="conditionDescription">conditionDescription.</param>
         /// <param name="visible">visible.</param>
         /// <param name="availableForView">availableForView.</param>
         /// <param name="availableForSale">availableForSale.</param>
@@ -103,7 +104,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="tags">tags.</param>
         /// <param name="searchKeywords">searchKeywords.</param>
         /// <param name="harmonizedSystemCode">harmonizedSystemCode.</param>
-        public ProductUpdateBatchPayloadInner(string id = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), string sku = default(string), string model = default(string), decimal price = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal costPrice = default(decimal), decimal oldPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), List<ProductUpdateBatchPayloadInnerAdvancedPricesInner> advancedPrices = default(List<ProductUpdateBatchPayloadInnerAdvancedPricesInner>), decimal quantity = default(decimal), decimal increaseQuantity = default(decimal), decimal reduceQuantity = default(decimal), decimal reserveQuantity = default(decimal), string storeId = default(string), string langId = default(string), string status = default(string), string type = default(string), string condition = default(string), string visible = default(string), bool availableForView = default(bool), bool availableForSale = default(bool), string availFrom = default(string), decimal weight = default(decimal), decimal length = default(decimal), decimal width = default(decimal), decimal height = default(decimal), string dimensionsUnit = default(string), string weightUnit = default(string), bool manageStock = default(bool), bool inStock = default(bool), string backorderStatus = default(string), bool isFreeShipping = default(bool), bool isVirtual = default(bool), bool taxable = default(bool), bool downloadable = default(bool), string warehouseId = default(string), string taxClassId = default(string), List<string> categoriesIds = default(List<string>), string metaTitle = default(string), string metaDescription = default(string), List<string> metaKeywords = default(List<string>), string url = default(string), string seoUrl = default(string), string manufacturer = default(string), string manufacturerId = default(string), string mpn = default(string), string gtin = default(string), string upc = default(string), string isbn = default(string), string ean = default(string), string barcode = default(string), List<ProductUpdateBatchPayloadInnerImagesInner> images = default(List<ProductUpdateBatchPayloadInnerImagesInner>), List<string> relatedProductsIds = default(List<string>), List<string> upSellProductsIds = default(List<string>), List<string> crossSellProductsIds = default(List<string>), List<string> tags = default(List<string>), List<string> searchKeywords = default(List<string>), string harmonizedSystemCode = default(string))
+        public ProductUpdateBatchPayloadInner(string id = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), string sku = default(string), string model = default(string), decimal price = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal costPrice = default(decimal), decimal oldPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), List<ProductUpdateBatchPayloadInnerAdvancedPricesInner> advancedPrices = default(List<ProductUpdateBatchPayloadInnerAdvancedPricesInner>), decimal quantity = default(decimal), decimal increaseQuantity = default(decimal), decimal reduceQuantity = default(decimal), decimal reserveQuantity = default(decimal), string storeId = default(string), string langId = default(string), string status = default(string), string type = default(string), string condition = default(string), string conditionDescription = default(string), string visible = default(string), bool availableForView = default(bool), bool availableForSale = default(bool), string availFrom = default(string), decimal weight = default(decimal), decimal length = default(decimal), decimal width = default(decimal), decimal height = default(decimal), string dimensionsUnit = default(string), string weightUnit = default(string), bool manageStock = default(bool), bool inStock = default(bool), string backorderStatus = default(string), bool isFreeShipping = default(bool), bool isVirtual = default(bool), bool taxable = default(bool), bool downloadable = default(bool), string warehouseId = default(string), string taxClassId = default(string), List<string> categoriesIds = default(List<string>), string metaTitle = default(string), string metaDescription = default(string), List<string> metaKeywords = default(List<string>), string url = default(string), string seoUrl = default(string), string manufacturer = default(string), string manufacturerId = default(string), string mpn = default(string), string gtin = default(string), string upc = default(string), string isbn = default(string), string ean = default(string), string barcode = default(string), List<ProductUpdateBatchPayloadInnerImagesInner> images = default(List<ProductUpdateBatchPayloadInnerImagesInner>), List<string> relatedProductsIds = default(List<string>), List<string> upSellProductsIds = default(List<string>), List<string> crossSellProductsIds = default(List<string>), List<string> tags = default(List<string>), List<string> searchKeywords = default(List<string>), string harmonizedSystemCode = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -133,6 +134,7 @@ namespace Org.OpenAPITools.Model
             this.Status = status;
             this.Type = type;
             this.Condition = condition;
+            this.ConditionDescription = conditionDescription;
             this.Visible = visible;
             this.AvailableForView = availableForView;
             this.AvailableForSale = availableForSale;
@@ -313,6 +315,12 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         [DataMember(Name = "condition", EmitDefaultValue = false)]
         public string Condition { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ConditionDescription
+        /// </summary>
+        [DataMember(Name = "condition_description", EmitDefaultValue = false)]
+        public string ConditionDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets Visible
@@ -589,6 +597,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Condition: ").Append(Condition).Append("\n");
+            sb.Append("  ConditionDescription: ").Append(ConditionDescription).Append("\n");
             sb.Append("  Visible: ").Append(Visible).Append("\n");
             sb.Append("  AvailableForView: ").Append(AvailableForView).Append("\n");
             sb.Append("  AvailableForSale: ").Append(AvailableForSale).Append("\n");

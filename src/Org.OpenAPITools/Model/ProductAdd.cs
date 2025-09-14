@@ -1018,7 +1018,7 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <value>Allows to schedule a time in the future that the item becomes available. The value should be greater than the current date and time.</value>
         /*
-        <example>avail_from&#x3D;2029-10-25T15:54:37-0500</example>
+        <example>2029-10-25T15:54:37-0500</example>
         */
         [DataMember(Name = "avail_from", EmitDefaultValue = false)]
         public string AvailFrom { get; set; }

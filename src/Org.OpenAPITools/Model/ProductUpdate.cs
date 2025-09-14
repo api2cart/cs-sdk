@@ -62,6 +62,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="avail">Defines category&#39;s visibility status (default to true).</param>
         /// <param name="availFrom">Allows to schedule a time in the future that the item becomes available. The value should be greater than the current date and time..</param>
         /// <param name="productClass">A categorization for the product.</param>
+        /// <param name="brandName">Retrieves brands specified by brand name.</param>
         /// <param name="availableForView">Specifies the set of visible/invisible products for users.</param>
         /// <param name="storesIds">Assign product to the stores that is specified by comma-separated stores&#39; id.</param>
         /// <param name="storeId">Defines store id where the product should be found.</param>
@@ -124,7 +125,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="externalProductLink">External product link.</param>
         /// <param name="marketplaceItemProperties">String containing the JSON representation of the supplied data.</param>
         /// <param name="minOrderQuantity">The minimum quantity an order must contain, to be eligible to purchase this product..</param>
-        public ProductUpdate(string id = default(string), string model = default(string), string sku = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), decimal price = default(decimal), decimal oldPrice = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), decimal retailPrice = default(decimal), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), decimal reservePrice = default(decimal), decimal buyitnowPrice = default(decimal), bool taxable = true, string taxClassId = default(string), string type = default(string), string status = default(string), string condition = default(string), string visible = default(string), bool inStock = default(bool), bool avail = true, string availFrom = default(string), string productClass = default(string), bool availableForView = default(bool), string storesIds = default(string), string storeId = default(string), string langId = default(string), decimal quantity = default(decimal), decimal reserveQuantity = default(decimal), bool manageStock = default(bool), string backorderStatus = default(string), decimal increaseQuantity = default(decimal), decimal reduceQuantity = default(decimal), decimal lowStockThreshold = default(decimal), string warehouseId = default(string), decimal weight = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), decimal width = default(decimal), string dimensionsUnit = default(string), bool isVirtual = false, bool isFreeShipping = default(bool), string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), string barcode = default(string), string manufacturer = default(string), string manufacturerId = default(string), string categoriesIds = default(string), string relatedProductsIds = default(string), string upSellProductsIds = default(string), string crossSellProductsIds = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string seoUrl = default(string), string searchKeywords = default(string), string tags = default(string), string deliveryCode = default(string), ProductAddPackageDetails packageDetails = default(ProductAddPackageDetails), string countryOfOrigin = default(string), string harmonizedSystemCode = default(string), int shippingTemplateId = 0, string whenMade = @"made_to_order", bool isSupply = true, bool downloadable = false, List<string> materials = default(List<string>), bool autoRenew = false, bool onSale = false, string productionPartnerIds = default(string), ProductAddManufacturerInfo manufacturerInfo = default(ProductAddManufacturerInfo), string reportRequestId = default(string), bool disableReportCache = false, bool reindex = true, bool clearCache = true, bool checkProcessStatus = false, List<ProductAddSpecificsInner> specifics = default(List<ProductAddSpecificsInner>), int shopSectionId = default(int), ProductAddPersonalizationDetails personalizationDetails = default(ProductAddPersonalizationDetails), string externalProductLink = default(string), string marketplaceItemProperties = default(string), decimal minOrderQuantity = default(decimal))
+        public ProductUpdate(string id = default(string), string model = default(string), string sku = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), decimal price = default(decimal), decimal oldPrice = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), decimal retailPrice = default(decimal), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), decimal reservePrice = default(decimal), decimal buyitnowPrice = default(decimal), bool taxable = true, string taxClassId = default(string), string type = default(string), string status = default(string), string condition = default(string), string visible = default(string), bool inStock = default(bool), bool avail = true, string availFrom = default(string), string productClass = default(string), string brandName = default(string), bool availableForView = default(bool), string storesIds = default(string), string storeId = default(string), string langId = default(string), decimal quantity = default(decimal), decimal reserveQuantity = default(decimal), bool manageStock = default(bool), string backorderStatus = default(string), decimal increaseQuantity = default(decimal), decimal reduceQuantity = default(decimal), decimal lowStockThreshold = default(decimal), string warehouseId = default(string), decimal weight = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), decimal width = default(decimal), string dimensionsUnit = default(string), bool isVirtual = false, bool isFreeShipping = default(bool), string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), string barcode = default(string), string manufacturer = default(string), string manufacturerId = default(string), string categoriesIds = default(string), string relatedProductsIds = default(string), string upSellProductsIds = default(string), string crossSellProductsIds = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string seoUrl = default(string), string searchKeywords = default(string), string tags = default(string), string deliveryCode = default(string), ProductAddPackageDetails packageDetails = default(ProductAddPackageDetails), string countryOfOrigin = default(string), string harmonizedSystemCode = default(string), int shippingTemplateId = 0, string whenMade = @"made_to_order", bool isSupply = true, bool downloadable = false, List<string> materials = default(List<string>), bool autoRenew = false, bool onSale = false, string productionPartnerIds = default(string), ProductAddManufacturerInfo manufacturerInfo = default(ProductAddManufacturerInfo), string reportRequestId = default(string), bool disableReportCache = false, bool reindex = true, bool clearCache = true, bool checkProcessStatus = false, List<ProductAddSpecificsInner> specifics = default(List<ProductAddSpecificsInner>), int shopSectionId = default(int), ProductAddPersonalizationDetails personalizationDetails = default(ProductAddPersonalizationDetails), string externalProductLink = default(string), string marketplaceItemProperties = default(string), decimal minOrderQuantity = default(decimal))
         {
             this.Id = id;
             this.Model = model;
@@ -153,6 +154,7 @@ namespace Org.OpenAPITools.Model
             this.Avail = avail;
             this.AvailFrom = availFrom;
             this.ProductClass = productClass;
+            this.BrandName = brandName;
             this.AvailableForView = availableForView;
             this.StoresIds = storesIds;
             this.StoreId = storeId;
@@ -470,7 +472,7 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <value>Allows to schedule a time in the future that the item becomes available. The value should be greater than the current date and time.</value>
         /*
-        <example>avail_from&#x3D;2029-10-25T15:54:37-0500</example>
+        <example>2029-10-25T15:54:37-0500</example>
         */
         [DataMember(Name = "avail_from", EmitDefaultValue = false)]
         public string AvailFrom { get; set; }
@@ -484,6 +486,16 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "product_class", EmitDefaultValue = false)]
         public string ProductClass { get; set; }
+
+        /// <summary>
+        /// Retrieves brands specified by brand name
+        /// </summary>
+        /// <value>Retrieves brands specified by brand name</value>
+        /*
+        <example>Abidas</example>
+        */
+        [DataMember(Name = "brand_name", EmitDefaultValue = false)]
+        public string BrandName { get; set; }
 
         /// <summary>
         /// Specifies the set of visible/invisible products for users
@@ -1125,6 +1137,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Avail: ").Append(Avail).Append("\n");
             sb.Append("  AvailFrom: ").Append(AvailFrom).Append("\n");
             sb.Append("  ProductClass: ").Append(ProductClass).Append("\n");
+            sb.Append("  BrandName: ").Append(BrandName).Append("\n");
             sb.Append("  AvailableForView: ").Append(AvailableForView).Append("\n");
             sb.Append("  StoresIds: ").Append(StoresIds).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");

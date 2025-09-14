@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **Status** | **string** |  | [optional] 
 **Type** | **string** |  | [optional] 
 **Condition** | **string** |  | [optional] 
+**ConditionDescription** | **string** |  | [optional] 
 **Visible** | **string** |  | [optional] 
 **AvailableForView** | **bool** |  | [optional] 
 **AvailableForSale** | **bool** |  | [optional] 

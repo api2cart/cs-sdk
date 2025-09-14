@@ -263,6 +263,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ConditionDescription'
+        /// </summary>
+        [Fact]
+        public void ConditionDescriptionTest()
+        {
+            // TODO unit test for the property 'ConditionDescription'
+        }
+
+        /// <summary>
         /// Test the property 'Visible'
         /// </summary>
         [Fact]

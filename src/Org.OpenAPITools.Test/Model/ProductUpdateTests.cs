@@ -299,6 +299,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BrandName'
+        /// </summary>
+        [Fact]
+        public void BrandNameTest()
+        {
+            // TODO unit test for the property 'BrandName'
+        }
+
+        /// <summary>
         /// Test the property 'AvailableForView'
         /// </summary>
         [Fact]
