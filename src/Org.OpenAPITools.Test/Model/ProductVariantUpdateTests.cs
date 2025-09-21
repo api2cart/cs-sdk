@@ -524,6 +524,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Manufacturer'
+        /// </summary>
+        [Fact]
+        public void ManufacturerTest()
+        {
+            // TODO unit test for the property 'Manufacturer'
+        }
+
+        /// <summary>
         /// Test the property 'Reindex'
         /// </summary>
         [Fact]

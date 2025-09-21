@@ -893,6 +893,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'UnasApiKey'
+        /// </summary>
+        [Fact]
+        public void UnasApiKeyTest()
+        {
+            // TODO unit test for the property 'UnasApiKey'
+        }
+
+        /// <summary>
         /// Test the property 'ShopwareApiKey'
         /// </summary>
         [Fact]

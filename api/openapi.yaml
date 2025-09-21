@@ -13551,6 +13551,7 @@ components:
           Firefox/47.0
         shopware_access_key: SWSCS3O1RJBSRNBYQLFIYJN2ZQ
         store_key: ab37fc230bc5df63a5be1b11220949be
+        unas_api_key: c238908e29ceb6e6ad3df15f89a6234709d3f000
         amazon_sp_api_environment: sandbox
         ebay_site_id: "101"
         shopify_api_password: 860f3a6fc87632301a42cd88e4b5ab3d
@@ -14128,6 +14129,11 @@ components:
           example: SWSCS3O1RJBSRNBYQLFIYJN2ZQ
           type: string
           name: shopware_access_key
+        unas_api_key:
+          description: UNAS API Key
+          example: c238908e29ceb6e6ad3df15f89a6234709d3f000
+          type: string
+          name: unas_api_key
         shopware_api_key:
           description: Shopware api key
           example: SWSCS3O1RJBSRNBYQLFIYJN2ZQ
@@ -32769,7 +32775,6 @@ components:
           type: number
           name: buyitnow_price
         taxable:
-          default: true
           description: Specifies whether a tax is charged
           example: false
           type: boolean
@@ -37119,6 +37124,7 @@ components:
         isbn: "9783161484100"
         description: Product variant
         meta_keywords: "category,test"
+        manufacturer: Samsung
         ean: "5901234123457"
         fixed_cost_shipping_price: 5.5
         available_for_sale: false
@@ -37231,7 +37237,6 @@ components:
           type: boolean
           name: is_free_shipping
         taxable:
-          default: true
           description: Specifies whether a tax is charged
           example: false
           type: boolean
@@ -37415,6 +37420,11 @@ components:
           example: "category,test"
           type: string
           name: meta_keywords
+        manufacturer:
+          description: Specifies the product variant's manufacturer
+          example: Samsung
+          type: string
+          name: manufacturer
         reindex:
           default: true
           description: Is reindex required

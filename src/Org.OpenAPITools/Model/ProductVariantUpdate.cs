@@ -53,7 +53,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="avail">Defines category&#39;s visibility status (default to true).</param>
         /// <param name="isDefault">Defines as a default variant.</param>
         /// <param name="isFreeShipping">Specifies variant&#39;s free shipping flag that has to be added.</param>
-        /// <param name="taxable">Specifies whether a tax is charged (default to true).</param>
+        /// <param name="taxable">Specifies whether a tax is charged.</param>
         /// <param name="taxClassId">Defines tax classes where entity has to be added.</param>
         /// <param name="isVirtual">Defines whether the product is virtual (default to false).</param>
         /// <param name="manageStock">Defines inventory tracking for product variant.</param>
@@ -87,9 +87,10 @@ namespace Org.OpenAPITools.Model
         /// <param name="metaTitle">Defines unique meta title for each entity.</param>
         /// <param name="metaDescription">Defines unique meta description of a entity.</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity.</param>
+        /// <param name="manufacturer">Specifies the product variant&#39;s manufacturer.</param>
         /// <param name="reindex">Is reindex required (default to true).</param>
         /// <param name="clearCache">Is cache clear required (default to true).</param>
-        public ProductVariantUpdate(string id = default(string), string productId = default(string), string storeId = default(string), string langId = default(string), List<ProductVariantUpdateOptionsInner> options = default(List<ProductVariantUpdateOptionsInner>), string name = default(string), string description = default(string), string shortDescription = default(string), string model = default(string), string sku = default(string), string visible = default(string), string status = default(string), string backorderStatus = default(string), decimal lowStockThreshold = default(decimal), bool availableForSale = true, bool avail = true, bool isDefault = default(bool), bool isFreeShipping = default(bool), bool taxable = true, string taxClassId = default(string), bool isVirtual = false, bool manageStock = default(bool), bool inStock = default(bool), string warehouseId = default(string), decimal reserveQuantity = default(decimal), decimal quantity = default(decimal), decimal increaseQuantity = 0M, decimal reduceQuantity = 0M, decimal price = default(decimal), decimal specialPrice = default(decimal), decimal retailPrice = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal weight = 0M, string barcode = default(string), decimal width = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), string metaTitle = default(string), string metaDescription = default(string), string metaKeywords = default(string), bool reindex = true, bool clearCache = true)
+        public ProductVariantUpdate(string id = default(string), string productId = default(string), string storeId = default(string), string langId = default(string), List<ProductVariantUpdateOptionsInner> options = default(List<ProductVariantUpdateOptionsInner>), string name = default(string), string description = default(string), string shortDescription = default(string), string model = default(string), string sku = default(string), string visible = default(string), string status = default(string), string backorderStatus = default(string), decimal lowStockThreshold = default(decimal), bool availableForSale = true, bool avail = true, bool isDefault = default(bool), bool isFreeShipping = default(bool), bool taxable = default(bool), string taxClassId = default(string), bool isVirtual = false, bool manageStock = default(bool), bool inStock = default(bool), string warehouseId = default(string), decimal reserveQuantity = default(decimal), decimal quantity = default(decimal), decimal increaseQuantity = 0M, decimal reduceQuantity = 0M, decimal price = default(decimal), decimal specialPrice = default(decimal), decimal retailPrice = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal weight = 0M, string barcode = default(string), decimal width = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), string metaTitle = default(string), string metaDescription = default(string), string metaKeywords = default(string), string manufacturer = default(string), bool reindex = true, bool clearCache = true)
         {
             this.Id = id;
             this.ProductId = productId;
@@ -143,6 +144,7 @@ namespace Org.OpenAPITools.Model
             this.MetaTitle = metaTitle;
             this.MetaDescription = metaDescription;
             this.MetaKeywords = metaKeywords;
+            this.Manufacturer = manufacturer;
             this.Reindex = reindex;
             this.ClearCache = clearCache;
         }
@@ -665,6 +667,16 @@ namespace Org.OpenAPITools.Model
         public string MetaKeywords { get; set; }
 
         /// <summary>
+        /// Specifies the product variant&#39;s manufacturer
+        /// </summary>
+        /// <value>Specifies the product variant&#39;s manufacturer</value>
+        /*
+        <example>Samsung</example>
+        */
+        [DataMember(Name = "manufacturer", EmitDefaultValue = false)]
+        public string Manufacturer { get; set; }
+
+        /// <summary>
         /// Is reindex required
         /// </summary>
         /// <value>Is reindex required</value>
@@ -744,6 +756,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  MetaTitle: ").Append(MetaTitle).Append("\n");
             sb.Append("  MetaDescription: ").Append(MetaDescription).Append("\n");
             sb.Append("  MetaKeywords: ").Append(MetaKeywords).Append("\n");
+            sb.Append("  Manufacturer: ").Append(Manufacturer).Append("\n");
             sb.Append("  Reindex: ").Append(Reindex).Append("\n");
             sb.Append("  ClearCache: ").Append(ClearCache).Append("\n");
             sb.Append("}\n");

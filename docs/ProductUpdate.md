@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **TierPrices** | [**List&lt;ProductAddTierPricesInner&gt;**](ProductAddTierPricesInner.md) | Defines product&#39;s tier prices | [optional] 
 **ReservePrice** | **decimal** | Defines reserve price value | [optional] 
 **BuyitnowPrice** | **decimal** | Defines buy it now value | [optional] 
-**Taxable** | **bool** | Specifies whether a tax is charged | [optional] [default to true]
+**Taxable** | **bool** | Specifies whether a tax is charged | [optional] 
 **TaxClassId** | **string** | Defines tax classes where entity has to be added | [optional] 
 **Type** | **string** | Defines product&#39;s type | [optional] 
 **Status** | **string** | Defines product&#39;s status | [optional] 
