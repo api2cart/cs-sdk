@@ -204,6 +204,7 @@ docs/OrderAddOrderItemInnerOrderItemPropertyInner.md
 docs/OrderApi.md
 docs/OrderCalculate.md
 docs/OrderCalculate200Response.md
+docs/OrderCalculateBundle.md
 docs/OrderCalculateDiscount.md
 docs/OrderCalculateItem.md
 docs/OrderCalculateOrderItemInner.md
@@ -272,6 +273,7 @@ docs/ProductAddBatch.md
 docs/ProductAddBatchPayloadInner.md
 docs/ProductAddBatchPayloadInnerAdvancedPricesInner.md
 docs/ProductAddBatchPayloadInnerImagesInner.md
+docs/ProductAddBatchPayloadInnerSalesTax.md
 docs/ProductAddBestOffer.md
 docs/ProductAddCertificationsInner.md
 docs/ProductAddCertificationsInnerFilesInner.md
@@ -651,6 +653,7 @@ src/Org.OpenAPITools.Test/Model/OrderAddOrderItemInnerOrderItemPropertyInnerTest
 src/Org.OpenAPITools.Test/Model/OrderAddOrderItemInnerTests.cs
 src/Org.OpenAPITools.Test/Model/OrderAddTests.cs
 src/Org.OpenAPITools.Test/Model/OrderCalculate200ResponseTests.cs
+src/Org.OpenAPITools.Test/Model/OrderCalculateBundleTests.cs
 src/Org.OpenAPITools.Test/Model/OrderCalculateDiscountTests.cs
 src/Org.OpenAPITools.Test/Model/OrderCalculateItemTests.cs
 src/Org.OpenAPITools.Test/Model/OrderCalculateOrderItemInnerOrderItemOptionInnerTests.cs
@@ -717,6 +720,7 @@ src/Org.OpenAPITools.Test/Model/ProductAdd200ResponseResultTests.cs
 src/Org.OpenAPITools.Test/Model/ProductAdd200ResponseTests.cs
 src/Org.OpenAPITools.Test/Model/ProductAddBatchPayloadInnerAdvancedPricesInnerTests.cs
 src/Org.OpenAPITools.Test/Model/ProductAddBatchPayloadInnerImagesInnerTests.cs
+src/Org.OpenAPITools.Test/Model/ProductAddBatchPayloadInnerSalesTaxTests.cs
 src/Org.OpenAPITools.Test/Model/ProductAddBatchPayloadInnerTests.cs
 src/Org.OpenAPITools.Test/Model/ProductAddBatchTests.cs
 src/Org.OpenAPITools.Test/Model/ProductAddBestOfferTests.cs
@@ -1114,6 +1118,7 @@ src/Org.OpenAPITools/Model/OrderAddOrderItemInnerOrderItemOptionInner.cs
 src/Org.OpenAPITools/Model/OrderAddOrderItemInnerOrderItemPropertyInner.cs
 src/Org.OpenAPITools/Model/OrderCalculate.cs
 src/Org.OpenAPITools/Model/OrderCalculate200Response.cs
+src/Org.OpenAPITools/Model/OrderCalculateBundle.cs
 src/Org.OpenAPITools/Model/OrderCalculateDiscount.cs
 src/Org.OpenAPITools/Model/OrderCalculateItem.cs
 src/Org.OpenAPITools/Model/OrderCalculateOrderItemInner.cs
@@ -1182,6 +1187,7 @@ src/Org.OpenAPITools/Model/ProductAddBatch.cs
 src/Org.OpenAPITools/Model/ProductAddBatchPayloadInner.cs
 src/Org.OpenAPITools/Model/ProductAddBatchPayloadInnerAdvancedPricesInner.cs
 src/Org.OpenAPITools/Model/ProductAddBatchPayloadInnerImagesInner.cs
+src/Org.OpenAPITools/Model/ProductAddBatchPayloadInnerSalesTax.cs
 src/Org.OpenAPITools/Model/ProductAddBestOffer.cs
 src/Org.OpenAPITools/Model/ProductAddCertificationsInner.cs
 src/Org.OpenAPITools/Model/ProductAddCertificationsInnerFilesInner.cs

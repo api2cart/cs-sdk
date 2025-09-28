@@ -27,13 +27,13 @@ using OpenAPIDateConverter = Org.OpenAPITools.Client.OpenAPIDateConverter;
 namespace Org.OpenAPITools.Model
 {
     /// <summary>
-    /// OrderCalculateItem
+    /// OrderCalculateBundle
     /// </summary>
-    [DataContract(Name = "Order_Calculate_Item")]
-    public partial class OrderCalculateItem : IValidatableObject
+    [DataContract(Name = "Order_Calculate_Bundle")]
+    public partial class OrderCalculateBundle : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrderCalculateItem" /> class.
+        /// Initializes a new instance of the <see cref="OrderCalculateBundle" /> class.
         /// </summary>
         /// <param name="productId">productId.</param>
         /// <param name="sku">sku.</param>
@@ -47,11 +47,10 @@ namespace Org.OpenAPITools.Model
         /// <param name="weightUnit">weightUnit.</param>
         /// <param name="barcode">barcode.</param>
         /// <param name="variantId">variantId.</param>
-        /// <param name="bundleProductId">bundleProductId.</param>
         /// <param name="options">options.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public OrderCalculateItem(string productId = default(string), string sku = default(string), string name = default(string), int quantity = default(int), decimal price = default(decimal), decimal priceIncTax = default(decimal), decimal taxRate = default(decimal), decimal unitDiscount = default(decimal), decimal? weight = default(decimal?), string weightUnit = default(string), string barcode = default(string), string variantId = default(string), string bundleProductId = default(string), List<OrderItemOption> options = default(List<OrderItemOption>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public OrderCalculateBundle(string productId = default(string), string sku = default(string), string name = default(string), int quantity = default(int), decimal price = default(decimal), decimal priceIncTax = default(decimal), decimal taxRate = default(decimal), decimal unitDiscount = default(decimal), decimal? weight = default(decimal?), string weightUnit = default(string), string barcode = default(string), string variantId = default(string), List<OrderItemOption> options = default(List<OrderItemOption>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.ProductId = productId;
             this.Sku = sku;
@@ -65,7 +64,6 @@ namespace Org.OpenAPITools.Model
             this.WeightUnit = weightUnit;
             this.Barcode = barcode;
             this.VariantId = variantId;
-            this.BundleProductId = bundleProductId;
             this.Options = options;
             this.AdditionalFields = additionalFields;
             this.CustomFields = customFields;
@@ -144,12 +142,6 @@ namespace Org.OpenAPITools.Model
         public string VariantId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BundleProductId
-        /// </summary>
-        [DataMember(Name = "bundle_product_id", EmitDefaultValue = true)]
-        public string BundleProductId { get; set; }
-
-        /// <summary>
         /// Gets or Sets Options
         /// </summary>
         [DataMember(Name = "options", EmitDefaultValue = false)]
@@ -174,7 +166,7 @@ namespace Org.OpenAPITools.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class OrderCalculateItem {\n");
+            sb.Append("class OrderCalculateBundle {\n");
             sb.Append("  ProductId: ").Append(ProductId).Append("\n");
             sb.Append("  Sku: ").Append(Sku).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -187,7 +179,6 @@ namespace Org.OpenAPITools.Model
             sb.Append("  WeightUnit: ").Append(WeightUnit).Append("\n");
             sb.Append("  Barcode: ").Append(Barcode).Append("\n");
             sb.Append("  VariantId: ").Append(VariantId).Append("\n");
-            sb.Append("  BundleProductId: ").Append(BundleProductId).Append("\n");
             sb.Append("  Options: ").Append(Options).Append("\n");
             sb.Append("  AdditionalFields: ").Append(AdditionalFields).Append("\n");
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.OrderCalculateItem
+# Org.OpenAPITools.Model.OrderCalculateBundle
 
 ## Properties
 
@@ -16,7 +16,6 @@ Name | Type | Description | Notes
 **WeightUnit** | **string** |  | [optional] 
 **Barcode** | **string** |  | [optional] 
 **VariantId** | **string** |  | [optional] 
-**BundleProductId** | **string** |  | [optional] 
 **Options** | [**List&lt;OrderItemOption&gt;**](OrderItemOption.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 

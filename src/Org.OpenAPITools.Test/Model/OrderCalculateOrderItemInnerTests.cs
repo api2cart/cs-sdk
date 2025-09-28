@@ -83,6 +83,24 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'OrderItemParent'
+        /// </summary>
+        [Fact]
+        public void OrderItemParentTest()
+        {
+            // TODO unit test for the property 'OrderItemParent'
+        }
+
+        /// <summary>
+        /// Test the property 'OrderItemParentOptionName'
+        /// </summary>
+        [Fact]
+        public void OrderItemParentOptionNameTest()
+        {
+            // TODO unit test for the property 'OrderItemParentOptionName'
+        }
+
+        /// <summary>
         /// Test the property 'OrderItemOption'
         /// </summary>
         [Fact]

@@ -894,6 +894,15 @@ paths:
         schema:
           type: string
         style: form
+      - description: UNAS API Key
+        example: c238908e29ceb6e6ad3df15f89a6234709d3f000
+        explode: true
+        in: query
+        name: unas_api_key
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Shopware api key
         example: SWSCS3O1RJBSRNBYQLFIYJN2ZQ
         explode: true
@@ -25647,28 +25656,28 @@ components:
       example:
         tax_lines:
         - code: code
-          rate: 1.4894159098541704
+          rate: 9.965781217890562
           custom_fields: "{}"
           additional_fields: "{}"
-          value: 6.84685269835264
+          value: 9.369310271410669
         - code: code
-          rate: 1.4894159098541704
+          rate: 9.965781217890562
           custom_fields: "{}"
           additional_fields: "{}"
-          value: 6.84685269835264
+          value: 9.369310271410669
         discounts:
         - code: code
           free_shipping: true
           custom_fields: "{}"
           additional_fields: "{}"
           type: type
-          value: 7.457744773683766
+          value: 6.683562403749608
         - code: code
           free_shipping: true
           custom_fields: "{}"
           additional_fields: "{}"
           type: type
-          value: 7.457744773683766
+          value: 6.683562403749608
         subtotal:
           custom_fields: "{}"
           discount: 5.962133916683182
@@ -25676,6 +25685,73 @@ components:
           additional_fields: "{}"
           value: 6.027456183070403
         custom_fields: "{}"
+        bundles:
+        - price_inc_tax: 1.2315135367772556
+          quantity: 4
+          unit_discount: 1.4894159098541704
+          custom_fields: "{}"
+          weight: 6.84685269835264
+          additional_fields: "{}"
+          tax_rate: 1.0246457001441578
+          variant_id: variant_id
+          weight_unit: weight_unit
+          price: 7.386281948385884
+          product_id: product_id
+          name: name
+          options:
+          - price: 1.284659006116532
+            custom_fields: "{}"
+            product_option_value_id: product_option_value_id
+            name: name
+            weight: 2.8841621266687802
+            option_id: option_id
+            additional_fields: "{}"
+            type: type
+            value: value
+          - price: 1.284659006116532
+            custom_fields: "{}"
+            product_option_value_id: product_option_value_id
+            name: name
+            weight: 2.8841621266687802
+            option_id: option_id
+            additional_fields: "{}"
+            type: type
+            value: value
+          sku: sku
+          barcode: barcode
+        - price_inc_tax: 1.2315135367772556
+          quantity: 4
+          unit_discount: 1.4894159098541704
+          custom_fields: "{}"
+          weight: 6.84685269835264
+          additional_fields: "{}"
+          tax_rate: 1.0246457001441578
+          variant_id: variant_id
+          weight_unit: weight_unit
+          price: 7.386281948385884
+          product_id: product_id
+          name: name
+          options:
+          - price: 1.284659006116532
+            custom_fields: "{}"
+            product_option_value_id: product_option_value_id
+            name: name
+            weight: 2.8841621266687802
+            option_id: option_id
+            additional_fields: "{}"
+            type: type
+            value: value
+          - price: 1.284659006116532
+            custom_fields: "{}"
+            product_option_value_id: product_option_value_id
+            name: name
+            weight: 2.8841621266687802
+            option_id: option_id
+            additional_fields: "{}"
+            type: type
+            value: value
+          sku: sku
+          barcode: barcode
         currency:
           symbol_right: symbol_right
           avail: true
@@ -25689,22 +25765,22 @@ components:
           iso3: iso3
         additional_fields: "{}"
         shipping_rates:
-        - price_inc_tax: 7.386281948385884
+        - price_inc_tax: 1.1730742509559433
           code: code
-          price: 4.145608029883936
+          price: 7.457744773683766
           custom_fields: "{}"
           name: name
-          tax: 1.2315135367772556
+          tax: 4.965218492984954
           additional_fields: "{}"
-          tax_rate: 1.0246457001441578
-        - price_inc_tax: 7.386281948385884
+          tax_rate: 5.025004791520295
+        - price_inc_tax: 1.1730742509559433
           code: code
-          price: 4.145608029883936
+          price: 7.457744773683766
           custom_fields: "{}"
           name: name
-          tax: 1.2315135367772556
+          tax: 4.965218492984954
           additional_fields: "{}"
-          tax_rate: 1.0246457001441578
+          tax_rate: 5.025004791520295
         items:
         - price_inc_tax: 7.061401241503109
           quantity: 5
@@ -25737,6 +25813,7 @@ components:
             additional_fields: "{}"
             type: type
             value: value
+          bundle_product_id: bundle_product_id
           sku: sku
           barcode: barcode
         - price_inc_tax: 7.061401241503109
@@ -25770,6 +25847,7 @@ components:
             additional_fields: "{}"
             type: type
             value: value
+          bundle_product_id: bundle_product_id
           sku: sku
           barcode: barcode
         customer:
@@ -25788,6 +25866,10 @@ components:
         items:
           items:
             $ref: '#/components/schemas/Order_Calculate_Item'
+          type: array
+        bundles:
+          items:
+            $ref: '#/components/schemas/Order_Calculate_Bundle'
           type: array
         currency:
           $ref: '#/components/schemas/Currency'
@@ -25862,6 +25944,84 @@ components:
           additional_fields: "{}"
           type: type
           value: value
+        bundle_product_id: bundle_product_id
+        sku: sku
+        barcode: barcode
+      properties:
+        product_id:
+          type: string
+        sku:
+          type: string
+        name:
+          type: string
+        quantity:
+          type: integer
+        price:
+          type: number
+        price_inc_tax:
+          type: number
+        tax_rate:
+          type: number
+        unit_discount:
+          type: number
+        weight:
+          nullable: true
+          type: number
+        weight_unit:
+          nullable: true
+          type: string
+        barcode:
+          nullable: true
+          type: string
+        variant_id:
+          nullable: true
+          type: string
+        bundle_product_id:
+          nullable: true
+          type: string
+        options:
+          items:
+            $ref: '#/components/schemas/Order_Item_Option'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Order_Calculate_Bundle:
+      example:
+        price_inc_tax: 1.2315135367772556
+        quantity: 4
+        unit_discount: 1.4894159098541704
+        custom_fields: "{}"
+        weight: 6.84685269835264
+        additional_fields: "{}"
+        tax_rate: 1.0246457001441578
+        variant_id: variant_id
+        weight_unit: weight_unit
+        price: 7.386281948385884
+        product_id: product_id
+        name: name
+        options:
+        - price: 1.284659006116532
+          custom_fields: "{}"
+          product_option_value_id: product_option_value_id
+          name: name
+          weight: 2.8841621266687802
+          option_id: option_id
+          additional_fields: "{}"
+          type: type
+          value: value
+        - price: 1.284659006116532
+          custom_fields: "{}"
+          product_option_value_id: product_option_value_id
+          name: name
+          weight: 2.8841621266687802
+          option_id: option_id
+          additional_fields: "{}"
+          type: type
+          value: value
         sku: sku
         barcode: barcode
       properties:
@@ -25905,14 +26065,14 @@ components:
           type: object
     Order_Calculate_ShippingRate:
       example:
-        price_inc_tax: 7.386281948385884
+        price_inc_tax: 1.1730742509559433
         code: code
-        price: 4.145608029883936
+        price: 7.457744773683766
         custom_fields: "{}"
         name: name
-        tax: 1.2315135367772556
+        tax: 4.965218492984954
         additional_fields: "{}"
-        tax_rate: 1.0246457001441578
+        tax_rate: 5.025004791520295
       properties:
         code:
           type: string
@@ -25935,10 +26095,10 @@ components:
     Order_Calculate_Tax:
       example:
         code: code
-        rate: 1.4894159098541704
+        rate: 9.965781217890562
         custom_fields: "{}"
         additional_fields: "{}"
-        value: 6.84685269835264
+        value: 9.369310271410669
       properties:
         code:
           type: string
@@ -25959,7 +26119,7 @@ components:
         custom_fields: "{}"
         additional_fields: "{}"
         type: type
-        value: 7.457744773683766
+        value: 6.683562403749608
       properties:
         code:
           nullable: true
@@ -26004,19 +26164,23 @@ components:
         bill_phone: 8 800 5659 6896
         order_item:
         - order_item_id: "125, where {x} - 1,2,3,... etc"
+          order_item_parent: 2
           order_item_option:
           - order_item_option_value: green
             order_item_option_name: Color
           - order_item_option_value: green
             order_item_option_name: Color
+          order_item_parent_option_name: Internal Memory Storage
           order_item_quantity: "5, where {x} - 1,2,3,... etc"
           order_item_variant_id: 52
         - order_item_id: "125, where {x} - 1,2,3,... etc"
+          order_item_parent: 2
           order_item_option:
           - order_item_option_value: green
             order_item_option_name: Color
           - order_item_option_value: green
             order_item_option_name: Color
+          order_item_parent_option_name: Internal Memory Storage
           order_item_quantity: "5, where {x} - 1,2,3,... etc"
           order_item_variant_id: 52
         customer_email: jubari@hannsgroup.com
@@ -31936,6 +32100,7 @@ components:
           sprice_create: sprice_create
           in_stock: true
           type: type
+          listing_duration: listing_duration
           marketplace_item_properties: "{}"
           price: 0.8008281904610115
           dimensions_unit: dimensions_unit
@@ -31943,7 +32108,7 @@ components:
           is_free_shipping: true
           sku: sku
           barcode: barcode
-          height: 1.2315135367772556
+          height: 6.84685269835264
           manufacturer_id: manufacturer_id
           images:
           - name: name
@@ -31975,9 +32140,11 @@ components:
           - stores_ids
           - stores_ids
           upc: upc
-          weight: 2.027123023002322
+          listing_type: listing_type
+          weight: 1.2315135367772556
           mpn: mpn
           external_product_link: external_product_link
+          avail_from: avail_from
           tags:
           - tags
           - tags
@@ -31986,16 +32153,20 @@ components:
           weight_unit: weight_unit
           name: name
           sprice_expire: sprice_expire
+          condition_description: condition_description
           files:
           - name: name
             url: url
           - name: name
             url: url
+          reserve_price: 2.027123023002322
           harmonized_system_code: harmonized_system_code
+          best_offer: 4.145608029883936
           status: status
           is_virtual: true
           short_description: short_description
           downloadable: true
+          isbn: isbn
           description: description
           up_sell_products_ids:
           - up_sell_products_ids
@@ -32018,14 +32189,18 @@ components:
           store_id: store_id
           manage_stock: true
           gtin: gtin
-          quantity: 3.616076749251911
-          length: 4.145608029883936
+          quantity: 7.386281948385884
+          length: 1.0246457001441578
           tax_class_id: tax_class_id
           lang_id: lang_id
           url: url
+          buyitnow_price: 3.616076749251911
           product_type: product_type
+          sales_tax:
+            tax_percent: 0.7457744773683765
+            taxable: true
           special_price: 5.962133916683182
-          width: 7.386281948385884
+          width: 1.4894159098541704
           cross_sell_products_ids:
           - cross_sell_products_ids
           - cross_sell_products_ids
@@ -32041,6 +32216,7 @@ components:
           sprice_create: sprice_create
           in_stock: true
           type: type
+          listing_duration: listing_duration
           marketplace_item_properties: "{}"
           price: 0.8008281904610115
           dimensions_unit: dimensions_unit
@@ -32048,7 +32224,7 @@ components:
           is_free_shipping: true
           sku: sku
           barcode: barcode
-          height: 1.2315135367772556
+          height: 6.84685269835264
           manufacturer_id: manufacturer_id
           images:
           - name: name
@@ -32080,9 +32256,11 @@ components:
           - stores_ids
           - stores_ids
           upc: upc
-          weight: 2.027123023002322
+          listing_type: listing_type
+          weight: 1.2315135367772556
           mpn: mpn
           external_product_link: external_product_link
+          avail_from: avail_from
           tags:
           - tags
           - tags
@@ -32091,16 +32269,20 @@ components:
           weight_unit: weight_unit
           name: name
           sprice_expire: sprice_expire
+          condition_description: condition_description
           files:
           - name: name
             url: url
           - name: name
             url: url
+          reserve_price: 2.027123023002322
           harmonized_system_code: harmonized_system_code
+          best_offer: 4.145608029883936
           status: status
           is_virtual: true
           short_description: short_description
           downloadable: true
+          isbn: isbn
           description: description
           up_sell_products_ids:
           - up_sell_products_ids
@@ -32123,14 +32305,18 @@ components:
           store_id: store_id
           manage_stock: true
           gtin: gtin
-          quantity: 3.616076749251911
-          length: 4.145608029883936
+          quantity: 7.386281948385884
+          length: 1.0246457001441578
           tax_class_id: tax_class_id
           lang_id: lang_id
           url: url
+          buyitnow_price: 3.616076749251911
           product_type: product_type
+          sales_tax:
+            tax_percent: 0.7457744773683765
+            taxable: true
           special_price: 5.962133916683182
-          width: 7.386281948385884
+          width: 1.4894159098541704
           cross_sell_products_ids:
           - cross_sell_products_ids
           - cross_sell_products_ids
@@ -32146,6 +32332,7 @@ components:
           sprice_create: sprice_create
           in_stock: true
           type: type
+          listing_duration: listing_duration
           marketplace_item_properties: "{}"
           price: 0.8008281904610115
           dimensions_unit: dimensions_unit
@@ -32153,7 +32340,7 @@ components:
           is_free_shipping: true
           sku: sku
           barcode: barcode
-          height: 1.2315135367772556
+          height: 6.84685269835264
           manufacturer_id: manufacturer_id
           images:
           - name: name
@@ -32185,9 +32372,11 @@ components:
           - stores_ids
           - stores_ids
           upc: upc
-          weight: 2.027123023002322
+          listing_type: listing_type
+          weight: 1.2315135367772556
           mpn: mpn
           external_product_link: external_product_link
+          avail_from: avail_from
           tags:
           - tags
           - tags
@@ -32196,16 +32385,20 @@ components:
           weight_unit: weight_unit
           name: name
           sprice_expire: sprice_expire
+          condition_description: condition_description
           files:
           - name: name
             url: url
           - name: name
             url: url
+          reserve_price: 2.027123023002322
           harmonized_system_code: harmonized_system_code
+          best_offer: 4.145608029883936
           status: status
           is_virtual: true
           short_description: short_description
           downloadable: true
+          isbn: isbn
           description: description
           up_sell_products_ids:
           - up_sell_products_ids
@@ -32228,14 +32421,18 @@ components:
           store_id: store_id
           manage_stock: true
           gtin: gtin
-          quantity: 3.616076749251911
-          length: 4.145608029883936
+          quantity: 7.386281948385884
+          length: 1.0246457001441578
           tax_class_id: tax_class_id
           lang_id: lang_id
           url: url
+          buyitnow_price: 3.616076749251911
           product_type: product_type
+          sales_tax:
+            tax_percent: 0.7457744773683765
+            taxable: true
           special_price: 5.962133916683182
-          width: 7.386281948385884
+          width: 1.4894159098541704
           cross_sell_products_ids:
           - cross_sell_products_ids
           - cross_sell_products_ids
@@ -32251,6 +32448,7 @@ components:
           sprice_create: sprice_create
           in_stock: true
           type: type
+          listing_duration: listing_duration
           marketplace_item_properties: "{}"
           price: 0.8008281904610115
           dimensions_unit: dimensions_unit
@@ -32258,7 +32456,7 @@ components:
           is_free_shipping: true
           sku: sku
           barcode: barcode
-          height: 1.2315135367772556
+          height: 6.84685269835264
           manufacturer_id: manufacturer_id
           images:
           - name: name
@@ -32290,9 +32488,11 @@ components:
           - stores_ids
           - stores_ids
           upc: upc
-          weight: 2.027123023002322
+          listing_type: listing_type
+          weight: 1.2315135367772556
           mpn: mpn
           external_product_link: external_product_link
+          avail_from: avail_from
           tags:
           - tags
           - tags
@@ -32301,16 +32501,20 @@ components:
           weight_unit: weight_unit
           name: name
           sprice_expire: sprice_expire
+          condition_description: condition_description
           files:
           - name: name
             url: url
           - name: name
             url: url
+          reserve_price: 2.027123023002322
           harmonized_system_code: harmonized_system_code
+          best_offer: 4.145608029883936
           status: status
           is_virtual: true
           short_description: short_description
           downloadable: true
+          isbn: isbn
           description: description
           up_sell_products_ids:
           - up_sell_products_ids
@@ -32333,14 +32537,18 @@ components:
           store_id: store_id
           manage_stock: true
           gtin: gtin
-          quantity: 3.616076749251911
-          length: 4.145608029883936
+          quantity: 7.386281948385884
+          length: 1.0246457001441578
           tax_class_id: tax_class_id
           lang_id: lang_id
           url: url
+          buyitnow_price: 3.616076749251911
           product_type: product_type
+          sales_tax:
+            tax_percent: 0.7457744773683765
+            taxable: true
           special_price: 5.962133916683182
-          width: 7.386281948385884
+          width: 1.4894159098541704
           cross_sell_products_ids:
           - cross_sell_products_ids
           - cross_sell_products_ids
@@ -32356,6 +32564,7 @@ components:
           sprice_create: sprice_create
           in_stock: true
           type: type
+          listing_duration: listing_duration
           marketplace_item_properties: "{}"
           price: 0.8008281904610115
           dimensions_unit: dimensions_unit
@@ -32363,7 +32572,7 @@ components:
           is_free_shipping: true
           sku: sku
           barcode: barcode
-          height: 1.2315135367772556
+          height: 6.84685269835264
           manufacturer_id: manufacturer_id
           images:
           - name: name
@@ -32395,9 +32604,11 @@ components:
           - stores_ids
           - stores_ids
           upc: upc
-          weight: 2.027123023002322
+          listing_type: listing_type
+          weight: 1.2315135367772556
           mpn: mpn
           external_product_link: external_product_link
+          avail_from: avail_from
           tags:
           - tags
           - tags
@@ -32406,16 +32617,20 @@ components:
           weight_unit: weight_unit
           name: name
           sprice_expire: sprice_expire
+          condition_description: condition_description
           files:
           - name: name
             url: url
           - name: name
             url: url
+          reserve_price: 2.027123023002322
           harmonized_system_code: harmonized_system_code
+          best_offer: 4.145608029883936
           status: status
           is_virtual: true
           short_description: short_description
           downloadable: true
+          isbn: isbn
           description: description
           up_sell_products_ids:
           - up_sell_products_ids
@@ -32438,14 +32653,18 @@ components:
           store_id: store_id
           manage_stock: true
           gtin: gtin
-          quantity: 3.616076749251911
-          length: 4.145608029883936
+          quantity: 7.386281948385884
+          length: 1.0246457001441578
           tax_class_id: tax_class_id
           lang_id: lang_id
           url: url
+          buyitnow_price: 3.616076749251911
           product_type: product_type
+          sales_tax:
+            tax_percent: 0.7457744773683765
+            taxable: true
           special_price: 5.962133916683182
-          width: 7.386281948385884
+          width: 1.4894159098541704
           cross_sell_products_ids:
           - cross_sell_products_ids
           - cross_sell_products_ids
@@ -42597,28 +42816,28 @@ components:
         result:
           tax_lines:
           - code: code
-            rate: 1.4894159098541704
+            rate: 9.965781217890562
             custom_fields: "{}"
             additional_fields: "{}"
-            value: 6.84685269835264
+            value: 9.369310271410669
           - code: code
-            rate: 1.4894159098541704
+            rate: 9.965781217890562
             custom_fields: "{}"
             additional_fields: "{}"
-            value: 6.84685269835264
+            value: 9.369310271410669
           discounts:
           - code: code
             free_shipping: true
             custom_fields: "{}"
             additional_fields: "{}"
             type: type
-            value: 7.457744773683766
+            value: 6.683562403749608
           - code: code
             free_shipping: true
             custom_fields: "{}"
             additional_fields: "{}"
             type: type
-            value: 7.457744773683766
+            value: 6.683562403749608
           subtotal:
             custom_fields: "{}"
             discount: 5.962133916683182
@@ -42626,6 +42845,73 @@ components:
             additional_fields: "{}"
             value: 6.027456183070403
           custom_fields: "{}"
+          bundles:
+          - price_inc_tax: 1.2315135367772556
+            quantity: 4
+            unit_discount: 1.4894159098541704
+            custom_fields: "{}"
+            weight: 6.84685269835264
+            additional_fields: "{}"
+            tax_rate: 1.0246457001441578
+            variant_id: variant_id
+            weight_unit: weight_unit
+            price: 7.386281948385884
+            product_id: product_id
+            name: name
+            options:
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            sku: sku
+            barcode: barcode
+          - price_inc_tax: 1.2315135367772556
+            quantity: 4
+            unit_discount: 1.4894159098541704
+            custom_fields: "{}"
+            weight: 6.84685269835264
+            additional_fields: "{}"
+            tax_rate: 1.0246457001441578
+            variant_id: variant_id
+            weight_unit: weight_unit
+            price: 7.386281948385884
+            product_id: product_id
+            name: name
+            options:
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            sku: sku
+            barcode: barcode
           currency:
             symbol_right: symbol_right
             avail: true
@@ -42639,22 +42925,22 @@ components:
             iso3: iso3
           additional_fields: "{}"
           shipping_rates:
-          - price_inc_tax: 7.386281948385884
+          - price_inc_tax: 1.1730742509559433
             code: code
-            price: 4.145608029883936
+            price: 7.457744773683766
             custom_fields: "{}"
             name: name
-            tax: 1.2315135367772556
+            tax: 4.965218492984954
             additional_fields: "{}"
-            tax_rate: 1.0246457001441578
-          - price_inc_tax: 7.386281948385884
+            tax_rate: 5.025004791520295
+          - price_inc_tax: 1.1730742509559433
             code: code
-            price: 4.145608029883936
+            price: 7.457744773683766
             custom_fields: "{}"
             name: name
-            tax: 1.2315135367772556
+            tax: 4.965218492984954
             additional_fields: "{}"
-            tax_rate: 1.0246457001441578
+            tax_rate: 5.025004791520295
           items:
           - price_inc_tax: 7.061401241503109
             quantity: 5
@@ -42687,6 +42973,7 @@ components:
               additional_fields: "{}"
               type: type
               value: value
+            bundle_product_id: bundle_product_id
             sku: sku
             barcode: barcode
           - price_inc_tax: 7.061401241503109
@@ -42720,6 +43007,7 @@ components:
               additional_fields: "{}"
               type: type
               value: value
+            bundle_product_id: bundle_product_id
             sku: sku
             barcode: barcode
           customer:
@@ -44583,11 +44871,13 @@ components:
     OrderCalculate_order_item_inner:
       example:
         order_item_id: "125, where {x} - 1,2,3,... etc"
+        order_item_parent: 2
         order_item_option:
         - order_item_option_value: green
           order_item_option_name: Color
         - order_item_option_value: green
           order_item_option_name: Color
+        order_item_parent_option_name: Internal Memory Storage
         order_item_quantity: "5, where {x} - 1,2,3,... etc"
         order_item_variant_id: 52
       properties:
@@ -44606,6 +44896,16 @@ components:
           example: 52
           type: string
           name: "order_item_variant_id_{x}"
+        order_item_parent:
+          description: Index of the parent grouped/bundle product
+          example: 2
+          type: integer
+          name: "order_item_parent_{x}"
+        order_item_parent_option_name:
+          description: Option name of the parent grouped/bundle product
+          example: Internal Memory Storage
+          type: string
+          name: "order_item_parent_option_name_{x}"
         order_item_option:
           items:
             $ref: '#/components/schemas/OrderCalculate_order_item_inner_order_item_option_inner'
@@ -45569,6 +45869,16 @@ components:
       required:
       - quantity
       - value
+    ProductAddBatch_payload_inner_sales_tax:
+      example:
+        tax_percent: 0.7457744773683765
+        taxable: true
+      properties:
+        tax_percent:
+          minimum: 0
+          type: number
+        taxable:
+          type: boolean
     ProductAddBatch_payload_inner_images_inner:
       example:
         name: name
@@ -45595,6 +45905,7 @@ components:
         sprice_create: sprice_create
         in_stock: true
         type: type
+        listing_duration: listing_duration
         marketplace_item_properties: "{}"
         price: 0.8008281904610115
         dimensions_unit: dimensions_unit
@@ -45602,7 +45913,7 @@ components:
         is_free_shipping: true
         sku: sku
         barcode: barcode
-        height: 1.2315135367772556
+        height: 6.84685269835264
         manufacturer_id: manufacturer_id
         images:
         - name: name
@@ -45634,9 +45945,11 @@ components:
         - stores_ids
         - stores_ids
         upc: upc
-        weight: 2.027123023002322
+        listing_type: listing_type
+        weight: 1.2315135367772556
         mpn: mpn
         external_product_link: external_product_link
+        avail_from: avail_from
         tags:
         - tags
         - tags
@@ -45645,16 +45958,20 @@ components:
         weight_unit: weight_unit
         name: name
         sprice_expire: sprice_expire
+        condition_description: condition_description
         files:
         - name: name
           url: url
         - name: name
           url: url
+        reserve_price: 2.027123023002322
         harmonized_system_code: harmonized_system_code
+        best_offer: 4.145608029883936
         status: status
         is_virtual: true
         short_description: short_description
         downloadable: true
+        isbn: isbn
         description: description
         up_sell_products_ids:
         - up_sell_products_ids
@@ -45677,14 +45994,18 @@ components:
         store_id: store_id
         manage_stock: true
         gtin: gtin
-        quantity: 3.616076749251911
-        length: 4.145608029883936
+        quantity: 7.386281948385884
+        length: 1.0246457001441578
         tax_class_id: tax_class_id
         lang_id: lang_id
         url: url
+        buyitnow_price: 3.616076749251911
         product_type: product_type
+        sales_tax:
+          tax_percent: 0.7457744773683765
+          taxable: true
         special_price: 5.962133916683182
-        width: 7.386281948385884
+        width: 1.4894159098541704
         cross_sell_products_ids:
         - cross_sell_products_ids
         - cross_sell_products_ids
@@ -45717,6 +46038,8 @@ components:
           type: string
         mpn:
           type: string
+        isbn:
+          type: string
         barcode:
           type: string
         price:
@@ -45731,11 +46054,19 @@ components:
           type: string
         sprice_expire:
           type: string
+        avail_from:
+          type: string
         advanced_prices:
           items:
             $ref: '#/components/schemas/ProductAddBatch_payload_inner_advanced_prices_inner'
           type: array
         fixed_cost_shipping_price:
+          type: number
+        buyitnow_price:
+          type: number
+        reserve_price:
+          type: number
+        best_offer:
           type: number
         quantity:
           type: number
@@ -45755,6 +46086,8 @@ components:
           type: string
         condition:
           type: string
+        condition_description:
+          type: string
         visible:
           type: string
         available_for_view:
@@ -45766,6 +46099,10 @@ components:
         in_stock:
           type: boolean
         type:
+          type: string
+        listing_type:
+          type: string
+        listing_duration:
           type: string
         downloadable:
           type: boolean
@@ -45821,6 +46158,8 @@ components:
           type: array
         tax_class_id:
           type: string
+        sales_tax:
+          $ref: '#/components/schemas/ProductAddBatch_payload_inner_sales_tax'
         meta_title:
           type: string
         meta_description:

@@ -146,6 +146,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Isbn'
+        /// </summary>
+        [Fact]
+        public void IsbnTest()
+        {
+            // TODO unit test for the property 'Isbn'
+        }
+
+        /// <summary>
         /// Test the property 'Barcode'
         /// </summary>
         [Fact]
@@ -209,6 +218,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'AvailFrom'
+        /// </summary>
+        [Fact]
+        public void AvailFromTest()
+        {
+            // TODO unit test for the property 'AvailFrom'
+        }
+
+        /// <summary>
         /// Test the property 'AdvancedPrices'
         /// </summary>
         [Fact]
@@ -224,6 +242,33 @@ namespace Org.OpenAPITools.Test.Model
         public void FixedCostShippingPriceTest()
         {
             // TODO unit test for the property 'FixedCostShippingPrice'
+        }
+
+        /// <summary>
+        /// Test the property 'BuyitnowPrice'
+        /// </summary>
+        [Fact]
+        public void BuyitnowPriceTest()
+        {
+            // TODO unit test for the property 'BuyitnowPrice'
+        }
+
+        /// <summary>
+        /// Test the property 'ReservePrice'
+        /// </summary>
+        [Fact]
+        public void ReservePriceTest()
+        {
+            // TODO unit test for the property 'ReservePrice'
+        }
+
+        /// <summary>
+        /// Test the property 'BestOffer'
+        /// </summary>
+        [Fact]
+        public void BestOfferTest()
+        {
+            // TODO unit test for the property 'BestOffer'
         }
 
         /// <summary>
@@ -308,6 +353,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ConditionDescription'
+        /// </summary>
+        [Fact]
+        public void ConditionDescriptionTest()
+        {
+            // TODO unit test for the property 'ConditionDescription'
+        }
+
+        /// <summary>
         /// Test the property 'Visible'
         /// </summary>
         [Fact]
@@ -359,6 +413,24 @@ namespace Org.OpenAPITools.Test.Model
         public void TypeTest()
         {
             // TODO unit test for the property 'Type'
+        }
+
+        /// <summary>
+        /// Test the property 'ListingType'
+        /// </summary>
+        [Fact]
+        public void ListingTypeTest()
+        {
+            // TODO unit test for the property 'ListingType'
+        }
+
+        /// <summary>
+        /// Test the property 'ListingDuration'
+        /// </summary>
+        [Fact]
+        public void ListingDurationTest()
+        {
+            // TODO unit test for the property 'ListingDuration'
         }
 
         /// <summary>
@@ -512,6 +584,15 @@ namespace Org.OpenAPITools.Test.Model
         public void TaxClassIdTest()
         {
             // TODO unit test for the property 'TaxClassId'
+        }
+
+        /// <summary>
+        /// Test the property 'SalesTax'
+        /// </summary>
+        [Fact]
+        public void SalesTaxTest()
+        {
+            // TODO unit test for the property 'SalesTax'
         }
 
         /// <summary>

@@ -43,8 +43,10 @@ namespace Org.OpenAPITools.Model
         /// <param name="orderItemId">Defines orders specified by order item id (required).</param>
         /// <param name="orderItemQuantity">Defines orders specified by order item quantity (required).</param>
         /// <param name="orderItemVariantId">Ordered product variant. Where x is order item ID.</param>
+        /// <param name="orderItemParent">Index of the parent grouped/bundle product.</param>
+        /// <param name="orderItemParentOptionName">Option name of the parent grouped/bundle product.</param>
         /// <param name="orderItemOption">orderItemOption.</param>
-        public OrderCalculateOrderItemInner(string orderItemId = default(string), int orderItemQuantity = default(int), string orderItemVariantId = default(string), List<OrderCalculateOrderItemInnerOrderItemOptionInner> orderItemOption = default(List<OrderCalculateOrderItemInnerOrderItemOptionInner>))
+        public OrderCalculateOrderItemInner(string orderItemId = default(string), int orderItemQuantity = default(int), string orderItemVariantId = default(string), int orderItemParent = default(int), string orderItemParentOptionName = default(string), List<OrderCalculateOrderItemInnerOrderItemOptionInner> orderItemOption = default(List<OrderCalculateOrderItemInnerOrderItemOptionInner>))
         {
             // to ensure "orderItemId" is required (not null)
             if (orderItemId == null)
@@ -54,6 +56,8 @@ namespace Org.OpenAPITools.Model
             this.OrderItemId = orderItemId;
             this.OrderItemQuantity = orderItemQuantity;
             this.OrderItemVariantId = orderItemVariantId;
+            this.OrderItemParent = orderItemParent;
+            this.OrderItemParentOptionName = orderItemParentOptionName;
             this.OrderItemOption = orderItemOption;
         }
 
@@ -88,6 +92,26 @@ namespace Org.OpenAPITools.Model
         public string OrderItemVariantId { get; set; }
 
         /// <summary>
+        /// Index of the parent grouped/bundle product
+        /// </summary>
+        /// <value>Index of the parent grouped/bundle product</value>
+        /*
+        <example>2</example>
+        */
+        [DataMember(Name = "order_item_parent", EmitDefaultValue = false)]
+        public int OrderItemParent { get; set; }
+
+        /// <summary>
+        /// Option name of the parent grouped/bundle product
+        /// </summary>
+        /// <value>Option name of the parent grouped/bundle product</value>
+        /*
+        <example>Internal Memory Storage</example>
+        */
+        [DataMember(Name = "order_item_parent_option_name", EmitDefaultValue = false)]
+        public string OrderItemParentOptionName { get; set; }
+
+        /// <summary>
         /// Gets or Sets OrderItemOption
         /// </summary>
         [DataMember(Name = "order_item_option", EmitDefaultValue = false)]
@@ -104,6 +128,8 @@ namespace Org.OpenAPITools.Model
             sb.Append("  OrderItemId: ").Append(OrderItemId).Append("\n");
             sb.Append("  OrderItemQuantity: ").Append(OrderItemQuantity).Append("\n");
             sb.Append("  OrderItemVariantId: ").Append(OrderItemVariantId).Append("\n");
+            sb.Append("  OrderItemParent: ").Append(OrderItemParent).Append("\n");
+            sb.Append("  OrderItemParentOptionName: ").Append(OrderItemParentOptionName).Append("\n");
             sb.Append("  OrderItemOption: ").Append(OrderItemOption).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
