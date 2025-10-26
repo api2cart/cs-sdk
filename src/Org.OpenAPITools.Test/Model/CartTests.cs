@@ -92,6 +92,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'DefaultRoundingPrecision'
+        /// </summary>
+        [Fact]
+        public void DefaultRoundingPrecisionTest()
+        {
+            // TODO unit test for the property 'DefaultRoundingPrecision'
+        }
+
+        /// <summary>
         /// Test the property 'DbPrefix'
         /// </summary>
         [Fact]

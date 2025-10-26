@@ -173,7 +173,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? exclude = null;
             //bool? enableCache = null;
             //bool? useLatestApiVersion = null;
-            //var response = instance.OrderInfo(id, orderId, storeId, varParams, responseFields, exclude, enableCache, useLatestApiVersion);
+            //int? roundingPrecision = null;
+            //var response = instance.OrderInfo(id, orderId, storeId, varParams, responseFields, exclude, enableCache, useLatestApiVersion, roundingPrecision);
             //Assert.IsType<OrderInfo200Response>(response);
         }
 
@@ -222,7 +223,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? exclude = null;
             //bool? enableCache = null;
             //bool? useLatestApiVersion = null;
-            //var response = instance.OrderList(start, count, pageCursor, ids, orderIds, sinceId, storeId, customerId, customerEmail, basketId, currencyId, phone, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentStatus, returnStatus, fulfillmentChannel, shippingMethod, skipOrderIds, isDeleted, shippingCountryIso3, deliveryMethod, shipNodeType, createdTo, createdFrom, modifiedTo, modifiedFrom, tags, sortBy, sortDirection, varParams, responseFields, exclude, enableCache, useLatestApiVersion);
+            //int? roundingPrecision = null;
+            //var response = instance.OrderList(start, count, pageCursor, ids, orderIds, sinceId, storeId, customerId, customerEmail, basketId, currencyId, phone, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentStatus, returnStatus, fulfillmentChannel, shippingMethod, skipOrderIds, isDeleted, shippingCountryIso3, deliveryMethod, shipNodeType, createdTo, createdFrom, modifiedTo, modifiedFrom, tags, sortBy, sortDirection, varParams, responseFields, exclude, enableCache, useLatestApiVersion, roundingPrecision);
             //Assert.IsType<ModelResponseOrderList>(response);
         }
 

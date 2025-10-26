@@ -695,6 +695,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ProcessingProfileId'
+        /// </summary>
+        [Fact]
+        public void ProcessingProfileIdTest()
+        {
+            // TODO unit test for the property 'ProcessingProfileId'
+        }
+
+        /// <summary>
         /// Test the property 'WhenMade'
         /// </summary>
         [Fact]

@@ -7102,6 +7102,22 @@ paths:
           default: false
           type: boolean
         style: form
+      - description: "<p>Specifies the rounding precision for fractional numeric values\
+          \ (such as prices, taxes, and weights).</p> <p>Supported values range from\
+          \ <b>1</b> to <b>6</b>.</p> <p>The default rounding precision may vary depending\
+          \ on the platform. You can retrieve the default value using the <strong>cart.info</strong>\
+          \ method in the <code>default_rounding_precision</code> field. </p><p>Values\
+          \ are rounded to the nearest number at the specified precision. Fractions\
+          \ of .5 or higher are rounded up, while fractions lower than .5 are rounded\
+          \ down.</p>"
+        example: 3
+        explode: true
+        in: query
+        name: rounding_precision
+        required: false
+        schema:
+          type: integer
+        style: form
       responses:
         "200":
           content:
@@ -7677,6 +7693,22 @@ paths:
         schema:
           default: false
           type: boolean
+        style: form
+      - description: "<p>Specifies the rounding precision for fractional numeric values\
+          \ (such as prices, taxes, and weights).</p> <p>Supported values range from\
+          \ <b>1</b> to <b>6</b>.</p> <p>The default rounding precision may vary depending\
+          \ on the platform. You can retrieve the default value using the <strong>cart.info</strong>\
+          \ method in the <code>default_rounding_precision</code> field. </p><p>Values\
+          \ are rounded to the nearest number at the specified precision. Fractions\
+          \ of .5 or higher are rounded up, while fractions lower than .5 are rounded\
+          \ down.</p>"
+        example: 3
+        explode: true
+        in: query
+        name: rounding_precision
+        required: false
+        schema:
+          type: integer
         style: form
       responses:
         "200":
@@ -15552,6 +15584,7 @@ components:
           name: name
           additional_fields: "{}"
           id: id
+        default_rounding_precision: 6
         custom_fields: "{}"
         name: name
         warehouses:
@@ -15878,6 +15911,9 @@ components:
         bridge_version:
           nullable: true
           type: string
+        default_rounding_precision:
+          nullable: true
+          type: integer
         db_prefix:
           nullable: true
           type: string
@@ -31257,6 +31293,7 @@ components:
         related_products_ids: "4,5"
         fixed_cost_shipping_price: 5.5
         attribute_name: "Color,Manufacturer"
+        processing_profile_id: '`12345678`'
         cost_price: 65.9
         store_id: "1"
         manage_stock: false
@@ -31967,6 +32004,13 @@ components:
           example: 40256592690
           type: integer
           name: shipping_template_id
+        processing_profile_id:
+          description: "The numeric ID of the processing profile (readiness state)\
+            \ for physical products in Etsy. You can find possible values in the \"\
+            cart.info\" API method response, in the field processing_profiles[]->readiness_state_id."
+          example: '`12345678`'
+          type: integer
+          name: processing_profile_id
         shipping_details:
           description: "The shipping details, including flat and calculated shipping\
             \ costs and shipping insurance costs. Look at cart.info method response\
@@ -32797,6 +32841,7 @@ components:
           weight_major: 6.84685269835264
           weight_minor: 7.457744773683766
         fixed_cost_shipping_price: 5.5
+        processing_profile_id: '`12345678`'
         on_sale: false
         cost_price: 65.9
         store_id: "1"
@@ -33280,6 +33325,13 @@ components:
           example: 40256592690
           type: integer
           name: shipping_template_id
+        processing_profile_id:
+          description: "The numeric ID of the processing profile (readiness state)\
+            \ for physical products in Etsy. You can find possible values in the \"\
+            cart.info\" API method response, in the field processing_profiles[]->readiness_state_id."
+          example: '`12345678`'
+          type: integer
+          name: processing_profile_id
         when_made:
           default: made_to_order
           description: An enumerated string for the era in which the maker made the
@@ -41295,6 +41347,7 @@ components:
             name: name
             additional_fields: "{}"
             id: id
+          default_rounding_precision: 6
           custom_fields: "{}"
           name: name
           warehouses:
