@@ -245,6 +245,7 @@ namespace Org.OpenAPITools.Test.Api
         public void ProductCountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string? sku = null;
             //string? productIds = null;
             //string? sinceId = null;
             //string? categoriesIds = null;
@@ -258,6 +259,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
             //string? brandName = null;
+            //string? manufacturerId = null;
             //List<string>? productAttributes = null;
             //string? status = null;
             //string? type = null;
@@ -268,7 +270,7 @@ namespace Org.OpenAPITools.Test.Api
             //bool? returnGlobal = null;
             //bool? disableReportCache = null;
             //bool? useLatestApiVersion = null;
-            //var response = instance.ProductCount(productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
+            //var response = instance.ProductCount(sku, productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
             //Assert.IsType<ProductCount200Response>(response);
         }
 
@@ -445,6 +447,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? sku = null;
             //string? brandName = null;
             //List<string>? productAttributes = null;
+            //string? manufacturerId = null;
             //string? status = null;
             //string? type = null;
             //string? visible = null;
@@ -461,7 +464,7 @@ namespace Org.OpenAPITools.Test.Api
             //bool? disableReportCache = null;
             //bool? useLatestApiVersion = null;
             //string? productType = null;
-            //var response = instance.ProductList(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, productType);
+            //var response = instance.ProductList(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, manufacturerId, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, productType);
             //Assert.IsType<ModelResponseProductList>(response);
         }
 

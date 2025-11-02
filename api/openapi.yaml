@@ -8899,6 +8899,15 @@ paths:
       description: Count products in store.
       operationId: ProductCount
       parameters:
+      - description: Filter by product's sku
+        example: bag_01
+        explode: true
+        in: query
+        name: sku
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Counts products specified by product ids
         example: "4,5"
         explode: true
@@ -9013,6 +9022,15 @@ paths:
         explode: true
         in: query
         name: brand_name
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Defines product's manufacturer by manufacturer_id
+        example: "1"
+        explode: true
+        in: query
+        name: manufacturer_id
         required: false
         schema:
           type: string
@@ -9311,6 +9329,15 @@ paths:
           items:
             type: string
           type: array
+        style: form
+      - description: Defines product's manufacturer by manufacturer_id
+        example: "1"
+        explode: true
+        in: query
+        name: manufacturer_id
+        required: false
+        schema:
+          type: string
         style: form
       - description: Defines product's status
         example: disabled
@@ -26409,6 +26436,7 @@ components:
           value: value
         - name: name
           value: value
+        fee_price: 5.5
         order_id: 25
         channel_id: "1"
         coupon_discount: 5.5
@@ -26864,6 +26892,11 @@ components:
           example: newsletter
           type: string
           name: origin
+        fee_price:
+          description: Specifies refund's fee price
+          example: 5.5
+          type: number
+          name: fee_price
         order_item:
           items:
             $ref: '#/components/schemas/OrderAdd_order_item_inner'
