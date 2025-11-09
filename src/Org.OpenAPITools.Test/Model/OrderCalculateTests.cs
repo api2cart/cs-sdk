@@ -92,6 +92,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'RoundingPrecision'
+        /// </summary>
+        [Fact]
+        public void RoundingPrecisionTest()
+        {
+            // TODO unit test for the property 'RoundingPrecision'
+        }
+
+        /// <summary>
         /// Test the property 'ShippFirstName'
         /// </summary>
         [Fact]

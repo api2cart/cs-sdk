@@ -44,6 +44,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="currencyId">Currency Id.</param>
         /// <param name="storeId">Store Id.</param>
         /// <param name="coupons">Coupons that will be applied to order. If the order isn&#39;t eligible for any given discount code or there is no discount with such a code it will be skipped during calculation.</param>
+        /// <param name="roundingPrecision">&lt;p&gt;Specifies the rounding precision for fractional numeric values (such as prices, taxes, and weights).&lt;/p&gt; &lt;p&gt;Supported values range from &lt;b&gt;1&lt;/b&gt; to &lt;b&gt;6&lt;/b&gt;.&lt;/p&gt; &lt;p&gt;The default rounding precision may vary depending on the platform. You can retrieve the default value using the &lt;strong&gt;cart.info&lt;/strong&gt; method in the &lt;code&gt;default_rounding_precision&lt;/code&gt; field. &lt;/p&gt;&lt;p&gt;Values are rounded to the nearest number at the specified precision. Fractions of .5 or higher are rounded up, while fractions lower than .5 are rounded down.&lt;/p&gt;.</param>
         /// <param name="shippFirstName">Specifies shipping first name (required).</param>
         /// <param name="shippLastName">Specifies shipping last name (required).</param>
         /// <param name="shippAddress1">Specifies first shipping address (required).</param>
@@ -66,7 +67,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="billPhone">Specifies billing phone.</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve.</param>
         /// <param name="orderItem">orderItem (required).</param>
-        public OrderCalculate(string customerEmail = default(string), string currencyId = default(string), string storeId = default(string), List<string> coupons = default(List<string>), string shippFirstName = default(string), string shippLastName = default(string), string shippAddress1 = default(string), string shippAddress2 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), string shippCompany = default(string), string shippPhone = default(string), string billFirstName = default(string), string billLastName = default(string), string billAddress1 = default(string), string billAddress2 = default(string), string billCity = default(string), string billPostcode = default(string), string billState = default(string), string billCountry = default(string), string billCompany = default(string), string billPhone = default(string), string responseFields = default(string), List<OrderCalculateOrderItemInner> orderItem = default(List<OrderCalculateOrderItemInner>))
+        public OrderCalculate(string customerEmail = default(string), string currencyId = default(string), string storeId = default(string), List<string> coupons = default(List<string>), int roundingPrecision = default(int), string shippFirstName = default(string), string shippLastName = default(string), string shippAddress1 = default(string), string shippAddress2 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), string shippCompany = default(string), string shippPhone = default(string), string billFirstName = default(string), string billLastName = default(string), string billAddress1 = default(string), string billAddress2 = default(string), string billCity = default(string), string billPostcode = default(string), string billState = default(string), string billCountry = default(string), string billCompany = default(string), string billPhone = default(string), string responseFields = default(string), List<OrderCalculateOrderItemInner> orderItem = default(List<OrderCalculateOrderItemInner>))
         {
             // to ensure "customerEmail" is required (not null)
             if (customerEmail == null)
@@ -119,6 +120,7 @@ namespace Org.OpenAPITools.Model
             this.CurrencyId = currencyId;
             this.StoreId = storeId;
             this.Coupons = coupons;
+            this.RoundingPrecision = roundingPrecision;
             this.ShippAddress2 = shippAddress2;
             this.ShippState = shippState;
             this.ShippCompany = shippCompany;
@@ -172,6 +174,16 @@ namespace Org.OpenAPITools.Model
         /// <value>Coupons that will be applied to order. If the order isn&#39;t eligible for any given discount code or there is no discount with such a code it will be skipped during calculation</value>
         [DataMember(Name = "coupons", EmitDefaultValue = false)]
         public List<string> Coupons { get; set; }
+
+        /// <summary>
+        /// &lt;p&gt;Specifies the rounding precision for fractional numeric values (such as prices, taxes, and weights).&lt;/p&gt; &lt;p&gt;Supported values range from &lt;b&gt;1&lt;/b&gt; to &lt;b&gt;6&lt;/b&gt;.&lt;/p&gt; &lt;p&gt;The default rounding precision may vary depending on the platform. You can retrieve the default value using the &lt;strong&gt;cart.info&lt;/strong&gt; method in the &lt;code&gt;default_rounding_precision&lt;/code&gt; field. &lt;/p&gt;&lt;p&gt;Values are rounded to the nearest number at the specified precision. Fractions of .5 or higher are rounded up, while fractions lower than .5 are rounded down.&lt;/p&gt;
+        /// </summary>
+        /// <value>&lt;p&gt;Specifies the rounding precision for fractional numeric values (such as prices, taxes, and weights).&lt;/p&gt; &lt;p&gt;Supported values range from &lt;b&gt;1&lt;/b&gt; to &lt;b&gt;6&lt;/b&gt;.&lt;/p&gt; &lt;p&gt;The default rounding precision may vary depending on the platform. You can retrieve the default value using the &lt;strong&gt;cart.info&lt;/strong&gt; method in the &lt;code&gt;default_rounding_precision&lt;/code&gt; field. &lt;/p&gt;&lt;p&gt;Values are rounded to the nearest number at the specified precision. Fractions of .5 or higher are rounded up, while fractions lower than .5 are rounded down.&lt;/p&gt;</value>
+        /*
+        <example>3</example>
+        */
+        [DataMember(Name = "rounding_precision", EmitDefaultValue = false)]
+        public int RoundingPrecision { get; set; }
 
         /// <summary>
         /// Specifies shipping first name
@@ -401,6 +413,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  CurrencyId: ").Append(CurrencyId).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  Coupons: ").Append(Coupons).Append("\n");
+            sb.Append("  RoundingPrecision: ").Append(RoundingPrecision).Append("\n");
             sb.Append("  ShippFirstName: ").Append(ShippFirstName).Append("\n");
             sb.Append("  ShippLastName: ").Append(ShippLastName).Append("\n");
             sb.Append("  ShippAddress1: ").Append(ShippAddress1).Append("\n");

@@ -38,11 +38,13 @@ namespace Org.OpenAPITools.Model
         /// <param name="id">id.</param>
         /// <param name="groupId">groupId.</param>
         /// <param name="price">price.</param>
-        public ProductPriceUpdateGroupPricesInner(int id = default(int), string groupId = default(string), decimal price = default(decimal))
+        /// <param name="qty">qty.</param>
+        public ProductPriceUpdateGroupPricesInner(int id = default(int), string groupId = default(string), decimal price = default(decimal), int qty = default(int))
         {
             this.Id = id;
             this.GroupId = groupId;
             this.Price = price;
+            this.Qty = qty;
         }
 
         /// <summary>
@@ -64,6 +66,12 @@ namespace Org.OpenAPITools.Model
         public decimal Price { get; set; }
 
         /// <summary>
+        /// Gets or Sets Qty
+        /// </summary>
+        [DataMember(Name = "qty", EmitDefaultValue = false)]
+        public int Qty { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -74,6 +82,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
+            sb.Append("  Qty: ").Append(Qty).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

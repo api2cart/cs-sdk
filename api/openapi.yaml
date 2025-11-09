@@ -374,6 +374,42 @@ paths:
         schema:
           type: string
         style: form
+      - description: Americommerce App ID
+        example: "1"
+        explode: true
+        in: query
+        name: americommerce_app_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Americommerce App Secret
+        example: 9fd3d282d65a007a2b9d541b5e0e410b2cecd6199632db53503b93637b8a6000
+        explode: true
+        in: query
+        name: americommerce_app_secret
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Americommerce Access Token
+        example: 1e721f59b610e2666caea03094600765
+        explode: true
+        in: query
+        name: americommerce_access_token
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Americommerce Refresh Token
+        example: 520c011444af41d916543cdda859a5114
+        explode: true
+        in: query
+        name: americommerce_refresh_token
+        required: false
+        schema:
+          type: string
+        style: form
       - description: It's a BigCommerce account for which API is enabled
         example: admin
         explode: true
@@ -13472,6 +13508,7 @@ components:
         square_client_id: sq0idp-qwer_1pvuTYe9cAf1lmxyQ
         mercado_libre_app_id: "211188015100135"
         ftp_user: user
+        americommerce_refresh_token: 520c011444af41d916543cdda859a5114
         zoho_client_id: 1000.FLCHGI2LS1111111TOR4OGB697W4IX
         zoho_refresh_token: 1000.11111111111111111111111111111111.1b3ca6f054341a111118abf928beb33b
         walmart_client_id: 423f6A24-123z-8654-989u-6fa96478289
@@ -13507,6 +13544,7 @@ components:
         miva_access_token: 227cbe434a1e358d72db0de993x9d9fd
         ebay_environment: sandbox
         shopee_partner_id: "1276777"
+        americommerce_access_token: 1e721f59b610e2666caea03094600765
         ecwid_acess_token: igse8e4rdmzkxdi937qe69d59en1imw
         shopline_shared_secret: 1701d123bb5cc14cd2732dcaed90638316c0a09
         hybris_websites:
@@ -13602,6 +13640,7 @@ components:
         hybris_client_secret: secret_phrase_1
         otto_client_secret: 9887a82a-2879-421e-a6wc-54e986b3458c
         etsy_token_secret: igse8e4rdmzkxdi937qe69d59en1imw
+        americommerce_app_id: "1"
         temu_app_secret: 4782d2d827276688bf4758bed55dbdd4bbe79a78
         store_url: http://mystore.com
         tiendanube_user_id: 1234
@@ -13634,6 +13673,7 @@ components:
         commercehq_api_password: 4Grr_ZCLNNoSUuhAjesKuchxo9SL
         mercado_libre_refresh_token: TG-63h13529vb5464110188d2x9-703754376
         ftp_host: ftp.mystore.com
+        americommerce_app_secret: 9fd3d282d65a007a2b9d541b5e0e410b2cecd6199632db53503b93637b8a6000
         zid_client_secret: nl5l1lE0vxgv6cV111fHsdlOOIfb0Ms5IR7l4Igs
         walmart_channel_type: 0f3e4dd4-0514-4346-b39d-af0e00ea066d
         bricklink_token: ktv4n9rgrj0evjuy2t6p2xlb1f8u5pmy
@@ -13649,6 +13689,7 @@ components:
           - 3DCartApi
           - AceShop
           - AmazonSP
+          - Americommerce
           - AspDotNetStorefront
           - BigCartel
           - Bricklink
@@ -13847,6 +13888,26 @@ components:
           example: f6471ef78f72b41849a8b8b67791b0b5
           type: string
           name: aspdotnetstorefront_api_pass
+        americommerce_app_id:
+          description: Americommerce App ID
+          example: "1"
+          type: string
+          name: americommerce_app_id
+        americommerce_app_secret:
+          description: Americommerce App Secret
+          example: 9fd3d282d65a007a2b9d541b5e0e410b2cecd6199632db53503b93637b8a6000
+          type: string
+          name: americommerce_app_secret
+        americommerce_access_token:
+          description: Americommerce Access Token
+          example: 1e721f59b610e2666caea03094600765
+          type: string
+          name: americommerce_access_token
+        americommerce_refresh_token:
+          description: Americommerce Refresh Token
+          example: 520c011444af41d916543cdda859a5114
+          type: string
+          name: americommerce_refresh_token
         bigcommerceapi_admin_account:
           description: It's a BigCommerce account for which API is enabled
           example: admin
@@ -26214,6 +26275,7 @@ components:
         bill_last_name: Smith
         shipp_state: IL
         bill_country: US
+        rounding_precision: 3
         coupons:
         - coupons
         - coupons
@@ -26277,6 +26339,18 @@ components:
             type: string
           minItems: 1
           type: array
+        rounding_precision:
+          description: "<p>Specifies the rounding precision for fractional numeric\
+            \ values (such as prices, taxes, and weights).</p> <p>Supported values\
+            \ range from <b>1</b> to <b>6</b>.</p> <p>The default rounding precision\
+            \ may vary depending on the platform. You can retrieve the default value\
+            \ using the <strong>cart.info</strong> method in the <code>default_rounding_precision</code>\
+            \ field. </p><p>Values are rounded to the nearest number at the specified\
+            \ precision. Fractions of .5 or higher are rounded up, while fractions\
+            \ lower than .5 are rounded down.</p>"
+          example: 3
+          type: integer
+          name: rounding_precision
         shipp_first_name:
           description: Specifies shipping first name
           example: John
@@ -31268,7 +31342,7 @@ components:
           personalization_instructions: personalization_instructions
           is_personalizable: true
           personalization_is_required: true
-          personalization_char_count_max: 6
+          personalization_char_count_max: 8
         additional_image_urls:
         - https://openapi-generator.tech
         - https://openapi-generator.tech
@@ -31280,14 +31354,14 @@ components:
         listing_type: Auction
         mpn: "9770317847001"
         logistic_info:
-        - shipping_fee: 4.965218492984954
-          logistic_id: 1.1730742509559433
+        - shipping_fee: 5.025004791520295
+          logistic_id: 4.965218492984954
           is_free: true
-          size_id: 5.025004791520295
-        - shipping_fee: 4.965218492984954
-          logistic_id: 1.1730742509559433
+          size_id: 9.965781217890562
+        - shipping_fee: 5.025004791520295
+          logistic_id: 4.965218492984954
           is_free: true
-          size_id: 5.025004791520295
+          size_id: 9.965781217890562
         external_product_link: http://example.com/t-shirt
         is_supply: false
         tags: "tag1,tag2"
@@ -31301,10 +31375,10 @@ components:
         short_description: Short description. This is very short description
         shipping_details:
         - shipping_service: shipping_service
-          shipping_cost: 7.386281948385884
+          shipping_cost: 1.2315135367772556
           shipping_type: shipping_type
         - shipping_service: shipping_service
-          shipping_cost: 7.386281948385884
+          shipping_cost: 1.2315135367772556
           shipping_type: shipping_type
         created_at: 2014-08-09 13:13:13
         delivery_option_ids: "6956548250505111111,6956548250505111112"
@@ -31356,9 +31430,9 @@ components:
           name: name
           used_for_variations: false
           booking_details:
-            time_strict_value: 2.027123023002322
-            session_gap: 9
-            sessions_count: 3
+            time_strict_value: 4.145608029883936
+            session_gap: 3
+            sessions_count: 2
             time_strict_type: days
             availabilities:
             - times:
@@ -31382,9 +31456,9 @@ components:
             - date: date
               day: sunday
             type: date
-            session_duration: 7
+            session_duration: 9
           food_details:
-            calories: 5.637376656633329
+            calories: 2.3021358869347655
           value: value
           input_value: input_value
         - group_products_details:
@@ -31399,9 +31473,9 @@ components:
           name: name
           used_for_variations: false
           booking_details:
-            time_strict_value: 2.027123023002322
-            session_gap: 9
-            sessions_count: 3
+            time_strict_value: 4.145608029883936
+            session_gap: 3
+            sessions_count: 2
             time_strict_type: days
             availabilities:
             - times:
@@ -31425,9 +31499,9 @@ components:
             - date: date
               day: sunday
             type: date
-            session_duration: 7
+            session_duration: 9
           food_details:
-            calories: 5.637376656633329
+            calories: 2.3021358869347655
           value: value
           input_value: input_value
         ordered_count: 15
@@ -31463,8 +31537,8 @@ components:
         sprice_expire: 2018-08-25 23:56:12
         reserve_price: 65.9
         best_offer:
-          auto_accept_price: 9.369310271410669
-          minimum_offer_price: 9.965781217890562
+          auto_accept_price: 6.683562403749608
+          minimum_offer_price: 9.369310271410669
         is_virtual: false
         downloadable: true
         isbn: "9783161484100"
@@ -31475,14 +31549,14 @@ components:
           id: id
           url: url
         package_details:
-          package_width: 1.4894159098541704
+          package_width: 6.84685269835264
           shipping_package: shipping_package
-          package_depth: 1.2315135367772556
-          package_length: 1.0246457001441578
+          package_depth: 1.0246457001441578
+          package_length: 1.4894159098541704
           weigh_unit: weigh_unit
           measure_unit: measure_unit
-          weight_major: 6.84685269835264
-          weight_minor: 7.457744773683766
+          weight_major: 7.457744773683766
+          weight_minor: 1.1730742509559433
         sprice_modified: 2018-12-05 13:46:20
         available_for_sale: false
         gtin: "12345678912345"
@@ -31510,11 +31584,13 @@ components:
         group_prices:
         - group_id: group_id
           price: 1.4658129805029452
+          qty: 5
         - group_id: group_id
           price: 1.4658129805029452
+          qty: 5
         product_type: BICYCLE
         sales_tax:
-          tax_percent: 4.145608029883936
+          tax_percent: 7.386281948385884
           tax_state: tax_state
           shipping_inc_in_tax: true
         delivery_code: 24uurs-23
@@ -32818,7 +32894,7 @@ components:
           personalization_instructions: personalization_instructions
           is_personalizable: true
           personalization_is_required: true
-          personalization_char_count_max: 6
+          personalization_char_count_max: 8
         manufacturer_id: "1"
         visible: search
         shipping_template_id: 40256592690
@@ -32865,14 +32941,14 @@ components:
         ean: "5901234123457"
         related_products_ids: "4,5"
         package_details:
-          package_width: 1.4894159098541704
+          package_width: 6.84685269835264
           shipping_package: shipping_package
-          package_depth: 1.2315135367772556
-          package_length: 1.0246457001441578
+          package_depth: 1.0246457001441578
+          package_length: 1.4894159098541704
           weigh_unit: weigh_unit
           measure_unit: measure_unit
-          weight_major: 6.84685269835264
-          weight_minor: 7.457744773683766
+          weight_major: 7.457744773683766
+          weight_minor: 1.1730742509559433
         fixed_cost_shipping_price: 5.5
         processing_profile_id: '`12345678`'
         on_sale: false
@@ -32912,9 +32988,9 @@ components:
           name: name
           used_for_variations: false
           booking_details:
-            time_strict_value: 2.027123023002322
-            session_gap: 9
-            sessions_count: 3
+            time_strict_value: 4.145608029883936
+            session_gap: 3
+            sessions_count: 2
             time_strict_type: days
             availabilities:
             - times:
@@ -32938,9 +33014,9 @@ components:
             - date: date
               day: sunday
             type: date
-            session_duration: 7
+            session_duration: 9
           food_details:
-            calories: 5.637376656633329
+            calories: 2.3021358869347655
           value: value
           input_value: input_value
         - group_products_details:
@@ -32955,9 +33031,9 @@ components:
           name: name
           used_for_variations: false
           booking_details:
-            time_strict_value: 2.027123023002322
-            session_gap: 9
-            sessions_count: 3
+            time_strict_value: 4.145608029883936
+            session_gap: 3
+            sessions_count: 2
             time_strict_type: days
             availabilities:
             - times:
@@ -32981,9 +33057,9 @@ components:
             - date: date
               day: sunday
             type: date
-            session_duration: 7
+            session_duration: 9
           food_details:
-            calories: 5.637376656633329
+            calories: 2.3021358869347655
           value: value
           input_value: input_value
       properties:
@@ -36137,8 +36213,10 @@ components:
         group_prices:
         - group_id: group_id
           price: 1.4658129805029452
+          qty: 5
         - group_id: group_id
           price: 1.4658129805029452
+          qty: 5
         store_id: "1"
         product_id: 10
       properties:
@@ -36162,9 +36240,11 @@ components:
         group_prices:
         - group_id: group_id
           price: 6.027456183070403
+          qty: 1
           id: 0
         - group_id: group_id
           price: 6.027456183070403
+          qty: 1
           id: 0
         product_id: 10
       properties:
@@ -38293,8 +38373,10 @@ components:
         group_prices:
         - group_id: group_id
           price: 1.4658129805029452
+          qty: 5
         - group_id: group_id
           price: 1.4658129805029452
+          qty: 5
         store_id: "1"
         product_id: 10
         id: 10
@@ -38326,9 +38408,11 @@ components:
         group_prices:
         - group_id: group_id
           price: 6.027456183070403
+          qty: 1
           id: 0
         - group_id: group_id
           price: 6.027456183070403
+          qty: 1
           id: 0
         product_id: 10
         id: 10
@@ -45454,11 +45538,14 @@ components:
       example:
         group_id: group_id
         price: 1.4658129805029452
+        qty: 5
       properties:
         group_id:
           type: string
         price:
           type: number
+        qty:
+          type: integer
     ProductAdd_manufacturer_info:
       description: Manufacturer information.
       example:
@@ -45558,7 +45645,7 @@ components:
       - id
     ProductAdd_specifics_inner_food_details:
       example:
-        calories: 5.637376656633329
+        calories: 2.3021358869347655
       properties:
         calories:
           type: number
@@ -45648,9 +45735,9 @@ components:
       - day
     ProductAdd_specifics_inner_booking_details:
       example:
-        time_strict_value: 2.027123023002322
-        session_gap: 9
-        sessions_count: 3
+        time_strict_value: 4.145608029883936
+        session_gap: 3
+        sessions_count: 2
         time_strict_type: days
         availabilities:
         - times:
@@ -45674,7 +45761,7 @@ components:
         - date: date
           day: sunday
         type: date
-        session_duration: 7
+        session_duration: 9
       properties:
         location:
           minLength: 1
@@ -45730,9 +45817,9 @@ components:
         name: name
         used_for_variations: false
         booking_details:
-          time_strict_value: 2.027123023002322
-          session_gap: 9
-          sessions_count: 3
+          time_strict_value: 4.145608029883936
+          session_gap: 3
+          sessions_count: 2
           time_strict_type: days
           availabilities:
           - times:
@@ -45756,9 +45843,9 @@ components:
           - date: date
             day: sunday
           type: date
-          session_duration: 7
+          session_duration: 9
         food_details:
-          calories: 5.637376656633329
+          calories: 2.3021358869347655
         value: value
         input_value: input_value
       properties:
@@ -45801,7 +45888,7 @@ components:
         >sales_tax[<b>tax_percent</b>] = decimal (##.###)</br>sales_tax[<b>tax_state</b>]\
         \ = string</br>sales_tax[<b>shipping_inc_in_tax</b>] = bool</br></code></div></div>"
       example:
-        tax_percent: 4.145608029883936
+        tax_percent: 7.386281948385884
         tax_state: tax_state
         shipping_inc_in_tax: true
       properties:
@@ -45814,7 +45901,7 @@ components:
     ProductAdd_shipping_details_inner:
       example:
         shipping_service: shipping_service
-        shipping_cost: 7.386281948385884
+        shipping_cost: 1.2315135367772556
         shipping_type: shipping_type
       properties:
         shipping_type:
@@ -45836,14 +45923,14 @@ components:
         \ = decimal</br>package_details[<b>shipping_package</b>] = string</br> See\
         \ cart.info method, param `eBay_shipping_package_details`</code></div></div>"
       example:
-        package_width: 1.4894159098541704
+        package_width: 6.84685269835264
         shipping_package: shipping_package
-        package_depth: 1.2315135367772556
-        package_length: 1.0246457001441578
+        package_depth: 1.0246457001441578
+        package_length: 1.4894159098541704
         weigh_unit: weigh_unit
         measure_unit: measure_unit
-        weight_major: 6.84685269835264
-        weight_minor: 7.457744773683766
+        weight_major: 7.457744773683766
+        weight_minor: 1.1730742509559433
       properties:
         measure_unit:
           type: string
@@ -45863,10 +45950,10 @@ components:
           type: string
     ProductAdd_logistic_info_inner:
       example:
-        shipping_fee: 4.965218492984954
-        logistic_id: 1.1730742509559433
+        shipping_fee: 5.025004791520295
+        logistic_id: 4.965218492984954
         is_free: true
-        size_id: 5.025004791520295
+        size_id: 9.965781217890562
       properties:
         logistic_id:
           type: number
@@ -45903,8 +45990,8 @@ components:
         >best_offer[<b>minimum_offer_price</b>] = decimal</br>best_offer[<b>auto_accept_price</b>]\
         \ = decimal</br></code></div></div>"
       example:
-        auto_accept_price: 9.369310271410669
-        minimum_offer_price: 9.965781217890562
+        auto_accept_price: 6.683562403749608
+        minimum_offer_price: 9.369310271410669
       properties:
         minimum_offer_price:
           type: number
@@ -45921,7 +46008,7 @@ components:
         personalization_instructions: personalization_instructions
         is_personalizable: true
         personalization_is_required: true
-        personalization_char_count_max: 6
+        personalization_char_count_max: 8
       properties:
         is_personalizable:
           type: boolean
@@ -46627,6 +46714,7 @@ components:
       example:
         group_id: group_id
         price: 6.027456183070403
+        qty: 1
         id: 0
       properties:
         id:
@@ -46635,6 +46723,8 @@ components:
           type: string
         price:
           type: number
+        qty:
+          type: integer
     ProductTaxAdd_tax_rates_inner:
       example:
         name: name

@@ -81,5 +81,14 @@ namespace Org.OpenAPITools.Test.Model
         {
             // TODO unit test for the property 'Price'
         }
+
+        /// <summary>
+        /// Test the property 'Qty'
+        /// </summary>
+        [Fact]
+        public void QtyTest()
+        {
+            // TODO unit test for the property 'Qty'
+        }
     }
 }

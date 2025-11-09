@@ -281,6 +281,42 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'AmericommerceAppId'
+        /// </summary>
+        [Fact]
+        public void AmericommerceAppIdTest()
+        {
+            // TODO unit test for the property 'AmericommerceAppId'
+        }
+
+        /// <summary>
+        /// Test the property 'AmericommerceAppSecret'
+        /// </summary>
+        [Fact]
+        public void AmericommerceAppSecretTest()
+        {
+            // TODO unit test for the property 'AmericommerceAppSecret'
+        }
+
+        /// <summary>
+        /// Test the property 'AmericommerceAccessToken'
+        /// </summary>
+        [Fact]
+        public void AmericommerceAccessTokenTest()
+        {
+            // TODO unit test for the property 'AmericommerceAccessToken'
+        }
+
+        /// <summary>
+        /// Test the property 'AmericommerceRefreshToken'
+        /// </summary>
+        [Fact]
+        public void AmericommerceRefreshTokenTest()
+        {
+            // TODO unit test for the property 'AmericommerceRefreshToken'
+        }
+
+        /// <summary>
         /// Test the property 'BigcommerceapiAdminAccount'
         /// </summary>
         [Fact]
