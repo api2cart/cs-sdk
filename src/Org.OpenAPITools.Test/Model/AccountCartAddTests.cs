@@ -1584,5 +1584,50 @@ namespace Org.OpenAPITools.Test.Model
         {
             // TODO unit test for the property 'TemuRegion'
         }
+
+        /// <summary>
+        /// Test the property 'ScapiClientId'
+        /// </summary>
+        [Fact]
+        public void ScapiClientIdTest()
+        {
+            // TODO unit test for the property 'ScapiClientId'
+        }
+
+        /// <summary>
+        /// Test the property 'ScapiClientSecret'
+        /// </summary>
+        [Fact]
+        public void ScapiClientSecretTest()
+        {
+            // TODO unit test for the property 'ScapiClientSecret'
+        }
+
+        /// <summary>
+        /// Test the property 'ScapiOrganizationId'
+        /// </summary>
+        [Fact]
+        public void ScapiOrganizationIdTest()
+        {
+            // TODO unit test for the property 'ScapiOrganizationId'
+        }
+
+        /// <summary>
+        /// Test the property 'ScapiShortCode'
+        /// </summary>
+        [Fact]
+        public void ScapiShortCodeTest()
+        {
+            // TODO unit test for the property 'ScapiShortCode'
+        }
+
+        /// <summary>
+        /// Test the property 'ScapiScopes'
+        /// </summary>
+        [Fact]
+        public void ScapiScopesTest()
+        {
+            // TODO unit test for the property 'ScapiScopes'
+        }
     }
 }

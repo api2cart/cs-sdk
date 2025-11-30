@@ -182,6 +182,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IsGuest'
+        /// </summary>
+        [Fact]
+        public void IsGuestTest()
+        {
+            // TODO unit test for the property 'IsGuest'
+        }
+
+        /// <summary>
         /// Test the property 'OrderPaymentMethod'
         /// </summary>
         [Fact]
