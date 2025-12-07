@@ -549,5 +549,14 @@ namespace Org.OpenAPITools.Test.Model
         {
             // TODO unit test for the property 'ClearCache'
         }
+
+        /// <summary>
+        /// Test the property 'ProcessingProfileId'
+        /// </summary>
+        [Fact]
+        public void ProcessingProfileIdTest()
+        {
+            // TODO unit test for the property 'ProcessingProfileId'
+        }
     }
 }

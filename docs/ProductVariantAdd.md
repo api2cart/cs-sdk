@@ -57,6 +57,7 @@ Name | Type | Description | Notes
 **IsFreeShipping** | **bool** | Specifies variant&#39;s free shipping flag that has to be added | [optional] 
 **CountryOfOrigin** | **string** | The country where the inventory item was made | [optional] 
 **HarmonizedSystemCode** | **string** | Harmonized System Code. An HSC is a 6-digit identifier that allows participating countries to classify traded goods on a common basis for customs purposes | [optional] 
+**ProcessingProfileId** | **int** | The numeric ID of the processing profile (readiness state) for physical products in Etsy. You can find possible values in the \&quot;cart.info\&quot; API method response, in the field processing_profiles[]-&gt;readiness_state_id. | [optional] 
 **MarketplaceItemProperties** | **string** | String containing the JSON representation of the supplied data | [optional] 
 **ClearCache** | **bool** | Is cache clear required | [optional] [default to true]
 

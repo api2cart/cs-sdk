@@ -36787,6 +36787,7 @@ components:
         manufacturer: Samsung
         ean: "5901234123457"
         fixed_cost_shipping_price: 5.5
+        processing_profile_id: '`12345678`'
         sprice_modified: 2018-12-05 13:46:20
         available_for_sale: false
         cost_price: 65.9
@@ -37095,6 +37096,13 @@ components:
           example: "123456"
           type: string
           name: harmonized_system_code
+        processing_profile_id:
+          description: "The numeric ID of the processing profile (readiness state)\
+            \ for physical products in Etsy. You can find possible values in the \"\
+            cart.info\" API method response, in the field processing_profiles[]->readiness_state_id."
+          example: '`12345678`'
+          type: integer
+          name: processing_profile_id
         marketplace_item_properties:
           description: String containing the JSON representation of the supplied data
           example: "{\"color\":[\"Silver\"],\"manufacturer\":\"Philips\",\"features\"\
@@ -37594,6 +37602,7 @@ components:
         manufacturer: Samsung
         ean: "5901234123457"
         fixed_cost_shipping_price: 5.5
+        processing_profile_id: '`12345678`'
         available_for_sale: false
         cost_price: 65.9
         store_id: "1"
@@ -37904,6 +37913,13 @@ components:
           example: false
           type: boolean
           name: clear_cache
+        processing_profile_id:
+          description: "The numeric ID of the processing profile (readiness state)\
+            \ for physical products in Etsy. You can find possible values in the \"\
+            cart.info\" API method response, in the field processing_profiles[]->readiness_state_id."
+          example: '`12345678`'
+          type: integer
+          name: processing_profile_id
     ProductVariantUpdateBatch:
       example:
         clear_cache: false

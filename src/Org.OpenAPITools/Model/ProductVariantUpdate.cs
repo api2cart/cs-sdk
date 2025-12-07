@@ -90,7 +90,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="manufacturer">Specifies the product variant&#39;s manufacturer.</param>
         /// <param name="reindex">Is reindex required (default to true).</param>
         /// <param name="clearCache">Is cache clear required (default to true).</param>
-        public ProductVariantUpdate(string id = default(string), string productId = default(string), string storeId = default(string), string langId = default(string), List<ProductVariantUpdateOptionsInner> options = default(List<ProductVariantUpdateOptionsInner>), string name = default(string), string description = default(string), string shortDescription = default(string), string model = default(string), string sku = default(string), string visible = default(string), string status = default(string), string backorderStatus = default(string), decimal lowStockThreshold = default(decimal), bool availableForSale = true, bool avail = true, bool isDefault = default(bool), bool isFreeShipping = default(bool), bool taxable = default(bool), string taxClassId = default(string), bool isVirtual = false, bool manageStock = default(bool), bool inStock = default(bool), string warehouseId = default(string), decimal reserveQuantity = default(decimal), decimal quantity = default(decimal), decimal increaseQuantity = 0M, decimal reduceQuantity = 0M, decimal price = default(decimal), decimal specialPrice = default(decimal), decimal retailPrice = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal weight = 0M, string barcode = default(string), decimal width = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), string metaTitle = default(string), string metaDescription = default(string), string metaKeywords = default(string), string manufacturer = default(string), bool reindex = true, bool clearCache = true)
+        /// <param name="processingProfileId">The numeric ID of the processing profile (readiness state) for physical products in Etsy. You can find possible values in the \&quot;cart.info\&quot; API method response, in the field processing_profiles[]-&gt;readiness_state_id..</param>
+        public ProductVariantUpdate(string id = default(string), string productId = default(string), string storeId = default(string), string langId = default(string), List<ProductVariantUpdateOptionsInner> options = default(List<ProductVariantUpdateOptionsInner>), string name = default(string), string description = default(string), string shortDescription = default(string), string model = default(string), string sku = default(string), string visible = default(string), string status = default(string), string backorderStatus = default(string), decimal lowStockThreshold = default(decimal), bool availableForSale = true, bool avail = true, bool isDefault = default(bool), bool isFreeShipping = default(bool), bool taxable = default(bool), string taxClassId = default(string), bool isVirtual = false, bool manageStock = default(bool), bool inStock = default(bool), string warehouseId = default(string), decimal reserveQuantity = default(decimal), decimal quantity = default(decimal), decimal increaseQuantity = 0M, decimal reduceQuantity = 0M, decimal price = default(decimal), decimal specialPrice = default(decimal), decimal retailPrice = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal weight = 0M, string barcode = default(string), decimal width = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), string metaTitle = default(string), string metaDescription = default(string), string metaKeywords = default(string), string manufacturer = default(string), bool reindex = true, bool clearCache = true, int processingProfileId = default(int))
         {
             this.Id = id;
             this.ProductId = productId;
@@ -147,6 +148,7 @@ namespace Org.OpenAPITools.Model
             this.Manufacturer = manufacturer;
             this.Reindex = reindex;
             this.ClearCache = clearCache;
+            this.ProcessingProfileId = processingProfileId;
         }
 
         /// <summary>
@@ -697,6 +699,16 @@ namespace Org.OpenAPITools.Model
         public bool ClearCache { get; set; }
 
         /// <summary>
+        /// The numeric ID of the processing profile (readiness state) for physical products in Etsy. You can find possible values in the \&quot;cart.info\&quot; API method response, in the field processing_profiles[]-&gt;readiness_state_id.
+        /// </summary>
+        /// <value>The numeric ID of the processing profile (readiness state) for physical products in Etsy. You can find possible values in the \&quot;cart.info\&quot; API method response, in the field processing_profiles[]-&gt;readiness_state_id.</value>
+        /*
+        <example>&#x60;12345678&#x60;</example>
+        */
+        [DataMember(Name = "processing_profile_id", EmitDefaultValue = false)]
+        public int ProcessingProfileId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -759,6 +771,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Manufacturer: ").Append(Manufacturer).Append("\n");
             sb.Append("  Reindex: ").Append(Reindex).Append("\n");
             sb.Append("  ClearCache: ").Append(ClearCache).Append("\n");
+            sb.Append("  ProcessingProfileId: ").Append(ProcessingProfileId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

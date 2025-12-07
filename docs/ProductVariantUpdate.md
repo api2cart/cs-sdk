@@ -59,6 +59,7 @@ Name | Type | Description | Notes
 **Manufacturer** | **string** | Specifies the product variant&#39;s manufacturer | [optional] 
 **Reindex** | **bool** | Is reindex required | [optional] [default to true]
 **ClearCache** | **bool** | Is cache clear required | [optional] [default to true]
+**ProcessingProfileId** | **int** | The numeric ID of the processing profile (readiness state) for physical products in Etsy. You can find possible values in the \&quot;cart.info\&quot; API method response, in the field processing_profiles[]-&gt;readiness_state_id. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
