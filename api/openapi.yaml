@@ -803,6 +803,15 @@ paths:
         schema:
           type: string
         style: form
+      - description: Shopify Client ID
+        example: b5defe55db3f6836fb4e0e6624ff9577
+        explode: true
+        in: query
+        name: shopify_client_id
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Shopify API Key
         example: bbca57d8ff3c3677128112c15556d9e3
         explode: true
@@ -13609,6 +13618,7 @@ components:
         temu_region: US
         walmart_region: us
         hybris_client_id: api_client_1
+        shopify_client_id: b5defe55db3f6836fb4e0e6624ff9577
         aspdotnetstorefront_api_user: admin
         facebook_business_id: "294042786906655"
         bricklink_consumer_secret: a46abc3kxyinlbggy06i9g975xqo6gjq
@@ -14247,6 +14257,11 @@ components:
           example: igse8e4rdmzkxdi937qe69d59en1imw
           type: string
           name: shopify_access_token
+        shopify_client_id:
+          description: Shopify Client ID
+          example: b5defe55db3f6836fb4e0e6624ff9577
+          type: string
+          name: shopify_client_id
         shopify_api_key:
           description: Shopify API Key
           example: bbca57d8ff3c3677128112c15556d9e3

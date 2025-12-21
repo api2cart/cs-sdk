@@ -821,6 +821,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ShopifyClientId'
+        /// </summary>
+        [Fact]
+        public void ShopifyClientIdTest()
+        {
+            // TODO unit test for the property 'ShopifyClientId'
+        }
+
+        /// <summary>
         /// Test the property 'ShopifyApiKey'
         /// </summary>
         [Fact]
