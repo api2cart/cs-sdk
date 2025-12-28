@@ -7208,6 +7208,17 @@ paths:
         schema:
           type: integer
         style: form
+      - description: Indicates whether custom (user-defined) order statuses should
+          be included in the response.
+        example: true
+        explode: true
+        in: query
+        name: allow_user_defined_order_statuses
+        required: false
+        schema:
+          default: false
+          type: boolean
+        style: form
       responses:
         "200":
           content:
@@ -7799,6 +7810,17 @@ paths:
         required: false
         schema:
           type: integer
+        style: form
+      - description: Indicates whether custom (user-defined) order statuses should
+          be included in the response.
+        example: true
+        explode: true
+        in: query
+        name: allow_user_defined_order_statuses
+        required: false
+        schema:
+          default: false
+          type: boolean
         style: form
       responses:
         "200":
@@ -8756,6 +8778,17 @@ paths:
         required: false
         schema:
           type: string
+        style: form
+      - description: Indicates whether custom (user-defined) order statuses should
+          be included in the response.
+        example: true
+        explode: true
+        in: query
+        name: allow_user_defined_order_statuses
+        required: false
+        schema:
+          default: false
+          type: boolean
         style: form
       - description: Set this parameter in order to choose which entity fields you
           want to retrieve
@@ -31820,7 +31853,8 @@ components:
           type: number
           name: special_price
         wholesale_price:
-          description: Defines product's sale price
+          description: This parameter is deprecated. Please use the <strong>old_price</strong>
+            parameter instead.
           example: 56.12
           type: number
           name: wholesale_price

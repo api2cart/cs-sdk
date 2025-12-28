@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **LangId** | **string** | Language id | [optional] 
 **OldPrice** | **decimal** | Defines product&#39;s old price | [optional] 
 **SpecialPrice** | **decimal** | Defines product&#39;s model that has to be added | [optional] 
-**WholesalePrice** | **decimal** | Defines product&#39;s sale price | [optional] 
+**WholesalePrice** | **decimal** | This parameter is deprecated. Please use the &lt;strong&gt;old_price&lt;/strong&gt; parameter instead. | [optional] 
 **CostPrice** | **decimal** | Defines new product&#39;s cost price | [optional] 
 **FixedCostShippingPrice** | **decimal** | Specifies product&#39;s fixed cost shipping price | [optional] 
 **TierPrices** | [**List&lt;ProductAddTierPricesInner&gt;**](ProductAddTierPricesInner.md) | Defines product&#39;s tier prices | [optional] 

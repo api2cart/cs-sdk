@@ -174,7 +174,8 @@ namespace Org.OpenAPITools.Test.Api
             //bool? enableCache = null;
             //bool? useLatestApiVersion = null;
             //int? roundingPrecision = null;
-            //var response = instance.OrderInfo(id, orderId, storeId, varParams, responseFields, exclude, enableCache, useLatestApiVersion, roundingPrecision);
+            //bool? allowUserDefinedOrderStatuses = null;
+            //var response = instance.OrderInfo(id, orderId, storeId, varParams, responseFields, exclude, enableCache, useLatestApiVersion, roundingPrecision, allowUserDefinedOrderStatuses);
             //Assert.IsType<OrderInfo200Response>(response);
         }
 
@@ -224,7 +225,8 @@ namespace Org.OpenAPITools.Test.Api
             //bool? enableCache = null;
             //bool? useLatestApiVersion = null;
             //int? roundingPrecision = null;
-            //var response = instance.OrderList(start, count, pageCursor, ids, orderIds, sinceId, storeId, customerId, customerEmail, basketId, currencyId, phone, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentStatus, returnStatus, fulfillmentChannel, shippingMethod, skipOrderIds, isDeleted, shippingCountryIso3, deliveryMethod, shipNodeType, createdTo, createdFrom, modifiedTo, modifiedFrom, tags, sortBy, sortDirection, varParams, responseFields, exclude, enableCache, useLatestApiVersion, roundingPrecision);
+            //bool? allowUserDefinedOrderStatuses = null;
+            //var response = instance.OrderList(start, count, pageCursor, ids, orderIds, sinceId, storeId, customerId, customerEmail, basketId, currencyId, phone, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentStatus, returnStatus, fulfillmentChannel, shippingMethod, skipOrderIds, isDeleted, shippingCountryIso3, deliveryMethod, shipNodeType, createdTo, createdFrom, modifiedTo, modifiedFrom, tags, sortBy, sortDirection, varParams, responseFields, exclude, enableCache, useLatestApiVersion, roundingPrecision, allowUserDefinedOrderStatuses);
             //Assert.IsType<ModelResponseOrderList>(response);
         }
 
@@ -402,8 +404,9 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string? storeId = null;
             //string? action = null;
+            //bool? allowUserDefinedOrderStatuses = null;
             //string? responseFields = null;
-            //var response = instance.OrderStatusList(storeId, action, responseFields);
+            //var response = instance.OrderStatusList(storeId, action, allowUserDefinedOrderStatuses, responseFields);
             //Assert.IsType<ModelResponseOrderStatusList>(response);
         }
 

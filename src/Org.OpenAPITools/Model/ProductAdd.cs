@@ -63,7 +63,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="langId">Language id.</param>
         /// <param name="oldPrice">Defines product&#39;s old price.</param>
         /// <param name="specialPrice">Defines product&#39;s model that has to be added.</param>
-        /// <param name="wholesalePrice">Defines product&#39;s sale price.</param>
+        /// <param name="wholesalePrice">This parameter is deprecated. Please use the &lt;strong&gt;old_price&lt;/strong&gt; parameter instead..</param>
         /// <param name="costPrice">Defines new product&#39;s cost price.</param>
         /// <param name="fixedCostShippingPrice">Specifies product&#39;s fixed cost shipping price.</param>
         /// <param name="tierPrices">Defines product&#39;s tier prices.</param>
@@ -532,9 +532,9 @@ namespace Org.OpenAPITools.Model
         public decimal SpecialPrice { get; set; }
 
         /// <summary>
-        /// Defines product&#39;s sale price
+        /// This parameter is deprecated. Please use the &lt;strong&gt;old_price&lt;/strong&gt; parameter instead.
         /// </summary>
-        /// <value>Defines product&#39;s sale price</value>
+        /// <value>This parameter is deprecated. Please use the &lt;strong&gt;old_price&lt;/strong&gt; parameter instead.</value>
         /*
         <example>56.12</example>
         */
