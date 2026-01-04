@@ -71,6 +71,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="fixedCostShippingPrice">Specifies fixed cost shipping price.</param>
         /// <param name="spriceCreate">Defines the date of special price creation.</param>
         /// <param name="spriceExpire">Defines the term of special price offer duration.</param>
+        /// <param name="measureUnit">Unit for the price per unit. Must be in allowed list.</param>
+        /// <param name="unitPrice">Defines new product&#39;s unit price.</param>
         /// <param name="weight">Weight (default to 0M).</param>
         /// <param name="barcode">A barcode is a unique code composed of numbers used as a product identifier..</param>
         /// <param name="width">Defines product&#39;s width.</param>
@@ -91,7 +93,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="reindex">Is reindex required (default to true).</param>
         /// <param name="clearCache">Is cache clear required (default to true).</param>
         /// <param name="processingProfileId">The numeric ID of the processing profile (readiness state) for physical products in Etsy. You can find possible values in the \&quot;cart.info\&quot; API method response, in the field processing_profiles[]-&gt;readiness_state_id..</param>
-        public ProductVariantUpdate(string id = default(string), string productId = default(string), string storeId = default(string), string langId = default(string), List<ProductVariantUpdateOptionsInner> options = default(List<ProductVariantUpdateOptionsInner>), string name = default(string), string description = default(string), string shortDescription = default(string), string model = default(string), string sku = default(string), string visible = default(string), string status = default(string), string backorderStatus = default(string), decimal lowStockThreshold = default(decimal), bool availableForSale = true, bool avail = true, bool isDefault = default(bool), bool isFreeShipping = default(bool), bool taxable = default(bool), string taxClassId = default(string), bool isVirtual = false, bool manageStock = default(bool), bool inStock = default(bool), string warehouseId = default(string), decimal reserveQuantity = default(decimal), decimal quantity = default(decimal), decimal increaseQuantity = 0M, decimal reduceQuantity = 0M, decimal price = default(decimal), decimal specialPrice = default(decimal), decimal retailPrice = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), decimal weight = 0M, string barcode = default(string), decimal width = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), string metaTitle = default(string), string metaDescription = default(string), string metaKeywords = default(string), string manufacturer = default(string), bool reindex = true, bool clearCache = true, int processingProfileId = default(int))
+        public ProductVariantUpdate(string id = default(string), string productId = default(string), string storeId = default(string), string langId = default(string), List<ProductVariantUpdateOptionsInner> options = default(List<ProductVariantUpdateOptionsInner>), string name = default(string), string description = default(string), string shortDescription = default(string), string model = default(string), string sku = default(string), string visible = default(string), string status = default(string), string backorderStatus = default(string), decimal lowStockThreshold = default(decimal), bool availableForSale = true, bool avail = true, bool isDefault = default(bool), bool isFreeShipping = default(bool), bool taxable = default(bool), string taxClassId = default(string), bool isVirtual = false, bool manageStock = default(bool), bool inStock = default(bool), string warehouseId = default(string), decimal reserveQuantity = default(decimal), decimal quantity = default(decimal), decimal increaseQuantity = 0M, decimal reduceQuantity = 0M, decimal price = default(decimal), decimal specialPrice = default(decimal), decimal retailPrice = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), string spriceCreate = default(string), string spriceExpire = default(string), string measureUnit = default(string), decimal unitPrice = default(decimal), decimal weight = 0M, string barcode = default(string), decimal width = default(decimal), string weightUnit = default(string), decimal height = default(decimal), decimal length = default(decimal), string gtin = default(string), string upc = default(string), string mpn = default(string), string ean = default(string), string isbn = default(string), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), string metaTitle = default(string), string metaDescription = default(string), string metaKeywords = default(string), string manufacturer = default(string), bool reindex = true, bool clearCache = true, int processingProfileId = default(int))
         {
             this.Id = id;
             this.ProductId = productId;
@@ -129,6 +131,8 @@ namespace Org.OpenAPITools.Model
             this.FixedCostShippingPrice = fixedCostShippingPrice;
             this.SpriceCreate = spriceCreate;
             this.SpriceExpire = spriceExpire;
+            this.MeasureUnit = measureUnit;
+            this.UnitPrice = unitPrice;
             this.Weight = weight;
             this.Barcode = barcode;
             this.Width = width;
@@ -509,6 +513,26 @@ namespace Org.OpenAPITools.Model
         public string SpriceExpire { get; set; }
 
         /// <summary>
+        /// Unit for the price per unit. Must be in allowed list
+        /// </summary>
+        /// <value>Unit for the price per unit. Must be in allowed list</value>
+        /*
+        <example>Piece</example>
+        */
+        [DataMember(Name = "measure_unit", EmitDefaultValue = false)]
+        public string MeasureUnit { get; set; }
+
+        /// <summary>
+        /// Defines new product&#39;s unit price
+        /// </summary>
+        /// <value>Defines new product&#39;s unit price</value>
+        /*
+        <example>10.5</example>
+        */
+        [DataMember(Name = "unit_price", EmitDefaultValue = false)]
+        public decimal UnitPrice { get; set; }
+
+        /// <summary>
         /// Weight
         /// </summary>
         /// <value>Weight</value>
@@ -752,6 +776,8 @@ namespace Org.OpenAPITools.Model
             sb.Append("  FixedCostShippingPrice: ").Append(FixedCostShippingPrice).Append("\n");
             sb.Append("  SpriceCreate: ").Append(SpriceCreate).Append("\n");
             sb.Append("  SpriceExpire: ").Append(SpriceExpire).Append("\n");
+            sb.Append("  MeasureUnit: ").Append(MeasureUnit).Append("\n");
+            sb.Append("  UnitPrice: ").Append(UnitPrice).Append("\n");
             sb.Append("  Weight: ").Append(Weight).Append("\n");
             sb.Append("  Barcode: ").Append(Barcode).Append("\n");
             sb.Append("  Width: ").Append(Width).Append("\n");

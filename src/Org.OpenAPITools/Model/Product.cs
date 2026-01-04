@@ -45,6 +45,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="price">price.</param>
         /// <param name="advancedPrice">advancedPrice.</param>
         /// <param name="costPrice">costPrice.</param>
+        /// <param name="unitPrice">unitPrice.</param>
+        /// <param name="measureUnit">measureUnit.</param>
         /// <param name="quantity">quantity.</param>
         /// <param name="inventory">inventory.</param>
         /// <param name="groupItems">groupItems.</param>
@@ -92,7 +94,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="discounts">discounts.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Product(string id = default(string), string type = default(string), string uModel = default(string), string uSku = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), decimal? price = default(decimal?), List<ProductAdvancedPrice> advancedPrice = default(List<ProductAdvancedPrice>), decimal? costPrice = default(decimal?), decimal? quantity = default(decimal?), List<ProductInventory> inventory = default(List<ProductInventory>), List<ProductGroupItem> groupItems = default(List<ProductGroupItem>), string uBrandId = default(string), string uBrand = default(string), List<string> categoriesIds = default(List<string>), List<string> storesIds = default(List<string>), string url = default(string), string seoUrl = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), bool? availSale = default(bool?), bool? availView = default(bool?), bool? isVirtual = default(bool?), bool? isDownloadable = default(bool?), decimal? weight = default(decimal?), string weightUnit = default(string), int? sortOrder = default(int?), bool? inStock = default(bool?), string backorders = default(string), string manageStock = default(string), bool? isStockManaged = default(bool?), bool? onSale = default(bool?), A2CDateTime createAt = default(A2CDateTime), A2CDateTime modifiedAt = default(A2CDateTime), string taxClassId = default(string), SpecialPrice specialPrice = default(SpecialPrice), List<ProductTierPrice> tierPrice = default(List<ProductTierPrice>), List<ProductGroupPrice> groupPrice = default(List<ProductGroupPrice>), List<Image> images = default(List<Image>), List<ProductOption> productOptions = default(List<ProductOption>), string uUpc = default(string), string uMpn = default(string), string uGtin = default(string), string uIsbn = default(string), string uEan = default(string), List<string> relatedProductsIds = default(List<string>), List<string> upSellProductsIds = default(List<string>), List<string> crossSellProductsIds = default(List<string>), string dimensionsUnit = default(string), decimal? width = default(decimal?), decimal? height = default(decimal?), decimal? length = default(decimal?), List<Discount> discounts = default(List<Discount>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Product(string id = default(string), string type = default(string), string uModel = default(string), string uSku = default(string), string name = default(string), string description = default(string), string shortDescription = default(string), decimal? price = default(decimal?), List<ProductAdvancedPrice> advancedPrice = default(List<ProductAdvancedPrice>), decimal? costPrice = default(decimal?), decimal? unitPrice = default(decimal?), string measureUnit = default(string), decimal? quantity = default(decimal?), List<ProductInventory> inventory = default(List<ProductInventory>), List<ProductGroupItem> groupItems = default(List<ProductGroupItem>), string uBrandId = default(string), string uBrand = default(string), List<string> categoriesIds = default(List<string>), List<string> storesIds = default(List<string>), string url = default(string), string seoUrl = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), bool? availSale = default(bool?), bool? availView = default(bool?), bool? isVirtual = default(bool?), bool? isDownloadable = default(bool?), decimal? weight = default(decimal?), string weightUnit = default(string), int? sortOrder = default(int?), bool? inStock = default(bool?), string backorders = default(string), string manageStock = default(string), bool? isStockManaged = default(bool?), bool? onSale = default(bool?), A2CDateTime createAt = default(A2CDateTime), A2CDateTime modifiedAt = default(A2CDateTime), string taxClassId = default(string), SpecialPrice specialPrice = default(SpecialPrice), List<ProductTierPrice> tierPrice = default(List<ProductTierPrice>), List<ProductGroupPrice> groupPrice = default(List<ProductGroupPrice>), List<Image> images = default(List<Image>), List<ProductOption> productOptions = default(List<ProductOption>), string uUpc = default(string), string uMpn = default(string), string uGtin = default(string), string uIsbn = default(string), string uEan = default(string), List<string> relatedProductsIds = default(List<string>), List<string> upSellProductsIds = default(List<string>), List<string> crossSellProductsIds = default(List<string>), string dimensionsUnit = default(string), decimal? width = default(decimal?), decimal? height = default(decimal?), decimal? length = default(decimal?), List<Discount> discounts = default(List<Discount>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Type = type;
@@ -104,6 +106,8 @@ namespace Org.OpenAPITools.Model
             this.Price = price;
             this.AdvancedPrice = advancedPrice;
             this.CostPrice = costPrice;
+            this.UnitPrice = unitPrice;
+            this.MeasureUnit = measureUnit;
             this.Quantity = quantity;
             this.Inventory = inventory;
             this.GroupItems = groupItems;
@@ -212,6 +216,18 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         [DataMember(Name = "cost_price", EmitDefaultValue = true)]
         public decimal? CostPrice { get; set; }
+
+        /// <summary>
+        /// Gets or Sets UnitPrice
+        /// </summary>
+        [DataMember(Name = "unit_price", EmitDefaultValue = true)]
+        public decimal? UnitPrice { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MeasureUnit
+        /// </summary>
+        [DataMember(Name = "measure_unit", EmitDefaultValue = true)]
+        public string MeasureUnit { get; set; }
 
         /// <summary>
         /// Gets or Sets Quantity
@@ -513,6 +529,8 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("  AdvancedPrice: ").Append(AdvancedPrice).Append("\n");
             sb.Append("  CostPrice: ").Append(CostPrice).Append("\n");
+            sb.Append("  UnitPrice: ").Append(UnitPrice).Append("\n");
+            sb.Append("  MeasureUnit: ").Append(MeasureUnit).Append("\n");
             sb.Append("  Quantity: ").Append(Quantity).Append("\n");
             sb.Append("  Inventory: ").Append(Inventory).Append("\n");
             sb.Append("  GroupItems: ").Append(GroupItems).Append("\n");

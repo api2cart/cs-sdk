@@ -62,6 +62,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="spriceModified">Defines the date of special price modification.</param>
         /// <param name="spriceExpire">Defines the term of special price offer duration.</param>
         /// <param name="tierPrices">Defines product&#39;s tier prices.</param>
+        /// <param name="measureUnit">Unit for the price per unit. Must be in allowed list.</param>
+        /// <param name="unitPrice">Defines new product&#39;s unit price.</param>
         /// <param name="quantity">Defines product variant&#39;s quantity that has to be added (default to 0M).</param>
         /// <param name="warehouseId">This parameter is used for selecting a warehouse where you need to set/modify a product quantity..</param>
         /// <param name="inStock">Set stock status.</param>
@@ -96,7 +98,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="processingProfileId">The numeric ID of the processing profile (readiness state) for physical products in Etsy. You can find possible values in the \&quot;cart.info\&quot; API method response, in the field processing_profiles[]-&gt;readiness_state_id..</param>
         /// <param name="marketplaceItemProperties">String containing the JSON representation of the supplied data.</param>
         /// <param name="clearCache">Is cache clear required (default to true).</param>
-        public ProductVariantAdd(string productId = default(string), List<ProductVariantAddAttributesInner> attributes = default(List<ProductVariantAddAttributesInner>), string name = default(string), string model = default(string), string description = default(string), string shortDescription = default(string), bool availableForView = true, bool availableForSale = true, string status = default(string), bool isVirtual = false, bool isDefault = default(bool), string storeId = default(string), string storesIds = default(string), string langId = default(string), decimal price = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceModified = default(string), string spriceExpire = default(string), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), decimal quantity = 0M, string warehouseId = default(string), bool inStock = default(bool), string backorderStatus = default(string), bool manageStock = default(bool), decimal lowStockThreshold = default(decimal), decimal weight = 0M, decimal width = default(decimal), decimal height = default(decimal), decimal length = default(decimal), string weightUnit = default(string), string sku = default(string), string barcode = default(string), string gtin = default(string), string upc = default(string), string ean = default(string), string mpn = default(string), string isbn = default(string), string seoUrl = default(string), string manufacturer = default(string), string createdAt = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string url = default(string), string taxClassId = default(string), bool taxable = true, decimal fixedCostShippingPrice = default(decimal), bool isFreeShipping = default(bool), string countryOfOrigin = default(string), string harmonizedSystemCode = default(string), int processingProfileId = default(int), string marketplaceItemProperties = default(string), bool clearCache = true)
+        public ProductVariantAdd(string productId = default(string), List<ProductVariantAddAttributesInner> attributes = default(List<ProductVariantAddAttributesInner>), string name = default(string), string model = default(string), string description = default(string), string shortDescription = default(string), bool availableForView = true, bool availableForSale = true, string status = default(string), bool isVirtual = false, bool isDefault = default(bool), string storeId = default(string), string storesIds = default(string), string langId = default(string), decimal price = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceModified = default(string), string spriceExpire = default(string), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), string measureUnit = default(string), decimal unitPrice = default(decimal), decimal quantity = 0M, string warehouseId = default(string), bool inStock = default(bool), string backorderStatus = default(string), bool manageStock = default(bool), decimal lowStockThreshold = default(decimal), decimal weight = 0M, decimal width = default(decimal), decimal height = default(decimal), decimal length = default(decimal), string weightUnit = default(string), string sku = default(string), string barcode = default(string), string gtin = default(string), string upc = default(string), string ean = default(string), string mpn = default(string), string isbn = default(string), string seoUrl = default(string), string manufacturer = default(string), string createdAt = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string url = default(string), string taxClassId = default(string), bool taxable = true, decimal fixedCostShippingPrice = default(decimal), bool isFreeShipping = default(bool), string countryOfOrigin = default(string), string harmonizedSystemCode = default(string), int processingProfileId = default(int), string marketplaceItemProperties = default(string), bool clearCache = true)
         {
             // to ensure "model" is required (not null)
             if (model == null)
@@ -125,6 +127,8 @@ namespace Org.OpenAPITools.Model
             this.SpriceModified = spriceModified;
             this.SpriceExpire = spriceExpire;
             this.TierPrices = tierPrices;
+            this.MeasureUnit = measureUnit;
+            this.UnitPrice = unitPrice;
             this.Quantity = quantity;
             this.WarehouseId = warehouseId;
             this.InStock = inStock;
@@ -374,6 +378,26 @@ namespace Org.OpenAPITools.Model
         /// <value>Defines product&#39;s tier prices</value>
         [DataMember(Name = "tier_prices", EmitDefaultValue = false)]
         public List<ProductAddTierPricesInner> TierPrices { get; set; }
+
+        /// <summary>
+        /// Unit for the price per unit. Must be in allowed list
+        /// </summary>
+        /// <value>Unit for the price per unit. Must be in allowed list</value>
+        /*
+        <example>Piece</example>
+        */
+        [DataMember(Name = "measure_unit", EmitDefaultValue = false)]
+        public string MeasureUnit { get; set; }
+
+        /// <summary>
+        /// Defines new product&#39;s unit price
+        /// </summary>
+        /// <value>Defines new product&#39;s unit price</value>
+        /*
+        <example>10.5</example>
+        */
+        [DataMember(Name = "unit_price", EmitDefaultValue = false)]
+        public decimal UnitPrice { get; set; }
 
         /// <summary>
         /// Defines product variant&#39;s quantity that has to be added
@@ -745,6 +769,8 @@ namespace Org.OpenAPITools.Model
             sb.Append("  SpriceModified: ").Append(SpriceModified).Append("\n");
             sb.Append("  SpriceExpire: ").Append(SpriceExpire).Append("\n");
             sb.Append("  TierPrices: ").Append(TierPrices).Append("\n");
+            sb.Append("  MeasureUnit: ").Append(MeasureUnit).Append("\n");
+            sb.Append("  UnitPrice: ").Append(UnitPrice).Append("\n");
             sb.Append("  Quantity: ").Append(Quantity).Append("\n");
             sb.Append("  WarehouseId: ").Append(WarehouseId).Append("\n");
             sb.Append("  InStock: ").Append(InStock).Append("\n");

@@ -70,6 +70,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="groupPrices">Defines product&#39;s group prices.</param>
         /// <param name="buyitnowPrice">Defines buy it now value.</param>
         /// <param name="reservePrice">Defines reserve price value.</param>
+        /// <param name="measureUnit">Unit for the price per unit. Must be in allowed list.</param>
+        /// <param name="unitPrice">Defines new product&#39;s unit price.</param>
         /// <param name="quantity">Defines product&#39;s quantity that has to be added (default to 0M).</param>
         /// <param name="inStock">Set stock status.</param>
         /// <param name="manageStock">Defines inventory tracking for product.</param>
@@ -159,7 +161,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="shopSectionId">Add Shop Section Id.</param>
         /// <param name="returnPolicyId">Add Return Policy Id.</param>
         /// <param name="personalizationDetails">personalizationDetails.</param>
-        public ProductAdd(string name = default(string), string model = default(string), string description = default(string), decimal price = default(decimal), string sku = default(string), string shortDescription = default(string), string type = @"simple", string status = default(string), string visible = default(string), string categoryId = default(string), string categoriesIds = default(string), string productClass = default(string), string productType = default(string), bool isVirtual = false, bool downloadable = false, bool isSupply = true, bool availableForView = true, bool availableForSale = true, string storeId = default(string), string storesIds = default(string), string langId = default(string), decimal oldPrice = default(decimal), decimal specialPrice = default(decimal), decimal wholesalePrice = default(decimal), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), List<ProductAddGroupPricesInner> groupPrices = default(List<ProductAddGroupPricesInner>), decimal buyitnowPrice = default(decimal), decimal reservePrice = default(decimal), decimal quantity = 0M, bool inStock = default(bool), bool manageStock = default(bool), string warehouseId = default(string), string backorderStatus = default(string), decimal minOrderQuantity = default(decimal), decimal maxOrderQuantity = default(decimal), decimal lowStockThreshold = default(decimal), decimal weight = 0M, string weightUnit = default(string), decimal width = default(decimal), decimal height = default(decimal), decimal length = default(decimal), string dimensionsUnit = default(string), string barcode = default(string), string upc = default(string), string ean = default(string), string isbn = default(string), string gtin = default(string), string mpn = default(string), string asin = default(string), string productReference = default(string), string externalProductLink = default(string), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), string manufacturer = default(string), string manufacturerId = default(string), ProductAddManufacturerInfo manufacturerInfo = default(ProductAddManufacturerInfo), string brandName = default(string), string imageUrl = default(string), string imageName = default(string), List<string> additionalImageUrls = default(List<string>), List<ProductAddFilesInner> files = default(List<ProductAddFilesInner>), ProductAddSizeChart sizeChart = default(ProductAddSizeChart), string relatedProductsIds = default(string), string upSellProductsIds = default(string), string crossSellProductsIds = default(string), string attributeSetName = @"Default", string attributeName = default(string), string searchKeywords = default(string), string tags = default(string), List<string> materials = default(List<string>), List<ProductAddCertificationsInner> certifications = default(List<ProductAddCertificationsInner>), List<ProductAddSpecificsInner> specifics = default(List<ProductAddSpecificsInner>), string availFrom = default(string), string spriceCreate = default(string), string spriceModified = default(string), string spriceExpire = default(string), string createdAt = default(string), bool autoRenew = false, string whenMade = @"made_to_order", string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string url = default(string), string seoUrl = default(string), string taxClassId = default(string), bool taxable = true, ProductAddSalesTax salesTax = default(ProductAddSalesTax), string condition = default(string), string conditionDescription = default(string), bool allowDisplayCondition = default(bool), List<string> paymentMethods = default(List<string>), string paypalEmail = default(string), int shippingTemplateId = 0, int processingProfileId = default(int), List<ProductAddShippingDetailsInner> shippingDetails = default(List<ProductAddShippingDetailsInner>), bool isFreeShipping = default(bool), string deliveryCode = default(string), string deliveryType = default(string), int deliveryTime = default(int), string deliveryOptionIds = default(string), ProductAddPackageDetails packageDetails = default(ProductAddPackageDetails), List<ProductAddLogisticInfoInner> logisticInfo = default(List<ProductAddLogisticInfoInner>), string listingDuration = default(string), string listingType = @"FixedPrice", string categoryType = default(string), bool returnAccepted = default(bool), ProductAddSellerProfiles sellerProfiles = default(ProductAddSellerProfiles), string auctionConfidentialityLevel = default(string), ProductAddBestOffer bestOffer = default(ProductAddBestOffer), string productionPartnerIds = default(string), string marketplaceItemProperties = default(string), bool clearCache = true, int viewedCount = 0, int orderedCount = 0, int shopSectionId = default(int), int returnPolicyId = default(int), ProductAddPersonalizationDetails personalizationDetails = default(ProductAddPersonalizationDetails))
+        public ProductAdd(string name = default(string), string model = default(string), string description = default(string), decimal price = default(decimal), string sku = default(string), string shortDescription = default(string), string type = @"simple", string status = default(string), string visible = default(string), string categoryId = default(string), string categoriesIds = default(string), string productClass = default(string), string productType = default(string), bool isVirtual = false, bool downloadable = false, bool isSupply = true, bool availableForView = true, bool availableForSale = true, string storeId = default(string), string storesIds = default(string), string langId = default(string), decimal oldPrice = default(decimal), decimal specialPrice = default(decimal), decimal wholesalePrice = default(decimal), decimal costPrice = default(decimal), decimal fixedCostShippingPrice = default(decimal), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), List<ProductAddGroupPricesInner> groupPrices = default(List<ProductAddGroupPricesInner>), decimal buyitnowPrice = default(decimal), decimal reservePrice = default(decimal), string measureUnit = default(string), decimal unitPrice = default(decimal), decimal quantity = 0M, bool inStock = default(bool), bool manageStock = default(bool), string warehouseId = default(string), string backorderStatus = default(string), decimal minOrderQuantity = default(decimal), decimal maxOrderQuantity = default(decimal), decimal lowStockThreshold = default(decimal), decimal weight = 0M, string weightUnit = default(string), decimal width = default(decimal), decimal height = default(decimal), decimal length = default(decimal), string dimensionsUnit = default(string), string barcode = default(string), string upc = default(string), string ean = default(string), string isbn = default(string), string gtin = default(string), string mpn = default(string), string asin = default(string), string productReference = default(string), string externalProductLink = default(string), string harmonizedSystemCode = default(string), string countryOfOrigin = default(string), string manufacturer = default(string), string manufacturerId = default(string), ProductAddManufacturerInfo manufacturerInfo = default(ProductAddManufacturerInfo), string brandName = default(string), string imageUrl = default(string), string imageName = default(string), List<string> additionalImageUrls = default(List<string>), List<ProductAddFilesInner> files = default(List<ProductAddFilesInner>), ProductAddSizeChart sizeChart = default(ProductAddSizeChart), string relatedProductsIds = default(string), string upSellProductsIds = default(string), string crossSellProductsIds = default(string), string attributeSetName = @"Default", string attributeName = default(string), string searchKeywords = default(string), string tags = default(string), List<string> materials = default(List<string>), List<ProductAddCertificationsInner> certifications = default(List<ProductAddCertificationsInner>), List<ProductAddSpecificsInner> specifics = default(List<ProductAddSpecificsInner>), string availFrom = default(string), string spriceCreate = default(string), string spriceModified = default(string), string spriceExpire = default(string), string createdAt = default(string), bool autoRenew = false, string whenMade = @"made_to_order", string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string url = default(string), string seoUrl = default(string), string taxClassId = default(string), bool taxable = true, ProductAddSalesTax salesTax = default(ProductAddSalesTax), string condition = default(string), string conditionDescription = default(string), bool allowDisplayCondition = default(bool), List<string> paymentMethods = default(List<string>), string paypalEmail = default(string), int shippingTemplateId = 0, int processingProfileId = default(int), List<ProductAddShippingDetailsInner> shippingDetails = default(List<ProductAddShippingDetailsInner>), bool isFreeShipping = default(bool), string deliveryCode = default(string), string deliveryType = default(string), int deliveryTime = default(int), string deliveryOptionIds = default(string), ProductAddPackageDetails packageDetails = default(ProductAddPackageDetails), List<ProductAddLogisticInfoInner> logisticInfo = default(List<ProductAddLogisticInfoInner>), string listingDuration = default(string), string listingType = @"FixedPrice", string categoryType = default(string), bool returnAccepted = default(bool), ProductAddSellerProfiles sellerProfiles = default(ProductAddSellerProfiles), string auctionConfidentialityLevel = default(string), ProductAddBestOffer bestOffer = default(ProductAddBestOffer), string productionPartnerIds = default(string), string marketplaceItemProperties = default(string), bool clearCache = true, int viewedCount = 0, int orderedCount = 0, int shopSectionId = default(int), int returnPolicyId = default(int), ProductAddPersonalizationDetails personalizationDetails = default(ProductAddPersonalizationDetails))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -207,6 +209,8 @@ namespace Org.OpenAPITools.Model
             this.GroupPrices = groupPrices;
             this.BuyitnowPrice = buyitnowPrice;
             this.ReservePrice = reservePrice;
+            this.MeasureUnit = measureUnit;
+            this.UnitPrice = unitPrice;
             this.Quantity = quantity;
             this.InStock = inStock;
             this.ManageStock = manageStock;
@@ -594,6 +598,26 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "reserve_price", EmitDefaultValue = false)]
         public decimal ReservePrice { get; set; }
+
+        /// <summary>
+        /// Unit for the price per unit. Must be in allowed list
+        /// </summary>
+        /// <value>Unit for the price per unit. Must be in allowed list</value>
+        /*
+        <example>Piece</example>
+        */
+        [DataMember(Name = "measure_unit", EmitDefaultValue = false)]
+        public string MeasureUnit { get; set; }
+
+        /// <summary>
+        /// Defines new product&#39;s unit price
+        /// </summary>
+        /// <value>Defines new product&#39;s unit price</value>
+        /*
+        <example>10.5</example>
+        */
+        [DataMember(Name = "unit_price", EmitDefaultValue = false)]
+        public decimal UnitPrice { get; set; }
 
         /// <summary>
         /// Defines product&#39;s quantity that has to be added
@@ -1418,7 +1442,7 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <value>Add Shop Section Id</value>
         /*
-        <example>&#x60;12345678&#x60;</example>
+        <example>12345678</example>
         */
         [DataMember(Name = "shop_section_id", EmitDefaultValue = false)]
         public int ShopSectionId { get; set; }
@@ -1477,6 +1501,8 @@ namespace Org.OpenAPITools.Model
             sb.Append("  GroupPrices: ").Append(GroupPrices).Append("\n");
             sb.Append("  BuyitnowPrice: ").Append(BuyitnowPrice).Append("\n");
             sb.Append("  ReservePrice: ").Append(ReservePrice).Append("\n");
+            sb.Append("  MeasureUnit: ").Append(MeasureUnit).Append("\n");
+            sb.Append("  UnitPrice: ").Append(UnitPrice).Append("\n");
             sb.Append("  Quantity: ").Append(Quantity).Append("\n");
             sb.Append("  InStock: ").Append(InStock).Append("\n");
             sb.Append("  ManageStock: ").Append(ManageStock).Append("\n");

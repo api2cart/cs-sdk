@@ -24,6 +24,8 @@ Name | Type | Description | Notes
 **Combination** | [**List&lt;ProductChildItemCombination&gt;**](ProductChildItemCombination.md) |  | [optional] 
 **DefaultPrice** | **decimal?** |  | [optional] 
 **CostPrice** | **decimal?** |  | [optional] 
+**UnitPrice** | **decimal?** |  | [optional] 
+**MeasureUnit** | **string** |  | [optional] 
 **ListPrice** | **decimal?** |  | [optional] 
 **WholesalePrice** | **decimal?** |  | [optional] 
 **AdvancedPrice** | [**List&lt;ProductAdvancedPrice&gt;**](ProductAdvancedPrice.md) |  | [optional] 

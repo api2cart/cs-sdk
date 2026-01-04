@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **Price** | **decimal?** |  | [optional] 
 **AdvancedPrice** | [**List&lt;ProductAdvancedPrice&gt;**](ProductAdvancedPrice.md) |  | [optional] 
 **CostPrice** | **decimal?** |  | [optional] 
+**UnitPrice** | **decimal?** |  | [optional] 
+**MeasureUnit** | **string** |  | [optional] 
 **Quantity** | **decimal?** |  | [optional] 
 **Inventory** | [**List&lt;ProductInventory&gt;**](ProductInventory.md) |  | [optional] 
 **GroupItems** | [**List&lt;ProductGroupItem&gt;**](ProductGroupItem.md) |  | [optional] 

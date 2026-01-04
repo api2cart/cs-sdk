@@ -34,6 +34,8 @@ Name | Type | Description | Notes
 **GroupPrices** | [**List&lt;ProductAddGroupPricesInner&gt;**](ProductAddGroupPricesInner.md) | Defines product&#39;s group prices | [optional] 
 **BuyitnowPrice** | **decimal** | Defines buy it now value | [optional] 
 **ReservePrice** | **decimal** | Defines reserve price value | [optional] 
+**MeasureUnit** | **string** | Unit for the price per unit. Must be in allowed list | [optional] 
+**UnitPrice** | **decimal** | Defines new product&#39;s unit price | [optional] 
 **Quantity** | **decimal** | Defines product&#39;s quantity that has to be added | [optional] [default to 0M]
 **InStock** | **bool** | Set stock status | [optional] 
 **ManageStock** | **bool** | Defines inventory tracking for product | [optional] 

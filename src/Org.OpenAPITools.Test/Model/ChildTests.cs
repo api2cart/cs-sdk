@@ -236,6 +236,24 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'UnitPrice'
+        /// </summary>
+        [Fact]
+        public void UnitPriceTest()
+        {
+            // TODO unit test for the property 'UnitPrice'
+        }
+
+        /// <summary>
+        /// Test the property 'MeasureUnit'
+        /// </summary>
+        [Fact]
+        public void MeasureUnitTest()
+        {
+            // TODO unit test for the property 'MeasureUnit'
+        }
+
+        /// <summary>
         /// Test the property 'ListPrice'
         /// </summary>
         [Fact]

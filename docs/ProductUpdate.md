@@ -33,6 +33,8 @@ Name | Type | Description | Notes
 **ProductClass** | **string** | A categorization for the product | [optional] 
 **BrandName** | **string** | Retrieves brands specified by brand name | [optional] 
 **AvailableForView** | **bool** | Specifies the set of visible/invisible products for users | [optional] 
+**MeasureUnit** | **string** | Unit for the price per unit. Must be in allowed list | [optional] 
+**UnitPrice** | **decimal** | Defines new product&#39;s unit price | [optional] 
 **StoresIds** | **string** | Assign product to the stores that is specified by comma-separated stores&#39; id | [optional] 
 **StoreId** | **string** | Defines store id where the product should be found | [optional] 
 **LangId** | **string** | Language id | [optional] 
