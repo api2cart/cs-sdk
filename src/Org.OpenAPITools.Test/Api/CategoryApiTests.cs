@@ -77,7 +77,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? storeId = null;
             //string? storesIds = null;
             //string? langId = null;
-            //var response = instance.CategoryAdd(name, description, shortDescription, parentId, avail, createdTime, modifiedTime, sortOrder, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
+            //string? idempotencyKey = null;
+            //var response = instance.CategoryAdd(name, description, shortDescription, parentId, avail, createdTime, modifiedTime, sortOrder, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId, idempotencyKey);
             //Assert.IsType<CategoryAdd200Response>(response);
         }
 
@@ -103,7 +104,8 @@ namespace Org.OpenAPITools.Test.Api
             //string categoryId = null;
             //string productId = null;
             //string? storeId = null;
-            //var response = instance.CategoryAssign(categoryId, productId, storeId);
+            //string? idempotencyKey = null;
+            //var response = instance.CategoryAssign(categoryId, productId, storeId, idempotencyKey);
             //Assert.IsType<CategoryAssign200Response>(response);
         }
 
@@ -145,6 +147,18 @@ namespace Org.OpenAPITools.Test.Api
         }
 
         /// <summary>
+        /// Test CategoryDeleteBatch
+        /// </summary>
+        [Fact]
+        public void CategoryDeleteBatchTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //CategoryDeleteBatch categoryDeleteBatch = null;
+            //var response = instance.CategoryDeleteBatch(categoryDeleteBatch);
+            //Assert.IsType<CategoryAddBatch200Response>(response);
+        }
+
+        /// <summary>
         /// Test CategoryFind
         /// </summary>
         [Fact]
@@ -175,7 +189,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? label = null;
             //string? mime = null;
             //int? position = null;
-            //var response = instance.CategoryImageAdd(categoryId, imageName, url, type, storeId, label, mime, position);
+            //string? idempotencyKey = null;
+            //var response = instance.CategoryImageAdd(categoryId, imageName, url, type, storeId, label, mime, position, idempotencyKey);
             //Assert.IsType<CategoryImageAdd200Response>(response);
         }
 
@@ -254,7 +269,8 @@ namespace Org.OpenAPITools.Test.Api
             //string categoryId = null;
             //string productId = null;
             //string? storeId = null;
-            //var response = instance.CategoryUnassign(categoryId, productId, storeId);
+            //string? idempotencyKey = null;
+            //var response = instance.CategoryUnassign(categoryId, productId, storeId, idempotencyKey);
             //Assert.IsType<CategoryAssign200Response>(response);
         }
 
@@ -280,7 +296,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? storeId = null;
             //string? storesIds = null;
             //string? langId = null;
-            //var response = instance.CategoryUpdate(id, name, description, shortDescription, parentId, avail, sortOrder, modifiedTime, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
+            //string? idempotencyKey = null;
+            //var response = instance.CategoryUpdate(id, name, description, shortDescription, parentId, avail, sortOrder, modifiedTime, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId, idempotencyKey);
             //Assert.IsType<AccountConfigUpdate200Response>(response);
         }
     }

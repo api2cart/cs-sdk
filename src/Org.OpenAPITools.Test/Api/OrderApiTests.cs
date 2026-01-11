@@ -452,7 +452,8 @@ namespace Org.OpenAPITools.Test.Api
             //bool? createInvoice = null;
             //string? origin = null;
             //string? tags = null;
-            //var response = instance.OrderUpdate(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin, tags);
+            //string? idempotencyKey = null;
+            //var response = instance.OrderUpdate(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin, tags, idempotencyKey);
             //Assert.IsType<AccountConfigUpdate200Response>(response);
         }
     }

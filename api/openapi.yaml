@@ -1748,6 +1748,18 @@ paths:
         schema:
           type: string
         style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -2286,6 +2298,18 @@ paths:
           default: all_types
           type: string
         style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -2336,6 +2360,18 @@ paths:
         explode: true
         in: query
         name: lang_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
         required: false
         schema:
           type: string
@@ -2421,6 +2457,18 @@ paths:
         schema:
           type: string
         style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -2463,6 +2511,18 @@ paths:
         in: query
         name: attribute_set_id
         required: true
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
         schema:
           type: string
         style: form
@@ -2678,6 +2738,18 @@ paths:
         schema:
           type: string
         style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -2711,6 +2783,18 @@ paths:
         in: query
         name: attribute_set_id
         required: true
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
         schema:
           type: string
         style: form
@@ -2782,6 +2866,18 @@ paths:
         explode: true
         in: query
         name: lang_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
         required: false
         schema:
           type: string
@@ -2863,6 +2959,18 @@ paths:
         explode: true
         in: query
         name: lang_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
         required: false
         schema:
           type: string
@@ -3043,6 +3151,18 @@ paths:
         schema:
           type: string
         style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -3133,6 +3253,18 @@ paths:
         explode: true
         in: query
         name: store_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
         required: false
         schema:
           type: string
@@ -4019,6 +4151,18 @@ paths:
         schema:
           type: string
         style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -4203,6 +4347,18 @@ paths:
         explode: true
         in: query
         name: owner_name
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
         required: false
         schema:
           type: string
@@ -4430,6 +4586,18 @@ paths:
         explode: true
         in: query
         name: lang_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
         required: false
         schema:
           type: string
@@ -4768,6 +4936,18 @@ paths:
         explode: true
         in: query
         name: store_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
         required: false
         schema:
           type: string
@@ -5450,6 +5630,18 @@ paths:
         schema:
           type: string
         style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -5492,6 +5684,18 @@ paths:
         explode: true
         in: query
         name: store_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
         required: false
         schema:
           type: string
@@ -5648,6 +5852,18 @@ paths:
         explode: true
         in: query
         name: lang_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
         required: false
         schema:
           type: string
@@ -5829,6 +6045,18 @@ paths:
         schema:
           type: string
         style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -5876,6 +6104,29 @@ paths:
       - ApiKeyAuth: []
         StoreKeyAuth: []
       summary: category.delete
+      tags:
+      - category
+  /category.delete.batch.json:
+    post:
+      description: Delete categories from the store.
+      operationId: CategoryDeleteBatch
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CategoryDeleteBatch'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CategoryAddBatch_200_response'
+          description: successful operation
+      security:
+      - ApiKeyAuth: []
+        StoreKeyAuth: []
+      summary: category.delete.batch
       tags:
       - category
   /category.image.add.json:
@@ -5958,6 +6209,18 @@ paths:
         schema:
           default: 0
           type: integer
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
         style: form
       responses:
         "200":
@@ -6568,6 +6831,15 @@ paths:
         schema:
           type: string
         style: form
+      - description: Store Id
+        example: "1"
+        explode: true
+        in: query
+        name: store_id
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -6847,6 +7119,18 @@ paths:
         explode: true
         in: query
         name: stores_ids
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
         required: false
         schema:
           type: string
@@ -8046,6 +8330,18 @@ paths:
         explode: true
         in: query
         name: tags
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
         required: false
         schema:
           type: string
@@ -10104,6 +10400,18 @@ paths:
         schema:
           type: string
         style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -10179,6 +10487,18 @@ paths:
         schema:
           default: true
           type: boolean
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
         style: form
       responses:
         "200":
@@ -10942,6 +11262,18 @@ paths:
           default: false
           type: boolean
         style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -11073,6 +11405,18 @@ paths:
         required: false
         schema:
           type: boolean
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
         style: form
       responses:
         "200":
@@ -11214,6 +11558,18 @@ paths:
         explode: true
         in: query
         name: seo_url
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
         required: false
         schema:
           type: string
@@ -11390,6 +11746,18 @@ paths:
           default: true
           type: boolean
         style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -11504,6 +11872,18 @@ paths:
           default: true
           type: boolean
         style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -11586,6 +11966,18 @@ paths:
         schema:
           default: true
           type: boolean
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
         style: form
       responses:
         "200":
@@ -11677,6 +12069,18 @@ paths:
         schema:
           default: true
           type: boolean
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
         style: form
       responses:
         "200":
@@ -12028,6 +12432,18 @@ paths:
         in: query
         name: store_id
         required: true
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
         schema:
           type: string
         style: form
@@ -13439,6 +13855,18 @@ paths:
         schema:
           type: string
         style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -13518,6 +13946,18 @@ paths:
         explode: true
         in: query
         name: lang_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
         required: false
         schema:
           type: string
@@ -13819,6 +14259,7 @@ components:
           - PrestashopApi
           - SSPremium
           - Salla
+          - SCAPI
           - Shopify
           - Shopee
           - Shoplazza
@@ -18450,6 +18891,7 @@ components:
         date_start: 2019-12-29 06:44:30
         action_condition_key: product_id
         name: Sale! -30%
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         action_condition_entity: order
         action_condition_value: "17834222,45466663"
         customer_id: "5"
@@ -18567,6 +19009,14 @@ components:
           example: "5"
           type: string
           name: customer_id
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
       required:
       - action_amount
       - action_apply_to
@@ -20334,12 +20784,37 @@ components:
           - meta_keywords
           - meta_keywords
           sort_order: 0
+        idempotency_key: idempotency_key
       properties:
         payload:
           description: Contains an array of categories objects. The list of properties
             may vary depending on the specific platform.
           items:
             $ref: '#/components/schemas/CategoryAddBatch_payload_inner'
+          maxItems: 250
+          minItems: 1
+          type: array
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          type: string
+      required:
+      - payload
+    CategoryDeleteBatch:
+      example:
+        payload:
+        - id: id
+        - id: id
+        - id: id
+        - id: id
+        - id: id
+      properties:
+        payload:
+          description: Contains an array of category IDs to delete.
+          items:
+            $ref: '#/components/schemas/CategoryDeleteBatch_payload_inner'
           maxItems: 250
           minItems: 1
           type: array
@@ -21199,10 +21674,22 @@ components:
           type: object
     CustomerAdd:
       example:
-        store_id: "1"
-        created_time: 2014-01-30 15:58:41
         note: Customer note
         country: US
+        gender: male
+        login: makaka
+        password: fd5gfd5g75fd
+        modified_time: 2014-07-30 15:58:41
+        group_ids: "1,2,3"
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
+        company: Apple
+        news_letter_subscription: true
+        fax: "54545787"
+        first_name: John
+        email: mail@example.com
+        group: Register
+        store_id: "1"
+        created_time: 2014-01-30 15:58:41
         website: http://api2cart.com
         address:
         - address_book_company: Samsung
@@ -21245,16 +21732,11 @@ components:
           address_book_identification_number: '`123-456-7890`'
           address_book_type: billing
           address_book_fax: "5758787"
-        gender: male
         last_login: 2013-02-26 15:00:00
         last_name: Smith
-        login: makaka
         birth_day: 2013-02-26 15:00:00
-        password: fd5gfd5g75fd
-        modified_time: 2014-07-30 15:58:41
         group_id: 3
         phone: "56686868654"
-        group_ids: "1,2,3"
         consents:
         - type: email
           opt_in_level: opt_in_level
@@ -21262,12 +21744,6 @@ components:
         - type: email
           opt_in_level: opt_in_level
           status: status
-        company: Apple
-        news_letter_subscription: true
-        fax: "54545787"
-        first_name: John
-        email: mail@example.com
-        group: Register
         status: disabled
       properties:
         email:
@@ -21388,6 +21864,14 @@ components:
           example: "1"
           type: string
           name: store_id
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
         address:
           items:
             $ref: '#/components/schemas/CustomerAdd_address_inner'
@@ -21451,6 +21935,7 @@ components:
         - type: email
           opt_in_level: opt_in_level
           status: status
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         id: 10
         news_letter_subscription: true
         first_name: John
@@ -21540,6 +22025,14 @@ components:
           example: "1"
           type: string
           name: store_id
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
         address:
           items:
             $ref: '#/components/schemas/CustomerUpdate_address_inner'
@@ -21562,6 +22055,7 @@ components:
         default: true
         phone: "56686868654"
         alias: Address alias
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         company: Apple
         state: IL
         customer_id: "5"
@@ -21676,6 +22170,14 @@ components:
           example: Address alias
           type: string
           name: alias
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
       required:
       - address1
       - city
@@ -26403,6 +26905,7 @@ components:
         - coupons
         - coupons
         shipp_first_name: John
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         bill_address_2: "Red str, 2"
         bill_address_1: Green str. 35
         store_id: "1"
@@ -26580,6 +27083,14 @@ components:
           example: "{result}"
           type: string
           name: response_fields
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
         order_item:
           items:
             $ref: '#/components/schemas/OrderCalculate_order_item_inner'
@@ -26613,6 +27124,7 @@ components:
         coupons:
         - coupons
         - coupons
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         id: 10
         bill_address_2: "Red str, 2"
         bill_address_1: Green str. 35
@@ -27101,6 +27613,14 @@ components:
           example: 5.5
           type: number
           name: fee_price
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
         order_item:
           items:
             $ref: '#/components/schemas/OrderAdd_order_item_inner'
@@ -27928,6 +28448,11 @@ components:
     OrderPreestimateShippingList:
       example:
         store_id: "1"
+        shipp_country: US
+        shipp_address_1: Green str. 35
+        shipp_postcode: "24545"
+        params: "id,model,price,images"
+        shipp_state: IL
         order_item:
         - order_item_id: "125, where {x} - 1,2,3,... etc"
           order_item_option:
@@ -27961,15 +28486,11 @@ components:
           order_item_quantity: "5, where {x} - 1,2,3,... etc"
           order_item_weight: "5, where {x} - 1,2,3,... etc"
           order_item_variant_id: 52
-        shipp_country: US
         customer_email: jubari@hannsgroup.com
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         exclude: false
-        shipp_address_1: Green str. 35
-        shipp_postcode: "24545"
         customer_id: "5"
-        params: "id,model,price,images"
         shipp_city: Chicago
-        shipp_state: IL
         warehouse_id: "1"
       properties:
         warehouse_id:
@@ -28031,6 +28552,14 @@ components:
           example: false
           type: string
           name: exclude
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
         order_item:
           items:
             $ref: '#/components/schemas/OrderPreestimateShippingList_order_item_inner'
@@ -28045,6 +28574,7 @@ components:
         item_restock: true
         total_price: 23.56
         send_notifications: true
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         is_online: false
         fee_price: 5.5
         message: "Received item is not like in the photo, get my money back."
@@ -28111,11 +28641,23 @@ components:
           example: false
           type: boolean
           name: is_online
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
     OrderReturnAdd:
       example:
         store_id: "1"
         return_reason: broken
         item_restock: true
+        return_reason_id: broken
+        send_notifications: true
+        reject_reason: ORDER_UNPAID
+        return_action_id: RETURNED
         order_products:
         - order_product_id: "125, where {x} - 1,2,3,... etc"
           order_product_quantity: "1, where {x} - 1,2,3,... etc"
@@ -28137,14 +28679,11 @@ components:
           order_product_status: pending
           order_product_condition: "Broken, where {x} - 1,2,3,... etc"
           order_product_action_id: "REFUND, where {x} - 1,2,3,... etc"
-        return_reason_id: broken
-        send_notifications: true
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         return_status_id: RETURNED
         comment: This coole order
         staff_note: Test
-        reject_reason: ORDER_UNPAID
         order_id: 25
-        return_action_id: RETURNED
       properties:
         order_id:
           description: Defines the order id
@@ -28204,6 +28743,14 @@ components:
           example: ORDER_UNPAID
           type: string
           name: reject_reason
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
         order_products:
           items:
             $ref: '#/components/schemas/OrderReturnAdd_order_products_inner'
@@ -28228,6 +28775,7 @@ components:
           order_product_action_id: "REFUND, where {x} - 1,2,3,... etc"
         send_notifications: true
         return_id: "200000002"
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         return_status_id: RETURNED
         comment: This coole order
         staff_note: Test
@@ -28282,6 +28830,14 @@ components:
           example: ORDER_UNPAID
           type: string
           name: reject_reason
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
         order_products:
           items:
             $ref: '#/components/schemas/OrderReturnUpdate_order_products_inner'
@@ -28704,6 +29260,7 @@ components:
         enable_cache: true
         use_latest_api_version: true
         shipping_method: flatrate_flatrate
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         shipment_provider: UPS
         tracking_numbers:
         - carrier_id: carrier_id
@@ -28809,6 +29366,14 @@ components:
           example: true
           type: boolean
           name: use_latest_api_version
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
     OrderShipmentAddBatch:
       example:
         payload:
@@ -28882,6 +29447,7 @@ components:
             quantity: 0.8008281904610115
           tracking_link: tracking_link
           warehouse_id: warehouse_id
+        idempotency_key: idempotency_key
       properties:
         payload:
           description: Contains an array of order shipment objects. The list of properties
@@ -28891,22 +29457,29 @@ components:
           maxItems: 250
           minItems: 1
           type: array
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          type: string
       required:
       - payload
     OrderShipmentUpdate:
       example:
         store_id: "1"
-        is_shipped: true
         send_notifications: true
         replace: false
         tracking_provider: Custom tracker
+        shipment_id: "200000002"
+        is_shipped: true
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         shipment_provider: UPS
         tracking_numbers:
         - carrier_id: carrier_id
           tracking_number: tracking_number
         - carrier_id: carrier_id
           tracking_number: tracking_number
-        shipment_id: "200000002"
         order_id: 25
         delivered_at: 2024-08-25T23:56:12+00:00
         items:
@@ -28984,6 +29557,14 @@ components:
           items:
             $ref: '#/components/schemas/OrderShipmentAdd_items_inner'
           type: array
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
       required:
       - shipment_id
     OrderShipmentTrackingAdd:
@@ -28993,6 +29574,7 @@ components:
         send_notifications: true
         tracking_provider: Custom tracker
         tracking_number: 1А6745
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         shipment_id: "200000002"
         order_id: 25
         tracking_link: http://example.com?someParam=value
@@ -29038,6 +29620,14 @@ components:
           example: true
           type: boolean
           name: send_notifications
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
       required:
       - shipment_id
       - tracking_number
@@ -31480,6 +32070,7 @@ components:
         delivery_type: PARCEL
         viewed_count: 9
         wholesale_price: 56.12
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         model: bag_01
         is_free_shipping: true
         sku: bag_01
@@ -32399,6 +32990,14 @@ components:
           name: return_policy_id
         personalization_details:
           $ref: '#/components/schemas/ProductAdd_personalization_details'
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
       required:
       - description
       - model
@@ -32989,6 +33588,7 @@ components:
           specifics: "{}"
           available_for_view: true
           warehouse_id: warehouse_id
+        idempotency_key: idempotency_key
         nested_items_update_behaviour: replace
       properties:
         nested_items_update_behaviour:
@@ -33018,6 +33618,12 @@ components:
           maxItems: 250
           minItems: 1
           type: array
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          type: string
       required:
       - payload
     ProductUpdate:
@@ -33043,6 +33649,7 @@ components:
           :\"W\",\"measure\":40}}"
         price: 99.9
         dimensions_unit: cm
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         model: bag_01
         is_free_shipping: true
         id: 10
@@ -33721,6 +34328,14 @@ components:
           example: 1
           type: number
           name: min_order_quantity
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
     ProductUpdateBatch:
       example:
         clear_cache: false
@@ -34206,6 +34821,7 @@ components:
           - categories_ids
           available_for_view: true
           warehouse_id: warehouse_id
+        idempotency_key: idempotency_key
         nested_items_update_behaviour: replace
       properties:
         nested_items_update_behaviour:
@@ -34235,6 +34851,12 @@ components:
           maxItems: 250
           minItems: 1
           type: array
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          type: string
       required:
       - payload
     ProductDeleteBatch:
@@ -34250,6 +34872,7 @@ components:
           id: id
         - store_id: store_id
           id: id
+        idempotency_key: idempotency_key
       properties:
         payload:
           description: "Contains an array of product deletion requests, each including\
@@ -34259,6 +34882,12 @@ components:
           maxItems: 250
           minItems: 1
           type: array
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          type: string
       required:
       - payload
     Model_Response_Product_Attribute_List:
@@ -36024,6 +36653,7 @@ components:
         image_name: bag-gray.png
         use_latest_api_version: true
         product_id: 10
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         position: 5
         product_variant_id: 45
       properties:
@@ -36105,6 +36735,14 @@ components:
           example: true
           type: boolean
           name: use_latest_api_version
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
       required:
       - image_name
       - type
@@ -36315,6 +36953,7 @@ components:
           value: value
         name: Color
         description: Product option
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         default_option_value: green
         type: option_type_select
         sort_order: 2
@@ -36392,6 +37031,14 @@ components:
           example: false
           type: boolean
           name: clear_cache
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
       required:
       - name
       - type
@@ -36406,6 +37053,7 @@ components:
           qty: 5
         store_id: "1"
         product_id: 10
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
       properties:
         product_id:
           description: Defines the product to which the price has to be added
@@ -36422,6 +37070,14 @@ components:
           example: "1"
           type: string
           name: store_id
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
     ProductPriceUpdate:
       example:
         group_prices:
@@ -36434,6 +37090,7 @@ components:
           qty: 1
           id: 0
         product_id: 10
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
       properties:
         product_id:
           description: Defines the product where the price has to be updated
@@ -36445,6 +37102,14 @@ components:
           items:
             $ref: '#/components/schemas/ProductPriceUpdate_group_prices_inner'
           type: array
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
     Model_Response_Product_Review_List:
       example:
         result:
@@ -36820,6 +37485,7 @@ components:
       example:
         product_id: 10
         name: ECO-Tax
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         tax_rates:
         - name: name
           type: type
@@ -36843,6 +37509,14 @@ components:
           items:
             $ref: '#/components/schemas/ProductTaxAdd_tax_rates_inner'
           type: array
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
       required:
       - name
       - tax_rates
@@ -36858,6 +37532,7 @@ components:
           :\"W\",\"measure\":40}}"
         price: 99.9
         product_id: 10
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         model: bag_01
         is_free_shipping: true
         sku: bag_01
@@ -37233,6 +37908,14 @@ components:
           example: false
           type: boolean
           name: clear_cache
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
       required:
       - model
     ProductVariantAddBatch:
@@ -37655,6 +38338,7 @@ components:
           - categories_ids
           backorder_status: backorder_status
           warehouse_id: warehouse_id
+        idempotency_key: idempotency_key
       properties:
         clear_cache:
           default: false
@@ -37670,6 +38354,12 @@ components:
           maxItems: 250
           minItems: 1
           type: array
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          type: string
       required:
       - payload
     ProductVariantUpdate:
@@ -37689,6 +38379,7 @@ components:
           option_name: option_name
         - option_value: option_value
           option_name: option_name
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         model: bag_01
         is_free_shipping: true
         id: 10
@@ -38049,6 +38740,14 @@ components:
           example: '`12345678`'
           type: integer
           name: processing_profile_id
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
     ProductVariantUpdateBatch:
       example:
         clear_cache: false
@@ -38444,6 +39143,7 @@ components:
           - categories_ids
           status: status
           warehouse_id: warehouse_id
+        idempotency_key: idempotency_key
         nested_items_update_behaviour: replace
       properties:
         nested_items_update_behaviour:
@@ -38473,6 +39173,12 @@ components:
           maxItems: 250
           minItems: 1
           type: array
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          type: string
       required:
       - payload
     ProductVariantDeleteBatch:
@@ -38495,6 +39201,7 @@ components:
         - store_id: store_id
           product_id: product_id
           id: id
+        idempotency_key: idempotency_key
       properties:
         clear_cache:
           default: false
@@ -38511,6 +39218,12 @@ components:
           maxItems: 250
           minItems: 1
           type: array
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          type: string
       required:
       - payload
     ProductVariantImageAdd:
@@ -38519,6 +39232,7 @@ components:
         image_name: abibas.png
         product_id: 10
         mime: image/jpeg
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         option_id: 5
         label: This cool image
         position: 5
@@ -38591,6 +39305,14 @@ components:
           example: 5
           type: string
           name: option_id
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
       required:
       - image_name
       - product_variant_id
@@ -38642,6 +39364,7 @@ components:
           qty: 1
           id: 0
         product_id: 10
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         id: 10
       properties:
         id:
@@ -38659,6 +39382,14 @@ components:
           items:
             $ref: '#/components/schemas/ProductPriceUpdate_group_prices_inner'
           type: array
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
       required:
       - group_prices
     Return:
@@ -44992,6 +45723,15 @@ components:
           type: array
       required:
       - name
+    CategoryDeleteBatch_payload_inner:
+      example:
+        id: id
+      properties:
+        id:
+          minLength: 1
+          type: string
+      required:
+      - id
     CustomerAdd_consents_inner:
       example:
         type: email

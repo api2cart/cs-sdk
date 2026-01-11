@@ -83,7 +83,8 @@ namespace Org.OpenAPITools.Test.Api
             //bool? usedInProductListing = null;
             //bool? usedForSortBy = null;
             //string? applyTo = null;
-            //var response = instance.AttributeAdd(type, name, code, storeId, langId, visible, required, position, attributeGroupId, isGlobal, isSearchable, isFilterable, isComparable, isHtmlAllowedOnFront, isFilterableInSearch, isConfigurable, isVisibleInAdvancedSearch, isUsedForPromoRules, usedInProductListing, usedForSortBy, applyTo);
+            //string? idempotencyKey = null;
+            //var response = instance.AttributeAdd(type, name, code, storeId, langId, visible, required, position, attributeGroupId, isGlobal, isSearchable, isFilterable, isComparable, isHtmlAllowedOnFront, isFilterableInSearch, isConfigurable, isVisibleInAdvancedSearch, isUsedForPromoRules, usedInProductListing, usedForSortBy, applyTo, idempotencyKey);
             //Assert.IsType<AttributeAdd200Response>(response);
         }
 
@@ -97,7 +98,8 @@ namespace Org.OpenAPITools.Test.Api
             //string id = null;
             //string groupId = null;
             //string? attributeSetId = null;
-            //var response = instance.AttributeAssignGroup(id, groupId, attributeSetId);
+            //string? idempotencyKey = null;
+            //var response = instance.AttributeAssignGroup(id, groupId, attributeSetId, idempotencyKey);
             //Assert.IsType<AttributeAssignGroup200Response>(response);
         }
 
@@ -111,7 +113,8 @@ namespace Org.OpenAPITools.Test.Api
             //string id = null;
             //string attributeSetId = null;
             //string? groupId = null;
-            //var response = instance.AttributeAssignSet(id, attributeSetId, groupId);
+            //string? idempotencyKey = null;
+            //var response = instance.AttributeAssignSet(id, attributeSetId, groupId, idempotencyKey);
             //Assert.IsType<AttributeAssignGroup200Response>(response);
         }
 
@@ -242,7 +245,8 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //string groupId = null;
-            //var response = instance.AttributeUnassignGroup(id, groupId);
+            //string? idempotencyKey = null;
+            //var response = instance.AttributeUnassignGroup(id, groupId, idempotencyKey);
             //Assert.IsType<AttributeUnassignGroup200Response>(response);
         }
 
@@ -255,7 +259,8 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //string attributeSetId = null;
-            //var response = instance.AttributeUnassignSet(id, attributeSetId);
+            //string? idempotencyKey = null;
+            //var response = instance.AttributeUnassignSet(id, attributeSetId, idempotencyKey);
             //Assert.IsType<AttributeUnassignGroup200Response>(response);
         }
 
@@ -270,7 +275,8 @@ namespace Org.OpenAPITools.Test.Api
             //string name = null;
             //string? storeId = null;
             //string? langId = null;
-            //var response = instance.AttributeUpdate(id, name, storeId, langId);
+            //string? idempotencyKey = null;
+            //var response = instance.AttributeUpdate(id, name, storeId, langId, idempotencyKey);
             //Assert.IsType<AttributeUpdate200Response>(response);
         }
 
@@ -287,7 +293,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? description = null;
             //string? storeId = null;
             //string? langId = null;
-            //var response = instance.AttributeValueAdd(attributeId, name, code, description, storeId, langId);
+            //string? idempotencyKey = null;
+            //var response = instance.AttributeValueAdd(attributeId, name, code, description, storeId, langId, idempotencyKey);
             //Assert.IsType<AttributeAdd200Response>(response);
         }
 
@@ -319,7 +326,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? code = null;
             //string? storeId = null;
             //string? langId = null;
-            //var response = instance.AttributeValueUpdate(id, attributeId, name, description, code, storeId, langId);
+            //string? idempotencyKey = null;
+            //var response = instance.AttributeValueUpdate(id, attributeId, name, description, code, storeId, langId, idempotencyKey);
             //Assert.IsType<AttributeUpdate200Response>(response);
         }
     }

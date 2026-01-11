@@ -2445,7 +2445,7 @@ catch (ApiException e)
 
 <a id="orderupdate"></a>
 # **OrderUpdate**
-> AccountConfigUpdate200Response OrderUpdate (string orderId, string? storeId = null, string? orderStatus = null, string? financialStatus = null, string? fulfillmentStatus = null, string? cancellationReason = null, string? orderPaymentMethod = null, string? comment = null, string? adminComment = null, string? adminPrivateComment = null, string? invoiceAdminComment = null, string? dateModified = null, string? dateFinished = null, bool? sendNotifications = null, bool? createInvoice = null, string? origin = null, string? tags = null)
+> AccountConfigUpdate200Response OrderUpdate (string orderId, string? storeId = null, string? orderStatus = null, string? financialStatus = null, string? fulfillmentStatus = null, string? cancellationReason = null, string? orderPaymentMethod = null, string? comment = null, string? adminComment = null, string? adminPrivateComment = null, string? invoiceAdminComment = null, string? dateModified = null, string? dateFinished = null, bool? sendNotifications = null, bool? createInvoice = null, string? origin = null, string? tags = null, string? idempotencyKey = null)
 
 order.update
 
@@ -2494,11 +2494,12 @@ namespace Example
             var createInvoice = true;  // bool? | Determines whether an invoice should be created if it has not already been created (optional) 
             var origin = newsletter;  // string? | The source of the order (optional) 
             var tags = tag1,tag2;  // string? | Order tags (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // order.update
-                AccountConfigUpdate200Response result = apiInstance.OrderUpdate(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin, tags);
+                AccountConfigUpdate200Response result = apiInstance.OrderUpdate(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin, tags, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2519,7 +2520,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.update
-    ApiResponse<AccountConfigUpdate200Response> response = apiInstance.OrderUpdateWithHttpInfo(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin, tags);
+    ApiResponse<AccountConfigUpdate200Response> response = apiInstance.OrderUpdateWithHttpInfo(orderId, storeId, orderStatus, financialStatus, fulfillmentStatus, cancellationReason, orderPaymentMethod, comment, adminComment, adminPrivateComment, invoiceAdminComment, dateModified, dateFinished, sendNotifications, createInvoice, origin, tags, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2553,6 +2554,7 @@ catch (ApiException e)
 | **createInvoice** | **bool?** | Determines whether an invoice should be created if it has not already been created | [optional]  |
 | **origin** | **string?** | The source of the order | [optional]  |
 | **tags** | **string?** | Order tags | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 

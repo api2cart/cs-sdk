@@ -51,8 +51,9 @@ namespace Org.OpenAPITools.Model
         /// <param name="shippCountry">Specifies shipping country code (required).</param>
         /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (default to &quot;force_all&quot;).</param>
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all.</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
         /// <param name="orderItem">orderItem (required).</param>
-        public OrderPreestimateShippingList(string warehouseId = default(string), string customerId = default(string), string customerEmail = default(string), string storeId = default(string), string shippAddress1 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), string varParams = @"force_all", string exclude = default(string), List<OrderPreestimateShippingListOrderItemInner> orderItem = default(List<OrderPreestimateShippingListOrderItemInner>))
+        public OrderPreestimateShippingList(string warehouseId = default(string), string customerId = default(string), string customerEmail = default(string), string storeId = default(string), string shippAddress1 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), string varParams = @"force_all", string exclude = default(string), string idempotencyKey = default(string), List<OrderPreestimateShippingListOrderItemInner> orderItem = default(List<OrderPreestimateShippingListOrderItemInner>))
         {
             // to ensure "shippCountry" is required (not null)
             if (shippCountry == null)
@@ -77,6 +78,7 @@ namespace Org.OpenAPITools.Model
             // use default value if no "varParams" provided
             this.Params = varParams ?? @"force_all";
             this.Exclude = exclude;
+            this.IdempotencyKey = idempotencyKey;
         }
 
         /// <summary>
@@ -190,6 +192,16 @@ namespace Org.OpenAPITools.Model
         public string Exclude { get; set; }
 
         /// <summary>
+        /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
+        /// </summary>
+        /// <value>A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;</value>
+        /*
+        <example>098f6bcd4621d373cade4e832627b4f6</example>
+        */
+        [DataMember(Name = "idempotency_key", EmitDefaultValue = false)]
+        public string IdempotencyKey { get; set; }
+
+        /// <summary>
         /// Gets or Sets OrderItem
         /// </summary>
         [DataMember(Name = "order_item", IsRequired = true, EmitDefaultValue = true)]
@@ -214,6 +226,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  ShippCountry: ").Append(ShippCountry).Append("\n");
             sb.Append("  Params: ").Append(Params).Append("\n");
             sb.Append("  Exclude: ").Append(Exclude).Append("\n");
+            sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("  OrderItem: ").Append(OrderItem).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

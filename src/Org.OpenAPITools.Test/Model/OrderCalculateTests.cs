@@ -290,6 +290,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IdempotencyKey'
+        /// </summary>
+        [Fact]
+        public void IdempotencyKeyTest()
+        {
+            // TODO unit test for the property 'IdempotencyKey'
+        }
+
+        /// <summary>
         /// Test the property 'OrderItem'
         /// </summary>
         [Fact]

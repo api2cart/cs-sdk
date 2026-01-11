@@ -71,7 +71,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="clearCache">clearCache (default to false).</param>
         /// <param name="reindex">reindex (default to false).</param>
         /// <param name="payload">Contains an array of product objects. The list of properties may vary depending on the specific platform. (required).</param>
-        public ProductVariantUpdateBatch(NestedItemsUpdateBehaviourEnum? nestedItemsUpdateBehaviour = NestedItemsUpdateBehaviourEnum.Replace, bool clearCache = false, bool reindex = false, List<ProductVariantUpdateBatchPayloadInner> payload = default(List<ProductVariantUpdateBatchPayloadInner>))
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
+        public ProductVariantUpdateBatch(NestedItemsUpdateBehaviourEnum? nestedItemsUpdateBehaviour = NestedItemsUpdateBehaviourEnum.Replace, bool clearCache = false, bool reindex = false, List<ProductVariantUpdateBatchPayloadInner> payload = default(List<ProductVariantUpdateBatchPayloadInner>), string idempotencyKey = default(string))
         {
             // to ensure "payload" is required (not null)
             if (payload == null)
@@ -82,6 +83,7 @@ namespace Org.OpenAPITools.Model
             this.NestedItemsUpdateBehaviour = nestedItemsUpdateBehaviour;
             this.ClearCache = clearCache;
             this.Reindex = reindex;
+            this.IdempotencyKey = idempotencyKey;
         }
 
         /// <summary>
@@ -104,6 +106,13 @@ namespace Org.OpenAPITools.Model
         public List<ProductVariantUpdateBatchPayloadInner> Payload { get; set; }
 
         /// <summary>
+        /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
+        /// </summary>
+        /// <value>A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;</value>
+        [DataMember(Name = "idempotency_key", EmitDefaultValue = false)]
+        public string IdempotencyKey { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -115,6 +124,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  ClearCache: ").Append(ClearCache).Append("\n");
             sb.Append("  Reindex: ").Append(Reindex).Append("\n");
             sb.Append("  Payload: ").Append(Payload).Append("\n");
+            sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

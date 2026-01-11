@@ -70,9 +70,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="variantId">Defines product&#39;s variants specified by variant id (optional)</param>
         /// <param name="quantity">Defines new items quantity (optional, default to 0M)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketItemAdd200Response</returns>
-        BasketItemAdd200Response BasketItemAdd(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), int operationIndex = 0);
+        BasketItemAdd200Response BasketItemAdd(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// basket.item.add
@@ -86,9 +87,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="variantId">Defines product&#39;s variants specified by variant id (optional)</param>
         /// <param name="quantity">Defines new items quantity (optional, default to 0M)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketItemAdd200Response</returns>
-        ApiResponse<BasketItemAdd200Response> BasketItemAddWithHttpInfo(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<BasketItemAdd200Response> BasketItemAddWithHttpInfo(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// basket.live_shipping_service.create
         /// </summary>
@@ -99,9 +101,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Shipping Service Name</param>
         /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data.</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketLiveShippingServiceCreate200Response</returns>
-        BasketLiveShippingServiceCreate200Response BasketLiveShippingServiceCreate(string name, string callback, string? storeId = default(string?), int operationIndex = 0);
+        BasketLiveShippingServiceCreate200Response BasketLiveShippingServiceCreate(string name, string callback, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// basket.live_shipping_service.create
@@ -113,9 +116,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Shipping Service Name</param>
         /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data.</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketLiveShippingServiceCreate200Response</returns>
-        ApiResponse<BasketLiveShippingServiceCreate200Response> BasketLiveShippingServiceCreateWithHttpInfo(string name, string callback, string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<BasketLiveShippingServiceCreate200Response> BasketLiveShippingServiceCreateWithHttpInfo(string name, string callback, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// basket.live_shipping_service.delete
         /// </summary>
@@ -220,10 +224,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="variantId">Defines product&#39;s variants specified by variant id (optional)</param>
         /// <param name="quantity">Defines new items quantity (optional, default to 0M)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketItemAdd200Response</returns>
-        System.Threading.Tasks.Task<BasketItemAdd200Response> BasketItemAddAsync(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BasketItemAdd200Response> BasketItemAddAsync(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// basket.item.add
@@ -237,10 +242,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="variantId">Defines product&#39;s variants specified by variant id (optional)</param>
         /// <param name="quantity">Defines new items quantity (optional, default to 0M)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketItemAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BasketItemAdd200Response>> BasketItemAddWithHttpInfoAsync(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BasketItemAdd200Response>> BasketItemAddWithHttpInfoAsync(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// basket.live_shipping_service.create
         /// </summary>
@@ -251,10 +257,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Shipping Service Name</param>
         /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data.</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketLiveShippingServiceCreate200Response</returns>
-        System.Threading.Tasks.Task<BasketLiveShippingServiceCreate200Response> BasketLiveShippingServiceCreateAsync(string name, string callback, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BasketLiveShippingServiceCreate200Response> BasketLiveShippingServiceCreateAsync(string name, string callback, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// basket.live_shipping_service.create
@@ -266,10 +273,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Shipping Service Name</param>
         /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data.</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketLiveShippingServiceCreate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BasketLiveShippingServiceCreate200Response>> BasketLiveShippingServiceCreateWithHttpInfoAsync(string name, string callback, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BasketLiveShippingServiceCreate200Response>> BasketLiveShippingServiceCreateWithHttpInfoAsync(string name, string callback, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// basket.live_shipping_service.delete
         /// </summary>
@@ -666,11 +674,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="variantId">Defines product&#39;s variants specified by variant id (optional)</param>
         /// <param name="quantity">Defines new items quantity (optional, default to 0M)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketItemAdd200Response</returns>
-        public BasketItemAdd200Response BasketItemAdd(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), int operationIndex = 0)
+        public BasketItemAdd200Response BasketItemAdd(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketItemAdd200Response> localVarResponse = BasketItemAddWithHttpInfo(customerId, productId, variantId, quantity, storeId);
+            Org.OpenAPITools.Client.ApiResponse<BasketItemAdd200Response> localVarResponse = BasketItemAddWithHttpInfo(customerId, productId, variantId, quantity, storeId, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -683,9 +692,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="variantId">Defines product&#39;s variants specified by variant id (optional)</param>
         /// <param name="quantity">Defines new items quantity (optional, default to 0M)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketItemAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<BasketItemAdd200Response> BasketItemAddWithHttpInfo(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<BasketItemAdd200Response> BasketItemAddWithHttpInfo(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'customerId' is set
             if (customerId == null)
@@ -735,6 +745,10 @@ namespace Org.OpenAPITools.Api
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "BasketApi.BasketItemAdd";
@@ -774,12 +788,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="variantId">Defines product&#39;s variants specified by variant id (optional)</param>
         /// <param name="quantity">Defines new items quantity (optional, default to 0M)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketItemAdd200Response</returns>
-        public async System.Threading.Tasks.Task<BasketItemAdd200Response> BasketItemAddAsync(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BasketItemAdd200Response> BasketItemAddAsync(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketItemAdd200Response> localVarResponse = await BasketItemAddWithHttpInfoAsync(customerId, productId, variantId, quantity, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<BasketItemAdd200Response> localVarResponse = await BasketItemAddWithHttpInfoAsync(customerId, productId, variantId, quantity, storeId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -792,10 +807,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="variantId">Defines product&#39;s variants specified by variant id (optional)</param>
         /// <param name="quantity">Defines new items quantity (optional, default to 0M)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketItemAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketItemAdd200Response>> BasketItemAddWithHttpInfoAsync(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketItemAdd200Response>> BasketItemAddWithHttpInfoAsync(string customerId, string productId, string? variantId = default(string?), decimal? quantity = default(decimal?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'customerId' is set
             if (customerId == null)
@@ -846,6 +862,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "BasketApi.BasketItemAdd";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -883,11 +903,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Shipping Service Name</param>
         /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data.</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketLiveShippingServiceCreate200Response</returns>
-        public BasketLiveShippingServiceCreate200Response BasketLiveShippingServiceCreate(string name, string callback, string? storeId = default(string?), int operationIndex = 0)
+        public BasketLiveShippingServiceCreate200Response BasketLiveShippingServiceCreate(string name, string callback, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> localVarResponse = BasketLiveShippingServiceCreateWithHttpInfo(name, callback, storeId);
+            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> localVarResponse = BasketLiveShippingServiceCreateWithHttpInfo(name, callback, storeId, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -898,9 +919,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Shipping Service Name</param>
         /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data.</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketLiveShippingServiceCreate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> BasketLiveShippingServiceCreateWithHttpInfo(string name, string callback, string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> BasketLiveShippingServiceCreateWithHttpInfo(string name, string callback, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -943,6 +965,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "BasketApi.BasketLiveShippingServiceCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -979,12 +1005,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Shipping Service Name</param>
         /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data.</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketLiveShippingServiceCreate200Response</returns>
-        public async System.Threading.Tasks.Task<BasketLiveShippingServiceCreate200Response> BasketLiveShippingServiceCreateAsync(string name, string callback, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BasketLiveShippingServiceCreate200Response> BasketLiveShippingServiceCreateAsync(string name, string callback, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> localVarResponse = await BasketLiveShippingServiceCreateWithHttpInfoAsync(name, callback, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> localVarResponse = await BasketLiveShippingServiceCreateWithHttpInfoAsync(name, callback, storeId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -995,10 +1022,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Shipping Service Name</param>
         /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data.</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketLiveShippingServiceCreate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response>> BasketLiveShippingServiceCreateWithHttpInfoAsync(string name, string callback, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response>> BasketLiveShippingServiceCreateWithHttpInfoAsync(string name, string callback, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -1040,6 +1068,10 @@ namespace Org.OpenAPITools.Api
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "BasketApi.BasketLiveShippingServiceCreate";

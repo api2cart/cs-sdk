@@ -155,7 +155,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="storeId">Store Id.</param>
         /// <param name="freeCashOnDelivery">Defines whether the coupon provides free cash on delivery.</param>
         /// <param name="customerId">Retrieves orders specified by customer id.</param>
-        public CartCouponAdd(string code = default(string), ActionTypeEnum actionType = default(ActionTypeEnum), ActionApplyToEnum actionApplyTo = default(ActionApplyToEnum), ActionScopeEnum actionScope = default(ActionScopeEnum), decimal actionAmount = default(decimal), List<string> codes = default(List<string>), string name = default(string), string dateStart = @"now", string dateEnd = default(string), int usageLimit = default(int), int usageLimitPerCustomer = default(int), string actionConditionEntity = default(string), string actionConditionKey = default(string), string actionConditionOperator = default(string), string actionConditionValue = default(string), bool includeTax = false, string storeId = default(string), bool freeCashOnDelivery = default(bool), string customerId = default(string))
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
+        public CartCouponAdd(string code = default(string), ActionTypeEnum actionType = default(ActionTypeEnum), ActionApplyToEnum actionApplyTo = default(ActionApplyToEnum), ActionScopeEnum actionScope = default(ActionScopeEnum), decimal actionAmount = default(decimal), List<string> codes = default(List<string>), string name = default(string), string dateStart = @"now", string dateEnd = default(string), int usageLimit = default(int), int usageLimitPerCustomer = default(int), string actionConditionEntity = default(string), string actionConditionKey = default(string), string actionConditionOperator = default(string), string actionConditionValue = default(string), bool includeTax = false, string storeId = default(string), bool freeCashOnDelivery = default(bool), string customerId = default(string), string idempotencyKey = default(string))
         {
             // to ensure "code" is required (not null)
             if (code == null)
@@ -182,6 +183,7 @@ namespace Org.OpenAPITools.Model
             this.StoreId = storeId;
             this.FreeCashOnDelivery = freeCashOnDelivery;
             this.CustomerId = customerId;
+            this.IdempotencyKey = idempotencyKey;
         }
 
         /// <summary>
@@ -345,6 +347,16 @@ namespace Org.OpenAPITools.Model
         public string CustomerId { get; set; }
 
         /// <summary>
+        /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
+        /// </summary>
+        /// <value>A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;</value>
+        /*
+        <example>098f6bcd4621d373cade4e832627b4f6</example>
+        */
+        [DataMember(Name = "idempotency_key", EmitDefaultValue = false)]
+        public string IdempotencyKey { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -371,6 +383,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  FreeCashOnDelivery: ").Append(FreeCashOnDelivery).Append("\n");
             sb.Append("  CustomerId: ").Append(CustomerId).Append("\n");
+            sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

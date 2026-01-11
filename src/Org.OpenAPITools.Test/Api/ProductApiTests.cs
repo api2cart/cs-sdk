@@ -120,7 +120,8 @@ namespace Org.OpenAPITools.Test.Api
             //int? valueId = null;
             //string? langId = null;
             //string? storeId = null;
-            //var response = instance.ProductAttributeValueSet(productId, attributeId, attributeGroupId, attributeName, value, valueId, langId, storeId);
+            //string? idempotencyKey = null;
+            //var response = instance.ProductAttributeValueSet(productId, attributeId, attributeGroupId, attributeName, value, valueId, langId, storeId, idempotencyKey);
             //Assert.IsType<ProductAttributeValueSet200Response>(response);
         }
 
@@ -137,7 +138,8 @@ namespace Org.OpenAPITools.Test.Api
             //bool? includeDefault = null;
             //bool? reindex = null;
             //bool? clearCache = null;
-            //var response = instance.ProductAttributeValueUnset(productId, attributeId, storeId, includeDefault, reindex, clearCache);
+            //string? idempotencyKey = null;
+            //var response = instance.ProductAttributeValueUnset(productId, attributeId, storeId, includeDefault, reindex, clearCache, idempotencyKey);
             //Assert.IsType<ProductAttributeValueUnset200Response>(response);
         }
 
@@ -288,7 +290,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? symbolLeft = null;
             //string? symbolRight = null;
             //bool? varDefault = null;
-            //var response = instance.ProductCurrencyAdd(iso3, rate, name, avail, symbolLeft, symbolRight, varDefault);
+            //string? idempotencyKey = null;
+            //var response = instance.ProductCurrencyAdd(iso3, rate, name, avail, symbolLeft, symbolRight, varDefault, idempotencyKey);
             //Assert.IsType<ProductCurrencyAdd200Response>(response);
         }
 
@@ -396,7 +399,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? label = null;
             //int? position = null;
             //bool? hidden = null;
-            //var response = instance.ProductImageUpdate(productId, id, variantIds, storeId, langId, imageName, type, label, position, hidden);
+            //string? idempotencyKey = null;
+            //var response = instance.ProductImageUpdate(productId, id, variantIds, storeId, langId, imageName, type, label, position, hidden, idempotencyKey);
             //Assert.IsType<ProductImageUpdate200Response>(response);
         }
 
@@ -484,7 +488,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? searchKeywords = null;
             //string? imageUrl = null;
             //string? seoUrl = null;
-            //var response = instance.ProductManufacturerAdd(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl);
+            //string? idempotencyKey = null;
+            //var response = instance.ProductManufacturerAdd(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, idempotencyKey);
             //Assert.IsType<ProductManufacturerAdd200Response>(response);
         }
 
@@ -513,7 +518,8 @@ namespace Org.OpenAPITools.Test.Api
             //int? sortOrder = null;
             //string? optionValues = null;
             //bool? clearCache = null;
-            //var response = instance.ProductOptionAssign(productId, optionId, required, sortOrder, optionValues, clearCache);
+            //string? idempotencyKey = null;
+            //var response = instance.ProductOptionAssign(productId, optionId, required, sortOrder, optionValues, clearCache, idempotencyKey);
             //Assert.IsType<ProductOptionAssign200Response>(response);
         }
 
@@ -564,7 +570,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? displayValue = null;
             //bool? isDefault = null;
             //bool? clearCache = null;
-            //var response = instance.ProductOptionValueAdd(productId, optionId, optionValue, sortOrder, displayValue, isDefault, clearCache);
+            //string? idempotencyKey = null;
+            //var response = instance.ProductOptionValueAdd(productId, optionId, optionValue, sortOrder, displayValue, isDefault, clearCache, idempotencyKey);
             //Assert.IsType<ProductOptionValueAdd200Response>(response);
         }
 
@@ -578,7 +585,8 @@ namespace Org.OpenAPITools.Test.Api
             //int productOptionId = null;
             //string optionValueId = null;
             //bool? clearCache = null;
-            //var response = instance.ProductOptionValueAssign(productOptionId, optionValueId, clearCache);
+            //string? idempotencyKey = null;
+            //var response = instance.ProductOptionValueAssign(productOptionId, optionValueId, clearCache, idempotencyKey);
             //Assert.IsType<ProductOptionValueAssign200Response>(response);
         }
 
@@ -612,7 +620,8 @@ namespace Org.OpenAPITools.Test.Api
             //decimal? quantity = null;
             //string? displayValue = null;
             //bool? clearCache = null;
-            //var response = instance.ProductOptionValueUpdate(productId, optionId, optionValueId, optionValue, price, quantity, displayValue, clearCache);
+            //string? idempotencyKey = null;
+            //var response = instance.ProductOptionValueUpdate(productId, optionId, optionValueId, optionValue, price, quantity, displayValue, clearCache, idempotencyKey);
             //Assert.IsType<AccountConfigUpdate200Response>(response);
         }
 
@@ -690,7 +699,8 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string productId = null;
             //string storeId = null;
-            //var response = instance.ProductStoreAssign(productId, storeId);
+            //string? idempotencyKey = null;
+            //var response = instance.ProductStoreAssign(productId, storeId, idempotencyKey);
             //Assert.IsType<AccountConfigUpdate200Response>(response);
         }
 

@@ -61,7 +61,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="gender">Defines customer&#39;s address gender.</param>
         /// <param name="taxId">Add Tax Id.</param>
         /// <param name="alias">Specifies customer&#39;s alias in the address book.</param>
-        public CustomerAddressAdd(string customerId = default(string), string storeId = default(string), string firstName = default(string), string lastName = default(string), string company = default(string), string address1 = default(string), string address2 = default(string), string city = default(string), string country = default(string), string state = default(string), string postcode = default(string), string identificationNumber = default(string), List<string> types = default(List<string>), bool varDefault = default(bool), string phone = default(string), string phoneMobile = default(string), string fax = default(string), string website = default(string), string gender = default(string), string taxId = default(string), string alias = default(string))
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
+        public CustomerAddressAdd(string customerId = default(string), string storeId = default(string), string firstName = default(string), string lastName = default(string), string company = default(string), string address1 = default(string), string address2 = default(string), string city = default(string), string country = default(string), string state = default(string), string postcode = default(string), string identificationNumber = default(string), List<string> types = default(List<string>), bool varDefault = default(bool), string phone = default(string), string phoneMobile = default(string), string fax = default(string), string website = default(string), string gender = default(string), string taxId = default(string), string alias = default(string), string idempotencyKey = default(string))
         {
             // to ensure "customerId" is required (not null)
             if (customerId == null)
@@ -109,6 +110,7 @@ namespace Org.OpenAPITools.Model
             this.Gender = gender;
             this.TaxId = taxId;
             this.Alias = alias;
+            this.IdempotencyKey = idempotencyKey;
         }
 
         /// <summary>
@@ -322,6 +324,16 @@ namespace Org.OpenAPITools.Model
         public string Alias { get; set; }
 
         /// <summary>
+        /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
+        /// </summary>
+        /// <value>A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;</value>
+        /*
+        <example>098f6bcd4621d373cade4e832627b4f6</example>
+        */
+        [DataMember(Name = "idempotency_key", EmitDefaultValue = false)]
+        public string IdempotencyKey { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -350,6 +362,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Gender: ").Append(Gender).Append("\n");
             sb.Append("  TaxId: ").Append(TaxId).Append("\n");
             sb.Append("  Alias: ").Append(Alias).Append("\n");
+            sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

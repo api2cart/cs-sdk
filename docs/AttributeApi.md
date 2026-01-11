@@ -23,7 +23,7 @@ All URIs are relative to *https://api.api2cart.local.com/v1.1*
 
 <a id="attributeadd"></a>
 # **AttributeAdd**
-> AttributeAdd200Response AttributeAdd (string type, string name, string? code = null, string? storeId = null, string? langId = null, bool? visible = null, bool? required = null, int? position = null, string? attributeGroupId = null, string? isGlobal = null, bool? isSearchable = null, string? isFilterable = null, bool? isComparable = null, bool? isHtmlAllowedOnFront = null, bool? isFilterableInSearch = null, bool? isConfigurable = null, bool? isVisibleInAdvancedSearch = null, bool? isUsedForPromoRules = null, bool? usedInProductListing = null, bool? usedForSortBy = null, string? applyTo = null)
+> AttributeAdd200Response AttributeAdd (string type, string name, string? code = null, string? storeId = null, string? langId = null, bool? visible = null, bool? required = null, int? position = null, string? attributeGroupId = null, string? isGlobal = null, bool? isSearchable = null, string? isFilterable = null, bool? isComparable = null, bool? isHtmlAllowedOnFront = null, bool? isFilterableInSearch = null, bool? isConfigurable = null, bool? isVisibleInAdvancedSearch = null, bool? isUsedForPromoRules = null, bool? usedInProductListing = null, bool? usedForSortBy = null, string? applyTo = null, string? idempotencyKey = null)
 
 attribute.add
 
@@ -76,11 +76,12 @@ namespace Example
             var usedInProductListing = true;  // bool? | Used in Product Listing (optional)  (default to false)
             var usedForSortBy = true;  // bool? | Used for Sorting in Product Listing (optional)  (default to false)
             var applyTo = Global;  // string? | Types of products which can have this attribute (optional)  (default to "all_types")
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // attribute.add
-                AttributeAdd200Response result = apiInstance.AttributeAdd(type, name, code, storeId, langId, visible, required, position, attributeGroupId, isGlobal, isSearchable, isFilterable, isComparable, isHtmlAllowedOnFront, isFilterableInSearch, isConfigurable, isVisibleInAdvancedSearch, isUsedForPromoRules, usedInProductListing, usedForSortBy, applyTo);
+                AttributeAdd200Response result = apiInstance.AttributeAdd(type, name, code, storeId, langId, visible, required, position, attributeGroupId, isGlobal, isSearchable, isFilterable, isComparable, isHtmlAllowedOnFront, isFilterableInSearch, isConfigurable, isVisibleInAdvancedSearch, isUsedForPromoRules, usedInProductListing, usedForSortBy, applyTo, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -101,7 +102,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.add
-    ApiResponse<AttributeAdd200Response> response = apiInstance.AttributeAddWithHttpInfo(type, name, code, storeId, langId, visible, required, position, attributeGroupId, isGlobal, isSearchable, isFilterable, isComparable, isHtmlAllowedOnFront, isFilterableInSearch, isConfigurable, isVisibleInAdvancedSearch, isUsedForPromoRules, usedInProductListing, usedForSortBy, applyTo);
+    ApiResponse<AttributeAdd200Response> response = apiInstance.AttributeAddWithHttpInfo(type, name, code, storeId, langId, visible, required, position, attributeGroupId, isGlobal, isSearchable, isFilterable, isComparable, isHtmlAllowedOnFront, isFilterableInSearch, isConfigurable, isVisibleInAdvancedSearch, isUsedForPromoRules, usedInProductListing, usedForSortBy, applyTo, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -139,6 +140,7 @@ catch (ApiException e)
 | **usedInProductListing** | **bool?** | Used in Product Listing | [optional] [default to false] |
 | **usedForSortBy** | **bool?** | Used for Sorting in Product Listing | [optional] [default to false] |
 | **applyTo** | **string?** | Types of products which can have this attribute | [optional] [default to &quot;all_types&quot;] |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -163,7 +165,7 @@ catch (ApiException e)
 
 <a id="attributeassigngroup"></a>
 # **AttributeAssignGroup**
-> AttributeAssignGroup200Response AttributeAssignGroup (string id, string groupId, string? attributeSetId = null)
+> AttributeAssignGroup200Response AttributeAssignGroup (string id, string groupId, string? attributeSetId = null, string? idempotencyKey = null)
 
 attribute.assign.group
 
@@ -198,11 +200,12 @@ namespace Example
             var id = 10;  // string | Entity id
             var groupId = 3;  // string | Attribute group_id
             var attributeSetId = 4;  // string? | Attribute set id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // attribute.assign.group
-                AttributeAssignGroup200Response result = apiInstance.AttributeAssignGroup(id, groupId, attributeSetId);
+                AttributeAssignGroup200Response result = apiInstance.AttributeAssignGroup(id, groupId, attributeSetId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -223,7 +226,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.assign.group
-    ApiResponse<AttributeAssignGroup200Response> response = apiInstance.AttributeAssignGroupWithHttpInfo(id, groupId, attributeSetId);
+    ApiResponse<AttributeAssignGroup200Response> response = apiInstance.AttributeAssignGroupWithHttpInfo(id, groupId, attributeSetId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -243,6 +246,7 @@ catch (ApiException e)
 | **id** | **string** | Entity id |  |
 | **groupId** | **string** | Attribute group_id |  |
 | **attributeSetId** | **string?** | Attribute set id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -267,7 +271,7 @@ catch (ApiException e)
 
 <a id="attributeassignset"></a>
 # **AttributeAssignSet**
-> AttributeAssignGroup200Response AttributeAssignSet (string id, string attributeSetId, string? groupId = null)
+> AttributeAssignGroup200Response AttributeAssignSet (string id, string attributeSetId, string? groupId = null, string? idempotencyKey = null)
 
 attribute.assign.set
 
@@ -302,11 +306,12 @@ namespace Example
             var id = 10;  // string | Entity id
             var attributeSetId = 4;  // string | Attribute set id
             var groupId = 3;  // string? | Attribute group_id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // attribute.assign.set
-                AttributeAssignGroup200Response result = apiInstance.AttributeAssignSet(id, attributeSetId, groupId);
+                AttributeAssignGroup200Response result = apiInstance.AttributeAssignSet(id, attributeSetId, groupId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -327,7 +332,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.assign.set
-    ApiResponse<AttributeAssignGroup200Response> response = apiInstance.AttributeAssignSetWithHttpInfo(id, attributeSetId, groupId);
+    ApiResponse<AttributeAssignGroup200Response> response = apiInstance.AttributeAssignSetWithHttpInfo(id, attributeSetId, groupId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -347,6 +352,7 @@ catch (ApiException e)
 | **id** | **string** | Entity id |  |
 | **attributeSetId** | **string** | Attribute set id |  |
 | **groupId** | **string?** | Attribute group_id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -1136,7 +1142,7 @@ This endpoint does not need any parameter.
 
 <a id="attributeunassigngroup"></a>
 # **AttributeUnassignGroup**
-> AttributeUnassignGroup200Response AttributeUnassignGroup (string id, string groupId)
+> AttributeUnassignGroup200Response AttributeUnassignGroup (string id, string groupId, string? idempotencyKey = null)
 
 attribute.unassign.group
 
@@ -1170,11 +1176,12 @@ namespace Example
             var apiInstance = new AttributeApi(config);
             var id = 10;  // string | Entity id
             var groupId = 3;  // string | Customer group_id
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // attribute.unassign.group
-                AttributeUnassignGroup200Response result = apiInstance.AttributeUnassignGroup(id, groupId);
+                AttributeUnassignGroup200Response result = apiInstance.AttributeUnassignGroup(id, groupId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1195,7 +1202,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.unassign.group
-    ApiResponse<AttributeUnassignGroup200Response> response = apiInstance.AttributeUnassignGroupWithHttpInfo(id, groupId);
+    ApiResponse<AttributeUnassignGroup200Response> response = apiInstance.AttributeUnassignGroupWithHttpInfo(id, groupId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1214,6 +1221,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **string** | Entity id |  |
 | **groupId** | **string** | Customer group_id |  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -1238,7 +1246,7 @@ catch (ApiException e)
 
 <a id="attributeunassignset"></a>
 # **AttributeUnassignSet**
-> AttributeUnassignGroup200Response AttributeUnassignSet (string id, string attributeSetId)
+> AttributeUnassignGroup200Response AttributeUnassignSet (string id, string attributeSetId, string? idempotencyKey = null)
 
 attribute.unassign.set
 
@@ -1272,11 +1280,12 @@ namespace Example
             var apiInstance = new AttributeApi(config);
             var id = 10;  // string | Entity id
             var attributeSetId = 4;  // string | Attribute set id
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // attribute.unassign.set
-                AttributeUnassignGroup200Response result = apiInstance.AttributeUnassignSet(id, attributeSetId);
+                AttributeUnassignGroup200Response result = apiInstance.AttributeUnassignSet(id, attributeSetId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1297,7 +1306,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.unassign.set
-    ApiResponse<AttributeUnassignGroup200Response> response = apiInstance.AttributeUnassignSetWithHttpInfo(id, attributeSetId);
+    ApiResponse<AttributeUnassignGroup200Response> response = apiInstance.AttributeUnassignSetWithHttpInfo(id, attributeSetId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1316,6 +1325,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **string** | Entity id |  |
 | **attributeSetId** | **string** | Attribute set id |  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -1340,7 +1350,7 @@ catch (ApiException e)
 
 <a id="attributeupdate"></a>
 # **AttributeUpdate**
-> AttributeUpdate200Response AttributeUpdate (string id, string name, string? storeId = null, string? langId = null)
+> AttributeUpdate200Response AttributeUpdate (string id, string name, string? storeId = null, string? langId = null, string? idempotencyKey = null)
 
 attribute.update
 
@@ -1376,11 +1386,12 @@ namespace Example
             var name = Test name;  // string | Defines new attributes's name
             var storeId = 1;  // string? | Store Id (optional) 
             var langId = 3;  // string? | Language id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // attribute.update
-                AttributeUpdate200Response result = apiInstance.AttributeUpdate(id, name, storeId, langId);
+                AttributeUpdate200Response result = apiInstance.AttributeUpdate(id, name, storeId, langId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1401,7 +1412,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.update
-    ApiResponse<AttributeUpdate200Response> response = apiInstance.AttributeUpdateWithHttpInfo(id, name, storeId, langId);
+    ApiResponse<AttributeUpdate200Response> response = apiInstance.AttributeUpdateWithHttpInfo(id, name, storeId, langId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1422,6 +1433,7 @@ catch (ApiException e)
 | **name** | **string** | Defines new attributes&#39;s name |  |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -1446,7 +1458,7 @@ catch (ApiException e)
 
 <a id="attributevalueadd"></a>
 # **AttributeValueAdd**
-> AttributeAdd200Response AttributeValueAdd (string attributeId, string name, string? code = null, string? description = null, string? storeId = null, string? langId = null)
+> AttributeAdd200Response AttributeValueAdd (string attributeId, string name, string? code = null, string? description = null, string? storeId = null, string? langId = null, string? idempotencyKey = null)
 
 attribute.value.add
 
@@ -1484,11 +1496,12 @@ namespace Example
             var description = Test value;  // string? | Defines attribute value's description (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
             var langId = 3;  // string? | Language id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // attribute.value.add
-                AttributeAdd200Response result = apiInstance.AttributeValueAdd(attributeId, name, code, description, storeId, langId);
+                AttributeAdd200Response result = apiInstance.AttributeValueAdd(attributeId, name, code, description, storeId, langId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1509,7 +1522,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.value.add
-    ApiResponse<AttributeAdd200Response> response = apiInstance.AttributeValueAddWithHttpInfo(attributeId, name, code, description, storeId, langId);
+    ApiResponse<AttributeAdd200Response> response = apiInstance.AttributeValueAddWithHttpInfo(attributeId, name, code, description, storeId, langId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1532,6 +1545,7 @@ catch (ApiException e)
 | **description** | **string?** | Defines attribute value&#39;s description | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -1660,7 +1674,7 @@ catch (ApiException e)
 
 <a id="attributevalueupdate"></a>
 # **AttributeValueUpdate**
-> AttributeUpdate200Response AttributeValueUpdate (string id, string attributeId, string? name = null, string? description = null, string? code = null, string? storeId = null, string? langId = null)
+> AttributeUpdate200Response AttributeValueUpdate (string id, string attributeId, string? name = null, string? description = null, string? code = null, string? storeId = null, string? langId = null, string? idempotencyKey = null)
 
 attribute.value.update
 
@@ -1699,11 +1713,12 @@ namespace Example
             var code = code;  // string? | Entity code (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
             var langId = 3;  // string? | Language id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // attribute.value.update
-                AttributeUpdate200Response result = apiInstance.AttributeValueUpdate(id, attributeId, name, description, code, storeId, langId);
+                AttributeUpdate200Response result = apiInstance.AttributeValueUpdate(id, attributeId, name, description, code, storeId, langId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1724,7 +1739,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.value.update
-    ApiResponse<AttributeUpdate200Response> response = apiInstance.AttributeValueUpdateWithHttpInfo(id, attributeId, name, description, code, storeId, langId);
+    ApiResponse<AttributeUpdate200Response> response = apiInstance.AttributeValueUpdateWithHttpInfo(id, attributeId, name, description, code, storeId, langId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1748,6 +1763,7 @@ catch (ApiException e)
 | **code** | **string?** | Entity code | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 

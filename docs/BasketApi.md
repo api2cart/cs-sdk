@@ -120,7 +120,7 @@ catch (ApiException e)
 
 <a id="basketitemadd"></a>
 # **BasketItemAdd**
-> BasketItemAdd200Response BasketItemAdd (string customerId, string productId, string? variantId = null, decimal? quantity = null, string? storeId = null)
+> BasketItemAdd200Response BasketItemAdd (string customerId, string productId, string? variantId = null, decimal? quantity = null, string? storeId = null, string? idempotencyKey = null)
 
 basket.item.add
 
@@ -157,11 +157,12 @@ namespace Example
             var variantId = 45;  // string? | Defines product's variants specified by variant id (optional) 
             var quantity = 6;  // decimal? | Defines new items quantity (optional)  (default to 0M)
             var storeId = 1;  // string? | Store Id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // basket.item.add
-                BasketItemAdd200Response result = apiInstance.BasketItemAdd(customerId, productId, variantId, quantity, storeId);
+                BasketItemAdd200Response result = apiInstance.BasketItemAdd(customerId, productId, variantId, quantity, storeId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -182,7 +183,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // basket.item.add
-    ApiResponse<BasketItemAdd200Response> response = apiInstance.BasketItemAddWithHttpInfo(customerId, productId, variantId, quantity, storeId);
+    ApiResponse<BasketItemAdd200Response> response = apiInstance.BasketItemAddWithHttpInfo(customerId, productId, variantId, quantity, storeId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -204,6 +205,7 @@ catch (ApiException e)
 | **variantId** | **string?** | Defines product&#39;s variants specified by variant id | [optional]  |
 | **quantity** | **decimal?** | Defines new items quantity | [optional] [default to 0M] |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -228,7 +230,7 @@ catch (ApiException e)
 
 <a id="basketliveshippingservicecreate"></a>
 # **BasketLiveShippingServiceCreate**
-> BasketLiveShippingServiceCreate200Response BasketLiveShippingServiceCreate (string name, string callback, string? storeId = null)
+> BasketLiveShippingServiceCreate200Response BasketLiveShippingServiceCreate (string name, string callback, string? storeId = null, string? idempotencyKey = null)
 
 basket.live_shipping_service.create
 
@@ -263,11 +265,12 @@ namespace Example
             var name = BestDelivery;  // string | Shipping Service Name
             var callback = https://example.com/callback;  // string | Callback url that returns shipping rates. It should be able to accept POST requests with json data.
             var storeId = 1;  // string? | Store Id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // basket.live_shipping_service.create
-                BasketLiveShippingServiceCreate200Response result = apiInstance.BasketLiveShippingServiceCreate(name, callback, storeId);
+                BasketLiveShippingServiceCreate200Response result = apiInstance.BasketLiveShippingServiceCreate(name, callback, storeId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -288,7 +291,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // basket.live_shipping_service.create
-    ApiResponse<BasketLiveShippingServiceCreate200Response> response = apiInstance.BasketLiveShippingServiceCreateWithHttpInfo(name, callback, storeId);
+    ApiResponse<BasketLiveShippingServiceCreate200Response> response = apiInstance.BasketLiveShippingServiceCreateWithHttpInfo(name, callback, storeId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -308,6 +311,7 @@ catch (ApiException e)
 | **name** | **string** | Shipping Service Name |  |
 | **callback** | **string** | Callback url that returns shipping rates. It should be able to accept POST requests with json data. |  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 

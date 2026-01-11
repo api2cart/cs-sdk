@@ -43,7 +43,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="productId">Defines products specified by product id.</param>
         /// <param name="name">Defines tax class name where tax has to be added (required).</param>
         /// <param name="taxRates">Defines tax rates of specified tax classes (required).</param>
-        public ProductTaxAdd(string productId = default(string), string name = default(string), List<ProductTaxAddTaxRatesInner> taxRates = default(List<ProductTaxAddTaxRatesInner>))
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
+        public ProductTaxAdd(string productId = default(string), string name = default(string), List<ProductTaxAddTaxRatesInner> taxRates = default(List<ProductTaxAddTaxRatesInner>), string idempotencyKey = default(string))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -58,6 +59,7 @@ namespace Org.OpenAPITools.Model
             }
             this.TaxRates = taxRates;
             this.ProductId = productId;
+            this.IdempotencyKey = idempotencyKey;
         }
 
         /// <summary>
@@ -88,6 +90,16 @@ namespace Org.OpenAPITools.Model
         public List<ProductTaxAddTaxRatesInner> TaxRates { get; set; }
 
         /// <summary>
+        /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
+        /// </summary>
+        /// <value>A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;</value>
+        /*
+        <example>098f6bcd4621d373cade4e832627b4f6</example>
+        */
+        [DataMember(Name = "idempotency_key", EmitDefaultValue = false)]
+        public string IdempotencyKey { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -98,6 +110,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  ProductId: ").Append(ProductId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  TaxRates: ").Append(TaxRates).Append("\n");
+            sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

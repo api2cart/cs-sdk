@@ -117,7 +117,7 @@ catch (ApiException e)
 
 <a id="webhookcreate"></a>
 # **WebhookCreate**
-> BasketLiveShippingServiceCreate200Response WebhookCreate (string entity, string action, string? callback = null, string? label = null, string? fields = null, string? responseFields = null, bool? active = null, string? langId = null, string? storeId = null)
+> BasketLiveShippingServiceCreate200Response WebhookCreate (string entity, string action, string? callback = null, string? label = null, string? fields = null, string? responseFields = null, bool? active = null, string? langId = null, string? storeId = null, string? idempotencyKey = null)
 
 webhook.create
 
@@ -158,11 +158,12 @@ namespace Example
             var active = true;  // bool? | Webhook status (optional)  (default to true)
             var langId = 3;  // string? | Language id (optional) 
             var storeId = 1;  // string? | Defines store id where the webhook should be assigned (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // webhook.create
-                BasketLiveShippingServiceCreate200Response result = apiInstance.WebhookCreate(entity, action, callback, label, fields, responseFields, active, langId, storeId);
+                BasketLiveShippingServiceCreate200Response result = apiInstance.WebhookCreate(entity, action, callback, label, fields, responseFields, active, langId, storeId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -183,7 +184,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // webhook.create
-    ApiResponse<BasketLiveShippingServiceCreate200Response> response = apiInstance.WebhookCreateWithHttpInfo(entity, action, callback, label, fields, responseFields, active, langId, storeId);
+    ApiResponse<BasketLiveShippingServiceCreate200Response> response = apiInstance.WebhookCreateWithHttpInfo(entity, action, callback, label, fields, responseFields, active, langId, storeId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -209,6 +210,7 @@ catch (ApiException e)
 | **active** | **bool?** | Webhook status | [optional] [default to true] |
 | **langId** | **string?** | Language id | [optional]  |
 | **storeId** | **string?** | Defines store id where the webhook should be assigned | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -540,7 +542,7 @@ catch (ApiException e)
 
 <a id="webhookupdate"></a>
 # **WebhookUpdate**
-> ProductImageUpdate200Response WebhookUpdate (string id, string? callback = null, string? label = null, string? fields = null, string? responseFields = null, bool? active = null, string? langId = null)
+> ProductImageUpdate200Response WebhookUpdate (string id, string? callback = null, string? label = null, string? fields = null, string? responseFields = null, bool? active = null, string? langId = null, string? idempotencyKey = null)
 
 webhook.update
 
@@ -579,11 +581,12 @@ namespace Example
             var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var active = true;  // bool? | Webhook status (optional) 
             var langId = 3;  // string? | Language id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // webhook.update
-                ProductImageUpdate200Response result = apiInstance.WebhookUpdate(id, callback, label, fields, responseFields, active, langId);
+                ProductImageUpdate200Response result = apiInstance.WebhookUpdate(id, callback, label, fields, responseFields, active, langId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -604,7 +607,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // webhook.update
-    ApiResponse<ProductImageUpdate200Response> response = apiInstance.WebhookUpdateWithHttpInfo(id, callback, label, fields, responseFields, active, langId);
+    ApiResponse<ProductImageUpdate200Response> response = apiInstance.WebhookUpdateWithHttpInfo(id, callback, label, fields, responseFields, active, langId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -628,6 +631,7 @@ catch (ApiException e)
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **active** | **bool?** | Webhook status | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 

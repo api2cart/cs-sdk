@@ -337,7 +337,7 @@ catch (ApiException e)
 
 <a id="cartcouponconditionadd"></a>
 # **CartCouponConditionAdd**
-> BasketLiveShippingServiceDelete200Response CartCouponConditionAdd (string couponId, string entity, string key, string varOperator, string value, string? target = null, bool? includeTax = null, bool? includeShipping = null, string? storeId = null)
+> BasketLiveShippingServiceDelete200Response CartCouponConditionAdd (string couponId, string entity, string key, string varOperator, string value, string? target = null, bool? includeTax = null, bool? includeShipping = null, string? storeId = null, string? idempotencyKey = null)
 
 cart.coupon.condition.add
 
@@ -378,11 +378,12 @@ namespace Example
             var includeTax = true;  // bool? | Indicates whether to apply a discount for taxes. (optional)  (default to false)
             var includeShipping = true;  // bool? | Indicates whether to apply a discount for shipping. (optional)  (default to false)
             var storeId = 1;  // string? | Store Id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // cart.coupon.condition.add
-                BasketLiveShippingServiceDelete200Response result = apiInstance.CartCouponConditionAdd(couponId, entity, key, varOperator, value, target, includeTax, includeShipping, storeId);
+                BasketLiveShippingServiceDelete200Response result = apiInstance.CartCouponConditionAdd(couponId, entity, key, varOperator, value, target, includeTax, includeShipping, storeId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -403,7 +404,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.coupon.condition.add
-    ApiResponse<BasketLiveShippingServiceDelete200Response> response = apiInstance.CartCouponConditionAddWithHttpInfo(couponId, entity, key, varOperator, value, target, includeTax, includeShipping, storeId);
+    ApiResponse<BasketLiveShippingServiceDelete200Response> response = apiInstance.CartCouponConditionAddWithHttpInfo(couponId, entity, key, varOperator, value, target, includeTax, includeShipping, storeId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -429,6 +430,7 @@ catch (ApiException e)
 | **includeTax** | **bool?** | Indicates whether to apply a discount for taxes. | [optional] [default to false] |
 | **includeShipping** | **bool?** | Indicates whether to apply a discount for shipping. | [optional] [default to false] |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -893,7 +895,7 @@ catch (ApiException e)
 
 <a id="cartgiftcardadd"></a>
 # **CartGiftcardAdd**
-> CartGiftcardAdd200Response CartGiftcardAdd (decimal amount, string? code = null, string? ownerEmail = null, string? recipientEmail = null, string? recipientName = null, string? ownerName = null)
+> CartGiftcardAdd200Response CartGiftcardAdd (decimal amount, string? code = null, string? ownerEmail = null, string? recipientEmail = null, string? recipientName = null, string? ownerName = null, string? idempotencyKey = null)
 
 cart.giftcard.add
 
@@ -931,11 +933,12 @@ namespace Example
             var recipientEmail = jubari@hannsgroup.com;  // string? | Gift card recipient email (optional) 
             var recipientName = John Doe;  // string? | Gift card recipient name (optional) 
             var ownerName = John Doe;  // string? | Gift card owner name (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // cart.giftcard.add
-                CartGiftcardAdd200Response result = apiInstance.CartGiftcardAdd(amount, code, ownerEmail, recipientEmail, recipientName, ownerName);
+                CartGiftcardAdd200Response result = apiInstance.CartGiftcardAdd(amount, code, ownerEmail, recipientEmail, recipientName, ownerName, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -956,7 +959,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.giftcard.add
-    ApiResponse<CartGiftcardAdd200Response> response = apiInstance.CartGiftcardAddWithHttpInfo(amount, code, ownerEmail, recipientEmail, recipientName, ownerName);
+    ApiResponse<CartGiftcardAdd200Response> response = apiInstance.CartGiftcardAddWithHttpInfo(amount, code, ownerEmail, recipientEmail, recipientName, ownerName, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -979,6 +982,7 @@ catch (ApiException e)
 | **recipientEmail** | **string?** | Gift card recipient email | [optional]  |
 | **recipientName** | **string?** | Gift card recipient name | [optional]  |
 | **ownerName** | **string?** | Gift card owner name | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -1539,7 +1543,7 @@ catch (ApiException e)
 
 <a id="cartmetadataset"></a>
 # **CartMetaDataSet**
-> AttributeAdd200Response CartMetaDataSet (string entityId, string key, string value, string varNamespace, string? entity = null, string? storeId = null, string? langId = null)
+> AttributeAdd200Response CartMetaDataSet (string entityId, string key, string value, string varNamespace, string? entity = null, string? storeId = null, string? langId = null, string? idempotencyKey = null)
 
 cart.meta_data.set
 
@@ -1578,11 +1582,12 @@ namespace Example
             var entity = order;  // string? | Entity (optional)  (default to "product")
             var storeId = 1;  // string? | Store Id (optional) 
             var langId = 3;  // string? | Language id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // cart.meta_data.set
-                AttributeAdd200Response result = apiInstance.CartMetaDataSet(entityId, key, value, varNamespace, entity, storeId, langId);
+                AttributeAdd200Response result = apiInstance.CartMetaDataSet(entityId, key, value, varNamespace, entity, storeId, langId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1603,7 +1608,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.meta_data.set
-    ApiResponse<AttributeAdd200Response> response = apiInstance.CartMetaDataSetWithHttpInfo(entityId, key, value, varNamespace, entity, storeId, langId);
+    ApiResponse<AttributeAdd200Response> response = apiInstance.CartMetaDataSetWithHttpInfo(entityId, key, value, varNamespace, entity, storeId, langId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1627,6 +1632,7 @@ catch (ApiException e)
 | **entity** | **string?** | Entity | [optional] [default to &quot;product&quot;] |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -1958,7 +1964,7 @@ catch (ApiException e)
 
 <a id="cartscriptadd"></a>
 # **CartScriptAdd**
-> CartScriptAdd200Response CartScriptAdd (string? name = null, string? description = null, string? html = null, string? src = null, string? loadMethod = null, string? scope = null, string? events = null, string? storeId = null)
+> CartScriptAdd200Response CartScriptAdd (string? name = null, string? description = null, string? html = null, string? src = null, string? loadMethod = null, string? scope = null, string? events = null, string? storeId = null, string? idempotencyKey = null)
 
 cart.script.add
 
@@ -1998,11 +2004,12 @@ namespace Example
             var scope = all;  // string? | The page or pages on the online store where the script should be included (optional)  (default to "storefront")
             var events = purchase_event;  // string? | Event for run scripts (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // cart.script.add
-                CartScriptAdd200Response result = apiInstance.CartScriptAdd(name, description, html, src, loadMethod, scope, events, storeId);
+                CartScriptAdd200Response result = apiInstance.CartScriptAdd(name, description, html, src, loadMethod, scope, events, storeId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2023,7 +2030,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.script.add
-    ApiResponse<CartScriptAdd200Response> response = apiInstance.CartScriptAddWithHttpInfo(name, description, html, src, loadMethod, scope, events, storeId);
+    ApiResponse<CartScriptAdd200Response> response = apiInstance.CartScriptAddWithHttpInfo(name, description, html, src, loadMethod, scope, events, storeId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2048,6 +2055,7 @@ catch (ApiException e)
 | **scope** | **string?** | The page or pages on the online store where the script should be included | [optional] [default to &quot;storefront&quot;] |
 | **events** | **string?** | Event for run scripts | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 

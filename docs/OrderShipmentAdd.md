@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **CheckProcessStatus** | **bool** | Disable or enable check process status. Please note that the response will be slower due to additional requests to the store. | [optional] [default to false]
 **TrackingProvider** | **string** | Defines name of the company which provides shipment tracking | [optional] 
 **UseLatestApiVersion** | **bool** | Use the latest platform API version | [optional] [default to false]
+**IdempotencyKey** | **string** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

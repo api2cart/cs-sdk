@@ -41,7 +41,8 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="ProductDeleteBatch" /> class.
         /// </summary>
         /// <param name="payload">Contains an array of product deletion requests, each including the product ID. (required).</param>
-        public ProductDeleteBatch(List<ProductDeleteBatchPayloadInner> payload = default(List<ProductDeleteBatchPayloadInner>))
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
+        public ProductDeleteBatch(List<ProductDeleteBatchPayloadInner> payload = default(List<ProductDeleteBatchPayloadInner>), string idempotencyKey = default(string))
         {
             // to ensure "payload" is required (not null)
             if (payload == null)
@@ -49,6 +50,7 @@ namespace Org.OpenAPITools.Model
                 throw new ArgumentNullException("payload is a required property for ProductDeleteBatch and cannot be null");
             }
             this.Payload = payload;
+            this.IdempotencyKey = idempotencyKey;
         }
 
         /// <summary>
@@ -59,6 +61,13 @@ namespace Org.OpenAPITools.Model
         public List<ProductDeleteBatchPayloadInner> Payload { get; set; }
 
         /// <summary>
+        /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
+        /// </summary>
+        /// <value>A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;</value>
+        [DataMember(Name = "idempotency_key", EmitDefaultValue = false)]
+        public string IdempotencyKey { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -67,6 +76,7 @@ namespace Org.OpenAPITools.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class ProductDeleteBatch {\n");
             sb.Append("  Payload: ").Append(Payload).Append("\n");
+            sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -457,7 +457,7 @@ catch (ApiException e)
 
 <a id="customerdelete"></a>
 # **CustomerDelete**
-> CustomerDelete200Response CustomerDelete (string id)
+> CustomerDelete200Response CustomerDelete (string id, string? storeId = null)
 
 customer.delete
 
@@ -490,11 +490,12 @@ namespace Example
 
             var apiInstance = new CustomerApi(config);
             var id = 10;  // string | Identifies customer specified by the id
+            var storeId = 1;  // string? | Store Id (optional) 
 
             try
             {
                 // customer.delete
-                CustomerDelete200Response result = apiInstance.CustomerDelete(id);
+                CustomerDelete200Response result = apiInstance.CustomerDelete(id, storeId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -515,7 +516,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // customer.delete
-    ApiResponse<CustomerDelete200Response> response = apiInstance.CustomerDeleteWithHttpInfo(id);
+    ApiResponse<CustomerDelete200Response> response = apiInstance.CustomerDeleteWithHttpInfo(id, storeId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -533,6 +534,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **string** | Identifies customer specified by the id |  |
+| **storeId** | **string?** | Store Id | [optional]  |
 
 ### Return type
 
@@ -665,7 +667,7 @@ catch (ApiException e)
 
 <a id="customergroupadd"></a>
 # **CustomerGroupAdd**
-> CustomerGroupAdd200Response CustomerGroupAdd (string name, string? storeId = null, string? storesIds = null)
+> CustomerGroupAdd200Response CustomerGroupAdd (string name, string? storeId = null, string? storesIds = null, string? idempotencyKey = null)
 
 customer.group.add
 
@@ -700,11 +702,12 @@ namespace Example
             var name = new_group;  // string | Customer group name
             var storeId = 1;  // string? | Store Id (optional) 
             var storesIds = 1,2;  // string? | Assign customer group to the stores that is specified by comma-separated stores' id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // customer.group.add
-                CustomerGroupAdd200Response result = apiInstance.CustomerGroupAdd(name, storeId, storesIds);
+                CustomerGroupAdd200Response result = apiInstance.CustomerGroupAdd(name, storeId, storesIds, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -725,7 +728,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // customer.group.add
-    ApiResponse<CustomerGroupAdd200Response> response = apiInstance.CustomerGroupAddWithHttpInfo(name, storeId, storesIds);
+    ApiResponse<CustomerGroupAdd200Response> response = apiInstance.CustomerGroupAddWithHttpInfo(name, storeId, storesIds, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -745,6 +748,7 @@ catch (ApiException e)
 | **name** | **string** | Customer group name |  |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **storesIds** | **string?** | Assign customer group to the stores that is specified by comma-separated stores&#39; id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 

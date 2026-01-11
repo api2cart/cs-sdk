@@ -51,8 +51,9 @@ namespace Org.OpenAPITools.Model
         /// <param name="comment">Specifies return comment.</param>
         /// <param name="sendNotifications">Send notifications to customer after order was created (default to false).</param>
         /// <param name="rejectReason">Defines return reject reason.</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
         /// <param name="orderProducts">orderProducts (required).</param>
-        public OrderReturnAdd(string orderId = default(string), string storeId = default(string), string returnStatusId = default(string), string returnActionId = default(string), string returnReasonId = default(string), string returnReason = default(string), bool itemRestock = false, string staffNote = default(string), string comment = default(string), bool sendNotifications = false, string rejectReason = default(string), List<OrderReturnAddOrderProductsInner> orderProducts = default(List<OrderReturnAddOrderProductsInner>))
+        public OrderReturnAdd(string orderId = default(string), string storeId = default(string), string returnStatusId = default(string), string returnActionId = default(string), string returnReasonId = default(string), string returnReason = default(string), bool itemRestock = false, string staffNote = default(string), string comment = default(string), bool sendNotifications = false, string rejectReason = default(string), string idempotencyKey = default(string), List<OrderReturnAddOrderProductsInner> orderProducts = default(List<OrderReturnAddOrderProductsInner>))
         {
             // to ensure "returnStatusId" is required (not null)
             if (returnStatusId == null)
@@ -86,6 +87,7 @@ namespace Org.OpenAPITools.Model
             this.Comment = comment;
             this.SendNotifications = sendNotifications;
             this.RejectReason = rejectReason;
+            this.IdempotencyKey = idempotencyKey;
         }
 
         /// <summary>
@@ -199,6 +201,16 @@ namespace Org.OpenAPITools.Model
         public string RejectReason { get; set; }
 
         /// <summary>
+        /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
+        /// </summary>
+        /// <value>A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;</value>
+        /*
+        <example>098f6bcd4621d373cade4e832627b4f6</example>
+        */
+        [DataMember(Name = "idempotency_key", EmitDefaultValue = false)]
+        public string IdempotencyKey { get; set; }
+
+        /// <summary>
         /// Gets or Sets OrderProducts
         /// </summary>
         [DataMember(Name = "order_products", IsRequired = true, EmitDefaultValue = true)]
@@ -223,6 +235,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Comment: ").Append(Comment).Append("\n");
             sb.Append("  SendNotifications: ").Append(SendNotifications).Append("\n");
             sb.Append("  RejectReason: ").Append(RejectReason).Append("\n");
+            sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("  OrderProducts: ").Append(OrderProducts).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

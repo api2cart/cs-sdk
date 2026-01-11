@@ -139,9 +139,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="valueId">Define attribute value id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductAttributeValueSet200Response</returns>
-        ProductAttributeValueSet200Response ProductAttributeValueSet(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0);
+        ProductAttributeValueSet200Response ProductAttributeValueSet(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// product.attribute.value.set
@@ -158,9 +159,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="valueId">Define attribute value id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductAttributeValueSet200Response</returns>
-        ApiResponse<ProductAttributeValueSet200Response> ProductAttributeValueSetWithHttpInfo(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<ProductAttributeValueSet200Response> ProductAttributeValueSetWithHttpInfo(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// product.attribute.value.unset
         /// </summary>
@@ -174,9 +176,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeDefault">Boolean, whether or not to unset default value of the attribute, if applicable (optional, default to false)</param>
         /// <param name="reindex">Is reindex required (optional, default to true)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductAttributeValueUnset200Response</returns>
-        ProductAttributeValueUnset200Response ProductAttributeValueUnset(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0);
+        ProductAttributeValueUnset200Response ProductAttributeValueUnset(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// product.attribute.value.unset
@@ -191,9 +194,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeDefault">Boolean, whether or not to unset default value of the attribute, if applicable (optional, default to false)</param>
         /// <param name="reindex">Is reindex required (optional, default to true)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductAttributeValueUnset200Response</returns>
-        ApiResponse<ProductAttributeValueUnset200Response> ProductAttributeValueUnsetWithHttpInfo(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0);
+        ApiResponse<ProductAttributeValueUnset200Response> ProductAttributeValueUnsetWithHttpInfo(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// product.brand.list
         /// </summary>
@@ -469,9 +473,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="symbolLeft">Defines the symbol that is located before the currency (optional)</param>
         /// <param name="symbolRight">Defines the symbol that is located after the currency (optional)</param>
         /// <param name="varDefault">Specifies currency&#39;s default meaning (optional, default to false)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductCurrencyAdd200Response</returns>
-        ProductCurrencyAdd200Response ProductCurrencyAdd(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), int operationIndex = 0);
+        ProductCurrencyAdd200Response ProductCurrencyAdd(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// product.currency.add
@@ -487,9 +492,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="symbolLeft">Defines the symbol that is located before the currency (optional)</param>
         /// <param name="symbolRight">Defines the symbol that is located after the currency (optional)</param>
         /// <param name="varDefault">Specifies currency&#39;s default meaning (optional, default to false)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductCurrencyAdd200Response</returns>
-        ApiResponse<ProductCurrencyAdd200Response> ProductCurrencyAddWithHttpInfo(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), int operationIndex = 0);
+        ApiResponse<ProductCurrencyAdd200Response> ProductCurrencyAddWithHttpInfo(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// product.currency.list
         /// </summary>
@@ -675,9 +681,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional)</param>
         /// <param name="hidden">Define is hide image (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductImageUpdate200Response</returns>
-        ProductImageUpdate200Response ProductImageUpdate(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), int operationIndex = 0);
+        ProductImageUpdate200Response ProductImageUpdate(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// product.image.update
@@ -696,9 +703,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional)</param>
         /// <param name="hidden">Define is hide image (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductImageUpdate200Response</returns>
-        ApiResponse<ProductImageUpdate200Response> ProductImageUpdateWithHttpInfo(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), int operationIndex = 0);
+        ApiResponse<ProductImageUpdate200Response> ProductImageUpdateWithHttpInfo(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// product.info
         /// </summary>
@@ -849,9 +857,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
         /// <param name="imageUrl">Image Url (optional)</param>
         /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductManufacturerAdd200Response</returns>
-        ProductManufacturerAdd200Response ProductManufacturerAdd(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0);
+        ProductManufacturerAdd200Response ProductManufacturerAdd(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// product.manufacturer.add
@@ -869,9 +878,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
         /// <param name="imageUrl">Image Url (optional)</param>
         /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductManufacturerAdd200Response</returns>
-        ApiResponse<ProductManufacturerAdd200Response> ProductManufacturerAddWithHttpInfo(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0);
+        ApiResponse<ProductManufacturerAdd200Response> ProductManufacturerAddWithHttpInfo(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// product.option.add
         /// </summary>
@@ -908,9 +918,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="optionValues">Defines option values that has to be assigned (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductOptionAssign200Response</returns>
-        ProductOptionAssign200Response ProductOptionAssign(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), int operationIndex = 0);
+        ProductOptionAssign200Response ProductOptionAssign(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// product.option.assign
@@ -925,9 +936,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="optionValues">Defines option values that has to be assigned (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductOptionAssign200Response</returns>
-        ApiResponse<ProductOptionAssign200Response> ProductOptionAssignWithHttpInfo(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), int operationIndex = 0);
+        ApiResponse<ProductOptionAssign200Response> ProductOptionAssignWithHttpInfo(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// product.option.delete
         /// </summary>
@@ -1006,9 +1018,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="isDefault">Defines as a default (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductOptionValueAdd200Response</returns>
-        ProductOptionValueAdd200Response ProductOptionValueAdd(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0);
+        ProductOptionValueAdd200Response ProductOptionValueAdd(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// product.option.value.add
@@ -1024,9 +1037,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="isDefault">Defines as a default (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductOptionValueAdd200Response</returns>
-        ApiResponse<ProductOptionValueAdd200Response> ProductOptionValueAddWithHttpInfo(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0);
+        ApiResponse<ProductOptionValueAdd200Response> ProductOptionValueAddWithHttpInfo(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// product.option.value.assign
         /// </summary>
@@ -1037,9 +1051,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="productOptionId">Defines product&#39;s option id where the value has to be assigned</param>
         /// <param name="optionValueId">Defines value id that has to be assigned</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductOptionValueAssign200Response</returns>
-        ProductOptionValueAssign200Response ProductOptionValueAssign(int productOptionId, string optionValueId, bool? clearCache = default(bool?), int operationIndex = 0);
+        ProductOptionValueAssign200Response ProductOptionValueAssign(int productOptionId, string optionValueId, bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// product.option.value.assign
@@ -1051,9 +1066,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="productOptionId">Defines product&#39;s option id where the value has to be assigned</param>
         /// <param name="optionValueId">Defines value id that has to be assigned</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductOptionValueAssign200Response</returns>
-        ApiResponse<ProductOptionValueAssign200Response> ProductOptionValueAssignWithHttpInfo(int productOptionId, string optionValueId, bool? clearCache = default(bool?), int operationIndex = 0);
+        ApiResponse<ProductOptionValueAssign200Response> ProductOptionValueAssignWithHttpInfo(int productOptionId, string optionValueId, bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// product.option.value.delete
         /// </summary>
@@ -1098,9 +1114,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="quantity">Defines new products&#39; options quantity (optional)</param>
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountConfigUpdate200Response</returns>
-        AccountConfigUpdate200Response ProductOptionValueUpdate(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), int operationIndex = 0);
+        AccountConfigUpdate200Response ProductOptionValueUpdate(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// product.option.value.update
@@ -1117,9 +1134,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="quantity">Defines new products&#39; options quantity (optional)</param>
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountConfigUpdate200Response</returns>
-        ApiResponse<AccountConfigUpdate200Response> ProductOptionValueUpdateWithHttpInfo(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), int operationIndex = 0);
+        ApiResponse<AccountConfigUpdate200Response> ProductOptionValueUpdateWithHttpInfo(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// product.price.add
         /// </summary>
@@ -1255,9 +1273,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Defines id of the product which should be assigned to a store</param>
         /// <param name="storeId">Defines id of the store product should be assigned to</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountConfigUpdate200Response</returns>
-        AccountConfigUpdate200Response ProductStoreAssign(string productId, string storeId, int operationIndex = 0);
+        AccountConfigUpdate200Response ProductStoreAssign(string productId, string storeId, string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// product.store.assign
@@ -1268,9 +1287,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Defines id of the product which should be assigned to a store</param>
         /// <param name="storeId">Defines id of the store product should be assigned to</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountConfigUpdate200Response</returns>
-        ApiResponse<AccountConfigUpdate200Response> ProductStoreAssignWithHttpInfo(string productId, string storeId, int operationIndex = 0);
+        ApiResponse<AccountConfigUpdate200Response> ProductStoreAssignWithHttpInfo(string productId, string storeId, string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// product.tax.add
         /// </summary>
@@ -1736,10 +1756,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="valueId">Define attribute value id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductAttributeValueSet200Response</returns>
-        System.Threading.Tasks.Task<ProductAttributeValueSet200Response> ProductAttributeValueSetAsync(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductAttributeValueSet200Response> ProductAttributeValueSetAsync(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.attribute.value.set
@@ -1756,10 +1777,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="valueId">Define attribute value id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductAttributeValueSet200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductAttributeValueSet200Response>> ProductAttributeValueSetWithHttpInfoAsync(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductAttributeValueSet200Response>> ProductAttributeValueSetWithHttpInfoAsync(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.attribute.value.unset
         /// </summary>
@@ -1773,10 +1795,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeDefault">Boolean, whether or not to unset default value of the attribute, if applicable (optional, default to false)</param>
         /// <param name="reindex">Is reindex required (optional, default to true)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductAttributeValueUnset200Response</returns>
-        System.Threading.Tasks.Task<ProductAttributeValueUnset200Response> ProductAttributeValueUnsetAsync(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductAttributeValueUnset200Response> ProductAttributeValueUnsetAsync(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.attribute.value.unset
@@ -1791,10 +1814,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeDefault">Boolean, whether or not to unset default value of the attribute, if applicable (optional, default to false)</param>
         /// <param name="reindex">Is reindex required (optional, default to true)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductAttributeValueUnset200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductAttributeValueUnset200Response>> ProductAttributeValueUnsetWithHttpInfoAsync(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductAttributeValueUnset200Response>> ProductAttributeValueUnsetWithHttpInfoAsync(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.brand.list
         /// </summary>
@@ -2080,10 +2104,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="symbolLeft">Defines the symbol that is located before the currency (optional)</param>
         /// <param name="symbolRight">Defines the symbol that is located after the currency (optional)</param>
         /// <param name="varDefault">Specifies currency&#39;s default meaning (optional, default to false)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCurrencyAdd200Response</returns>
-        System.Threading.Tasks.Task<ProductCurrencyAdd200Response> ProductCurrencyAddAsync(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductCurrencyAdd200Response> ProductCurrencyAddAsync(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.currency.add
@@ -2099,10 +2124,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="symbolLeft">Defines the symbol that is located before the currency (optional)</param>
         /// <param name="symbolRight">Defines the symbol that is located after the currency (optional)</param>
         /// <param name="varDefault">Specifies currency&#39;s default meaning (optional, default to false)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCurrencyAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductCurrencyAdd200Response>> ProductCurrencyAddWithHttpInfoAsync(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductCurrencyAdd200Response>> ProductCurrencyAddWithHttpInfoAsync(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.currency.list
         /// </summary>
@@ -2300,10 +2326,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional)</param>
         /// <param name="hidden">Define is hide image (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductImageUpdate200Response</returns>
-        System.Threading.Tasks.Task<ProductImageUpdate200Response> ProductImageUpdateAsync(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductImageUpdate200Response> ProductImageUpdateAsync(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.image.update
@@ -2322,10 +2349,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional)</param>
         /// <param name="hidden">Define is hide image (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductImageUpdate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductImageUpdate200Response>> ProductImageUpdateWithHttpInfoAsync(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductImageUpdate200Response>> ProductImageUpdateWithHttpInfoAsync(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.info
         /// </summary>
@@ -2480,10 +2508,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
         /// <param name="imageUrl">Image Url (optional)</param>
         /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductManufacturerAdd200Response</returns>
-        System.Threading.Tasks.Task<ProductManufacturerAdd200Response> ProductManufacturerAddAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductManufacturerAdd200Response> ProductManufacturerAddAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.manufacturer.add
@@ -2501,10 +2530,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
         /// <param name="imageUrl">Image Url (optional)</param>
         /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductManufacturerAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductManufacturerAdd200Response>> ProductManufacturerAddWithHttpInfoAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductManufacturerAdd200Response>> ProductManufacturerAddWithHttpInfoAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.option.add
         /// </summary>
@@ -2543,10 +2573,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="optionValues">Defines option values that has to be assigned (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductOptionAssign200Response</returns>
-        System.Threading.Tasks.Task<ProductOptionAssign200Response> ProductOptionAssignAsync(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductOptionAssign200Response> ProductOptionAssignAsync(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.option.assign
@@ -2561,10 +2592,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="optionValues">Defines option values that has to be assigned (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductOptionAssign200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductOptionAssign200Response>> ProductOptionAssignWithHttpInfoAsync(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductOptionAssign200Response>> ProductOptionAssignWithHttpInfoAsync(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.option.delete
         /// </summary>
@@ -2647,10 +2679,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="isDefault">Defines as a default (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductOptionValueAdd200Response</returns>
-        System.Threading.Tasks.Task<ProductOptionValueAdd200Response> ProductOptionValueAddAsync(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductOptionValueAdd200Response> ProductOptionValueAddAsync(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.option.value.add
@@ -2666,10 +2699,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="isDefault">Defines as a default (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductOptionValueAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductOptionValueAdd200Response>> ProductOptionValueAddWithHttpInfoAsync(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductOptionValueAdd200Response>> ProductOptionValueAddWithHttpInfoAsync(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.option.value.assign
         /// </summary>
@@ -2680,10 +2714,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="productOptionId">Defines product&#39;s option id where the value has to be assigned</param>
         /// <param name="optionValueId">Defines value id that has to be assigned</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductOptionValueAssign200Response</returns>
-        System.Threading.Tasks.Task<ProductOptionValueAssign200Response> ProductOptionValueAssignAsync(int productOptionId, string optionValueId, bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductOptionValueAssign200Response> ProductOptionValueAssignAsync(int productOptionId, string optionValueId, bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.option.value.assign
@@ -2695,10 +2730,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="productOptionId">Defines product&#39;s option id where the value has to be assigned</param>
         /// <param name="optionValueId">Defines value id that has to be assigned</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductOptionValueAssign200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductOptionValueAssign200Response>> ProductOptionValueAssignWithHttpInfoAsync(int productOptionId, string optionValueId, bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductOptionValueAssign200Response>> ProductOptionValueAssignWithHttpInfoAsync(int productOptionId, string optionValueId, bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.option.value.delete
         /// </summary>
@@ -2745,10 +2781,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="quantity">Defines new products&#39; options quantity (optional)</param>
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountConfigUpdate200Response</returns>
-        System.Threading.Tasks.Task<AccountConfigUpdate200Response> ProductOptionValueUpdateAsync(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountConfigUpdate200Response> ProductOptionValueUpdateAsync(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.option.value.update
@@ -2765,10 +2802,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="quantity">Defines new products&#39; options quantity (optional)</param>
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountConfigUpdate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountConfigUpdate200Response>> ProductOptionValueUpdateWithHttpInfoAsync(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountConfigUpdate200Response>> ProductOptionValueUpdateWithHttpInfoAsync(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.price.add
         /// </summary>
@@ -2912,10 +2950,11 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Defines id of the product which should be assigned to a store</param>
         /// <param name="storeId">Defines id of the store product should be assigned to</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountConfigUpdate200Response</returns>
-        System.Threading.Tasks.Task<AccountConfigUpdate200Response> ProductStoreAssignAsync(string productId, string storeId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountConfigUpdate200Response> ProductStoreAssignAsync(string productId, string storeId, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.store.assign
@@ -2926,10 +2965,11 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Defines id of the product which should be assigned to a store</param>
         /// <param name="storeId">Defines id of the store product should be assigned to</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountConfigUpdate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountConfigUpdate200Response>> ProductStoreAssignWithHttpInfoAsync(string productId, string storeId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountConfigUpdate200Response>> ProductStoreAssignWithHttpInfoAsync(string productId, string storeId, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.tax.add
         /// </summary>
@@ -4095,11 +4135,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="valueId">Define attribute value id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductAttributeValueSet200Response</returns>
-        public ProductAttributeValueSet200Response ProductAttributeValueSet(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0)
+        public ProductAttributeValueSet200Response ProductAttributeValueSet(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueSet200Response> localVarResponse = ProductAttributeValueSetWithHttpInfo(productId, attributeId, attributeGroupId, attributeName, value, valueId, langId, storeId);
+            Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueSet200Response> localVarResponse = ProductAttributeValueSetWithHttpInfo(productId, attributeId, attributeGroupId, attributeName, value, valueId, langId, storeId, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -4115,9 +4156,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="valueId">Define attribute value id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductAttributeValueSet200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueSet200Response> ProductAttributeValueSetWithHttpInfo(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueSet200Response> ProductAttributeValueSetWithHttpInfo(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -4176,6 +4218,10 @@ namespace Org.OpenAPITools.Api
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "ProductApi.ProductAttributeValueSet";
@@ -4218,12 +4264,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="valueId">Define attribute value id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductAttributeValueSet200Response</returns>
-        public async System.Threading.Tasks.Task<ProductAttributeValueSet200Response> ProductAttributeValueSetAsync(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductAttributeValueSet200Response> ProductAttributeValueSetAsync(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueSet200Response> localVarResponse = await ProductAttributeValueSetWithHttpInfoAsync(productId, attributeId, attributeGroupId, attributeName, value, valueId, langId, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueSet200Response> localVarResponse = await ProductAttributeValueSetWithHttpInfoAsync(productId, attributeId, attributeGroupId, attributeName, value, valueId, langId, storeId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4239,10 +4286,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="valueId">Define attribute value id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductAttributeValueSet200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueSet200Response>> ProductAttributeValueSetWithHttpInfoAsync(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueSet200Response>> ProductAttributeValueSetWithHttpInfoAsync(string productId, string? attributeId = default(string?), string? attributeGroupId = default(string?), string? attributeName = default(string?), string? value = default(string?), int? valueId = default(int?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -4302,6 +4350,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "ProductApi.ProductAttributeValueSet";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -4342,11 +4394,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeDefault">Boolean, whether or not to unset default value of the attribute, if applicable (optional, default to false)</param>
         /// <param name="reindex">Is reindex required (optional, default to true)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductAttributeValueUnset200Response</returns>
-        public ProductAttributeValueUnset200Response ProductAttributeValueUnset(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0)
+        public ProductAttributeValueUnset200Response ProductAttributeValueUnset(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueUnset200Response> localVarResponse = ProductAttributeValueUnsetWithHttpInfo(productId, attributeId, storeId, includeDefault, reindex, clearCache);
+            Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueUnset200Response> localVarResponse = ProductAttributeValueUnsetWithHttpInfo(productId, attributeId, storeId, includeDefault, reindex, clearCache, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -4360,9 +4413,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeDefault">Boolean, whether or not to unset default value of the attribute, if applicable (optional, default to false)</param>
         /// <param name="reindex">Is reindex required (optional, default to true)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductAttributeValueUnset200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueUnset200Response> ProductAttributeValueUnsetWithHttpInfo(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueUnset200Response> ProductAttributeValueUnsetWithHttpInfo(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -4417,6 +4471,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "clear_cache", clearCache));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "ProductApi.ProductAttributeValueUnset";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -4456,12 +4514,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeDefault">Boolean, whether or not to unset default value of the attribute, if applicable (optional, default to false)</param>
         /// <param name="reindex">Is reindex required (optional, default to true)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductAttributeValueUnset200Response</returns>
-        public async System.Threading.Tasks.Task<ProductAttributeValueUnset200Response> ProductAttributeValueUnsetAsync(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductAttributeValueUnset200Response> ProductAttributeValueUnsetAsync(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueUnset200Response> localVarResponse = await ProductAttributeValueUnsetWithHttpInfoAsync(productId, attributeId, storeId, includeDefault, reindex, clearCache, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueUnset200Response> localVarResponse = await ProductAttributeValueUnsetWithHttpInfoAsync(productId, attributeId, storeId, includeDefault, reindex, clearCache, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4475,10 +4534,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeDefault">Boolean, whether or not to unset default value of the attribute, if applicable (optional, default to false)</param>
         /// <param name="reindex">Is reindex required (optional, default to true)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductAttributeValueUnset200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueUnset200Response>> ProductAttributeValueUnsetWithHttpInfoAsync(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductAttributeValueUnset200Response>> ProductAttributeValueUnsetWithHttpInfoAsync(string productId, string attributeId, string? storeId = default(string?), bool? includeDefault = default(bool?), bool? reindex = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -4532,6 +4592,10 @@ namespace Org.OpenAPITools.Api
             if (clearCache != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "clear_cache", clearCache));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "ProductApi.ProductAttributeValueUnset";
@@ -6257,11 +6321,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="symbolLeft">Defines the symbol that is located before the currency (optional)</param>
         /// <param name="symbolRight">Defines the symbol that is located after the currency (optional)</param>
         /// <param name="varDefault">Specifies currency&#39;s default meaning (optional, default to false)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductCurrencyAdd200Response</returns>
-        public ProductCurrencyAdd200Response ProductCurrencyAdd(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), int operationIndex = 0)
+        public ProductCurrencyAdd200Response ProductCurrencyAdd(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductCurrencyAdd200Response> localVarResponse = ProductCurrencyAddWithHttpInfo(iso3, rate, name, avail, symbolLeft, symbolRight, varDefault);
+            Org.OpenAPITools.Client.ApiResponse<ProductCurrencyAdd200Response> localVarResponse = ProductCurrencyAddWithHttpInfo(iso3, rate, name, avail, symbolLeft, symbolRight, varDefault, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -6276,9 +6341,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="symbolLeft">Defines the symbol that is located before the currency (optional)</param>
         /// <param name="symbolRight">Defines the symbol that is located after the currency (optional)</param>
         /// <param name="varDefault">Specifies currency&#39;s default meaning (optional, default to false)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductCurrencyAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ProductCurrencyAdd200Response> ProductCurrencyAddWithHttpInfo(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ProductCurrencyAdd200Response> ProductCurrencyAddWithHttpInfo(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'iso3' is set
             if (iso3 == null)
@@ -6331,6 +6397,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "default", varDefault));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "ProductApi.ProductCurrencyAdd";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -6371,12 +6441,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="symbolLeft">Defines the symbol that is located before the currency (optional)</param>
         /// <param name="symbolRight">Defines the symbol that is located after the currency (optional)</param>
         /// <param name="varDefault">Specifies currency&#39;s default meaning (optional, default to false)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCurrencyAdd200Response</returns>
-        public async System.Threading.Tasks.Task<ProductCurrencyAdd200Response> ProductCurrencyAddAsync(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductCurrencyAdd200Response> ProductCurrencyAddAsync(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductCurrencyAdd200Response> localVarResponse = await ProductCurrencyAddWithHttpInfoAsync(iso3, rate, name, avail, symbolLeft, symbolRight, varDefault, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ProductCurrencyAdd200Response> localVarResponse = await ProductCurrencyAddWithHttpInfoAsync(iso3, rate, name, avail, symbolLeft, symbolRight, varDefault, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6391,10 +6462,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="symbolLeft">Defines the symbol that is located before the currency (optional)</param>
         /// <param name="symbolRight">Defines the symbol that is located after the currency (optional)</param>
         /// <param name="varDefault">Specifies currency&#39;s default meaning (optional, default to false)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCurrencyAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductCurrencyAdd200Response>> ProductCurrencyAddWithHttpInfoAsync(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductCurrencyAdd200Response>> ProductCurrencyAddWithHttpInfoAsync(string iso3, decimal rate, string? name = default(string?), bool? avail = default(bool?), string? symbolLeft = default(string?), string? symbolRight = default(string?), bool? varDefault = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'iso3' is set
             if (iso3 == null)
@@ -6446,6 +6518,10 @@ namespace Org.OpenAPITools.Api
             if (varDefault != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "default", varDefault));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "ProductApi.ProductCurrencyAdd";
@@ -7665,11 +7741,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional)</param>
         /// <param name="hidden">Define is hide image (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductImageUpdate200Response</returns>
-        public ProductImageUpdate200Response ProductImageUpdate(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), int operationIndex = 0)
+        public ProductImageUpdate200Response ProductImageUpdate(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> localVarResponse = ProductImageUpdateWithHttpInfo(productId, id, variantIds, storeId, langId, imageName, type, label, position, hidden);
+            Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> localVarResponse = ProductImageUpdateWithHttpInfo(productId, id, variantIds, storeId, langId, imageName, type, label, position, hidden, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -7687,9 +7764,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional)</param>
         /// <param name="hidden">Define is hide image (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductImageUpdate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> ProductImageUpdateWithHttpInfo(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> ProductImageUpdateWithHttpInfo(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -7760,6 +7838,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "hidden", hidden));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "ProductApi.ProductImageUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -7803,12 +7885,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional)</param>
         /// <param name="hidden">Define is hide image (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductImageUpdate200Response</returns>
-        public async System.Threading.Tasks.Task<ProductImageUpdate200Response> ProductImageUpdateAsync(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductImageUpdate200Response> ProductImageUpdateAsync(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> localVarResponse = await ProductImageUpdateWithHttpInfoAsync(productId, id, variantIds, storeId, langId, imageName, type, label, position, hidden, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> localVarResponse = await ProductImageUpdateWithHttpInfoAsync(productId, id, variantIds, storeId, langId, imageName, type, label, position, hidden, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -7826,10 +7909,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional)</param>
         /// <param name="hidden">Define is hide image (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductImageUpdate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response>> ProductImageUpdateWithHttpInfoAsync(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response>> ProductImageUpdateWithHttpInfoAsync(string productId, string id, string? variantIds = default(string?), string? storeId = default(string?), string? langId = default(string?), string? imageName = default(string?), string? type = default(string?), string? label = default(string?), int? position = default(int?), bool? hidden = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -7899,6 +7983,10 @@ namespace Org.OpenAPITools.Api
             if (hidden != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "hidden", hidden));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "ProductApi.ProductImageUpdate";
@@ -8795,11 +8883,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
         /// <param name="imageUrl">Image Url (optional)</param>
         /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductManufacturerAdd200Response</returns>
-        public ProductManufacturerAdd200Response ProductManufacturerAdd(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0)
+        public ProductManufacturerAdd200Response ProductManufacturerAdd(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> localVarResponse = ProductManufacturerAddWithHttpInfo(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl);
+            Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> localVarResponse = ProductManufacturerAddWithHttpInfo(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -8816,9 +8905,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
         /// <param name="imageUrl">Image Url (optional)</param>
         /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductManufacturerAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> ProductManufacturerAddWithHttpInfo(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> ProductManufacturerAddWithHttpInfo(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -8885,6 +8975,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "seo_url", seoUrl));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "ProductApi.ProductManufacturerAdd";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -8927,12 +9021,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
         /// <param name="imageUrl">Image Url (optional)</param>
         /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductManufacturerAdd200Response</returns>
-        public async System.Threading.Tasks.Task<ProductManufacturerAdd200Response> ProductManufacturerAddAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductManufacturerAdd200Response> ProductManufacturerAddAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> localVarResponse = await ProductManufacturerAddWithHttpInfoAsync(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> localVarResponse = await ProductManufacturerAddWithHttpInfoAsync(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -8949,10 +9044,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="searchKeywords">Defines unique search keywords (optional)</param>
         /// <param name="imageUrl">Image Url (optional)</param>
         /// <param name="seoUrl">Defines unique URL for SEO (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductManufacturerAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response>> ProductManufacturerAddWithHttpInfoAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response>> ProductManufacturerAddWithHttpInfoAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -9018,6 +9114,10 @@ namespace Org.OpenAPITools.Api
             if (seoUrl != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "seo_url", seoUrl));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "ProductApi.ProductManufacturerAdd";
@@ -9226,11 +9326,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="optionValues">Defines option values that has to be assigned (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductOptionAssign200Response</returns>
-        public ProductOptionAssign200Response ProductOptionAssign(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), int operationIndex = 0)
+        public ProductOptionAssign200Response ProductOptionAssign(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductOptionAssign200Response> localVarResponse = ProductOptionAssignWithHttpInfo(productId, optionId, required, sortOrder, optionValues, clearCache);
+            Org.OpenAPITools.Client.ApiResponse<ProductOptionAssign200Response> localVarResponse = ProductOptionAssignWithHttpInfo(productId, optionId, required, sortOrder, optionValues, clearCache, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -9244,9 +9345,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="optionValues">Defines option values that has to be assigned (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductOptionAssign200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ProductOptionAssign200Response> ProductOptionAssignWithHttpInfo(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ProductOptionAssign200Response> ProductOptionAssignWithHttpInfo(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -9301,6 +9403,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "clear_cache", clearCache));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "ProductApi.ProductOptionAssign";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -9340,12 +9446,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="optionValues">Defines option values that has to be assigned (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductOptionAssign200Response</returns>
-        public async System.Threading.Tasks.Task<ProductOptionAssign200Response> ProductOptionAssignAsync(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductOptionAssign200Response> ProductOptionAssignAsync(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductOptionAssign200Response> localVarResponse = await ProductOptionAssignWithHttpInfoAsync(productId, optionId, required, sortOrder, optionValues, clearCache, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ProductOptionAssign200Response> localVarResponse = await ProductOptionAssignWithHttpInfoAsync(productId, optionId, required, sortOrder, optionValues, clearCache, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -9359,10 +9466,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortOrder">Sort number in the list (optional, default to 0)</param>
         /// <param name="optionValues">Defines option values that has to be assigned (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductOptionAssign200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductOptionAssign200Response>> ProductOptionAssignWithHttpInfoAsync(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductOptionAssign200Response>> ProductOptionAssignWithHttpInfoAsync(string productId, string optionId, bool? required = default(bool?), int? sortOrder = default(int?), string? optionValues = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -9416,6 +9524,10 @@ namespace Org.OpenAPITools.Api
             if (clearCache != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "clear_cache", clearCache));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "ProductApi.ProductOptionAssign";
@@ -9896,11 +10008,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="isDefault">Defines as a default (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductOptionValueAdd200Response</returns>
-        public ProductOptionValueAdd200Response ProductOptionValueAdd(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0)
+        public ProductOptionValueAdd200Response ProductOptionValueAdd(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAdd200Response> localVarResponse = ProductOptionValueAddWithHttpInfo(productId, optionId, optionValue, sortOrder, displayValue, isDefault, clearCache);
+            Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAdd200Response> localVarResponse = ProductOptionValueAddWithHttpInfo(productId, optionId, optionValue, sortOrder, displayValue, isDefault, clearCache, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -9915,9 +10028,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="isDefault">Defines as a default (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductOptionValueAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAdd200Response> ProductOptionValueAddWithHttpInfo(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAdd200Response> ProductOptionValueAddWithHttpInfo(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -9975,6 +10089,10 @@ namespace Org.OpenAPITools.Api
             if (clearCache != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "clear_cache", clearCache));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "ProductApi.ProductOptionValueAdd";
@@ -10016,12 +10134,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="isDefault">Defines as a default (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductOptionValueAdd200Response</returns>
-        public async System.Threading.Tasks.Task<ProductOptionValueAdd200Response> ProductOptionValueAddAsync(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductOptionValueAdd200Response> ProductOptionValueAddAsync(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAdd200Response> localVarResponse = await ProductOptionValueAddWithHttpInfoAsync(productId, optionId, optionValue, sortOrder, displayValue, isDefault, clearCache, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAdd200Response> localVarResponse = await ProductOptionValueAddWithHttpInfoAsync(productId, optionId, optionValue, sortOrder, displayValue, isDefault, clearCache, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -10036,10 +10155,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="isDefault">Defines as a default (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductOptionValueAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAdd200Response>> ProductOptionValueAddWithHttpInfoAsync(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAdd200Response>> ProductOptionValueAddWithHttpInfoAsync(string productId, string optionId, string? optionValue = default(string?), int? sortOrder = default(int?), string? displayValue = default(string?), bool? isDefault = default(bool?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -10098,6 +10218,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "clear_cache", clearCache));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "ProductApi.ProductOptionValueAdd";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -10135,11 +10259,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="productOptionId">Defines product&#39;s option id where the value has to be assigned</param>
         /// <param name="optionValueId">Defines value id that has to be assigned</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductOptionValueAssign200Response</returns>
-        public ProductOptionValueAssign200Response ProductOptionValueAssign(int productOptionId, string optionValueId, bool? clearCache = default(bool?), int operationIndex = 0)
+        public ProductOptionValueAssign200Response ProductOptionValueAssign(int productOptionId, string optionValueId, bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAssign200Response> localVarResponse = ProductOptionValueAssignWithHttpInfo(productOptionId, optionValueId, clearCache);
+            Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAssign200Response> localVarResponse = ProductOptionValueAssignWithHttpInfo(productOptionId, optionValueId, clearCache, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -10150,9 +10275,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="productOptionId">Defines product&#39;s option id where the value has to be assigned</param>
         /// <param name="optionValueId">Defines value id that has to be assigned</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductOptionValueAssign200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAssign200Response> ProductOptionValueAssignWithHttpInfo(int productOptionId, string optionValueId, bool? clearCache = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAssign200Response> ProductOptionValueAssignWithHttpInfo(int productOptionId, string optionValueId, bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'optionValueId' is set
             if (optionValueId == null)
@@ -10188,6 +10314,10 @@ namespace Org.OpenAPITools.Api
             if (clearCache != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "clear_cache", clearCache));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "ProductApi.ProductOptionValueAssign";
@@ -10225,12 +10355,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="productOptionId">Defines product&#39;s option id where the value has to be assigned</param>
         /// <param name="optionValueId">Defines value id that has to be assigned</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductOptionValueAssign200Response</returns>
-        public async System.Threading.Tasks.Task<ProductOptionValueAssign200Response> ProductOptionValueAssignAsync(int productOptionId, string optionValueId, bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductOptionValueAssign200Response> ProductOptionValueAssignAsync(int productOptionId, string optionValueId, bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAssign200Response> localVarResponse = await ProductOptionValueAssignWithHttpInfoAsync(productOptionId, optionValueId, clearCache, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAssign200Response> localVarResponse = await ProductOptionValueAssignWithHttpInfoAsync(productOptionId, optionValueId, clearCache, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -10241,10 +10372,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="productOptionId">Defines product&#39;s option id where the value has to be assigned</param>
         /// <param name="optionValueId">Defines value id that has to be assigned</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductOptionValueAssign200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAssign200Response>> ProductOptionValueAssignWithHttpInfoAsync(int productOptionId, string optionValueId, bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductOptionValueAssign200Response>> ProductOptionValueAssignWithHttpInfoAsync(int productOptionId, string optionValueId, bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'optionValueId' is set
             if (optionValueId == null)
@@ -10280,6 +10412,10 @@ namespace Org.OpenAPITools.Api
             if (clearCache != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "clear_cache", clearCache));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "ProductApi.ProductOptionValueAssign";
@@ -10536,11 +10672,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="quantity">Defines new products&#39; options quantity (optional)</param>
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountConfigUpdate200Response</returns>
-        public AccountConfigUpdate200Response ProductOptionValueUpdate(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), int operationIndex = 0)
+        public AccountConfigUpdate200Response ProductOptionValueUpdate(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = ProductOptionValueUpdateWithHttpInfo(productId, optionId, optionValueId, optionValue, price, quantity, displayValue, clearCache);
+            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = ProductOptionValueUpdateWithHttpInfo(productId, optionId, optionValueId, optionValue, price, quantity, displayValue, clearCache, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -10556,9 +10693,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="quantity">Defines new products&#39; options quantity (optional)</param>
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountConfigUpdate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> ProductOptionValueUpdateWithHttpInfo(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> ProductOptionValueUpdateWithHttpInfo(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -10624,6 +10762,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "clear_cache", clearCache));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "ProductApi.ProductOptionValueUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -10665,12 +10807,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="quantity">Defines new products&#39; options quantity (optional)</param>
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountConfigUpdate200Response</returns>
-        public async System.Threading.Tasks.Task<AccountConfigUpdate200Response> ProductOptionValueUpdateAsync(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountConfigUpdate200Response> ProductOptionValueUpdateAsync(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = await ProductOptionValueUpdateWithHttpInfoAsync(productId, optionId, optionValueId, optionValue, price, quantity, displayValue, clearCache, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = await ProductOptionValueUpdateWithHttpInfoAsync(productId, optionId, optionValueId, optionValue, price, quantity, displayValue, clearCache, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -10686,10 +10829,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="quantity">Defines new products&#39; options quantity (optional)</param>
         /// <param name="displayValue">Defines the value that will be displayed for the option value (optional)</param>
         /// <param name="clearCache">Is cache clear required (optional, default to true)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountConfigUpdate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response>> ProductOptionValueUpdateWithHttpInfoAsync(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response>> ProductOptionValueUpdateWithHttpInfoAsync(string productId, string optionId, string optionValueId, string? optionValue = default(string?), decimal? price = default(decimal?), decimal? quantity = default(decimal?), string? displayValue = default(string?), bool? clearCache = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -10754,6 +10898,10 @@ namespace Org.OpenAPITools.Api
             if (clearCache != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "clear_cache", clearCache));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "ProductApi.ProductOptionValueUpdate";
@@ -11659,11 +11807,12 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Defines id of the product which should be assigned to a store</param>
         /// <param name="storeId">Defines id of the store product should be assigned to</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountConfigUpdate200Response</returns>
-        public AccountConfigUpdate200Response ProductStoreAssign(string productId, string storeId, int operationIndex = 0)
+        public AccountConfigUpdate200Response ProductStoreAssign(string productId, string storeId, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = ProductStoreAssignWithHttpInfo(productId, storeId);
+            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = ProductStoreAssignWithHttpInfo(productId, storeId, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -11673,9 +11822,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Defines id of the product which should be assigned to a store</param>
         /// <param name="storeId">Defines id of the store product should be assigned to</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountConfigUpdate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> ProductStoreAssignWithHttpInfo(string productId, string storeId, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> ProductStoreAssignWithHttpInfo(string productId, string storeId, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -11714,6 +11864,10 @@ namespace Org.OpenAPITools.Api
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "product_id", productId));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "ProductApi.ProductStoreAssign";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -11749,12 +11903,13 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Defines id of the product which should be assigned to a store</param>
         /// <param name="storeId">Defines id of the store product should be assigned to</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountConfigUpdate200Response</returns>
-        public async System.Threading.Tasks.Task<AccountConfigUpdate200Response> ProductStoreAssignAsync(string productId, string storeId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountConfigUpdate200Response> ProductStoreAssignAsync(string productId, string storeId, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = await ProductStoreAssignWithHttpInfoAsync(productId, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = await ProductStoreAssignWithHttpInfoAsync(productId, storeId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -11764,10 +11919,11 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Defines id of the product which should be assigned to a store</param>
         /// <param name="storeId">Defines id of the store product should be assigned to</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountConfigUpdate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response>> ProductStoreAssignWithHttpInfoAsync(string productId, string storeId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response>> ProductStoreAssignWithHttpInfoAsync(string productId, string storeId, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -11806,6 +11962,10 @@ namespace Org.OpenAPITools.Api
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "product_id", productId));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "ProductApi.ProductStoreAssign";
             localVarRequestOptions.OperationIndex = operationIndex;

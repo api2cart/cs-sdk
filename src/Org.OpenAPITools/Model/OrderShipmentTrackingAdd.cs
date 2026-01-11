@@ -48,7 +48,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="trackingNumber">Defines tracking number (required).</param>
         /// <param name="trackingLink">Defines custom tracking link.</param>
         /// <param name="sendNotifications">Send notifications to customer after tracking was created (default to false).</param>
-        public OrderShipmentTrackingAdd(string orderId = default(string), string shipmentId = default(string), string carrierId = default(string), string storeId = default(string), string trackingProvider = default(string), string trackingNumber = default(string), string trackingLink = default(string), bool sendNotifications = false)
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
+        public OrderShipmentTrackingAdd(string orderId = default(string), string shipmentId = default(string), string carrierId = default(string), string storeId = default(string), string trackingProvider = default(string), string trackingNumber = default(string), string trackingLink = default(string), bool sendNotifications = false, string idempotencyKey = default(string))
         {
             // to ensure "shipmentId" is required (not null)
             if (shipmentId == null)
@@ -68,6 +69,7 @@ namespace Org.OpenAPITools.Model
             this.TrackingProvider = trackingProvider;
             this.TrackingLink = trackingLink;
             this.SendNotifications = sendNotifications;
+            this.IdempotencyKey = idempotencyKey;
         }
 
         /// <summary>
@@ -151,6 +153,16 @@ namespace Org.OpenAPITools.Model
         public bool SendNotifications { get; set; }
 
         /// <summary>
+        /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
+        /// </summary>
+        /// <value>A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;</value>
+        /*
+        <example>098f6bcd4621d373cade4e832627b4f6</example>
+        */
+        [DataMember(Name = "idempotency_key", EmitDefaultValue = false)]
+        public string IdempotencyKey { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -166,6 +178,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  TrackingNumber: ").Append(TrackingNumber).Append("\n");
             sb.Append("  TrackingLink: ").Append(TrackingLink).Append("\n");
             sb.Append("  SendNotifications: ").Append(SendNotifications).Append("\n");
+            sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

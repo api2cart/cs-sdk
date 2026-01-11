@@ -122,9 +122,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketLiveShippingServiceDelete200Response</returns>
-        BasketLiveShippingServiceDelete200Response CartCouponConditionAdd(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0);
+        BasketLiveShippingServiceDelete200Response CartCouponConditionAdd(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.coupon.condition.add
@@ -142,9 +143,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketLiveShippingServiceDelete200Response</returns>
-        ApiResponse<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddWithHttpInfo(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddWithHttpInfo(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.coupon.count
         /// </summary>
@@ -290,9 +292,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
         /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CartGiftcardAdd200Response</returns>
-        CartGiftcardAdd200Response CartGiftcardAdd(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), int operationIndex = 0);
+        CartGiftcardAdd200Response CartGiftcardAdd(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.giftcard.add
@@ -307,9 +310,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
         /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CartGiftcardAdd200Response</returns>
-        ApiResponse<CartGiftcardAdd200Response> CartGiftcardAddWithHttpInfo(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), int operationIndex = 0);
+        ApiResponse<CartGiftcardAdd200Response> CartGiftcardAddWithHttpInfo(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.giftcard.count
         /// </summary>
@@ -475,9 +479,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AttributeAdd200Response</returns>
-        AttributeAdd200Response CartMetaDataSet(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0);
+        AttributeAdd200Response CartMetaDataSet(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.meta_data.set
@@ -493,9 +498,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttributeAdd200Response</returns>
-        ApiResponse<AttributeAdd200Response> CartMetaDataSetWithHttpInfo(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0);
+        ApiResponse<AttributeAdd200Response> CartMetaDataSetWithHttpInfo(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.meta_data.unset
         /// </summary>
@@ -590,9 +596,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="scope">The page or pages on the online store where the script should be included (optional, default to &quot;storefront&quot;)</param>
         /// <param name="events">Event for run scripts (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CartScriptAdd200Response</returns>
-        CartScriptAdd200Response CartScriptAdd(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), int operationIndex = 0);
+        CartScriptAdd200Response CartScriptAdd(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.script.add
@@ -609,9 +616,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="scope">The page or pages on the online store where the script should be included (optional, default to &quot;storefront&quot;)</param>
         /// <param name="events">Event for run scripts (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CartScriptAdd200Response</returns>
-        ApiResponse<CartScriptAdd200Response> CartScriptAddWithHttpInfo(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<CartScriptAdd200Response> CartScriptAddWithHttpInfo(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.script.delete
         /// </summary>
@@ -848,10 +856,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketLiveShippingServiceDelete200Response</returns>
-        System.Threading.Tasks.Task<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddAsync(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddAsync(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.coupon.condition.add
@@ -869,10 +878,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketLiveShippingServiceDelete200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BasketLiveShippingServiceDelete200Response>> CartCouponConditionAddWithHttpInfoAsync(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BasketLiveShippingServiceDelete200Response>> CartCouponConditionAddWithHttpInfoAsync(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.coupon.count
         /// </summary>
@@ -1026,10 +1036,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
         /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CartGiftcardAdd200Response</returns>
-        System.Threading.Tasks.Task<CartGiftcardAdd200Response> CartGiftcardAddAsync(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CartGiftcardAdd200Response> CartGiftcardAddAsync(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.giftcard.add
@@ -1044,10 +1055,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
         /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CartGiftcardAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartGiftcardAdd200Response>> CartGiftcardAddWithHttpInfoAsync(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CartGiftcardAdd200Response>> CartGiftcardAddWithHttpInfoAsync(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.giftcard.count
         /// </summary>
@@ -1223,10 +1235,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttributeAdd200Response</returns>
-        System.Threading.Tasks.Task<AttributeAdd200Response> CartMetaDataSetAsync(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AttributeAdd200Response> CartMetaDataSetAsync(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.meta_data.set
@@ -1242,10 +1255,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttributeAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttributeAdd200Response>> CartMetaDataSetWithHttpInfoAsync(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AttributeAdd200Response>> CartMetaDataSetWithHttpInfoAsync(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.meta_data.unset
         /// </summary>
@@ -1346,10 +1360,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="scope">The page or pages on the online store where the script should be included (optional, default to &quot;storefront&quot;)</param>
         /// <param name="events">Event for run scripts (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CartScriptAdd200Response</returns>
-        System.Threading.Tasks.Task<CartScriptAdd200Response> CartScriptAddAsync(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CartScriptAdd200Response> CartScriptAddAsync(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.script.add
@@ -1366,10 +1381,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="scope">The page or pages on the online store where the script should be included (optional, default to &quot;storefront&quot;)</param>
         /// <param name="events">Event for run scripts (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CartScriptAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartScriptAdd200Response>> CartScriptAddWithHttpInfoAsync(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CartScriptAdd200Response>> CartScriptAddWithHttpInfoAsync(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.script.delete
         /// </summary>
@@ -2182,11 +2198,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketLiveShippingServiceDelete200Response</returns>
-        public BasketLiveShippingServiceDelete200Response CartCouponConditionAdd(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0)
+        public BasketLiveShippingServiceDelete200Response CartCouponConditionAdd(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response> localVarResponse = CartCouponConditionAddWithHttpInfo(couponId, entity, key, varOperator, value, target, includeTax, includeShipping, storeId);
+            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response> localVarResponse = CartCouponConditionAddWithHttpInfo(couponId, entity, key, varOperator, value, target, includeTax, includeShipping, storeId, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -2203,9 +2220,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketLiveShippingServiceDelete200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddWithHttpInfo(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddWithHttpInfo(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'couponId' is set
             if (couponId == null)
@@ -2281,6 +2299,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "CartApi.CartCouponConditionAdd";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2323,12 +2345,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketLiveShippingServiceDelete200Response</returns>
-        public async System.Threading.Tasks.Task<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddAsync(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BasketLiveShippingServiceDelete200Response> CartCouponConditionAddAsync(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response> localVarResponse = await CartCouponConditionAddWithHttpInfoAsync(couponId, entity, key, varOperator, value, target, includeTax, includeShipping, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response> localVarResponse = await CartCouponConditionAddWithHttpInfoAsync(couponId, entity, key, varOperator, value, target, includeTax, includeShipping, storeId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2345,10 +2368,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="includeTax">Indicates whether to apply a discount for taxes. (optional, default to false)</param>
         /// <param name="includeShipping">Indicates whether to apply a discount for shipping. (optional, default to false)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketLiveShippingServiceDelete200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response>> CartCouponConditionAddWithHttpInfoAsync(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceDelete200Response>> CartCouponConditionAddWithHttpInfoAsync(string couponId, string entity, string key, string varOperator, string value, string? target = default(string?), bool? includeTax = default(bool?), bool? includeShipping = default(bool?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'couponId' is set
             if (couponId == null)
@@ -2423,6 +2447,10 @@ namespace Org.OpenAPITools.Api
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "CartApi.CartCouponConditionAdd";
@@ -3346,11 +3374,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
         /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CartGiftcardAdd200Response</returns>
-        public CartGiftcardAdd200Response CartGiftcardAdd(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), int operationIndex = 0)
+        public CartGiftcardAdd200Response CartGiftcardAdd(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response> localVarResponse = CartGiftcardAddWithHttpInfo(amount, code, ownerEmail, recipientEmail, recipientName, ownerName);
+            Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response> localVarResponse = CartGiftcardAddWithHttpInfo(amount, code, ownerEmail, recipientEmail, recipientName, ownerName, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -3364,9 +3393,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
         /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CartGiftcardAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response> CartGiftcardAddWithHttpInfo(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response> CartGiftcardAddWithHttpInfo(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3412,6 +3442,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "owner_name", ownerName));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "CartApi.CartGiftcardAdd";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -3451,12 +3485,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
         /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CartGiftcardAdd200Response</returns>
-        public async System.Threading.Tasks.Task<CartGiftcardAdd200Response> CartGiftcardAddAsync(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CartGiftcardAdd200Response> CartGiftcardAddAsync(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response> localVarResponse = await CartGiftcardAddWithHttpInfoAsync(amount, code, ownerEmail, recipientEmail, recipientName, ownerName, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response> localVarResponse = await CartGiftcardAddWithHttpInfoAsync(amount, code, ownerEmail, recipientEmail, recipientName, ownerName, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3470,10 +3505,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
         /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CartGiftcardAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response>> CartGiftcardAddWithHttpInfoAsync(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response>> CartGiftcardAddWithHttpInfoAsync(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3518,6 +3554,10 @@ namespace Org.OpenAPITools.Api
             if (ownerName != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "owner_name", ownerName));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "CartApi.CartGiftcardAdd";
@@ -4583,11 +4623,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AttributeAdd200Response</returns>
-        public AttributeAdd200Response CartMetaDataSet(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0)
+        public AttributeAdd200Response CartMetaDataSet(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response> localVarResponse = CartMetaDataSetWithHttpInfo(entityId, key, value, varNamespace, entity, storeId, langId);
+            Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response> localVarResponse = CartMetaDataSetWithHttpInfo(entityId, key, value, varNamespace, entity, storeId, langId, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -4602,9 +4643,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttributeAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response> CartMetaDataSetWithHttpInfo(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response> CartMetaDataSetWithHttpInfo(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'entityId' is set
             if (entityId == null)
@@ -4669,6 +4711,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "CartApi.CartMetaDataSet";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -4709,12 +4755,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttributeAdd200Response</returns>
-        public async System.Threading.Tasks.Task<AttributeAdd200Response> CartMetaDataSetAsync(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AttributeAdd200Response> CartMetaDataSetAsync(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response> localVarResponse = await CartMetaDataSetWithHttpInfoAsync(entityId, key, value, varNamespace, entity, storeId, langId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response> localVarResponse = await CartMetaDataSetWithHttpInfoAsync(entityId, key, value, varNamespace, entity, storeId, langId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4729,10 +4776,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="entity">Entity (optional, default to &quot;product&quot;)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttributeAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response>> CartMetaDataSetWithHttpInfoAsync(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response>> CartMetaDataSetWithHttpInfoAsync(string entityId, string key, string value, string varNamespace, string? entity = default(string?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'entityId' is set
             if (entityId == null)
@@ -4796,6 +4844,10 @@ namespace Org.OpenAPITools.Api
             if (langId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "CartApi.CartMetaDataSet";
@@ -5394,11 +5446,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="scope">The page or pages on the online store where the script should be included (optional, default to &quot;storefront&quot;)</param>
         /// <param name="events">Event for run scripts (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CartScriptAdd200Response</returns>
-        public CartScriptAdd200Response CartScriptAdd(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), int operationIndex = 0)
+        public CartScriptAdd200Response CartScriptAdd(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CartScriptAdd200Response> localVarResponse = CartScriptAddWithHttpInfo(name, description, html, src, loadMethod, scope, events, storeId);
+            Org.OpenAPITools.Client.ApiResponse<CartScriptAdd200Response> localVarResponse = CartScriptAddWithHttpInfo(name, description, html, src, loadMethod, scope, events, storeId, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -5414,9 +5467,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="scope">The page or pages on the online store where the script should be included (optional, default to &quot;storefront&quot;)</param>
         /// <param name="events">Event for run scripts (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CartScriptAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CartScriptAdd200Response> CartScriptAddWithHttpInfo(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CartScriptAdd200Response> CartScriptAddWithHttpInfo(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -5473,6 +5527,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "CartApi.CartScriptAdd";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -5514,12 +5572,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="scope">The page or pages on the online store where the script should be included (optional, default to &quot;storefront&quot;)</param>
         /// <param name="events">Event for run scripts (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CartScriptAdd200Response</returns>
-        public async System.Threading.Tasks.Task<CartScriptAdd200Response> CartScriptAddAsync(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CartScriptAdd200Response> CartScriptAddAsync(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CartScriptAdd200Response> localVarResponse = await CartScriptAddWithHttpInfoAsync(name, description, html, src, loadMethod, scope, events, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CartScriptAdd200Response> localVarResponse = await CartScriptAddWithHttpInfoAsync(name, description, html, src, loadMethod, scope, events, storeId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5535,10 +5594,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="scope">The page or pages on the online store where the script should be included (optional, default to &quot;storefront&quot;)</param>
         /// <param name="events">Event for run scripts (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CartScriptAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartScriptAdd200Response>> CartScriptAddWithHttpInfoAsync(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartScriptAdd200Response>> CartScriptAddWithHttpInfoAsync(string? name = default(string?), string? description = default(string?), string? html = default(string?), string? src = default(string?), string? loadMethod = default(string?), string? scope = default(string?), string? events = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -5594,6 +5654,10 @@ namespace Org.OpenAPITools.Api
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "CartApi.CartScriptAdd";

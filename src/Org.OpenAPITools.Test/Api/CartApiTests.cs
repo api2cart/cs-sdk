@@ -112,7 +112,8 @@ namespace Org.OpenAPITools.Test.Api
             //bool? includeTax = null;
             //bool? includeShipping = null;
             //string? storeId = null;
-            //var response = instance.CartCouponConditionAdd(couponId, entity, key, varOperator, value, target, includeTax, includeShipping, storeId);
+            //string? idempotencyKey = null;
+            //var response = instance.CartCouponConditionAdd(couponId, entity, key, varOperator, value, target, includeTax, includeShipping, storeId, idempotencyKey);
             //Assert.IsType<BasketLiveShippingServiceDelete200Response>(response);
         }
 
@@ -197,7 +198,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? recipientEmail = null;
             //string? recipientName = null;
             //string? ownerName = null;
-            //var response = instance.CartGiftcardAdd(amount, code, ownerEmail, recipientEmail, recipientName, ownerName);
+            //string? idempotencyKey = null;
+            //var response = instance.CartGiftcardAdd(amount, code, ownerEmail, recipientEmail, recipientName, ownerName, idempotencyKey);
             //Assert.IsType<CartGiftcardAdd200Response>(response);
         }
 
@@ -293,7 +295,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? entity = null;
             //string? storeId = null;
             //string? langId = null;
-            //var response = instance.CartMetaDataSet(entityId, key, value, varNamespace, entity, storeId, langId);
+            //string? idempotencyKey = null;
+            //var response = instance.CartMetaDataSet(entityId, key, value, varNamespace, entity, storeId, langId, idempotencyKey);
             //Assert.IsType<AttributeAdd200Response>(response);
         }
 
@@ -353,7 +356,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? scope = null;
             //string? events = null;
             //string? storeId = null;
-            //var response = instance.CartScriptAdd(name, description, html, src, loadMethod, scope, events, storeId);
+            //string? idempotencyKey = null;
+            //var response = instance.CartScriptAdd(name, description, html, src, loadMethod, scope, events, storeId, idempotencyKey);
             //Assert.IsType<CartScriptAdd200Response>(response);
         }
 

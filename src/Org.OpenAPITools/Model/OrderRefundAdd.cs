@@ -45,7 +45,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="sendNotifications">Send notifications to customer after refund was created (default to false).</param>
         /// <param name="date">Specifies an order creation date in format Y-m-d H:i:s.</param>
         /// <param name="isOnline">Indicates whether refund type is online (default to false).</param>
-        public OrderRefundAdd(string orderId = default(string), List<OrderRefundAddItemsInner> items = default(List<OrderRefundAddItemsInner>), decimal totalPrice = default(decimal), decimal shippingPrice = default(decimal), decimal feePrice = default(decimal), string message = default(string), bool itemRestock = false, bool sendNotifications = false, string date = default(string), bool isOnline = false)
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
+        public OrderRefundAdd(string orderId = default(string), List<OrderRefundAddItemsInner> items = default(List<OrderRefundAddItemsInner>), decimal totalPrice = default(decimal), decimal shippingPrice = default(decimal), decimal feePrice = default(decimal), string message = default(string), bool itemRestock = false, bool sendNotifications = false, string date = default(string), bool isOnline = false, string idempotencyKey = default(string))
         {
             this.OrderId = orderId;
             this.Items = items;
@@ -57,6 +58,7 @@ namespace Org.OpenAPITools.Model
             this.SendNotifications = sendNotifications;
             this.Date = date;
             this.IsOnline = isOnline;
+            this.IdempotencyKey = idempotencyKey;
         }
 
         /// <summary>
@@ -157,6 +159,16 @@ namespace Org.OpenAPITools.Model
         public bool IsOnline { get; set; }
 
         /// <summary>
+        /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
+        /// </summary>
+        /// <value>A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;</value>
+        /*
+        <example>098f6bcd4621d373cade4e832627b4f6</example>
+        */
+        [DataMember(Name = "idempotency_key", EmitDefaultValue = false)]
+        public string IdempotencyKey { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -174,6 +186,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  SendNotifications: ").Append(SendNotifications).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
             sb.Append("  IsOnline: ").Append(IsOnline).Append("\n");
+            sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

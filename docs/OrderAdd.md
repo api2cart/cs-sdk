@@ -75,6 +75,7 @@ Name | Type | Description | Notes
 **ClearCache** | **bool** | Is cache clear required | [optional] [default to true]
 **Origin** | **string** | The source of the order | [optional] 
 **FeePrice** | **decimal** | Specifies refund&#39;s fee price | [optional] 
+**IdempotencyKey** | **string** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional] 
 **OrderItem** | [**List&lt;OrderAddOrderItemInner&gt;**](OrderAddOrderItemInner.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

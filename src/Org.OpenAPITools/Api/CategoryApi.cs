@@ -49,9 +49,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryAdd200Response</returns>
-        CategoryAdd200Response CategoryAdd(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0);
+        CategoryAdd200Response CategoryAdd(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// category.add
@@ -75,9 +76,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryAdd200Response</returns>
-        ApiResponse<CategoryAdd200Response> CategoryAddWithHttpInfo(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0);
+        ApiResponse<CategoryAdd200Response> CategoryAddWithHttpInfo(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// category.add.batch
         /// </summary>
@@ -111,9 +113,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category assign, specified by category id</param>
         /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryAssign200Response</returns>
-        CategoryAssign200Response CategoryAssign(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0);
+        CategoryAssign200Response CategoryAssign(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// category.assign
@@ -125,9 +128,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category assign, specified by category id</param>
         /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryAssign200Response</returns>
-        ApiResponse<CategoryAssign200Response> CategoryAssignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<CategoryAssign200Response> CategoryAssignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// category.count
         /// </summary>
@@ -201,6 +205,29 @@ namespace Org.OpenAPITools.Api
         /// <returns>ApiResponse of CategoryDelete200Response</returns>
         ApiResponse<CategoryDelete200Response> CategoryDeleteWithHttpInfo(string id, string? storeId = default(string?), int operationIndex = 0);
         /// <summary>
+        /// category.delete.batch
+        /// </summary>
+        /// <remarks>
+        /// Delete categories from the store.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="categoryDeleteBatch"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CategoryAddBatch200Response</returns>
+        CategoryAddBatch200Response CategoryDeleteBatch(CategoryDeleteBatch categoryDeleteBatch, int operationIndex = 0);
+
+        /// <summary>
+        /// category.delete.batch
+        /// </summary>
+        /// <remarks>
+        /// Delete categories from the store.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="categoryDeleteBatch"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CategoryAddBatch200Response</returns>
+        ApiResponse<CategoryAddBatch200Response> CategoryDeleteBatchWithHttpInfo(CategoryDeleteBatch categoryDeleteBatch, int operationIndex = 0);
+        /// <summary>
         /// category.find
         /// </summary>
         /// <remarks>
@@ -246,9 +273,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryImageAdd200Response</returns>
-        CategoryImageAdd200Response CategoryImageAdd(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0);
+        CategoryImageAdd200Response CategoryImageAdd(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// category.image.add
@@ -265,9 +293,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryImageAdd200Response</returns>
-        ApiResponse<CategoryImageAdd200Response> CategoryImageAddWithHttpInfo(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0);
+        ApiResponse<CategoryImageAdd200Response> CategoryImageAddWithHttpInfo(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// category.image.delete
         /// </summary>
@@ -405,9 +434,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category unassign, specified by category id</param>
         /// <param name="productId">Defines category unassign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryAssign200Response</returns>
-        CategoryAssign200Response CategoryUnassign(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0);
+        CategoryAssign200Response CategoryUnassign(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// category.unassign
@@ -419,9 +449,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category unassign, specified by category id</param>
         /// <param name="productId">Defines category unassign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryAssign200Response</returns>
-        ApiResponse<CategoryAssign200Response> CategoryUnassignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<CategoryAssign200Response> CategoryUnassignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// category.update
         /// </summary>
@@ -444,9 +475,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountConfigUpdate200Response</returns>
-        AccountConfigUpdate200Response CategoryUpdate(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0);
+        AccountConfigUpdate200Response CategoryUpdate(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// category.update
@@ -470,9 +502,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountConfigUpdate200Response</returns>
-        ApiResponse<AccountConfigUpdate200Response> CategoryUpdateWithHttpInfo(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0);
+        ApiResponse<AccountConfigUpdate200Response> CategoryUpdateWithHttpInfo(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -504,10 +537,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryAdd200Response</returns>
-        System.Threading.Tasks.Task<CategoryAdd200Response> CategoryAddAsync(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryAdd200Response> CategoryAddAsync(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.add
@@ -531,10 +565,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryAdd200Response>> CategoryAddWithHttpInfoAsync(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CategoryAdd200Response>> CategoryAddWithHttpInfoAsync(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.add.batch
         /// </summary>
@@ -570,10 +605,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category assign, specified by category id</param>
         /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryAssign200Response</returns>
-        System.Threading.Tasks.Task<CategoryAssign200Response> CategoryAssignAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryAssign200Response> CategoryAssignAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.assign
@@ -585,10 +621,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category assign, specified by category id</param>
         /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryAssign200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryAssign200Response>> CategoryAssignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CategoryAssign200Response>> CategoryAssignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.count
         /// </summary>
@@ -666,6 +703,31 @@ namespace Org.OpenAPITools.Api
         /// <returns>Task of ApiResponse (CategoryDelete200Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<CategoryDelete200Response>> CategoryDeleteWithHttpInfoAsync(string id, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
+        /// category.delete.batch
+        /// </summary>
+        /// <remarks>
+        /// Delete categories from the store.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="categoryDeleteBatch"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CategoryAddBatch200Response</returns>
+        System.Threading.Tasks.Task<CategoryAddBatch200Response> CategoryDeleteBatchAsync(CategoryDeleteBatch categoryDeleteBatch, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+
+        /// <summary>
+        /// category.delete.batch
+        /// </summary>
+        /// <remarks>
+        /// Delete categories from the store.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="categoryDeleteBatch"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CategoryAddBatch200Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CategoryAddBatch200Response>> CategoryDeleteBatchWithHttpInfoAsync(CategoryDeleteBatch categoryDeleteBatch, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <summary>
         /// category.find
         /// </summary>
         /// <remarks>
@@ -713,10 +775,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryImageAdd200Response</returns>
-        System.Threading.Tasks.Task<CategoryImageAdd200Response> CategoryImageAddAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryImageAdd200Response> CategoryImageAddAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.image.add
@@ -733,10 +796,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryImageAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryImageAdd200Response>> CategoryImageAddWithHttpInfoAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CategoryImageAdd200Response>> CategoryImageAddWithHttpInfoAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.image.delete
         /// </summary>
@@ -880,10 +944,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category unassign, specified by category id</param>
         /// <param name="productId">Defines category unassign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryAssign200Response</returns>
-        System.Threading.Tasks.Task<CategoryAssign200Response> CategoryUnassignAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryAssign200Response> CategoryUnassignAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.unassign
@@ -895,10 +960,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category unassign, specified by category id</param>
         /// <param name="productId">Defines category unassign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryAssign200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryAssign200Response>> CategoryUnassignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CategoryAssign200Response>> CategoryUnassignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.update
         /// </summary>
@@ -921,10 +987,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountConfigUpdate200Response</returns>
-        System.Threading.Tasks.Task<AccountConfigUpdate200Response> CategoryUpdateAsync(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountConfigUpdate200Response> CategoryUpdateAsync(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.update
@@ -948,10 +1015,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountConfigUpdate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountConfigUpdate200Response>> CategoryUpdateWithHttpInfoAsync(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountConfigUpdate200Response>> CategoryUpdateWithHttpInfoAsync(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1091,11 +1159,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryAdd200Response</returns>
-        public CategoryAdd200Response CategoryAdd(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0)
+        public CategoryAdd200Response CategoryAdd(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response> localVarResponse = CategoryAddWithHttpInfo(name, description, shortDescription, parentId, avail, createdTime, modifiedTime, sortOrder, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
+            Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response> localVarResponse = CategoryAddWithHttpInfo(name, description, shortDescription, parentId, avail, createdTime, modifiedTime, sortOrder, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -1118,9 +1187,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response> CategoryAddWithHttpInfo(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response> CategoryAddWithHttpInfo(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -1208,6 +1278,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryAdd";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1256,12 +1330,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryAdd200Response</returns>
-        public async System.Threading.Tasks.Task<CategoryAdd200Response> CategoryAddAsync(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CategoryAdd200Response> CategoryAddAsync(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response> localVarResponse = await CategoryAddWithHttpInfoAsync(name, description, shortDescription, parentId, avail, createdTime, modifiedTime, sortOrder, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response> localVarResponse = await CategoryAddWithHttpInfoAsync(name, description, shortDescription, parentId, avail, createdTime, modifiedTime, sortOrder, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1284,10 +1359,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Create category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response>> CategoryAddWithHttpInfoAsync(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryAdd200Response>> CategoryAddWithHttpInfoAsync(string name, string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? createdTime = default(string?), string? modifiedTime = default(string?), int? sortOrder = default(int?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -1374,6 +1450,10 @@ namespace Org.OpenAPITools.Api
             if (langId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryAdd";
@@ -1579,11 +1659,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category assign, specified by category id</param>
         /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryAssign200Response</returns>
-        public CategoryAssign200Response CategoryAssign(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0)
+        public CategoryAssign200Response CategoryAssign(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = CategoryAssignWithHttpInfo(categoryId, productId, storeId);
+            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = CategoryAssignWithHttpInfo(categoryId, productId, storeId, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -1594,9 +1675,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category assign, specified by category id</param>
         /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryAssign200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> CategoryAssignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> CategoryAssignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -1639,6 +1721,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryAssign";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1675,12 +1761,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category assign, specified by category id</param>
         /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryAssign200Response</returns>
-        public async System.Threading.Tasks.Task<CategoryAssign200Response> CategoryAssignAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CategoryAssign200Response> CategoryAssignAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = await CategoryAssignWithHttpInfoAsync(categoryId, productId, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = await CategoryAssignWithHttpInfoAsync(categoryId, productId, storeId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1691,10 +1778,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category assign, specified by category id</param>
         /// <param name="productId">Defines category assign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryAssign200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response>> CategoryAssignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response>> CategoryAssignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -1736,6 +1824,10 @@ namespace Org.OpenAPITools.Api
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryAssign";
@@ -2248,6 +2340,173 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
+        /// category.delete.batch Delete categories from the store.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="categoryDeleteBatch"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CategoryAddBatch200Response</returns>
+        public CategoryAddBatch200Response CategoryDeleteBatch(CategoryDeleteBatch categoryDeleteBatch, int operationIndex = 0)
+        {
+            Org.OpenAPITools.Client.ApiResponse<CategoryAddBatch200Response> localVarResponse = CategoryDeleteBatchWithHttpInfo(categoryDeleteBatch);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// category.delete.batch Delete categories from the store.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="categoryDeleteBatch"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CategoryAddBatch200Response</returns>
+        public Org.OpenAPITools.Client.ApiResponse<CategoryAddBatch200Response> CategoryDeleteBatchWithHttpInfo(CategoryDeleteBatch categoryDeleteBatch, int operationIndex = 0)
+        {
+            // verify the required parameter 'categoryDeleteBatch' is set
+            if (categoryDeleteBatch == null)
+            {
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'categoryDeleteBatch' when calling CategoryApi->CategoryDeleteBatch");
+            }
+
+            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = categoryDeleteBatch;
+
+            localVarRequestOptions.Operation = "CategoryApi.CategoryDeleteBatch";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (StoreKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-store-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-store-key", this.Configuration.GetApiKeyWithPrefix("x-store-key"));
+            }
+            // authentication (ApiKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<CategoryAddBatch200Response>("/category.delete.batch.json", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CategoryDeleteBatch", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// category.delete.batch Delete categories from the store.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="categoryDeleteBatch"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CategoryAddBatch200Response</returns>
+        public async System.Threading.Tasks.Task<CategoryAddBatch200Response> CategoryDeleteBatchAsync(CategoryDeleteBatch categoryDeleteBatch, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            Org.OpenAPITools.Client.ApiResponse<CategoryAddBatch200Response> localVarResponse = await CategoryDeleteBatchWithHttpInfoAsync(categoryDeleteBatch, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// category.delete.batch Delete categories from the store.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="categoryDeleteBatch"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CategoryAddBatch200Response)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryAddBatch200Response>> CategoryDeleteBatchWithHttpInfoAsync(CategoryDeleteBatch categoryDeleteBatch, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'categoryDeleteBatch' is set
+            if (categoryDeleteBatch == null)
+            {
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'categoryDeleteBatch' when calling CategoryApi->CategoryDeleteBatch");
+            }
+
+
+            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = categoryDeleteBatch;
+
+            localVarRequestOptions.Operation = "CategoryApi.CategoryDeleteBatch";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (StoreKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-store-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-store-key", this.Configuration.GetApiKeyWithPrefix("x-store-key"));
+            }
+            // authentication (ApiKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<CategoryAddBatch200Response>("/category.delete.batch.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CategoryDeleteBatch", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// category.find Search category in store. \&quot;Laptop\&quot; is specified here by default.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2472,11 +2731,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryImageAdd200Response</returns>
-        public CategoryImageAdd200Response CategoryImageAdd(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0)
+        public CategoryImageAdd200Response CategoryImageAdd(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> localVarResponse = CategoryImageAddWithHttpInfo(categoryId, imageName, url, type, storeId, label, mime, position);
+            Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> localVarResponse = CategoryImageAddWithHttpInfo(categoryId, imageName, url, type, storeId, label, mime, position, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -2492,9 +2752,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryImageAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> CategoryImageAddWithHttpInfo(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> CategoryImageAddWithHttpInfo(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -2563,6 +2824,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "position", position));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryImageAdd";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2604,12 +2869,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryImageAdd200Response</returns>
-        public async System.Threading.Tasks.Task<CategoryImageAdd200Response> CategoryImageAddAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CategoryImageAdd200Response> CategoryImageAddAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> localVarResponse = await CategoryImageAddWithHttpInfoAsync(categoryId, imageName, url, type, storeId, label, mime, position, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> localVarResponse = await CategoryImageAddWithHttpInfoAsync(categoryId, imageName, url, type, storeId, label, mime, position, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2625,10 +2891,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryImageAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response>> CategoryImageAddWithHttpInfoAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response>> CategoryImageAddWithHttpInfoAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -2696,6 +2963,10 @@ namespace Org.OpenAPITools.Api
             if (position != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "position", position));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryImageAdd";
@@ -3577,11 +3848,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category unassign, specified by category id</param>
         /// <param name="productId">Defines category unassign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryAssign200Response</returns>
-        public CategoryAssign200Response CategoryUnassign(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0)
+        public CategoryAssign200Response CategoryUnassign(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = CategoryUnassignWithHttpInfo(categoryId, productId, storeId);
+            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = CategoryUnassignWithHttpInfo(categoryId, productId, storeId, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -3592,9 +3864,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category unassign, specified by category id</param>
         /// <param name="productId">Defines category unassign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryAssign200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> CategoryUnassignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> CategoryUnassignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -3637,6 +3910,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryUnassign";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -3673,12 +3950,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category unassign, specified by category id</param>
         /// <param name="productId">Defines category unassign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryAssign200Response</returns>
-        public async System.Threading.Tasks.Task<CategoryAssign200Response> CategoryUnassignAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CategoryAssign200Response> CategoryUnassignAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = await CategoryUnassignWithHttpInfoAsync(categoryId, productId, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = await CategoryUnassignWithHttpInfoAsync(categoryId, productId, storeId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3689,10 +3967,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category unassign, specified by category id</param>
         /// <param name="productId">Defines category unassign to the product, specified by product id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryAssign200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response>> CategoryUnassignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response>> CategoryUnassignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -3734,6 +4013,10 @@ namespace Org.OpenAPITools.Api
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryUnassign";
@@ -3784,11 +4067,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountConfigUpdate200Response</returns>
-        public AccountConfigUpdate200Response CategoryUpdate(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0)
+        public AccountConfigUpdate200Response CategoryUpdate(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = CategoryUpdateWithHttpInfo(id, name, description, shortDescription, parentId, avail, sortOrder, modifiedTime, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
+            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = CategoryUpdateWithHttpInfo(id, name, description, shortDescription, parentId, avail, sortOrder, modifiedTime, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -3811,9 +4095,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountConfigUpdate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> CategoryUpdateWithHttpInfo(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> CategoryUpdateWithHttpInfo(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3901,6 +4186,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -3949,12 +4238,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountConfigUpdate200Response</returns>
-        public async System.Threading.Tasks.Task<AccountConfigUpdate200Response> CategoryUpdateAsync(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountConfigUpdate200Response> CategoryUpdateAsync(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = await CategoryUpdateWithHttpInfoAsync(id, name, description, shortDescription, parentId, avail, sortOrder, modifiedTime, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response> localVarResponse = await CategoryUpdateWithHttpInfoAsync(id, name, description, shortDescription, parentId, avail, sortOrder, modifiedTime, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3977,10 +4267,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Update category in the stores that is specified by comma-separated stores&#39; id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountConfigUpdate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response>> CategoryUpdateWithHttpInfoAsync(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountConfigUpdate200Response>> CategoryUpdateWithHttpInfoAsync(string id, string? name = default(string?), string? description = default(string?), string? shortDescription = default(string?), string? parentId = default(string?), bool? avail = default(bool?), int? sortOrder = default(int?), string? modifiedTime = default(string?), string? metaTitle = default(string?), string? metaDescription = default(string?), string? metaKeywords = default(string?), string? seoUrl = default(string?), string? storeId = default(string?), string? storesIds = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -4067,6 +4358,10 @@ namespace Org.OpenAPITools.Api
             if (langId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryUpdate";

@@ -9,6 +9,7 @@ All URIs are relative to *https://api.api2cart.local.com/v1.1*
 | [**CategoryAssign**](CategoryApi.md#categoryassign) | **POST** /category.assign.json | category.assign |
 | [**CategoryCount**](CategoryApi.md#categorycount) | **GET** /category.count.json | category.count |
 | [**CategoryDelete**](CategoryApi.md#categorydelete) | **DELETE** /category.delete.json | category.delete |
+| [**CategoryDeleteBatch**](CategoryApi.md#categorydeletebatch) | **POST** /category.delete.batch.json | category.delete.batch |
 | [**CategoryFind**](CategoryApi.md#categoryfind) | **GET** /category.find.json | category.find |
 | [**CategoryImageAdd**](CategoryApi.md#categoryimageadd) | **POST** /category.image.add.json | category.image.add |
 | [**CategoryImageDelete**](CategoryApi.md#categoryimagedelete) | **DELETE** /category.image.delete.json | category.image.delete |
@@ -19,7 +20,7 @@ All URIs are relative to *https://api.api2cart.local.com/v1.1*
 
 <a id="categoryadd"></a>
 # **CategoryAdd**
-> CategoryAdd200Response CategoryAdd (string name, string? description = null, string? shortDescription = null, string? parentId = null, bool? avail = null, string? createdTime = null, string? modifiedTime = null, int? sortOrder = null, string? metaTitle = null, string? metaDescription = null, string? metaKeywords = null, string? seoUrl = null, string? storeId = null, string? storesIds = null, string? langId = null)
+> CategoryAdd200Response CategoryAdd (string name, string? description = null, string? shortDescription = null, string? parentId = null, bool? avail = null, string? createdTime = null, string? modifiedTime = null, int? sortOrder = null, string? metaTitle = null, string? metaDescription = null, string? metaKeywords = null, string? seoUrl = null, string? storeId = null, string? storesIds = null, string? langId = null, string? idempotencyKey = null)
 
 category.add
 
@@ -66,11 +67,12 @@ namespace Example
             var storeId = 1;  // string? | Store Id (optional) 
             var storesIds = 1,2;  // string? | Create category in the stores that is specified by comma-separated stores' id (optional) 
             var langId = 3;  // string? | Language id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // category.add
-                CategoryAdd200Response result = apiInstance.CategoryAdd(name, description, shortDescription, parentId, avail, createdTime, modifiedTime, sortOrder, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
+                CategoryAdd200Response result = apiInstance.CategoryAdd(name, description, shortDescription, parentId, avail, createdTime, modifiedTime, sortOrder, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -91,7 +93,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.add
-    ApiResponse<CategoryAdd200Response> response = apiInstance.CategoryAddWithHttpInfo(name, description, shortDescription, parentId, avail, createdTime, modifiedTime, sortOrder, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
+    ApiResponse<CategoryAdd200Response> response = apiInstance.CategoryAddWithHttpInfo(name, description, shortDescription, parentId, avail, createdTime, modifiedTime, sortOrder, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -123,6 +125,7 @@ catch (ApiException e)
 | **storeId** | **string?** | Store Id | [optional]  |
 | **storesIds** | **string?** | Create category in the stores that is specified by comma-separated stores&#39; id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -247,7 +250,7 @@ catch (ApiException e)
 
 <a id="categoryassign"></a>
 # **CategoryAssign**
-> CategoryAssign200Response CategoryAssign (string categoryId, string productId, string? storeId = null)
+> CategoryAssign200Response CategoryAssign (string categoryId, string productId, string? storeId = null, string? idempotencyKey = null)
 
 category.assign
 
@@ -282,11 +285,12 @@ namespace Example
             var categoryId = 6;  // string | Defines category assign, specified by category id
             var productId = 10;  // string | Defines category assign to the product, specified by product id
             var storeId = 1;  // string? | Store Id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // category.assign
-                CategoryAssign200Response result = apiInstance.CategoryAssign(categoryId, productId, storeId);
+                CategoryAssign200Response result = apiInstance.CategoryAssign(categoryId, productId, storeId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -307,7 +311,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.assign
-    ApiResponse<CategoryAssign200Response> response = apiInstance.CategoryAssignWithHttpInfo(categoryId, productId, storeId);
+    ApiResponse<CategoryAssign200Response> response = apiInstance.CategoryAssignWithHttpInfo(categoryId, productId, storeId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -327,6 +331,7 @@ catch (ApiException e)
 | **categoryId** | **string** | Defines category assign, specified by category id |  |
 | **productId** | **string** | Defines category assign to the product, specified by product id |  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -575,6 +580,106 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="categorydeletebatch"></a>
+# **CategoryDeleteBatch**
+> CategoryAddBatch200Response CategoryDeleteBatch (CategoryDeleteBatch categoryDeleteBatch)
+
+category.delete.batch
+
+Delete categories from the store.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
+
+namespace Example
+{
+    public class CategoryDeleteBatchExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
+            // Configure API key authorization: StoreKeyAuth
+            config.AddApiKey("x-store-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-store-key", "Bearer");
+            // Configure API key authorization: ApiKeyAuth
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new CategoryApi(config);
+            var categoryDeleteBatch = new CategoryDeleteBatch(); // CategoryDeleteBatch | 
+
+            try
+            {
+                // category.delete.batch
+                CategoryAddBatch200Response result = apiInstance.CategoryDeleteBatch(categoryDeleteBatch);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CategoryApi.CategoryDeleteBatch: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CategoryDeleteBatchWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // category.delete.batch
+    ApiResponse<CategoryAddBatch200Response> response = apiInstance.CategoryDeleteBatchWithHttpInfo(categoryDeleteBatch);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CategoryApi.CategoryDeleteBatchWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **categoryDeleteBatch** | [**CategoryDeleteBatch**](CategoryDeleteBatch.md) |  |  |
+
+### Return type
+
+[**CategoryAddBatch200Response**](CategoryAddBatch200Response.md)
+
+### Authorization
+
+[StoreKeyAuth](../README.md#StoreKeyAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="categoryfind"></a>
 # **CategoryFind**
 > CategoryFind200Response CategoryFind (string findValue, string? findWhere = null, string? findParams = null, string? storeId = null, string? langId = null)
@@ -685,7 +790,7 @@ catch (ApiException e)
 
 <a id="categoryimageadd"></a>
 # **CategoryImageAdd**
-> CategoryImageAdd200Response CategoryImageAdd (string categoryId, string imageName, string url, string type, string? storeId = null, string? label = null, string? mime = null, int? position = null)
+> CategoryImageAdd200Response CategoryImageAdd (string categoryId, string imageName, string url, string type, string? storeId = null, string? label = null, string? mime = null, int? position = null, string? idempotencyKey = null)
 
 category.image.add
 
@@ -725,11 +830,12 @@ namespace Example
             var label = This cool image;  // string? | Defines alternative text that has to be attached to the picture (optional) 
             var mime = image/jpeg;  // string? | Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional) 
             var position = 5;  // int? | Defines image’s position in the list (optional)  (default to 0)
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // category.image.add
-                CategoryImageAdd200Response result = apiInstance.CategoryImageAdd(categoryId, imageName, url, type, storeId, label, mime, position);
+                CategoryImageAdd200Response result = apiInstance.CategoryImageAdd(categoryId, imageName, url, type, storeId, label, mime, position, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -750,7 +856,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.image.add
-    ApiResponse<CategoryImageAdd200Response> response = apiInstance.CategoryImageAddWithHttpInfo(categoryId, imageName, url, type, storeId, label, mime, position);
+    ApiResponse<CategoryImageAdd200Response> response = apiInstance.CategoryImageAddWithHttpInfo(categoryId, imageName, url, type, storeId, label, mime, position, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -775,6 +881,7 @@ catch (ApiException e)
 | **label** | **string?** | Defines alternative text that has to be attached to the picture | [optional]  |
 | **mime** | **string?** | Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. | [optional]  |
 | **position** | **int?** | Defines image’s position in the list | [optional] [default to 0] |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -1157,7 +1264,7 @@ catch (ApiException e)
 
 <a id="categoryunassign"></a>
 # **CategoryUnassign**
-> CategoryAssign200Response CategoryUnassign (string categoryId, string productId, string? storeId = null)
+> CategoryAssign200Response CategoryUnassign (string categoryId, string productId, string? storeId = null, string? idempotencyKey = null)
 
 category.unassign
 
@@ -1192,11 +1299,12 @@ namespace Example
             var categoryId = 6;  // string | Defines category unassign, specified by category id
             var productId = 10;  // string | Defines category unassign to the product, specified by product id
             var storeId = 1;  // string? | Store Id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // category.unassign
-                CategoryAssign200Response result = apiInstance.CategoryUnassign(categoryId, productId, storeId);
+                CategoryAssign200Response result = apiInstance.CategoryUnassign(categoryId, productId, storeId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1217,7 +1325,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.unassign
-    ApiResponse<CategoryAssign200Response> response = apiInstance.CategoryUnassignWithHttpInfo(categoryId, productId, storeId);
+    ApiResponse<CategoryAssign200Response> response = apiInstance.CategoryUnassignWithHttpInfo(categoryId, productId, storeId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1237,6 +1345,7 @@ catch (ApiException e)
 | **categoryId** | **string** | Defines category unassign, specified by category id |  |
 | **productId** | **string** | Defines category unassign to the product, specified by product id |  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -1261,7 +1370,7 @@ catch (ApiException e)
 
 <a id="categoryupdate"></a>
 # **CategoryUpdate**
-> AccountConfigUpdate200Response CategoryUpdate (string id, string? name = null, string? description = null, string? shortDescription = null, string? parentId = null, bool? avail = null, int? sortOrder = null, string? modifiedTime = null, string? metaTitle = null, string? metaDescription = null, string? metaKeywords = null, string? seoUrl = null, string? storeId = null, string? storesIds = null, string? langId = null)
+> AccountConfigUpdate200Response CategoryUpdate (string id, string? name = null, string? description = null, string? shortDescription = null, string? parentId = null, bool? avail = null, int? sortOrder = null, string? modifiedTime = null, string? metaTitle = null, string? metaDescription = null, string? metaKeywords = null, string? seoUrl = null, string? storeId = null, string? storesIds = null, string? langId = null, string? idempotencyKey = null)
 
 category.update
 
@@ -1308,11 +1417,12 @@ namespace Example
             var storeId = 1;  // string? | Store Id (optional) 
             var storesIds = 1,2;  // string? | Update category in the stores that is specified by comma-separated stores' id (optional) 
             var langId = 3;  // string? | Language id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // category.update
-                AccountConfigUpdate200Response result = apiInstance.CategoryUpdate(id, name, description, shortDescription, parentId, avail, sortOrder, modifiedTime, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
+                AccountConfigUpdate200Response result = apiInstance.CategoryUpdate(id, name, description, shortDescription, parentId, avail, sortOrder, modifiedTime, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1333,7 +1443,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.update
-    ApiResponse<AccountConfigUpdate200Response> response = apiInstance.CategoryUpdateWithHttpInfo(id, name, description, shortDescription, parentId, avail, sortOrder, modifiedTime, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId);
+    ApiResponse<AccountConfigUpdate200Response> response = apiInstance.CategoryUpdateWithHttpInfo(id, name, description, shortDescription, parentId, avail, sortOrder, modifiedTime, metaTitle, metaDescription, metaKeywords, seoUrl, storeId, storesIds, langId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1365,6 +1475,7 @@ catch (ApiException e)
 | **storeId** | **string?** | Store Id | [optional]  |
 | **storesIds** | **string?** | Update category in the stores that is specified by comma-separated stores&#39; id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 

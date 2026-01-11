@@ -66,8 +66,9 @@ namespace Org.OpenAPITools.Model
         /// <param name="billCompany">Specifies billing company.</param>
         /// <param name="billPhone">Specifies billing phone.</param>
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve.</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
         /// <param name="orderItem">orderItem (required).</param>
-        public OrderCalculate(string customerEmail = default(string), string currencyId = default(string), string storeId = default(string), List<string> coupons = default(List<string>), int roundingPrecision = default(int), string shippFirstName = default(string), string shippLastName = default(string), string shippAddress1 = default(string), string shippAddress2 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), string shippCompany = default(string), string shippPhone = default(string), string billFirstName = default(string), string billLastName = default(string), string billAddress1 = default(string), string billAddress2 = default(string), string billCity = default(string), string billPostcode = default(string), string billState = default(string), string billCountry = default(string), string billCompany = default(string), string billPhone = default(string), string responseFields = default(string), List<OrderCalculateOrderItemInner> orderItem = default(List<OrderCalculateOrderItemInner>))
+        public OrderCalculate(string customerEmail = default(string), string currencyId = default(string), string storeId = default(string), List<string> coupons = default(List<string>), int roundingPrecision = default(int), string shippFirstName = default(string), string shippLastName = default(string), string shippAddress1 = default(string), string shippAddress2 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), string shippCompany = default(string), string shippPhone = default(string), string billFirstName = default(string), string billLastName = default(string), string billAddress1 = default(string), string billAddress2 = default(string), string billCity = default(string), string billPostcode = default(string), string billState = default(string), string billCountry = default(string), string billCompany = default(string), string billPhone = default(string), string responseFields = default(string), string idempotencyKey = default(string), List<OrderCalculateOrderItemInner> orderItem = default(List<OrderCalculateOrderItemInner>))
         {
             // to ensure "customerEmail" is required (not null)
             if (customerEmail == null)
@@ -136,6 +137,7 @@ namespace Org.OpenAPITools.Model
             this.BillCompany = billCompany;
             this.BillPhone = billPhone;
             this.ResponseFields = responseFields;
+            this.IdempotencyKey = idempotencyKey;
         }
 
         /// <summary>
@@ -396,6 +398,16 @@ namespace Org.OpenAPITools.Model
         public string ResponseFields { get; set; }
 
         /// <summary>
+        /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
+        /// </summary>
+        /// <value>A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;</value>
+        /*
+        <example>098f6bcd4621d373cade4e832627b4f6</example>
+        */
+        [DataMember(Name = "idempotency_key", EmitDefaultValue = false)]
+        public string IdempotencyKey { get; set; }
+
+        /// <summary>
         /// Gets or Sets OrderItem
         /// </summary>
         [DataMember(Name = "order_item", IsRequired = true, EmitDefaultValue = true)]
@@ -435,6 +447,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  BillCompany: ").Append(BillCompany).Append("\n");
             sb.Append("  BillPhone: ").Append(BillPhone).Append("\n");
             sb.Append("  ResponseFields: ").Append(ResponseFields).Append("\n");
+            sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("  OrderItem: ").Append(OrderItem).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

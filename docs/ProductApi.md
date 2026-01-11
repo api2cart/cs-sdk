@@ -383,7 +383,7 @@ catch (ApiException e)
 
 <a id="productattributevalueset"></a>
 # **ProductAttributeValueSet**
-> ProductAttributeValueSet200Response ProductAttributeValueSet (string productId, string? attributeId = null, string? attributeGroupId = null, string? attributeName = null, string? value = null, int? valueId = null, string? langId = null, string? storeId = null)
+> ProductAttributeValueSet200Response ProductAttributeValueSet (string productId, string? attributeId = null, string? attributeGroupId = null, string? attributeName = null, string? value = null, int? valueId = null, string? langId = null, string? storeId = null, string? idempotencyKey = null)
 
 product.attribute.value.set
 
@@ -423,11 +423,12 @@ namespace Example
             var valueId = 22;  // int? | Define attribute value id (optional) 
             var langId = 3;  // string? | Language id (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // product.attribute.value.set
-                ProductAttributeValueSet200Response result = apiInstance.ProductAttributeValueSet(productId, attributeId, attributeGroupId, attributeName, value, valueId, langId, storeId);
+                ProductAttributeValueSet200Response result = apiInstance.ProductAttributeValueSet(productId, attributeId, attributeGroupId, attributeName, value, valueId, langId, storeId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -448,7 +449,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.attribute.value.set
-    ApiResponse<ProductAttributeValueSet200Response> response = apiInstance.ProductAttributeValueSetWithHttpInfo(productId, attributeId, attributeGroupId, attributeName, value, valueId, langId, storeId);
+    ApiResponse<ProductAttributeValueSet200Response> response = apiInstance.ProductAttributeValueSetWithHttpInfo(productId, attributeId, attributeGroupId, attributeName, value, valueId, langId, storeId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -473,6 +474,7 @@ catch (ApiException e)
 | **valueId** | **int?** | Define attribute value id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -497,7 +499,7 @@ catch (ApiException e)
 
 <a id="productattributevalueunset"></a>
 # **ProductAttributeValueUnset**
-> ProductAttributeValueUnset200Response ProductAttributeValueUnset (string productId, string attributeId, string? storeId = null, bool? includeDefault = null, bool? reindex = null, bool? clearCache = null)
+> ProductAttributeValueUnset200Response ProductAttributeValueUnset (string productId, string attributeId, string? storeId = null, bool? includeDefault = null, bool? reindex = null, bool? clearCache = null, string? idempotencyKey = null)
 
 product.attribute.value.unset
 
@@ -535,11 +537,12 @@ namespace Example
             var includeDefault = true;  // bool? | Boolean, whether or not to unset default value of the attribute, if applicable (optional)  (default to false)
             var reindex = false;  // bool? | Is reindex required (optional)  (default to true)
             var clearCache = false;  // bool? | Is cache clear required (optional)  (default to true)
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // product.attribute.value.unset
-                ProductAttributeValueUnset200Response result = apiInstance.ProductAttributeValueUnset(productId, attributeId, storeId, includeDefault, reindex, clearCache);
+                ProductAttributeValueUnset200Response result = apiInstance.ProductAttributeValueUnset(productId, attributeId, storeId, includeDefault, reindex, clearCache, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -560,7 +563,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.attribute.value.unset
-    ApiResponse<ProductAttributeValueUnset200Response> response = apiInstance.ProductAttributeValueUnsetWithHttpInfo(productId, attributeId, storeId, includeDefault, reindex, clearCache);
+    ApiResponse<ProductAttributeValueUnset200Response> response = apiInstance.ProductAttributeValueUnsetWithHttpInfo(productId, attributeId, storeId, includeDefault, reindex, clearCache, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -583,6 +586,7 @@ catch (ApiException e)
 | **includeDefault** | **bool?** | Boolean, whether or not to unset default value of the attribute, if applicable | [optional] [default to false] |
 | **reindex** | **bool?** | Is reindex required | [optional] [default to true] |
 | **clearCache** | **bool?** | Is cache clear required | [optional] [default to true] |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -1253,7 +1257,7 @@ catch (ApiException e)
 
 <a id="productcurrencyadd"></a>
 # **ProductCurrencyAdd**
-> ProductCurrencyAdd200Response ProductCurrencyAdd (string iso3, decimal rate, string? name = null, bool? avail = null, string? symbolLeft = null, string? symbolRight = null, bool? varDefault = null)
+> ProductCurrencyAdd200Response ProductCurrencyAdd (string iso3, decimal rate, string? name = null, bool? avail = null, string? symbolLeft = null, string? symbolRight = null, bool? varDefault = null, string? idempotencyKey = null)
 
 product.currency.add
 
@@ -1292,11 +1296,12 @@ namespace Example
             var symbolLeft = $;  // string? | Defines the symbol that is located before the currency (optional) 
             var symbolRight = грн;  // string? | Defines the symbol that is located after the currency (optional) 
             var varDefault = true;  // bool? | Specifies currency's default meaning (optional)  (default to false)
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // product.currency.add
-                ProductCurrencyAdd200Response result = apiInstance.ProductCurrencyAdd(iso3, rate, name, avail, symbolLeft, symbolRight, varDefault);
+                ProductCurrencyAdd200Response result = apiInstance.ProductCurrencyAdd(iso3, rate, name, avail, symbolLeft, symbolRight, varDefault, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1317,7 +1322,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.currency.add
-    ApiResponse<ProductCurrencyAdd200Response> response = apiInstance.ProductCurrencyAddWithHttpInfo(iso3, rate, name, avail, symbolLeft, symbolRight, varDefault);
+    ApiResponse<ProductCurrencyAdd200Response> response = apiInstance.ProductCurrencyAddWithHttpInfo(iso3, rate, name, avail, symbolLeft, symbolRight, varDefault, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1341,6 +1346,7 @@ catch (ApiException e)
 | **symbolLeft** | **string?** | Defines the symbol that is located before the currency | [optional]  |
 | **symbolRight** | **string?** | Defines the symbol that is located after the currency | [optional]  |
 | **varDefault** | **bool?** | Specifies currency&#39;s default meaning | [optional] [default to false] |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -1995,7 +2001,7 @@ catch (ApiException e)
 
 <a id="productimageupdate"></a>
 # **ProductImageUpdate**
-> ProductImageUpdate200Response ProductImageUpdate (string productId, string id, string? variantIds = null, string? storeId = null, string? langId = null, string? imageName = null, string? type = null, string? label = null, int? position = null, bool? hidden = null)
+> ProductImageUpdate200Response ProductImageUpdate (string productId, string id, string? variantIds = null, string? storeId = null, string? langId = null, string? imageName = null, string? type = null, string? label = null, int? position = null, bool? hidden = null, string? idempotencyKey = null)
 
 product.image.update
 
@@ -2037,11 +2043,12 @@ namespace Example
             var label = This cool image;  // string? | Defines alternative text that has to be attached to the picture (optional) 
             var position = 5;  // int? | Defines image’s position in the list (optional) 
             var hidden = true;  // bool? | Define is hide image (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // product.image.update
-                ProductImageUpdate200Response result = apiInstance.ProductImageUpdate(productId, id, variantIds, storeId, langId, imageName, type, label, position, hidden);
+                ProductImageUpdate200Response result = apiInstance.ProductImageUpdate(productId, id, variantIds, storeId, langId, imageName, type, label, position, hidden, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2062,7 +2069,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.image.update
-    ApiResponse<ProductImageUpdate200Response> response = apiInstance.ProductImageUpdateWithHttpInfo(productId, id, variantIds, storeId, langId, imageName, type, label, position, hidden);
+    ApiResponse<ProductImageUpdate200Response> response = apiInstance.ProductImageUpdateWithHttpInfo(productId, id, variantIds, storeId, langId, imageName, type, label, position, hidden, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2089,6 +2096,7 @@ catch (ApiException e)
 | **label** | **string?** | Defines alternative text that has to be attached to the picture | [optional]  |
 | **position** | **int?** | Defines image’s position in the list | [optional]  |
 | **hidden** | **bool?** | Define is hide image | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -2401,7 +2409,7 @@ catch (ApiException e)
 
 <a id="productmanufactureradd"></a>
 # **ProductManufacturerAdd**
-> ProductManufacturerAdd200Response ProductManufacturerAdd (string productId, string manufacturer, string? storeId = null, string? metaTitle = null, string? metaKeywords = null, string? metaDescription = null, string? searchKeywords = null, string? imageUrl = null, string? seoUrl = null)
+> ProductManufacturerAdd200Response ProductManufacturerAdd (string productId, string manufacturer, string? storeId = null, string? metaTitle = null, string? metaKeywords = null, string? metaDescription = null, string? searchKeywords = null, string? imageUrl = null, string? seoUrl = null, string? idempotencyKey = null)
 
 product.manufacturer.add
 
@@ -2442,11 +2450,12 @@ namespace Example
             var searchKeywords = key1,key2,key3;  // string? | Defines unique search keywords (optional) 
             var imageUrl = https://docs.api2cart.com/img/logo.png;  // string? | Image Url (optional) 
             var seoUrl = some seo url;  // string? | Defines unique URL for SEO (optional) 
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // product.manufacturer.add
-                ProductManufacturerAdd200Response result = apiInstance.ProductManufacturerAdd(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl);
+                ProductManufacturerAdd200Response result = apiInstance.ProductManufacturerAdd(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2467,7 +2476,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.manufacturer.add
-    ApiResponse<ProductManufacturerAdd200Response> response = apiInstance.ProductManufacturerAddWithHttpInfo(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl);
+    ApiResponse<ProductManufacturerAdd200Response> response = apiInstance.ProductManufacturerAddWithHttpInfo(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2493,6 +2502,7 @@ catch (ApiException e)
 | **searchKeywords** | **string?** | Defines unique search keywords | [optional]  |
 | **imageUrl** | **string?** | Image Url | [optional]  |
 | **seoUrl** | **string?** | Defines unique URL for SEO | [optional]  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -2617,7 +2627,7 @@ catch (ApiException e)
 
 <a id="productoptionassign"></a>
 # **ProductOptionAssign**
-> ProductOptionAssign200Response ProductOptionAssign (string productId, string optionId, bool? required = null, int? sortOrder = null, string? optionValues = null, bool? clearCache = null)
+> ProductOptionAssign200Response ProductOptionAssign (string productId, string optionId, bool? required = null, int? sortOrder = null, string? optionValues = null, bool? clearCache = null, string? idempotencyKey = null)
 
 product.option.assign
 
@@ -2655,11 +2665,12 @@ namespace Example
             var sortOrder = 2;  // int? | Sort number in the list (optional)  (default to 0)
             var optionValues = green,black,yellow;  // string? | Defines option values that has to be assigned (optional) 
             var clearCache = false;  // bool? | Is cache clear required (optional)  (default to true)
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // product.option.assign
-                ProductOptionAssign200Response result = apiInstance.ProductOptionAssign(productId, optionId, required, sortOrder, optionValues, clearCache);
+                ProductOptionAssign200Response result = apiInstance.ProductOptionAssign(productId, optionId, required, sortOrder, optionValues, clearCache, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2680,7 +2691,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.option.assign
-    ApiResponse<ProductOptionAssign200Response> response = apiInstance.ProductOptionAssignWithHttpInfo(productId, optionId, required, sortOrder, optionValues, clearCache);
+    ApiResponse<ProductOptionAssign200Response> response = apiInstance.ProductOptionAssignWithHttpInfo(productId, optionId, required, sortOrder, optionValues, clearCache, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2703,6 +2714,7 @@ catch (ApiException e)
 | **sortOrder** | **int?** | Sort number in the list | [optional] [default to 0] |
 | **optionValues** | **string?** | Defines option values that has to be assigned | [optional]  |
 | **clearCache** | **bool?** | Is cache clear required | [optional] [default to true] |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -2945,7 +2957,7 @@ catch (ApiException e)
 
 <a id="productoptionvalueadd"></a>
 # **ProductOptionValueAdd**
-> ProductOptionValueAdd200Response ProductOptionValueAdd (string productId, string optionId, string? optionValue = null, int? sortOrder = null, string? displayValue = null, bool? isDefault = null, bool? clearCache = null)
+> ProductOptionValueAdd200Response ProductOptionValueAdd (string productId, string optionId, string? optionValue = null, int? sortOrder = null, string? displayValue = null, bool? isDefault = null, bool? clearCache = null, string? idempotencyKey = null)
 
 product.option.value.add
 
@@ -2984,11 +2996,12 @@ namespace Example
             var displayValue = value;  // string? | Defines the value that will be displayed for the option value (optional) 
             var isDefault = true;  // bool? | Defines as a default (optional) 
             var clearCache = false;  // bool? | Is cache clear required (optional)  (default to true)
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // product.option.value.add
-                ProductOptionValueAdd200Response result = apiInstance.ProductOptionValueAdd(productId, optionId, optionValue, sortOrder, displayValue, isDefault, clearCache);
+                ProductOptionValueAdd200Response result = apiInstance.ProductOptionValueAdd(productId, optionId, optionValue, sortOrder, displayValue, isDefault, clearCache, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3009,7 +3022,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.option.value.add
-    ApiResponse<ProductOptionValueAdd200Response> response = apiInstance.ProductOptionValueAddWithHttpInfo(productId, optionId, optionValue, sortOrder, displayValue, isDefault, clearCache);
+    ApiResponse<ProductOptionValueAdd200Response> response = apiInstance.ProductOptionValueAddWithHttpInfo(productId, optionId, optionValue, sortOrder, displayValue, isDefault, clearCache, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -3033,6 +3046,7 @@ catch (ApiException e)
 | **displayValue** | **string?** | Defines the value that will be displayed for the option value | [optional]  |
 | **isDefault** | **bool?** | Defines as a default | [optional]  |
 | **clearCache** | **bool?** | Is cache clear required | [optional] [default to true] |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -3057,7 +3071,7 @@ catch (ApiException e)
 
 <a id="productoptionvalueassign"></a>
 # **ProductOptionValueAssign**
-> ProductOptionValueAssign200Response ProductOptionValueAssign (int productOptionId, string optionValueId, bool? clearCache = null)
+> ProductOptionValueAssign200Response ProductOptionValueAssign (int productOptionId, string optionValueId, bool? clearCache = null, string? idempotencyKey = null)
 
 product.option.value.assign
 
@@ -3092,11 +3106,12 @@ namespace Example
             var productOptionId = 5;  // int | Defines product's option id where the value has to be assigned
             var optionValueId = 45;  // string | Defines value id that has to be assigned
             var clearCache = false;  // bool? | Is cache clear required (optional)  (default to true)
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // product.option.value.assign
-                ProductOptionValueAssign200Response result = apiInstance.ProductOptionValueAssign(productOptionId, optionValueId, clearCache);
+                ProductOptionValueAssign200Response result = apiInstance.ProductOptionValueAssign(productOptionId, optionValueId, clearCache, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3117,7 +3132,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.option.value.assign
-    ApiResponse<ProductOptionValueAssign200Response> response = apiInstance.ProductOptionValueAssignWithHttpInfo(productOptionId, optionValueId, clearCache);
+    ApiResponse<ProductOptionValueAssign200Response> response = apiInstance.ProductOptionValueAssignWithHttpInfo(productOptionId, optionValueId, clearCache, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -3137,6 +3152,7 @@ catch (ApiException e)
 | **productOptionId** | **int** | Defines product&#39;s option id where the value has to be assigned |  |
 | **optionValueId** | **string** | Defines value id that has to be assigned |  |
 | **clearCache** | **bool?** | Is cache clear required | [optional] [default to true] |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -3267,7 +3283,7 @@ catch (ApiException e)
 
 <a id="productoptionvalueupdate"></a>
 # **ProductOptionValueUpdate**
-> AccountConfigUpdate200Response ProductOptionValueUpdate (string productId, string optionId, string optionValueId, string? optionValue = null, decimal? price = null, decimal? quantity = null, string? displayValue = null, bool? clearCache = null)
+> AccountConfigUpdate200Response ProductOptionValueUpdate (string productId, string optionId, string optionValueId, string? optionValue = null, decimal? price = null, decimal? quantity = null, string? displayValue = null, bool? clearCache = null, string? idempotencyKey = null)
 
 product.option.value.update
 
@@ -3307,11 +3323,12 @@ namespace Example
             var quantity = 6;  // decimal? | Defines new products' options quantity (optional) 
             var displayValue = value;  // string? | Defines the value that will be displayed for the option value (optional) 
             var clearCache = false;  // bool? | Is cache clear required (optional)  (default to true)
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // product.option.value.update
-                AccountConfigUpdate200Response result = apiInstance.ProductOptionValueUpdate(productId, optionId, optionValueId, optionValue, price, quantity, displayValue, clearCache);
+                AccountConfigUpdate200Response result = apiInstance.ProductOptionValueUpdate(productId, optionId, optionValueId, optionValue, price, quantity, displayValue, clearCache, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3332,7 +3349,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.option.value.update
-    ApiResponse<AccountConfigUpdate200Response> response = apiInstance.ProductOptionValueUpdateWithHttpInfo(productId, optionId, optionValueId, optionValue, price, quantity, displayValue, clearCache);
+    ApiResponse<AccountConfigUpdate200Response> response = apiInstance.ProductOptionValueUpdateWithHttpInfo(productId, optionId, optionValueId, optionValue, price, quantity, displayValue, clearCache, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -3357,6 +3374,7 @@ catch (ApiException e)
 | **quantity** | **decimal?** | Defines new products&#39; options quantity | [optional]  |
 | **displayValue** | **string?** | Defines the value that will be displayed for the option value | [optional]  |
 | **clearCache** | **bool?** | Is cache clear required | [optional] [default to true] |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 
@@ -3815,7 +3833,7 @@ catch (ApiException e)
 
 <a id="productstoreassign"></a>
 # **ProductStoreAssign**
-> AccountConfigUpdate200Response ProductStoreAssign (string productId, string storeId)
+> AccountConfigUpdate200Response ProductStoreAssign (string productId, string storeId, string? idempotencyKey = null)
 
 product.store.assign
 
@@ -3849,11 +3867,12 @@ namespace Example
             var apiInstance = new ProductApi(config);
             var productId = 10;  // string | Defines id of the product which should be assigned to a store
             var storeId = 1;  // string | Defines id of the store product should be assigned to
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // product.store.assign
-                AccountConfigUpdate200Response result = apiInstance.ProductStoreAssign(productId, storeId);
+                AccountConfigUpdate200Response result = apiInstance.ProductStoreAssign(productId, storeId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3874,7 +3893,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.store.assign
-    ApiResponse<AccountConfigUpdate200Response> response = apiInstance.ProductStoreAssignWithHttpInfo(productId, storeId);
+    ApiResponse<AccountConfigUpdate200Response> response = apiInstance.ProductStoreAssignWithHttpInfo(productId, storeId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -3893,6 +3912,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **productId** | **string** | Defines id of the product which should be assigned to a store |  |
 | **storeId** | **string** | Defines id of the store product should be assigned to |  |
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
 

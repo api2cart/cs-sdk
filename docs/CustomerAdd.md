@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **Note** | **string** | The customer note. | [optional] 
 **Country** | **string** | Specifies ISO code or name of country | [optional] 
 **StoreId** | **string** | Store Id | [optional] 
+**IdempotencyKey** | **string** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional] 
 **Address** | [**List&lt;CustomerAddAddressInner&gt;**](CustomerAddAddressInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

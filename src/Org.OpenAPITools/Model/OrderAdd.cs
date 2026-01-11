@@ -111,8 +111,9 @@ namespace Org.OpenAPITools.Model
         /// <param name="clearCache">Is cache clear required (default to true).</param>
         /// <param name="origin">The source of the order.</param>
         /// <param name="feePrice">Specifies refund&#39;s fee price.</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
         /// <param name="orderItem">orderItem (required).</param>
-        public OrderAdd(string id = default(string), string orderId = default(string), string storeId = default(string), string channelId = default(string), string orderStatus = default(string), string fulfillmentStatus = default(string), string financialStatus = default(string), string customerEmail = default(string), string customerFirstName = default(string), string customerLastName = default(string), string customerPhone = default(string), string customerCountry = default(string), string customerBirthday = default(string), string customerFax = default(string), bool isGuest = false, string orderPaymentMethod = default(string), string transactionId = default(string), string currency = default(string), string date = default(string), string dateModified = default(string), string dateFinished = default(string), string billFirstName = default(string), string billLastName = default(string), string billAddress1 = default(string), string billAddress2 = default(string), string billCity = default(string), string billPostcode = default(string), string billState = default(string), string billCountry = default(string), string billCompany = default(string), string billPhone = default(string), string billFax = default(string), string shippFirstName = default(string), string shippLastName = default(string), string shippAddress1 = default(string), string shippAddress2 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), string shippCompany = default(string), string shippPhone = default(string), string shippFax = default(string), decimal subtotalPrice = default(decimal), decimal taxPrice = 0M, decimal totalPrice = default(decimal), decimal totalPaid = default(decimal), int totalWeight = default(int), bool pricesIncTax = false, decimal shippingPrice = 0M, decimal shippingTax = default(decimal), decimal discount = default(decimal), decimal couponDiscount = default(decimal), decimal giftCertificateDiscount = default(decimal), string orderShippingMethod = default(string), string carrierId = default(string), string warehouseId = default(string), List<string> coupons = default(List<string>), string tags = default(string), string comment = default(string), string adminComment = default(string), string adminPrivateComment = default(string), bool sendNotifications = false, bool sendAdminNotifications = false, string externalSource = default(string), string inventoryBehaviour = @"bypass", bool createInvoice = false, List<OrderAddNoteAttributesInner> noteAttributes = default(List<OrderAddNoteAttributesInner>), bool clearCache = true, string origin = default(string), decimal feePrice = default(decimal), List<OrderAddOrderItemInner> orderItem = default(List<OrderAddOrderItemInner>))
+        public OrderAdd(string id = default(string), string orderId = default(string), string storeId = default(string), string channelId = default(string), string orderStatus = default(string), string fulfillmentStatus = default(string), string financialStatus = default(string), string customerEmail = default(string), string customerFirstName = default(string), string customerLastName = default(string), string customerPhone = default(string), string customerCountry = default(string), string customerBirthday = default(string), string customerFax = default(string), bool isGuest = false, string orderPaymentMethod = default(string), string transactionId = default(string), string currency = default(string), string date = default(string), string dateModified = default(string), string dateFinished = default(string), string billFirstName = default(string), string billLastName = default(string), string billAddress1 = default(string), string billAddress2 = default(string), string billCity = default(string), string billPostcode = default(string), string billState = default(string), string billCountry = default(string), string billCompany = default(string), string billPhone = default(string), string billFax = default(string), string shippFirstName = default(string), string shippLastName = default(string), string shippAddress1 = default(string), string shippAddress2 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), string shippCompany = default(string), string shippPhone = default(string), string shippFax = default(string), decimal subtotalPrice = default(decimal), decimal taxPrice = 0M, decimal totalPrice = default(decimal), decimal totalPaid = default(decimal), int totalWeight = default(int), bool pricesIncTax = false, decimal shippingPrice = 0M, decimal shippingTax = default(decimal), decimal discount = default(decimal), decimal couponDiscount = default(decimal), decimal giftCertificateDiscount = default(decimal), string orderShippingMethod = default(string), string carrierId = default(string), string warehouseId = default(string), List<string> coupons = default(List<string>), string tags = default(string), string comment = default(string), string adminComment = default(string), string adminPrivateComment = default(string), bool sendNotifications = false, bool sendAdminNotifications = false, string externalSource = default(string), string inventoryBehaviour = @"bypass", bool createInvoice = false, List<OrderAddNoteAttributesInner> noteAttributes = default(List<OrderAddNoteAttributesInner>), bool clearCache = true, string origin = default(string), decimal feePrice = default(decimal), string idempotencyKey = default(string), List<OrderAddOrderItemInner> orderItem = default(List<OrderAddOrderItemInner>))
         {
             // to ensure "orderStatus" is required (not null)
             if (orderStatus == null)
@@ -237,6 +238,7 @@ namespace Org.OpenAPITools.Model
             this.ClearCache = clearCache;
             this.Origin = origin;
             this.FeePrice = feePrice;
+            this.IdempotencyKey = idempotencyKey;
         }
 
         /// <summary>
@@ -944,6 +946,16 @@ namespace Org.OpenAPITools.Model
         public decimal FeePrice { get; set; }
 
         /// <summary>
+        /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
+        /// </summary>
+        /// <value>A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;</value>
+        /*
+        <example>098f6bcd4621d373cade4e832627b4f6</example>
+        */
+        [DataMember(Name = "idempotency_key", EmitDefaultValue = false)]
+        public string IdempotencyKey { get; set; }
+
+        /// <summary>
         /// Gets or Sets OrderItem
         /// </summary>
         [DataMember(Name = "order_item", IsRequired = true, EmitDefaultValue = true)]
@@ -1028,6 +1040,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  ClearCache: ").Append(ClearCache).Append("\n");
             sb.Append("  Origin: ").Append(Origin).Append("\n");
             sb.Append("  FeePrice: ").Append(FeePrice).Append("\n");
+            sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("  OrderItem: ").Append(OrderItem).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

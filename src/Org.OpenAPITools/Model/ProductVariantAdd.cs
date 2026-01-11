@@ -98,7 +98,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="processingProfileId">The numeric ID of the processing profile (readiness state) for physical products in Etsy. You can find possible values in the \&quot;cart.info\&quot; API method response, in the field processing_profiles[]-&gt;readiness_state_id..</param>
         /// <param name="marketplaceItemProperties">String containing the JSON representation of the supplied data.</param>
         /// <param name="clearCache">Is cache clear required (default to true).</param>
-        public ProductVariantAdd(string productId = default(string), List<ProductVariantAddAttributesInner> attributes = default(List<ProductVariantAddAttributesInner>), string name = default(string), string model = default(string), string description = default(string), string shortDescription = default(string), bool availableForView = true, bool availableForSale = true, string status = default(string), bool isVirtual = false, bool isDefault = default(bool), string storeId = default(string), string storesIds = default(string), string langId = default(string), decimal price = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceModified = default(string), string spriceExpire = default(string), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), string measureUnit = default(string), decimal unitPrice = default(decimal), decimal quantity = 0M, string warehouseId = default(string), bool inStock = default(bool), string backorderStatus = default(string), bool manageStock = default(bool), decimal lowStockThreshold = default(decimal), decimal weight = 0M, decimal width = default(decimal), decimal height = default(decimal), decimal length = default(decimal), string weightUnit = default(string), string sku = default(string), string barcode = default(string), string gtin = default(string), string upc = default(string), string ean = default(string), string mpn = default(string), string isbn = default(string), string seoUrl = default(string), string manufacturer = default(string), string createdAt = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string url = default(string), string taxClassId = default(string), bool taxable = true, decimal fixedCostShippingPrice = default(decimal), bool isFreeShipping = default(bool), string countryOfOrigin = default(string), string harmonizedSystemCode = default(string), int processingProfileId = default(int), string marketplaceItemProperties = default(string), bool clearCache = true)
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
+        public ProductVariantAdd(string productId = default(string), List<ProductVariantAddAttributesInner> attributes = default(List<ProductVariantAddAttributesInner>), string name = default(string), string model = default(string), string description = default(string), string shortDescription = default(string), bool availableForView = true, bool availableForSale = true, string status = default(string), bool isVirtual = false, bool isDefault = default(bool), string storeId = default(string), string storesIds = default(string), string langId = default(string), decimal price = default(decimal), decimal oldPrice = default(decimal), decimal costPrice = default(decimal), decimal specialPrice = default(decimal), string spriceCreate = default(string), string spriceModified = default(string), string spriceExpire = default(string), List<ProductAddTierPricesInner> tierPrices = default(List<ProductAddTierPricesInner>), string measureUnit = default(string), decimal unitPrice = default(decimal), decimal quantity = 0M, string warehouseId = default(string), bool inStock = default(bool), string backorderStatus = default(string), bool manageStock = default(bool), decimal lowStockThreshold = default(decimal), decimal weight = 0M, decimal width = default(decimal), decimal height = default(decimal), decimal length = default(decimal), string weightUnit = default(string), string sku = default(string), string barcode = default(string), string gtin = default(string), string upc = default(string), string ean = default(string), string mpn = default(string), string isbn = default(string), string seoUrl = default(string), string manufacturer = default(string), string createdAt = default(string), string metaTitle = default(string), string metaKeywords = default(string), string metaDescription = default(string), string url = default(string), string taxClassId = default(string), bool taxable = true, decimal fixedCostShippingPrice = default(decimal), bool isFreeShipping = default(bool), string countryOfOrigin = default(string), string harmonizedSystemCode = default(string), int processingProfileId = default(int), string marketplaceItemProperties = default(string), bool clearCache = true, string idempotencyKey = default(string))
         {
             // to ensure "model" is required (not null)
             if (model == null)
@@ -163,6 +164,7 @@ namespace Org.OpenAPITools.Model
             this.ProcessingProfileId = processingProfileId;
             this.MarketplaceItemProperties = marketplaceItemProperties;
             this.ClearCache = clearCache;
+            this.IdempotencyKey = idempotencyKey;
         }
 
         /// <summary>
@@ -740,6 +742,16 @@ namespace Org.OpenAPITools.Model
         public bool ClearCache { get; set; }
 
         /// <summary>
+        /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
+        /// </summary>
+        /// <value>A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;</value>
+        /*
+        <example>098f6bcd4621d373cade4e832627b4f6</example>
+        */
+        [DataMember(Name = "idempotency_key", EmitDefaultValue = false)]
+        public string IdempotencyKey { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -805,6 +817,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  ProcessingProfileId: ").Append(ProcessingProfileId).Append("\n");
             sb.Append("  MarketplaceItemProperties: ").Append(MarketplaceItemProperties).Append("\n");
             sb.Append("  ClearCache: ").Append(ClearCache).Append("\n");
+            sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

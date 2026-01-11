@@ -50,7 +50,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="checkProcessStatus">Disable or enable check process status. Please note that the response will be slower due to additional requests to the store. (default to false).</param>
         /// <param name="trackingProvider">Defines name of the company which provides shipment tracking.</param>
         /// <param name="useLatestApiVersion">Use the latest platform API version (default to false).</param>
-        public OrderShipmentAdd(string orderId = default(string), string warehouseId = default(string), string storeId = default(string), string shipmentProvider = default(string), string shippingMethod = default(string), List<OrderShipmentAddItemsInner> items = default(List<OrderShipmentAddItemsInner>), List<OrderShipmentAddTrackingNumbersInner> trackingNumbers = default(List<OrderShipmentAddTrackingNumbersInner>), string trackingLink = default(string), bool isShipped = true, bool sendNotifications = false, bool adjustStock = false, bool enableCache = false, bool checkProcessStatus = false, string trackingProvider = default(string), bool useLatestApiVersion = false)
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
+        public OrderShipmentAdd(string orderId = default(string), string warehouseId = default(string), string storeId = default(string), string shipmentProvider = default(string), string shippingMethod = default(string), List<OrderShipmentAddItemsInner> items = default(List<OrderShipmentAddItemsInner>), List<OrderShipmentAddTrackingNumbersInner> trackingNumbers = default(List<OrderShipmentAddTrackingNumbersInner>), string trackingLink = default(string), bool isShipped = true, bool sendNotifications = false, bool adjustStock = false, bool enableCache = false, bool checkProcessStatus = false, string trackingProvider = default(string), bool useLatestApiVersion = false, string idempotencyKey = default(string))
         {
             this.OrderId = orderId;
             this.WarehouseId = warehouseId;
@@ -67,6 +68,7 @@ namespace Org.OpenAPITools.Model
             this.CheckProcessStatus = checkProcessStatus;
             this.TrackingProvider = trackingProvider;
             this.UseLatestApiVersion = useLatestApiVersion;
+            this.IdempotencyKey = idempotencyKey;
         }
 
         /// <summary>
@@ -214,6 +216,16 @@ namespace Org.OpenAPITools.Model
         public bool UseLatestApiVersion { get; set; }
 
         /// <summary>
+        /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
+        /// </summary>
+        /// <value>A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;</value>
+        /*
+        <example>098f6bcd4621d373cade4e832627b4f6</example>
+        */
+        [DataMember(Name = "idempotency_key", EmitDefaultValue = false)]
+        public string IdempotencyKey { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -236,6 +248,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  CheckProcessStatus: ").Append(CheckProcessStatus).Append("\n");
             sb.Append("  TrackingProvider: ").Append(TrackingProvider).Append("\n");
             sb.Append("  UseLatestApiVersion: ").Append(UseLatestApiVersion).Append("\n");
+            sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

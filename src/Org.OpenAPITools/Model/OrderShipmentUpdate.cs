@@ -52,7 +52,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="sendNotifications">Send notifications to customer after order was created (default to false).</param>
         /// <param name="trackingProvider">Defines name of the company which provides shipment tracking.</param>
         /// <param name="items">Defines items in the order that will be shipped.</param>
-        public OrderShipmentUpdate(string shipmentId = default(string), string orderId = default(string), string storeId = default(string), string shipmentProvider = default(string), List<OrderShipmentAddTrackingNumbersInner> trackingNumbers = default(List<OrderShipmentAddTrackingNumbersInner>), string trackingLink = default(string), bool isShipped = true, string deliveredAt = default(string), bool replace = true, bool sendNotifications = false, string trackingProvider = default(string), List<OrderShipmentAddItemsInner> items = default(List<OrderShipmentAddItemsInner>))
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
+        public OrderShipmentUpdate(string shipmentId = default(string), string orderId = default(string), string storeId = default(string), string shipmentProvider = default(string), List<OrderShipmentAddTrackingNumbersInner> trackingNumbers = default(List<OrderShipmentAddTrackingNumbersInner>), string trackingLink = default(string), bool isShipped = true, string deliveredAt = default(string), bool replace = true, bool sendNotifications = false, string trackingProvider = default(string), List<OrderShipmentAddItemsInner> items = default(List<OrderShipmentAddItemsInner>), string idempotencyKey = default(string))
         {
             // to ensure "shipmentId" is required (not null)
             if (shipmentId == null)
@@ -71,6 +72,7 @@ namespace Org.OpenAPITools.Model
             this.SendNotifications = sendNotifications;
             this.TrackingProvider = trackingProvider;
             this.Items = items;
+            this.IdempotencyKey = idempotencyKey;
         }
 
         /// <summary>
@@ -188,6 +190,16 @@ namespace Org.OpenAPITools.Model
         public List<OrderShipmentAddItemsInner> Items { get; set; }
 
         /// <summary>
+        /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
+        /// </summary>
+        /// <value>A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;</value>
+        /*
+        <example>098f6bcd4621d373cade4e832627b4f6</example>
+        */
+        [DataMember(Name = "idempotency_key", EmitDefaultValue = false)]
+        public string IdempotencyKey { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -207,6 +219,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  SendNotifications: ").Append(SendNotifications).Append("\n");
             sb.Append("  TrackingProvider: ").Append(TrackingProvider).Append("\n");
             sb.Append("  Items: ").Append(Items).Append("\n");
+            sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

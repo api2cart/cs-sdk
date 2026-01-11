@@ -165,9 +165,10 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identifies customer specified by the id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomerDelete200Response</returns>
-        CustomerDelete200Response CustomerDelete(string id, int operationIndex = 0);
+        CustomerDelete200Response CustomerDelete(string id, string? storeId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// customer.delete
@@ -177,9 +178,10 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identifies customer specified by the id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomerDelete200Response</returns>
-        ApiResponse<CustomerDelete200Response> CustomerDeleteWithHttpInfo(string id, int operationIndex = 0);
+        ApiResponse<CustomerDelete200Response> CustomerDeleteWithHttpInfo(string id, string? storeId = default(string?), int operationIndex = 0);
         /// <summary>
         /// customer.find
         /// </summary>
@@ -221,9 +223,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Customer group name</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Assign customer group to the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomerGroupAdd200Response</returns>
-        CustomerGroupAdd200Response CustomerGroupAdd(string name, string? storeId = default(string?), string? storesIds = default(string?), int operationIndex = 0);
+        CustomerGroupAdd200Response CustomerGroupAdd(string name, string? storeId = default(string?), string? storesIds = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// customer.group.add
@@ -235,9 +238,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Customer group name</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Assign customer group to the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomerGroupAdd200Response</returns>
-        ApiResponse<CustomerGroupAdd200Response> CustomerGroupAddWithHttpInfo(string name, string? storeId = default(string?), string? storesIds = default(string?), int operationIndex = 0);
+        ApiResponse<CustomerGroupAdd200Response> CustomerGroupAddWithHttpInfo(string name, string? storeId = default(string?), string? storesIds = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// customer.group.list
         /// </summary>
@@ -586,10 +590,11 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identifies customer specified by the id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerDelete200Response</returns>
-        System.Threading.Tasks.Task<CustomerDelete200Response> CustomerDeleteAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomerDelete200Response> CustomerDeleteAsync(string id, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// customer.delete
@@ -599,10 +604,11 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identifies customer specified by the id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerDelete200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomerDelete200Response>> CustomerDeleteWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomerDelete200Response>> CustomerDeleteWithHttpInfoAsync(string id, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// customer.find
         /// </summary>
@@ -646,10 +652,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Customer group name</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Assign customer group to the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerGroupAdd200Response</returns>
-        System.Threading.Tasks.Task<CustomerGroupAdd200Response> CustomerGroupAddAsync(string name, string? storeId = default(string?), string? storesIds = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomerGroupAdd200Response> CustomerGroupAddAsync(string name, string? storeId = default(string?), string? storesIds = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// customer.group.add
@@ -661,10 +668,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Customer group name</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Assign customer group to the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerGroupAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomerGroupAdd200Response>> CustomerGroupAddWithHttpInfoAsync(string name, string? storeId = default(string?), string? storesIds = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomerGroupAdd200Response>> CustomerGroupAddWithHttpInfoAsync(string name, string? storeId = default(string?), string? storesIds = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// customer.group.list
         /// </summary>
@@ -1879,11 +1887,12 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identifies customer specified by the id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomerDelete200Response</returns>
-        public CustomerDelete200Response CustomerDelete(string id, int operationIndex = 0)
+        public CustomerDelete200Response CustomerDelete(string id, string? storeId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CustomerDelete200Response> localVarResponse = CustomerDeleteWithHttpInfo(id);
+            Org.OpenAPITools.Client.ApiResponse<CustomerDelete200Response> localVarResponse = CustomerDeleteWithHttpInfo(id, storeId);
             return localVarResponse.Data;
         }
 
@@ -1892,9 +1901,10 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identifies customer specified by the id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomerDelete200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CustomerDelete200Response> CustomerDeleteWithHttpInfo(string id, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CustomerDelete200Response> CustomerDeleteWithHttpInfo(string id, string? storeId = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1926,6 +1936,10 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
 
             localVarRequestOptions.Operation = "CustomerApi.CustomerDelete";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1960,12 +1974,13 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identifies customer specified by the id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerDelete200Response</returns>
-        public async System.Threading.Tasks.Task<CustomerDelete200Response> CustomerDeleteAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomerDelete200Response> CustomerDeleteAsync(string id, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CustomerDelete200Response> localVarResponse = await CustomerDeleteWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CustomerDelete200Response> localVarResponse = await CustomerDeleteWithHttpInfoAsync(id, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1974,10 +1989,11 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identifies customer specified by the id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerDelete200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CustomerDelete200Response>> CustomerDeleteWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CustomerDelete200Response>> CustomerDeleteWithHttpInfoAsync(string id, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -2009,6 +2025,10 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
 
             localVarRequestOptions.Operation = "CustomerApi.CustomerDelete";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2259,11 +2279,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Customer group name</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Assign customer group to the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomerGroupAdd200Response</returns>
-        public CustomerGroupAdd200Response CustomerGroupAdd(string name, string? storeId = default(string?), string? storesIds = default(string?), int operationIndex = 0)
+        public CustomerGroupAdd200Response CustomerGroupAdd(string name, string? storeId = default(string?), string? storesIds = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CustomerGroupAdd200Response> localVarResponse = CustomerGroupAddWithHttpInfo(name, storeId, storesIds);
+            Org.OpenAPITools.Client.ApiResponse<CustomerGroupAdd200Response> localVarResponse = CustomerGroupAddWithHttpInfo(name, storeId, storesIds, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -2274,9 +2295,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Customer group name</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Assign customer group to the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomerGroupAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CustomerGroupAdd200Response> CustomerGroupAddWithHttpInfo(string name, string? storeId = default(string?), string? storesIds = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CustomerGroupAdd200Response> CustomerGroupAddWithHttpInfo(string name, string? storeId = default(string?), string? storesIds = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -2316,6 +2338,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "stores_ids", storesIds));
             }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "CustomerApi.CustomerGroupAdd";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2352,12 +2378,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Customer group name</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Assign customer group to the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerGroupAdd200Response</returns>
-        public async System.Threading.Tasks.Task<CustomerGroupAdd200Response> CustomerGroupAddAsync(string name, string? storeId = default(string?), string? storesIds = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomerGroupAdd200Response> CustomerGroupAddAsync(string name, string? storeId = default(string?), string? storesIds = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CustomerGroupAdd200Response> localVarResponse = await CustomerGroupAddWithHttpInfoAsync(name, storeId, storesIds, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CustomerGroupAdd200Response> localVarResponse = await CustomerGroupAddWithHttpInfoAsync(name, storeId, storesIds, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2368,10 +2395,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="name">Customer group name</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="storesIds">Assign customer group to the stores that is specified by comma-separated stores&#39; id (optional)</param>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerGroupAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CustomerGroupAdd200Response>> CustomerGroupAddWithHttpInfoAsync(string name, string? storeId = default(string?), string? storesIds = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CustomerGroupAdd200Response>> CustomerGroupAddWithHttpInfoAsync(string name, string? storeId = default(string?), string? storesIds = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -2410,6 +2438,10 @@ namespace Org.OpenAPITools.Api
             if (storesIds != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "stores_ids", storesIds));
+            }
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
             }
 
             localVarRequestOptions.Operation = "CustomerApi.CustomerGroupAdd";

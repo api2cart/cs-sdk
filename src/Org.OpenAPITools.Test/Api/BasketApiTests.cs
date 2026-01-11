@@ -83,7 +83,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? variantId = null;
             //decimal? quantity = null;
             //string? storeId = null;
-            //var response = instance.BasketItemAdd(customerId, productId, variantId, quantity, storeId);
+            //string? idempotencyKey = null;
+            //var response = instance.BasketItemAdd(customerId, productId, variantId, quantity, storeId, idempotencyKey);
             //Assert.IsType<BasketItemAdd200Response>(response);
         }
 
@@ -97,7 +98,8 @@ namespace Org.OpenAPITools.Test.Api
             //string name = null;
             //string callback = null;
             //string? storeId = null;
-            //var response = instance.BasketLiveShippingServiceCreate(name, callback, storeId);
+            //string? idempotencyKey = null;
+            //var response = instance.BasketLiveShippingServiceCreate(name, callback, storeId, idempotencyKey);
             //Assert.IsType<BasketLiveShippingServiceCreate200Response>(response);
         }
 

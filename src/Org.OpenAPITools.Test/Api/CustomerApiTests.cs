@@ -130,7 +130,8 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
-            //var response = instance.CustomerDelete(id);
+            //string? storeId = null;
+            //var response = instance.CustomerDelete(id, storeId);
             //Assert.IsType<CustomerDelete200Response>(response);
         }
 
@@ -160,7 +161,8 @@ namespace Org.OpenAPITools.Test.Api
             //string name = null;
             //string? storeId = null;
             //string? storesIds = null;
-            //var response = instance.CustomerGroupAdd(name, storeId, storesIds);
+            //string? idempotencyKey = null;
+            //var response = instance.CustomerGroupAdd(name, storeId, storesIds, idempotencyKey);
             //Assert.IsType<CustomerGroupAdd200Response>(response);
         }
 

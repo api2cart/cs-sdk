@@ -111,6 +111,8 @@ docs/CategoryCount200Response.md
 docs/CategoryCount200ResponseResult.md
 docs/CategoryDelete200Response.md
 docs/CategoryDelete200ResponseResult.md
+docs/CategoryDeleteBatch.md
+docs/CategoryDeleteBatchPayloadInner.md
 docs/CategoryFind200Response.md
 docs/CategoryFind200ResponseResult.md
 docs/CategoryFind200ResponseResultCategoryInner.md
@@ -564,6 +566,8 @@ src/Org.OpenAPITools.Test/Model/CategoryCount200ResponseResultTests.cs
 src/Org.OpenAPITools.Test/Model/CategoryCount200ResponseTests.cs
 src/Org.OpenAPITools.Test/Model/CategoryDelete200ResponseResultTests.cs
 src/Org.OpenAPITools.Test/Model/CategoryDelete200ResponseTests.cs
+src/Org.OpenAPITools.Test/Model/CategoryDeleteBatchPayloadInnerTests.cs
+src/Org.OpenAPITools.Test/Model/CategoryDeleteBatchTests.cs
 src/Org.OpenAPITools.Test/Model/CategoryFind200ResponseResultCategoryInnerTests.cs
 src/Org.OpenAPITools.Test/Model/CategoryFind200ResponseResultTests.cs
 src/Org.OpenAPITools.Test/Model/CategoryFind200ResponseTests.cs
@@ -1028,6 +1032,8 @@ src/Org.OpenAPITools/Model/CategoryCount200Response.cs
 src/Org.OpenAPITools/Model/CategoryCount200ResponseResult.cs
 src/Org.OpenAPITools/Model/CategoryDelete200Response.cs
 src/Org.OpenAPITools/Model/CategoryDelete200ResponseResult.cs
+src/Org.OpenAPITools/Model/CategoryDeleteBatch.cs
+src/Org.OpenAPITools/Model/CategoryDeleteBatchPayloadInner.cs
 src/Org.OpenAPITools/Model/CategoryFind200Response.cs
 src/Org.OpenAPITools/Model/CategoryFind200ResponseResult.cs
 src/Org.OpenAPITools/Model/CategoryFind200ResponseResultCategoryInner.cs

@@ -243,5 +243,14 @@ namespace Org.OpenAPITools.Test.Model
         {
             // TODO unit test for the property 'Alias'
         }
+
+        /// <summary>
+        /// Test the property 'IdempotencyKey'
+        /// </summary>
+        [Fact]
+        public void IdempotencyKeyTest()
+        {
+            // TODO unit test for the property 'IdempotencyKey'
+        }
     }
 }
