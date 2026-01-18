@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **StoreOwnerInfo** | [**Info**](Info.md) |  | [optional] 
 **DefaultWarehouseId** | **string** |  | [optional] 
 **Channels** | [**List&lt;CartChannel&gt;**](CartChannel.md) |  | [optional] 
+**PickupLocations** | [**List&lt;CartPickupLocation&gt;**](CartPickupLocation.md) |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 
 

@@ -363,6 +363,7 @@ Class | Method | HTTP request | Description
  - [Model.CartMetaData](docs/CartMetaData.md)
  - [Model.CartMethods200Response](docs/CartMethods200Response.md)
  - [Model.CartMethods200ResponseResult](docs/CartMethods200ResponseResult.md)
+ - [Model.CartPickupLocation](docs/CartPickupLocation.md)
  - [Model.CartPluginList200Response](docs/CartPluginList200Response.md)
  - [Model.CartPluginList200ResponseResult](docs/CartPluginList200ResponseResult.md)
  - [Model.CartScriptAdd200Response](docs/CartScriptAdd200Response.md)

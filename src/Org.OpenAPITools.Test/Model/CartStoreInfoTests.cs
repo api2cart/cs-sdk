@@ -218,6 +218,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PickupLocations'
+        /// </summary>
+        [Fact]
+        public void PickupLocationsTest()
+        {
+            // TODO unit test for the property 'PickupLocations'
+        }
+
+        /// <summary>
         /// Test the property 'AdditionalFields'
         /// </summary>
         [Fact]

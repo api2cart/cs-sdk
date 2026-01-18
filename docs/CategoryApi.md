@@ -1010,7 +1010,7 @@ catch (ApiException e)
 
 <a id="categoryinfo"></a>
 # **CategoryInfo**
-> CategoryInfo200Response CategoryInfo (string id, string? storeId = null, string? langId = null, string? schemaType = null, string? responseFields = null, string? varParams = null, string? exclude = null, string? reportRequestId = null, bool? disableReportCache = null)
+> CategoryInfo200Response CategoryInfo (string id, string? storeId = null, string? langId = null, string? schemaType = null, string? responseFields = null, string? varParams = null, string? exclude = null, string? reportRequestId = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
 
 category.info
 
@@ -1051,11 +1051,12 @@ namespace Example
             var exclude = id,parent_id,name;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var reportRequestId = 105245017661;  // string? | Report request id (optional) 
             var disableReportCache = false;  // bool? | Disable report cache for current request (optional)  (default to false)
+            var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
 
             try
             {
                 // category.info
-                CategoryInfo200Response result = apiInstance.CategoryInfo(id, storeId, langId, schemaType, responseFields, varParams, exclude, reportRequestId, disableReportCache);
+                CategoryInfo200Response result = apiInstance.CategoryInfo(id, storeId, langId, schemaType, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1076,7 +1077,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.info
-    ApiResponse<CategoryInfo200Response> response = apiInstance.CategoryInfoWithHttpInfo(id, storeId, langId, schemaType, responseFields, varParams, exclude, reportRequestId, disableReportCache);
+    ApiResponse<CategoryInfo200Response> response = apiInstance.CategoryInfoWithHttpInfo(id, storeId, langId, schemaType, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1102,6 +1103,7 @@ catch (ApiException e)
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **reportRequestId** | **string?** | Report request id | [optional]  |
 | **disableReportCache** | **bool?** | Disable report cache for current request | [optional] [default to false] |
+| **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
 
 ### Return type
 
@@ -1126,7 +1128,7 @@ catch (ApiException e)
 
 <a id="categorylist"></a>
 # **CategoryList**
-> ModelResponseCategoryList CategoryList (int? start = null, int? count = null, string? pageCursor = null, string? storeId = null, string? langId = null, string? parentId = null, bool? avail = null, string? productType = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? findValue = null, string? findWhere = null, string? responseFields = null, string? varParams = null, string? exclude = null, string? reportRequestId = null, bool? disableReportCache = null, bool? disableCache = null)
+> ModelResponseCategoryList CategoryList (int? start = null, int? count = null, string? pageCursor = null, string? storeId = null, string? langId = null, string? parentId = null, bool? avail = null, string? productType = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? findValue = null, string? findWhere = null, string? responseFields = null, string? varParams = null, string? exclude = null, string? reportRequestId = null, bool? disableReportCache = null, bool? disableCache = null, bool? useLatestApiVersion = null)
 
 category.list
 
@@ -1178,11 +1180,12 @@ namespace Example
             var reportRequestId = 105245017661;  // string? | Report request id (optional) 
             var disableReportCache = false;  // bool? | Disable report cache for current request (optional)  (default to false)
             var disableCache = false;  // bool? | Disable cache for current request (optional)  (default to false)
+            var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
 
             try
             {
                 // category.list
-                ModelResponseCategoryList result = apiInstance.CategoryList(start, count, pageCursor, storeId, langId, parentId, avail, productType, createdFrom, createdTo, modifiedFrom, modifiedTo, findValue, findWhere, responseFields, varParams, exclude, reportRequestId, disableReportCache, disableCache);
+                ModelResponseCategoryList result = apiInstance.CategoryList(start, count, pageCursor, storeId, langId, parentId, avail, productType, createdFrom, createdTo, modifiedFrom, modifiedTo, findValue, findWhere, responseFields, varParams, exclude, reportRequestId, disableReportCache, disableCache, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1203,7 +1206,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.list
-    ApiResponse<ModelResponseCategoryList> response = apiInstance.CategoryListWithHttpInfo(start, count, pageCursor, storeId, langId, parentId, avail, productType, createdFrom, createdTo, modifiedFrom, modifiedTo, findValue, findWhere, responseFields, varParams, exclude, reportRequestId, disableReportCache, disableCache);
+    ApiResponse<ModelResponseCategoryList> response = apiInstance.CategoryListWithHttpInfo(start, count, pageCursor, storeId, langId, parentId, avail, productType, createdFrom, createdTo, modifiedFrom, modifiedTo, findValue, findWhere, responseFields, varParams, exclude, reportRequestId, disableReportCache, disableCache, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1240,6 +1243,7 @@ catch (ApiException e)
 | **reportRequestId** | **string?** | Report request id | [optional]  |
 | **disableReportCache** | **bool?** | Disable report cache for current request | [optional] [default to false] |
 | **disableCache** | **bool?** | Disable cache for current request | [optional] [default to false] |
+| **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
 
 ### Return type
 

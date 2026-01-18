@@ -83,6 +83,7 @@ docs/CartInfo200Response.md
 docs/CartMetaData.md
 docs/CartMethods200Response.md
 docs/CartMethods200ResponseResult.md
+docs/CartPickupLocation.md
 docs/CartPluginList200Response.md
 docs/CartPluginList200ResponseResult.md
 docs/CartScriptAdd200Response.md
@@ -539,6 +540,7 @@ src/Org.OpenAPITools.Test/Model/CartInfo200ResponseTests.cs
 src/Org.OpenAPITools.Test/Model/CartMetaDataTests.cs
 src/Org.OpenAPITools.Test/Model/CartMethods200ResponseResultTests.cs
 src/Org.OpenAPITools.Test/Model/CartMethods200ResponseTests.cs
+src/Org.OpenAPITools.Test/Model/CartPickupLocationTests.cs
 src/Org.OpenAPITools.Test/Model/CartPluginList200ResponseResultTests.cs
 src/Org.OpenAPITools.Test/Model/CartPluginList200ResponseTests.cs
 src/Org.OpenAPITools.Test/Model/CartScriptAdd200ResponseResultTests.cs
@@ -1005,6 +1007,7 @@ src/Org.OpenAPITools/Model/CartInfo200Response.cs
 src/Org.OpenAPITools/Model/CartMetaData.cs
 src/Org.OpenAPITools/Model/CartMethods200Response.cs
 src/Org.OpenAPITools/Model/CartMethods200ResponseResult.cs
+src/Org.OpenAPITools/Model/CartPickupLocation.cs
 src/Org.OpenAPITools/Model/CartPluginList200Response.cs
 src/Org.OpenAPITools/Model/CartPluginList200ResponseResult.cs
 src/Org.OpenAPITools/Model/CartScriptAdd200Response.cs

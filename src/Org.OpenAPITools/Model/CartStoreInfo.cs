@@ -53,9 +53,10 @@ namespace Org.OpenAPITools.Model
         /// <param name="storeOwnerInfo">storeOwnerInfo.</param>
         /// <param name="defaultWarehouseId">defaultWarehouseId.</param>
         /// <param name="channels">channels.</param>
+        /// <param name="pickupLocations">pickupLocations.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public CartStoreInfo(string storeId = default(string), string name = default(string), string language = default(string), List<Language> storeLanguages = default(List<Language>), Currency currency = default(Currency), List<Currency> storeCurrencies = default(List<Currency>), string timezone = default(string), string country = default(string), string rootCategoryId = default(string), string multiStoreUrl = default(string), bool? active = default(bool?), string weightUnit = default(string), string dimensionUnit = default(string), bool? pricesIncludeTax = default(bool?), List<Carrier> carrierInfo = default(List<Carrier>), Info storeOwnerInfo = default(Info), string defaultWarehouseId = default(string), List<CartChannel> channels = default(List<CartChannel>), Object additionalFields = default(Object), Object customFields = default(Object))
+        public CartStoreInfo(string storeId = default(string), string name = default(string), string language = default(string), List<Language> storeLanguages = default(List<Language>), Currency currency = default(Currency), List<Currency> storeCurrencies = default(List<Currency>), string timezone = default(string), string country = default(string), string rootCategoryId = default(string), string multiStoreUrl = default(string), bool? active = default(bool?), string weightUnit = default(string), string dimensionUnit = default(string), bool? pricesIncludeTax = default(bool?), List<Carrier> carrierInfo = default(List<Carrier>), Info storeOwnerInfo = default(Info), string defaultWarehouseId = default(string), List<CartChannel> channels = default(List<CartChannel>), List<CartPickupLocation> pickupLocations = default(List<CartPickupLocation>), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.StoreId = storeId;
             this.Name = name;
@@ -75,6 +76,7 @@ namespace Org.OpenAPITools.Model
             this.StoreOwnerInfo = storeOwnerInfo;
             this.DefaultWarehouseId = defaultWarehouseId;
             this.Channels = channels;
+            this.PickupLocations = pickupLocations;
             this.AdditionalFields = additionalFields;
             this.CustomFields = customFields;
         }
@@ -188,6 +190,12 @@ namespace Org.OpenAPITools.Model
         public List<CartChannel> Channels { get; set; }
 
         /// <summary>
+        /// Gets or Sets PickupLocations
+        /// </summary>
+        [DataMember(Name = "pickup_locations", EmitDefaultValue = false)]
+        public List<CartPickupLocation> PickupLocations { get; set; }
+
+        /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
         [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
@@ -225,6 +233,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  StoreOwnerInfo: ").Append(StoreOwnerInfo).Append("\n");
             sb.Append("  DefaultWarehouseId: ").Append(DefaultWarehouseId).Append("\n");
             sb.Append("  Channels: ").Append(Channels).Append("\n");
+            sb.Append("  PickupLocations: ").Append(PickupLocations).Append("\n");
             sb.Append("  AdditionalFields: ").Append(AdditionalFields).Append("\n");
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("}\n");

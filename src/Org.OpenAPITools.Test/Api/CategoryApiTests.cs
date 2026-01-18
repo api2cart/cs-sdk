@@ -224,7 +224,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? exclude = null;
             //string? reportRequestId = null;
             //bool? disableReportCache = null;
-            //var response = instance.CategoryInfo(id, storeId, langId, schemaType, responseFields, varParams, exclude, reportRequestId, disableReportCache);
+            //bool? useLatestApiVersion = null;
+            //var response = instance.CategoryInfo(id, storeId, langId, schemaType, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
             //Assert.IsType<CategoryInfo200Response>(response);
         }
 
@@ -255,7 +256,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? reportRequestId = null;
             //bool? disableReportCache = null;
             //bool? disableCache = null;
-            //var response = instance.CategoryList(start, count, pageCursor, storeId, langId, parentId, avail, productType, createdFrom, createdTo, modifiedFrom, modifiedTo, findValue, findWhere, responseFields, varParams, exclude, reportRequestId, disableReportCache, disableCache);
+            //bool? useLatestApiVersion = null;
+            //var response = instance.CategoryList(start, count, pageCursor, storeId, langId, parentId, avail, productType, createdFrom, createdTo, modifiedFrom, modifiedTo, findValue, findWhere, responseFields, varParams, exclude, reportRequestId, disableReportCache, disableCache, useLatestApiVersion);
             //Assert.IsType<ModelResponseCategoryList>(response);
         }
 

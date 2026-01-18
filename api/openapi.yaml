@@ -5172,6 +5172,16 @@ paths:
           default: false
           type: boolean
         style: form
+      - description: Use the latest platform API version
+        example: true
+        explode: true
+        in: query
+        name: use_latest_api_version
+        required: false
+        schema:
+          default: false
+          type: boolean
+        style: form
       responses:
         "200":
           content:
@@ -5513,6 +5523,16 @@ paths:
         explode: true
         in: query
         name: disable_cache
+        required: false
+        schema:
+          default: false
+          type: boolean
+        style: form
+      - description: Use the latest platform API version
+        example: true
+        explode: true
+        in: query
+        name: use_latest_api_version
         required: false
         schema:
           default: false
@@ -16353,6 +16373,87 @@ components:
           default_warehouse_id: default_warehouse_id
           timezone: timezone
           custom_fields: "{}"
+          pickup_locations:
+          - avail: true
+            address:
+              country:
+                code3: code3
+                code2: code2
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              phone_mobile: phone_mobile
+              website: website
+              gender: gender
+              identification_number: identification_number
+              address2: address2
+              city: city
+              address1: address1
+              custom_fields: "{}"
+              postcode: postcode
+              last_name: last_name
+              additional_fields: "{}"
+              type: type
+              tax_id: tax_id
+              default: true
+              phone: phone
+              alias: alias
+              company: company
+              id: id
+              state:
+                code: code
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              fax: fax
+              region: region
+              first_name: first_name
+            pickup_instructions: pickup_instructions
+            expected_ready_time: expected_ready_time
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+          - avail: true
+            address:
+              country:
+                code3: code3
+                code2: code2
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              phone_mobile: phone_mobile
+              website: website
+              gender: gender
+              identification_number: identification_number
+              address2: address2
+              city: city
+              address1: address1
+              custom_fields: "{}"
+              postcode: postcode
+              last_name: last_name
+              additional_fields: "{}"
+              type: type
+              tax_id: tax_id
+              default: true
+              phone: phone
+              alias: alias
+              company: company
+              id: id
+              state:
+                code: code
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              fax: fax
+              region: region
+              first_name: first_name
+            pickup_instructions: pickup_instructions
+            expected_ready_time: expected_ready_time
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
           root_category_id: root_category_id
           active: true
           language: language
@@ -16461,6 +16562,87 @@ components:
           default_warehouse_id: default_warehouse_id
           timezone: timezone
           custom_fields: "{}"
+          pickup_locations:
+          - avail: true
+            address:
+              country:
+                code3: code3
+                code2: code2
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              phone_mobile: phone_mobile
+              website: website
+              gender: gender
+              identification_number: identification_number
+              address2: address2
+              city: city
+              address1: address1
+              custom_fields: "{}"
+              postcode: postcode
+              last_name: last_name
+              additional_fields: "{}"
+              type: type
+              tax_id: tax_id
+              default: true
+              phone: phone
+              alias: alias
+              company: company
+              id: id
+              state:
+                code: code
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              fax: fax
+              region: region
+              first_name: first_name
+            pickup_instructions: pickup_instructions
+            expected_ready_time: expected_ready_time
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+          - avail: true
+            address:
+              country:
+                code3: code3
+                code2: code2
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              phone_mobile: phone_mobile
+              website: website
+              gender: gender
+              identification_number: identification_number
+              address2: address2
+              city: city
+              address1: address1
+              custom_fields: "{}"
+              postcode: postcode
+              last_name: last_name
+              additional_fields: "{}"
+              type: type
+              tax_id: tax_id
+              default: true
+              phone: phone
+              alias: alias
+              company: company
+              id: id
+              state:
+                code: code
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              fax: fax
+              region: region
+              first_name: first_name
+            pickup_instructions: pickup_instructions
+            expected_ready_time: expected_ready_time
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
           root_category_id: root_category_id
           active: true
           language: language
@@ -16608,6 +16790,87 @@ components:
         default_warehouse_id: default_warehouse_id
         timezone: timezone
         custom_fields: "{}"
+        pickup_locations:
+        - avail: true
+          address:
+            country:
+              code3: code3
+              code2: code2
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            phone_mobile: phone_mobile
+            website: website
+            gender: gender
+            identification_number: identification_number
+            address2: address2
+            city: city
+            address1: address1
+            custom_fields: "{}"
+            postcode: postcode
+            last_name: last_name
+            additional_fields: "{}"
+            type: type
+            tax_id: tax_id
+            default: true
+            phone: phone
+            alias: alias
+            company: company
+            id: id
+            state:
+              code: code
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            fax: fax
+            region: region
+            first_name: first_name
+          pickup_instructions: pickup_instructions
+          expected_ready_time: expected_ready_time
+          custom_fields: "{}"
+          name: name
+          additional_fields: "{}"
+          id: id
+        - avail: true
+          address:
+            country:
+              code3: code3
+              code2: code2
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            phone_mobile: phone_mobile
+            website: website
+            gender: gender
+            identification_number: identification_number
+            address2: address2
+            city: city
+            address1: address1
+            custom_fields: "{}"
+            postcode: postcode
+            last_name: last_name
+            additional_fields: "{}"
+            type: type
+            tax_id: tax_id
+            default: true
+            phone: phone
+            alias: alias
+            company: company
+            id: id
+            state:
+              code: code
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            fax: fax
+            region: region
+            first_name: first_name
+          pickup_instructions: pickup_instructions
+          expected_ready_time: expected_ready_time
+          custom_fields: "{}"
+          name: name
+          additional_fields: "{}"
+          id: id
         root_category_id: root_category_id
         active: true
         language: language
@@ -16752,6 +17015,10 @@ components:
         channels:
           items:
             $ref: '#/components/schemas/Cart_Channel'
+          type: array
+        pickup_locations:
+          items:
+            $ref: '#/components/schemas/Cart_PickupLocation'
           type: array
         additional_fields:
           nullable: true
@@ -16901,7 +17168,7 @@ components:
         custom_fields:
           nullable: true
           type: object
-    Cart_Warehouse:
+    Cart_PickupLocation:
       example:
         avail: true
         address:
@@ -16937,15 +17204,10 @@ components:
           fax: fax
           region: region
           first_name: first_name
+        pickup_instructions: pickup_instructions
+        expected_ready_time: expected_ready_time
         custom_fields: "{}"
-        carriers_ids:
-        - carriers_ids
-        - carriers_ids
         name: name
-        stores_ids:
-        - stores_ids
-        - stores_ids
-        description: description
         additional_fields: "{}"
         id: id
       properties:
@@ -16955,22 +17217,17 @@ components:
         name:
           nullable: true
           type: string
-        description:
-          nullable: true
-          type: string
         avail:
           nullable: true
           type: boolean
         address:
           $ref: '#/components/schemas/Customer_Address'
-        carriers_ids:
-          items:
-            type: string
-          type: array
-        stores_ids:
-          items:
-            type: string
-          type: array
+        pickup_instructions:
+          nullable: true
+          type: string
+        expected_ready_time:
+          nullable: true
+          type: string
         additional_fields:
           nullable: true
           type: object
@@ -17104,6 +17361,82 @@ components:
           type: string
         name:
           type: string
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Cart_Warehouse:
+      example:
+        avail: true
+        address:
+          country:
+            code3: code3
+            code2: code2
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+          phone_mobile: phone_mobile
+          website: website
+          gender: gender
+          identification_number: identification_number
+          address2: address2
+          city: city
+          address1: address1
+          custom_fields: "{}"
+          postcode: postcode
+          last_name: last_name
+          additional_fields: "{}"
+          type: type
+          tax_id: tax_id
+          default: true
+          phone: phone
+          alias: alias
+          company: company
+          id: id
+          state:
+            code: code
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+          fax: fax
+          region: region
+          first_name: first_name
+        custom_fields: "{}"
+        carriers_ids:
+        - carriers_ids
+        - carriers_ids
+        name: name
+        stores_ids:
+        - stores_ids
+        - stores_ids
+        description: description
+        additional_fields: "{}"
+        id: id
+      properties:
+        id:
+          nullable: true
+          type: string
+        name:
+          nullable: true
+          type: string
+        description:
+          nullable: true
+          type: string
+        avail:
+          nullable: true
+          type: boolean
+        address:
+          $ref: '#/components/schemas/Customer_Address'
+        carriers_ids:
+          items:
+            type: string
+          type: array
+        stores_ids:
+          items:
+            type: string
+          type: array
         additional_fields:
           nullable: true
           type: object
@@ -42539,6 +42872,87 @@ components:
             default_warehouse_id: default_warehouse_id
             timezone: timezone
             custom_fields: "{}"
+            pickup_locations:
+            - avail: true
+              address:
+                country:
+                  code3: code3
+                  code2: code2
+                  custom_fields: "{}"
+                  name: name
+                  additional_fields: "{}"
+                phone_mobile: phone_mobile
+                website: website
+                gender: gender
+                identification_number: identification_number
+                address2: address2
+                city: city
+                address1: address1
+                custom_fields: "{}"
+                postcode: postcode
+                last_name: last_name
+                additional_fields: "{}"
+                type: type
+                tax_id: tax_id
+                default: true
+                phone: phone
+                alias: alias
+                company: company
+                id: id
+                state:
+                  code: code
+                  custom_fields: "{}"
+                  name: name
+                  additional_fields: "{}"
+                fax: fax
+                region: region
+                first_name: first_name
+              pickup_instructions: pickup_instructions
+              expected_ready_time: expected_ready_time
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
+            - avail: true
+              address:
+                country:
+                  code3: code3
+                  code2: code2
+                  custom_fields: "{}"
+                  name: name
+                  additional_fields: "{}"
+                phone_mobile: phone_mobile
+                website: website
+                gender: gender
+                identification_number: identification_number
+                address2: address2
+                city: city
+                address1: address1
+                custom_fields: "{}"
+                postcode: postcode
+                last_name: last_name
+                additional_fields: "{}"
+                type: type
+                tax_id: tax_id
+                default: true
+                phone: phone
+                alias: alias
+                company: company
+                id: id
+                state:
+                  code: code
+                  custom_fields: "{}"
+                  name: name
+                  additional_fields: "{}"
+                fax: fax
+                region: region
+                first_name: first_name
+              pickup_instructions: pickup_instructions
+              expected_ready_time: expected_ready_time
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
             root_category_id: root_category_id
             active: true
             language: language
@@ -42647,6 +43061,87 @@ components:
             default_warehouse_id: default_warehouse_id
             timezone: timezone
             custom_fields: "{}"
+            pickup_locations:
+            - avail: true
+              address:
+                country:
+                  code3: code3
+                  code2: code2
+                  custom_fields: "{}"
+                  name: name
+                  additional_fields: "{}"
+                phone_mobile: phone_mobile
+                website: website
+                gender: gender
+                identification_number: identification_number
+                address2: address2
+                city: city
+                address1: address1
+                custom_fields: "{}"
+                postcode: postcode
+                last_name: last_name
+                additional_fields: "{}"
+                type: type
+                tax_id: tax_id
+                default: true
+                phone: phone
+                alias: alias
+                company: company
+                id: id
+                state:
+                  code: code
+                  custom_fields: "{}"
+                  name: name
+                  additional_fields: "{}"
+                fax: fax
+                region: region
+                first_name: first_name
+              pickup_instructions: pickup_instructions
+              expected_ready_time: expected_ready_time
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
+            - avail: true
+              address:
+                country:
+                  code3: code3
+                  code2: code2
+                  custom_fields: "{}"
+                  name: name
+                  additional_fields: "{}"
+                phone_mobile: phone_mobile
+                website: website
+                gender: gender
+                identification_number: identification_number
+                address2: address2
+                city: city
+                address1: address1
+                custom_fields: "{}"
+                postcode: postcode
+                last_name: last_name
+                additional_fields: "{}"
+                type: type
+                tax_id: tax_id
+                default: true
+                phone: phone
+                alias: alias
+                company: company
+                id: id
+                state:
+                  code: code
+                  custom_fields: "{}"
+                  name: name
+                  additional_fields: "{}"
+                fax: fax
+                region: region
+                first_name: first_name
+              pickup_instructions: pickup_instructions
+              expected_ready_time: expected_ready_time
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
             root_category_id: root_category_id
             active: true
             language: language

@@ -340,9 +340,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryInfo200Response</returns>
-        CategoryInfo200Response CategoryInfo(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
+        CategoryInfo200Response CategoryInfo(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// category.info
@@ -360,9 +361,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryInfo200Response</returns>
-        ApiResponse<CategoryInfo200Response> CategoryInfoWithHttpInfo(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
+        ApiResponse<CategoryInfo200Response> CategoryInfoWithHttpInfo(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
         /// <summary>
         /// category.list
         /// </summary>
@@ -390,9 +392,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCategoryList</returns>
-        ModelResponseCategoryList CategoryList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0);
+        ModelResponseCategoryList CategoryList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// category.list
@@ -421,9 +424,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCategoryList</returns>
-        ApiResponse<ModelResponseCategoryList> CategoryListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0);
+        ApiResponse<ModelResponseCategoryList> CategoryListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
         /// <summary>
         /// category.unassign
         /// </summary>
@@ -846,10 +850,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryInfo200Response</returns>
-        System.Threading.Tasks.Task<CategoryInfo200Response> CategoryInfoAsync(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryInfo200Response> CategoryInfoAsync(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.info
@@ -867,10 +872,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryInfo200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryInfo200Response>> CategoryInfoWithHttpInfoAsync(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CategoryInfo200Response>> CategoryInfoWithHttpInfoAsync(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.list
         /// </summary>
@@ -898,10 +904,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCategoryList</returns>
-        System.Threading.Tasks.Task<ModelResponseCategoryList> CategoryListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseCategoryList> CategoryListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.list
@@ -930,10 +937,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCategoryList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseCategoryList>> CategoryListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCategoryList>> CategoryListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.unassign
         /// </summary>
@@ -3206,11 +3214,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryInfo200Response</returns>
-        public CategoryInfo200Response CategoryInfo(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
+        public CategoryInfo200Response CategoryInfo(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response> localVarResponse = CategoryInfoWithHttpInfo(id, storeId, langId, schemaType, responseFields, varParams, exclude, reportRequestId, disableReportCache);
+            Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response> localVarResponse = CategoryInfoWithHttpInfo(id, storeId, langId, schemaType, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
             return localVarResponse.Data;
         }
 
@@ -3227,9 +3236,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryInfo200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response> CategoryInfoWithHttpInfo(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response> CategoryInfoWithHttpInfo(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3293,6 +3303,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "disable_report_cache", disableReportCache));
             }
+            if (useLatestApiVersion != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "use_latest_api_version", useLatestApiVersion));
+            }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryInfo";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -3335,12 +3349,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryInfo200Response</returns>
-        public async System.Threading.Tasks.Task<CategoryInfo200Response> CategoryInfoAsync(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CategoryInfo200Response> CategoryInfoAsync(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response> localVarResponse = await CategoryInfoWithHttpInfoAsync(id, storeId, langId, schemaType, responseFields, varParams, exclude, reportRequestId, disableReportCache, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response> localVarResponse = await CategoryInfoWithHttpInfoAsync(id, storeId, langId, schemaType, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3357,10 +3372,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryInfo200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response>> CategoryInfoWithHttpInfoAsync(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryInfo200Response>> CategoryInfoWithHttpInfoAsync(string id, string? storeId = default(string?), string? langId = default(string?), string? schemaType = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3423,6 +3439,10 @@ namespace Org.OpenAPITools.Api
             if (disableReportCache != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "disable_report_cache", disableReportCache));
+            }
+            if (useLatestApiVersion != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "use_latest_api_version", useLatestApiVersion));
             }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryInfo";
@@ -3478,11 +3498,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCategoryList</returns>
-        public ModelResponseCategoryList CategoryList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0)
+        public ModelResponseCategoryList CategoryList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList> localVarResponse = CategoryListWithHttpInfo(start, count, pageCursor, storeId, langId, parentId, avail, productType, createdFrom, createdTo, modifiedFrom, modifiedTo, findValue, findWhere, responseFields, varParams, exclude, reportRequestId, disableReportCache, disableCache);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList> localVarResponse = CategoryListWithHttpInfo(start, count, pageCursor, storeId, langId, parentId, avail, productType, createdFrom, createdTo, modifiedFrom, modifiedTo, findValue, findWhere, responseFields, varParams, exclude, reportRequestId, disableReportCache, disableCache, useLatestApiVersion);
             return localVarResponse.Data;
         }
 
@@ -3510,9 +3531,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCategoryList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList> CategoryListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList> CategoryListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3617,6 +3639,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "disable_cache", disableCache));
             }
+            if (useLatestApiVersion != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "use_latest_api_version", useLatestApiVersion));
+            }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryList";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -3670,12 +3696,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCategoryList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseCategoryList> CategoryListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseCategoryList> CategoryListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList> localVarResponse = await CategoryListWithHttpInfoAsync(start, count, pageCursor, storeId, langId, parentId, avail, productType, createdFrom, createdTo, modifiedFrom, modifiedTo, findValue, findWhere, responseFields, varParams, exclude, reportRequestId, disableReportCache, disableCache, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList> localVarResponse = await CategoryListWithHttpInfoAsync(start, count, pageCursor, storeId, langId, parentId, avail, productType, createdFrom, createdTo, modifiedFrom, modifiedTo, findValue, findWhere, responseFields, varParams, exclude, reportRequestId, disableReportCache, disableCache, useLatestApiVersion, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3703,10 +3730,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="disableCache">Disable cache for current request (optional, default to false)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCategoryList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList>> CategoryListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryList>> CategoryListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? parentId = default(string?), bool? avail = default(bool?), string? productType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), bool? disableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3810,6 +3838,10 @@ namespace Org.OpenAPITools.Api
             if (disableCache != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "disable_cache", disableCache));
+            }
+            if (useLatestApiVersion != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "use_latest_api_version", useLatestApiVersion));
             }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryList";
