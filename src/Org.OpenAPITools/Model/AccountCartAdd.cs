@@ -489,6 +489,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="bridgeUrl">This parameter allows to set up store with custom bridge url (also you must use store_root parameter if a bridge folder is not in the root folder of the store).</param>
         /// <param name="storeRoot">Absolute path to the store root directory (used with \&quot;bridge_url\&quot; parameter).</param>
         /// <param name="storeKey">Set this parameter if bridge is already uploaded to store.</param>
+        /// <param name="label">Defines alternative text that has to be attached to the picture.</param>
+        /// <param name="customLabel">Defines a custom label for the store in the app.</param>
         /// <param name="validateVersion">Specify if api2cart should validate cart version (default to false).</param>
         /// <param name="verify">Enables or disables cart&#39;s verification (default to true).</param>
         /// <param name="dbTablesPrefix">DB tables prefix.</param>
@@ -626,6 +628,11 @@ namespace Org.OpenAPITools.Model
         /// <param name="zidAccessToken">Zid Access Token.</param>
         /// <param name="zidAuthorization">Zid Authorization.</param>
         /// <param name="zidRefreshToken">Zid refresh token.</param>
+        /// <param name="jumpsellerClientId">Jumpseller OAuth2 Client ID.</param>
+        /// <param name="jumpsellerClientSecret">Jumpseller OAuth2 Client Secret.</param>
+        /// <param name="jumpsellerRefreshToken">Jumpseller OAuth2 refresh token.</param>
+        /// <param name="jumpsellerLogin">Jumpseller API login.</param>
+        /// <param name="jumpsellerAuthtoken">Jumpseller API auth token.</param>
         /// <param name="flipkartClientId">Flipkart Client ID.</param>
         /// <param name="flipkartClientSecret">Flipkart Client Secret.</param>
         /// <param name="allegroClientId">Allegro Client ID.</param>
@@ -660,13 +667,15 @@ namespace Org.OpenAPITools.Model
         /// <param name="scapiOrganizationId">Salesforce Commerce Organization ID.</param>
         /// <param name="scapiShortCode">Salesforce Commerce Short Code.</param>
         /// <param name="scapiScopes">Salesforce Commerce API Scopes.</param>
-        public AccountCartAdd(CartIdEnum cartId = default(CartIdEnum), string storeUrl = default(string), string bridgeUrl = default(string), string storeRoot = default(string), string storeKey = default(string), bool validateVersion = false, bool verify = true, string dbTablesPrefix = default(string), string userAgent = default(string), string ftpHost = default(string), string ftpUser = default(string), string ftpPassword = default(string), int ftpPort = default(int), string ftpStoreDir = default(string), string var3dcartPrivateKey = default(string), string var3dcartAccessToken = default(string), string var3dcartapiApiKey = default(string), string amazonSpClientId = default(string), string amazonSpClientSecret = default(string), string amazonSpRefreshToken = default(string), string amazonSpAwsRegion = default(string), string amazonSpApiEnvironment = @"production", string amazonSellerId = default(string), string aspdotnetstorefrontApiUser = default(string), string aspdotnetstorefrontApiPass = default(string), string americommerceAppId = default(string), string americommerceAppSecret = default(string), string americommerceAccessToken = default(string), string americommerceRefreshToken = default(string), string bigcommerceapiAdminAccount = default(string), string bigcommerceapiApiPath = default(string), string bigcommerceapiApiKey = default(string), string bigcommerceapiClientId = default(string), string bigcommerceapiAccessToken = default(string), string bigcommerceapiContext = default(string), string bolApiKey = default(string), string bolApiSecret = default(string), int bolRetailerId = default(int), string bigcartelUserName = default(string), string bigcartelPassword = default(string), string bricklinkConsumerKey = default(string), string bricklinkConsumerSecret = default(string), string bricklinkToken = default(string), string bricklinkTokenSecret = default(string), string demandwareClientId = default(string), string demandwareApiPassword = default(string), string demandwareUserName = default(string), string demandwareUserPassword = default(string), string ebayClientId = default(string), string ebayClientSecret = default(string), string ebayRuname = default(string), string ebayAccessToken = default(string), string ebayRefreshToken = default(string), string ebayEnvironment = @"production", int ebaySiteId = 0, string walmartClientId = default(string), string walmartClientSecret = default(string), string walmartEnvironment = @"production", string walmartChannelType = default(string), string walmartRegion = @"us", string ecwidAcessToken = default(string), string ecwidStoreId = default(string), string lazadaAppId = default(string), string lazadaAppSecret = default(string), string lazadaRefreshToken = default(string), string lazadaRegion = default(string), string lightspeedApiKey = default(string), string lightspeedApiSecret = default(string), string etsyKeystring = default(string), string etsySharedSecret = default(string), string etsyAccessToken = default(string), string etsyTokenSecret = default(string), string etsyClientId = default(string), string etsyRefreshToken = default(string), string facebookAppId = default(string), string facebookAppSecret = default(string), string facebookAccessToken = default(string), string facebookBusinessId = default(string), string netoApiKey = default(string), string netoApiUsername = default(string), string shoplineAccessToken = default(string), string shoplineAppKey = default(string), string shoplineAppSecret = default(string), string shoplineSharedSecret = default(string), string shopifyAccessToken = default(string), string shopifyClientId = default(string), string shopifyApiKey = default(string), string shopifyApiPassword = default(string), string shopifySharedSecret = default(string), string shopeePartnerId = default(string), string shopeePartnerKey = default(string), string shopeeShopId = default(string), string shopeeRefreshToken = default(string), string shopeeRegion = default(string), string shopeeEnvironment = @"production", string shoplazzaAccessToken = default(string), string shoplazzaSharedSecret = default(string), string shopwareAccessKey = default(string), string unasApiKey = default(string), string shopwareApiKey = default(string), string shopwareApiSecret = default(string), string mivaAccessToken = default(string), string mivaSignature = default(string), int tiendanubeUserId = default(int), string tiendanubeAccessToken = default(string), string tiendanubeClientSecret = default(string), string volusionLogin = default(string), string volusionPassword = default(string), string hybrisClientId = default(string), string hybrisClientSecret = default(string), string hybrisUsername = default(string), string hybrisPassword = default(string), List<AccountCartAddHybrisWebsitesInner> hybrisWebsites = default(List<AccountCartAddHybrisWebsitesInner>), string squareClientId = default(string), string squareClientSecret = default(string), string squareRefreshToken = default(string), string squarespaceApiKey = default(string), string squarespaceClientId = default(string), string squarespaceClientSecret = default(string), string squarespaceAccessToken = default(string), string squarespaceRefreshToken = default(string), string commercehqApiKey = default(string), string commercehqApiPassword = default(string), string wcConsumerKey = default(string), string wcConsumerSecret = default(string), string magentoConsumerKey = default(string), string magentoConsumerSecret = default(string), string magentoAccessToken = default(string), string magentoTokenSecret = default(string), string prestashopWebserviceKey = default(string), string wixAppId = default(string), string wixAppSecretKey = default(string), string wixInstanceId = default(string), string wixRefreshToken = default(string), string mercadoLibreAppId = default(string), string mercadoLibreAppSecretKey = default(string), string mercadoLibreRefreshToken = default(string), int zidClientId = default(int), string zidClientSecret = default(string), string zidAccessToken = default(string), string zidAuthorization = default(string), string zidRefreshToken = default(string), string flipkartClientId = default(string), string flipkartClientSecret = default(string), string allegroClientId = default(string), string allegroClientSecret = default(string), string allegroAccessToken = default(string), string allegroRefreshToken = default(string), string allegroEnvironment = @"production", string zohoClientId = default(string), string zohoClientSecret = default(string), string zohoRefreshToken = default(string), string zohoRegion = default(string), string ottoClientId = default(string), string ottoClientSecret = default(string), string ottoAppId = default(string), string ottoRefreshToken = default(string), string ottoEnvironment = @"production", string ottoAccessToken = default(string), string tiktokshopAppKey = default(string), string tiktokshopAppSecret = default(string), string tiktokshopRefreshToken = default(string), string tiktokshopAccessToken = default(string), string sallaClientId = default(string), string sallaClientSecret = default(string), string sallaRefreshToken = default(string), string sallaAccessToken = default(string), string temuAppKey = default(string), string temuAppSecret = default(string), string temuAccessToken = default(string), string temuRegion = default(string), string scapiClientId = default(string), string scapiClientSecret = default(string), string scapiOrganizationId = default(string), string scapiShortCode = default(string), string scapiScopes = default(string))
+        public AccountCartAdd(CartIdEnum cartId = default(CartIdEnum), string storeUrl = default(string), string bridgeUrl = default(string), string storeRoot = default(string), string storeKey = default(string), string label = default(string), string customLabel = default(string), bool validateVersion = false, bool verify = true, string dbTablesPrefix = default(string), string userAgent = default(string), string ftpHost = default(string), string ftpUser = default(string), string ftpPassword = default(string), int ftpPort = default(int), string ftpStoreDir = default(string), string var3dcartPrivateKey = default(string), string var3dcartAccessToken = default(string), string var3dcartapiApiKey = default(string), string amazonSpClientId = default(string), string amazonSpClientSecret = default(string), string amazonSpRefreshToken = default(string), string amazonSpAwsRegion = default(string), string amazonSpApiEnvironment = @"production", string amazonSellerId = default(string), string aspdotnetstorefrontApiUser = default(string), string aspdotnetstorefrontApiPass = default(string), string americommerceAppId = default(string), string americommerceAppSecret = default(string), string americommerceAccessToken = default(string), string americommerceRefreshToken = default(string), string bigcommerceapiAdminAccount = default(string), string bigcommerceapiApiPath = default(string), string bigcommerceapiApiKey = default(string), string bigcommerceapiClientId = default(string), string bigcommerceapiAccessToken = default(string), string bigcommerceapiContext = default(string), string bolApiKey = default(string), string bolApiSecret = default(string), int bolRetailerId = default(int), string bigcartelUserName = default(string), string bigcartelPassword = default(string), string bricklinkConsumerKey = default(string), string bricklinkConsumerSecret = default(string), string bricklinkToken = default(string), string bricklinkTokenSecret = default(string), string demandwareClientId = default(string), string demandwareApiPassword = default(string), string demandwareUserName = default(string), string demandwareUserPassword = default(string), string ebayClientId = default(string), string ebayClientSecret = default(string), string ebayRuname = default(string), string ebayAccessToken = default(string), string ebayRefreshToken = default(string), string ebayEnvironment = @"production", int ebaySiteId = 0, string walmartClientId = default(string), string walmartClientSecret = default(string), string walmartEnvironment = @"production", string walmartChannelType = default(string), string walmartRegion = @"us", string ecwidAcessToken = default(string), string ecwidStoreId = default(string), string lazadaAppId = default(string), string lazadaAppSecret = default(string), string lazadaRefreshToken = default(string), string lazadaRegion = default(string), string lightspeedApiKey = default(string), string lightspeedApiSecret = default(string), string etsyKeystring = default(string), string etsySharedSecret = default(string), string etsyAccessToken = default(string), string etsyTokenSecret = default(string), string etsyClientId = default(string), string etsyRefreshToken = default(string), string facebookAppId = default(string), string facebookAppSecret = default(string), string facebookAccessToken = default(string), string facebookBusinessId = default(string), string netoApiKey = default(string), string netoApiUsername = default(string), string shoplineAccessToken = default(string), string shoplineAppKey = default(string), string shoplineAppSecret = default(string), string shoplineSharedSecret = default(string), string shopifyAccessToken = default(string), string shopifyClientId = default(string), string shopifyApiKey = default(string), string shopifyApiPassword = default(string), string shopifySharedSecret = default(string), string shopeePartnerId = default(string), string shopeePartnerKey = default(string), string shopeeShopId = default(string), string shopeeRefreshToken = default(string), string shopeeRegion = default(string), string shopeeEnvironment = @"production", string shoplazzaAccessToken = default(string), string shoplazzaSharedSecret = default(string), string shopwareAccessKey = default(string), string unasApiKey = default(string), string shopwareApiKey = default(string), string shopwareApiSecret = default(string), string mivaAccessToken = default(string), string mivaSignature = default(string), int tiendanubeUserId = default(int), string tiendanubeAccessToken = default(string), string tiendanubeClientSecret = default(string), string volusionLogin = default(string), string volusionPassword = default(string), string hybrisClientId = default(string), string hybrisClientSecret = default(string), string hybrisUsername = default(string), string hybrisPassword = default(string), List<AccountCartAddHybrisWebsitesInner> hybrisWebsites = default(List<AccountCartAddHybrisWebsitesInner>), string squareClientId = default(string), string squareClientSecret = default(string), string squareRefreshToken = default(string), string squarespaceApiKey = default(string), string squarespaceClientId = default(string), string squarespaceClientSecret = default(string), string squarespaceAccessToken = default(string), string squarespaceRefreshToken = default(string), string commercehqApiKey = default(string), string commercehqApiPassword = default(string), string wcConsumerKey = default(string), string wcConsumerSecret = default(string), string magentoConsumerKey = default(string), string magentoConsumerSecret = default(string), string magentoAccessToken = default(string), string magentoTokenSecret = default(string), string prestashopWebserviceKey = default(string), string wixAppId = default(string), string wixAppSecretKey = default(string), string wixInstanceId = default(string), string wixRefreshToken = default(string), string mercadoLibreAppId = default(string), string mercadoLibreAppSecretKey = default(string), string mercadoLibreRefreshToken = default(string), int zidClientId = default(int), string zidClientSecret = default(string), string zidAccessToken = default(string), string zidAuthorization = default(string), string zidRefreshToken = default(string), string jumpsellerClientId = default(string), string jumpsellerClientSecret = default(string), string jumpsellerRefreshToken = default(string), string jumpsellerLogin = default(string), string jumpsellerAuthtoken = default(string), string flipkartClientId = default(string), string flipkartClientSecret = default(string), string allegroClientId = default(string), string allegroClientSecret = default(string), string allegroAccessToken = default(string), string allegroRefreshToken = default(string), string allegroEnvironment = @"production", string zohoClientId = default(string), string zohoClientSecret = default(string), string zohoRefreshToken = default(string), string zohoRegion = default(string), string ottoClientId = default(string), string ottoClientSecret = default(string), string ottoAppId = default(string), string ottoRefreshToken = default(string), string ottoEnvironment = @"production", string ottoAccessToken = default(string), string tiktokshopAppKey = default(string), string tiktokshopAppSecret = default(string), string tiktokshopRefreshToken = default(string), string tiktokshopAccessToken = default(string), string sallaClientId = default(string), string sallaClientSecret = default(string), string sallaRefreshToken = default(string), string sallaAccessToken = default(string), string temuAppKey = default(string), string temuAppSecret = default(string), string temuAccessToken = default(string), string temuRegion = default(string), string scapiClientId = default(string), string scapiClientSecret = default(string), string scapiOrganizationId = default(string), string scapiShortCode = default(string), string scapiScopes = default(string))
         {
             this.CartId = cartId;
             this.StoreUrl = storeUrl;
             this.BridgeUrl = bridgeUrl;
             this.StoreRoot = storeRoot;
             this.StoreKey = storeKey;
+            this.Label = label;
+            this.CustomLabel = customLabel;
             this.ValidateVersion = validateVersion;
             this.Verify = verify;
             this.DbTablesPrefix = dbTablesPrefix;
@@ -809,6 +818,11 @@ namespace Org.OpenAPITools.Model
             this.ZidAccessToken = zidAccessToken;
             this.ZidAuthorization = zidAuthorization;
             this.ZidRefreshToken = zidRefreshToken;
+            this.JumpsellerClientId = jumpsellerClientId;
+            this.JumpsellerClientSecret = jumpsellerClientSecret;
+            this.JumpsellerRefreshToken = jumpsellerRefreshToken;
+            this.JumpsellerLogin = jumpsellerLogin;
+            this.JumpsellerAuthtoken = jumpsellerAuthtoken;
             this.FlipkartClientId = flipkartClientId;
             this.FlipkartClientSecret = flipkartClientSecret;
             this.AllegroClientId = allegroClientId;
@@ -886,6 +900,26 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "store_key", EmitDefaultValue = false)]
         public string StoreKey { get; set; }
+
+        /// <summary>
+        /// Defines alternative text that has to be attached to the picture
+        /// </summary>
+        /// <value>Defines alternative text that has to be attached to the picture</value>
+        /*
+        <example>This cool image</example>
+        */
+        [DataMember(Name = "label", EmitDefaultValue = false)]
+        public string Label { get; set; }
+
+        /// <summary>
+        /// Defines a custom label for the store in the app
+        /// </summary>
+        /// <value>Defines a custom label for the store in the app</value>
+        /*
+        <example>This is test store</example>
+        */
+        [DataMember(Name = "custom_label", EmitDefaultValue = false)]
+        public string CustomLabel { get; set; }
 
         /// <summary>
         /// Specify if api2cart should validate cart version
@@ -2260,6 +2294,56 @@ namespace Org.OpenAPITools.Model
         public string ZidRefreshToken { get; set; }
 
         /// <summary>
+        /// Jumpseller OAuth2 Client ID
+        /// </summary>
+        /// <value>Jumpseller OAuth2 Client ID</value>
+        /*
+        <example>your_client_id</example>
+        */
+        [DataMember(Name = "jumpseller_client_id", EmitDefaultValue = false)]
+        public string JumpsellerClientId { get; set; }
+
+        /// <summary>
+        /// Jumpseller OAuth2 Client Secret
+        /// </summary>
+        /// <value>Jumpseller OAuth2 Client Secret</value>
+        /*
+        <example>your_client_secret</example>
+        */
+        [DataMember(Name = "jumpseller_client_secret", EmitDefaultValue = false)]
+        public string JumpsellerClientSecret { get; set; }
+
+        /// <summary>
+        /// Jumpseller OAuth2 refresh token
+        /// </summary>
+        /// <value>Jumpseller OAuth2 refresh token</value>
+        /*
+        <example>your_oauth_refresh_token</example>
+        */
+        [DataMember(Name = "jumpseller_refresh_token", EmitDefaultValue = false)]
+        public string JumpsellerRefreshToken { get; set; }
+
+        /// <summary>
+        /// Jumpseller API login
+        /// </summary>
+        /// <value>Jumpseller API login</value>
+        /*
+        <example>your_login</example>
+        */
+        [DataMember(Name = "jumpseller_login", EmitDefaultValue = false)]
+        public string JumpsellerLogin { get; set; }
+
+        /// <summary>
+        /// Jumpseller API auth token
+        /// </summary>
+        /// <value>Jumpseller API auth token</value>
+        /*
+        <example>your_auth_token</example>
+        */
+        [DataMember(Name = "jumpseller_authtoken", EmitDefaultValue = false)]
+        public string JumpsellerAuthtoken { get; set; }
+
+        /// <summary>
         /// Flipkart Client ID
         /// </summary>
         /// <value>Flipkart Client ID</value>
@@ -2612,6 +2696,8 @@ namespace Org.OpenAPITools.Model
             sb.Append("  BridgeUrl: ").Append(BridgeUrl).Append("\n");
             sb.Append("  StoreRoot: ").Append(StoreRoot).Append("\n");
             sb.Append("  StoreKey: ").Append(StoreKey).Append("\n");
+            sb.Append("  Label: ").Append(Label).Append("\n");
+            sb.Append("  CustomLabel: ").Append(CustomLabel).Append("\n");
             sb.Append("  ValidateVersion: ").Append(ValidateVersion).Append("\n");
             sb.Append("  Verify: ").Append(Verify).Append("\n");
             sb.Append("  DbTablesPrefix: ").Append(DbTablesPrefix).Append("\n");
@@ -2749,6 +2835,11 @@ namespace Org.OpenAPITools.Model
             sb.Append("  ZidAccessToken: ").Append(ZidAccessToken).Append("\n");
             sb.Append("  ZidAuthorization: ").Append(ZidAuthorization).Append("\n");
             sb.Append("  ZidRefreshToken: ").Append(ZidRefreshToken).Append("\n");
+            sb.Append("  JumpsellerClientId: ").Append(JumpsellerClientId).Append("\n");
+            sb.Append("  JumpsellerClientSecret: ").Append(JumpsellerClientSecret).Append("\n");
+            sb.Append("  JumpsellerRefreshToken: ").Append(JumpsellerRefreshToken).Append("\n");
+            sb.Append("  JumpsellerLogin: ").Append(JumpsellerLogin).Append("\n");
+            sb.Append("  JumpsellerAuthtoken: ").Append(JumpsellerAuthtoken).Append("\n");
             sb.Append("  FlipkartClientId: ").Append(FlipkartClientId).Append("\n");
             sb.Append("  FlipkartClientSecret: ").Append(FlipkartClientSecret).Append("\n");
             sb.Append("  AllegroClientId: ").Append(AllegroClientId).Append("\n");

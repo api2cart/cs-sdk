@@ -140,6 +140,15 @@ paths:
         schema:
           type: string
         style: form
+      - description: Defines a custom label for the store in the app
+        example: This is test store
+        explode: true
+        in: query
+        name: custom_label
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Set this parameter in order to choose which entity fields you
           want to retrieve
         example: "url,store_key"
@@ -228,6 +237,15 @@ paths:
         explode: true
         in: query
         name: new_store_key
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Defines a custom label for the store in the app
+        example: This is test store
+        explode: true
+        in: query
+        name: custom_label
         required: false
         schema:
           type: string
@@ -1410,6 +1428,51 @@ paths:
         explode: true
         in: query
         name: zid_refresh_token
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Jumpseller OAuth2 Client ID
+        example: your_client_id
+        explode: true
+        in: query
+        name: jumpseller_client_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Jumpseller OAuth2 Client Secret
+        example: your_client_secret
+        explode: true
+        in: query
+        name: jumpseller_client_secret
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Jumpseller OAuth2 refresh token
+        example: your_oauth_refresh_token
+        explode: true
+        in: query
+        name: jumpseller_refresh_token
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Jumpseller API login
+        example: your_login
+        explode: true
+        in: query
+        name: jumpseller_login
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Jumpseller API auth token
+        example: your_auth_token
+        explode: true
+        in: query
+        name: jumpseller_authtoken
         required: false
         schema:
           type: string
@@ -14052,6 +14115,7 @@ components:
         scapi_scopes: "sfcc.catalogs,sfcc.orders,sfcc.products"
         square_client_secret: c8d7077fce7b2b111111111898170695a01473a2ad
         squarespace_api_key: 8f7849d5-1411-47f2-9722-aa81c2a48d95
+        jumpseller_client_secret: your_client_secret
         bricklink_consumer_key: 26F6CDA087D9444EAA71AC09E7A1D39A
         square_client_id: sq0idp-qwer_1pvuTYe9cAf1lmxyQ
         mercado_libre_app_id: "211188015100135"
@@ -14063,6 +14127,7 @@ components:
         bigcommerceapi_context: stores/etplnf8o8v
         bol_api_key: 51369628-feee-11ed-be56-0242ac120002
         shopware_api_key: SWSCS3O1RJBSRNBYQLFIYJN2ZQ
+        jumpseller_authtoken: your_auth_token
         "3dcart_private_key": 7dba81f90bdbe25e7000e73214ca51b
         wix_app_secret_key: 316c0a09-f195-42be-74f6-a02cebb9cae6
         allegro_refresh_token: eyJhbGciOiJSUzI1NiIsInR5cCI6IsfddfdfdeyJ1c2VyX25hbWUiOiI5NDUxMzE1MSIsInNjb3BlIjpbImFsbGVncm86YXBpOm9yZGVyczpyZWFkIiwiYWxsZWdybzphcGk6cHJvZmlsZTp3cml0ZSIsImFsbGVncm86YXBpOnNhbGU6b2ZmZXJzOndyaXRlIiwiYWxsZWdybzphcGk6YmlsbGluZzpyZWFkIiwiYWxsZWdybzphcGk6Y2FtcGFpZ25zIiwiYWxsZWdybzphcGk6ZGlzcHV0ZXMiLCJhbGxlZ3JvOmFwaTpzYWxlOm9mZmVyczpyZWFkIiwiYWxsZWdybzphcGk6YmlkcyIsImFsbGVncm86YXBpOm9yZGVyczp3cml0ZSIsImFsbGVncm86YXBpOnBheW1lbnRzOndyaXRlIiwiYWxsZWdybzphcGk6c2FsZTpzZXR0aW5nczp3cml0ZSIsImFsbGVncm86YXBpOnByb2ZpbGU6cmVhZCIsImFsbGVncm86YXBpOnJhdGluZ3MiLCJhbGxlZ3JvOmFwaTpzYWxlOnNldHRpbmdzOnJlYWQiLCJhbGxlZ3JvOmFwaTpwYXltZW50czpyZWFkIiwiYWxsZWdybzphcGk6bWVzc2FnaW5nIl0sI
@@ -14072,6 +14137,7 @@ components:
         squarespace_client_secret: GPZkUFkIKWg0KLE6rajsFMMYA9ma0udaaq2bYwBDXXX=
         flipkart_client_id: 19414773883a13a850b6a52350b7246499a24
         bigcartel_user_name: subdomain
+        jumpseller_login: your_login
         ebay_access_token: v^1.1#i ... AjRV4yNjA=
         facebook_app_id: "6516912365277570"
         shopify_access_token: igse8e4rdmzkxdi937qe69d59en1imw
@@ -14147,6 +14213,7 @@ components:
         bigcommerceapi_api_path: http://mystore.bigcommerce.com/api/v1
         lightspeed_api_key: cf5444729c2abd6b6a5d983691767cb5
         volusion_login: admin
+        jumpseller_refresh_token: your_oauth_refresh_token
         "3dcartapi_api_key": 82cc921c6a5c67082cc921c6a5c6707e1d6e6862ba3201a
         zid_refresh_token: def50eyfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe657e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65de64a0c865d
         etsy_access_token: igse8e4rdmzkxdi937qe69d59en1imw
@@ -14157,6 +14224,7 @@ components:
         allegro_client_secret: DNHtqdL2WPIefeUhQWYgtXPS23fgbfgasdsGHHJGhg3RTFDQWFGZmVoFRT5IfkQj1E7eR5
         neto_api_key: bbca57d8ff3c3677128112c15556d9e3
         cart_id: Opencart14
+        jumpseller_client_id: your_client_id
         otto_app_id: 6eaef6a3-822e-425b-8mc9-53750063e34d
         bigcommerceapi_admin_account: admin
         demandware_user_name: admin
@@ -14182,6 +14250,7 @@ components:
         etsy_shared_secret: gmz3iz45x2
         bigcommerceapi_api_key: 6b89704cd75738cb0f9f6468d5462aba
         bol_retailer_id: "145001"
+        custom_label: This is test store
         hybris_password: nimda
         shopify_api_key: bbca57d8ff3c3677128112c15556d9e3
         shopee_partner_key: 6a46494b4d746576554646626775617a577542774850636375464d6a736d5598
@@ -14220,6 +14289,7 @@ components:
         ebay_refresh_token: v^1.1#i ... rAewqVasdA=
         magento_consumer_key: ktv4n9rgrj0evjuy2t6p2xlb1f8u5pmy
         flipkart_client_secret: nl5l1lE0vxgv6cV111fHsdlOOIfb0Ms5IR7l4Igs
+        label: This cool image
         walmart_client_secret: 1gf85fea-8974-2648-w12w-rt54284tdf54
         amazon_sp_refresh_token: Atzr|IwEBIPUI-bwRTdDgKNQ_g56C30wGqymtx30c9MdDC7Emwmojhs20k5BBG2hHtJiGZ_7OfG7khd1RuQr6KEst4qyWbo_eXi5S_T_VOxzJUuksG1cFOGFpFK-cnhReNzAeZIpZeJT7_ROy1csEFlQfC8FJS3bsbSkkbTz2ZcTN7_7ey0HVlhyfFizgROeSeOI24Wjs9l_KKzZW0jvi_oC2cxlIcyknnHLK6KMNz2rTXqQJWRtlK9xPJDdbcUa5STA8MQru91cxNBpSkZN_cq9OOELhbsIGKD75y7nZ3yJU4uHQC_9iBQQoFm0biKgi-kEQwOhwws8
         shopline_access_token: igse8e4rdmzkxdi937qe69d59en1imw
@@ -14336,6 +14406,16 @@ components:
           example: ab37fc230bc5df63a5be1b11220949be
           type: string
           name: store_key
+        label:
+          description: Defines alternative text that has to be attached to the picture
+          example: This cool image
+          type: string
+          name: label
+        custom_label:
+          description: Defines a custom label for the store in the app
+          example: This is test store
+          type: string
+          name: custom_label
         validate_version:
           default: false
           description: Specify if api2cart should validate cart version
@@ -15042,6 +15122,31 @@ components:
           example: def50eyfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe657e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65d7e64a0cfe9fe65de64a0c865d
           type: string
           name: zid_refresh_token
+        jumpseller_client_id:
+          description: Jumpseller OAuth2 Client ID
+          example: your_client_id
+          type: string
+          name: jumpseller_client_id
+        jumpseller_client_secret:
+          description: Jumpseller OAuth2 Client Secret
+          example: your_client_secret
+          type: string
+          name: jumpseller_client_secret
+        jumpseller_refresh_token:
+          description: Jumpseller OAuth2 refresh token
+          example: your_oauth_refresh_token
+          type: string
+          name: jumpseller_refresh_token
+        jumpseller_login:
+          description: Jumpseller API login
+          example: your_login
+          type: string
+          name: jumpseller_login
+        jumpseller_authtoken:
+          description: Jumpseller API auth token
+          example: your_auth_token
+          type: string
+          name: jumpseller_authtoken
         flipkart_client_id:
           description: Flipkart Client ID
           example: 19414773883a13a850b6a52350b7246499a24
@@ -42237,7 +42342,9 @@ components:
     AccountCartList_200_response_result_carts_inner:
       example:
         cart_id: cart_id
+        bridge_version: bridge_version
         total_calls: total_calls
+        custom_label: custom_label
         id: id
         url: url
         store_key: store_key
@@ -42250,18 +42357,26 @@ components:
           type: string
         cart_id:
           type: string
+        custom_label:
+          type: string
+        bridge_version:
+          type: string
         total_calls:
           type: string
     AccountCartList_200_response_result:
       example:
         carts:
         - cart_id: cart_id
+          bridge_version: bridge_version
           total_calls: total_calls
+          custom_label: custom_label
           id: id
           url: url
           store_key: store_key
         - cart_id: cart_id
+          bridge_version: bridge_version
           total_calls: total_calls
+          custom_label: custom_label
           id: id
           url: url
           store_key: store_key
@@ -42278,12 +42393,16 @@ components:
         result:
           carts:
           - cart_id: cart_id
+            bridge_version: bridge_version
             total_calls: total_calls
+            custom_label: custom_label
             id: id
             url: url
             store_key: store_key
           - cart_id: cart_id
+            bridge_version: bridge_version
             total_calls: total_calls
+            custom_label: custom_label
             id: id
             url: url
             store_key: store_key

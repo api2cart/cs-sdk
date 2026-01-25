@@ -92,6 +92,24 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'CustomLabel'
+        /// </summary>
+        [Fact]
+        public void CustomLabelTest()
+        {
+            // TODO unit test for the property 'CustomLabel'
+        }
+
+        /// <summary>
+        /// Test the property 'BridgeVersion'
+        /// </summary>
+        [Fact]
+        public void BridgeVersionTest()
+        {
+            // TODO unit test for the property 'BridgeVersion'
+        }
+
+        /// <summary>
         /// Test the property 'TotalCalls'
         /// </summary>
         [Fact]

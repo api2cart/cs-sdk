@@ -39,13 +39,17 @@ namespace Org.OpenAPITools.Model
         /// <param name="url">url.</param>
         /// <param name="storeKey">storeKey.</param>
         /// <param name="cartId">cartId.</param>
+        /// <param name="customLabel">customLabel.</param>
+        /// <param name="bridgeVersion">bridgeVersion.</param>
         /// <param name="totalCalls">totalCalls.</param>
-        public AccountCartList200ResponseResultCartsInner(string id = default(string), string url = default(string), string storeKey = default(string), string cartId = default(string), string totalCalls = default(string))
+        public AccountCartList200ResponseResultCartsInner(string id = default(string), string url = default(string), string storeKey = default(string), string cartId = default(string), string customLabel = default(string), string bridgeVersion = default(string), string totalCalls = default(string))
         {
             this.Id = id;
             this.Url = url;
             this.StoreKey = storeKey;
             this.CartId = cartId;
+            this.CustomLabel = customLabel;
+            this.BridgeVersion = bridgeVersion;
             this.TotalCalls = totalCalls;
         }
 
@@ -74,6 +78,18 @@ namespace Org.OpenAPITools.Model
         public string CartId { get; set; }
 
         /// <summary>
+        /// Gets or Sets CustomLabel
+        /// </summary>
+        [DataMember(Name = "custom_label", EmitDefaultValue = false)]
+        public string CustomLabel { get; set; }
+
+        /// <summary>
+        /// Gets or Sets BridgeVersion
+        /// </summary>
+        [DataMember(Name = "bridge_version", EmitDefaultValue = false)]
+        public string BridgeVersion { get; set; }
+
+        /// <summary>
         /// Gets or Sets TotalCalls
         /// </summary>
         [DataMember(Name = "total_calls", EmitDefaultValue = false)]
@@ -91,6 +107,8 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  StoreKey: ").Append(StoreKey).Append("\n");
             sb.Append("  CartId: ").Append(CartId).Append("\n");
+            sb.Append("  CustomLabel: ").Append(CustomLabel).Append("\n");
+            sb.Append("  BridgeVersion: ").Append(BridgeVersion).Append("\n");
             sb.Append("  TotalCalls: ").Append(TotalCalls).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

@@ -101,6 +101,24 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Label'
+        /// </summary>
+        [Fact]
+        public void LabelTest()
+        {
+            // TODO unit test for the property 'Label'
+        }
+
+        /// <summary>
+        /// Test the property 'CustomLabel'
+        /// </summary>
+        [Fact]
+        public void CustomLabelTest()
+        {
+            // TODO unit test for the property 'CustomLabel'
+        }
+
+        /// <summary>
         /// Test the property 'ValidateVersion'
         /// </summary>
         [Fact]
@@ -1331,6 +1349,51 @@ namespace Org.OpenAPITools.Test.Model
         public void ZidRefreshTokenTest()
         {
             // TODO unit test for the property 'ZidRefreshToken'
+        }
+
+        /// <summary>
+        /// Test the property 'JumpsellerClientId'
+        /// </summary>
+        [Fact]
+        public void JumpsellerClientIdTest()
+        {
+            // TODO unit test for the property 'JumpsellerClientId'
+        }
+
+        /// <summary>
+        /// Test the property 'JumpsellerClientSecret'
+        /// </summary>
+        [Fact]
+        public void JumpsellerClientSecretTest()
+        {
+            // TODO unit test for the property 'JumpsellerClientSecret'
+        }
+
+        /// <summary>
+        /// Test the property 'JumpsellerRefreshToken'
+        /// </summary>
+        [Fact]
+        public void JumpsellerRefreshTokenTest()
+        {
+            // TODO unit test for the property 'JumpsellerRefreshToken'
+        }
+
+        /// <summary>
+        /// Test the property 'JumpsellerLogin'
+        /// </summary>
+        [Fact]
+        public void JumpsellerLoginTest()
+        {
+            // TODO unit test for the property 'JumpsellerLogin'
+        }
+
+        /// <summary>
+        /// Test the property 'JumpsellerAuthtoken'
+        /// </summary>
+        [Fact]
+        public void JumpsellerAuthtokenTest()
+        {
+            // TODO unit test for the property 'JumpsellerAuthtoken'
         }
 
         /// <summary>
