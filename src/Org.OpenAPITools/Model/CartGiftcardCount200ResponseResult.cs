@@ -36,7 +36,7 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="CartGiftcardCount200ResponseResult" /> class.
         /// </summary>
         /// <param name="giftCardsCount">giftCardsCount.</param>
-        public CartGiftcardCount200ResponseResult(string giftCardsCount = default(string))
+        public CartGiftcardCount200ResponseResult(int giftCardsCount = default(int))
         {
             this.GiftCardsCount = giftCardsCount;
         }
@@ -45,7 +45,7 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets GiftCardsCount
         /// </summary>
         [DataMember(Name = "gift_cards_count", EmitDefaultValue = false)]
-        public string GiftCardsCount { get; set; }
+        public int GiftCardsCount { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

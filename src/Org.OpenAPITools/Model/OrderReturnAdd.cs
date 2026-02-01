@@ -45,6 +45,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="returnStatusId">Defines return request status (required).</param>
         /// <param name="returnActionId">Defines return request action (required).</param>
         /// <param name="returnReasonId">Defines return request reason (required).</param>
+        /// <param name="returnAction">Defines return request action.</param>
         /// <param name="returnReason">Defines return request reason.</param>
         /// <param name="itemRestock">Boolean, whether or not to add the line items back to the store inventory. (default to false).</param>
         /// <param name="staffNote">Specifies staff note.</param>
@@ -53,7 +54,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="rejectReason">Defines return reject reason.</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
         /// <param name="orderProducts">orderProducts (required).</param>
-        public OrderReturnAdd(string orderId = default(string), string storeId = default(string), string returnStatusId = default(string), string returnActionId = default(string), string returnReasonId = default(string), string returnReason = default(string), bool itemRestock = false, string staffNote = default(string), string comment = default(string), bool sendNotifications = false, string rejectReason = default(string), string idempotencyKey = default(string), List<OrderReturnAddOrderProductsInner> orderProducts = default(List<OrderReturnAddOrderProductsInner>))
+        public OrderReturnAdd(string orderId = default(string), string storeId = default(string), string returnStatusId = default(string), string returnActionId = default(string), string returnReasonId = default(string), string returnAction = default(string), string returnReason = default(string), bool itemRestock = false, string staffNote = default(string), string comment = default(string), bool sendNotifications = false, string rejectReason = default(string), string idempotencyKey = default(string), List<OrderReturnAddOrderProductsInner> orderProducts = default(List<OrderReturnAddOrderProductsInner>))
         {
             // to ensure "returnStatusId" is required (not null)
             if (returnStatusId == null)
@@ -81,6 +82,7 @@ namespace Org.OpenAPITools.Model
             this.OrderProducts = orderProducts;
             this.OrderId = orderId;
             this.StoreId = storeId;
+            this.ReturnAction = returnAction;
             this.ReturnReason = returnReason;
             this.ItemRestock = itemRestock;
             this.StaffNote = staffNote;
@@ -139,6 +141,16 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "return_reason_id", IsRequired = true, EmitDefaultValue = true)]
         public string ReturnReasonId { get; set; }
+
+        /// <summary>
+        /// Defines return request action
+        /// </summary>
+        /// <value>Defines return request action</value>
+        /*
+        <example>refund</example>
+        */
+        [DataMember(Name = "return_action", EmitDefaultValue = false)]
+        public string ReturnAction { get; set; }
 
         /// <summary>
         /// Defines return request reason
@@ -229,6 +241,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  ReturnStatusId: ").Append(ReturnStatusId).Append("\n");
             sb.Append("  ReturnActionId: ").Append(ReturnActionId).Append("\n");
             sb.Append("  ReturnReasonId: ").Append(ReturnReasonId).Append("\n");
+            sb.Append("  ReturnAction: ").Append(ReturnAction).Append("\n");
             sb.Append("  ReturnReason: ").Append(ReturnReason).Append("\n");
             sb.Append("  ItemRestock: ").Append(ItemRestock).Append("\n");
             sb.Append("  StaffNote: ").Append(StaffNote).Append("\n");

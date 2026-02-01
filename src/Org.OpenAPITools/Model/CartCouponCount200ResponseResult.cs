@@ -36,7 +36,7 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="CartCouponCount200ResponseResult" /> class.
         /// </summary>
         /// <param name="couponsCount">couponsCount.</param>
-        public CartCouponCount200ResponseResult(string couponsCount = default(string))
+        public CartCouponCount200ResponseResult(int couponsCount = default(int))
         {
             this.CouponsCount = couponsCount;
         }
@@ -45,7 +45,7 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets CouponsCount
         /// </summary>
         [DataMember(Name = "coupons_count", EmitDefaultValue = false)]
-        public string CouponsCount { get; set; }
+        public int CouponsCount { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

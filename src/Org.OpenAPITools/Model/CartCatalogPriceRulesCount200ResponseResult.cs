@@ -36,7 +36,7 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="CartCatalogPriceRulesCount200ResponseResult" /> class.
         /// </summary>
         /// <param name="catalogPriceRulesCount">catalogPriceRulesCount.</param>
-        public CartCatalogPriceRulesCount200ResponseResult(string catalogPriceRulesCount = default(string))
+        public CartCatalogPriceRulesCount200ResponseResult(int catalogPriceRulesCount = default(int))
         {
             this.CatalogPriceRulesCount = catalogPriceRulesCount;
         }
@@ -45,7 +45,7 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets CatalogPriceRulesCount
         /// </summary>
         [DataMember(Name = "catalog_price_rules_count", EmitDefaultValue = false)]
-        public string CatalogPriceRulesCount { get; set; }
+        public int CatalogPriceRulesCount { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

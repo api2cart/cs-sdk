@@ -137,6 +137,24 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ReturnAction'
+        /// </summary>
+        [Fact]
+        public void ReturnActionTest()
+        {
+            // TODO unit test for the property 'ReturnAction'
+        }
+
+        /// <summary>
+        /// Test the property 'ReturnReason'
+        /// </summary>
+        [Fact]
+        public void ReturnReasonTest()
+        {
+            // TODO unit test for the property 'ReturnReason'
+        }
+
+        /// <summary>
         /// Test the property 'IdempotencyKey'
         /// </summary>
         [Fact]

@@ -29122,6 +29122,7 @@ components:
         comment: This coole order
         staff_note: Test
         order_id: 25
+        return_action: refund
       properties:
         order_id:
           description: Defines the order id
@@ -29148,6 +29149,11 @@ components:
           example: broken
           type: string
           name: return_reason_id
+        return_action:
+          description: Defines return request action
+          example: refund
+          type: string
+          name: return_action
         return_reason:
           description: Defines return request reason
           example: broken
@@ -29202,6 +29208,10 @@ components:
       example:
         store_id: "1"
         item_restock: true
+        return_reason: broken
+        send_notifications: true
+        return_id: "200000002"
+        reject_reason: ORDER_UNPAID
         order_products:
         - order_product_id: "125, where {x} - 1,2,3,... etc"
           order_product_quantity: "1, where {x} - 1,2,3,... etc"
@@ -29211,14 +29221,12 @@ components:
           order_product_quantity: "1, where {x} - 1,2,3,... etc"
           order_product_status: pending
           order_product_action_id: "REFUND, where {x} - 1,2,3,... etc"
-        send_notifications: true
-        return_id: "200000002"
         idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         return_status_id: RETURNED
         comment: This coole order
         staff_note: Test
-        reject_reason: ORDER_UNPAID
         order_id: 25
+        return_action: refund
       properties:
         return_id:
           description: Return ID
@@ -29268,6 +29276,16 @@ components:
           example: ORDER_UNPAID
           type: string
           name: reject_reason
+        return_action:
+          description: Defines return request action
+          example: refund
+          type: string
+          name: return_action
+        return_reason:
+          description: Defines return request reason
+          example: broken
+          type: string
+          name: return_reason
         idempotency_key:
           description: A unique identifier associated with a specific request. Repeated
             requests with the same <strong>idempotency_key</strong> return a cached
@@ -43424,14 +43442,14 @@ components:
           $ref: '#/components/schemas/CartDelete_200_response_result'
     CartCatalogPriceRulesCount_200_response_result:
       example:
-        catalog_price_rules_count: catalog_price_rules_count
+        catalog_price_rules_count: 6
       properties:
         catalog_price_rules_count:
-          type: string
+          type: integer
     CartCatalogPriceRulesCount_200_response:
       example:
         result:
-          catalog_price_rules_count: catalog_price_rules_count
+          catalog_price_rules_count: 6
         return_message: return_message
         return_code: 0
       properties:
@@ -43443,14 +43461,14 @@ components:
           $ref: '#/components/schemas/CartCatalogPriceRulesCount_200_response_result'
     CartCouponCount_200_response_result:
       example:
-        coupons_count: coupons_count
+        coupons_count: 6
       properties:
         coupons_count:
-          type: string
+          type: integer
     CartCouponCount_200_response:
       example:
         result:
-          coupons_count: coupons_count
+          coupons_count: 6
         return_message: return_message
         return_code: 0
       properties:
@@ -43481,14 +43499,14 @@ components:
           $ref: '#/components/schemas/CartCouponAdd_200_response_result'
     CartGiftcardCount_200_response_result:
       example:
-        gift_cards_count: gift_cards_count
+        gift_cards_count: 6
       properties:
         gift_cards_count:
-          type: string
+          type: integer
     CartGiftcardCount_200_response:
       example:
         result:
-          gift_cards_count: gift_cards_count
+          gift_cards_count: 6
         return_message: return_message
         return_code: 0
       properties:
