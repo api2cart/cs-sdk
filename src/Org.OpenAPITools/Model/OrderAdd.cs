@@ -88,7 +88,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="totalPrice">Defines order&#39;s total price.</param>
         /// <param name="totalPaid">Defines total paid amount for the order.</param>
         /// <param name="totalWeight">Defines the sum of all line item weights in grams for the order.</param>
-        /// <param name="pricesIncTax">Indicates whether prices and subtotal includes tax. (default to false).</param>
+        /// <param name="pricesIncTax">Indicates whether prices and subtotal include tax. (default to false).</param>
         /// <param name="shippingPrice">Specifies order&#39;s shipping price (default to 0M).</param>
         /// <param name="shippingTax">Specifies order&#39;s shipping price tax.</param>
         /// <param name="discount">Specifies order&#39;s discount.</param>
@@ -722,9 +722,9 @@ namespace Org.OpenAPITools.Model
         public int TotalWeight { get; set; }
 
         /// <summary>
-        /// Indicates whether prices and subtotal includes tax.
+        /// Indicates whether prices and subtotal include tax.
         /// </summary>
-        /// <value>Indicates whether prices and subtotal includes tax.</value>
+        /// <value>Indicates whether prices and subtotal include tax.</value>
         /*
         <example>true</example>
         */

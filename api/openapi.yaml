@@ -27923,7 +27923,7 @@ components:
           name: total_weight
         prices_inc_tax:
           default: false
-          description: Indicates whether prices and subtotal includes tax.
+          description: Indicates whether prices and subtotal include tax.
           example: true
           type: boolean
           name: prices_inc_tax
@@ -32599,6 +32599,7 @@ components:
         manage_stock: false
         tax_class_id: 9
         auction_confidentiality_level: public
+        prices_inc_tax: true
         shop_section_id: 12345678
         min_order_quantity: 1
         url: /product_slug
@@ -32963,6 +32964,12 @@ components:
           example: 10.5
           type: number
           name: unit_price
+        prices_inc_tax:
+          default: false
+          description: Indicates whether prices include tax.
+          example: true
+          type: boolean
+          name: prices_inc_tax
         quantity:
           default: 0
           description: Defines product's quantity that has to be added
@@ -34183,6 +34190,7 @@ components:
         tax_class_id: 9
         length: 56.12
         lang_id: 3
+        prices_inc_tax: true
         unit_price: 10.5
         shop_section_id: 12345678
         min_order_quantity: 1
@@ -34317,6 +34325,12 @@ components:
           example: Short description. This is very short description
           type: string
           name: short_description
+        prices_inc_tax:
+          default: false
+          description: Indicates whether prices include tax.
+          example: true
+          type: boolean
+          name: prices_inc_tax
         price:
           description: Defines new product's price
           example: 99.9
@@ -38035,6 +38049,7 @@ components:
         tax_class_id: 9
         lang_id: 3
         unit_price: 10.5
+        prices_inc_tax: true
         url: /product_variant_slug
         measure_unit: Piece
         special_price: 56.9
@@ -38176,6 +38191,12 @@ components:
           example: 10.5
           type: number
           name: unit_price
+        prices_inc_tax:
+          default: false
+          description: Indicates whether prices include tax.
+          example: true
+          type: boolean
+          name: prices_inc_tax
         quantity:
           default: 0
           description: Defines product variant's quantity that has to be added
@@ -38877,6 +38898,7 @@ components:
         tax_class_id: 9
         length: 56.12
         lang_id: 3
+        prices_inc_tax: true
         unit_price: 10.5
         measure_unit: Piece
         special_price: 56.9
@@ -39033,6 +39055,12 @@ components:
           example: 4
           type: number
           name: reduce_quantity
+        prices_inc_tax:
+          default: false
+          description: Indicates whether prices include tax.
+          example: true
+          type: boolean
+          name: prices_inc_tax
         price:
           description: Defines new product's variant price
           example: 99.9

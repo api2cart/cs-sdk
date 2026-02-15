@@ -110,6 +110,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PricesIncTax'
+        /// </summary>
+        [Fact]
+        public void PricesIncTaxTest()
+        {
+            // TODO unit test for the property 'PricesIncTax'
+        }
+
+        /// <summary>
         /// Test the property 'Price'
         /// </summary>
         [Fact]
