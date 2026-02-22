@@ -80,6 +80,7 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? count = null;
+            //int? start = null;
             //string? pageCursor = null;
             //string? storeId = null;
             //string? findValue = null;
@@ -89,7 +90,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? modifiedTo = null;
             //string? modifiedFrom = null;
             //string? responseFields = null;
-            //var response = instance.TaxClassList(count, pageCursor, storeId, findValue, findWhere, createdTo, createdFrom, modifiedTo, modifiedFrom, responseFields);
+            //var response = instance.TaxClassList(count, start, pageCursor, storeId, findValue, findWhere, createdTo, createdFrom, modifiedTo, modifiedFrom, responseFields);
             //Assert.IsType<ModelResponseTaxClassList>(response);
         }
     }

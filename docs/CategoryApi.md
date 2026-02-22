@@ -790,7 +790,7 @@ catch (ApiException e)
 
 <a id="categoryimageadd"></a>
 # **CategoryImageAdd**
-> CategoryImageAdd200Response CategoryImageAdd (string categoryId, string imageName, string url, string type, string? storeId = null, string? label = null, string? mime = null, int? position = null, string? idempotencyKey = null)
+> CategoryImageAdd200Response CategoryImageAdd (string categoryId, string imageName, string url, string type, string? storeId = null, string? label = null, string? mime = null, int? position = null, bool? applyToTranslations = null, string? idempotencyKey = null)
 
 category.image.add
 
@@ -830,12 +830,13 @@ namespace Example
             var label = This cool image;  // string? | Defines alternative text that has to be attached to the picture (optional) 
             var mime = image/jpeg;  // string? | Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional) 
             var position = 5;  // int? | Defines image’s position in the list (optional)  (default to 0)
+            var applyToTranslations = true;  // bool? | Defines whether to add image to all category translations (optional)  (default to true)
             var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // category.image.add
-                CategoryImageAdd200Response result = apiInstance.CategoryImageAdd(categoryId, imageName, url, type, storeId, label, mime, position, idempotencyKey);
+                CategoryImageAdd200Response result = apiInstance.CategoryImageAdd(categoryId, imageName, url, type, storeId, label, mime, position, applyToTranslations, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -856,7 +857,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.image.add
-    ApiResponse<CategoryImageAdd200Response> response = apiInstance.CategoryImageAddWithHttpInfo(categoryId, imageName, url, type, storeId, label, mime, position, idempotencyKey);
+    ApiResponse<CategoryImageAdd200Response> response = apiInstance.CategoryImageAddWithHttpInfo(categoryId, imageName, url, type, storeId, label, mime, position, applyToTranslations, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -881,6 +882,7 @@ catch (ApiException e)
 | **label** | **string?** | Defines alternative text that has to be attached to the picture | [optional]  |
 | **mime** | **string?** | Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. | [optional]  |
 | **position** | **int?** | Defines image’s position in the list | [optional] [default to 0] |
+| **applyToTranslations** | **bool?** | Defines whether to add image to all category translations | [optional] [default to true] |
 | **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
@@ -906,7 +908,7 @@ catch (ApiException e)
 
 <a id="categoryimagedelete"></a>
 # **CategoryImageDelete**
-> AttributeDelete200Response CategoryImageDelete (string categoryId, string imageId, string? storeId = null)
+> AttributeDelete200Response CategoryImageDelete (string categoryId, string imageId, string? storeId = null, bool? applyToTranslations = null)
 
 category.image.delete
 
@@ -941,11 +943,12 @@ namespace Example
             var categoryId = 6;  // string | Defines category id where the image should be deleted
             var imageId = 82950b84f468edff480680f99cedbe0d;  // string | Define image id
             var storeId = 1;  // string? | Store Id (optional) 
+            var applyToTranslations = false;  // bool? | Defines whether to delete image from all category translations (optional)  (default to true)
 
             try
             {
                 // category.image.delete
-                AttributeDelete200Response result = apiInstance.CategoryImageDelete(categoryId, imageId, storeId);
+                AttributeDelete200Response result = apiInstance.CategoryImageDelete(categoryId, imageId, storeId, applyToTranslations);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -966,7 +969,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.image.delete
-    ApiResponse<AttributeDelete200Response> response = apiInstance.CategoryImageDeleteWithHttpInfo(categoryId, imageId, storeId);
+    ApiResponse<AttributeDelete200Response> response = apiInstance.CategoryImageDeleteWithHttpInfo(categoryId, imageId, storeId, applyToTranslations);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -986,6 +989,7 @@ catch (ApiException e)
 | **categoryId** | **string** | Defines category id where the image should be deleted |  |
 | **imageId** | **string** | Define image id |  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **applyToTranslations** | **bool?** | Defines whether to delete image from all category translations | [optional] [default to true] |
 
 ### Return type
 

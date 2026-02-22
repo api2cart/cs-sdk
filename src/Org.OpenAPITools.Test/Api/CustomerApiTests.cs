@@ -87,6 +87,7 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string customerId = null;
+            //int? start = null;
             //int? count = null;
             //string? pageCursor = null;
             //string? storeId = null;
@@ -94,7 +95,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.CustomerAttributeList(customerId, count, pageCursor, storeId, langId, responseFields, varParams, exclude);
+            //var response = instance.CustomerAttributeList(customerId, start, count, pageCursor, storeId, langId, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseCustomerAttributeList>(response);
         }
 

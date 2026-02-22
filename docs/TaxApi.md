@@ -119,7 +119,7 @@ catch (ApiException e)
 
 <a id="taxclasslist"></a>
 # **TaxClassList**
-> ModelResponseTaxClassList TaxClassList (int? count = null, string? pageCursor = null, string? storeId = null, string? findValue = null, string? findWhere = null, string? createdTo = null, string? createdFrom = null, string? modifiedTo = null, string? modifiedFrom = null, string? responseFields = null)
+> ModelResponseTaxClassList TaxClassList (int? count = null, int? start = null, string? pageCursor = null, string? storeId = null, string? findValue = null, string? findWhere = null, string? createdTo = null, string? createdFrom = null, string? modifiedTo = null, string? modifiedFrom = null, string? responseFields = null)
 
 tax.class.list
 
@@ -152,6 +152,7 @@ namespace Example
 
             var apiInstance = new TaxApi(config);
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
             var findValue = tax;  // string? | Entity search that is specified by some value (optional) 
@@ -165,7 +166,7 @@ namespace Example
             try
             {
                 // tax.class.list
-                ModelResponseTaxClassList result = apiInstance.TaxClassList(count, pageCursor, storeId, findValue, findWhere, createdTo, createdFrom, modifiedTo, modifiedFrom, responseFields);
+                ModelResponseTaxClassList result = apiInstance.TaxClassList(count, start, pageCursor, storeId, findValue, findWhere, createdTo, createdFrom, modifiedTo, modifiedFrom, responseFields);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -186,7 +187,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // tax.class.list
-    ApiResponse<ModelResponseTaxClassList> response = apiInstance.TaxClassListWithHttpInfo(count, pageCursor, storeId, findValue, findWhere, createdTo, createdFrom, modifiedTo, modifiedFrom, responseFields);
+    ApiResponse<ModelResponseTaxClassList> response = apiInstance.TaxClassListWithHttpInfo(count, start, pageCursor, storeId, findValue, findWhere, createdTo, createdFrom, modifiedTo, modifiedFrom, responseFields);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -204,6 +205,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **findValue** | **string?** | Entity search that is specified by some value | [optional]  |

@@ -219,7 +219,7 @@ catch (ApiException e)
 
 <a id="customerattributelist"></a>
 # **CustomerAttributeList**
-> ModelResponseCustomerAttributeList CustomerAttributeList (string customerId, int? count = null, string? pageCursor = null, string? storeId = null, string? langId = null, string? responseFields = null, string? varParams = null, string? exclude = null)
+> ModelResponseCustomerAttributeList CustomerAttributeList (string customerId, int? start = null, int? count = null, string? pageCursor = null, string? storeId = null, string? langId = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 customer.attribute.list
 
@@ -252,6 +252,7 @@ namespace Example
 
             var apiInstance = new CustomerApi(config);
             var customerId = 5;  // string | Retrieves orders specified by customer id
+            var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
             var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
@@ -263,7 +264,7 @@ namespace Example
             try
             {
                 // customer.attribute.list
-                ModelResponseCustomerAttributeList result = apiInstance.CustomerAttributeList(customerId, count, pageCursor, storeId, langId, responseFields, varParams, exclude);
+                ModelResponseCustomerAttributeList result = apiInstance.CustomerAttributeList(customerId, start, count, pageCursor, storeId, langId, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -284,7 +285,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // customer.attribute.list
-    ApiResponse<ModelResponseCustomerAttributeList> response = apiInstance.CustomerAttributeListWithHttpInfo(customerId, count, pageCursor, storeId, langId, responseFields, varParams, exclude);
+    ApiResponse<ModelResponseCustomerAttributeList> response = apiInstance.CustomerAttributeListWithHttpInfo(customerId, start, count, pageCursor, storeId, langId, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -302,6 +303,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **customerId** | **string** | Retrieves orders specified by customer id |  |
+| **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
 | **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |

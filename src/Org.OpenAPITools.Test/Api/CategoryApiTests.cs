@@ -189,8 +189,9 @@ namespace Org.OpenAPITools.Test.Api
             //string? label = null;
             //string? mime = null;
             //int? position = null;
+            //bool? applyToTranslations = null;
             //string? idempotencyKey = null;
-            //var response = instance.CategoryImageAdd(categoryId, imageName, url, type, storeId, label, mime, position, idempotencyKey);
+            //var response = instance.CategoryImageAdd(categoryId, imageName, url, type, storeId, label, mime, position, applyToTranslations, idempotencyKey);
             //Assert.IsType<CategoryImageAdd200Response>(response);
         }
 
@@ -204,7 +205,8 @@ namespace Org.OpenAPITools.Test.Api
             //string categoryId = null;
             //string imageId = null;
             //string? storeId = null;
-            //var response = instance.CategoryImageDelete(categoryId, imageId, storeId);
+            //bool? applyToTranslations = null;
+            //var response = instance.CategoryImageDelete(categoryId, imageId, storeId, applyToTranslations);
             //Assert.IsType<AttributeDelete200Response>(response);
         }
 

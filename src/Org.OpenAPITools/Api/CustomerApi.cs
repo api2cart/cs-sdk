@@ -81,6 +81,7 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Retrieves orders specified by customer id</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -90,7 +91,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCustomerAttributeList</returns>
-        ModelResponseCustomerAttributeList CustomerAttributeList(string customerId, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ModelResponseCustomerAttributeList CustomerAttributeList(string customerId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// customer.attribute.list
@@ -100,6 +101,7 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Retrieves orders specified by customer id</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -109,7 +111,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCustomerAttributeList</returns>
-        ApiResponse<ModelResponseCustomerAttributeList> CustomerAttributeListWithHttpInfo(string customerId, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseCustomerAttributeList> CustomerAttributeListWithHttpInfo(string customerId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// customer.count
         /// </summary>
@@ -502,6 +504,7 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Retrieves orders specified by customer id</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -512,7 +515,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCustomerAttributeList</returns>
-        System.Threading.Tasks.Task<ModelResponseCustomerAttributeList> CustomerAttributeListAsync(string customerId, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseCustomerAttributeList> CustomerAttributeListAsync(string customerId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// customer.attribute.list
@@ -522,6 +525,7 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Retrieves orders specified by customer id</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -532,7 +536,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCustomerAttributeList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseCustomerAttributeList>> CustomerAttributeListWithHttpInfoAsync(string customerId, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCustomerAttributeList>> CustomerAttributeListWithHttpInfoAsync(string customerId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// customer.count
         /// </summary>
@@ -1335,6 +1339,7 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Retrieves orders specified by customer id</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -1344,9 +1349,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCustomerAttributeList</returns>
-        public ModelResponseCustomerAttributeList CustomerAttributeList(string customerId, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public ModelResponseCustomerAttributeList CustomerAttributeList(string customerId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerAttributeList> localVarResponse = CustomerAttributeListWithHttpInfo(customerId, count, pageCursor, storeId, langId, responseFields, varParams, exclude);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerAttributeList> localVarResponse = CustomerAttributeListWithHttpInfo(customerId, start, count, pageCursor, storeId, langId, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -1355,6 +1360,7 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Retrieves orders specified by customer id</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -1364,7 +1370,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCustomerAttributeList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerAttributeList> CustomerAttributeListWithHttpInfo(string customerId, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerAttributeList> CustomerAttributeListWithHttpInfo(string customerId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'customerId' is set
             if (customerId == null)
@@ -1395,6 +1401,10 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (start != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
+            }
             if (count != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
@@ -1458,6 +1468,7 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Retrieves orders specified by customer id</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -1468,9 +1479,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCustomerAttributeList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseCustomerAttributeList> CustomerAttributeListAsync(string customerId, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseCustomerAttributeList> CustomerAttributeListAsync(string customerId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerAttributeList> localVarResponse = await CustomerAttributeListWithHttpInfoAsync(customerId, count, pageCursor, storeId, langId, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerAttributeList> localVarResponse = await CustomerAttributeListWithHttpInfoAsync(customerId, start, count, pageCursor, storeId, langId, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1479,6 +1490,7 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId">Retrieves orders specified by customer id</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -1489,7 +1501,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCustomerAttributeList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerAttributeList>> CustomerAttributeListWithHttpInfoAsync(string customerId, int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCustomerAttributeList>> CustomerAttributeListWithHttpInfoAsync(string customerId, int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? langId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'customerId' is set
             if (customerId == null)
@@ -1520,6 +1532,10 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (start != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
+            }
             if (count != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));

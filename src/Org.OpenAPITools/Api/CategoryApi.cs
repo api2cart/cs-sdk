@@ -273,10 +273,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="applyToTranslations">Defines whether to add image to all category translations (optional, default to true)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryImageAdd200Response</returns>
-        CategoryImageAdd200Response CategoryImageAdd(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        CategoryImageAdd200Response CategoryImageAdd(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), bool? applyToTranslations = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// category.image.add
@@ -293,10 +294,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="applyToTranslations">Defines whether to add image to all category translations (optional, default to true)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryImageAdd200Response</returns>
-        ApiResponse<CategoryImageAdd200Response> CategoryImageAddWithHttpInfo(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<CategoryImageAdd200Response> CategoryImageAddWithHttpInfo(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), bool? applyToTranslations = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// category.image.delete
         /// </summary>
@@ -307,9 +309,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category id where the image should be deleted</param>
         /// <param name="imageId">Define image id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="applyToTranslations">Defines whether to delete image from all category translations (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AttributeDelete200Response</returns>
-        AttributeDelete200Response CategoryImageDelete(string categoryId, string imageId, string? storeId = default(string?), int operationIndex = 0);
+        AttributeDelete200Response CategoryImageDelete(string categoryId, string imageId, string? storeId = default(string?), bool? applyToTranslations = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// category.image.delete
@@ -321,9 +324,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category id where the image should be deleted</param>
         /// <param name="imageId">Define image id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="applyToTranslations">Defines whether to delete image from all category translations (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttributeDelete200Response</returns>
-        ApiResponse<AttributeDelete200Response> CategoryImageDeleteWithHttpInfo(string categoryId, string imageId, string? storeId = default(string?), int operationIndex = 0);
+        ApiResponse<AttributeDelete200Response> CategoryImageDeleteWithHttpInfo(string categoryId, string imageId, string? storeId = default(string?), bool? applyToTranslations = default(bool?), int operationIndex = 0);
         /// <summary>
         /// category.info
         /// </summary>
@@ -779,11 +783,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="applyToTranslations">Defines whether to add image to all category translations (optional, default to true)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryImageAdd200Response</returns>
-        System.Threading.Tasks.Task<CategoryImageAdd200Response> CategoryImageAddAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryImageAdd200Response> CategoryImageAddAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), bool? applyToTranslations = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.image.add
@@ -800,11 +805,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="applyToTranslations">Defines whether to add image to all category translations (optional, default to true)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryImageAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryImageAdd200Response>> CategoryImageAddWithHttpInfoAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CategoryImageAdd200Response>> CategoryImageAddWithHttpInfoAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), bool? applyToTranslations = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.image.delete
         /// </summary>
@@ -815,10 +821,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category id where the image should be deleted</param>
         /// <param name="imageId">Define image id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="applyToTranslations">Defines whether to delete image from all category translations (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttributeDelete200Response</returns>
-        System.Threading.Tasks.Task<AttributeDelete200Response> CategoryImageDeleteAsync(string categoryId, string imageId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AttributeDelete200Response> CategoryImageDeleteAsync(string categoryId, string imageId, string? storeId = default(string?), bool? applyToTranslations = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.image.delete
@@ -830,10 +837,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category id where the image should be deleted</param>
         /// <param name="imageId">Define image id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="applyToTranslations">Defines whether to delete image from all category translations (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttributeDelete200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttributeDelete200Response>> CategoryImageDeleteWithHttpInfoAsync(string categoryId, string imageId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AttributeDelete200Response>> CategoryImageDeleteWithHttpInfoAsync(string categoryId, string imageId, string? storeId = default(string?), bool? applyToTranslations = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.info
         /// </summary>
@@ -2739,12 +2747,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="applyToTranslations">Defines whether to add image to all category translations (optional, default to true)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryImageAdd200Response</returns>
-        public CategoryImageAdd200Response CategoryImageAdd(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        public CategoryImageAdd200Response CategoryImageAdd(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), bool? applyToTranslations = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> localVarResponse = CategoryImageAddWithHttpInfo(categoryId, imageName, url, type, storeId, label, mime, position, idempotencyKey);
+            Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> localVarResponse = CategoryImageAddWithHttpInfo(categoryId, imageName, url, type, storeId, label, mime, position, applyToTranslations, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -2760,10 +2769,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="applyToTranslations">Defines whether to add image to all category translations (optional, default to true)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryImageAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> CategoryImageAddWithHttpInfo(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> CategoryImageAddWithHttpInfo(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), bool? applyToTranslations = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -2831,6 +2841,10 @@ namespace Org.OpenAPITools.Api
             if (position != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "position", position));
+            }
+            if (applyToTranslations != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "apply_to_translations", applyToTranslations));
             }
             if (idempotencyKey != null)
             {
@@ -2877,13 +2891,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="applyToTranslations">Defines whether to add image to all category translations (optional, default to true)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryImageAdd200Response</returns>
-        public async System.Threading.Tasks.Task<CategoryImageAdd200Response> CategoryImageAddAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CategoryImageAdd200Response> CategoryImageAddAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), bool? applyToTranslations = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> localVarResponse = await CategoryImageAddWithHttpInfoAsync(categoryId, imageName, url, type, storeId, label, mime, position, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response> localVarResponse = await CategoryImageAddWithHttpInfoAsync(categoryId, imageName, url, type, storeId, label, mime, position, applyToTranslations, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2899,11 +2914,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="label">Defines alternative text that has to be attached to the picture (optional)</param>
         /// <param name="mime">Mime type of image http://en.wikipedia.org/wiki/Internet_media_type. (optional)</param>
         /// <param name="position">Defines image’s position in the list (optional, default to 0)</param>
+        /// <param name="applyToTranslations">Defines whether to add image to all category translations (optional, default to true)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryImageAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response>> CategoryImageAddWithHttpInfoAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryImageAdd200Response>> CategoryImageAddWithHttpInfoAsync(string categoryId, string imageName, string url, string type, string? storeId = default(string?), string? label = default(string?), string? mime = default(string?), int? position = default(int?), bool? applyToTranslations = default(bool?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -2972,6 +2988,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "position", position));
             }
+            if (applyToTranslations != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "apply_to_translations", applyToTranslations));
+            }
             if (idempotencyKey != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
@@ -3013,11 +3033,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category id where the image should be deleted</param>
         /// <param name="imageId">Define image id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="applyToTranslations">Defines whether to delete image from all category translations (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AttributeDelete200Response</returns>
-        public AttributeDelete200Response CategoryImageDelete(string categoryId, string imageId, string? storeId = default(string?), int operationIndex = 0)
+        public AttributeDelete200Response CategoryImageDelete(string categoryId, string imageId, string? storeId = default(string?), bool? applyToTranslations = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response> localVarResponse = CategoryImageDeleteWithHttpInfo(categoryId, imageId, storeId);
+            Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response> localVarResponse = CategoryImageDeleteWithHttpInfo(categoryId, imageId, storeId, applyToTranslations);
             return localVarResponse.Data;
         }
 
@@ -3028,9 +3049,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category id where the image should be deleted</param>
         /// <param name="imageId">Define image id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="applyToTranslations">Defines whether to delete image from all category translations (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttributeDelete200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response> CategoryImageDeleteWithHttpInfo(string categoryId, string imageId, string? storeId = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response> CategoryImageDeleteWithHttpInfo(string categoryId, string imageId, string? storeId = default(string?), bool? applyToTranslations = default(bool?), int operationIndex = 0)
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -3073,6 +3095,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
             }
+            if (applyToTranslations != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "apply_to_translations", applyToTranslations));
+            }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryImageDelete";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -3109,12 +3135,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category id where the image should be deleted</param>
         /// <param name="imageId">Define image id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="applyToTranslations">Defines whether to delete image from all category translations (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttributeDelete200Response</returns>
-        public async System.Threading.Tasks.Task<AttributeDelete200Response> CategoryImageDeleteAsync(string categoryId, string imageId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AttributeDelete200Response> CategoryImageDeleteAsync(string categoryId, string imageId, string? storeId = default(string?), bool? applyToTranslations = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response> localVarResponse = await CategoryImageDeleteWithHttpInfoAsync(categoryId, imageId, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response> localVarResponse = await CategoryImageDeleteWithHttpInfoAsync(categoryId, imageId, storeId, applyToTranslations, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3125,10 +3152,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="categoryId">Defines category id where the image should be deleted</param>
         /// <param name="imageId">Define image id</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="applyToTranslations">Defines whether to delete image from all category translations (optional, default to true)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttributeDelete200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response>> CategoryImageDeleteWithHttpInfoAsync(string categoryId, string imageId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response>> CategoryImageDeleteWithHttpInfoAsync(string categoryId, string imageId, string? storeId = default(string?), bool? applyToTranslations = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -3170,6 +3198,10 @@ namespace Org.OpenAPITools.Api
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (applyToTranslations != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "apply_to_translations", applyToTranslations));
             }
 
             localVarRequestOptions.Operation = "CategoryApi.CategoryImageDelete";

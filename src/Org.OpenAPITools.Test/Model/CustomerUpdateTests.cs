@@ -191,6 +191,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Password'
+        /// </summary>
+        [Fact]
+        public void PasswordTest()
+        {
+            // TODO unit test for the property 'Password'
+        }
+
+        /// <summary>
         /// Test the property 'StoreId'
         /// </summary>
         [Fact]

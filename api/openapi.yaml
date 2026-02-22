@@ -6293,6 +6293,16 @@ paths:
           default: 0
           type: integer
         style: form
+      - description: Defines whether to add image to all category translations
+        example: true
+        explode: true
+        in: query
+        name: apply_to_translations
+        required: false
+        schema:
+          default: true
+          type: boolean
+        style: form
       - description: A unique identifier associated with a specific request. Repeated
           requests with the same <strong>idempotency_key</strong> return a cached
           response without re-executing the business logic. <strong>Please note that
@@ -6349,6 +6359,16 @@ paths:
         required: false
         schema:
           type: string
+        style: form
+      - description: Defines whether to delete image from all category translations
+        example: false
+        explode: true
+        in: query
+        name: apply_to_translations
+        required: false
+        schema:
+          default: true
+          type: boolean
         style: form
       responses:
         "200":
@@ -6964,6 +6984,16 @@ paths:
       description: Get attributes for specific customer
       operationId: CustomerAttributeList
       parameters:
+      - description: This parameter sets the number from which you want to get entities
+        example: 0
+        explode: true
+        in: query
+        name: start
+        required: false
+        schema:
+          default: 0
+          type: integer
+        style: form
       - description: This parameter sets the entity amount that has to be retrieved.
           Max allowed count=250
         example: 20
@@ -13599,6 +13629,16 @@ paths:
           default: 10
           type: integer
         style: form
+      - description: This parameter sets the number from which you want to get entities
+        example: 0
+        explode: true
+        in: query
+        name: start
+        required: false
+        schema:
+          default: 0
+          type: integer
+        style: form
       - description: Used to retrieve entities via cursor-based pagination (it can't
           be used with any other filtering parameter)
         example: ""
@@ -14331,6 +14371,7 @@ components:
           - Gambio
           - Hybris
           - JooCart
+          - Jumpseller
           - Lazada
           - LightSpeed
           - Magento1212
@@ -22363,6 +22404,7 @@ components:
         last_name: Smith
         tags: "tag1,tag2"
         birth_day: 2013-02-26 15:00:00
+        password: fd5gfd5g75fd
         group_id: 3
         phone: "56686868654"
         group_ids: "1,2,3"
@@ -22458,6 +22500,11 @@ components:
           example: disabled
           type: string
           name: status
+        password:
+          description: Defines customer's unique password
+          example: fd5gfd5g75fd
+          type: string
+          name: password
         store_id:
           description: Store Id
           example: "1"
