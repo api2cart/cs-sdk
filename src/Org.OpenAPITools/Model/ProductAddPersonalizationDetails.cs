@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Org.OpenAPITools.Client.OpenAPIDateConverter;
 namespace Org.OpenAPITools.Model
 {
     /// <summary>
-    /// Defines personalization settings for the listing. To enable personalization, is_personalizable must be set to true. When enabled, additional fields may be used to configure the personalization experience, including whether it is required (personalization_is_required), the maximum character limit (personalization_char_count_max), and buyer instructions (personalization_instructions). All related fields are only applicable if personalization is enabled.
+    /// &lt;strong&gt;Deprecated.&lt;/strong&gt; Use &lt;strong&gt;personalization_questions&lt;/strong&gt; instead for setting personalization questions. Defines legacy personalization settings for the listing. To enable personalization, is_personalizable must be set to true. When enabled, additional fields may be used to configure the personalization experience, including whether it is required (personalization_is_required), the maximum character limit (personalization_char_count_max), and buyer instructions (personalization_instructions). All related fields are only applicable if personalization is enabled.
     /// </summary>
     [DataContract(Name = "ProductAdd_personalization_details")]
     public partial class ProductAddPersonalizationDetails : IValidatableObject
@@ -108,6 +108,18 @@ namespace Org.OpenAPITools.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // PersonalizationInstructions (string) maxLength
+            if (this.PersonalizationInstructions != null && this.PersonalizationInstructions.Length > 256)
+            {
+                yield return new ValidationResult("Invalid value for PersonalizationInstructions, length must be less than 256.", new [] { "PersonalizationInstructions" });
+            }
+
+            // PersonalizationInstructions (string) minLength
+            if (this.PersonalizationInstructions != null && this.PersonalizationInstructions.Length < 1)
+            {
+                yield return new ValidationResult("Invalid value for PersonalizationInstructions, length must be greater than 1.", new [] { "PersonalizationInstructions" });
+            }
+
             yield break;
         }
     }

@@ -563,6 +563,7 @@ Class | Method | HTTP request | Description
  - [Model.ProductAddManufacturerInfo](docs/ProductAddManufacturerInfo.md)
  - [Model.ProductAddPackageDetails](docs/ProductAddPackageDetails.md)
  - [Model.ProductAddPersonalizationDetails](docs/ProductAddPersonalizationDetails.md)
+ - [Model.ProductAddPersonalizationQuestionsInner](docs/ProductAddPersonalizationQuestionsInner.md)
  - [Model.ProductAddSalesTax](docs/ProductAddSalesTax.md)
  - [Model.ProductAddSellerProfiles](docs/ProductAddSellerProfiles.md)
  - [Model.ProductAddShippingDetailsInner](docs/ProductAddShippingDetailsInner.md)

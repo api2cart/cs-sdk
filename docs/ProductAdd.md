@@ -126,6 +126,7 @@ Name | Type | Description | Notes
 **ShopSectionId** | **int** | Add Shop Section Id | [optional] 
 **ReturnPolicyId** | **int** | Add Return Policy Id | [optional] 
 **PersonalizationDetails** | [**ProductAddPersonalizationDetails**](ProductAddPersonalizationDetails.md) |  | [optional] 
+**PersonalizationQuestions** | [**List&lt;ProductAddPersonalizationQuestionsInner&gt;**](ProductAddPersonalizationQuestionsInner.md) | Defines personalization questions for the listing as an array of question objects. Each question object supports the following fields: question_id (integer, nullable), question_text (string, 1-45 chars), instructions (string, nullable), question_type (string), required (boolean), max_allowed_characters (integer, nullable), max_allowed_files (integer, nullable), options (array, nullable). Cannot be used together with &lt;strong&gt;personalization_details&lt;/strong&gt;. | [optional] 
 **IdempotencyKey** | **string** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

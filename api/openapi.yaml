@@ -32608,6 +32608,67 @@ components:
         avail_from: 2029-10-25T15:54:37-0500
         attribute_set_name: Shoes
         meta_description: "category,test"
+        personalization_questions:
+        - question_text: question_text
+          instructions: instructions
+          question_type: text_input
+          options:
+          - options
+          - options
+          - options
+          - options
+          - options
+          required: true
+          max_allowed_characters: 923
+          max_allowed_files: 6
+        - question_text: question_text
+          instructions: instructions
+          question_type: text_input
+          options:
+          - options
+          - options
+          - options
+          - options
+          - options
+          required: true
+          max_allowed_characters: 923
+          max_allowed_files: 6
+        - question_text: question_text
+          instructions: instructions
+          question_type: text_input
+          options:
+          - options
+          - options
+          - options
+          - options
+          - options
+          required: true
+          max_allowed_characters: 923
+          max_allowed_files: 6
+        - question_text: question_text
+          instructions: instructions
+          question_type: text_input
+          options:
+          - options
+          - options
+          - options
+          - options
+          - options
+          required: true
+          max_allowed_characters: 923
+          max_allowed_files: 6
+        - question_text: question_text
+          instructions: instructions
+          question_type: text_input
+          options:
+          - options
+          - options
+          - options
+          - options
+          - options
+          required: true
+          max_allowed_characters: 923
+          max_allowed_files: 6
         weight_unit: lb
         condition_description: "Almost perfect condition, a few scratches"
         harmonized_system_code: "123456"
@@ -33500,6 +33561,18 @@ components:
           name: return_policy_id
         personalization_details:
           $ref: '#/components/schemas/ProductAdd_personalization_details'
+        personalization_questions:
+          description: "Defines personalization questions for the listing as an array\
+            \ of question objects. Each question object supports the following fields:\
+            \ question_id (integer, nullable), question_text (string, 1-45 chars),\
+            \ instructions (string, nullable), question_type (string), required (boolean),\
+            \ max_allowed_characters (integer, nullable), max_allowed_files (integer,\
+            \ nullable), options (array, nullable). Cannot be used together with <strong>personalization_details</strong>."
+          items:
+            $ref: '#/components/schemas/ProductAdd_personalization_questions_inner'
+          maxItems: 5
+          minItems: 1
+          type: array
         idempotency_key:
           description: A unique identifier associated with a specific request. Repeated
             requests with the same <strong>idempotency_key</strong> return a cached
@@ -34191,6 +34264,67 @@ components:
         is_supply: false
         meta_description: "category,test"
         condition: Like New
+        personalization_questions:
+        - question_text: question_text
+          instructions: instructions
+          question_type: text_input
+          options:
+          - options
+          - options
+          - options
+          - options
+          - options
+          required: true
+          max_allowed_characters: 923
+          max_allowed_files: 6
+        - question_text: question_text
+          instructions: instructions
+          question_type: text_input
+          options:
+          - options
+          - options
+          - options
+          - options
+          - options
+          required: true
+          max_allowed_characters: 923
+          max_allowed_files: 6
+        - question_text: question_text
+          instructions: instructions
+          question_type: text_input
+          options:
+          - options
+          - options
+          - options
+          - options
+          - options
+          required: true
+          max_allowed_characters: 923
+          max_allowed_files: 6
+        - question_text: question_text
+          instructions: instructions
+          question_type: text_input
+          options:
+          - options
+          - options
+          - options
+          - options
+          - options
+          required: true
+          max_allowed_characters: 923
+          max_allowed_files: 6
+        - question_text: question_text
+          instructions: instructions
+          question_type: text_input
+          options:
+          - options
+          - options
+          - options
+          - options
+          - options
+          required: true
+          max_allowed_characters: 923
+          max_allowed_files: 6
         weight_unit: lb
         materials: "materials[0]=Aluminum&materials[1]=Brass"
         name: Pancil
@@ -34827,6 +34961,18 @@ components:
           name: shop_section_id
         personalization_details:
           $ref: '#/components/schemas/ProductAdd_personalization_details'
+        personalization_questions:
+          description: "Defines personalization questions for the listing as an array\
+            \ of question objects. Each question object supports the following fields:\
+            \ question_id (integer, nullable), question_text (string, 1-45 chars),\
+            \ instructions (string, nullable), question_type (string), required (boolean),\
+            \ max_allowed_characters (integer, nullable), max_allowed_files (integer,\
+            \ nullable), options (array, nullable). Cannot be used together with <strong>personalization_details</strong>."
+          items:
+            $ref: '#/components/schemas/ProductAdd_personalization_questions_inner'
+          maxItems: 5
+          minItems: 1
+          type: array
         external_product_link:
           description: External product link
           example: http://example.com/t-shirt
@@ -47676,12 +47822,14 @@ components:
         auto_accept_price:
           type: number
     ProductAdd_personalization_details:
-      description: "Defines personalization settings for the listing. To enable personalization,\
-        \ is_personalizable must be set to true. When enabled, additional fields may\
-        \ be used to configure the personalization experience, including whether it\
-        \ is required (personalization_is_required), the maximum character limit (personalization_char_count_max),\
-        \ and buyer instructions (personalization_instructions). All related fields\
-        \ are only applicable if personalization is enabled."
+      description: "<strong>Deprecated.</strong> Use <strong>personalization_questions</strong>\
+        \ instead for setting personalization questions. Defines legacy personalization\
+        \ settings for the listing. To enable personalization, is_personalizable must\
+        \ be set to true. When enabled, additional fields may be used to configure\
+        \ the personalization experience, including whether it is required (personalization_is_required),\
+        \ the maximum character limit (personalization_char_count_max), and buyer\
+        \ instructions (personalization_instructions). All related fields are only\
+        \ applicable if personalization is enabled."
       example:
         personalization_instructions: personalization_instructions
         is_personalizable: true
@@ -47694,12 +47842,69 @@ components:
           type: boolean
         personalization_char_count_max:
           type: integer
-          minValue: "1"
-          maxValue: "1024"
+          minValue: 1
+          maxValue: 1024
         personalization_instructions:
+          maxLength: 256
+          minLength: 1
           type: string
       required:
       - is_personalizable
+    ProductAdd_personalization_questions_inner:
+      example:
+        question_text: question_text
+        instructions: instructions
+        question_type: text_input
+        options:
+        - options
+        - options
+        - options
+        - options
+        - options
+        required: true
+        max_allowed_characters: 923
+        max_allowed_files: 6
+      properties:
+        question_text:
+          maxLength: 45
+          minLength: 1
+          type: string
+        instructions:
+          maxLength: 120
+          minLength: 1
+          type: string
+        question_type:
+          enum:
+          - text_input
+          - dropdown
+          - unlabeled_upload
+          - labeled_upload
+          type: string
+        required:
+          type: boolean
+        max_allowed_characters:
+          maximum: 1024
+          minimum: 1
+          nullable: true
+          type: integer
+        max_allowed_files:
+          maximum: 10
+          minimum: 1
+          nullable: true
+          type: integer
+        options:
+          items:
+            maxLength: 45
+            minLength: 1
+            type: string
+          maxItems: 30
+          minItems: 1
+          nullable: true
+          type: array
+      required:
+      - question_text
+      - question_type
+      - required
     ProductAddBatch_payload_inner_advanced_prices_inner:
       example:
         start_time: start_time

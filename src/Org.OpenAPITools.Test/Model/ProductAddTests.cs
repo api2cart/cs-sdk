@@ -1154,6 +1154,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PersonalizationQuestions'
+        /// </summary>
+        [Fact]
+        public void PersonalizationQuestionsTest()
+        {
+            // TODO unit test for the property 'PersonalizationQuestions'
+        }
+
+        /// <summary>
         /// Test the property 'IdempotencyKey'
         /// </summary>
         [Fact]
