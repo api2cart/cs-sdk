@@ -65,6 +65,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Code'
+        /// </summary>
+        [Fact]
+        public void CodeTest()
+        {
+            // TODO unit test for the property 'Code'
+        }
+
+        /// <summary>
         /// Test the property 'Active'
         /// </summary>
         [Fact]

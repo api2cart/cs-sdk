@@ -27,49 +27,41 @@ using OpenAPIDateConverter = Org.OpenAPITools.Client.OpenAPIDateConverter;
 namespace Org.OpenAPITools.Model
 {
     /// <summary>
-    /// WebhookEvents200ResponseResultEventsInner
+    /// ParamDefinitionFilteringConditionsFilterGroup
     /// </summary>
-    [DataContract(Name = "WebhookEvents_200_response_result_events_inner")]
-    public partial class WebhookEvents200ResponseResultEventsInner : IValidatableObject
+    [DataContract(Name = "ParamDefinition_FilteringConditions_FilterGroup")]
+    public partial class ParamDefinitionFilteringConditionsFilterGroup : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookEvents200ResponseResultEventsInner" /> class.
+        /// Initializes a new instance of the <see cref="ParamDefinitionFilteringConditionsFilterGroup" /> class.
         /// </summary>
-        /// <param name="webhookName">webhookName.</param>
-        /// <param name="entity">entity.</param>
-        /// <param name="action">action.</param>
-        /// <param name="filterableFields">filterableFields.</param>
-        public WebhookEvents200ResponseResultEventsInner(string webhookName = default(string), string entity = default(string), string action = default(string), Object filterableFields = default(Object))
+        /// <param name="and">and.</param>
+        /// <param name="or">or.</param>
+        /// <param name="not">not.</param>
+        public ParamDefinitionFilteringConditionsFilterGroup(List<Object> and = default(List<Object>), List<Object> or = default(List<Object>), Object not = default(Object))
         {
-            this.WebhookName = webhookName;
-            this.Entity = entity;
-            this.Action = action;
-            this.FilterableFields = filterableFields;
+            this.And = and;
+            this.Or = or;
+            this.Not = not;
         }
 
         /// <summary>
-        /// Gets or Sets WebhookName
+        /// Gets or Sets And
         /// </summary>
-        [DataMember(Name = "webhook_name", EmitDefaultValue = false)]
-        public string WebhookName { get; set; }
+        [DataMember(Name = "and", EmitDefaultValue = false)]
+        public List<Object> And { get; set; }
 
         /// <summary>
-        /// Gets or Sets Entity
+        /// Gets or Sets Or
         /// </summary>
-        [DataMember(Name = "entity", EmitDefaultValue = false)]
-        public string Entity { get; set; }
+        [DataMember(Name = "or", EmitDefaultValue = false)]
+        public List<Object> Or { get; set; }
 
         /// <summary>
-        /// Gets or Sets Action
+        /// Gets or Sets Not
         /// </summary>
-        [DataMember(Name = "action", EmitDefaultValue = false)]
-        public string Action { get; set; }
-
-        /// <summary>
-        /// Gets or Sets FilterableFields
-        /// </summary>
-        [DataMember(Name = "filterable_fields", EmitDefaultValue = false)]
-        public Object FilterableFields { get; set; }
+        [DataMember(Name = "not", EmitDefaultValue = true)]
+        public Object Not { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -78,11 +70,10 @@ namespace Org.OpenAPITools.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class WebhookEvents200ResponseResultEventsInner {\n");
-            sb.Append("  WebhookName: ").Append(WebhookName).Append("\n");
-            sb.Append("  Entity: ").Append(Entity).Append("\n");
-            sb.Append("  Action: ").Append(Action).Append("\n");
-            sb.Append("  FilterableFields: ").Append(FilterableFields).Append("\n");
+            sb.Append("class ParamDefinitionFilteringConditionsFilterGroup {\n");
+            sb.Append("  And: ").Append(And).Append("\n");
+            sb.Append("  Or: ").Append(Or).Append("\n");
+            sb.Append("  Not: ").Append(Not).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

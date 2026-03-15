@@ -76,17 +76,8 @@ namespace Org.OpenAPITools.Test.Api
         public void WebhookCreateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string entity = null;
-            //string action = null;
-            //string? callback = null;
-            //string? label = null;
-            //string? fields = null;
-            //string? responseFields = null;
-            //bool? active = null;
-            //string? langId = null;
-            //string? storeId = null;
-            //string? idempotencyKey = null;
-            //var response = instance.WebhookCreate(entity, action, callback, label, fields, responseFields, active, langId, storeId, idempotencyKey);
+            //WebhookCreate webhookCreate = null;
+            //var response = instance.WebhookCreate(webhookCreate);
             //Assert.IsType<BasketLiveShippingServiceCreate200Response>(response);
         }
 
@@ -138,15 +129,8 @@ namespace Org.OpenAPITools.Test.Api
         public void WebhookUpdateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string id = null;
-            //string? callback = null;
-            //string? label = null;
-            //string? fields = null;
-            //string? responseFields = null;
-            //bool? active = null;
-            //string? langId = null;
-            //string? idempotencyKey = null;
-            //var response = instance.WebhookUpdate(id, callback, label, fields, responseFields, active, langId, idempotencyKey);
+            //WebhookUpdate webhookUpdate = null;
+            //var response = instance.WebhookUpdate(webhookUpdate);
             //Assert.IsType<ProductImageUpdate200Response>(response);
         }
     }

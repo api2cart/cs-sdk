@@ -164,6 +164,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FilteringConditions'
+        /// </summary>
+        [Fact]
+        public void FilteringConditionsTest()
+        {
+            // TODO unit test for the property 'FilteringConditions'
+        }
+
+        /// <summary>
         /// Test the property 'AdditionalFields'
         /// </summary>
         [Fact]

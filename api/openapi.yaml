@@ -7816,6 +7816,16 @@ paths:
         schema:
           type: string
         style: form
+      - description: Use the latest platform API version
+        example: true
+        explode: true
+        in: query
+        name: use_latest_api_version
+        required: false
+        schema:
+          default: false
+          type: boolean
+        style: form
       responses:
         "200":
           content:
@@ -13890,106 +13900,12 @@ paths:
     post:
       description: Create webhook on the store and subscribe to it.
       operationId: WebhookCreate
-      parameters:
-      - description: "Specify the entity that you want to enable webhooks for (e.g\
-          \ product, order, customer, category)"
-        example: product
-        explode: true
-        in: query
-        name: entity
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WebhookCreate'
         required: true
-        schema:
-          type: string
-        style: form
-      - description: "Specify what action (event) will trigger the webhook (e.g add,\
-          \ delete, or update)"
-        example: add
-        explode: true
-        in: query
-        name: action
-        required: true
-        schema:
-          type: string
-        style: form
-      - description: Callback url that returns shipping rates. It should be able to
-          accept POST requests with json data.
-        example: https://example.com/callback
-        explode: true
-        in: query
-        name: callback
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: The name you give to the webhook
-        example: Super webhook
-        explode: true
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Fields the webhook should send
-        example: "id, name, description"
-        explode: true
-        in: query
-        name: fields
-        required: false
-        schema:
-          default: force_all
-          type: string
-        style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
-        example: "{result}"
-        explode: true
-        in: query
-        name: response_fields
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Webhook status
-        example: true
-        explode: true
-        in: query
-        name: active
-        required: false
-        schema:
-          default: true
-          type: boolean
-        style: form
-      - description: Language id
-        example: 3
-        explode: true
-        in: query
-        name: lang_id
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Defines store id where the webhook should be assigned
-        example: "1"
-        explode: true
-        in: query
-        name: store_id
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: A unique identifier associated with a specific request. Repeated
-          requests with the same <strong>idempotency_key</strong> return a cached
-          response without re-executing the business logic. <strong>Please note that
-          the cache lifetime is 15 minutes.</strong>
-        example: 098f6bcd4621d373cade4e832627b4f6
-        explode: true
-        in: query
-        name: idempotency_key
-        required: false
-        schema:
-          type: string
-        style: form
       responses:
         "200":
           content:
@@ -14007,84 +13923,12 @@ paths:
     put:
       description: Update Webhooks parameters.
       operationId: WebhookUpdate
-      parameters:
-      - description: Webhook id
-        example: "25"
-        explode: true
-        in: query
-        name: id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WebhookUpdate'
         required: true
-        schema:
-          type: string
-        style: form
-      - description: Callback url that returns shipping rates. It should be able to
-          accept POST requests with json data.
-        example: https://example.com/callback
-        explode: true
-        in: query
-        name: callback
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: The name you give to the webhook
-        example: Super webhook
-        explode: true
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Fields the webhook should send
-        example: "id, name, description"
-        explode: true
-        in: query
-        name: fields
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
-        example: "{result}"
-        explode: true
-        in: query
-        name: response_fields
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Webhook status
-        example: true
-        explode: true
-        in: query
-        name: active
-        required: false
-        schema:
-          type: boolean
-        style: form
-      - description: Language id
-        example: 3
-        explode: true
-        in: query
-        name: lang_id
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: A unique identifier associated with a specific request. Repeated
-          requests with the same <strong>idempotency_key</strong> return a cached
-          response without re-executing the business logic. <strong>Please note that
-          the cache lifetime is 15 minutes.</strong>
-        example: 098f6bcd4621d373cade4e832627b4f6
-        explode: true
-        in: query
-        name: idempotency_key
-        required: false
-        schema:
-          type: string
-        style: form
       responses:
         "200":
           content:
@@ -19846,11 +19690,13 @@ components:
     PluginList:
       example:
         plugins:
-        - custom_fields: "{}"
+        - code: code
+          custom_fields: "{}"
           name: name
           active: true
           additional_fields: "{}"
-        - custom_fields: "{}"
+        - code: code
+          custom_fields: "{}"
           name: name
           active: true
           additional_fields: "{}"
@@ -19873,12 +19719,16 @@ components:
           type: object
     Plugin:
       example:
+        code: code
         custom_fields: "{}"
         name: name
         active: true
         additional_fields: "{}"
       properties:
         name:
+          type: string
+        code:
+          nullable: true
           type: string
         active:
           nullable: true
@@ -42294,6 +42144,7 @@ components:
         created_at: created_at
         additional_fields: "{}"
         label: label
+        filtering_conditions: "{}"
         updated_at: updated_at
         callback: callback
         action: action
@@ -42338,12 +42189,193 @@ components:
         action:
           nullable: true
           type: string
+        filtering_conditions:
+          nullable: true
+          type: object
         additional_fields:
           nullable: true
           type: object
         custom_fields:
           nullable: true
           type: object
+    WebhookCreate:
+      example:
+        store_id: "1"
+        action: add
+        callback: https://example.com/callback
+        active: true
+        lang_id: 3
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
+        label: Super webhook
+        response_fields: "{result}"
+        fields: "id, name, description"
+        entity: product
+        filtering_conditions:
+          and:
+          - field: sku
+            operator: eq
+            value: sku123
+          - field: price
+            operator: gt
+            value: 123
+      properties:
+        entity:
+          description: "Specify the entity that you want to enable webhooks for (e.g\
+            \ product, order, customer, category)"
+          example: product
+          type: string
+          name: entity
+        action:
+          description: "Specify what action (event) will trigger the webhook (e.g\
+            \ add, delete, or update)"
+          example: add
+          type: string
+          name: action
+        callback:
+          description: Callback url that returns shipping rates. It should be able
+            to accept POST requests with json data.
+          example: https://example.com/callback
+          type: string
+          name: callback
+        label:
+          description: The name you give to the webhook
+          example: Super webhook
+          type: string
+          name: label
+        fields:
+          default: force_all
+          description: Fields the webhook should send
+          example: "id, name, description"
+          type: string
+          name: fields
+        response_fields:
+          description: Set this parameter in order to choose which entity fields you
+            want to retrieve
+          example: "{result}"
+          type: string
+          name: response_fields
+        active:
+          default: true
+          description: Webhook status
+          example: true
+          type: boolean
+          name: active
+        lang_id:
+          description: Language id
+          example: 3
+          type: string
+          name: lang_id
+        store_id:
+          description: Defines store id where the webhook should be assigned
+          example: "1"
+          type: string
+          name: store_id
+        filtering_conditions:
+          $ref: '#/components/schemas/ParamDefinition_FilteringConditions_FilterCondition'
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
+      required:
+      - action
+      - entity
+    ParamDefinition_FilteringConditions_FilterCondition:
+      oneOf:
+      - $ref: '#/components/schemas/ParamDefinition_FilteringConditions_FilterGroup'
+      - $ref: '#/components/schemas/ParamDefinition_FilteringConditions_FilterRule'
+    ParamDefinition_FilteringConditions_FilterGroup:
+      properties:
+        and:
+          items:
+            type: object
+          type: array
+        or:
+          items:
+            type: object
+          type: array
+        not:
+          nullable: true
+          type: object
+    ParamDefinition_FilteringConditions_FilterRule:
+      properties:
+        field:
+          type: string
+        operator:
+          type: string
+        value:
+          $ref: '#/components/schemas/ParamDefinition_FilteringConditions_FilterRule_value'
+    WebhookUpdate:
+      example:
+        callback: https://example.com/callback
+        active: true
+        lang_id: 3
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
+        id: "25"
+        label: Super webhook
+        response_fields: "{result}"
+        fields: "id, name, description"
+        filtering_conditions:
+          and:
+          - field: sku
+            operator: eq
+            value: sku123
+          - field: price
+            operator: gt
+            value: 123
+      properties:
+        id:
+          description: Webhook id
+          example: "25"
+          type: string
+          name: id
+        callback:
+          description: Callback url that returns shipping rates. It should be able
+            to accept POST requests with json data.
+          example: https://example.com/callback
+          type: string
+          name: callback
+        label:
+          description: The name you give to the webhook
+          example: Super webhook
+          type: string
+          name: label
+        fields:
+          description: Fields the webhook should send
+          example: "id, name, description"
+          type: string
+          name: fields
+        response_fields:
+          description: Set this parameter in order to choose which entity fields you
+            want to retrieve
+          example: "{result}"
+          type: string
+          name: response_fields
+        active:
+          description: Webhook status
+          example: true
+          type: boolean
+          name: active
+        lang_id:
+          description: Language id
+          example: 3
+          type: string
+          name: lang_id
+        filtering_conditions:
+          $ref: '#/components/schemas/ParamDefinition_FilteringConditions_FilterCondition'
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
+      required:
+      - id
     AccountFailedWebhooks_200_response_result_webhook_inner:
       example:
         webhook_id: 6
@@ -43764,11 +43796,13 @@ components:
       example:
         plugins:
         - plugins:
-          - custom_fields: "{}"
+          - code: code
+            custom_fields: "{}"
             name: name
             active: true
             additional_fields: "{}"
-          - custom_fields: "{}"
+          - code: code
+            custom_fields: "{}"
             name: name
             active: true
             additional_fields: "{}"
@@ -43776,11 +43810,13 @@ components:
           all_plugins: 1
           additional_fields: "{}"
         - plugins:
-          - custom_fields: "{}"
+          - code: code
+            custom_fields: "{}"
             name: name
             active: true
             additional_fields: "{}"
-          - custom_fields: "{}"
+          - code: code
+            custom_fields: "{}"
             name: name
             active: true
             additional_fields: "{}"
@@ -43800,11 +43836,13 @@ components:
         result:
           plugins:
           - plugins:
-            - custom_fields: "{}"
+            - code: code
+              custom_fields: "{}"
               name: name
               active: true
               additional_fields: "{}"
-            - custom_fields: "{}"
+            - code: code
+              custom_fields: "{}"
               name: name
               active: true
               additional_fields: "{}"
@@ -43812,11 +43850,13 @@ components:
             all_plugins: 1
             additional_fields: "{}"
           - plugins:
-            - custom_fields: "{}"
+            - code: code
+              custom_fields: "{}"
               name: name
               active: true
               additional_fields: "{}"
-            - custom_fields: "{}"
+            - code: code
+              custom_fields: "{}"
               name: name
               active: true
               additional_fields: "{}"
@@ -46366,6 +46406,7 @@ components:
           created_at: created_at
           additional_fields: "{}"
           label: label
+          filtering_conditions: "{}"
           updated_at: updated_at
           callback: callback
           action: action
@@ -46380,6 +46421,7 @@ components:
           created_at: created_at
           additional_fields: "{}"
           label: label
+          filtering_conditions: "{}"
           updated_at: updated_at
           callback: callback
           action: action
@@ -46403,6 +46445,7 @@ components:
             created_at: created_at
             additional_fields: "{}"
             label: label
+            filtering_conditions: "{}"
             updated_at: updated_at
             callback: callback
             action: action
@@ -46417,6 +46460,7 @@ components:
             created_at: created_at
             additional_fields: "{}"
             label: label
+            filtering_conditions: "{}"
             updated_at: updated_at
             callback: callback
             action: action
@@ -46437,6 +46481,7 @@ components:
       example:
         webhook_name: webhook_name
         action: action
+        filterable_fields: "{}"
         entity: entity
       properties:
         webhook_name:
@@ -46445,14 +46490,18 @@ components:
           type: string
         action:
           type: string
+        filterable_fields:
+          type: object
     WebhookEvents_200_response_result:
       example:
         events:
         - webhook_name: webhook_name
           action: action
+          filterable_fields: "{}"
           entity: entity
         - webhook_name: webhook_name
           action: action
+          filterable_fields: "{}"
           entity: entity
       properties:
         events:
@@ -46465,9 +46514,11 @@ components:
           events:
           - webhook_name: webhook_name
             action: action
+            filterable_fields: "{}"
             entity: entity
           - webhook_name: webhook_name
             action: action
+            filterable_fields: "{}"
             entity: entity
         return_message: return_message
         return_code: 0
@@ -49128,6 +49179,15 @@ components:
       required:
       - id
       - product_id
+    ParamDefinition_FilteringConditions_FilterRule_value:
+      oneOf:
+      - nullable: true
+        type: string
+      - type: number
+      - type: boolean
+      - items:
+          type: string
+        type: array
   securitySchemes:
     ApiKeyAuth:
       in: header

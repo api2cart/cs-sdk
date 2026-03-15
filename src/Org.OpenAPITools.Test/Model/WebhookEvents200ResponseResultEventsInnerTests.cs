@@ -81,5 +81,14 @@ namespace Org.OpenAPITools.Test.Model
         {
             // TODO unit test for the property 'Action'
         }
+
+        /// <summary>
+        /// Test the property 'FilterableFields'
+        /// </summary>
+        [Fact]
+        public void FilterableFieldsTest()
+        {
+            // TODO unit test for the property 'FilterableFields'
+        }
     }
 }

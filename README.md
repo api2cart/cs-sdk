@@ -542,6 +542,10 @@ Class | Method | HTTP request | Description
  - [Model.OrderTotalsNewDiscount](docs/OrderTotalsNewDiscount.md)
  - [Model.OrderTransaction](docs/OrderTransaction.md)
  - [Model.Pagination](docs/Pagination.md)
+ - [Model.ParamDefinitionFilteringConditionsFilterCondition](docs/ParamDefinitionFilteringConditionsFilterCondition.md)
+ - [Model.ParamDefinitionFilteringConditionsFilterGroup](docs/ParamDefinitionFilteringConditionsFilterGroup.md)
+ - [Model.ParamDefinitionFilteringConditionsFilterRule](docs/ParamDefinitionFilteringConditionsFilterRule.md)
+ - [Model.ParamDefinitionFilteringConditionsFilterRuleValue](docs/ParamDefinitionFilteringConditionsFilterRuleValue.md)
  - [Model.Plugin](docs/Plugin.md)
  - [Model.PluginList](docs/PluginList.md)
  - [Model.Product](docs/Product.md)
@@ -719,11 +723,13 @@ Class | Method | HTTP request | Description
  - [Model.Webhook](docs/Webhook.md)
  - [Model.WebhookCount200Response](docs/WebhookCount200Response.md)
  - [Model.WebhookCount200ResponseResult](docs/WebhookCount200ResponseResult.md)
+ - [Model.WebhookCreate](docs/WebhookCreate.md)
  - [Model.WebhookEvents200Response](docs/WebhookEvents200Response.md)
  - [Model.WebhookEvents200ResponseResult](docs/WebhookEvents200ResponseResult.md)
  - [Model.WebhookEvents200ResponseResultEventsInner](docs/WebhookEvents200ResponseResultEventsInner.md)
  - [Model.WebhookList200Response](docs/WebhookList200Response.md)
  - [Model.WebhookList200ResponseResult](docs/WebhookList200ResponseResult.md)
+ - [Model.WebhookUpdate](docs/WebhookUpdate.md)
 
 
 <a id="documentation-for-authorization"></a>

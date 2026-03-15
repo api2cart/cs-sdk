@@ -356,7 +356,7 @@ catch (ApiException e)
 
 <a id="ordercount"></a>
 # **OrderCount**
-> OrderCount200Response OrderCount (string? orderIds = null, string? ids = null, string? customerId = null, string? storeId = null, string? customerEmail = null, string? orderStatus = null, List<string>? orderStatusIds = null, string? ebayOrderStatus = null, string? financialStatus = null, List<string>? financialStatusIds = null, string? fulfillmentChannel = null, string? fulfillmentStatus = null, string? shippingMethod = null, string? deliveryMethod = null, string? tags = null, string? shipNodeType = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null)
+> OrderCount200Response OrderCount (string? orderIds = null, string? ids = null, string? customerId = null, string? storeId = null, string? customerEmail = null, string? orderStatus = null, List<string>? orderStatusIds = null, string? ebayOrderStatus = null, string? financialStatus = null, List<string>? financialStatusIds = null, string? fulfillmentChannel = null, string? fulfillmentStatus = null, string? shippingMethod = null, string? deliveryMethod = null, string? tags = null, string? shipNodeType = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, bool? useLatestApiVersion = null)
 
 order.count
 
@@ -408,11 +408,12 @@ namespace Example
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
+            var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
 
             try
             {
                 // order.count
-                OrderCount200Response result = apiInstance.OrderCount(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo);
+                OrderCount200Response result = apiInstance.OrderCount(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -433,7 +434,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.count
-    ApiResponse<OrderCount200Response> response = apiInstance.OrderCountWithHttpInfo(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo);
+    ApiResponse<OrderCount200Response> response = apiInstance.OrderCountWithHttpInfo(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -470,6 +471,7 @@ catch (ApiException e)
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
+| **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
 
 ### Return type
 

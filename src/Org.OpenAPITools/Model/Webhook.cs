@@ -47,9 +47,10 @@ namespace Org.OpenAPITools.Model
         /// <param name="updatedAt">updatedAt.</param>
         /// <param name="entity">entity.</param>
         /// <param name="action">action.</param>
+        /// <param name="filteringConditions">filteringConditions.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Webhook(int? id = default(int?), string label = default(string), string storeId = default(string), string langId = default(string), bool? active = default(bool?), string callback = default(string), string fields = default(string), string responseFields = default(string), string createdAt = default(string), string updatedAt = default(string), string entity = default(string), string action = default(string), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Webhook(int? id = default(int?), string label = default(string), string storeId = default(string), string langId = default(string), bool? active = default(bool?), string callback = default(string), string fields = default(string), string responseFields = default(string), string createdAt = default(string), string updatedAt = default(string), string entity = default(string), string action = default(string), Object filteringConditions = default(Object), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.Label = label;
@@ -63,6 +64,7 @@ namespace Org.OpenAPITools.Model
             this.UpdatedAt = updatedAt;
             this.Entity = entity;
             this.Action = action;
+            this.FilteringConditions = filteringConditions;
             this.AdditionalFields = additionalFields;
             this.CustomFields = customFields;
         }
@@ -140,6 +142,12 @@ namespace Org.OpenAPITools.Model
         public string Action { get; set; }
 
         /// <summary>
+        /// Gets or Sets FilteringConditions
+        /// </summary>
+        [DataMember(Name = "filtering_conditions", EmitDefaultValue = true)]
+        public Object FilteringConditions { get; set; }
+
+        /// <summary>
         /// Gets or Sets AdditionalFields
         /// </summary>
         [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
@@ -171,6 +179,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
+            sb.Append("  FilteringConditions: ").Append(FilteringConditions).Append("\n");
             sb.Append("  AdditionalFields: ").Append(AdditionalFields).Append("\n");
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("}\n");

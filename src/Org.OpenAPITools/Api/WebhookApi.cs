@@ -61,19 +61,10 @@ namespace Org.OpenAPITools.Api
         /// Create webhook on the store and subscribe to it.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entity">Specify the entity that you want to enable webhooks for (e.g product, order, customer, category)</param>
-        /// <param name="action">Specify what action (event) will trigger the webhook (e.g add, delete, or update)</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional, default to true)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookCreate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketLiveShippingServiceCreate200Response</returns>
-        BasketLiveShippingServiceCreate200Response WebhookCreate(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        BasketLiveShippingServiceCreate200Response WebhookCreate(WebhookCreate webhookCreate, int operationIndex = 0);
 
         /// <summary>
         /// webhook.create
@@ -82,19 +73,10 @@ namespace Org.OpenAPITools.Api
         /// Create webhook on the store and subscribe to it.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entity">Specify the entity that you want to enable webhooks for (e.g product, order, customer, category)</param>
-        /// <param name="action">Specify what action (event) will trigger the webhook (e.g add, delete, or update)</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional, default to true)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookCreate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketLiveShippingServiceCreate200Response</returns>
-        ApiResponse<BasketLiveShippingServiceCreate200Response> WebhookCreateWithHttpInfo(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<BasketLiveShippingServiceCreate200Response> WebhookCreateWithHttpInfo(WebhookCreate webhookCreate, int operationIndex = 0);
         /// <summary>
         /// webhook.delete
         /// </summary>
@@ -181,17 +163,10 @@ namespace Org.OpenAPITools.Api
         /// Update Webhooks parameters.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Webhook id</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookUpdate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductImageUpdate200Response</returns>
-        ProductImageUpdate200Response WebhookUpdate(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        ProductImageUpdate200Response WebhookUpdate(WebhookUpdate webhookUpdate, int operationIndex = 0);
 
         /// <summary>
         /// webhook.update
@@ -200,17 +175,10 @@ namespace Org.OpenAPITools.Api
         /// Update Webhooks parameters.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Webhook id</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookUpdate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductImageUpdate200Response</returns>
-        ApiResponse<ProductImageUpdate200Response> WebhookUpdateWithHttpInfo(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<ProductImageUpdate200Response> WebhookUpdateWithHttpInfo(WebhookUpdate webhookUpdate, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -256,20 +224,11 @@ namespace Org.OpenAPITools.Api
         /// Create webhook on the store and subscribe to it.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entity">Specify the entity that you want to enable webhooks for (e.g product, order, customer, category)</param>
-        /// <param name="action">Specify what action (event) will trigger the webhook (e.g add, delete, or update)</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional, default to true)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookCreate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketLiveShippingServiceCreate200Response</returns>
-        System.Threading.Tasks.Task<BasketLiveShippingServiceCreate200Response> WebhookCreateAsync(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BasketLiveShippingServiceCreate200Response> WebhookCreateAsync(WebhookCreate webhookCreate, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// webhook.create
@@ -278,20 +237,11 @@ namespace Org.OpenAPITools.Api
         /// Create webhook on the store and subscribe to it.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entity">Specify the entity that you want to enable webhooks for (e.g product, order, customer, category)</param>
-        /// <param name="action">Specify what action (event) will trigger the webhook (e.g add, delete, or update)</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional, default to true)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookCreate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketLiveShippingServiceCreate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BasketLiveShippingServiceCreate200Response>> WebhookCreateWithHttpInfoAsync(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BasketLiveShippingServiceCreate200Response>> WebhookCreateWithHttpInfoAsync(WebhookCreate webhookCreate, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// webhook.delete
         /// </summary>
@@ -384,18 +334,11 @@ namespace Org.OpenAPITools.Api
         /// Update Webhooks parameters.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Webhook id</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookUpdate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductImageUpdate200Response</returns>
-        System.Threading.Tasks.Task<ProductImageUpdate200Response> WebhookUpdateAsync(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductImageUpdate200Response> WebhookUpdateAsync(WebhookUpdate webhookUpdate, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// webhook.update
@@ -404,18 +347,11 @@ namespace Org.OpenAPITools.Api
         /// Update Webhooks parameters.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Webhook id</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookUpdate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductImageUpdate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductImageUpdate200Response>> WebhookUpdateWithHttpInfoAsync(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductImageUpdate200Response>> WebhookUpdateWithHttpInfoAsync(WebhookUpdate webhookUpdate, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -723,21 +659,12 @@ namespace Org.OpenAPITools.Api
         /// webhook.create Create webhook on the store and subscribe to it.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entity">Specify the entity that you want to enable webhooks for (e.g product, order, customer, category)</param>
-        /// <param name="action">Specify what action (event) will trigger the webhook (e.g add, delete, or update)</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional, default to true)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookCreate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BasketLiveShippingServiceCreate200Response</returns>
-        public BasketLiveShippingServiceCreate200Response WebhookCreate(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        public BasketLiveShippingServiceCreate200Response WebhookCreate(WebhookCreate webhookCreate, int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> localVarResponse = WebhookCreateWithHttpInfo(entity, action, callback, label, fields, responseFields, active, langId, storeId, idempotencyKey);
+            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> localVarResponse = WebhookCreateWithHttpInfo(webhookCreate);
             return localVarResponse.Data;
         }
 
@@ -745,35 +672,21 @@ namespace Org.OpenAPITools.Api
         /// webhook.create Create webhook on the store and subscribe to it.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entity">Specify the entity that you want to enable webhooks for (e.g product, order, customer, category)</param>
-        /// <param name="action">Specify what action (event) will trigger the webhook (e.g add, delete, or update)</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional, default to true)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookCreate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BasketLiveShippingServiceCreate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> WebhookCreateWithHttpInfo(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> WebhookCreateWithHttpInfo(WebhookCreate webhookCreate, int operationIndex = 0)
         {
-            // verify the required parameter 'entity' is set
-            if (entity == null)
+            // verify the required parameter 'webhookCreate' is set
+            if (webhookCreate == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'entity' when calling WebhookApi->WebhookCreate");
-            }
-
-            // verify the required parameter 'action' is set
-            if (action == null)
-            {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'action' when calling WebhookApi->WebhookCreate");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'webhookCreate' when calling WebhookApi->WebhookCreate");
             }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
+                "application/json"
             };
 
             // to determine the Accept header
@@ -794,40 +707,7 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "entity", entity));
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "action", action));
-            if (callback != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "callback", callback));
-            }
-            if (label != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "label", label));
-            }
-            if (fields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fields", fields));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
-            }
-            if (active != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "active", active));
-            }
-            if (langId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
-            if (idempotencyKey != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
-            }
+            localVarRequestOptions.Data = webhookCreate;
 
             localVarRequestOptions.Operation = "WebhookApi.WebhookCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -861,22 +741,13 @@ namespace Org.OpenAPITools.Api
         /// webhook.create Create webhook on the store and subscribe to it.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entity">Specify the entity that you want to enable webhooks for (e.g product, order, customer, category)</param>
-        /// <param name="action">Specify what action (event) will trigger the webhook (e.g add, delete, or update)</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional, default to true)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookCreate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BasketLiveShippingServiceCreate200Response</returns>
-        public async System.Threading.Tasks.Task<BasketLiveShippingServiceCreate200Response> WebhookCreateAsync(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BasketLiveShippingServiceCreate200Response> WebhookCreateAsync(WebhookCreate webhookCreate, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> localVarResponse = await WebhookCreateWithHttpInfoAsync(entity, action, callback, label, fields, responseFields, active, langId, storeId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response> localVarResponse = await WebhookCreateWithHttpInfoAsync(webhookCreate, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -884,37 +755,23 @@ namespace Org.OpenAPITools.Api
         /// webhook.create Create webhook on the store and subscribe to it.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entity">Specify the entity that you want to enable webhooks for (e.g product, order, customer, category)</param>
-        /// <param name="action">Specify what action (event) will trigger the webhook (e.g add, delete, or update)</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional, default to true)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="storeId">Defines store id where the webhook should be assigned (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookCreate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BasketLiveShippingServiceCreate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response>> WebhookCreateWithHttpInfoAsync(string entity, string action, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BasketLiveShippingServiceCreate200Response>> WebhookCreateWithHttpInfoAsync(WebhookCreate webhookCreate, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            // verify the required parameter 'entity' is set
-            if (entity == null)
+            // verify the required parameter 'webhookCreate' is set
+            if (webhookCreate == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'entity' when calling WebhookApi->WebhookCreate");
-            }
-
-            // verify the required parameter 'action' is set
-            if (action == null)
-            {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'action' when calling WebhookApi->WebhookCreate");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'webhookCreate' when calling WebhookApi->WebhookCreate");
             }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
+                "application/json"
             };
 
             // to determine the Accept header
@@ -934,40 +791,7 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "entity", entity));
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "action", action));
-            if (callback != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "callback", callback));
-            }
-            if (label != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "label", label));
-            }
-            if (fields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fields", fields));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
-            }
-            if (active != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "active", active));
-            }
-            if (langId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
-            }
-            if (storeId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
-            }
-            if (idempotencyKey != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
-            }
+            localVarRequestOptions.Data = webhookCreate;
 
             localVarRequestOptions.Operation = "WebhookApi.WebhookCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1545,19 +1369,12 @@ namespace Org.OpenAPITools.Api
         /// webhook.update Update Webhooks parameters.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Webhook id</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookUpdate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductImageUpdate200Response</returns>
-        public ProductImageUpdate200Response WebhookUpdate(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        public ProductImageUpdate200Response WebhookUpdate(WebhookUpdate webhookUpdate, int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> localVarResponse = WebhookUpdateWithHttpInfo(id, callback, label, fields, responseFields, active, langId, idempotencyKey);
+            Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> localVarResponse = WebhookUpdateWithHttpInfo(webhookUpdate);
             return localVarResponse.Data;
         }
 
@@ -1565,27 +1382,21 @@ namespace Org.OpenAPITools.Api
         /// webhook.update Update Webhooks parameters.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Webhook id</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookUpdate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductImageUpdate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> WebhookUpdateWithHttpInfo(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> WebhookUpdateWithHttpInfo(WebhookUpdate webhookUpdate, int operationIndex = 0)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
+            // verify the required parameter 'webhookUpdate' is set
+            if (webhookUpdate == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling WebhookApi->WebhookUpdate");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'webhookUpdate' when calling WebhookApi->WebhookUpdate");
             }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
+                "application/json"
             };
 
             // to determine the Accept header
@@ -1606,35 +1417,7 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
-            if (callback != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "callback", callback));
-            }
-            if (label != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "label", label));
-            }
-            if (fields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fields", fields));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
-            }
-            if (active != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "active", active));
-            }
-            if (langId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
-            }
-            if (idempotencyKey != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
-            }
+            localVarRequestOptions.Data = webhookUpdate;
 
             localVarRequestOptions.Operation = "WebhookApi.WebhookUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1668,20 +1451,13 @@ namespace Org.OpenAPITools.Api
         /// webhook.update Update Webhooks parameters.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Webhook id</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookUpdate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductImageUpdate200Response</returns>
-        public async System.Threading.Tasks.Task<ProductImageUpdate200Response> WebhookUpdateAsync(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductImageUpdate200Response> WebhookUpdateAsync(WebhookUpdate webhookUpdate, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> localVarResponse = await WebhookUpdateWithHttpInfoAsync(id, callback, label, fields, responseFields, active, langId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response> localVarResponse = await WebhookUpdateWithHttpInfoAsync(webhookUpdate, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1689,29 +1465,23 @@ namespace Org.OpenAPITools.Api
         /// webhook.update Update Webhooks parameters.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Webhook id</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional)</param>
-        /// <param name="label">The name you give to the webhook (optional)</param>
-        /// <param name="fields">Fields the webhook should send (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="active">Webhook status (optional)</param>
-        /// <param name="langId">Language id (optional)</param>
-        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
+        /// <param name="webhookUpdate"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductImageUpdate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response>> WebhookUpdateWithHttpInfoAsync(string id, string? callback = default(string?), string? label = default(string?), string? fields = default(string?), string? responseFields = default(string?), bool? active = default(bool?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductImageUpdate200Response>> WebhookUpdateWithHttpInfoAsync(WebhookUpdate webhookUpdate, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
+            // verify the required parameter 'webhookUpdate' is set
+            if (webhookUpdate == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling WebhookApi->WebhookUpdate");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'webhookUpdate' when calling WebhookApi->WebhookUpdate");
             }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
+                "application/json"
             };
 
             // to determine the Accept header
@@ -1731,35 +1501,7 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
-            if (callback != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "callback", callback));
-            }
-            if (label != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "label", label));
-            }
-            if (fields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fields", fields));
-            }
-            if (responseFields != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
-            }
-            if (active != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "active", active));
-            }
-            if (langId != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "lang_id", langId));
-            }
-            if (idempotencyKey != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
-            }
+            localVarRequestOptions.Data = webhookUpdate;
 
             localVarRequestOptions.Operation = "WebhookApi.WebhookUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;

@@ -27,49 +27,41 @@ using OpenAPIDateConverter = Org.OpenAPITools.Client.OpenAPIDateConverter;
 namespace Org.OpenAPITools.Model
 {
     /// <summary>
-    /// WebhookEvents200ResponseResultEventsInner
+    /// ParamDefinitionFilteringConditionsFilterRule
     /// </summary>
-    [DataContract(Name = "WebhookEvents_200_response_result_events_inner")]
-    public partial class WebhookEvents200ResponseResultEventsInner : IValidatableObject
+    [DataContract(Name = "ParamDefinition_FilteringConditions_FilterRule")]
+    public partial class ParamDefinitionFilteringConditionsFilterRule : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookEvents200ResponseResultEventsInner" /> class.
+        /// Initializes a new instance of the <see cref="ParamDefinitionFilteringConditionsFilterRule" /> class.
         /// </summary>
-        /// <param name="webhookName">webhookName.</param>
-        /// <param name="entity">entity.</param>
-        /// <param name="action">action.</param>
-        /// <param name="filterableFields">filterableFields.</param>
-        public WebhookEvents200ResponseResultEventsInner(string webhookName = default(string), string entity = default(string), string action = default(string), Object filterableFields = default(Object))
+        /// <param name="field">field.</param>
+        /// <param name="varOperator">varOperator.</param>
+        /// <param name="value">value.</param>
+        public ParamDefinitionFilteringConditionsFilterRule(string field = default(string), string varOperator = default(string), ParamDefinitionFilteringConditionsFilterRuleValue value = default(ParamDefinitionFilteringConditionsFilterRuleValue))
         {
-            this.WebhookName = webhookName;
-            this.Entity = entity;
-            this.Action = action;
-            this.FilterableFields = filterableFields;
+            this.Field = field;
+            this.Operator = varOperator;
+            this.Value = value;
         }
 
         /// <summary>
-        /// Gets or Sets WebhookName
+        /// Gets or Sets Field
         /// </summary>
-        [DataMember(Name = "webhook_name", EmitDefaultValue = false)]
-        public string WebhookName { get; set; }
+        [DataMember(Name = "field", EmitDefaultValue = false)]
+        public string Field { get; set; }
 
         /// <summary>
-        /// Gets or Sets Entity
+        /// Gets or Sets Operator
         /// </summary>
-        [DataMember(Name = "entity", EmitDefaultValue = false)]
-        public string Entity { get; set; }
+        [DataMember(Name = "operator", EmitDefaultValue = false)]
+        public string Operator { get; set; }
 
         /// <summary>
-        /// Gets or Sets Action
+        /// Gets or Sets Value
         /// </summary>
-        [DataMember(Name = "action", EmitDefaultValue = false)]
-        public string Action { get; set; }
-
-        /// <summary>
-        /// Gets or Sets FilterableFields
-        /// </summary>
-        [DataMember(Name = "filterable_fields", EmitDefaultValue = false)]
-        public Object FilterableFields { get; set; }
+        [DataMember(Name = "value", EmitDefaultValue = false)]
+        public ParamDefinitionFilteringConditionsFilterRuleValue Value { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -78,11 +70,10 @@ namespace Org.OpenAPITools.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class WebhookEvents200ResponseResultEventsInner {\n");
-            sb.Append("  WebhookName: ").Append(WebhookName).Append("\n");
-            sb.Append("  Entity: ").Append(Entity).Append("\n");
-            sb.Append("  Action: ").Append(Action).Append("\n");
-            sb.Append("  FilterableFields: ").Append(FilterableFields).Append("\n");
+            sb.Append("class ParamDefinitionFilteringConditionsFilterRule {\n");
+            sb.Append("  Field: ").Append(Field).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

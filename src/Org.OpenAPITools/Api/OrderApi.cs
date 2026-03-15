@@ -149,9 +149,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OrderCount200Response</returns>
-        OrderCount200Response OrderCount(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0);
+        OrderCount200Response OrderCount(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// order.count
@@ -180,9 +181,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OrderCount200Response</returns>
-        ApiResponse<OrderCount200Response> OrderCountWithHttpInfo(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0);
+        ApiResponse<OrderCount200Response> OrderCountWithHttpInfo(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0);
         /// <summary>
         /// order.financial_status.list
         /// </summary>
@@ -945,10 +947,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderCount200Response</returns>
-        System.Threading.Tasks.Task<OrderCount200Response> OrderCountAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderCount200Response> OrderCountAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// order.count
@@ -977,10 +980,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderCount200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderCount200Response>> OrderCountWithHttpInfoAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderCount200Response>> OrderCountWithHttpInfoAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// order.financial_status.list
         /// </summary>
@@ -2437,11 +2441,12 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OrderCount200Response</returns>
-        public OrderCount200Response OrderCount(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0)
+        public OrderCount200Response OrderCount(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderCount200Response> localVarResponse = OrderCountWithHttpInfo(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo);
+            Org.OpenAPITools.Client.ApiResponse<OrderCount200Response> localVarResponse = OrderCountWithHttpInfo(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion);
             return localVarResponse.Data;
         }
 
@@ -2469,9 +2474,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OrderCount200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<OrderCount200Response> OrderCountWithHttpInfo(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<OrderCount200Response> OrderCountWithHttpInfo(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2576,6 +2582,10 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
             }
+            if (useLatestApiVersion != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "use_latest_api_version", useLatestApiVersion));
+            }
 
             localVarRequestOptions.Operation = "OrderApi.OrderCount";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2629,12 +2639,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderCount200Response</returns>
-        public async System.Threading.Tasks.Task<OrderCount200Response> OrderCountAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderCount200Response> OrderCountAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderCount200Response> localVarResponse = await OrderCountWithHttpInfoAsync(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<OrderCount200Response> localVarResponse = await OrderCountWithHttpInfoAsync(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2662,10 +2673,11 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
         /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderCount200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrderCount200Response>> OrderCountWithHttpInfoAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrderCount200Response>> OrderCountWithHttpInfoAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2769,6 +2781,10 @@ namespace Org.OpenAPITools.Api
             if (modifiedTo != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
+            }
+            if (useLatestApiVersion != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "use_latest_api_version", useLatestApiVersion));
             }
 
             localVarRequestOptions.Operation = "OrderApi.OrderCount";

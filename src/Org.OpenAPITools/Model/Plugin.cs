@@ -36,12 +36,14 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="Plugin" /> class.
         /// </summary>
         /// <param name="name">name.</param>
+        /// <param name="code">code.</param>
         /// <param name="active">active.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public Plugin(string name = default(string), bool? active = default(bool?), Object additionalFields = default(Object), Object customFields = default(Object))
+        public Plugin(string name = default(string), string code = default(string), bool? active = default(bool?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Name = name;
+            this.Code = code;
             this.Active = active;
             this.AdditionalFields = additionalFields;
             this.CustomFields = customFields;
@@ -52,6 +54,12 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Code
+        /// </summary>
+        [DataMember(Name = "code", EmitDefaultValue = true)]
+        public string Code { get; set; }
 
         /// <summary>
         /// Gets or Sets Active
@@ -80,6 +88,7 @@ namespace Org.OpenAPITools.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class Plugin {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("  AdditionalFields: ").Append(AdditionalFields).Append("\n");
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");

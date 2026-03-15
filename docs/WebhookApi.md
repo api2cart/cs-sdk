@@ -117,7 +117,7 @@ catch (ApiException e)
 
 <a id="webhookcreate"></a>
 # **WebhookCreate**
-> BasketLiveShippingServiceCreate200Response WebhookCreate (string entity, string action, string? callback = null, string? label = null, string? fields = null, string? responseFields = null, bool? active = null, string? langId = null, string? storeId = null, string? idempotencyKey = null)
+> BasketLiveShippingServiceCreate200Response WebhookCreate (WebhookCreate webhookCreate)
 
 webhook.create
 
@@ -149,21 +149,12 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new WebhookApi(config);
-            var entity = product;  // string | Specify the entity that you want to enable webhooks for (e.g product, order, customer, category)
-            var action = add;  // string | Specify what action (event) will trigger the webhook (e.g add, delete, or update)
-            var callback = https://example.com/callback;  // string? | Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional) 
-            var label = Super webhook;  // string? | The name you give to the webhook (optional) 
-            var fields = id, name, description;  // string? | Fields the webhook should send (optional)  (default to "force_all")
-            var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var active = true;  // bool? | Webhook status (optional)  (default to true)
-            var langId = 3;  // string? | Language id (optional) 
-            var storeId = 1;  // string? | Defines store id where the webhook should be assigned (optional) 
-            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
+            var webhookCreate = new WebhookCreate(); // WebhookCreate | 
 
             try
             {
                 // webhook.create
-                BasketLiveShippingServiceCreate200Response result = apiInstance.WebhookCreate(entity, action, callback, label, fields, responseFields, active, langId, storeId, idempotencyKey);
+                BasketLiveShippingServiceCreate200Response result = apiInstance.WebhookCreate(webhookCreate);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -184,7 +175,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // webhook.create
-    ApiResponse<BasketLiveShippingServiceCreate200Response> response = apiInstance.WebhookCreateWithHttpInfo(entity, action, callback, label, fields, responseFields, active, langId, storeId, idempotencyKey);
+    ApiResponse<BasketLiveShippingServiceCreate200Response> response = apiInstance.WebhookCreateWithHttpInfo(webhookCreate);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -201,16 +192,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **entity** | **string** | Specify the entity that you want to enable webhooks for (e.g product, order, customer, category) |  |
-| **action** | **string** | Specify what action (event) will trigger the webhook (e.g add, delete, or update) |  |
-| **callback** | **string?** | Callback url that returns shipping rates. It should be able to accept POST requests with json data. | [optional]  |
-| **label** | **string?** | The name you give to the webhook | [optional]  |
-| **fields** | **string?** | Fields the webhook should send | [optional] [default to &quot;force_all&quot;] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **active** | **bool?** | Webhook status | [optional] [default to true] |
-| **langId** | **string?** | Language id | [optional]  |
-| **storeId** | **string?** | Defines store id where the webhook should be assigned | [optional]  |
-| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
+| **webhookCreate** | [**WebhookCreate**](WebhookCreate.md) |  |  |
 
 ### Return type
 
@@ -222,7 +204,7 @@ catch (ApiException e)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -542,7 +524,7 @@ catch (ApiException e)
 
 <a id="webhookupdate"></a>
 # **WebhookUpdate**
-> ProductImageUpdate200Response WebhookUpdate (string id, string? callback = null, string? label = null, string? fields = null, string? responseFields = null, bool? active = null, string? langId = null, string? idempotencyKey = null)
+> ProductImageUpdate200Response WebhookUpdate (WebhookUpdate webhookUpdate)
 
 webhook.update
 
@@ -574,19 +556,12 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new WebhookApi(config);
-            var id = 25;  // string | Webhook id
-            var callback = https://example.com/callback;  // string? | Callback url that returns shipping rates. It should be able to accept POST requests with json data. (optional) 
-            var label = Super webhook;  // string? | The name you give to the webhook (optional) 
-            var fields = id, name, description;  // string? | Fields the webhook should send (optional) 
-            var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var active = true;  // bool? | Webhook status (optional) 
-            var langId = 3;  // string? | Language id (optional) 
-            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
+            var webhookUpdate = new WebhookUpdate(); // WebhookUpdate | 
 
             try
             {
                 // webhook.update
-                ProductImageUpdate200Response result = apiInstance.WebhookUpdate(id, callback, label, fields, responseFields, active, langId, idempotencyKey);
+                ProductImageUpdate200Response result = apiInstance.WebhookUpdate(webhookUpdate);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -607,7 +582,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // webhook.update
-    ApiResponse<ProductImageUpdate200Response> response = apiInstance.WebhookUpdateWithHttpInfo(id, callback, label, fields, responseFields, active, langId, idempotencyKey);
+    ApiResponse<ProductImageUpdate200Response> response = apiInstance.WebhookUpdateWithHttpInfo(webhookUpdate);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -624,14 +599,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **id** | **string** | Webhook id |  |
-| **callback** | **string?** | Callback url that returns shipping rates. It should be able to accept POST requests with json data. | [optional]  |
-| **label** | **string?** | The name you give to the webhook | [optional]  |
-| **fields** | **string?** | Fields the webhook should send | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **active** | **bool?** | Webhook status | [optional]  |
-| **langId** | **string?** | Language id | [optional]  |
-| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
+| **webhookUpdate** | [**WebhookUpdate**](WebhookUpdate.md) |  |  |
 
 ### Return type
 
@@ -643,7 +611,7 @@ catch (ApiException e)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

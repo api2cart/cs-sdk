@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **UpdatedAt** | **string** |  | [optional] 
 **Entity** | **string** |  | [optional] 
 **Action** | **string** |  | [optional] 
+**FilteringConditions** | **Object** |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 
 
