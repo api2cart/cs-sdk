@@ -470,6 +470,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'NopcommerceToken'
+        /// </summary>
+        [Fact]
+        public void NopcommerceTokenTest()
+        {
+            // TODO unit test for the property 'NopcommerceToken'
+        }
+
+        /// <summary>
         /// Test the property 'DemandwareClientId'
         /// </summary>
         [Fact]

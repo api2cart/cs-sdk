@@ -1038,6 +1038,16 @@ paths:
         schema:
           type: string
         style: form
+      - description: Access token authorizing the app to access resources on behalf
+          of a user
+        example: igse8e4rdmzkxdi937qe69d59en1imw
+        explode: true
+        in: query
+        name: nopcommerce_token
+        required: false
+        schema:
+          type: string
+        style: form
       - description: It's a Volusion account for which API is enabled
         example: admin
         explode: true
@@ -14144,6 +14154,7 @@ components:
         shopline_app_secret: 1701d123bb5cc14cd2732dcaed90638316c0a09
         neto_api_username: mylogin
         hybris_client_secret: secret_phrase_1
+        nopcommerce_token: igse8e4rdmzkxdi937qe69d59en1imw
         otto_client_secret: 9887a82a-2879-421e-a6wc-54e986b3458c
         etsy_token_secret: igse8e4rdmzkxdi937qe69d59en1imw
         americommerce_app_id: "1"
@@ -14503,6 +14514,12 @@ components:
           example: a46abc3kxyinlbggy06i9g975xqo6gjq
           type: string
           name: bricklink_token_secret
+        nopcommerce_token:
+          description: Access token authorizing the app to access resources on behalf
+            of a user
+          example: igse8e4rdmzkxdi937qe69d59en1imw
+          type: string
+          name: nopcommerce_token
         demandware_client_id:
           description: Demandware client id
           example: b849eb85-v8b9-1dw8-9fe2-97e1d6ffc7b0
@@ -32520,6 +32537,7 @@ components:
           max_allowed_characters: 923
           max_allowed_files: 6
         weight_unit: lb
+        responsible_person_ids: "1,2,3"
         condition_description: "Almost perfect condition, a few scratches"
         harmonized_system_code: "123456"
         status: disabled
@@ -32696,6 +32714,7 @@ components:
         downloadable: true
         isbn: "9783161484100"
         allow_display_condition: false
+        manufacturer_ids: "1,2,3"
         description: Product description
         search_keywords: "key1,key2,key3"
         size_chart:
@@ -33423,6 +33442,18 @@ components:
           maxItems: 5
           minItems: 1
           type: array
+        manufacturer_ids:
+          description: A comma-separated list of manufacturer IDs. Retrieve the IDs
+            from the cart.info method.
+          example: "1,2,3"
+          type: string
+          name: manufacturer_ids
+        responsible_person_ids:
+          description: A comma-separated list of responsible person IDs. Retrieve
+            the IDs from the cart.info method.
+          example: "1,2,3"
+          type: string
+          name: responsible_person_ids
         idempotency_key:
           description: A unique identifier associated with a specific request. Repeated
             requests with the same <strong>idempotency_key</strong> return a cached
@@ -34061,59 +34092,35 @@ components:
       - payload
     ProductUpdate:
       example:
-        seo_url: some seo url
-        reserve_quantity: "1"
-        reduce_quantity: 4
         sprice_create: 2018-08-25 23:56:12
         type: simple
-        in_stock: true
-        manufacturer_info:
-          address: address
-          phone: phone
-          name: name
-          email: email
-        retail_price: 6.9
-        product_class: Shirts
         low_stock_threshold: 1
         clear_cache: false
-        increase_quantity: 4
         marketplace_item_properties: "{\"color\":[\"Silver\"],\"manufacturer\":\"\
           Philips\",\"features\":[\"3 way\"],\"countPerPack\":1,\"watts\":{\"unit\"\
           :\"W\",\"measure\":40}}"
         price: 99.9
-        dimensions_unit: cm
         idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         model: bag_01
         is_free_shipping: true
         id: 10
         sku: bag_01
-        barcode: "9770317847001"
         height: 56.12
         personalization_details:
           personalization_instructions: personalization_instructions
           is_personalizable: true
           personalization_is_required: true
           personalization_char_count_max: 8
-        manufacturer_id: "1"
-        visible: search
-        shipping_template_id: 40256592690
         taxable: false
-        meta_title: "category,test"
-        reindex: false
         old_price: 99.9
-        stores_ids: "1,2"
         country_of_origin: "123456"
-        weight: 23.69
         upc: "9770317847001"
-        brand_name: Abidas
         mpn: "9770317847001"
         external_product_link: http://example.com/t-shirt
-        disable_report_cache: false
         avail_from: 2029-10-25T15:54:37-0500
         tags: "tag1,tag2"
         is_supply: false
         meta_description: "category,test"
-        condition: Like New
         personalization_questions:
         - question_text: question_text
           instructions: instructions
@@ -34176,19 +34183,10 @@ components:
           max_allowed_characters: 923
           max_allowed_files: 6
         weight_unit: lb
-        materials: "materials[0]=Aluminum&materials[1]=Brass"
-        name: Pancil
-        when_made: 2020_2025
-        sprice_expire: 2018-08-25 23:56:12
-        reserve_price: 65.9
+        responsible_person_ids: "1,2,3"
         harmonized_system_code: "123456"
         status: disabled
-        check_process_status: false
-        is_virtual: false
         short_description: Short description. This is very short description
-        downloadable: true
-        isbn: "9783161484100"
-        description: New product description
         tier_prices:
         - quantity: 0.8008281904610115
           price: 6.027456183070403
@@ -34196,19 +34194,9 @@ components:
           price: 6.027456183070403
         up_sell_products_ids: "4,5"
         meta_keywords: "category,test"
-        search_keywords: "key1,key2,key3"
         manufacturer: Samsung
         ean: "5901234123457"
         related_products_ids: "4,5"
-        package_details:
-          package_width: 6.84685269835264
-          shipping_package: shipping_package
-          package_depth: 1.0246457001441578
-          package_length: 1.4894159098541704
-          weigh_unit: weigh_unit
-          measure_unit: measure_unit
-          weight_major: 7.457744773683766
-          weight_minor: 1.1730742509559433
         fixed_cost_shipping_price: 5.5
         processing_profile_id: '`12345678`'
         on_sale: false
@@ -34216,26 +34204,16 @@ components:
         store_id: "1"
         avail: false
         manage_stock: false
-        gtin: "12345678912345"
-        quantity: 6
         tax_class_id: 9
-        length: 56.12
-        lang_id: 3
         prices_inc_tax: true
-        unit_price: 10.5
         shop_section_id: 12345678
         min_order_quantity: 1
-        buyitnow_price: 65.9
         measure_unit: Piece
-        report_request_id: "105245017661"
-        delivery_code: 24uurs-23
         auto_renew: false
         production_partner_ids: "4,5"
         special_price: 56.9
         width: 56.12
         cross_sell_products_ids: "4,5"
-        backorder_status: "true"
-        categories_ids: "23,56"
         available_for_view: false
         warehouse_id: "1"
         specifics:
@@ -34325,6 +34303,61 @@ components:
             calories: 2.3021358869347655
           value: value
           input_value: input_value
+        seo_url: some seo url
+        reserve_quantity: "1"
+        reduce_quantity: 4
+        in_stock: true
+        manufacturer_info:
+          address: address
+          phone: phone
+          name: name
+          email: email
+        retail_price: 6.9
+        product_class: Shirts
+        increase_quantity: 4
+        dimensions_unit: cm
+        barcode: "9770317847001"
+        manufacturer_id: "1"
+        visible: search
+        shipping_template_id: 40256592690
+        meta_title: "category,test"
+        reindex: false
+        stores_ids: "1,2"
+        weight: 23.69
+        brand_name: Abidas
+        disable_report_cache: false
+        condition: Like New
+        materials: "materials[0]=Aluminum&materials[1]=Brass"
+        name: Pancil
+        when_made: 2020_2025
+        sprice_expire: 2018-08-25 23:56:12
+        reserve_price: 65.9
+        check_process_status: false
+        is_virtual: false
+        downloadable: true
+        isbn: "9783161484100"
+        manufacturer_ids: "1,2,3"
+        description: New product description
+        search_keywords: "key1,key2,key3"
+        package_details:
+          package_width: 6.84685269835264
+          shipping_package: shipping_package
+          package_depth: 1.0246457001441578
+          package_length: 1.4894159098541704
+          weigh_unit: weigh_unit
+          measure_unit: measure_unit
+          weight_major: 7.457744773683766
+          weight_minor: 1.1730742509559433
+        gtin: "12345678912345"
+        quantity: 6
+        length: 56.12
+        lang_id: 3
+        unit_price: 10.5
+        buyitnow_price: 65.9
+        report_request_id: "105245017661"
+        delivery_code: 24uurs-23
+        backorder_status: "true"
+        categories_ids: "23,56"
       properties:
         id:
           description: Defines product id that has to be updated
@@ -34841,6 +34874,18 @@ components:
           example: 1
           type: number
           name: min_order_quantity
+        manufacturer_ids:
+          description: A comma-separated list of manufacturer IDs. Retrieve the IDs
+            from the cart.info method.
+          example: "1,2,3"
+          type: string
+          name: manufacturer_ids
+        responsible_person_ids:
+          description: A comma-separated list of responsible person IDs. Retrieve
+            the IDs from the cart.info method.
+          example: "1,2,3"
+          type: string
+          name: responsible_person_ids
         idempotency_key:
           description: A unique identifier associated with a specific request. Repeated
             requests with the same <strong>idempotency_key</strong> return a cached

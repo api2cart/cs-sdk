@@ -1163,6 +1163,24 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ManufacturerIds'
+        /// </summary>
+        [Fact]
+        public void ManufacturerIdsTest()
+        {
+            // TODO unit test for the property 'ManufacturerIds'
+        }
+
+        /// <summary>
+        /// Test the property 'ResponsiblePersonIds'
+        /// </summary>
+        [Fact]
+        public void ResponsiblePersonIdsTest()
+        {
+            // TODO unit test for the property 'ResponsiblePersonIds'
+        }
+
+        /// <summary>
         /// Test the property 'IdempotencyKey'
         /// </summary>
         [Fact]

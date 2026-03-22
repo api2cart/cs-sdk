@@ -99,6 +99,8 @@ Name | Type | Description | Notes
 **ExternalProductLink** | **string** | External product link | [optional] 
 **MarketplaceItemProperties** | **string** | String containing the JSON representation of the supplied data | [optional] 
 **MinOrderQuantity** | **decimal** | The minimum quantity an order must contain, to be eligible to purchase this product. | [optional] 
+**ManufacturerIds** | **string** | A comma-separated list of manufacturer IDs. Retrieve the IDs from the cart.info method. | [optional] 
+**ResponsiblePersonIds** | **string** | A comma-separated list of responsible person IDs. Retrieve the IDs from the cart.info method. | [optional] 
 **IdempotencyKey** | **string** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
