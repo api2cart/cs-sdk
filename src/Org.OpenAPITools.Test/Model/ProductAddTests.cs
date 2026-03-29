@@ -353,6 +353,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'RetailPrice'
+        /// </summary>
+        [Fact]
+        public void RetailPriceTest()
+        {
+            // TODO unit test for the property 'RetailPrice'
+        }
+
+        /// <summary>
         /// Test the property 'Quantity'
         /// </summary>
         [Fact]

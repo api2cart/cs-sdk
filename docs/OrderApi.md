@@ -30,7 +30,7 @@ All URIs are relative to *https://api.api2cart.local.com/v1.1*
 
 <a id="orderabandonedlist"></a>
 # **OrderAbandonedList**
-> ModelResponseOrderAbandonedList OrderAbandonedList (int? start = null, int? count = null, string? pageCursor = null, string? customerId = null, string? customerEmail = null, string? storeId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, bool? skipEmptyEmail = null, string? responseFields = null, string? varParams = null, string? exclude = null)
+> ModelResponseOrderAbandonedList OrderAbandonedList (int? start = null, int? count = null, string? pageCursor = null, string? customerId = null, string? customerEmail = null, string? storeId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, bool? skipEmptyEmail = null, int? roundingPrecision = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 order.abandoned.list
 
@@ -73,6 +73,7 @@ namespace Example
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
             var skipEmptyEmail = true;  // bool? | Filter empty emails (optional)  (default to false)
+            var roundingPrecision = 3;  // int? | <p>Specifies the rounding precision for fractional numeric values (such as prices, taxes, and weights).</p> <p>Supported values range from <b>1</b> to <b>6</b>.</p> <p>The default rounding precision may vary depending on the platform. You can retrieve the default value using the <strong>cart.info</strong> method in the <code>default_rounding_precision</code> field. </p><p>Values are rounded to the nearest number at the specified precision. Fractions of .5 or higher are rounded up, while fractions lower than .5 are rounded down.</p> (optional) 
             var responseFields = {return_code,pagination,result{order{id,customer{email},created_at,totals{total},order_products}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var varParams = force_all;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "customer,totals,items")
             var exclude = customer;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
@@ -80,7 +81,7 @@ namespace Example
             try
             {
                 // order.abandoned.list
-                ModelResponseOrderAbandonedList result = apiInstance.OrderAbandonedList(start, count, pageCursor, customerId, customerEmail, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, skipEmptyEmail, responseFields, varParams, exclude);
+                ModelResponseOrderAbandonedList result = apiInstance.OrderAbandonedList(start, count, pageCursor, customerId, customerEmail, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, skipEmptyEmail, roundingPrecision, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -101,7 +102,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.abandoned.list
-    ApiResponse<ModelResponseOrderAbandonedList> response = apiInstance.OrderAbandonedListWithHttpInfo(start, count, pageCursor, customerId, customerEmail, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, skipEmptyEmail, responseFields, varParams, exclude);
+    ApiResponse<ModelResponseOrderAbandonedList> response = apiInstance.OrderAbandonedListWithHttpInfo(start, count, pageCursor, customerId, customerEmail, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, skipEmptyEmail, roundingPrecision, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -129,6 +130,7 @@ catch (ApiException e)
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
 | **skipEmptyEmail** | **bool?** | Filter empty emails | [optional] [default to false] |
+| **roundingPrecision** | **int?** | &lt;p&gt;Specifies the rounding precision for fractional numeric values (such as prices, taxes, and weights).&lt;/p&gt; &lt;p&gt;Supported values range from &lt;b&gt;1&lt;/b&gt; to &lt;b&gt;6&lt;/b&gt;.&lt;/p&gt; &lt;p&gt;The default rounding precision may vary depending on the platform. You can retrieve the default value using the &lt;strong&gt;cart.info&lt;/strong&gt; method in the &lt;code&gt;default_rounding_precision&lt;/code&gt; field. &lt;/p&gt;&lt;p&gt;Values are rounded to the nearest number at the specified precision. Fractions of .5 or higher are rounded up, while fractions lower than .5 are rounded down.&lt;/p&gt; | [optional]  |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;customer,totals,items&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |

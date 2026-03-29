@@ -8602,6 +8602,22 @@ paths:
           default: false
           type: boolean
         style: form
+      - description: "<p>Specifies the rounding precision for fractional numeric values\
+          \ (such as prices, taxes, and weights).</p> <p>Supported values range from\
+          \ <b>1</b> to <b>6</b>.</p> <p>The default rounding precision may vary depending\
+          \ on the platform. You can retrieve the default value using the <strong>cart.info</strong>\
+          \ method in the <code>default_rounding_precision</code> field. </p><p>Values\
+          \ are rounded to the nearest number at the specified precision. Fractions\
+          \ of .5 or higher are rounded up, while fractions lower than .5 are rounded\
+          \ down.</p>"
+        example: 3
+        explode: true
+        in: query
+        name: rounding_precision
+        required: false
+        schema:
+          type: integer
+        style: form
       - description: Set this parameter in order to choose which entity fields you
           want to retrieve
         example: "{return_code,pagination,result{order{id,customer{email},created_at,totals{total},order_products}}}"
@@ -32684,6 +32700,7 @@ components:
           phone: phone
           name: name
           email: email
+        retail_price: 6.9
         product_class: Shirts
         payment_methods: "payment_methods[0]=CashOnPickup&payment_methods[1]=PayPal"
         dimensions_unit: cm
@@ -32947,6 +32964,11 @@ components:
           example: true
           type: boolean
           name: prices_inc_tax
+        retail_price:
+          description: Defines new product's retail price
+          example: 6.9
+          type: number
+          name: retail_price
         quantity:
           default: 0
           description: Defines product's quantity that has to be added

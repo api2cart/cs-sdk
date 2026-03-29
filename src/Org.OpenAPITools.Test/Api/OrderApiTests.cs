@@ -73,10 +73,11 @@ namespace Org.OpenAPITools.Test.Api
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
             //bool? skipEmptyEmail = null;
+            //int? roundingPrecision = null;
             //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.OrderAbandonedList(start, count, pageCursor, customerId, customerEmail, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, skipEmptyEmail, responseFields, varParams, exclude);
+            //var response = instance.OrderAbandonedList(start, count, pageCursor, customerId, customerEmail, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, skipEmptyEmail, roundingPrecision, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseOrderAbandonedList>(response);
         }
 
