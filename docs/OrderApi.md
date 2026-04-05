@@ -358,7 +358,7 @@ catch (ApiException e)
 
 <a id="ordercount"></a>
 # **OrderCount**
-> OrderCount200Response OrderCount (string? orderIds = null, string? ids = null, string? customerId = null, string? storeId = null, string? customerEmail = null, string? orderStatus = null, List<string>? orderStatusIds = null, string? ebayOrderStatus = null, string? financialStatus = null, List<string>? financialStatusIds = null, string? fulfillmentChannel = null, string? fulfillmentStatus = null, string? shippingMethod = null, string? deliveryMethod = null, string? tags = null, string? shipNodeType = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, bool? useLatestApiVersion = null)
+> OrderCount200Response OrderCount (string? orderIds = null, string? ids = null, string? customerId = null, string? storeId = null, string? customerEmail = null, string? orderStatus = null, List<string>? orderStatusIds = null, string? ebayOrderStatus = null, string? financialStatus = null, List<string>? financialStatusIds = null, string? fulfillmentChannel = null, string? fulfillmentStatus = null, string? shippingMethod = null, string? deliveryMethod = null, string? tags = null, string? shipNodeType = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, bool? useLatestApiVersion = null, string? vendorId = null)
 
 order.count
 
@@ -411,11 +411,12 @@ namespace Example
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
             var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
+            var vendorId = 1;  // string? | Counts orders specified by vendor id (optional) 
 
             try
             {
                 // order.count
-                OrderCount200Response result = apiInstance.OrderCount(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion);
+                OrderCount200Response result = apiInstance.OrderCount(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion, vendorId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -436,7 +437,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.count
-    ApiResponse<OrderCount200Response> response = apiInstance.OrderCountWithHttpInfo(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion);
+    ApiResponse<OrderCount200Response> response = apiInstance.OrderCountWithHttpInfo(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion, vendorId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -474,6 +475,7 @@ catch (ApiException e)
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
 | **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
+| **vendorId** | **string?** | Counts orders specified by vendor id | [optional]  |
 
 ### Return type
 
@@ -811,7 +813,7 @@ catch (ApiException e)
 
 <a id="orderlist"></a>
 # **OrderList**
-> ModelResponseOrderList OrderList (int? start = null, int? count = null, string? pageCursor = null, string? ids = null, string? orderIds = null, string? sinceId = null, string? storeId = null, string? customerId = null, string? customerEmail = null, string? basketId = null, string? currencyId = null, string? phone = null, string? orderStatus = null, List<string>? orderStatusIds = null, string? ebayOrderStatus = null, string? financialStatus = null, List<string>? financialStatusIds = null, string? fulfillmentStatus = null, string? returnStatus = null, string? fulfillmentChannel = null, string? shippingMethod = null, string? skipOrderIds = null, bool? isDeleted = null, string? shippingCountryIso3 = null, string? deliveryMethod = null, string? shipNodeType = null, string? createdTo = null, string? createdFrom = null, string? modifiedTo = null, string? modifiedFrom = null, string? tags = null, string? sortBy = null, string? sortDirection = null, string? varParams = null, string? responseFields = null, string? exclude = null, bool? enableCache = null, bool? useLatestApiVersion = null, int? roundingPrecision = null, bool? allowUserDefinedOrderStatuses = null)
+> ModelResponseOrderList OrderList (int? start = null, int? count = null, string? pageCursor = null, string? ids = null, string? orderIds = null, string? sinceId = null, string? storeId = null, string? vendorId = null, string? customerId = null, string? customerEmail = null, string? basketId = null, string? currencyId = null, string? phone = null, string? orderStatus = null, List<string>? orderStatusIds = null, string? ebayOrderStatus = null, string? financialStatus = null, List<string>? financialStatusIds = null, string? fulfillmentStatus = null, string? returnStatus = null, string? fulfillmentChannel = null, string? shippingMethod = null, string? skipOrderIds = null, bool? isDeleted = null, string? shippingCountryIso3 = null, string? deliveryMethod = null, string? shipNodeType = null, string? createdTo = null, string? createdFrom = null, string? modifiedTo = null, string? modifiedFrom = null, string? tags = null, string? sortBy = null, string? sortDirection = null, string? varParams = null, string? responseFields = null, string? exclude = null, bool? enableCache = null, bool? useLatestApiVersion = null, int? roundingPrecision = null, bool? allowUserDefinedOrderStatuses = null)
 
 order.list
 
@@ -850,6 +852,7 @@ namespace Example
             var orderIds = 24,25;  // string? | Retrieves orders specified by order ids (optional) 
             var sinceId = 56;  // string? | Retrieve entities starting from the specified id. (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
+            var vendorId = 1;  // string? | Retrieves orders specified by vendor id (optional) 
             var customerId = 5;  // string? | Retrieves orders specified by customer id (optional) 
             var customerEmail = jubari@hannsgroup.com;  // string? | Retrieves orders specified by customer email (optional) 
             var basketId = 1;  // string? | Retrieves order’s info specified by basket id. (optional) 
@@ -887,7 +890,7 @@ namespace Example
             try
             {
                 // order.list
-                ModelResponseOrderList result = apiInstance.OrderList(start, count, pageCursor, ids, orderIds, sinceId, storeId, customerId, customerEmail, basketId, currencyId, phone, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentStatus, returnStatus, fulfillmentChannel, shippingMethod, skipOrderIds, isDeleted, shippingCountryIso3, deliveryMethod, shipNodeType, createdTo, createdFrom, modifiedTo, modifiedFrom, tags, sortBy, sortDirection, varParams, responseFields, exclude, enableCache, useLatestApiVersion, roundingPrecision, allowUserDefinedOrderStatuses);
+                ModelResponseOrderList result = apiInstance.OrderList(start, count, pageCursor, ids, orderIds, sinceId, storeId, vendorId, customerId, customerEmail, basketId, currencyId, phone, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentStatus, returnStatus, fulfillmentChannel, shippingMethod, skipOrderIds, isDeleted, shippingCountryIso3, deliveryMethod, shipNodeType, createdTo, createdFrom, modifiedTo, modifiedFrom, tags, sortBy, sortDirection, varParams, responseFields, exclude, enableCache, useLatestApiVersion, roundingPrecision, allowUserDefinedOrderStatuses);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -908,7 +911,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.list
-    ApiResponse<ModelResponseOrderList> response = apiInstance.OrderListWithHttpInfo(start, count, pageCursor, ids, orderIds, sinceId, storeId, customerId, customerEmail, basketId, currencyId, phone, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentStatus, returnStatus, fulfillmentChannel, shippingMethod, skipOrderIds, isDeleted, shippingCountryIso3, deliveryMethod, shipNodeType, createdTo, createdFrom, modifiedTo, modifiedFrom, tags, sortBy, sortDirection, varParams, responseFields, exclude, enableCache, useLatestApiVersion, roundingPrecision, allowUserDefinedOrderStatuses);
+    ApiResponse<ModelResponseOrderList> response = apiInstance.OrderListWithHttpInfo(start, count, pageCursor, ids, orderIds, sinceId, storeId, vendorId, customerId, customerEmail, basketId, currencyId, phone, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentStatus, returnStatus, fulfillmentChannel, shippingMethod, skipOrderIds, isDeleted, shippingCountryIso3, deliveryMethod, shipNodeType, createdTo, createdFrom, modifiedTo, modifiedFrom, tags, sortBy, sortDirection, varParams, responseFields, exclude, enableCache, useLatestApiVersion, roundingPrecision, allowUserDefinedOrderStatuses);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -932,6 +935,7 @@ catch (ApiException e)
 | **orderIds** | **string?** | Retrieves orders specified by order ids | [optional]  |
 | **sinceId** | **string?** | Retrieve entities starting from the specified id. | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **vendorId** | **string?** | Retrieves orders specified by vendor id | [optional]  |
 | **customerId** | **string?** | Retrieves orders specified by customer id | [optional]  |
 | **customerEmail** | **string?** | Retrieves orders specified by customer email | [optional]  |
 | **basketId** | **string?** | Retrieves order’s info specified by basket id. | [optional]  |

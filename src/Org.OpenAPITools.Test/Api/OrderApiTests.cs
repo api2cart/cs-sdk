@@ -133,7 +133,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
             //bool? useLatestApiVersion = null;
-            //var response = instance.OrderCount(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion);
+            //string? vendorId = null;
+            //var response = instance.OrderCount(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion, vendorId);
             //Assert.IsType<OrderCount200Response>(response);
         }
 
@@ -195,6 +196,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? orderIds = null;
             //string? sinceId = null;
             //string? storeId = null;
+            //string? vendorId = null;
             //string? customerId = null;
             //string? customerEmail = null;
             //string? basketId = null;
@@ -228,7 +230,7 @@ namespace Org.OpenAPITools.Test.Api
             //bool? useLatestApiVersion = null;
             //int? roundingPrecision = null;
             //bool? allowUserDefinedOrderStatuses = null;
-            //var response = instance.OrderList(start, count, pageCursor, ids, orderIds, sinceId, storeId, customerId, customerEmail, basketId, currencyId, phone, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentStatus, returnStatus, fulfillmentChannel, shippingMethod, skipOrderIds, isDeleted, shippingCountryIso3, deliveryMethod, shipNodeType, createdTo, createdFrom, modifiedTo, modifiedFrom, tags, sortBy, sortDirection, varParams, responseFields, exclude, enableCache, useLatestApiVersion, roundingPrecision, allowUserDefinedOrderStatuses);
+            //var response = instance.OrderList(start, count, pageCursor, ids, orderIds, sinceId, storeId, vendorId, customerId, customerEmail, basketId, currencyId, phone, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentStatus, returnStatus, fulfillmentChannel, shippingMethod, skipOrderIds, isDeleted, shippingCountryIso3, deliveryMethod, shipNodeType, createdTo, createdFrom, modifiedTo, modifiedFrom, tags, sortBy, sortDirection, varParams, responseFields, exclude, enableCache, useLatestApiVersion, roundingPrecision, allowUserDefinedOrderStatuses);
             //Assert.IsType<ModelResponseOrderList>(response);
         }
 

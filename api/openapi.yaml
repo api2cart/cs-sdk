@@ -7836,6 +7836,15 @@ paths:
           default: false
           type: boolean
         style: form
+      - description: Counts orders specified by vendor id
+        example: "1"
+        explode: true
+        in: query
+        name: vendor_id
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -7917,6 +7926,15 @@ paths:
         explode: true
         in: query
         name: store_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Retrieves orders specified by vendor id
+        example: "1"
+        explode: true
+        in: query
+        name: vendor_id
         required: false
         schema:
           type: string
@@ -9371,6 +9389,15 @@ paths:
         schema:
           type: string
         style: form
+      - description: Vendor Id
+        example: "1"
+        explode: true
+        in: query
+        name: vendor_id
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Retrieves product info specified by language id
         example: 3
         explode: true
@@ -9518,6 +9545,15 @@ paths:
         explode: true
         in: query
         name: store_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Counts products specified by vendor id
+        example: "1"
+        explode: true
+        in: query
+        name: vendor_id
         required: false
         schema:
           type: string
@@ -9792,6 +9828,15 @@ paths:
         explode: true
         in: query
         name: store_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Retrieves products specified by vendor id
+        example: "1"
+        explode: true
+        in: query
+        name: vendor_id
         required: false
         schema:
           type: string
@@ -10797,6 +10842,16 @@ paths:
         required: false
         schema:
           type: string
+        style: form
+      - description: Defines category's visibility status
+        example: false
+        explode: true
+        in: query
+        name: avail
+        required: false
+        schema:
+          default: true
+          type: boolean
         style: form
       - description: Set this parameter in order to choose which entity fields you
           want to retrieve

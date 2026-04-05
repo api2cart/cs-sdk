@@ -164,10 +164,11 @@ namespace Org.OpenAPITools.Test.Api
             //string? createdTo = null;
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
+            //bool? avail = null;
             //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.ProductBrandList(start, count, pageCursor, brandIds, categoryId, parentId, storeId, langId, findWhere, findValue, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
+            //var response = instance.ProductBrandList(start, count, pageCursor, brandIds, categoryId, parentId, storeId, langId, findWhere, findValue, createdFrom, createdTo, modifiedFrom, modifiedTo, avail, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseProductBrandList>(response);
         }
 
@@ -253,6 +254,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? categoriesIds = null;
             //string? categoryId = null;
             //string? storeId = null;
+            //string? vendorId = null;
             //string? langId = null;
             //bool? availView = null;
             //bool? availSale = null;
@@ -272,7 +274,7 @@ namespace Org.OpenAPITools.Test.Api
             //bool? returnGlobal = null;
             //bool? disableReportCache = null;
             //bool? useLatestApiVersion = null;
-            //var response = instance.ProductCount(sku, productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
+            //var response = instance.ProductCount(sku, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
             //Assert.IsType<ProductCount200Response>(response);
         }
 
@@ -413,6 +415,7 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //string? storeId = null;
+            //string? vendorId = null;
             //string? langId = null;
             //string? currencyId = null;
             //string? responseFields = null;
@@ -421,7 +424,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? reportRequestId = null;
             //bool? disableReportCache = null;
             //bool? useLatestApiVersion = null;
-            //var response = instance.ProductInfo(id, storeId, langId, currencyId, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
+            //var response = instance.ProductInfo(id, storeId, vendorId, langId, currencyId, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
             //Assert.IsType<ProductInfo200Response>(response);
         }
 
@@ -440,6 +443,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? categoriesIds = null;
             //string? categoryId = null;
             //string? storeId = null;
+            //string? vendorId = null;
             //string? langId = null;
             //string? currencyId = null;
             //bool? availView = null;
@@ -468,7 +472,7 @@ namespace Org.OpenAPITools.Test.Api
             //bool? disableReportCache = null;
             //bool? useLatestApiVersion = null;
             //string? productType = null;
-            //var response = instance.ProductList(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, manufacturerId, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, productType);
+            //var response = instance.ProductList(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, manufacturerId, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, productType);
             //Assert.IsType<ModelResponseProductList>(response);
         }
 

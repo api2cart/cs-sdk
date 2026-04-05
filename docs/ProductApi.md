@@ -611,7 +611,7 @@ catch (ApiException e)
 
 <a id="productbrandlist"></a>
 # **ProductBrandList**
-> ModelResponseProductBrandList ProductBrandList (int? start = null, int? count = null, string? pageCursor = null, string? brandIds = null, string? categoryId = null, string? parentId = null, string? storeId = null, string? langId = null, string? findWhere = null, string? findValue = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? responseFields = null, string? varParams = null, string? exclude = null)
+> ModelResponseProductBrandList ProductBrandList (int? start = null, int? count = null, string? pageCursor = null, string? brandIds = null, string? categoryId = null, string? parentId = null, string? storeId = null, string? langId = null, string? findWhere = null, string? findValue = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, bool? avail = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 product.brand.list
 
@@ -657,6 +657,7 @@ namespace Example
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
+            var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
             var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
             var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,short_description,active,url")
             var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
@@ -664,7 +665,7 @@ namespace Example
             try
             {
                 // product.brand.list
-                ModelResponseProductBrandList result = apiInstance.ProductBrandList(start, count, pageCursor, brandIds, categoryId, parentId, storeId, langId, findWhere, findValue, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
+                ModelResponseProductBrandList result = apiInstance.ProductBrandList(start, count, pageCursor, brandIds, categoryId, parentId, storeId, langId, findWhere, findValue, createdFrom, createdTo, modifiedFrom, modifiedTo, avail, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -685,7 +686,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.brand.list
-    ApiResponse<ModelResponseProductBrandList> response = apiInstance.ProductBrandListWithHttpInfo(start, count, pageCursor, brandIds, categoryId, parentId, storeId, langId, findWhere, findValue, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, varParams, exclude);
+    ApiResponse<ModelResponseProductBrandList> response = apiInstance.ProductBrandListWithHttpInfo(start, count, pageCursor, brandIds, categoryId, parentId, storeId, langId, findWhere, findValue, createdFrom, createdTo, modifiedFrom, modifiedTo, avail, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -716,6 +717,7 @@ catch (ApiException e)
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
+| **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
 | **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,short_description,active,url&quot;] |
 | **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
@@ -1109,7 +1111,7 @@ catch (ApiException e)
 
 <a id="productcount"></a>
 # **ProductCount**
-> ProductCount200Response ProductCount (string? sku = null, string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? langId = null, bool? availView = null, bool? availSale = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? brandName = null, string? manufacturerId = null, List<string>? productAttributes = null, string? status = null, string? type = null, string? visible = null, string? findValue = null, string? findWhere = null, string? reportRequestId = null, bool? returnGlobal = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
+> ProductCount200Response ProductCount (string? sku = null, string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? vendorId = null, string? langId = null, bool? availView = null, bool? availSale = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? brandName = null, string? manufacturerId = null, List<string>? productAttributes = null, string? status = null, string? type = null, string? visible = null, string? findValue = null, string? findWhere = null, string? reportRequestId = null, bool? returnGlobal = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
 
 product.count
 
@@ -1147,6 +1149,7 @@ namespace Example
             var categoriesIds = 23,56;  // string? | Defines product add that is specified by comma-separated categories id (optional) 
             var categoryId = 6;  // string? | Counts products specified by category id (optional) 
             var storeId = 1;  // string? | Counts products specified by store id (optional) 
+            var vendorId = 1;  // string? | Counts products specified by vendor id (optional) 
             var langId = 3;  // string? | Counts products specified by language id (optional) 
             var availView = true;  // bool? | Specifies the set of visible/invisible products (optional) 
             var availSale = false;  // bool? | Specifies the set of available/not available products for sale (optional) 
@@ -1170,7 +1173,7 @@ namespace Example
             try
             {
                 // product.count
-                ProductCount200Response result = apiInstance.ProductCount(sku, productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
+                ProductCount200Response result = apiInstance.ProductCount(sku, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1191,7 +1194,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.count
-    ApiResponse<ProductCount200Response> response = apiInstance.ProductCountWithHttpInfo(sku, productIds, sinceId, categoriesIds, categoryId, storeId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
+    ApiResponse<ProductCount200Response> response = apiInstance.ProductCountWithHttpInfo(sku, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1214,6 +1217,7 @@ catch (ApiException e)
 | **categoriesIds** | **string?** | Defines product add that is specified by comma-separated categories id | [optional]  |
 | **categoryId** | **string?** | Counts products specified by category id | [optional]  |
 | **storeId** | **string?** | Counts products specified by store id | [optional]  |
+| **vendorId** | **string?** | Counts products specified by vendor id | [optional]  |
 | **langId** | **string?** | Counts products specified by language id | [optional]  |
 | **availView** | **bool?** | Specifies the set of visible/invisible products | [optional]  |
 | **availSale** | **bool?** | Specifies the set of available/not available products for sale | [optional]  |
@@ -2121,7 +2125,7 @@ catch (ApiException e)
 
 <a id="productinfo"></a>
 # **ProductInfo**
-> ProductInfo200Response ProductInfo (string id, string? storeId = null, string? langId = null, string? currencyId = null, string? responseFields = null, string? varParams = null, string? exclude = null, string? reportRequestId = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
+> ProductInfo200Response ProductInfo (string id, string? storeId = null, string? vendorId = null, string? langId = null, string? currencyId = null, string? responseFields = null, string? varParams = null, string? exclude = null, string? reportRequestId = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
 
 product.info
 
@@ -2155,6 +2159,7 @@ namespace Example
             var apiInstance = new ProductApi(config);
             var id = 10;  // string | Retrieves product's info specified by product id
             var storeId = 1;  // string? | Retrieves product info specified by store id (optional) 
+            var vendorId = 1;  // string? | Vendor Id (optional) 
             var langId = 3;  // string? | Retrieves product info specified by language id (optional) 
             var currencyId = usd;  // string? | Currency Id (optional) 
             var responseFields = {result{id,name,price,images}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
@@ -2167,7 +2172,7 @@ namespace Example
             try
             {
                 // product.info
-                ProductInfo200Response result = apiInstance.ProductInfo(id, storeId, langId, currencyId, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
+                ProductInfo200Response result = apiInstance.ProductInfo(id, storeId, vendorId, langId, currencyId, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2188,7 +2193,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.info
-    ApiResponse<ProductInfo200Response> response = apiInstance.ProductInfoWithHttpInfo(id, storeId, langId, currencyId, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
+    ApiResponse<ProductInfo200Response> response = apiInstance.ProductInfoWithHttpInfo(id, storeId, vendorId, langId, currencyId, responseFields, varParams, exclude, reportRequestId, disableReportCache, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2207,6 +2212,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **string** | Retrieves product&#39;s info specified by product id |  |
 | **storeId** | **string?** | Retrieves product info specified by store id | [optional]  |
+| **vendorId** | **string?** | Vendor Id | [optional]  |
 | **langId** | **string?** | Retrieves product info specified by language id | [optional]  |
 | **currencyId** | **string?** | Currency Id | [optional]  |
 | **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
@@ -2239,7 +2245,7 @@ catch (ApiException e)
 
 <a id="productlist"></a>
 # **ProductList**
-> ModelResponseProductList ProductList (int? start = null, int? count = null, string? pageCursor = null, string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? langId = null, string? currencyId = null, bool? availView = null, bool? availSale = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? sku = null, string? brandName = null, List<string>? productAttributes = null, string? manufacturerId = null, string? status = null, string? type = null, string? visible = null, string? findValue = null, string? findWhere = null, bool? returnGlobal = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? sortBy = null, string? sortDirection = null, string? reportRequestId = null, bool? disableCache = null, bool? disableReportCache = null, bool? useLatestApiVersion = null, string? productType = null)
+> ModelResponseProductList ProductList (int? start = null, int? count = null, string? pageCursor = null, string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? vendorId = null, string? langId = null, string? currencyId = null, bool? availView = null, bool? availSale = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? sku = null, string? brandName = null, List<string>? productAttributes = null, string? manufacturerId = null, string? status = null, string? type = null, string? visible = null, string? findValue = null, string? findWhere = null, bool? returnGlobal = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? sortBy = null, string? sortDirection = null, string? reportRequestId = null, bool? disableCache = null, bool? disableReportCache = null, bool? useLatestApiVersion = null, string? productType = null)
 
 product.list
 
@@ -2279,6 +2285,7 @@ namespace Example
             var categoriesIds = 23,56;  // string? | Retrieves products specified by categories ids (optional) 
             var categoryId = 6;  // string? | Retrieves products specified by category id (optional) 
             var storeId = 1;  // string? | Retrieves products specified by store id (optional) 
+            var vendorId = 1;  // string? | Retrieves products specified by vendor id (optional) 
             var langId = 3;  // string? | Retrieves products specified by language id (optional) 
             var currencyId = usd;  // string? | Currency Id (optional) 
             var availView = true;  // bool? | Specifies the set of visible/invisible products (optional) 
@@ -2311,7 +2318,7 @@ namespace Example
             try
             {
                 // product.list
-                ModelResponseProductList result = apiInstance.ProductList(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, manufacturerId, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, productType);
+                ModelResponseProductList result = apiInstance.ProductList(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, manufacturerId, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, productType);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2332,7 +2339,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.list
-    ApiResponse<ModelResponseProductList> response = apiInstance.ProductListWithHttpInfo(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, manufacturerId, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, productType);
+    ApiResponse<ModelResponseProductList> response = apiInstance.ProductListWithHttpInfo(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, manufacturerId, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, productType);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2357,6 +2364,7 @@ catch (ApiException e)
 | **categoriesIds** | **string?** | Retrieves products specified by categories ids | [optional]  |
 | **categoryId** | **string?** | Retrieves products specified by category id | [optional]  |
 | **storeId** | **string?** | Retrieves products specified by store id | [optional]  |
+| **vendorId** | **string?** | Retrieves products specified by vendor id | [optional]  |
 | **langId** | **string?** | Retrieves products specified by language id | [optional]  |
 | **currencyId** | **string?** | Currency Id | [optional]  |
 | **availView** | **bool?** | Specifies the set of visible/invisible products | [optional]  |
