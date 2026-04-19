@@ -280,196 +280,184 @@ namespace Org.OpenAPITools.Model
             PrestashopApi = 40,
 
             /// <summary>
-            /// Enum SSPremium for value: SSPremium
-            /// </summary>
-            [EnumMember(Value = "SSPremium")]
-            SSPremium = 41,
-
-            /// <summary>
             /// Enum Salla for value: Salla
             /// </summary>
             [EnumMember(Value = "Salla")]
-            Salla = 42,
+            Salla = 41,
 
             /// <summary>
             /// Enum SCAPI for value: SCAPI
             /// </summary>
             [EnumMember(Value = "SCAPI")]
-            SCAPI = 43,
+            SCAPI = 42,
 
             /// <summary>
             /// Enum Shopify for value: Shopify
             /// </summary>
             [EnumMember(Value = "Shopify")]
-            Shopify = 44,
+            Shopify = 43,
 
             /// <summary>
             /// Enum Shopee for value: Shopee
             /// </summary>
             [EnumMember(Value = "Shopee")]
-            Shopee = 45,
+            Shopee = 44,
 
             /// <summary>
             /// Enum Shoplazza for value: Shoplazza
             /// </summary>
             [EnumMember(Value = "Shoplazza")]
-            Shoplazza = 46,
+            Shoplazza = 45,
 
             /// <summary>
             /// Enum Shopline for value: Shopline
             /// </summary>
             [EnumMember(Value = "Shopline")]
-            Shopline = 47,
+            Shopline = 46,
 
             /// <summary>
             /// Enum Shopware for value: Shopware
             /// </summary>
             [EnumMember(Value = "Shopware")]
-            Shopware = 48,
+            Shopware = 47,
 
             /// <summary>
             /// Enum ShopwareApi for value: ShopwareApi
             /// </summary>
             [EnumMember(Value = "ShopwareApi")]
-            ShopwareApi = 49,
+            ShopwareApi = 48,
 
             /// <summary>
             /// Enum Square for value: Square
             /// </summary>
             [EnumMember(Value = "Square")]
-            Square = 50,
+            Square = 49,
 
             /// <summary>
             /// Enum Squarespace for value: Squarespace
             /// </summary>
             [EnumMember(Value = "Squarespace")]
-            Squarespace = 51,
+            Squarespace = 50,
 
             /// <summary>
             /// Enum Temu for value: Temu
             /// </summary>
             [EnumMember(Value = "Temu")]
-            Temu = 52,
+            Temu = 51,
 
             /// <summary>
             /// Enum Tiendanube for value: Tiendanube
             /// </summary>
             [EnumMember(Value = "Tiendanube")]
-            Tiendanube = 53,
+            Tiendanube = 52,
 
             /// <summary>
             /// Enum TikTokShop for value: TikTokShop
             /// </summary>
             [EnumMember(Value = "TikTokShop")]
-            TikTokShop = 54,
+            TikTokShop = 53,
 
             /// <summary>
             /// Enum Tomatocart for value: Tomatocart
             /// </summary>
             [EnumMember(Value = "Tomatocart")]
-            Tomatocart = 55,
+            Tomatocart = 54,
 
             /// <summary>
             /// Enum Ubercart for value: Ubercart
             /// </summary>
             [EnumMember(Value = "Ubercart")]
-            Ubercart = 56,
+            Ubercart = 55,
 
             /// <summary>
             /// Enum Unas for value: Unas
             /// </summary>
             [EnumMember(Value = "Unas")]
-            Unas = 57,
+            Unas = 56,
 
             /// <summary>
             /// Enum Virtuemart for value: Virtuemart
             /// </summary>
             [EnumMember(Value = "Virtuemart")]
-            Virtuemart = 58,
+            Virtuemart = 57,
 
             /// <summary>
             /// Enum Volusion for value: Volusion
             /// </summary>
             [EnumMember(Value = "Volusion")]
-            Volusion = 59,
+            Volusion = 58,
 
             /// <summary>
             /// Enum WPecommerce for value: WPecommerce
             /// </summary>
             [EnumMember(Value = "WPecommerce")]
-            WPecommerce = 60,
+            WPecommerce = 59,
 
             /// <summary>
             /// Enum Walmart for value: Walmart
             /// </summary>
             [EnumMember(Value = "Walmart")]
-            Walmart = 61,
-
-            /// <summary>
-            /// Enum WebAsyst for value: WebAsyst
-            /// </summary>
-            [EnumMember(Value = "WebAsyst")]
-            WebAsyst = 62,
+            Walmart = 60,
 
             /// <summary>
             /// Enum Wix for value: Wix
             /// </summary>
             [EnumMember(Value = "Wix")]
-            Wix = 63,
+            Wix = 61,
 
             /// <summary>
             /// Enum Woocommerce for value: Woocommerce
             /// </summary>
             [EnumMember(Value = "Woocommerce")]
-            Woocommerce = 64,
+            Woocommerce = 62,
 
             /// <summary>
             /// Enum WoocommerceApi for value: WoocommerceApi
             /// </summary>
             [EnumMember(Value = "WoocommerceApi")]
-            WoocommerceApi = 65,
+            WoocommerceApi = 63,
 
             /// <summary>
             /// Enum Xcart for value: Xcart
             /// </summary>
             [EnumMember(Value = "Xcart")]
-            Xcart = 66,
+            Xcart = 64,
 
             /// <summary>
             /// Enum Xtcommerce for value: Xtcommerce
             /// </summary>
             [EnumMember(Value = "Xtcommerce")]
-            Xtcommerce = 67,
+            Xtcommerce = 65,
 
             /// <summary>
             /// Enum XtcommerceVeyton for value: XtcommerceVeyton
             /// </summary>
             [EnumMember(Value = "XtcommerceVeyton")]
-            XtcommerceVeyton = 68,
+            XtcommerceVeyton = 66,
 
             /// <summary>
             /// Enum Zencart137 for value: Zencart137
             /// </summary>
             [EnumMember(Value = "Zencart137")]
-            Zencart137 = 69,
+            Zencart137 = 67,
 
             /// <summary>
             /// Enum Zid for value: Zid
             /// </summary>
             [EnumMember(Value = "Zid")]
-            Zid = 70,
+            Zid = 68,
 
             /// <summary>
             /// Enum Zoey for value: Zoey
             /// </summary>
             [EnumMember(Value = "Zoey")]
-            Zoey = 71,
+            Zoey = 69,
 
             /// <summary>
             /// Enum Zoho for value: Zoho
             /// </summary>
             [EnumMember(Value = "Zoho")]
-            Zoho = 72
+            Zoho = 70
         }
 
 
@@ -596,6 +584,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="shopwareApiSecret">Shopware client secret access key.</param>
         /// <param name="mivaAccessToken">Miva access token.</param>
         /// <param name="mivaSignature">Miva signature.</param>
+        /// <param name="miraklApiKey">Mirakl API Key.</param>
         /// <param name="tiendanubeUserId">Tiendanube User ID.</param>
         /// <param name="tiendanubeAccessToken">Tiendanube Access Token.</param>
         /// <param name="tiendanubeClientSecret">Tiendanube Client Secret.</param>
@@ -674,7 +663,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="scapiOrganizationId">Salesforce Commerce Organization ID.</param>
         /// <param name="scapiShortCode">Salesforce Commerce Short Code.</param>
         /// <param name="scapiScopes">Salesforce Commerce API Scopes.</param>
-        public AccountCartAdd(CartIdEnum cartId = default(CartIdEnum), string storeUrl = default(string), string bridgeUrl = default(string), string storeRoot = default(string), string storeKey = default(string), string label = default(string), string customLabel = default(string), bool validateVersion = false, bool verify = true, string dbTablesPrefix = default(string), string userAgent = default(string), string ftpHost = default(string), string ftpUser = default(string), string ftpPassword = default(string), int ftpPort = default(int), string ftpStoreDir = default(string), string var3dcartPrivateKey = default(string), string var3dcartAccessToken = default(string), string var3dcartapiApiKey = default(string), string amazonSpClientId = default(string), string amazonSpClientSecret = default(string), string amazonSpRefreshToken = default(string), string amazonSpAwsRegion = default(string), string amazonSpApiEnvironment = @"production", string amazonSellerId = default(string), string aspdotnetstorefrontApiUser = default(string), string aspdotnetstorefrontApiPass = default(string), string americommerceAppId = default(string), string americommerceAppSecret = default(string), string americommerceAccessToken = default(string), string americommerceRefreshToken = default(string), string bigcommerceapiAdminAccount = default(string), string bigcommerceapiApiPath = default(string), string bigcommerceapiApiKey = default(string), string bigcommerceapiClientId = default(string), string bigcommerceapiAccessToken = default(string), string bigcommerceapiContext = default(string), string bolApiKey = default(string), string bolApiSecret = default(string), int bolRetailerId = default(int), string bigcartelUserName = default(string), string bigcartelPassword = default(string), string bricklinkConsumerKey = default(string), string bricklinkConsumerSecret = default(string), string bricklinkToken = default(string), string bricklinkTokenSecret = default(string), string nopcommerceToken = default(string), string demandwareClientId = default(string), string demandwareApiPassword = default(string), string demandwareUserName = default(string), string demandwareUserPassword = default(string), string ebayClientId = default(string), string ebayClientSecret = default(string), string ebayRuname = default(string), string ebayAccessToken = default(string), string ebayRefreshToken = default(string), string ebayEnvironment = @"production", int ebaySiteId = 0, string walmartClientId = default(string), string walmartClientSecret = default(string), string walmartEnvironment = @"production", string walmartChannelType = default(string), string walmartRegion = @"us", string ecwidAcessToken = default(string), string ecwidStoreId = default(string), string lazadaAppId = default(string), string lazadaAppSecret = default(string), string lazadaRefreshToken = default(string), string lazadaRegion = default(string), string lightspeedApiKey = default(string), string lightspeedApiSecret = default(string), string etsyKeystring = default(string), string etsySharedSecret = default(string), string etsyAccessToken = default(string), string etsyTokenSecret = default(string), string etsyClientId = default(string), string etsyRefreshToken = default(string), string facebookAppId = default(string), string facebookAppSecret = default(string), string facebookAccessToken = default(string), string facebookBusinessId = default(string), string netoApiKey = default(string), string netoApiUsername = default(string), string shoplineAccessToken = default(string), string shoplineAppKey = default(string), string shoplineAppSecret = default(string), string shoplineSharedSecret = default(string), string shopifyAccessToken = default(string), string shopifyClientId = default(string), string shopifyApiKey = default(string), string shopifyApiPassword = default(string), string shopifySharedSecret = default(string), string shopeePartnerId = default(string), string shopeePartnerKey = default(string), string shopeeShopId = default(string), string shopeeRefreshToken = default(string), string shopeeRegion = default(string), string shopeeEnvironment = @"production", string shoplazzaAccessToken = default(string), string shoplazzaSharedSecret = default(string), string shopwareAccessKey = default(string), string unasApiKey = default(string), string shopwareApiKey = default(string), string shopwareApiSecret = default(string), string mivaAccessToken = default(string), string mivaSignature = default(string), int tiendanubeUserId = default(int), string tiendanubeAccessToken = default(string), string tiendanubeClientSecret = default(string), string volusionLogin = default(string), string volusionPassword = default(string), string hybrisClientId = default(string), string hybrisClientSecret = default(string), string hybrisUsername = default(string), string hybrisPassword = default(string), List<AccountCartAddHybrisWebsitesInner> hybrisWebsites = default(List<AccountCartAddHybrisWebsitesInner>), string squareClientId = default(string), string squareClientSecret = default(string), string squareRefreshToken = default(string), string squarespaceApiKey = default(string), string squarespaceClientId = default(string), string squarespaceClientSecret = default(string), string squarespaceAccessToken = default(string), string squarespaceRefreshToken = default(string), string commercehqApiKey = default(string), string commercehqApiPassword = default(string), string wcConsumerKey = default(string), string wcConsumerSecret = default(string), string magentoConsumerKey = default(string), string magentoConsumerSecret = default(string), string magentoAccessToken = default(string), string magentoTokenSecret = default(string), string prestashopWebserviceKey = default(string), string wixAppId = default(string), string wixAppSecretKey = default(string), string wixInstanceId = default(string), string wixRefreshToken = default(string), string mercadoLibreAppId = default(string), string mercadoLibreAppSecretKey = default(string), string mercadoLibreRefreshToken = default(string), int zidClientId = default(int), string zidClientSecret = default(string), string zidAccessToken = default(string), string zidAuthorization = default(string), string zidRefreshToken = default(string), string jumpsellerClientId = default(string), string jumpsellerClientSecret = default(string), string jumpsellerRefreshToken = default(string), string jumpsellerLogin = default(string), string jumpsellerAuthtoken = default(string), string flipkartClientId = default(string), string flipkartClientSecret = default(string), string allegroClientId = default(string), string allegroClientSecret = default(string), string allegroAccessToken = default(string), string allegroRefreshToken = default(string), string allegroEnvironment = @"production", string zohoClientId = default(string), string zohoClientSecret = default(string), string zohoRefreshToken = default(string), string zohoRegion = default(string), string ottoClientId = default(string), string ottoClientSecret = default(string), string ottoAppId = default(string), string ottoRefreshToken = default(string), string ottoEnvironment = @"production", string ottoAccessToken = default(string), string tiktokshopAppKey = default(string), string tiktokshopAppSecret = default(string), string tiktokshopRefreshToken = default(string), string tiktokshopAccessToken = default(string), string sallaClientId = default(string), string sallaClientSecret = default(string), string sallaRefreshToken = default(string), string sallaAccessToken = default(string), string temuAppKey = default(string), string temuAppSecret = default(string), string temuAccessToken = default(string), string temuRegion = default(string), string scapiClientId = default(string), string scapiClientSecret = default(string), string scapiOrganizationId = default(string), string scapiShortCode = default(string), string scapiScopes = default(string))
+        public AccountCartAdd(CartIdEnum cartId = default(CartIdEnum), string storeUrl = default(string), string bridgeUrl = default(string), string storeRoot = default(string), string storeKey = default(string), string label = default(string), string customLabel = default(string), bool validateVersion = false, bool verify = true, string dbTablesPrefix = default(string), string userAgent = default(string), string ftpHost = default(string), string ftpUser = default(string), string ftpPassword = default(string), int ftpPort = default(int), string ftpStoreDir = default(string), string var3dcartPrivateKey = default(string), string var3dcartAccessToken = default(string), string var3dcartapiApiKey = default(string), string amazonSpClientId = default(string), string amazonSpClientSecret = default(string), string amazonSpRefreshToken = default(string), string amazonSpAwsRegion = default(string), string amazonSpApiEnvironment = @"production", string amazonSellerId = default(string), string aspdotnetstorefrontApiUser = default(string), string aspdotnetstorefrontApiPass = default(string), string americommerceAppId = default(string), string americommerceAppSecret = default(string), string americommerceAccessToken = default(string), string americommerceRefreshToken = default(string), string bigcommerceapiAdminAccount = default(string), string bigcommerceapiApiPath = default(string), string bigcommerceapiApiKey = default(string), string bigcommerceapiClientId = default(string), string bigcommerceapiAccessToken = default(string), string bigcommerceapiContext = default(string), string bolApiKey = default(string), string bolApiSecret = default(string), int bolRetailerId = default(int), string bigcartelUserName = default(string), string bigcartelPassword = default(string), string bricklinkConsumerKey = default(string), string bricklinkConsumerSecret = default(string), string bricklinkToken = default(string), string bricklinkTokenSecret = default(string), string nopcommerceToken = default(string), string demandwareClientId = default(string), string demandwareApiPassword = default(string), string demandwareUserName = default(string), string demandwareUserPassword = default(string), string ebayClientId = default(string), string ebayClientSecret = default(string), string ebayRuname = default(string), string ebayAccessToken = default(string), string ebayRefreshToken = default(string), string ebayEnvironment = @"production", int ebaySiteId = 0, string walmartClientId = default(string), string walmartClientSecret = default(string), string walmartEnvironment = @"production", string walmartChannelType = default(string), string walmartRegion = @"us", string ecwidAcessToken = default(string), string ecwidStoreId = default(string), string lazadaAppId = default(string), string lazadaAppSecret = default(string), string lazadaRefreshToken = default(string), string lazadaRegion = default(string), string lightspeedApiKey = default(string), string lightspeedApiSecret = default(string), string etsyKeystring = default(string), string etsySharedSecret = default(string), string etsyAccessToken = default(string), string etsyTokenSecret = default(string), string etsyClientId = default(string), string etsyRefreshToken = default(string), string facebookAppId = default(string), string facebookAppSecret = default(string), string facebookAccessToken = default(string), string facebookBusinessId = default(string), string netoApiKey = default(string), string netoApiUsername = default(string), string shoplineAccessToken = default(string), string shoplineAppKey = default(string), string shoplineAppSecret = default(string), string shoplineSharedSecret = default(string), string shopifyAccessToken = default(string), string shopifyClientId = default(string), string shopifyApiKey = default(string), string shopifyApiPassword = default(string), string shopifySharedSecret = default(string), string shopeePartnerId = default(string), string shopeePartnerKey = default(string), string shopeeShopId = default(string), string shopeeRefreshToken = default(string), string shopeeRegion = default(string), string shopeeEnvironment = @"production", string shoplazzaAccessToken = default(string), string shoplazzaSharedSecret = default(string), string shopwareAccessKey = default(string), string unasApiKey = default(string), string shopwareApiKey = default(string), string shopwareApiSecret = default(string), string mivaAccessToken = default(string), string mivaSignature = default(string), string miraklApiKey = default(string), int tiendanubeUserId = default(int), string tiendanubeAccessToken = default(string), string tiendanubeClientSecret = default(string), string volusionLogin = default(string), string volusionPassword = default(string), string hybrisClientId = default(string), string hybrisClientSecret = default(string), string hybrisUsername = default(string), string hybrisPassword = default(string), List<AccountCartAddHybrisWebsitesInner> hybrisWebsites = default(List<AccountCartAddHybrisWebsitesInner>), string squareClientId = default(string), string squareClientSecret = default(string), string squareRefreshToken = default(string), string squarespaceApiKey = default(string), string squarespaceClientId = default(string), string squarespaceClientSecret = default(string), string squarespaceAccessToken = default(string), string squarespaceRefreshToken = default(string), string commercehqApiKey = default(string), string commercehqApiPassword = default(string), string wcConsumerKey = default(string), string wcConsumerSecret = default(string), string magentoConsumerKey = default(string), string magentoConsumerSecret = default(string), string magentoAccessToken = default(string), string magentoTokenSecret = default(string), string prestashopWebserviceKey = default(string), string wixAppId = default(string), string wixAppSecretKey = default(string), string wixInstanceId = default(string), string wixRefreshToken = default(string), string mercadoLibreAppId = default(string), string mercadoLibreAppSecretKey = default(string), string mercadoLibreRefreshToken = default(string), int zidClientId = default(int), string zidClientSecret = default(string), string zidAccessToken = default(string), string zidAuthorization = default(string), string zidRefreshToken = default(string), string jumpsellerClientId = default(string), string jumpsellerClientSecret = default(string), string jumpsellerRefreshToken = default(string), string jumpsellerLogin = default(string), string jumpsellerAuthtoken = default(string), string flipkartClientId = default(string), string flipkartClientSecret = default(string), string allegroClientId = default(string), string allegroClientSecret = default(string), string allegroAccessToken = default(string), string allegroRefreshToken = default(string), string allegroEnvironment = @"production", string zohoClientId = default(string), string zohoClientSecret = default(string), string zohoRefreshToken = default(string), string zohoRegion = default(string), string ottoClientId = default(string), string ottoClientSecret = default(string), string ottoAppId = default(string), string ottoRefreshToken = default(string), string ottoEnvironment = @"production", string ottoAccessToken = default(string), string tiktokshopAppKey = default(string), string tiktokshopAppSecret = default(string), string tiktokshopRefreshToken = default(string), string tiktokshopAccessToken = default(string), string sallaClientId = default(string), string sallaClientSecret = default(string), string sallaRefreshToken = default(string), string sallaAccessToken = default(string), string temuAppKey = default(string), string temuAppSecret = default(string), string temuAccessToken = default(string), string temuRegion = default(string), string scapiClientId = default(string), string scapiClientSecret = default(string), string scapiOrganizationId = default(string), string scapiShortCode = default(string), string scapiScopes = default(string))
         {
             this.CartId = cartId;
             this.StoreUrl = storeUrl;
@@ -787,6 +776,7 @@ namespace Org.OpenAPITools.Model
             this.ShopwareApiSecret = shopwareApiSecret;
             this.MivaAccessToken = mivaAccessToken;
             this.MivaSignature = mivaSignature;
+            this.MiraklApiKey = miraklApiKey;
             this.TiendanubeUserId = tiendanubeUserId;
             this.TiendanubeAccessToken = tiendanubeAccessToken;
             this.TiendanubeClientSecret = tiendanubeClientSecret;
@@ -1920,6 +1910,16 @@ namespace Org.OpenAPITools.Model
         public string MivaSignature { get; set; }
 
         /// <summary>
+        /// Mirakl API Key
+        /// </summary>
+        /// <value>Mirakl API Key</value>
+        /*
+        <example>a1b2c3d4-e5f6-7890-abcd-ef1234567890</example>
+        */
+        [DataMember(Name = "mirakl_api_key", EmitDefaultValue = false)]
+        public string MiraklApiKey { get; set; }
+
+        /// <summary>
         /// Tiendanube User ID
         /// </summary>
         /// <value>Tiendanube User ID</value>
@@ -2815,6 +2815,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  ShopwareApiSecret: ").Append(ShopwareApiSecret).Append("\n");
             sb.Append("  MivaAccessToken: ").Append(MivaAccessToken).Append("\n");
             sb.Append("  MivaSignature: ").Append(MivaSignature).Append("\n");
+            sb.Append("  MiraklApiKey: ").Append(MiraklApiKey).Append("\n");
             sb.Append("  TiendanubeUserId: ").Append(TiendanubeUserId).Append("\n");
             sb.Append("  TiendanubeAccessToken: ").Append(TiendanubeAccessToken).Append("\n");
             sb.Append("  TiendanubeClientSecret: ").Append(TiendanubeClientSecret).Append("\n");

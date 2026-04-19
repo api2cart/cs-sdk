@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ChildItemId** | **string** |  | [optional] 
 **ProductId** | **string** |  | [optional] 
-**DefaultQtyInPack** | **string** |  | [optional] 
+**DefaultQtyInPack** | **decimal** |  | [optional] 
 **IsQtyInPackFixed** | **bool?** |  | [optional] 
 **Price** | **decimal?** |  | [optional] 
 **AdditionalFields** | **Object** |  | [optional] 

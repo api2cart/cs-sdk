@@ -1010,6 +1010,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'MiraklApiKey'
+        /// </summary>
+        [Fact]
+        public void MiraklApiKeyTest()
+        {
+            // TODO unit test for the property 'MiraklApiKey'
+        }
+
+        /// <summary>
         /// Test the property 'TiendanubeUserId'
         /// </summary>
         [Fact]

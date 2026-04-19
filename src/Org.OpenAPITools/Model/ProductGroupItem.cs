@@ -42,7 +42,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="price">price.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ProductGroupItem(string childItemId = default(string), string productId = default(string), string defaultQtyInPack = default(string), bool? isQtyInPackFixed = default(bool?), decimal? price = default(decimal?), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ProductGroupItem(string childItemId = default(string), string productId = default(string), decimal defaultQtyInPack = default(decimal), bool? isQtyInPackFixed = default(bool?), decimal? price = default(decimal?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.ChildItemId = childItemId;
             this.ProductId = productId;
@@ -69,7 +69,7 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets DefaultQtyInPack
         /// </summary>
         [DataMember(Name = "default_qty_in_pack", EmitDefaultValue = false)]
-        public string DefaultQtyInPack { get; set; }
+        public decimal DefaultQtyInPack { get; set; }
 
         /// <summary>
         /// Gets or Sets IsQtyInPackFixed

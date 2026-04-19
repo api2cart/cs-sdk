@@ -47,7 +47,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="isDefault">isDefault.</param>
         /// <param name="additionalFields">additionalFields.</param>
         /// <param name="customFields">customFields.</param>
-        public ProductOptionItem(string id = default(string), string productOptionItemId = default(string), string name = default(string), int? sortOrder = default(int?), string price = default(string), string weight = default(string), int? quantity = default(int?), string typePrice = default(string), string sku = default(string), bool? isDefault = default(bool?), Object additionalFields = default(Object), Object customFields = default(Object))
+        public ProductOptionItem(string id = default(string), string productOptionItemId = default(string), string name = default(string), int? sortOrder = default(int?), decimal? price = default(decimal?), decimal? weight = default(decimal?), int? quantity = default(int?), string typePrice = default(string), string sku = default(string), bool? isDefault = default(bool?), Object additionalFields = default(Object), Object customFields = default(Object))
         {
             this.Id = id;
             this.ProductOptionItemId = productOptionItemId;
@@ -91,13 +91,13 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets Price
         /// </summary>
         [DataMember(Name = "price", EmitDefaultValue = true)]
-        public string Price { get; set; }
+        public decimal? Price { get; set; }
 
         /// <summary>
         /// Gets or Sets Weight
         /// </summary>
         [DataMember(Name = "weight", EmitDefaultValue = true)]
-        public string Weight { get; set; }
+        public decimal? Weight { get; set; }
 
         /// <summary>
         /// Gets or Sets Quantity
