@@ -62,10 +62,13 @@ namespace Org.OpenAPITools.Model
         /// <param name="phone">Defines customer&#39;s phone number.</param>
         /// <param name="note">The customer note..</param>
         /// <param name="country">Specifies ISO code or name of country.</param>
+        /// <param name="currencyId">Currency Id.</param>
+        /// <param name="isTaxExempt">Marks a customer as tax-exempt (B2B/wholesale)..</param>
+        /// <param name="vendorId">Vendor Id.</param>
         /// <param name="storeId">Store Id.</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
         /// <param name="address">address.</param>
-        public CustomerAdd(string email = default(string), string firstName = default(string), string lastName = default(string), string password = default(string), string group = default(string), string groupId = default(string), string groupIds = default(string), string status = @"enabled", string createdTime = default(string), string modifiedTime = default(string), string login = default(string), string lastLogin = default(string), string birthDay = default(string), bool newsLetterSubscription = default(bool), List<CustomerAddConsentsInner> consents = default(List<CustomerAddConsentsInner>), string gender = default(string), string website = default(string), string fax = default(string), string company = default(string), string phone = default(string), string note = default(string), string country = default(string), string storeId = default(string), string idempotencyKey = default(string), List<CustomerAddAddressInner> address = default(List<CustomerAddAddressInner>))
+        public CustomerAdd(string email = default(string), string firstName = default(string), string lastName = default(string), string password = default(string), string group = default(string), string groupId = default(string), string groupIds = default(string), string status = @"enabled", string createdTime = default(string), string modifiedTime = default(string), string login = default(string), string lastLogin = default(string), string birthDay = default(string), bool newsLetterSubscription = default(bool), List<CustomerAddConsentsInner> consents = default(List<CustomerAddConsentsInner>), string gender = default(string), string website = default(string), string fax = default(string), string company = default(string), string phone = default(string), string note = default(string), string country = default(string), string currencyId = default(string), bool isTaxExempt = default(bool), string vendorId = default(string), string storeId = default(string), string idempotencyKey = default(string), List<CustomerAddAddressInner> address = default(List<CustomerAddAddressInner>))
         {
             // to ensure "email" is required (not null)
             if (email == null)
@@ -95,6 +98,9 @@ namespace Org.OpenAPITools.Model
             this.Phone = phone;
             this.Note = note;
             this.Country = country;
+            this.CurrencyId = currencyId;
+            this.IsTaxExempt = isTaxExempt;
+            this.VendorId = vendorId;
             this.StoreId = storeId;
             this.IdempotencyKey = idempotencyKey;
             this.Address = address;
@@ -318,6 +324,36 @@ namespace Org.OpenAPITools.Model
         public string Country { get; set; }
 
         /// <summary>
+        /// Currency Id
+        /// </summary>
+        /// <value>Currency Id</value>
+        /*
+        <example>usd</example>
+        */
+        [DataMember(Name = "currency_id", EmitDefaultValue = false)]
+        public string CurrencyId { get; set; }
+
+        /// <summary>
+        /// Marks a customer as tax-exempt (B2B/wholesale).
+        /// </summary>
+        /// <value>Marks a customer as tax-exempt (B2B/wholesale).</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "is_tax_exempt", EmitDefaultValue = true)]
+        public bool IsTaxExempt { get; set; }
+
+        /// <summary>
+        /// Vendor Id
+        /// </summary>
+        /// <value>Vendor Id</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "vendor_id", EmitDefaultValue = false)]
+        public string VendorId { get; set; }
+
+        /// <summary>
         /// Store Id
         /// </summary>
         /// <value>Store Id</value>
@@ -373,6 +409,9 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Phone: ").Append(Phone).Append("\n");
             sb.Append("  Note: ").Append(Note).Append("\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
+            sb.Append("  CurrencyId: ").Append(CurrencyId).Append("\n");
+            sb.Append("  IsTaxExempt: ").Append(IsTaxExempt).Append("\n");
+            sb.Append("  VendorId: ").Append(VendorId).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");

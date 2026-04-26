@@ -200,6 +200,33 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'CurrencyId'
+        /// </summary>
+        [Fact]
+        public void CurrencyIdTest()
+        {
+            // TODO unit test for the property 'CurrencyId'
+        }
+
+        /// <summary>
+        /// Test the property 'IsTaxExempt'
+        /// </summary>
+        [Fact]
+        public void IsTaxExemptTest()
+        {
+            // TODO unit test for the property 'IsTaxExempt'
+        }
+
+        /// <summary>
+        /// Test the property 'VendorId'
+        /// </summary>
+        [Fact]
+        public void VendorIdTest()
+        {
+            // TODO unit test for the property 'VendorId'
+        }
+
+        /// <summary>
         /// Test the property 'StoreId'
         /// </summary>
         [Fact]

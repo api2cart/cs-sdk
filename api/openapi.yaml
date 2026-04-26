@@ -22110,6 +22110,7 @@ components:
         login: makaka
         password: fd5gfd5g75fd
         modified_time: 2014-07-30 15:58:41
+        is_tax_exempt: false
         group_ids: "1,2,3"
         idempotency_key: 098f6bcd4621d373cade4e832627b4f6
         company: Apple
@@ -22167,6 +22168,7 @@ components:
         birth_day: 2013-02-26 15:00:00
         group_id: 3
         phone: "56686868654"
+        vendor_id: "1"
         consents:
         - type: email
           opt_in_level: opt_in_level
@@ -22174,6 +22176,7 @@ components:
         - type: email
           opt_in_level: opt_in_level
           status: status
+        currency_id: usd
         status: disabled
       properties:
         email:
@@ -22289,6 +22292,21 @@ components:
           example: US
           type: string
           name: country
+        currency_id:
+          description: Currency Id
+          example: usd
+          type: string
+          name: currency_id
+        is_tax_exempt:
+          description: Marks a customer as tax-exempt (B2B/wholesale).
+          example: false
+          type: boolean
+          name: is_tax_exempt
+        vendor_id:
+          description: Vendor Id
+          example: "1"
+          type: string
+          name: vendor_id
         store_id:
           description: Store Id
           example: "1"
@@ -22358,6 +22376,8 @@ components:
         password: fd5gfd5g75fd
         group_id: 3
         phone: "56686868654"
+        is_tax_exempt: false
+        vendor_id: "1"
         group_ids: "1,2,3"
         consents:
         - type: email
@@ -22371,6 +22391,7 @@ components:
         news_letter_subscription: true
         first_name: John
         email: mail@example.com
+        currency_id: usd
         group: Register
         status: disabled
       properties:
@@ -22456,6 +22477,21 @@ components:
           example: fd5gfd5g75fd
           type: string
           name: password
+        currency_id:
+          description: Currency Id
+          example: usd
+          type: string
+          name: currency_id
+        is_tax_exempt:
+          description: Marks a customer as tax-exempt (B2B/wholesale).
+          example: false
+          type: boolean
+          name: is_tax_exempt
+        vendor_id:
+          description: Vendor Id
+          example: "1"
+          type: string
+          name: vendor_id
         store_id:
           description: Store Id
           example: "1"
