@@ -434,6 +434,24 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'MinOrderQuantity'
+        /// </summary>
+        [Fact]
+        public void MinOrderQuantityTest()
+        {
+            // TODO unit test for the property 'MinOrderQuantity'
+        }
+
+        /// <summary>
+        /// Test the property 'MaxOrderQuantity'
+        /// </summary>
+        [Fact]
+        public void MaxOrderQuantityTest()
+        {
+            // TODO unit test for the property 'MaxOrderQuantity'
+        }
+
+        /// <summary>
         /// Test the property 'WarehouseId'
         /// </summary>
         [Fact]
@@ -584,6 +602,15 @@ namespace Org.OpenAPITools.Test.Model
         public void ManufacturerIdTest()
         {
             // TODO unit test for the property 'ManufacturerId'
+        }
+
+        /// <summary>
+        /// Test the property 'VendorId'
+        /// </summary>
+        [Fact]
+        public void VendorIdTest()
+        {
+            // TODO unit test for the property 'VendorId'
         }
 
         /// <summary>
@@ -899,15 +926,6 @@ namespace Org.OpenAPITools.Test.Model
         public void MarketplaceItemPropertiesTest()
         {
             // TODO unit test for the property 'MarketplaceItemProperties'
-        }
-
-        /// <summary>
-        /// Test the property 'MinOrderQuantity'
-        /// </summary>
-        [Fact]
-        public void MinOrderQuantityTest()
-        {
-            // TODO unit test for the property 'MinOrderQuantity'
         }
 
         /// <summary>

@@ -38,11 +38,13 @@ namespace Org.OpenAPITools.Model
         /// <param name="attributeName">attributeName.</param>
         /// <param name="attributeValue">attributeValue.</param>
         /// <param name="attributePrice">attributePrice.</param>
-        public ProductVariantAddAttributesInner(string attributeName = default(string), string attributeValue = default(string), decimal attributePrice = default(decimal))
+        /// <param name="attributeWeight">attributeWeight.</param>
+        public ProductVariantAddAttributesInner(string attributeName = default(string), string attributeValue = default(string), decimal attributePrice = default(decimal), decimal attributeWeight = default(decimal))
         {
             this.AttributeName = attributeName;
             this.AttributeValue = attributeValue;
             this.AttributePrice = attributePrice;
+            this.AttributeWeight = attributeWeight;
         }
 
         /// <summary>
@@ -64,6 +66,12 @@ namespace Org.OpenAPITools.Model
         public decimal AttributePrice { get; set; }
 
         /// <summary>
+        /// Gets or Sets AttributeWeight
+        /// </summary>
+        [DataMember(Name = "attribute_weight", EmitDefaultValue = false)]
+        public decimal AttributeWeight { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -74,6 +82,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  AttributeName: ").Append(AttributeName).Append("\n");
             sb.Append("  AttributeValue: ").Append(AttributeValue).Append("\n");
             sb.Append("  AttributePrice: ").Append(AttributePrice).Append("\n");
+            sb.Append("  AttributeWeight: ").Append(AttributeWeight).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

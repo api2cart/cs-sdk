@@ -51,10 +51,11 @@ namespace Org.OpenAPITools.Model
         /// <param name="addressBookTaxId">Add Tax Id.</param>
         /// <param name="addressBookIdentificationNumber">The national ID card number of this person, or a unique tax identification number..</param>
         /// <param name="addressBookGender">Specifies customer&#39;s gender.</param>
+        /// <param name="addressBookRegion">Specifies customer&#39;s region.</param>
         /// <param name="addressBookAlias">Specifies customer&#39;s alias in the address book.</param>
         /// <param name="addressBookType">Specifies customer&#39;s address type.</param>
         /// <param name="addressBookDefault">Defines whether the address is used by default.</param>
-        public CustomerUpdateAddressInner(string addressBookId = default(string), string addressBookFirstName = default(string), string addressBookLastName = default(string), string addressBookCompany = default(string), string addressBookFax = default(string), string addressBookPhone = default(string), string addressBookPhoneMobile = default(string), string addressBookAddress1 = default(string), string addressBookAddress2 = default(string), string addressBookCity = default(string), string addressBookCountry = default(string), string addressBookState = default(string), string addressBookPostcode = default(string), string addressBookTaxId = default(string), string addressBookIdentificationNumber = default(string), string addressBookGender = default(string), string addressBookAlias = default(string), string addressBookType = default(string), bool addressBookDefault = default(bool))
+        public CustomerUpdateAddressInner(string addressBookId = default(string), string addressBookFirstName = default(string), string addressBookLastName = default(string), string addressBookCompany = default(string), string addressBookFax = default(string), string addressBookPhone = default(string), string addressBookPhoneMobile = default(string), string addressBookAddress1 = default(string), string addressBookAddress2 = default(string), string addressBookCity = default(string), string addressBookCountry = default(string), string addressBookState = default(string), string addressBookPostcode = default(string), string addressBookTaxId = default(string), string addressBookIdentificationNumber = default(string), string addressBookGender = default(string), string addressBookRegion = default(string), string addressBookAlias = default(string), string addressBookType = default(string), bool addressBookDefault = default(bool))
         {
             this.AddressBookId = addressBookId;
             this.AddressBookFirstName = addressBookFirstName;
@@ -72,6 +73,7 @@ namespace Org.OpenAPITools.Model
             this.AddressBookTaxId = addressBookTaxId;
             this.AddressBookIdentificationNumber = addressBookIdentificationNumber;
             this.AddressBookGender = addressBookGender;
+            this.AddressBookRegion = addressBookRegion;
             this.AddressBookAlias = addressBookAlias;
             this.AddressBookType = addressBookType;
             this.AddressBookDefault = addressBookDefault;
@@ -238,6 +240,16 @@ namespace Org.OpenAPITools.Model
         public string AddressBookGender { get; set; }
 
         /// <summary>
+        /// Specifies customer&#39;s region
+        /// </summary>
+        /// <value>Specifies customer&#39;s region</value>
+        /*
+        <example>Alabama</example>
+        */
+        [DataMember(Name = "address_book_region", EmitDefaultValue = false)]
+        public string AddressBookRegion { get; set; }
+
+        /// <summary>
         /// Specifies customer&#39;s alias in the address book
         /// </summary>
         /// <value>Specifies customer&#39;s alias in the address book</value>
@@ -291,6 +303,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  AddressBookTaxId: ").Append(AddressBookTaxId).Append("\n");
             sb.Append("  AddressBookIdentificationNumber: ").Append(AddressBookIdentificationNumber).Append("\n");
             sb.Append("  AddressBookGender: ").Append(AddressBookGender).Append("\n");
+            sb.Append("  AddressBookRegion: ").Append(AddressBookRegion).Append("\n");
             sb.Append("  AddressBookAlias: ").Append(AddressBookAlias).Append("\n");
             sb.Append("  AddressBookType: ").Append(AddressBookType).Append("\n");
             sb.Append("  AddressBookDefault: ").Append(AddressBookDefault).Append("\n");

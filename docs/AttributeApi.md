@@ -923,7 +923,7 @@ catch (ApiException e)
 
 <a id="attributelist"></a>
 # **AttributeList**
-> ModelResponseAttributeList AttributeList (int? start = null, int? count = null, string? attributeIds = null, string? attributeSetId = null, string? storeId = null, string? langId = null, string? type = null, bool? visible = null, bool? required = null, bool? varSystem = null, string? responseFields = null, string? varParams = null, string? exclude = null)
+> ModelResponseAttributeList AttributeList (int? start = null, int? count = null, string? pageCursor = null, string? attributeIds = null, string? attributeSetId = null, string? storeId = null, string? langId = null, string? type = null, bool? visible = null, bool? required = null, bool? varSystem = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 attribute.list
 
@@ -957,6 +957,7 @@ namespace Example
             var apiInstance = new AttributeApi(config);
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var attributeIds = 1,2,3;  // string? | Filter attributes by ids (optional) 
             var attributeSetId = 4;  // string? | Filter items by attribute set id (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
@@ -972,7 +973,7 @@ namespace Example
             try
             {
                 // attribute.list
-                ModelResponseAttributeList result = apiInstance.AttributeList(start, count, attributeIds, attributeSetId, storeId, langId, type, visible, required, varSystem, responseFields, varParams, exclude);
+                ModelResponseAttributeList result = apiInstance.AttributeList(start, count, pageCursor, attributeIds, attributeSetId, storeId, langId, type, visible, required, varSystem, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -993,7 +994,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.list
-    ApiResponse<ModelResponseAttributeList> response = apiInstance.AttributeListWithHttpInfo(start, count, attributeIds, attributeSetId, storeId, langId, type, visible, required, varSystem, responseFields, varParams, exclude);
+    ApiResponse<ModelResponseAttributeList> response = apiInstance.AttributeListWithHttpInfo(start, count, pageCursor, attributeIds, attributeSetId, storeId, langId, type, visible, required, varSystem, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1012,6 +1013,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **attributeIds** | **string?** | Filter attributes by ids | [optional]  |
 | **attributeSetId** | **string?** | Filter items by attribute set id | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
@@ -1350,7 +1352,7 @@ catch (ApiException e)
 
 <a id="attributeupdate"></a>
 # **AttributeUpdate**
-> AttributeUpdate200Response AttributeUpdate (string id, string name, string? storeId = null, string? langId = null, string? idempotencyKey = null)
+> AttributeUpdate200Response AttributeUpdate (string id, string? name = null, bool? visible = null, int? position = null, string? storeId = null, string? langId = null, string? idempotencyKey = null)
 
 attribute.update
 
@@ -1383,7 +1385,9 @@ namespace Example
 
             var apiInstance = new AttributeApi(config);
             var id = 10;  // string | Entity id
-            var name = Test name;  // string | Defines new attributes's name
+            var name = Test name;  // string? | Defines new attributes's name (optional) 
+            var visible = true;  // bool? | Set visibility status (optional) 
+            var position = 5;  // int? | Attribute`s position (optional)  (default to 0)
             var storeId = 1;  // string? | Store Id (optional) 
             var langId = 3;  // string? | Language id (optional) 
             var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
@@ -1391,7 +1395,7 @@ namespace Example
             try
             {
                 // attribute.update
-                AttributeUpdate200Response result = apiInstance.AttributeUpdate(id, name, storeId, langId, idempotencyKey);
+                AttributeUpdate200Response result = apiInstance.AttributeUpdate(id, name, visible, position, storeId, langId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1412,7 +1416,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.update
-    ApiResponse<AttributeUpdate200Response> response = apiInstance.AttributeUpdateWithHttpInfo(id, name, storeId, langId, idempotencyKey);
+    ApiResponse<AttributeUpdate200Response> response = apiInstance.AttributeUpdateWithHttpInfo(id, name, visible, position, storeId, langId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1430,7 +1434,9 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **string** | Entity id |  |
-| **name** | **string** | Defines new attributes&#39;s name |  |
+| **name** | **string?** | Defines new attributes&#39;s name | [optional]  |
+| **visible** | **bool?** | Set visibility status | [optional]  |
+| **position** | **int?** | Attribute&#x60;s position | [optional] [default to 0] |
 | **storeId** | **string?** | Store Id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
 | **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |

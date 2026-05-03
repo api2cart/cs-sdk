@@ -209,6 +209,42 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Company'
+        /// </summary>
+        [Fact]
+        public void CompanyTest()
+        {
+            // TODO unit test for the property 'Company'
+        }
+
+        /// <summary>
+        /// Test the property 'Country'
+        /// </summary>
+        [Fact]
+        public void CountryTest()
+        {
+            // TODO unit test for the property 'Country'
+        }
+
+        /// <summary>
+        /// Test the property 'Fax'
+        /// </summary>
+        [Fact]
+        public void FaxTest()
+        {
+            // TODO unit test for the property 'Fax'
+        }
+
+        /// <summary>
+        /// Test the property 'TaxId'
+        /// </summary>
+        [Fact]
+        public void TaxIdTest()
+        {
+            // TODO unit test for the property 'TaxId'
+        }
+
+        /// <summary>
         /// Test the property 'IsTaxExempt'
         /// </summary>
         [Fact]

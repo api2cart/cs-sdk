@@ -2047,6 +2047,16 @@ paths:
           default: 10
           type: integer
         style: form
+      - description: Used to retrieve entities via cursor-based pagination (it can't
+          be used with any other filtering parameter)
+        example: ""
+        explode: true
+        in: query
+        name: page_cursor
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Filter attributes by ids
         example: "1,2,3"
         explode: true
@@ -2178,6 +2188,8 @@ paths:
           enum:
           - text
           - select
+          - media
+          - color
           - textarea
           - date
           - price
@@ -2424,9 +2436,28 @@ paths:
         explode: true
         in: query
         name: name
-        required: true
+        required: false
         schema:
           type: string
+        style: form
+      - description: Set visibility status
+        example: true
+        explode: true
+        in: query
+        name: visible
+        required: false
+        schema:
+          type: boolean
+        style: form
+      - description: Attribute`s position
+        example: 5
+        explode: true
+        in: query
+        name: position
+        required: false
+        schema:
+          default: 0
+          type: integer
         style: form
       - description: Store Id
         example: "1"
@@ -11717,6 +11748,15 @@ paths:
         explode: true
         in: query
         name: store_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Defines manufacturer's description
+        example: Acme Corporation — premium tools brand
+        explode: true
+        in: query
+        name: description
         required: false
         schema:
           type: string
@@ -22303,7 +22343,7 @@ components:
           type: boolean
           name: is_tax_exempt
         vendor_id:
-          description: Vendor Id
+          description: Assigns vendor id to the customer
           example: "1"
           type: string
           name: vendor_id
@@ -22328,13 +22368,27 @@ components:
       - email
     CustomerUpdate:
       example:
-        store_id: "1"
         note: Customer note
+        country: US
+        gender: male
+        password: fd5gfd5g75fd
+        is_tax_exempt: false
+        group_ids: "1,2,3"
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
+        company: Apple
+        id: 10
+        news_letter_subscription: true
+        fax: "54545787"
+        first_name: John
+        email: mail@example.com
+        group: Register
+        store_id: "1"
         address:
         - address_book_company: Samsung
           address_book_state: IL
           address_book_phone_mobile: "5758787"
           address_book_city: Chicago
+          address_book_region: Alabama
           address_book_alias: Address alias
           address_book_postcode: "12345"
           address_book_first_name: John
@@ -22354,6 +22408,7 @@ components:
           address_book_state: IL
           address_book_phone_mobile: "5758787"
           address_book_city: Chicago
+          address_book_region: Alabama
           address_book_alias: Address alias
           address_book_postcode: "12345"
           address_book_first_name: John
@@ -22369,16 +22424,13 @@ components:
           address_book_default: true
           address_book_type: billing
           address_book_fax: "5758787"
-        gender: male
         last_name: Smith
+        tax_id: '`12345678`'
         tags: "tag1,tag2"
         birth_day: 2013-02-26 15:00:00
-        password: fd5gfd5g75fd
         group_id: 3
         phone: "56686868654"
-        is_tax_exempt: false
         vendor_id: "1"
-        group_ids: "1,2,3"
         consents:
         - type: email
           opt_in_level: opt_in_level
@@ -22386,13 +22438,7 @@ components:
         - type: email
           opt_in_level: opt_in_level
           status: status
-        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
-        id: 10
-        news_letter_subscription: true
-        first_name: John
-        email: mail@example.com
         currency_id: usd
-        group: Register
         status: disabled
       properties:
         id:
@@ -22482,13 +22528,33 @@ components:
           example: usd
           type: string
           name: currency_id
+        company:
+          description: Defines customer's company
+          example: Apple
+          type: string
+          name: company
+        country:
+          description: Specifies ISO code or name of country
+          example: US
+          type: string
+          name: country
+        fax:
+          description: Defines customer's fax
+          example: "54545787"
+          type: string
+          name: fax
+        tax_id:
+          description: Add Tax Id
+          example: '`12345678`'
+          type: string
+          name: tax_id
         is_tax_exempt:
           description: Marks a customer as tax-exempt (B2B/wholesale).
           example: false
           type: boolean
           name: is_tax_exempt
         vendor_id:
-          description: Vendor Id
+          description: Updates vendor id of the customer
           example: "1"
           type: string
           name: vendor_id
@@ -32658,6 +32724,7 @@ components:
           max_allowed_files: 6
         weight_unit: lb
         responsible_person_ids: "1,2,3"
+        vendor_id: "1"
         condition_description: "Almost perfect condition, a few scratches"
         harmonized_system_code: "123456"
         status: disabled
@@ -33544,6 +33611,11 @@ components:
           example: 15
           type: integer
           name: ordered_count
+        vendor_id:
+          description: Vendor Id
+          example: "1"
+          type: string
+          name: vendor_id
         shop_section_id:
           description: Add Shop Section Id
           example: 12345678
@@ -34310,6 +34382,7 @@ components:
           max_allowed_files: 6
         weight_unit: lb
         responsible_person_ids: "1,2,3"
+        vendor_id: "1"
         harmonized_system_code: "123456"
         status: disabled
         short_description: Short description. This is very short description
@@ -34340,6 +34413,7 @@ components:
         special_price: 56.9
         width: 56.12
         cross_sell_products_ids: "4,5"
+        max_order_quantity: 1
         available_for_view: false
         warehouse_id: "1"
         specifics:
@@ -34701,6 +34775,18 @@ components:
           example: 1
           type: number
           name: low_stock_threshold
+        min_order_quantity:
+          description: "The minimum quantity an order must contain, to be eligible\
+            \ to purchase this product."
+          example: 1
+          type: number
+          name: min_order_quantity
+        max_order_quantity:
+          description: The maximum quantity an order can contain when purchasing the
+            product.
+          example: 1
+          type: number
+          name: max_order_quantity
         warehouse_id:
           description: This parameter is used for selecting a warehouse where you
             need to set/modify a product quantity.
@@ -34794,6 +34880,11 @@ components:
           example: "1"
           type: string
           name: manufacturer_id
+        vendor_id:
+          description: Vendor Id
+          example: "1"
+          type: string
+          name: vendor_id
         categories_ids:
           description: Defines product add that is specified by comma-separated categories
             id
@@ -34994,12 +35085,6 @@ components:
             :40}}"
           type: string
           name: marketplace_item_properties
-        min_order_quantity:
-          description: "The minimum quantity an order must contain, to be eligible\
-            \ to purchase this product."
-          example: 1
-          type: number
-          name: min_order_quantity
         manufacturer_ids:
           description: A comma-separated list of manufacturer IDs. Retrieve the IDs
             from the cart.info method.
@@ -38269,10 +38354,12 @@ components:
         special_price: 56.9
         width: 56.12
         attributes:
-        - attribute_name: attribute_name
+        - attribute_weight: 6.027456183070403
+          attribute_name: attribute_name
           attribute_value: attribute_value
           attribute_price: 0.8008281904610115
-        - attribute_name: attribute_name
+        - attribute_weight: 6.027456183070403
+          attribute_name: attribute_name
           attribute_value: attribute_value
           attribute_price: 0.8008281904610115
         backorder_status: "true"
@@ -38285,7 +38372,8 @@ components:
           type: string
           name: product_id
         attributes:
-          description: Defines variant's attributes list
+          description: Defines variant's attributes list with optional per-option
+            price and weight modifiers
           items:
             $ref: '#/components/schemas/ProductVariantAdd_attributes_inner'
           type: array
@@ -46956,6 +47044,7 @@ components:
         address_book_state: IL
         address_book_phone_mobile: "5758787"
         address_book_city: Chicago
+        address_book_region: Alabama
         address_book_alias: Address alias
         address_book_postcode: "12345"
         address_book_first_name: John
@@ -47053,6 +47142,11 @@ components:
           example: male
           type: string
           name: "address_book_gender_{x}"
+        address_book_region:
+          description: Specifies customer's region
+          example: Alabama
+          type: string
+          name: "address_book_region_{x}"
         address_book_alias:
           description: Specifies customer's alias in the address book
           example: Address alias
@@ -48844,6 +48938,7 @@ components:
           type: number
     ProductVariantAdd_attributes_inner:
       example:
+        attribute_weight: 6.027456183070403
         attribute_name: attribute_name
         attribute_value: attribute_value
         attribute_price: 0.8008281904610115
@@ -48853,6 +48948,8 @@ components:
         attribute_value:
           type: string
         attribute_price:
+          type: number
+        attribute_weight:
           type: number
     ProductVariantAddBatch_payload_inner_combination_inner:
       example:

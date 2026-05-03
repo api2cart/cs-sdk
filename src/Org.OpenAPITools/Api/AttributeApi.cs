@@ -320,6 +320,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -333,7 +334,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseAttributeList</returns>
-        ModelResponseAttributeList AttributeList(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ModelResponseAttributeList AttributeList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// attribute.list
@@ -344,6 +345,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -357,7 +359,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseAttributeList</returns>
-        ApiResponse<ModelResponseAttributeList> AttributeListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseAttributeList> AttributeListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// attribute.type.list
         /// </summary>
@@ -441,13 +443,15 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
-        /// <param name="name">Defines new attributes&#39;s name</param>
+        /// <param name="name">Defines new attributes&#39;s name (optional)</param>
+        /// <param name="visible">Set visibility status (optional)</param>
+        /// <param name="position">Attribute&#x60;s position (optional, default to 0)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AttributeUpdate200Response</returns>
-        AttributeUpdate200Response AttributeUpdate(string id, string name, string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        AttributeUpdate200Response AttributeUpdate(string id, string? name = default(string?), bool? visible = default(bool?), int? position = default(int?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// attribute.update
@@ -457,13 +461,15 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
-        /// <param name="name">Defines new attributes&#39;s name</param>
+        /// <param name="name">Defines new attributes&#39;s name (optional)</param>
+        /// <param name="visible">Set visibility status (optional)</param>
+        /// <param name="position">Attribute&#x60;s position (optional, default to 0)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttributeUpdate200Response</returns>
-        ApiResponse<AttributeUpdate200Response> AttributeUpdateWithHttpInfo(string id, string name, string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<AttributeUpdate200Response> AttributeUpdateWithHttpInfo(string id, string? name = default(string?), bool? visible = default(bool?), int? position = default(int?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// attribute.value.add
         /// </summary>
@@ -881,6 +887,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -895,7 +902,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseAttributeList</returns>
-        System.Threading.Tasks.Task<ModelResponseAttributeList> AttributeListAsync(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseAttributeList> AttributeListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// attribute.list
@@ -906,6 +913,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -920,7 +928,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseAttributeList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseAttributeList>> AttributeListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseAttributeList>> AttributeListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// attribute.type.list
         /// </summary>
@@ -1010,14 +1018,16 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
-        /// <param name="name">Defines new attributes&#39;s name</param>
+        /// <param name="name">Defines new attributes&#39;s name (optional)</param>
+        /// <param name="visible">Set visibility status (optional)</param>
+        /// <param name="position">Attribute&#x60;s position (optional, default to 0)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttributeUpdate200Response</returns>
-        System.Threading.Tasks.Task<AttributeUpdate200Response> AttributeUpdateAsync(string id, string name, string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AttributeUpdate200Response> AttributeUpdateAsync(string id, string? name = default(string?), bool? visible = default(bool?), int? position = default(int?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// attribute.update
@@ -1027,14 +1037,16 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
-        /// <param name="name">Defines new attributes&#39;s name</param>
+        /// <param name="name">Defines new attributes&#39;s name (optional)</param>
+        /// <param name="visible">Set visibility status (optional)</param>
+        /// <param name="position">Attribute&#x60;s position (optional, default to 0)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttributeUpdate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttributeUpdate200Response>> AttributeUpdateWithHttpInfoAsync(string id, string name, string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AttributeUpdate200Response>> AttributeUpdateWithHttpInfoAsync(string id, string? name = default(string?), bool? visible = default(bool?), int? position = default(int?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// attribute.value.add
         /// </summary>
@@ -3186,6 +3198,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -3199,9 +3212,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseAttributeList</returns>
-        public ModelResponseAttributeList AttributeList(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public ModelResponseAttributeList AttributeList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList> localVarResponse = AttributeListWithHttpInfo(start, count, attributeIds, attributeSetId, storeId, langId, type, visible, required, varSystem, responseFields, varParams, exclude);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList> localVarResponse = AttributeListWithHttpInfo(start, count, pageCursor, attributeIds, attributeSetId, storeId, langId, type, visible, required, varSystem, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -3211,6 +3224,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -3224,7 +3238,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseAttributeList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList> AttributeListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList> AttributeListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3256,6 +3270,10 @@ namespace Org.OpenAPITools.Api
             if (count != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
             }
             if (attributeIds != null)
             {
@@ -3336,6 +3354,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -3350,9 +3369,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseAttributeList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseAttributeList> AttributeListAsync(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseAttributeList> AttributeListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList> localVarResponse = await AttributeListWithHttpInfoAsync(start, count, attributeIds, attributeSetId, storeId, langId, type, visible, required, varSystem, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList> localVarResponse = await AttributeListWithHttpInfoAsync(start, count, pageCursor, attributeIds, attributeSetId, storeId, langId, type, visible, required, varSystem, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3362,6 +3381,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
         /// <param name="attributeIds">Filter attributes by ids (optional)</param>
         /// <param name="attributeSetId">Filter items by attribute set id (optional)</param>
         /// <param name="storeId">Store Id (optional)</param>
@@ -3376,7 +3396,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseAttributeList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList>> AttributeListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeList>> AttributeListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? attributeIds = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), string? type = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3408,6 +3428,10 @@ namespace Org.OpenAPITools.Api
             if (count != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
             }
             if (attributeIds != null)
             {
@@ -4025,15 +4049,17 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
-        /// <param name="name">Defines new attributes&#39;s name</param>
+        /// <param name="name">Defines new attributes&#39;s name (optional)</param>
+        /// <param name="visible">Set visibility status (optional)</param>
+        /// <param name="position">Attribute&#x60;s position (optional, default to 0)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AttributeUpdate200Response</returns>
-        public AttributeUpdate200Response AttributeUpdate(string id, string name, string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        public AttributeUpdate200Response AttributeUpdate(string id, string? name = default(string?), bool? visible = default(bool?), int? position = default(int?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response> localVarResponse = AttributeUpdateWithHttpInfo(id, name, storeId, langId, idempotencyKey);
+            Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response> localVarResponse = AttributeUpdateWithHttpInfo(id, name, visible, position, storeId, langId, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -4042,24 +4068,20 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
-        /// <param name="name">Defines new attributes&#39;s name</param>
+        /// <param name="name">Defines new attributes&#39;s name (optional)</param>
+        /// <param name="visible">Set visibility status (optional)</param>
+        /// <param name="position">Attribute&#x60;s position (optional, default to 0)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttributeUpdate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response> AttributeUpdateWithHttpInfo(string id, string name, string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response> AttributeUpdateWithHttpInfo(string id, string? name = default(string?), bool? visible = default(bool?), int? position = default(int?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling AttributeApi->AttributeUpdate");
-            }
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling AttributeApi->AttributeUpdate");
             }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -4086,7 +4108,18 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
+            if (name != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
+            }
+            if (visible != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "visible", visible));
+            }
+            if (position != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "position", position));
+            }
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
@@ -4133,16 +4166,18 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
-        /// <param name="name">Defines new attributes&#39;s name</param>
+        /// <param name="name">Defines new attributes&#39;s name (optional)</param>
+        /// <param name="visible">Set visibility status (optional)</param>
+        /// <param name="position">Attribute&#x60;s position (optional, default to 0)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttributeUpdate200Response</returns>
-        public async System.Threading.Tasks.Task<AttributeUpdate200Response> AttributeUpdateAsync(string id, string name, string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AttributeUpdate200Response> AttributeUpdateAsync(string id, string? name = default(string?), bool? visible = default(bool?), int? position = default(int?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response> localVarResponse = await AttributeUpdateWithHttpInfoAsync(id, name, storeId, langId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response> localVarResponse = await AttributeUpdateWithHttpInfoAsync(id, name, visible, position, storeId, langId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4151,25 +4186,21 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
-        /// <param name="name">Defines new attributes&#39;s name</param>
+        /// <param name="name">Defines new attributes&#39;s name (optional)</param>
+        /// <param name="visible">Set visibility status (optional)</param>
+        /// <param name="position">Attribute&#x60;s position (optional, default to 0)</param>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttributeUpdate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response>> AttributeUpdateWithHttpInfoAsync(string id, string name, string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response>> AttributeUpdateWithHttpInfoAsync(string id, string? name = default(string?), bool? visible = default(bool?), int? position = default(int?), string? storeId = default(string?), string? langId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling AttributeApi->AttributeUpdate");
-            }
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling AttributeApi->AttributeUpdate");
             }
 
 
@@ -4196,7 +4227,18 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
-            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
+            if (name != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
+            }
+            if (visible != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "visible", visible));
+            }
+            if (position != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "position", position));
+            }
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));

@@ -64,7 +64,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="country">Specifies ISO code or name of country.</param>
         /// <param name="currencyId">Currency Id.</param>
         /// <param name="isTaxExempt">Marks a customer as tax-exempt (B2B/wholesale)..</param>
-        /// <param name="vendorId">Vendor Id.</param>
+        /// <param name="vendorId">Assigns vendor id to the customer.</param>
         /// <param name="storeId">Store Id.</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
         /// <param name="address">address.</param>
@@ -344,9 +344,9 @@ namespace Org.OpenAPITools.Model
         public bool IsTaxExempt { get; set; }
 
         /// <summary>
-        /// Vendor Id
+        /// Assigns vendor id to the customer
         /// </summary>
-        /// <value>Vendor Id</value>
+        /// <value>Assigns vendor id to the customer</value>
         /*
         <example>1</example>
         */

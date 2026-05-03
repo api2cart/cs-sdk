@@ -210,6 +210,7 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int? start = null;
             //int? count = null;
+            //string? pageCursor = null;
             //string? attributeIds = null;
             //string? attributeSetId = null;
             //string? storeId = null;
@@ -221,7 +222,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.AttributeList(start, count, attributeIds, attributeSetId, storeId, langId, type, visible, required, varSystem, responseFields, varParams, exclude);
+            //var response = instance.AttributeList(start, count, pageCursor, attributeIds, attributeSetId, storeId, langId, type, visible, required, varSystem, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseAttributeList>(response);
         }
 
@@ -272,11 +273,13 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
-            //string name = null;
+            //string? name = null;
+            //bool? visible = null;
+            //int? position = null;
             //string? storeId = null;
             //string? langId = null;
             //string? idempotencyKey = null;
-            //var response = instance.AttributeUpdate(id, name, storeId, langId, idempotencyKey);
+            //var response = instance.AttributeUpdate(id, name, visible, position, storeId, langId, idempotencyKey);
             //Assert.IsType<AttributeUpdate200Response>(response);
         }
 

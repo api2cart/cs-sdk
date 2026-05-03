@@ -1136,6 +1136,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'VendorId'
+        /// </summary>
+        [Fact]
+        public void VendorIdTest()
+        {
+            // TODO unit test for the property 'VendorId'
+        }
+
+        /// <summary>
         /// Test the property 'ShopSectionId'
         /// </summary>
         [Fact]

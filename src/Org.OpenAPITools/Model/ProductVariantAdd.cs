@@ -41,7 +41,7 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="ProductVariantAdd" /> class.
         /// </summary>
         /// <param name="productId">Defines product&#39;s id where the variant has to be added.</param>
-        /// <param name="attributes">Defines variant&#39;s attributes list.</param>
+        /// <param name="attributes">Defines variant&#39;s attributes list with optional per-option price and weight modifiers.</param>
         /// <param name="name">Defines variant&#39;s name that has to be added.</param>
         /// <param name="model">Specifies variant&#39;s model that has to be added (required).</param>
         /// <param name="description">Specifies variant&#39;s description.</param>
@@ -180,9 +180,9 @@ namespace Org.OpenAPITools.Model
         public string ProductId { get; set; }
 
         /// <summary>
-        /// Defines variant&#39;s attributes list
+        /// Defines variant&#39;s attributes list with optional per-option price and weight modifiers
         /// </summary>
-        /// <value>Defines variant&#39;s attributes list</value>
+        /// <value>Defines variant&#39;s attributes list with optional per-option price and weight modifiers</value>
         [DataMember(Name = "attributes", EmitDefaultValue = false)]
         public List<ProductVariantAddAttributesInner> Attributes { get; set; }
 

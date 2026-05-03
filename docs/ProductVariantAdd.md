@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ProductId** | **string** | Defines product&#39;s id where the variant has to be added | [optional] 
-**Attributes** | [**List&lt;ProductVariantAddAttributesInner&gt;**](ProductVariantAddAttributesInner.md) | Defines variant&#39;s attributes list | [optional] 
+**Attributes** | [**List&lt;ProductVariantAddAttributesInner&gt;**](ProductVariantAddAttributesInner.md) | Defines variant&#39;s attributes list with optional per-option price and weight modifiers | [optional] 
 **Name** | **string** | Defines variant&#39;s name that has to be added | [optional] 
 **Model** | **string** | Specifies variant&#39;s model that has to be added | 
 **Description** | **string** | Specifies variant&#39;s description | [optional] 

@@ -486,6 +486,7 @@ namespace Org.OpenAPITools.Test.Api
             //string productId = null;
             //string manufacturer = null;
             //string? storeId = null;
+            //string? description = null;
             //string? metaTitle = null;
             //string? metaKeywords = null;
             //string? metaDescription = null;
@@ -493,7 +494,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? imageUrl = null;
             //string? seoUrl = null;
             //string? idempotencyKey = null;
-            //var response = instance.ProductManufacturerAdd(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, idempotencyKey);
+            //var response = instance.ProductManufacturerAdd(productId, manufacturer, storeId, description, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, idempotencyKey);
             //Assert.IsType<ProductManufacturerAdd200Response>(response);
         }
 

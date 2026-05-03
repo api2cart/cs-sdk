@@ -859,6 +859,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="description">Defines manufacturer&#39;s description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
@@ -868,7 +869,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductManufacturerAdd200Response</returns>
-        ProductManufacturerAdd200Response ProductManufacturerAdd(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        ProductManufacturerAdd200Response ProductManufacturerAdd(string productId, string manufacturer, string? storeId = default(string?), string? description = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// product.manufacturer.add
@@ -880,6 +881,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="description">Defines manufacturer&#39;s description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
@@ -889,7 +891,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductManufacturerAdd200Response</returns>
-        ApiResponse<ProductManufacturerAdd200Response> ProductManufacturerAddWithHttpInfo(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<ProductManufacturerAdd200Response> ProductManufacturerAddWithHttpInfo(string productId, string manufacturer, string? storeId = default(string?), string? description = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// product.option.add
         /// </summary>
@@ -2518,6 +2520,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="description">Defines manufacturer&#39;s description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
@@ -2528,7 +2531,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductManufacturerAdd200Response</returns>
-        System.Threading.Tasks.Task<ProductManufacturerAdd200Response> ProductManufacturerAddAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductManufacturerAdd200Response> ProductManufacturerAddAsync(string productId, string manufacturer, string? storeId = default(string?), string? description = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// product.manufacturer.add
@@ -2540,6 +2543,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="description">Defines manufacturer&#39;s description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
@@ -2550,7 +2554,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductManufacturerAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductManufacturerAdd200Response>> ProductManufacturerAddWithHttpInfoAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductManufacturerAdd200Response>> ProductManufacturerAddWithHttpInfoAsync(string productId, string manufacturer, string? storeId = default(string?), string? description = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// product.option.add
         /// </summary>
@@ -8941,6 +8945,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="description">Defines manufacturer&#39;s description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
@@ -8950,9 +8955,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductManufacturerAdd200Response</returns>
-        public ProductManufacturerAdd200Response ProductManufacturerAdd(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        public ProductManufacturerAdd200Response ProductManufacturerAdd(string productId, string manufacturer, string? storeId = default(string?), string? description = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> localVarResponse = ProductManufacturerAddWithHttpInfo(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, idempotencyKey);
+            Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> localVarResponse = ProductManufacturerAddWithHttpInfo(productId, manufacturer, storeId, description, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -8963,6 +8968,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="description">Defines manufacturer&#39;s description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
@@ -8972,7 +8978,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductManufacturerAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> ProductManufacturerAddWithHttpInfo(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> ProductManufacturerAddWithHttpInfo(string productId, string manufacturer, string? storeId = default(string?), string? description = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -9014,6 +9020,10 @@ namespace Org.OpenAPITools.Api
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (description != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "description", description));
             }
             if (metaTitle != null)
             {
@@ -9079,6 +9089,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="description">Defines manufacturer&#39;s description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
@@ -9089,9 +9100,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductManufacturerAdd200Response</returns>
-        public async System.Threading.Tasks.Task<ProductManufacturerAdd200Response> ProductManufacturerAddAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductManufacturerAdd200Response> ProductManufacturerAddAsync(string productId, string manufacturer, string? storeId = default(string?), string? description = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> localVarResponse = await ProductManufacturerAddWithHttpInfoAsync(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response> localVarResponse = await ProductManufacturerAddWithHttpInfoAsync(productId, manufacturer, storeId, description, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -9102,6 +9113,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="productId">Defines products specified by product id</param>
         /// <param name="manufacturer">Defines product’s manufacturer&#39;s name</param>
         /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="description">Defines manufacturer&#39;s description (optional)</param>
         /// <param name="metaTitle">Defines unique meta title for each entity (optional)</param>
         /// <param name="metaKeywords">Defines unique meta keywords for each entity (optional)</param>
         /// <param name="metaDescription">Defines unique meta description of a entity (optional)</param>
@@ -9112,7 +9124,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductManufacturerAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response>> ProductManufacturerAddWithHttpInfoAsync(string productId, string manufacturer, string? storeId = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ProductManufacturerAdd200Response>> ProductManufacturerAddWithHttpInfoAsync(string productId, string manufacturer, string? storeId = default(string?), string? description = default(string?), string? metaTitle = default(string?), string? metaKeywords = default(string?), string? metaDescription = default(string?), string? searchKeywords = default(string?), string? imageUrl = default(string?), string? seoUrl = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'productId' is set
             if (productId == null)
@@ -9154,6 +9166,10 @@ namespace Org.OpenAPITools.Api
             if (storeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (description != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "description", description));
             }
             if (metaTitle != null)
             {

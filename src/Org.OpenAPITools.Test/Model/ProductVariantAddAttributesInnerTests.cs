@@ -81,5 +81,14 @@ namespace Org.OpenAPITools.Test.Model
         {
             // TODO unit test for the property 'AttributePrice'
         }
+
+        /// <summary>
+        /// Test the property 'AttributeWeight'
+        /// </summary>
+        [Fact]
+        public void AttributeWeightTest()
+        {
+            // TODO unit test for the property 'AttributeWeight'
+        }
     }
 }

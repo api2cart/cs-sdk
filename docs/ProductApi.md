@@ -2417,7 +2417,7 @@ catch (ApiException e)
 
 <a id="productmanufactureradd"></a>
 # **ProductManufacturerAdd**
-> ProductManufacturerAdd200Response ProductManufacturerAdd (string productId, string manufacturer, string? storeId = null, string? metaTitle = null, string? metaKeywords = null, string? metaDescription = null, string? searchKeywords = null, string? imageUrl = null, string? seoUrl = null, string? idempotencyKey = null)
+> ProductManufacturerAdd200Response ProductManufacturerAdd (string productId, string manufacturer, string? storeId = null, string? description = null, string? metaTitle = null, string? metaKeywords = null, string? metaDescription = null, string? searchKeywords = null, string? imageUrl = null, string? seoUrl = null, string? idempotencyKey = null)
 
 product.manufacturer.add
 
@@ -2452,6 +2452,7 @@ namespace Example
             var productId = 10;  // string | Defines products specified by product id
             var manufacturer = Samsung;  // string | Defines product’s manufacturer's name
             var storeId = 1;  // string? | Store Id (optional) 
+            var description = Acme Corporation — premium tools brand;  // string? | Defines manufacturer's description (optional) 
             var metaTitle = category,test;  // string? | Defines unique meta title for each entity (optional) 
             var metaKeywords = category,test;  // string? | Defines unique meta keywords for each entity (optional) 
             var metaDescription = category,test;  // string? | Defines unique meta description of a entity (optional) 
@@ -2463,7 +2464,7 @@ namespace Example
             try
             {
                 // product.manufacturer.add
-                ProductManufacturerAdd200Response result = apiInstance.ProductManufacturerAdd(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, idempotencyKey);
+                ProductManufacturerAdd200Response result = apiInstance.ProductManufacturerAdd(productId, manufacturer, storeId, description, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2484,7 +2485,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.manufacturer.add
-    ApiResponse<ProductManufacturerAdd200Response> response = apiInstance.ProductManufacturerAddWithHttpInfo(productId, manufacturer, storeId, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, idempotencyKey);
+    ApiResponse<ProductManufacturerAdd200Response> response = apiInstance.ProductManufacturerAddWithHttpInfo(productId, manufacturer, storeId, description, metaTitle, metaKeywords, metaDescription, searchKeywords, imageUrl, seoUrl, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2504,6 +2505,7 @@ catch (ApiException e)
 | **productId** | **string** | Defines products specified by product id |  |
 | **manufacturer** | **string** | Defines product’s manufacturer&#39;s name |  |
 | **storeId** | **string?** | Store Id | [optional]  |
+| **description** | **string?** | Defines manufacturer&#39;s description | [optional]  |
 | **metaTitle** | **string?** | Defines unique meta title for each entity | [optional]  |
 | **metaKeywords** | **string?** | Defines unique meta keywords for each entity | [optional]  |
 | **metaDescription** | **string?** | Defines unique meta description of a entity | [optional]  |

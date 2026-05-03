@@ -200,6 +200,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'AddressBookRegion'
+        /// </summary>
+        [Fact]
+        public void AddressBookRegionTest()
+        {
+            // TODO unit test for the property 'AddressBookRegion'
+        }
+
+        /// <summary>
         /// Test the property 'AddressBookAlias'
         /// </summary>
         [Fact]

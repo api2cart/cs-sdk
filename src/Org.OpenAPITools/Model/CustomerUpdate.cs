@@ -52,12 +52,16 @@ namespace Org.OpenAPITools.Model
         /// <param name="status">Defines customer&#39;s status.</param>
         /// <param name="password">Defines customer&#39;s unique password.</param>
         /// <param name="currencyId">Currency Id.</param>
+        /// <param name="company">Defines customer&#39;s company.</param>
+        /// <param name="country">Specifies ISO code or name of country.</param>
+        /// <param name="fax">Defines customer&#39;s fax.</param>
+        /// <param name="taxId">Add Tax Id.</param>
         /// <param name="isTaxExempt">Marks a customer as tax-exempt (B2B/wholesale)..</param>
-        /// <param name="vendorId">Vendor Id.</param>
+        /// <param name="vendorId">Updates vendor id of the customer.</param>
         /// <param name="storeId">Store Id.</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
         /// <param name="address">address.</param>
-        public CustomerUpdate(string id = default(string), string groupId = default(string), string groupIds = default(string), string group = default(string), string email = default(string), string phone = default(string), string firstName = default(string), string lastName = default(string), string birthDay = default(string), bool newsLetterSubscription = default(bool), List<CustomerAddConsentsInner> consents = default(List<CustomerAddConsentsInner>), string tags = default(string), string gender = default(string), string note = default(string), string status = default(string), string password = default(string), string currencyId = default(string), bool isTaxExempt = default(bool), string vendorId = default(string), string storeId = default(string), string idempotencyKey = default(string), List<CustomerUpdateAddressInner> address = default(List<CustomerUpdateAddressInner>))
+        public CustomerUpdate(string id = default(string), string groupId = default(string), string groupIds = default(string), string group = default(string), string email = default(string), string phone = default(string), string firstName = default(string), string lastName = default(string), string birthDay = default(string), bool newsLetterSubscription = default(bool), List<CustomerAddConsentsInner> consents = default(List<CustomerAddConsentsInner>), string tags = default(string), string gender = default(string), string note = default(string), string status = default(string), string password = default(string), string currencyId = default(string), string company = default(string), string country = default(string), string fax = default(string), string taxId = default(string), bool isTaxExempt = default(bool), string vendorId = default(string), string storeId = default(string), string idempotencyKey = default(string), List<CustomerUpdateAddressInner> address = default(List<CustomerUpdateAddressInner>))
         {
             this.Id = id;
             this.GroupId = groupId;
@@ -76,6 +80,10 @@ namespace Org.OpenAPITools.Model
             this.Status = status;
             this.Password = password;
             this.CurrencyId = currencyId;
+            this.Company = company;
+            this.Country = country;
+            this.Fax = fax;
+            this.TaxId = taxId;
             this.IsTaxExempt = isTaxExempt;
             this.VendorId = vendorId;
             this.StoreId = storeId;
@@ -251,6 +259,46 @@ namespace Org.OpenAPITools.Model
         public string CurrencyId { get; set; }
 
         /// <summary>
+        /// Defines customer&#39;s company
+        /// </summary>
+        /// <value>Defines customer&#39;s company</value>
+        /*
+        <example>Apple</example>
+        */
+        [DataMember(Name = "company", EmitDefaultValue = false)]
+        public string Company { get; set; }
+
+        /// <summary>
+        /// Specifies ISO code or name of country
+        /// </summary>
+        /// <value>Specifies ISO code or name of country</value>
+        /*
+        <example>US</example>
+        */
+        [DataMember(Name = "country", EmitDefaultValue = false)]
+        public string Country { get; set; }
+
+        /// <summary>
+        /// Defines customer&#39;s fax
+        /// </summary>
+        /// <value>Defines customer&#39;s fax</value>
+        /*
+        <example>54545787</example>
+        */
+        [DataMember(Name = "fax", EmitDefaultValue = false)]
+        public string Fax { get; set; }
+
+        /// <summary>
+        /// Add Tax Id
+        /// </summary>
+        /// <value>Add Tax Id</value>
+        /*
+        <example>&#x60;12345678&#x60;</example>
+        */
+        [DataMember(Name = "tax_id", EmitDefaultValue = false)]
+        public string TaxId { get; set; }
+
+        /// <summary>
         /// Marks a customer as tax-exempt (B2B/wholesale).
         /// </summary>
         /// <value>Marks a customer as tax-exempt (B2B/wholesale).</value>
@@ -261,9 +309,9 @@ namespace Org.OpenAPITools.Model
         public bool IsTaxExempt { get; set; }
 
         /// <summary>
-        /// Vendor Id
+        /// Updates vendor id of the customer
         /// </summary>
-        /// <value>Vendor Id</value>
+        /// <value>Updates vendor id of the customer</value>
         /*
         <example>1</example>
         */
@@ -321,6 +369,10 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Password: ").Append(Password).Append("\n");
             sb.Append("  CurrencyId: ").Append(CurrencyId).Append("\n");
+            sb.Append("  Company: ").Append(Company).Append("\n");
+            sb.Append("  Country: ").Append(Country).Append("\n");
+            sb.Append("  Fax: ").Append(Fax).Append("\n");
+            sb.Append("  TaxId: ").Append(TaxId).Append("\n");
             sb.Append("  IsTaxExempt: ").Append(IsTaxExempt).Append("\n");
             sb.Append("  VendorId: ").Append(VendorId).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
