@@ -9236,6 +9236,115 @@ paths:
       summary: order.shipment.delete
       tags:
       - order
+  /order.shipment.event.list.json:
+    get:
+      description: Get list of shipment tracking events.
+      operationId: OrderShipmentEventList
+      parameters:
+      - description: Defines the shipment for which tracking events will be retrieved
+        example: "200000002"
+        explode: true
+        in: query
+        name: shipment_id
+        required: true
+        schema:
+          type: string
+        style: form
+      - description: Defines the order to which the shipment belongs
+        example: 25
+        explode: true
+        in: query
+        name: order_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Store Id
+        example: "1"
+        explode: true
+        in: query
+        name: store_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: This parameter sets the number from which you want to get entities
+        example: 0
+        explode: true
+        in: query
+        name: start
+        required: false
+        schema:
+          default: 0
+          type: integer
+        style: form
+      - description: This parameter sets the entity amount that has to be retrieved.
+          Max allowed count=250
+        example: 20
+        explode: true
+        in: query
+        name: count
+        required: false
+        schema:
+          default: 10
+          type: integer
+        style: form
+      - description: Used to retrieve entities via cursor-based pagination (it can't
+          be used with any other filtering parameter)
+        example: ""
+        explode: true
+        in: query
+        name: page_cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Set this parameter in order to choose which entity fields you
+          want to retrieve
+        example: "{result}"
+        explode: true
+        in: query
+        name: response_fields
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Model_Response_Order_Shipment_Event_List'
+          description: successful operation
+      security:
+      - ApiKeyAuth: []
+        StoreKeyAuth: []
+      summary: order.shipment.event.list
+      tags:
+      - order
+  /order.shipment.event.add.json:
+    post:
+      description: Add a tracking event to the shipment.
+      operationId: OrderShipmentEventAdd
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrderShipmentEventAdd'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AttributeAdd_200_response'
+          description: successful operation
+      security:
+      - ApiKeyAuth: []
+        StoreKeyAuth: []
+      summary: order.shipment.event.add
+      tags:
+      - order
   /order.shipment.tracking.add.json:
     post:
       description: Add order shipment's tracking info.
@@ -30123,6 +30232,421 @@ components:
           name: idempotency_key
       required:
       - shipment_id
+    Model_Response_Order_Shipment_Event_List:
+      example:
+        result:
+          total_count: 6
+          custom_fields: "{}"
+          additional_fields: "{}"
+          events:
+          - address:
+              country:
+                code3: code3
+                code2: code2
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              phone_mobile: phone_mobile
+              website: website
+              gender: gender
+              identification_number: identification_number
+              address2: address2
+              city: city
+              address1: address1
+              custom_fields: "{}"
+              postcode: postcode
+              last_name: last_name
+              additional_fields: "{}"
+              type: type
+              tax_id: tax_id
+              default: true
+              phone: phone
+              alias: alias
+              company: company
+              id: id
+              state:
+                code: code
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              fax: fax
+              region: region
+              first_name: first_name
+            custom_fields: "{}"
+            created_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            additional_fields: "{}"
+            id: id
+            estimated_delivery_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            message: message
+            status: status
+          - address:
+              country:
+                code3: code3
+                code2: code2
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              phone_mobile: phone_mobile
+              website: website
+              gender: gender
+              identification_number: identification_number
+              address2: address2
+              city: city
+              address1: address1
+              custom_fields: "{}"
+              postcode: postcode
+              last_name: last_name
+              additional_fields: "{}"
+              type: type
+              tax_id: tax_id
+              default: true
+              phone: phone
+              alias: alias
+              company: company
+              id: id
+              state:
+                code: code
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              fax: fax
+              region: region
+              first_name: first_name
+            custom_fields: "{}"
+            created_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            additional_fields: "{}"
+            id: id
+            estimated_delivery_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            message: message
+            status: status
+        pagination:
+          next: next
+          previous: previous
+          custom_fields: "{}"
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        result:
+          $ref: '#/components/schemas/Response_Order_Shipment_Event_List_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Order_Shipment_Event_List_Result:
+      example:
+        total_count: 6
+        custom_fields: "{}"
+        additional_fields: "{}"
+        events:
+        - address:
+            country:
+              code3: code3
+              code2: code2
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            phone_mobile: phone_mobile
+            website: website
+            gender: gender
+            identification_number: identification_number
+            address2: address2
+            city: city
+            address1: address1
+            custom_fields: "{}"
+            postcode: postcode
+            last_name: last_name
+            additional_fields: "{}"
+            type: type
+            tax_id: tax_id
+            default: true
+            phone: phone
+            alias: alias
+            company: company
+            id: id
+            state:
+              code: code
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            fax: fax
+            region: region
+            first_name: first_name
+          custom_fields: "{}"
+          created_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          additional_fields: "{}"
+          id: id
+          estimated_delivery_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          message: message
+          status: status
+        - address:
+            country:
+              code3: code3
+              code2: code2
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            phone_mobile: phone_mobile
+            website: website
+            gender: gender
+            identification_number: identification_number
+            address2: address2
+            city: city
+            address1: address1
+            custom_fields: "{}"
+            postcode: postcode
+            last_name: last_name
+            additional_fields: "{}"
+            type: type
+            tax_id: tax_id
+            default: true
+            phone: phone
+            alias: alias
+            company: company
+            id: id
+            state:
+              code: code
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            fax: fax
+            region: region
+            first_name: first_name
+          custom_fields: "{}"
+          created_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          additional_fields: "{}"
+          id: id
+          estimated_delivery_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          message: message
+          status: status
+      properties:
+        total_count:
+          nullable: true
+          type: integer
+        events:
+          items:
+            $ref: '#/components/schemas/Shipment_Event'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Shipment_Event:
+      example:
+        address:
+          country:
+            code3: code3
+            code2: code2
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+          phone_mobile: phone_mobile
+          website: website
+          gender: gender
+          identification_number: identification_number
+          address2: address2
+          city: city
+          address1: address1
+          custom_fields: "{}"
+          postcode: postcode
+          last_name: last_name
+          additional_fields: "{}"
+          type: type
+          tax_id: tax_id
+          default: true
+          phone: phone
+          alias: alias
+          company: company
+          id: id
+          state:
+            code: code
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+          fax: fax
+          region: region
+          first_name: first_name
+        custom_fields: "{}"
+        created_at:
+          custom_fields: "{}"
+          format: format
+          additional_fields: "{}"
+          value: value
+        additional_fields: "{}"
+        id: id
+        estimated_delivery_at:
+          custom_fields: "{}"
+          format: format
+          additional_fields: "{}"
+          value: value
+        message: message
+        status: status
+      properties:
+        id:
+          type: string
+        status:
+          type: string
+        created_at:
+          $ref: '#/components/schemas/A2CDateTime'
+        estimated_delivery_at:
+          $ref: '#/components/schemas/A2CDateTime'
+        message:
+          nullable: true
+          type: string
+        address:
+          $ref: '#/components/schemas/Customer_Address'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    OrderShipmentEventAdd:
+      example:
+        store_id: "1"
+        country: US
+        city: Chicago
+        address_1: 1234 Main St
+        latitude: "-34.6037"
+        postcode: "12345"
+        created_at: 2014-08-09 13:13:13
+        shipment_id: "200000002"
+        message: Package has arrived at the sorting facility.
+        estimated_delivery_at: 2025-03-15T10:00:00-03:00
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
+        state: IL
+        order_id: 25
+        status: disabled
+        longitude: "-58.3816"
+      properties:
+        shipment_id:
+          description: Defines the shipment to which the tracking event will be added
+          example: "200000002"
+          type: string
+          name: shipment_id
+        order_id:
+          description: Defines the order to which the shipment belongs
+          example: 25
+          type: string
+          name: order_id
+        status:
+          description: "Defines the tracking event status (e.g. in_transit, delivered,\
+            \ out_for_delivery)"
+          example: disabled
+          type: string
+          name: status
+        store_id:
+          description: Store Id
+          example: "1"
+          type: string
+          name: store_id
+        address_1:
+          description: Specifies the street address of the event location
+          example: 1234 Main St
+          type: string
+          name: address_1
+        city:
+          description: Specifies city
+          example: Chicago
+          type: string
+          name: city
+        country:
+          description: Specifies ISO code or name of country
+          example: US
+          type: string
+          name: country
+        state:
+          description: Specifies ISO code or name of state
+          example: IL
+          type: string
+          name: state
+        postcode:
+          description: Specifies postcode
+          example: "12345"
+          type: string
+          name: postcode
+        message:
+          description: Defines a message associated with the tracking event.
+          example: Package has arrived at the sorting facility.
+          type: string
+          name: message
+        latitude:
+          description: Latitude coordinate of the event location.
+          example: "-34.6037"
+          type: number
+          name: latitude
+        longitude:
+          description: Longitude coordinate of the event location.
+          example: "-58.3816"
+          type: number
+          name: longitude
+        created_at:
+          description: Defines the date of entity creation
+          example: 2014-08-09 13:13:13
+          type: string
+          name: created_at
+        estimated_delivery_at:
+          description: Estimated delivery date and time in ISO 8601 format.
+          example: 2025-03-15T10:00:00-03:00
+          type: string
+          name: estimated_delivery_at
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
+      required:
+      - shipment_id
+      - status
     OrderShipmentTrackingAdd:
       example:
         carrier_id: USPS

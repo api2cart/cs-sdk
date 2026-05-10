@@ -570,6 +570,64 @@ namespace Org.OpenAPITools.Api
         /// <returns>ApiResponse of OrderShipmentDelete200Response</returns>
         ApiResponse<OrderShipmentDelete200Response> OrderShipmentDeleteWithHttpInfo(string shipmentId, string orderId, string? storeId = default(string?), int operationIndex = 0);
         /// <summary>
+        /// order.shipment.event.add
+        /// </summary>
+        /// <remarks>
+        /// Add a tracking event to the shipment.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderShipmentEventAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttributeAdd200Response</returns>
+        AttributeAdd200Response OrderShipmentEventAdd(OrderShipmentEventAdd orderShipmentEventAdd, int operationIndex = 0);
+
+        /// <summary>
+        /// order.shipment.event.add
+        /// </summary>
+        /// <remarks>
+        /// Add a tracking event to the shipment.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderShipmentEventAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttributeAdd200Response</returns>
+        ApiResponse<AttributeAdd200Response> OrderShipmentEventAddWithHttpInfo(OrderShipmentEventAdd orderShipmentEventAdd, int operationIndex = 0);
+        /// <summary>
+        /// order.shipment.event.list
+        /// </summary>
+        /// <remarks>
+        /// Get list of shipment tracking events.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="shipmentId">Defines the shipment for which tracking events will be retrieved</param>
+        /// <param name="orderId">Defines the order to which the shipment belongs (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ModelResponseOrderShipmentEventList</returns>
+        ModelResponseOrderShipmentEventList OrderShipmentEventList(string shipmentId, string? orderId = default(string?), string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+
+        /// <summary>
+        /// order.shipment.event.list
+        /// </summary>
+        /// <remarks>
+        /// Get list of shipment tracking events.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="shipmentId">Defines the shipment for which tracking events will be retrieved</param>
+        /// <param name="orderId">Defines the order to which the shipment belongs (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ModelResponseOrderShipmentEventList</returns>
+        ApiResponse<ModelResponseOrderShipmentEventList> OrderShipmentEventListWithHttpInfo(string shipmentId, string? orderId = default(string?), string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        /// <summary>
         /// order.shipment.info
         /// </summary>
         /// <remarks>
@@ -1399,6 +1457,68 @@ namespace Org.OpenAPITools.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderShipmentDelete200Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrderShipmentDelete200Response>> OrderShipmentDeleteWithHttpInfoAsync(string shipmentId, string orderId, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <summary>
+        /// order.shipment.event.add
+        /// </summary>
+        /// <remarks>
+        /// Add a tracking event to the shipment.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderShipmentEventAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttributeAdd200Response</returns>
+        System.Threading.Tasks.Task<AttributeAdd200Response> OrderShipmentEventAddAsync(OrderShipmentEventAdd orderShipmentEventAdd, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+
+        /// <summary>
+        /// order.shipment.event.add
+        /// </summary>
+        /// <remarks>
+        /// Add a tracking event to the shipment.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderShipmentEventAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttributeAdd200Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttributeAdd200Response>> OrderShipmentEventAddWithHttpInfoAsync(OrderShipmentEventAdd orderShipmentEventAdd, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <summary>
+        /// order.shipment.event.list
+        /// </summary>
+        /// <remarks>
+        /// Get list of shipment tracking events.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="shipmentId">Defines the shipment for which tracking events will be retrieved</param>
+        /// <param name="orderId">Defines the order to which the shipment belongs (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ModelResponseOrderShipmentEventList</returns>
+        System.Threading.Tasks.Task<ModelResponseOrderShipmentEventList> OrderShipmentEventListAsync(string shipmentId, string? orderId = default(string?), string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+
+        /// <summary>
+        /// order.shipment.event.list
+        /// </summary>
+        /// <remarks>
+        /// Get list of shipment tracking events.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="shipmentId">Defines the shipment for which tracking events will be retrieved</param>
+        /// <param name="orderId">Defines the order to which the shipment belongs (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ModelResponseOrderShipmentEventList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseOrderShipmentEventList>> OrderShipmentEventListWithHttpInfoAsync(string shipmentId, string? orderId = default(string?), string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// order.shipment.info
         /// </summary>
@@ -5447,6 +5567,410 @@ namespace Org.OpenAPITools.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OrderShipmentDelete", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// order.shipment.event.add Add a tracking event to the shipment.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderShipmentEventAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttributeAdd200Response</returns>
+        public AttributeAdd200Response OrderShipmentEventAdd(OrderShipmentEventAdd orderShipmentEventAdd, int operationIndex = 0)
+        {
+            Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response> localVarResponse = OrderShipmentEventAddWithHttpInfo(orderShipmentEventAdd);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// order.shipment.event.add Add a tracking event to the shipment.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderShipmentEventAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttributeAdd200Response</returns>
+        public Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response> OrderShipmentEventAddWithHttpInfo(OrderShipmentEventAdd orderShipmentEventAdd, int operationIndex = 0)
+        {
+            // verify the required parameter 'orderShipmentEventAdd' is set
+            if (orderShipmentEventAdd == null)
+            {
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'orderShipmentEventAdd' when calling OrderApi->OrderShipmentEventAdd");
+            }
+
+            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = orderShipmentEventAdd;
+
+            localVarRequestOptions.Operation = "OrderApi.OrderShipmentEventAdd";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (StoreKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-store-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-store-key", this.Configuration.GetApiKeyWithPrefix("x-store-key"));
+            }
+            // authentication (ApiKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<AttributeAdd200Response>("/order.shipment.event.add.json", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OrderShipmentEventAdd", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// order.shipment.event.add Add a tracking event to the shipment.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderShipmentEventAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttributeAdd200Response</returns>
+        public async System.Threading.Tasks.Task<AttributeAdd200Response> OrderShipmentEventAddAsync(OrderShipmentEventAdd orderShipmentEventAdd, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response> localVarResponse = await OrderShipmentEventAddWithHttpInfoAsync(orderShipmentEventAdd, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// order.shipment.event.add Add a tracking event to the shipment.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderShipmentEventAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttributeAdd200Response)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response>> OrderShipmentEventAddWithHttpInfoAsync(OrderShipmentEventAdd orderShipmentEventAdd, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'orderShipmentEventAdd' is set
+            if (orderShipmentEventAdd == null)
+            {
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'orderShipmentEventAdd' when calling OrderApi->OrderShipmentEventAdd");
+            }
+
+
+            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = orderShipmentEventAdd;
+
+            localVarRequestOptions.Operation = "OrderApi.OrderShipmentEventAdd";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (StoreKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-store-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-store-key", this.Configuration.GetApiKeyWithPrefix("x-store-key"));
+            }
+            // authentication (ApiKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AttributeAdd200Response>("/order.shipment.event.add.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OrderShipmentEventAdd", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// order.shipment.event.list Get list of shipment tracking events.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="shipmentId">Defines the shipment for which tracking events will be retrieved</param>
+        /// <param name="orderId">Defines the order to which the shipment belongs (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ModelResponseOrderShipmentEventList</returns>
+        public ModelResponseOrderShipmentEventList OrderShipmentEventList(string shipmentId, string? orderId = default(string?), string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        {
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderShipmentEventList> localVarResponse = OrderShipmentEventListWithHttpInfo(shipmentId, orderId, storeId, start, count, pageCursor, responseFields);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// order.shipment.event.list Get list of shipment tracking events.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="shipmentId">Defines the shipment for which tracking events will be retrieved</param>
+        /// <param name="orderId">Defines the order to which the shipment belongs (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ModelResponseOrderShipmentEventList</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderShipmentEventList> OrderShipmentEventListWithHttpInfo(string shipmentId, string? orderId = default(string?), string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        {
+            // verify the required parameter 'shipmentId' is set
+            if (shipmentId == null)
+            {
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'shipmentId' when calling OrderApi->OrderShipmentEventList");
+            }
+
+            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "shipment_id", shipmentId));
+            if (orderId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_id", orderId));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (start != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
+            }
+            if (count != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+
+            localVarRequestOptions.Operation = "OrderApi.OrderShipmentEventList";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (StoreKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-store-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-store-key", this.Configuration.GetApiKeyWithPrefix("x-store-key"));
+            }
+            // authentication (ApiKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ModelResponseOrderShipmentEventList>("/order.shipment.event.list.json", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OrderShipmentEventList", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// order.shipment.event.list Get list of shipment tracking events.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="shipmentId">Defines the shipment for which tracking events will be retrieved</param>
+        /// <param name="orderId">Defines the order to which the shipment belongs (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ModelResponseOrderShipmentEventList</returns>
+        public async System.Threading.Tasks.Task<ModelResponseOrderShipmentEventList> OrderShipmentEventListAsync(string shipmentId, string? orderId = default(string?), string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderShipmentEventList> localVarResponse = await OrderShipmentEventListWithHttpInfoAsync(shipmentId, orderId, storeId, start, count, pageCursor, responseFields, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// order.shipment.event.list Get list of shipment tracking events.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="shipmentId">Defines the shipment for which tracking events will be retrieved</param>
+        /// <param name="orderId">Defines the order to which the shipment belongs (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
+        /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ModelResponseOrderShipmentEventList)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderShipmentEventList>> OrderShipmentEventListWithHttpInfoAsync(string shipmentId, string? orderId = default(string?), string? storeId = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'shipmentId' is set
+            if (shipmentId == null)
+            {
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'shipmentId' when calling OrderApi->OrderShipmentEventList");
+            }
+
+
+            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "shipment_id", shipmentId));
+            if (orderId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_id", orderId));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (start != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
+            }
+            if (count != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+
+            localVarRequestOptions.Operation = "OrderApi.OrderShipmentEventList";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (StoreKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-store-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-store-key", this.Configuration.GetApiKeyWithPrefix("x-store-key"));
+            }
+            // authentication (ApiKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseOrderShipmentEventList>("/order.shipment.event.list.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OrderShipmentEventList", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

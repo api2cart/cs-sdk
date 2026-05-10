@@ -20,6 +20,8 @@ All URIs are relative to *https://api.api2cart.local.com/v1.1*
 | [**OrderShipmentAdd**](OrderApi.md#ordershipmentadd) | **POST** /order.shipment.add.json | order.shipment.add |
 | [**OrderShipmentAddBatch**](OrderApi.md#ordershipmentaddbatch) | **POST** /order.shipment.add.batch.json | order.shipment.add.batch |
 | [**OrderShipmentDelete**](OrderApi.md#ordershipmentdelete) | **DELETE** /order.shipment.delete.json | order.shipment.delete |
+| [**OrderShipmentEventAdd**](OrderApi.md#ordershipmenteventadd) | **POST** /order.shipment.event.add.json | order.shipment.event.add |
+| [**OrderShipmentEventList**](OrderApi.md#ordershipmenteventlist) | **GET** /order.shipment.event.list.json | order.shipment.event.list |
 | [**OrderShipmentInfo**](OrderApi.md#ordershipmentinfo) | **GET** /order.shipment.info.json | order.shipment.info |
 | [**OrderShipmentList**](OrderApi.md#ordershipmentlist) | **GET** /order.shipment.list.json | order.shipment.list |
 | [**OrderShipmentTrackingAdd**](OrderApi.md#ordershipmenttrackingadd) | **POST** /order.shipment.tracking.add.json | order.shipment.tracking.add |
@@ -1781,6 +1783,218 @@ catch (ApiException e)
 ### Return type
 
 [**OrderShipmentDelete200Response**](OrderShipmentDelete200Response.md)
+
+### Authorization
+
+[StoreKeyAuth](../README.md#StoreKeyAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="ordershipmenteventadd"></a>
+# **OrderShipmentEventAdd**
+> AttributeAdd200Response OrderShipmentEventAdd (OrderShipmentEventAdd orderShipmentEventAdd)
+
+order.shipment.event.add
+
+Add a tracking event to the shipment.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
+
+namespace Example
+{
+    public class OrderShipmentEventAddExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
+            // Configure API key authorization: StoreKeyAuth
+            config.AddApiKey("x-store-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-store-key", "Bearer");
+            // Configure API key authorization: ApiKeyAuth
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new OrderApi(config);
+            var orderShipmentEventAdd = new OrderShipmentEventAdd(); // OrderShipmentEventAdd | 
+
+            try
+            {
+                // order.shipment.event.add
+                AttributeAdd200Response result = apiInstance.OrderShipmentEventAdd(orderShipmentEventAdd);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling OrderApi.OrderShipmentEventAdd: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the OrderShipmentEventAddWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // order.shipment.event.add
+    ApiResponse<AttributeAdd200Response> response = apiInstance.OrderShipmentEventAddWithHttpInfo(orderShipmentEventAdd);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling OrderApi.OrderShipmentEventAddWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **orderShipmentEventAdd** | [**OrderShipmentEventAdd**](OrderShipmentEventAdd.md) |  |  |
+
+### Return type
+
+[**AttributeAdd200Response**](AttributeAdd200Response.md)
+
+### Authorization
+
+[StoreKeyAuth](../README.md#StoreKeyAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="ordershipmenteventlist"></a>
+# **OrderShipmentEventList**
+> ModelResponseOrderShipmentEventList OrderShipmentEventList (string shipmentId, string? orderId = null, string? storeId = null, int? start = null, int? count = null, string? pageCursor = null, string? responseFields = null)
+
+order.shipment.event.list
+
+Get list of shipment tracking events.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
+
+namespace Example
+{
+    public class OrderShipmentEventListExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
+            // Configure API key authorization: StoreKeyAuth
+            config.AddApiKey("x-store-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-store-key", "Bearer");
+            // Configure API key authorization: ApiKeyAuth
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new OrderApi(config);
+            var shipmentId = 200000002;  // string | Defines the shipment for which tracking events will be retrieved
+            var orderId = 25;  // string? | Defines the order to which the shipment belongs (optional) 
+            var storeId = 1;  // string? | Store Id (optional) 
+            var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
+            var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
+            var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
+
+            try
+            {
+                // order.shipment.event.list
+                ModelResponseOrderShipmentEventList result = apiInstance.OrderShipmentEventList(shipmentId, orderId, storeId, start, count, pageCursor, responseFields);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling OrderApi.OrderShipmentEventList: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the OrderShipmentEventListWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // order.shipment.event.list
+    ApiResponse<ModelResponseOrderShipmentEventList> response = apiInstance.OrderShipmentEventListWithHttpInfo(shipmentId, orderId, storeId, start, count, pageCursor, responseFields);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling OrderApi.OrderShipmentEventListWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **shipmentId** | **string** | Defines the shipment for which tracking events will be retrieved |  |
+| **orderId** | **string?** | Defines the order to which the shipment belongs | [optional]  |
+| **storeId** | **string?** | Store Id | [optional]  |
+| **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
+| **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
+| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
+
+### Return type
+
+[**ModelResponseOrderShipmentEventList**](ModelResponseOrderShipmentEventList.md)
 
 ### Authorization
 

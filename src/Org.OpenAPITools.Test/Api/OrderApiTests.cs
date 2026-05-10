@@ -335,6 +335,36 @@ namespace Org.OpenAPITools.Test.Api
         }
 
         /// <summary>
+        /// Test OrderShipmentEventAdd
+        /// </summary>
+        [Fact]
+        public void OrderShipmentEventAddTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //OrderShipmentEventAdd orderShipmentEventAdd = null;
+            //var response = instance.OrderShipmentEventAdd(orderShipmentEventAdd);
+            //Assert.IsType<AttributeAdd200Response>(response);
+        }
+
+        /// <summary>
+        /// Test OrderShipmentEventList
+        /// </summary>
+        [Fact]
+        public void OrderShipmentEventListTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string shipmentId = null;
+            //string? orderId = null;
+            //string? storeId = null;
+            //int? start = null;
+            //int? count = null;
+            //string? pageCursor = null;
+            //string? responseFields = null;
+            //var response = instance.OrderShipmentEventList(shipmentId, orderId, storeId, start, count, pageCursor, responseFields);
+            //Assert.IsType<ModelResponseOrderShipmentEventList>(response);
+        }
+
+        /// <summary>
         /// Test OrderShipmentInfo
         /// </summary>
         [Fact]
