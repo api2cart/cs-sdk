@@ -44,9 +44,10 @@ namespace Org.OpenAPITools.Model
         /// <param name="itemRestock">Boolean, whether or not to add the line items back to the store inventory. (default to false).</param>
         /// <param name="sendNotifications">Send notifications to customer after refund was created (default to false).</param>
         /// <param name="date">Specifies an order creation date in format Y-m-d H:i:s.</param>
+        /// <param name="storeId">Store Id.</param>
         /// <param name="isOnline">Indicates whether refund type is online (default to false).</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
-        public OrderRefundAdd(string orderId = default(string), List<OrderRefundAddItemsInner> items = default(List<OrderRefundAddItemsInner>), decimal totalPrice = default(decimal), decimal shippingPrice = default(decimal), decimal feePrice = default(decimal), string message = default(string), bool itemRestock = false, bool sendNotifications = false, string date = default(string), bool isOnline = false, string idempotencyKey = default(string))
+        public OrderRefundAdd(string orderId = default(string), List<OrderRefundAddItemsInner> items = default(List<OrderRefundAddItemsInner>), decimal totalPrice = default(decimal), decimal shippingPrice = default(decimal), decimal feePrice = default(decimal), string message = default(string), bool itemRestock = false, bool sendNotifications = false, string date = default(string), string storeId = default(string), bool isOnline = false, string idempotencyKey = default(string))
         {
             this.OrderId = orderId;
             this.Items = items;
@@ -57,6 +58,7 @@ namespace Org.OpenAPITools.Model
             this.ItemRestock = itemRestock;
             this.SendNotifications = sendNotifications;
             this.Date = date;
+            this.StoreId = storeId;
             this.IsOnline = isOnline;
             this.IdempotencyKey = idempotencyKey;
         }
@@ -149,6 +151,16 @@ namespace Org.OpenAPITools.Model
         public string Date { get; set; }
 
         /// <summary>
+        /// Store Id
+        /// </summary>
+        /// <value>Store Id</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "store_id", EmitDefaultValue = false)]
+        public string StoreId { get; set; }
+
+        /// <summary>
         /// Indicates whether refund type is online
         /// </summary>
         /// <value>Indicates whether refund type is online</value>
@@ -185,6 +197,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  ItemRestock: ").Append(ItemRestock).Append("\n");
             sb.Append("  SendNotifications: ").Append(SendNotifications).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
+            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  IsOnline: ").Append(IsOnline).Append("\n");
             sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("}\n");

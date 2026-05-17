@@ -29217,6 +29217,7 @@ components:
     OrderRefundAdd:
       example:
         date: 2012-09-25 19:40:00
+        store_id: "1"
         shipping_price: 5.5
         item_restock: true
         total_price: 23.56
@@ -29282,6 +29283,11 @@ components:
           example: 2012-09-25 19:40:00
           type: string
           name: date
+        store_id:
+          description: Store Id
+          example: "1"
+          type: string
+          name: store_id
         is_online:
           default: false
           description: Indicates whether refund type is online

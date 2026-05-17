@@ -137,6 +137,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'StoreId'
+        /// </summary>
+        [Fact]
+        public void StoreIdTest()
+        {
+            // TODO unit test for the property 'StoreId'
+        }
+
+        /// <summary>
         /// Test the property 'IsOnline'
         /// </summary>
         [Fact]
