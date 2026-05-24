@@ -146,6 +146,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Message'
+        /// </summary>
+        [Fact]
+        public void MessageTest()
+        {
+            // TODO unit test for the property 'Message'
+        }
+
+        /// <summary>
         /// Test the property 'SendNotifications'
         /// </summary>
         [Fact]
@@ -161,6 +170,33 @@ namespace Org.OpenAPITools.Test.Model
         public void RejectReasonTest()
         {
             // TODO unit test for the property 'RejectReason'
+        }
+
+        /// <summary>
+        /// Test the property 'IsOnline'
+        /// </summary>
+        [Fact]
+        public void IsOnlineTest()
+        {
+            // TODO unit test for the property 'IsOnline'
+        }
+
+        /// <summary>
+        /// Test the property 'FeePrice'
+        /// </summary>
+        [Fact]
+        public void FeePriceTest()
+        {
+            // TODO unit test for the property 'FeePrice'
+        }
+
+        /// <summary>
+        /// Test the property 'ShippingPrice'
+        /// </summary>
+        [Fact]
+        public void ShippingPriceTest()
+        {
+            // TODO unit test for the property 'ShippingPrice'
         }
 
         /// <summary>

@@ -41,6 +41,7 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="OrderCalculate" /> class.
         /// </summary>
         /// <param name="customerEmail">Defines the customer specified by email for whom the order needs to be calculated (required).</param>
+        /// <param name="currency">Currency code of order.</param>
         /// <param name="currencyId">Currency Id.</param>
         /// <param name="storeId">Store Id.</param>
         /// <param name="coupons">Coupons that will be applied to order. If the order isn&#39;t eligible for any given discount code or there is no discount with such a code it will be skipped during calculation.</param>
@@ -68,7 +69,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve.</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
         /// <param name="orderItem">orderItem (required).</param>
-        public OrderCalculate(string customerEmail = default(string), string currencyId = default(string), string storeId = default(string), List<string> coupons = default(List<string>), int roundingPrecision = default(int), string shippFirstName = default(string), string shippLastName = default(string), string shippAddress1 = default(string), string shippAddress2 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), string shippCompany = default(string), string shippPhone = default(string), string billFirstName = default(string), string billLastName = default(string), string billAddress1 = default(string), string billAddress2 = default(string), string billCity = default(string), string billPostcode = default(string), string billState = default(string), string billCountry = default(string), string billCompany = default(string), string billPhone = default(string), string responseFields = default(string), string idempotencyKey = default(string), List<OrderCalculateOrderItemInner> orderItem = default(List<OrderCalculateOrderItemInner>))
+        public OrderCalculate(string customerEmail = default(string), string currency = default(string), string currencyId = default(string), string storeId = default(string), List<string> coupons = default(List<string>), int roundingPrecision = default(int), string shippFirstName = default(string), string shippLastName = default(string), string shippAddress1 = default(string), string shippAddress2 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), string shippCompany = default(string), string shippPhone = default(string), string billFirstName = default(string), string billLastName = default(string), string billAddress1 = default(string), string billAddress2 = default(string), string billCity = default(string), string billPostcode = default(string), string billState = default(string), string billCountry = default(string), string billCompany = default(string), string billPhone = default(string), string responseFields = default(string), string idempotencyKey = default(string), List<OrderCalculateOrderItemInner> orderItem = default(List<OrderCalculateOrderItemInner>))
         {
             // to ensure "customerEmail" is required (not null)
             if (customerEmail == null)
@@ -118,6 +119,7 @@ namespace Org.OpenAPITools.Model
                 throw new ArgumentNullException("orderItem is a required property for OrderCalculate and cannot be null");
             }
             this.OrderItem = orderItem;
+            this.Currency = currency;
             this.CurrencyId = currencyId;
             this.StoreId = storeId;
             this.Coupons = coupons;
@@ -149,6 +151,16 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "customer_email", IsRequired = true, EmitDefaultValue = true)]
         public string CustomerEmail { get; set; }
+
+        /// <summary>
+        /// Currency code of order
+        /// </summary>
+        /// <value>Currency code of order</value>
+        /*
+        <example>USD</example>
+        */
+        [DataMember(Name = "currency", EmitDefaultValue = false)]
+        public string Currency { get; set; }
 
         /// <summary>
         /// Currency Id
@@ -422,6 +434,7 @@ namespace Org.OpenAPITools.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class OrderCalculate {\n");
             sb.Append("  CustomerEmail: ").Append(CustomerEmail).Append("\n");
+            sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  CurrencyId: ").Append(CurrencyId).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  Coupons: ").Append(Coupons).Append("\n");

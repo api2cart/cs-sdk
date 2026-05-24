@@ -101,6 +101,24 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ReturnReasonId'
+        /// </summary>
+        [Fact]
+        public void ReturnReasonIdTest()
+        {
+            // TODO unit test for the property 'ReturnReasonId'
+        }
+
+        /// <summary>
+        /// Test the property 'ReturnActionId'
+        /// </summary>
+        [Fact]
+        public void ReturnActionIdTest()
+        {
+            // TODO unit test for the property 'ReturnActionId'
+        }
+
+        /// <summary>
         /// Test the property 'StaffNote'
         /// </summary>
         [Fact]
@@ -116,6 +134,15 @@ namespace Org.OpenAPITools.Test.Model
         public void CommentTest()
         {
             // TODO unit test for the property 'Comment'
+        }
+
+        /// <summary>
+        /// Test the property 'Message'
+        /// </summary>
+        [Fact]
+        public void MessageTest()
+        {
+            // TODO unit test for the property 'Message'
         }
 
         /// <summary>
@@ -152,6 +179,33 @@ namespace Org.OpenAPITools.Test.Model
         public void ReturnReasonTest()
         {
             // TODO unit test for the property 'ReturnReason'
+        }
+
+        /// <summary>
+        /// Test the property 'IsOnline'
+        /// </summary>
+        [Fact]
+        public void IsOnlineTest()
+        {
+            // TODO unit test for the property 'IsOnline'
+        }
+
+        /// <summary>
+        /// Test the property 'FeePrice'
+        /// </summary>
+        [Fact]
+        public void FeePriceTest()
+        {
+            // TODO unit test for the property 'FeePrice'
+        }
+
+        /// <summary>
+        /// Test the property 'ShippingPrice'
+        /// </summary>
+        [Fact]
+        public void ShippingPriceTest()
+        {
+            // TODO unit test for the property 'ShippingPrice'
         }
 
         /// <summary>

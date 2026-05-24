@@ -50,11 +50,15 @@ namespace Org.OpenAPITools.Model
         /// <param name="itemRestock">Boolean, whether or not to add the line items back to the store inventory. (default to false).</param>
         /// <param name="staffNote">Specifies staff note.</param>
         /// <param name="comment">Specifies return comment.</param>
+        /// <param name="message">Customer-visible message attached to the return request..</param>
         /// <param name="sendNotifications">Send notifications to customer after order was created (default to false).</param>
         /// <param name="rejectReason">Defines return reject reason.</param>
+        /// <param name="isOnline">Indicates whether refund type is online (default to false).</param>
+        /// <param name="feePrice">Specifies refund&#39;s fee price.</param>
+        /// <param name="shippingPrice">Specifies order&#39;s shipping price (default to 0M).</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
         /// <param name="orderProducts">orderProducts (required).</param>
-        public OrderReturnAdd(string orderId = default(string), string storeId = default(string), string returnStatusId = default(string), string returnActionId = default(string), string returnReasonId = default(string), string returnAction = default(string), string returnReason = default(string), bool itemRestock = false, string staffNote = default(string), string comment = default(string), bool sendNotifications = false, string rejectReason = default(string), string idempotencyKey = default(string), List<OrderReturnAddOrderProductsInner> orderProducts = default(List<OrderReturnAddOrderProductsInner>))
+        public OrderReturnAdd(string orderId = default(string), string storeId = default(string), string returnStatusId = default(string), string returnActionId = default(string), string returnReasonId = default(string), string returnAction = default(string), string returnReason = default(string), bool itemRestock = false, string staffNote = default(string), string comment = default(string), string message = default(string), bool sendNotifications = false, string rejectReason = default(string), bool isOnline = false, decimal feePrice = default(decimal), decimal shippingPrice = 0M, string idempotencyKey = default(string), List<OrderReturnAddOrderProductsInner> orderProducts = default(List<OrderReturnAddOrderProductsInner>))
         {
             // to ensure "returnStatusId" is required (not null)
             if (returnStatusId == null)
@@ -87,8 +91,12 @@ namespace Org.OpenAPITools.Model
             this.ItemRestock = itemRestock;
             this.StaffNote = staffNote;
             this.Comment = comment;
+            this.Message = message;
             this.SendNotifications = sendNotifications;
             this.RejectReason = rejectReason;
+            this.IsOnline = isOnline;
+            this.FeePrice = feePrice;
+            this.ShippingPrice = shippingPrice;
             this.IdempotencyKey = idempotencyKey;
         }
 
@@ -193,6 +201,16 @@ namespace Org.OpenAPITools.Model
         public string Comment { get; set; }
 
         /// <summary>
+        /// Customer-visible message attached to the return request.
+        /// </summary>
+        /// <value>Customer-visible message attached to the return request.</value>
+        /*
+        <example>Customer wants to return — wrong size.</example>
+        */
+        [DataMember(Name = "message", EmitDefaultValue = false)]
+        public string Message { get; set; }
+
+        /// <summary>
         /// Send notifications to customer after order was created
         /// </summary>
         /// <value>Send notifications to customer after order was created</value>
@@ -211,6 +229,36 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "reject_reason", EmitDefaultValue = false)]
         public string RejectReason { get; set; }
+
+        /// <summary>
+        /// Indicates whether refund type is online
+        /// </summary>
+        /// <value>Indicates whether refund type is online</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "is_online", EmitDefaultValue = true)]
+        public bool IsOnline { get; set; }
+
+        /// <summary>
+        /// Specifies refund&#39;s fee price
+        /// </summary>
+        /// <value>Specifies refund&#39;s fee price</value>
+        /*
+        <example>5.5</example>
+        */
+        [DataMember(Name = "fee_price", EmitDefaultValue = false)]
+        public decimal FeePrice { get; set; }
+
+        /// <summary>
+        /// Specifies order&#39;s shipping price
+        /// </summary>
+        /// <value>Specifies order&#39;s shipping price</value>
+        /*
+        <example>5.5</example>
+        */
+        [DataMember(Name = "shipping_price", EmitDefaultValue = false)]
+        public decimal ShippingPrice { get; set; }
 
         /// <summary>
         /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
@@ -246,8 +294,12 @@ namespace Org.OpenAPITools.Model
             sb.Append("  ItemRestock: ").Append(ItemRestock).Append("\n");
             sb.Append("  StaffNote: ").Append(StaffNote).Append("\n");
             sb.Append("  Comment: ").Append(Comment).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  SendNotifications: ").Append(SendNotifications).Append("\n");
             sb.Append("  RejectReason: ").Append(RejectReason).Append("\n");
+            sb.Append("  IsOnline: ").Append(IsOnline).Append("\n");
+            sb.Append("  FeePrice: ").Append(FeePrice).Append("\n");
+            sb.Append("  ShippingPrice: ").Append(ShippingPrice).Append("\n");
             sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("  OrderProducts: ").Append(OrderProducts).Append("\n");
             sb.Append("}\n");

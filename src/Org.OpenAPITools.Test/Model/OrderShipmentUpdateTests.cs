@@ -164,6 +164,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'AdminComment'
+        /// </summary>
+        [Fact]
+        public void AdminCommentTest()
+        {
+            // TODO unit test for the property 'AdminComment'
+        }
+
+        /// <summary>
         /// Test the property 'IdempotencyKey'
         /// </summary>
         [Fact]

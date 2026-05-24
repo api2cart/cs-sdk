@@ -14465,6 +14465,7 @@ components:
           - MijoShop
           - Miva
           - Neto
+          - Nopcommerce
           - Opencart14
           - Oscmax2
           - Oscommerce22ms2
@@ -27553,6 +27554,7 @@ components:
         - coupons
         shipp_first_name: John
         idempotency_key: 098f6bcd4621d373cade4e832627b4f6
+        currency: USD
         bill_address_2: "Red str, 2"
         bill_address_1: Green str. 35
         store_id: "1"
@@ -27594,6 +27596,11 @@ components:
           example: jubari@hannsgroup.com
           type: string
           name: customer_email
+        currency:
+          description: Currency code of order
+          example: USD
+          type: string
+          name: currency
         currency_id:
           description: Currency Id
           example: usd
@@ -27879,6 +27886,7 @@ components:
             order_item_option_price: 2.3
           order_item_model: "sku_1, where {x} - 1,2,3,... etc"
           order_item_weight: "5, where {x} - 1,2,3,... etc"
+        invoice_admin_comment: Test admin comment
         financial_status: paid
         comment: This coole order
         shipp_phone: "880086544564"
@@ -28239,6 +28247,11 @@ components:
           example: true
           type: boolean
           name: create_invoice
+        invoice_admin_comment:
+          description: Specifies admin's order invoice comment
+          example: Test admin comment
+          type: string
+          name: invoice_admin_comment
         note_attributes:
           description: Defines note attributes
           items:
@@ -29305,11 +29318,13 @@ components:
     OrderReturnAdd:
       example:
         store_id: "1"
+        shipping_price: 5.5
         return_reason: broken
         item_restock: true
         return_reason_id: broken
         send_notifications: true
         reject_reason: ORDER_UNPAID
+        message: Customer wants to return — wrong size.
         return_action_id: RETURNED
         order_products:
         - order_product_id: "125, where {x} - 1,2,3,... etc"
@@ -29336,6 +29351,8 @@ components:
         return_status_id: RETURNED
         comment: This coole order
         staff_note: Test
+        is_online: false
+        fee_price: 5.5
         order_id: 25
         return_action: refund
       properties:
@@ -29391,6 +29408,11 @@ components:
           example: This coole order
           type: string
           name: comment
+        message:
+          description: Customer-visible message attached to the return request.
+          example: Customer wants to return — wrong size.
+          type: string
+          name: message
         send_notifications:
           default: false
           description: Send notifications to customer after order was created
@@ -29402,6 +29424,23 @@ components:
           example: ORDER_UNPAID
           type: string
           name: reject_reason
+        is_online:
+          default: false
+          description: Indicates whether refund type is online
+          example: false
+          type: boolean
+          name: is_online
+        fee_price:
+          description: Specifies refund's fee price
+          example: 5.5
+          type: number
+          name: fee_price
+        shipping_price:
+          default: 0
+          description: Specifies order's shipping price
+          example: 5.5
+          type: number
+          name: shipping_price
         idempotency_key:
           description: A unique identifier associated with a specific request. Repeated
             requests with the same <strong>idempotency_key</strong> return a cached
@@ -29422,11 +29461,15 @@ components:
     OrderReturnUpdate:
       example:
         store_id: "1"
+        shipping_price: 5.5
         item_restock: true
         return_reason: broken
+        return_reason_id: broken
         send_notifications: true
         return_id: "200000002"
         reject_reason: ORDER_UNPAID
+        message: Update note for the return.
+        return_action_id: RETURNED
         order_products:
         - order_product_id: "125, where {x} - 1,2,3,... etc"
           order_product_quantity: "1, where {x} - 1,2,3,... etc"
@@ -29440,6 +29483,8 @@ components:
         return_status_id: RETURNED
         comment: This coole order
         staff_note: Test
+        is_online: false
+        fee_price: 5.5
         order_id: 25
         return_action: refund
       properties:
@@ -29470,6 +29515,16 @@ components:
           example: RETURNED
           type: string
           name: return_status_id
+        return_reason_id:
+          description: Defines return request reason
+          example: broken
+          type: string
+          name: return_reason_id
+        return_action_id:
+          description: Defines return request action
+          example: RETURNED
+          type: string
+          name: return_action_id
         staff_note:
           description: Specifies staff note
           example: Test
@@ -29480,6 +29535,11 @@ components:
           example: This coole order
           type: string
           name: comment
+        message:
+          description: Customer-visible message attached to the return request (updated).
+          example: Update note for the return.
+          type: string
+          name: message
         send_notifications:
           default: false
           description: Send notifications to customer after order was created
@@ -29501,6 +29561,23 @@ components:
           example: broken
           type: string
           name: return_reason
+        is_online:
+          default: false
+          description: Indicates whether refund type is online
+          example: false
+          type: boolean
+          name: is_online
+        fee_price:
+          description: Specifies refund's fee price
+          example: 5.5
+          type: number
+          name: fee_price
+        shipping_price:
+          default: 0
+          description: Specifies order's shipping price
+          example: 5.5
+          type: number
+          name: shipping_price
         idempotency_key:
           description: A unique identifier associated with a specific request. Repeated
             requests with the same <strong>idempotency_key</strong> return a cached
@@ -29926,6 +30003,7 @@ components:
         store_id: "1"
         send_notifications: true
         tracking_provider: Custom tracker
+        admin_comment: Test admin comment
         adjust_stock: true
         is_shipped: true
         enable_cache: true
@@ -30037,6 +30115,11 @@ components:
           example: true
           type: boolean
           name: use_latest_api_version
+        admin_comment:
+          description: Specifies admin's order comment
+          example: Test admin comment
+          type: string
+          name: admin_comment
         idempotency_key:
           description: A unique identifier associated with a specific request. Repeated
             requests with the same <strong>idempotency_key</strong> return a cached
@@ -30142,6 +30225,7 @@ components:
         send_notifications: true
         replace: false
         tracking_provider: Custom tracker
+        admin_comment: Test admin comment
         shipment_id: "200000002"
         is_shipped: true
         idempotency_key: 098f6bcd4621d373cade4e832627b4f6
@@ -30228,6 +30312,11 @@ components:
           items:
             $ref: '#/components/schemas/OrderShipmentAdd_items_inner'
           type: array
+        admin_comment:
+          description: Specifies admin's order comment
+          example: Test admin comment
+          type: string
+          name: admin_comment
         idempotency_key:
           description: A unique identifier associated with a specific request. Repeated
             requests with the same <strong>idempotency_key</strong> return a cached
@@ -38884,12 +38973,10 @@ components:
         special_price: 56.9
         width: 56.12
         attributes:
-        - attribute_weight: 6.027456183070403
-          attribute_name: attribute_name
+        - attribute_name: attribute_name
           attribute_value: attribute_value
           attribute_price: 0.8008281904610115
-        - attribute_weight: 6.027456183070403
-          attribute_name: attribute_name
+        - attribute_name: attribute_name
           attribute_value: attribute_value
           attribute_price: 0.8008281904610115
         backorder_status: "true"
@@ -49468,7 +49555,6 @@ components:
           type: number
     ProductVariantAdd_attributes_inner:
       example:
-        attribute_weight: 6.027456183070403
         attribute_name: attribute_name
         attribute_value: attribute_value
         attribute_price: 0.8008281904610115
@@ -49478,8 +49564,6 @@ components:
         attribute_value:
           type: string
         attribute_price:
-          type: number
-        attribute_weight:
           type: number
     ProductVariantAddBatch_payload_inner_combination_inner:
       example:

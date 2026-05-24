@@ -45,15 +45,21 @@ namespace Org.OpenAPITools.Model
         /// <param name="storeId">Store Id.</param>
         /// <param name="itemRestock">Boolean, whether or not to add the line items back to the store inventory. (default to false).</param>
         /// <param name="returnStatusId">Defines return request status.</param>
+        /// <param name="returnReasonId">Defines return request reason.</param>
+        /// <param name="returnActionId">Defines return request action.</param>
         /// <param name="staffNote">Specifies staff note.</param>
         /// <param name="comment">Specifies return comment.</param>
+        /// <param name="message">Customer-visible message attached to the return request (updated)..</param>
         /// <param name="sendNotifications">Send notifications to customer after order was created (default to false).</param>
         /// <param name="rejectReason">Defines return reject reason.</param>
         /// <param name="returnAction">Defines return request action.</param>
         /// <param name="returnReason">Defines return request reason.</param>
+        /// <param name="isOnline">Indicates whether refund type is online (default to false).</param>
+        /// <param name="feePrice">Specifies refund&#39;s fee price.</param>
+        /// <param name="shippingPrice">Specifies order&#39;s shipping price (default to 0M).</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
         /// <param name="orderProducts">orderProducts (required).</param>
-        public OrderReturnUpdate(string returnId = default(string), string orderId = default(string), string storeId = default(string), bool itemRestock = false, string returnStatusId = default(string), string staffNote = default(string), string comment = default(string), bool sendNotifications = false, string rejectReason = default(string), string returnAction = default(string), string returnReason = default(string), string idempotencyKey = default(string), List<OrderReturnUpdateOrderProductsInner> orderProducts = default(List<OrderReturnUpdateOrderProductsInner>))
+        public OrderReturnUpdate(string returnId = default(string), string orderId = default(string), string storeId = default(string), bool itemRestock = false, string returnStatusId = default(string), string returnReasonId = default(string), string returnActionId = default(string), string staffNote = default(string), string comment = default(string), string message = default(string), bool sendNotifications = false, string rejectReason = default(string), string returnAction = default(string), string returnReason = default(string), bool isOnline = false, decimal feePrice = default(decimal), decimal shippingPrice = 0M, string idempotencyKey = default(string), List<OrderReturnUpdateOrderProductsInner> orderProducts = default(List<OrderReturnUpdateOrderProductsInner>))
         {
             // to ensure "returnId" is required (not null)
             if (returnId == null)
@@ -71,12 +77,18 @@ namespace Org.OpenAPITools.Model
             this.StoreId = storeId;
             this.ItemRestock = itemRestock;
             this.ReturnStatusId = returnStatusId;
+            this.ReturnReasonId = returnReasonId;
+            this.ReturnActionId = returnActionId;
             this.StaffNote = staffNote;
             this.Comment = comment;
+            this.Message = message;
             this.SendNotifications = sendNotifications;
             this.RejectReason = rejectReason;
             this.ReturnAction = returnAction;
             this.ReturnReason = returnReason;
+            this.IsOnline = isOnline;
+            this.FeePrice = feePrice;
+            this.ShippingPrice = shippingPrice;
             this.IdempotencyKey = idempotencyKey;
         }
 
@@ -131,6 +143,26 @@ namespace Org.OpenAPITools.Model
         public string ReturnStatusId { get; set; }
 
         /// <summary>
+        /// Defines return request reason
+        /// </summary>
+        /// <value>Defines return request reason</value>
+        /*
+        <example>broken</example>
+        */
+        [DataMember(Name = "return_reason_id", EmitDefaultValue = false)]
+        public string ReturnReasonId { get; set; }
+
+        /// <summary>
+        /// Defines return request action
+        /// </summary>
+        /// <value>Defines return request action</value>
+        /*
+        <example>RETURNED</example>
+        */
+        [DataMember(Name = "return_action_id", EmitDefaultValue = false)]
+        public string ReturnActionId { get; set; }
+
+        /// <summary>
         /// Specifies staff note
         /// </summary>
         /// <value>Specifies staff note</value>
@@ -149,6 +181,16 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "comment", EmitDefaultValue = false)]
         public string Comment { get; set; }
+
+        /// <summary>
+        /// Customer-visible message attached to the return request (updated).
+        /// </summary>
+        /// <value>Customer-visible message attached to the return request (updated).</value>
+        /*
+        <example>Update note for the return.</example>
+        */
+        [DataMember(Name = "message", EmitDefaultValue = false)]
+        public string Message { get; set; }
 
         /// <summary>
         /// Send notifications to customer after order was created
@@ -191,6 +233,36 @@ namespace Org.OpenAPITools.Model
         public string ReturnReason { get; set; }
 
         /// <summary>
+        /// Indicates whether refund type is online
+        /// </summary>
+        /// <value>Indicates whether refund type is online</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "is_online", EmitDefaultValue = true)]
+        public bool IsOnline { get; set; }
+
+        /// <summary>
+        /// Specifies refund&#39;s fee price
+        /// </summary>
+        /// <value>Specifies refund&#39;s fee price</value>
+        /*
+        <example>5.5</example>
+        */
+        [DataMember(Name = "fee_price", EmitDefaultValue = false)]
+        public decimal FeePrice { get; set; }
+
+        /// <summary>
+        /// Specifies order&#39;s shipping price
+        /// </summary>
+        /// <value>Specifies order&#39;s shipping price</value>
+        /*
+        <example>5.5</example>
+        */
+        [DataMember(Name = "shipping_price", EmitDefaultValue = false)]
+        public decimal ShippingPrice { get; set; }
+
+        /// <summary>
         /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
         /// </summary>
         /// <value>A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;</value>
@@ -219,12 +291,18 @@ namespace Org.OpenAPITools.Model
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  ItemRestock: ").Append(ItemRestock).Append("\n");
             sb.Append("  ReturnStatusId: ").Append(ReturnStatusId).Append("\n");
+            sb.Append("  ReturnReasonId: ").Append(ReturnReasonId).Append("\n");
+            sb.Append("  ReturnActionId: ").Append(ReturnActionId).Append("\n");
             sb.Append("  StaffNote: ").Append(StaffNote).Append("\n");
             sb.Append("  Comment: ").Append(Comment).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  SendNotifications: ").Append(SendNotifications).Append("\n");
             sb.Append("  RejectReason: ").Append(RejectReason).Append("\n");
             sb.Append("  ReturnAction: ").Append(ReturnAction).Append("\n");
             sb.Append("  ReturnReason: ").Append(ReturnReason).Append("\n");
+            sb.Append("  IsOnline: ").Append(IsOnline).Append("\n");
+            sb.Append("  FeePrice: ").Append(FeePrice).Append("\n");
+            sb.Append("  ShippingPrice: ").Append(ShippingPrice).Append("\n");
             sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("  OrderProducts: ").Append(OrderProducts).Append("\n");
             sb.Append("}\n");

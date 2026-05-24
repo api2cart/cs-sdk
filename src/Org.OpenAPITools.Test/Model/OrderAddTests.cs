@@ -659,6 +659,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'InvoiceAdminComment'
+        /// </summary>
+        [Fact]
+        public void InvoiceAdminCommentTest()
+        {
+            // TODO unit test for the property 'InvoiceAdminComment'
+        }
+
+        /// <summary>
         /// Test the property 'NoteAttributes'
         /// </summary>
         [Fact]

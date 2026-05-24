@@ -65,6 +65,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Currency'
+        /// </summary>
+        [Fact]
+        public void CurrencyTest()
+        {
+            // TODO unit test for the property 'Currency'
+        }
+
+        /// <summary>
         /// Test the property 'CurrencyId'
         /// </summary>
         [Fact]

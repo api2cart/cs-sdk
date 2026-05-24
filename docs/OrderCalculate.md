@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CustomerEmail** | **string** | Defines the customer specified by email for whom the order needs to be calculated | 
+**Currency** | **string** | Currency code of order | [optional] 
 **CurrencyId** | **string** | Currency Id | [optional] 
 **StoreId** | **string** | Store Id | [optional] 
 **Coupons** | **List&lt;string&gt;** | Coupons that will be applied to order. If the order isn&#39;t eligible for any given discount code or there is no discount with such a code it will be skipped during calculation | [optional] 
