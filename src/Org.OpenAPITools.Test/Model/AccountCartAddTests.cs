@@ -479,6 +479,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'NopcommerceSecret'
+        /// </summary>
+        [Fact]
+        public void NopcommerceSecretTest()
+        {
+            // TODO unit test for the property 'NopcommerceSecret'
+        }
+
+        /// <summary>
         /// Test the property 'DemandwareClientId'
         /// </summary>
         [Fact]

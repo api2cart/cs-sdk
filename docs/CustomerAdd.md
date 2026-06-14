@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **LastLogin** | **string** | Defines customer&#39;s last login time | [optional] 
 **BirthDay** | **string** | Defines customer&#39;s birthday | [optional] 
 **NewsLetterSubscription** | **bool** | Defines whether the newsletter subscription is available for the user | [optional] 
+**PartnerOffersSubscription** | **bool** | Defines whether the customer agreed to receive offers from partners | [optional] 
 **Consents** | [**List&lt;CustomerAddConsentsInner&gt;**](CustomerAddConsentsInner.md) | Defines consents to notifications | [optional] 
 **Gender** | **string** | Defines customer&#39;s gender | [optional] 
 **Website** | **string** | Link to customer website | [optional] 

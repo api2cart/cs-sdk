@@ -182,6 +182,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PartnerOffersSubscription'
+        /// </summary>
+        [Fact]
+        public void PartnerOffersSubscriptionTest()
+        {
+            // TODO unit test for the property 'PartnerOffersSubscription'
+        }
+
+        /// <summary>
         /// Test the property 'Consents'
         /// </summary>
         [Fact]

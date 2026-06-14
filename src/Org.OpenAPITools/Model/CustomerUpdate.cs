@@ -45,6 +45,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="lastName">Defines customer&#39;s last name.</param>
         /// <param name="birthDay">Defines customer&#39;s birthday.</param>
         /// <param name="newsLetterSubscription">Defines whether the newsletter subscription is available for the user.</param>
+        /// <param name="partnerOffersSubscription">Defines whether the customer agreed to receive offers from partners.</param>
         /// <param name="consents">Defines consents to notifications.</param>
         /// <param name="tags">Customer tags.</param>
         /// <param name="gender">Defines customer&#39;s gender.</param>
@@ -53,6 +54,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="password">Defines customer&#39;s unique password.</param>
         /// <param name="currencyId">Currency Id.</param>
         /// <param name="company">Defines customer&#39;s company.</param>
+        /// <param name="website">Link to customer website.</param>
         /// <param name="country">Specifies ISO code or name of country.</param>
         /// <param name="fax">Defines customer&#39;s fax.</param>
         /// <param name="taxId">Add Tax Id.</param>
@@ -61,7 +63,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="storeId">Store Id.</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
         /// <param name="address">address.</param>
-        public CustomerUpdate(string id = default(string), string groupId = default(string), string groupIds = default(string), string group = default(string), string email = default(string), string phone = default(string), string firstName = default(string), string lastName = default(string), string birthDay = default(string), bool newsLetterSubscription = default(bool), List<CustomerAddConsentsInner> consents = default(List<CustomerAddConsentsInner>), string tags = default(string), string gender = default(string), string note = default(string), string status = default(string), string password = default(string), string currencyId = default(string), string company = default(string), string country = default(string), string fax = default(string), string taxId = default(string), bool isTaxExempt = default(bool), string vendorId = default(string), string storeId = default(string), string idempotencyKey = default(string), List<CustomerUpdateAddressInner> address = default(List<CustomerUpdateAddressInner>))
+        public CustomerUpdate(string id = default(string), string groupId = default(string), string groupIds = default(string), string group = default(string), string email = default(string), string phone = default(string), string firstName = default(string), string lastName = default(string), string birthDay = default(string), bool newsLetterSubscription = default(bool), bool partnerOffersSubscription = default(bool), List<CustomerAddConsentsInner> consents = default(List<CustomerAddConsentsInner>), string tags = default(string), string gender = default(string), string note = default(string), string status = default(string), string password = default(string), string currencyId = default(string), string company = default(string), string website = default(string), string country = default(string), string fax = default(string), string taxId = default(string), bool isTaxExempt = default(bool), string vendorId = default(string), string storeId = default(string), string idempotencyKey = default(string), List<CustomerUpdateAddressInner> address = default(List<CustomerUpdateAddressInner>))
         {
             this.Id = id;
             this.GroupId = groupId;
@@ -73,6 +75,7 @@ namespace Org.OpenAPITools.Model
             this.LastName = lastName;
             this.BirthDay = birthDay;
             this.NewsLetterSubscription = newsLetterSubscription;
+            this.PartnerOffersSubscription = partnerOffersSubscription;
             this.Consents = consents;
             this.Tags = tags;
             this.Gender = gender;
@@ -81,6 +84,7 @@ namespace Org.OpenAPITools.Model
             this.Password = password;
             this.CurrencyId = currencyId;
             this.Company = company;
+            this.Website = website;
             this.Country = country;
             this.Fax = fax;
             this.TaxId = taxId;
@@ -192,6 +196,16 @@ namespace Org.OpenAPITools.Model
         public bool NewsLetterSubscription { get; set; }
 
         /// <summary>
+        /// Defines whether the customer agreed to receive offers from partners
+        /// </summary>
+        /// <value>Defines whether the customer agreed to receive offers from partners</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "partner_offers_subscription", EmitDefaultValue = true)]
+        public bool PartnerOffersSubscription { get; set; }
+
+        /// <summary>
         /// Defines consents to notifications
         /// </summary>
         /// <value>Defines consents to notifications</value>
@@ -267,6 +281,16 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "company", EmitDefaultValue = false)]
         public string Company { get; set; }
+
+        /// <summary>
+        /// Link to customer website
+        /// </summary>
+        /// <value>Link to customer website</value>
+        /*
+        <example>http://api2cart.com</example>
+        */
+        [DataMember(Name = "website", EmitDefaultValue = false)]
+        public string Website { get; set; }
 
         /// <summary>
         /// Specifies ISO code or name of country
@@ -362,6 +386,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  LastName: ").Append(LastName).Append("\n");
             sb.Append("  BirthDay: ").Append(BirthDay).Append("\n");
             sb.Append("  NewsLetterSubscription: ").Append(NewsLetterSubscription).Append("\n");
+            sb.Append("  PartnerOffersSubscription: ").Append(PartnerOffersSubscription).Append("\n");
             sb.Append("  Consents: ").Append(Consents).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  Gender: ").Append(Gender).Append("\n");
@@ -370,6 +395,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Password: ").Append(Password).Append("\n");
             sb.Append("  CurrencyId: ").Append(CurrencyId).Append("\n");
             sb.Append("  Company: ").Append(Company).Append("\n");
+            sb.Append("  Website: ").Append(Website).Append("\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
             sb.Append("  Fax: ").Append(Fax).Append("\n");
             sb.Append("  TaxId: ").Append(TaxId).Append("\n");

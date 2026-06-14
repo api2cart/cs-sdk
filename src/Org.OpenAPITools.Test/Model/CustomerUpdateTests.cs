@@ -146,6 +146,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PartnerOffersSubscription'
+        /// </summary>
+        [Fact]
+        public void PartnerOffersSubscriptionTest()
+        {
+            // TODO unit test for the property 'PartnerOffersSubscription'
+        }
+
+        /// <summary>
         /// Test the property 'Consents'
         /// </summary>
         [Fact]
@@ -215,6 +224,15 @@ namespace Org.OpenAPITools.Test.Model
         public void CompanyTest()
         {
             // TODO unit test for the property 'Company'
+        }
+
+        /// <summary>
+        /// Test the property 'Website'
+        /// </summary>
+        [Fact]
+        public void WebsiteTest()
+        {
+            // TODO unit test for the property 'Website'
         }
 
         /// <summary>

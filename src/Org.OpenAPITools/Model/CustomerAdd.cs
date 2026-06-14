@@ -54,6 +54,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="lastLogin">Defines customer&#39;s last login time.</param>
         /// <param name="birthDay">Defines customer&#39;s birthday.</param>
         /// <param name="newsLetterSubscription">Defines whether the newsletter subscription is available for the user.</param>
+        /// <param name="partnerOffersSubscription">Defines whether the customer agreed to receive offers from partners.</param>
         /// <param name="consents">Defines consents to notifications.</param>
         /// <param name="gender">Defines customer&#39;s gender.</param>
         /// <param name="website">Link to customer website.</param>
@@ -68,7 +69,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="storeId">Store Id.</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
         /// <param name="address">address.</param>
-        public CustomerAdd(string email = default(string), string firstName = default(string), string lastName = default(string), string password = default(string), string group = default(string), string groupId = default(string), string groupIds = default(string), string status = @"enabled", string createdTime = default(string), string modifiedTime = default(string), string login = default(string), string lastLogin = default(string), string birthDay = default(string), bool newsLetterSubscription = default(bool), List<CustomerAddConsentsInner> consents = default(List<CustomerAddConsentsInner>), string gender = default(string), string website = default(string), string fax = default(string), string company = default(string), string phone = default(string), string note = default(string), string country = default(string), string currencyId = default(string), bool isTaxExempt = default(bool), string vendorId = default(string), string storeId = default(string), string idempotencyKey = default(string), List<CustomerAddAddressInner> address = default(List<CustomerAddAddressInner>))
+        public CustomerAdd(string email = default(string), string firstName = default(string), string lastName = default(string), string password = default(string), string group = default(string), string groupId = default(string), string groupIds = default(string), string status = @"enabled", string createdTime = default(string), string modifiedTime = default(string), string login = default(string), string lastLogin = default(string), string birthDay = default(string), bool newsLetterSubscription = default(bool), bool partnerOffersSubscription = default(bool), List<CustomerAddConsentsInner> consents = default(List<CustomerAddConsentsInner>), string gender = default(string), string website = default(string), string fax = default(string), string company = default(string), string phone = default(string), string note = default(string), string country = default(string), string currencyId = default(string), bool isTaxExempt = default(bool), string vendorId = default(string), string storeId = default(string), string idempotencyKey = default(string), List<CustomerAddAddressInner> address = default(List<CustomerAddAddressInner>))
         {
             // to ensure "email" is required (not null)
             if (email == null)
@@ -90,6 +91,7 @@ namespace Org.OpenAPITools.Model
             this.LastLogin = lastLogin;
             this.BirthDay = birthDay;
             this.NewsLetterSubscription = newsLetterSubscription;
+            this.PartnerOffersSubscription = partnerOffersSubscription;
             this.Consents = consents;
             this.Gender = gender;
             this.Website = website;
@@ -247,6 +249,16 @@ namespace Org.OpenAPITools.Model
         public bool NewsLetterSubscription { get; set; }
 
         /// <summary>
+        /// Defines whether the customer agreed to receive offers from partners
+        /// </summary>
+        /// <value>Defines whether the customer agreed to receive offers from partners</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "partner_offers_subscription", EmitDefaultValue = true)]
+        public bool PartnerOffersSubscription { get; set; }
+
+        /// <summary>
         /// Defines consents to notifications
         /// </summary>
         /// <value>Defines consents to notifications</value>
@@ -401,6 +413,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  LastLogin: ").Append(LastLogin).Append("\n");
             sb.Append("  BirthDay: ").Append(BirthDay).Append("\n");
             sb.Append("  NewsLetterSubscription: ").Append(NewsLetterSubscription).Append("\n");
+            sb.Append("  PartnerOffersSubscription: ").Append(PartnerOffersSubscription).Append("\n");
             sb.Append("  Consents: ").Append(Consents).Append("\n");
             sb.Append("  Gender: ").Append(Gender).Append("\n");
             sb.Append("  Website: ").Append(Website).Append("\n");
