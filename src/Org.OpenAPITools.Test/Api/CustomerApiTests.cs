@@ -120,7 +120,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? modifiedFrom = null;
             //string? modifiedTo = null;
             //var response = instance.CustomerCount(ids, sinceId, customerListId, groupId, storeId, avail, includeGuests, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
-            //Assert.IsType<CustomerCount200Response>(response);
+            //Assert.IsType<ModelResponseCustomerCount>(response);
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? storeId = null;
             //bool? includeGuests = null;
             //var response = instance.CustomerFind(findValue, findWhere, findParams, storeId, includeGuests);
-            //Assert.IsType<CustomerFind200Response>(response);
+            //Assert.IsType<ModelResponseCustomerFind>(response);
         }
 
         /// <summary>

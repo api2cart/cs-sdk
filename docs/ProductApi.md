@@ -745,7 +745,7 @@ catch (ApiException e)
 
 <a id="productchilditemfind"></a>
 # **ProductChildItemFind**
-> ProductChildItemFind200Response ProductChildItemFind (string? findValue = null, string? findWhere = null, string? findParams = null, string? storeId = null)
+> ModelResponseProductChildItemFind ProductChildItemFind (string? findValue = null, string? findWhere = null, string? findParams = null, string? storeId = null)
 
 product.child_item.find
 
@@ -785,7 +785,7 @@ namespace Example
             try
             {
                 // product.child_item.find
-                ProductChildItemFind200Response result = apiInstance.ProductChildItemFind(findValue, findWhere, findParams, storeId);
+                ModelResponseProductChildItemFind result = apiInstance.ProductChildItemFind(findValue, findWhere, findParams, storeId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -806,7 +806,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.child_item.find
-    ApiResponse<ProductChildItemFind200Response> response = apiInstance.ProductChildItemFindWithHttpInfo(findValue, findWhere, findParams, storeId);
+    ApiResponse<ModelResponseProductChildItemFind> response = apiInstance.ProductChildItemFindWithHttpInfo(findValue, findWhere, findParams, storeId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -830,7 +830,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**ProductChildItemFind200Response**](ProductChildItemFind200Response.md)
+[**ModelResponseProductChildItemFind**](ModelResponseProductChildItemFind.md)
 
 ### Authorization
 
@@ -1111,7 +1111,7 @@ catch (ApiException e)
 
 <a id="productcount"></a>
 # **ProductCount**
-> ProductCount200Response ProductCount (string? sku = null, string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? vendorId = null, string? langId = null, bool? availView = null, bool? availSale = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? brandName = null, string? manufacturerId = null, List<string>? productAttributes = null, string? status = null, string? type = null, string? visible = null, string? findValue = null, string? findWhere = null, string? reportRequestId = null, bool? returnGlobal = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
+> ModelResponseProductCount ProductCount (string? sku = null, string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? vendorId = null, string? langId = null, bool? availView = null, bool? availSale = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? brandName = null, string? manufacturerId = null, List<string>? productAttributes = null, string? status = null, string? type = null, string? visible = null, string? findValue = null, string? findWhere = null, string? reportRequestId = null, bool? returnGlobal = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
 
 product.count
 
@@ -1173,7 +1173,7 @@ namespace Example
             try
             {
                 // product.count
-                ProductCount200Response result = apiInstance.ProductCount(sku, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
+                ModelResponseProductCount result = apiInstance.ProductCount(sku, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1194,7 +1194,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.count
-    ApiResponse<ProductCount200Response> response = apiInstance.ProductCountWithHttpInfo(sku, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
+    ApiResponse<ModelResponseProductCount> response = apiInstance.ProductCountWithHttpInfo(sku, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1240,7 +1240,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**ProductCount200Response**](ProductCount200Response.md)
+[**ModelResponseProductCount**](ModelResponseProductCount.md)
 
 ### Authorization
 
@@ -1691,7 +1691,7 @@ catch (ApiException e)
 
 <a id="productfind"></a>
 # **ProductFind**
-> ProductFind200Response ProductFind (string findValue, string? findWhere = null, string? findParams = null, string? findWhat = null, string? langId = null, string? storeId = null)
+> ModelResponseProductFind ProductFind (string findValue, string? findWhere = null, string? findParams = null, string? findWhat = null, string? langId = null, string? storeId = null)
 
 product.find
 
@@ -1733,7 +1733,7 @@ namespace Example
             try
             {
                 // product.find
-                ProductFind200Response result = apiInstance.ProductFind(findValue, findWhere, findParams, findWhat, langId, storeId);
+                ModelResponseProductFind result = apiInstance.ProductFind(findValue, findWhere, findParams, findWhat, langId, storeId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1754,7 +1754,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.find
-    ApiResponse<ProductFind200Response> response = apiInstance.ProductFindWithHttpInfo(findValue, findWhere, findParams, findWhat, langId, storeId);
+    ApiResponse<ModelResponseProductFind> response = apiInstance.ProductFindWithHttpInfo(findValue, findWhere, findParams, findWhat, langId, storeId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1780,7 +1780,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**ProductFind200Response**](ProductFind200Response.md)
+[**ModelResponseProductFind**](ModelResponseProductFind.md)
 
 ### Authorization
 

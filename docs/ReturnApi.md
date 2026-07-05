@@ -13,7 +13,7 @@ All URIs are relative to *https://api.api2cart.local.com/v1.1*
 
 <a id="returnactionlist"></a>
 # **ReturnActionList**
-> ReturnActionList200Response ReturnActionList ()
+> ModelResponseReturnActionList ReturnActionList ()
 
 return.action.list
 
@@ -49,7 +49,7 @@ namespace Example
             try
             {
                 // return.action.list
-                ReturnActionList200Response result = apiInstance.ReturnActionList();
+                ModelResponseReturnActionList result = apiInstance.ReturnActionList();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -70,7 +70,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // return.action.list
-    ApiResponse<ReturnActionList200Response> response = apiInstance.ReturnActionListWithHttpInfo();
+    ApiResponse<ModelResponseReturnActionList> response = apiInstance.ReturnActionListWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -87,7 +87,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**ReturnActionList200Response**](ReturnActionList200Response.md)
+[**ModelResponseReturnActionList**](ModelResponseReturnActionList.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ This endpoint does not need any parameter.
 
 <a id="returncount"></a>
 # **ReturnCount**
-> ReturnCount200Response ReturnCount (string? orderIds = null, string? customerId = null, string? storeId = null, string? status = null, string? returnType = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? reportRequestId = null, bool? disableReportCache = null)
+> ModelResponseReturnCount ReturnCount (string? orderIds = null, string? customerId = null, string? storeId = null, string? status = null, string? returnType = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? reportRequestId = null, bool? disableReportCache = null)
 
 return.count
 
@@ -155,7 +155,7 @@ namespace Example
             try
             {
                 // return.count
-                ReturnCount200Response result = apiInstance.ReturnCount(orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, reportRequestId, disableReportCache);
+                ModelResponseReturnCount result = apiInstance.ReturnCount(orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, reportRequestId, disableReportCache);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -176,7 +176,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // return.count
-    ApiResponse<ReturnCount200Response> response = apiInstance.ReturnCountWithHttpInfo(orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, reportRequestId, disableReportCache);
+    ApiResponse<ModelResponseReturnCount> response = apiInstance.ReturnCountWithHttpInfo(orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, reportRequestId, disableReportCache);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -207,7 +207,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**ReturnCount200Response**](ReturnCount200Response.md)
+[**ModelResponseReturnCount**](ModelResponseReturnCount.md)
 
 ### Authorization
 
@@ -472,7 +472,7 @@ catch (ApiException e)
 
 <a id="returnreasonlist"></a>
 # **ReturnReasonList**
-> ReturnReasonList200Response ReturnReasonList (string? storeId = null)
+> ModelResponseReturnReasonList ReturnReasonList (string? storeId = null)
 
 return.reason.list
 
@@ -509,7 +509,7 @@ namespace Example
             try
             {
                 // return.reason.list
-                ReturnReasonList200Response result = apiInstance.ReturnReasonList(storeId);
+                ModelResponseReturnReasonList result = apiInstance.ReturnReasonList(storeId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -530,7 +530,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // return.reason.list
-    ApiResponse<ReturnReasonList200Response> response = apiInstance.ReturnReasonListWithHttpInfo(storeId);
+    ApiResponse<ModelResponseReturnReasonList> response = apiInstance.ReturnReasonListWithHttpInfo(storeId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -551,7 +551,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**ReturnReasonList200Response**](ReturnReasonList200Response.md)
+[**ModelResponseReturnReasonList**](ModelResponseReturnReasonList.md)
 
 ### Authorization
 
@@ -572,7 +572,7 @@ catch (ApiException e)
 
 <a id="returnstatuslist"></a>
 # **ReturnStatusList**
-> ReturnStatusList200Response ReturnStatusList ()
+> ModelResponseReturnStatusList ReturnStatusList ()
 
 return.status.list
 
@@ -608,7 +608,7 @@ namespace Example
             try
             {
                 // return.status.list
-                ReturnStatusList200Response result = apiInstance.ReturnStatusList();
+                ModelResponseReturnStatusList result = apiInstance.ReturnStatusList();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -629,7 +629,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // return.status.list
-    ApiResponse<ReturnStatusList200Response> response = apiInstance.ReturnStatusListWithHttpInfo();
+    ApiResponse<ModelResponseReturnStatusList> response = apiInstance.ReturnStatusListWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -646,7 +646,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**ReturnStatusList200Response**](ReturnStatusList200Response.md)
+[**ModelResponseReturnStatusList**](ModelResponseReturnStatusList.md)
 
 ### Authorization
 

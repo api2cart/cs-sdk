@@ -63,7 +63,7 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.CartCatalogPriceRulesCount();
-            //Assert.IsType<CartCatalogPriceRulesCount200Response>(response);
+            //Assert.IsType<ModelResponseCartCatalogPriceRulesCount>(response);
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? dateEndFrom = null;
             //string? dateEndTo = null;
             //var response = instance.CartCouponCount(storeId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo);
-            //Assert.IsType<CartCouponCount200Response>(response);
+            //Assert.IsType<ModelResponseCartCouponCount>(response);
         }
 
         /// <summary>
@@ -193,13 +193,17 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //decimal amount = null;
+            //string? currency = null;
+            //string? storeId = null;
             //string? code = null;
+            //string? name = null;
             //string? ownerEmail = null;
+            //string? ownerName = null;
             //string? recipientEmail = null;
             //string? recipientName = null;
-            //string? ownerName = null;
+            //string? message = null;
             //string? idempotencyKey = null;
-            //var response = instance.CartGiftcardAdd(amount, code, ownerEmail, recipientEmail, recipientName, ownerName, idempotencyKey);
+            //var response = instance.CartGiftcardAdd(amount, currency, storeId, code, name, ownerEmail, ownerName, recipientEmail, recipientName, message, idempotencyKey);
             //Assert.IsType<CartGiftcardAdd200Response>(response);
         }
 
@@ -212,7 +216,7 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string? storeId = null;
             //var response = instance.CartGiftcardCount(storeId);
-            //Assert.IsType<CartGiftcardCount200Response>(response);
+            //Assert.IsType<ModelResponseCartGiftcardCount>(response);
         }
 
         /// <summary>
@@ -223,7 +227,8 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
-            //var response = instance.CartGiftcardDelete(id);
+            //string? storeId = null;
+            //var response = instance.CartGiftcardDelete(id, storeId);
             //Assert.IsType<AttributeDelete200Response>(response);
         }
 
@@ -234,6 +239,7 @@ namespace Org.OpenAPITools.Test.Api
         public void CartGiftcardListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string? ids = null;
             //int? start = null;
             //int? count = null;
             //string? pageCursor = null;
@@ -241,7 +247,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.CartGiftcardList(start, count, pageCursor, storeId, responseFields, varParams, exclude);
+            //var response = instance.CartGiftcardList(ids, start, count, pageCursor, storeId, responseFields, varParams, exclude);
             //Assert.IsType<ModelResponseCartGiftCardList>(response);
         }
 
@@ -324,7 +330,7 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.CartMethods();
-            //Assert.IsType<CartMethods200Response>(response);
+            //Assert.IsType<ModelResponseCartMethods>(response);
         }
 
         /// <summary>

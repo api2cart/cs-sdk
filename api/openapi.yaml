@@ -88,7 +88,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AccountSupportedPlatforms_200_response'
+                $ref: '#/components/schemas/Model_Response_Account_SupportedPlatforms'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -2024,7 +2024,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AttributeCount_200_response'
+                $ref: '#/components/schemas/Model_Response_Attribute_Count'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -2831,7 +2831,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AttributeTypeList_200_response'
+                $ref: '#/components/schemas/Model_Response_Attribute_Type_List'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -3728,7 +3728,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CartMethods_200_response'
+                $ref: '#/components/schemas/Model_Response_Cart_Methods'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -3774,7 +3774,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CartCatalogPriceRulesCount_200_response'
+                $ref: '#/components/schemas/Model_Response_Cart_CatalogPriceRules_Count'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -3937,7 +3937,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CartCouponCount_200_response'
+                $ref: '#/components/schemas/Model_Response_Cart_Coupon_Count'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -4319,7 +4319,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CartGiftcardCount_200_response'
+                $ref: '#/components/schemas/Model_Response_Cart_Giftcard_Count'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -4332,6 +4332,15 @@ paths:
       description: Get gift cards list.
       operationId: CartGiftcardList
       parameters:
+      - description: Retrieves gift cards specified by ids
+        example: "24,25"
+        explode: true
+        in: query
+        name: ids
+        required: false
+        schema:
+          type: string
+        style: form
       - description: This parameter sets the number from which you want to get entities
         example: 0
         explode: true
@@ -4430,6 +4439,24 @@ paths:
         schema:
           type: number
         style: form
+      - description: Defines currency code
+        example: USD
+        explode: true
+        in: query
+        name: currency
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Store Id
+        example: "1"
+        explode: true
+        in: query
+        name: store_id
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Gift card code
         example: GFT1 A4S5 AA11 RD61
         explode: true
@@ -4439,11 +4466,29 @@ paths:
         schema:
           type: string
         style: form
+      - description: Entity name
+        example: Test name
+        explode: true
+        in: query
+        name: name
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Gift card owner email
         example: jubari@hannsgroup.com
         explode: true
         in: query
         name: owner_email
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Gift card owner name
+        example: John Doe
+        explode: true
+        in: query
+        name: owner_name
         required: false
         schema:
           type: string
@@ -4466,11 +4511,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Gift card owner name
-        example: John Doe
+      - description: Free-form message attached to the entity.
+        example: "Received item is not like in the photo, get my money back."
         explode: true
         in: query
-        name: owner_name
+        name: message
         required: false
         schema:
           type: string
@@ -4514,6 +4559,15 @@ paths:
         schema:
           type: string
         style: form
+      - description: Store Id
+        example: "1"
+        explode: true
+        in: query
+        name: store_id
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -4530,8 +4584,10 @@ paths:
   /cart.meta_data.list.json:
     get:
       description: "Using this method, you can get a list of metadata for various\
-        \ entities (products, options, customers, orders). Usually this is data created\
-        \ by third-party plugins."
+        \ entities. Entities supported may differ across platforms. To get the list\
+        \ of supported entities, pass an invalid value in the <code>entity</code>\
+        \ parameter. The response will contain the list of entities supported by the\
+        \ specific platform. Usually this is data created by third-party plugins."
       operationId: CartMetaDataList
       parameters:
       - description: This parameter sets the entity amount that has to be retrieved.
@@ -4647,7 +4703,11 @@ paths:
       - cart
   /cart.meta_data.set.json:
     post:
-      description: Set meta data for a specific entity
+      description: "Set metadata for a specific entity. Entities supported may differ\
+        \ across platforms. To get the list of supported entities, pass an invalid\
+        \ value in the <code>entity</code> parameter. The response will contain the\
+        \ list of entities supported by the specific platform. Usually this is data\
+        \ created by third-party plugins."
       operationId: CartMetaDataSet
       parameters:
       - description: Entity Id
@@ -5448,7 +5508,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CategoryCount_200_response'
+                $ref: '#/components/schemas/Model_Response_Category_Count'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -5733,7 +5793,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CategoryFind_200_response'
+                $ref: '#/components/schemas/Model_Response_Category_Find'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -5791,7 +5851,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CategoryAssign_200_response'
+                $ref: '#/components/schemas/Model_Response_Category_Assign'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -5849,7 +5909,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CategoryAssign_200_response'
+                $ref: '#/components/schemas/Model_Response_Category_Unassign'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -6640,7 +6700,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustomerCount_200_response'
+                $ref: '#/components/schemas/Model_Response_Customer_Count'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -6927,7 +6987,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustomerFind_200_response'
+                $ref: '#/components/schemas/Model_Response_Customer_Find'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -7901,7 +7961,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/OrderCount_200_response'
+                $ref: '#/components/schemas/Model_Response_Order_Count'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -8741,7 +8801,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/OrderFinancialStatusList_200_response'
+                $ref: '#/components/schemas/Model_Response_Order_FinancialStatus_List'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -8768,7 +8828,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/OrderFulfillmentStatusList_200_response'
+                $ref: '#/components/schemas/Model_Response_Order_FulfillmentStatus_List'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -9903,7 +9963,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductCount_200_response'
+                $ref: '#/components/schemas/Model_Response_Product_Count'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -10350,7 +10410,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductFind_200_response'
+                $ref: '#/components/schemas/Model_Response_Product_Find'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -11450,7 +11510,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductChildItemFind_200_response'
+                $ref: '#/components/schemas/Model_Response_Product_ChildItem_Find'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -13379,7 +13439,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ReturnCount_200_response'
+                $ref: '#/components/schemas/Model_Response_Return_Count'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -13586,7 +13646,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ReturnActionList_200_response'
+                $ref: '#/components/schemas/Model_Response_Return_Action_List'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -13613,7 +13673,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ReturnReasonList_200_response'
+                $ref: '#/components/schemas/Model_Response_Return_Reason_List'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -13631,7 +13691,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ReturnStatusList_200_response'
+                $ref: '#/components/schemas/Model_Response_Return_Status_List'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -14033,7 +14093,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/WebhookCount_200_response'
+                $ref: '#/components/schemas/Model_Response_Webhook_Count'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -14138,7 +14198,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/WebhookEvents_200_response'
+                $ref: '#/components/schemas/Model_Response_Webhook_Events'
           description: successful operation
       security:
       - ApiKeyAuth: []
@@ -14233,6 +14293,180 @@ components:
           type: string
         format:
           type: string
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Model_Response_Account_SupportedPlatforms:
+      example:
+        result:
+          supported_platforms:
+          - cart_id: cart_id
+            cart_name: cart_name
+            custom_fields: "{}"
+            cart_versions: cart_versions
+            additional_fields: "{}"
+            cart_method: cart_method
+            params:
+              additional:
+              - name: name
+                description: description
+              - name: name
+                description: description
+              required:
+              - - name: name
+                  description: description
+                - name: name
+                  description: description
+              - - name: name
+                  description: description
+                - name: name
+                  description: description
+          - cart_id: cart_id
+            cart_name: cart_name
+            custom_fields: "{}"
+            cart_versions: cart_versions
+            additional_fields: "{}"
+            cart_method: cart_method
+            params:
+              additional:
+              - name: name
+                description: description
+              - name: name
+                description: description
+              required:
+              - - name: name
+                  description: description
+                - name: name
+                  description: description
+              - - name: name
+                  description: description
+                - name: name
+                  description: description
+          custom_fields: "{}"
+          supported_platforms_count: 6
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Account_SupportedPlatforms_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Account_SupportedPlatforms_Result:
+      example:
+        supported_platforms:
+        - cart_id: cart_id
+          cart_name: cart_name
+          custom_fields: "{}"
+          cart_versions: cart_versions
+          additional_fields: "{}"
+          cart_method: cart_method
+          params:
+            additional:
+            - name: name
+              description: description
+            - name: name
+              description: description
+            required:
+            - - name: name
+                description: description
+              - name: name
+                description: description
+            - - name: name
+                description: description
+              - name: name
+                description: description
+        - cart_id: cart_id
+          cart_name: cart_name
+          custom_fields: "{}"
+          cart_versions: cart_versions
+          additional_fields: "{}"
+          cart_method: cart_method
+          params:
+            additional:
+            - name: name
+              description: description
+            - name: name
+              description: description
+            required:
+            - - name: name
+                description: description
+              - name: name
+                description: description
+            - - name: name
+                description: description
+              - name: name
+                description: description
+        custom_fields: "{}"
+        supported_platforms_count: 6
+        additional_fields: "{}"
+      properties:
+        supported_platforms_count:
+          nullable: true
+          type: integer
+        supported_platforms:
+          items:
+            $ref: '#/components/schemas/Account_SupportedPlatform'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Account_SupportedPlatform:
+      example:
+        cart_id: cart_id
+        cart_name: cart_name
+        custom_fields: "{}"
+        cart_versions: cart_versions
+        additional_fields: "{}"
+        cart_method: cart_method
+        params:
+          additional:
+          - name: name
+            description: description
+          - name: name
+            description: description
+          required:
+          - - name: name
+              description: description
+            - name: name
+              description: description
+          - - name: name
+              description: description
+            - name: name
+              description: description
+      properties:
+        cart_id:
+          nullable: true
+          type: string
+        cart_name:
+          nullable: true
+          type: string
+        cart_versions:
+          nullable: true
+          type: string
+        cart_method:
+          nullable: true
+          type: string
+        params:
+          $ref: '#/components/schemas/Account_SupportedPlatform_params'
         additional_fields:
           nullable: true
           type: object
@@ -15538,6 +15772,46 @@ components:
         custom_fields:
           nullable: true
           type: object
+    Model_Response_Attribute_Count:
+      example:
+        result:
+          custom_fields: "{}"
+          additional_fields: "{}"
+          attributes_count: 6
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Attribute_Count_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Attribute_Count_Result:
+      example:
+        custom_fields: "{}"
+        additional_fields: "{}"
+        attributes_count: 6
+      properties:
+        attributes_count:
+          nullable: true
+          type: integer
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
     Model_Response_Attribute_List:
       example:
         result:
@@ -15890,6 +16164,56 @@ components:
           nullable: true
           type: string
         assigned_attribute_ids:
+          items:
+            type: string
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Model_Response_Attribute_Type_List:
+      example:
+        result:
+          items_count: 6
+          custom_fields: "{}"
+          attribute_type:
+          - attribute_type
+          - attribute_type
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Attribute_Type_List_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Attribute_Type_List_Result:
+      example:
+        items_count: 6
+        custom_fields: "{}"
+        attribute_type:
+        - attribute_type
+        - attribute_type
+        additional_fields: "{}"
+      properties:
+        items_count:
+          nullable: true
+          type: integer
+        attribute_type:
           items:
             type: string
           type: array
@@ -17736,6 +18060,91 @@ components:
         custom_fields:
           nullable: true
           type: object
+    Model_Response_Cart_Methods:
+      example:
+        result:
+          method:
+          - method
+          - method
+          custom_fields: "{}"
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Cart_Methods_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Cart_Methods_Result:
+      example:
+        method:
+        - method
+        - method
+        custom_fields: "{}"
+        additional_fields: "{}"
+      properties:
+        method:
+          items:
+            type: string
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Model_Response_Cart_CatalogPriceRules_Count:
+      example:
+        result:
+          custom_fields: "{}"
+          catalog_price_rules_count: 6
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Cart_CatalogPriceRules_Count_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Cart_CatalogPriceRules_Count_Result:
+      example:
+        custom_fields: "{}"
+        catalog_price_rules_count: 6
+        additional_fields: "{}"
+      properties:
+        catalog_price_rules_count:
+          nullable: true
+          type: integer
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
     Model_Response_Cart_Catalog_PriceRules_List:
       example:
         result:
@@ -18540,6 +18949,46 @@ components:
           items:
             $ref: '#/components/schemas/Coupon_Condition'
           type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Model_Response_Cart_Coupon_Count:
+      example:
+        result:
+          custom_fields: "{}"
+          coupons_count: 6
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Cart_Coupon_Count_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Cart_Coupon_Count_Result:
+      example:
+        custom_fields: "{}"
+        coupons_count: 6
+        additional_fields: "{}"
+      properties:
+        coupons_count:
+          nullable: true
+          type: integer
         additional_fields:
           nullable: true
           type: object
@@ -19616,6 +20065,46 @@ components:
       - action_scope
       - action_type
       - code
+    Model_Response_Cart_Giftcard_Count:
+      example:
+        result:
+          custom_fields: "{}"
+          gift_cards_count: 6
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Cart_Giftcard_Count_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Cart_Giftcard_Count_Result:
+      example:
+        custom_fields: "{}"
+        gift_cards_count: 6
+        additional_fields: "{}"
+      properties:
+        gift_cards_count:
+          nullable: true
+          type: integer
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
     Model_Response_Cart_GiftCard_List:
       example:
         result:
@@ -20947,6 +21436,46 @@ components:
         custom_fields:
           nullable: true
           type: object
+    Model_Response_Category_Count:
+      example:
+        result:
+          categories_count: 6
+          custom_fields: "{}"
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Category_Count_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Category_Count_Result:
+      example:
+        categories_count: 6
+        custom_fields: "{}"
+        additional_fields: "{}"
+      properties:
+        categories_count:
+          nullable: true
+          type: integer
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
     Model_Response_Category_List:
       example:
         result:
@@ -21274,6 +21803,402 @@ components:
           items:
             $ref: '#/components/schemas/Category'
           type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Model_Response_Category_Find:
+      example:
+        result:
+          categories_count: 6
+          custom_fields: "{}"
+          additional_fields: "{}"
+          category:
+          - short_description: short_description
+            avail: true
+            seo_url: seo_url
+            images:
+            - avail: true
+              mime-type: mime-type
+              file_name: file_name
+              custom_fields: "{}"
+              alt: alt
+              http_path: http_path
+              additional_fields: "{}"
+              type: type
+              size: 1
+              id: id
+              create_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              modified_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              sort_order: 5
+            - avail: true
+              mime-type: mime-type
+              file_name: file_name
+              custom_fields: "{}"
+              alt: alt
+              http_path: http_path
+              additional_fields: "{}"
+              type: type
+              size: 1
+              id: id
+              create_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              modified_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              sort_order: 5
+            keywords: keywords
+            meta_title: meta_title
+            custom_fields: "{}"
+            stores_ids:
+            - stores_ids
+            - stores_ids
+            created_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            description: description
+            additional_fields: "{}"
+            meta_description: meta_description
+            path: path
+            parent_id: parent_id
+            name: name
+            id: id
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            sort_order: 6
+          - short_description: short_description
+            avail: true
+            seo_url: seo_url
+            images:
+            - avail: true
+              mime-type: mime-type
+              file_name: file_name
+              custom_fields: "{}"
+              alt: alt
+              http_path: http_path
+              additional_fields: "{}"
+              type: type
+              size: 1
+              id: id
+              create_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              modified_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              sort_order: 5
+            - avail: true
+              mime-type: mime-type
+              file_name: file_name
+              custom_fields: "{}"
+              alt: alt
+              http_path: http_path
+              additional_fields: "{}"
+              type: type
+              size: 1
+              id: id
+              create_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              modified_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              sort_order: 5
+            keywords: keywords
+            meta_title: meta_title
+            custom_fields: "{}"
+            stores_ids:
+            - stores_ids
+            - stores_ids
+            created_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            description: description
+            additional_fields: "{}"
+            meta_description: meta_description
+            path: path
+            parent_id: parent_id
+            name: name
+            id: id
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            sort_order: 6
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Category_Find_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Category_Find_Result:
+      example:
+        categories_count: 6
+        custom_fields: "{}"
+        additional_fields: "{}"
+        category:
+        - short_description: short_description
+          avail: true
+          seo_url: seo_url
+          images:
+          - avail: true
+            mime-type: mime-type
+            file_name: file_name
+            custom_fields: "{}"
+            alt: alt
+            http_path: http_path
+            additional_fields: "{}"
+            type: type
+            size: 1
+            id: id
+            create_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            sort_order: 5
+          - avail: true
+            mime-type: mime-type
+            file_name: file_name
+            custom_fields: "{}"
+            alt: alt
+            http_path: http_path
+            additional_fields: "{}"
+            type: type
+            size: 1
+            id: id
+            create_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            sort_order: 5
+          keywords: keywords
+          meta_title: meta_title
+          custom_fields: "{}"
+          stores_ids:
+          - stores_ids
+          - stores_ids
+          created_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          description: description
+          additional_fields: "{}"
+          meta_description: meta_description
+          path: path
+          parent_id: parent_id
+          name: name
+          id: id
+          modified_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          sort_order: 6
+        - short_description: short_description
+          avail: true
+          seo_url: seo_url
+          images:
+          - avail: true
+            mime-type: mime-type
+            file_name: file_name
+            custom_fields: "{}"
+            alt: alt
+            http_path: http_path
+            additional_fields: "{}"
+            type: type
+            size: 1
+            id: id
+            create_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            sort_order: 5
+          - avail: true
+            mime-type: mime-type
+            file_name: file_name
+            custom_fields: "{}"
+            alt: alt
+            http_path: http_path
+            additional_fields: "{}"
+            type: type
+            size: 1
+            id: id
+            create_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            sort_order: 5
+          keywords: keywords
+          meta_title: meta_title
+          custom_fields: "{}"
+          stores_ids:
+          - stores_ids
+          - stores_ids
+          created_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          description: description
+          additional_fields: "{}"
+          meta_description: meta_description
+          path: path
+          parent_id: parent_id
+          name: name
+          id: id
+          modified_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          sort_order: 6
+      properties:
+        categories_count:
+          nullable: true
+          type: integer
+        category:
+          items:
+            $ref: '#/components/schemas/Category'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Model_Response_Category_Assign:
+      example:
+        result:
+          custom_fields: "{}"
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Category_Assign_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Category_Assign_Result:
+      example:
+        custom_fields: "{}"
+        additional_fields: "{}"
+      properties:
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Model_Response_Category_Unassign:
+      example:
+        result:
+          custom_fields: "{}"
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Category_Unassign_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Category_Unassign_Result:
+      example:
+        custom_fields: "{}"
+        additional_fields: "{}"
+      properties:
         additional_fields:
           nullable: true
           type: object
@@ -21686,6 +22611,46 @@ components:
         custom_fields:
           nullable: true
           type: object
+    Model_Response_Customer_Count:
+      example:
+        result:
+          customers_count: 6
+          custom_fields: "{}"
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Customer_Count_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Customer_Count_Result:
+      example:
+        customers_count: 6
+        custom_fields: "{}"
+        additional_fields: "{}"
+      properties:
+        customers_count:
+          nullable: true
+          type: integer
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
     Model_Response_Customer_List:
       example:
         result:
@@ -21986,6 +22951,584 @@ components:
           nullable: true
           type: object
     Response_Customer_List_Result:
+      example:
+        customers_count: 6
+        custom_fields: "{}"
+        additional_fields: "{}"
+        customer:
+        - gender: gender
+          is_guest: true
+          additional_fields: "{}"
+          login: login
+          modified_time:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          company: company
+          id: id
+          news_letter_subscription: true
+          fax: fax
+          first_name: first_name
+          email: email
+          group:
+          - custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+          - custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+          created_time:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          website: website
+          last_order_id: last_order_id
+          last_login:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          custom_fields: "{}"
+          stores_ids:
+          - stores_ids
+          - stores_ids
+          last_name: last_name
+          lang_id: lang_id
+          ip_address: ip_address
+          address_book:
+          - country:
+              code3: code3
+              code2: code2
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            phone_mobile: phone_mobile
+            website: website
+            gender: gender
+            identification_number: identification_number
+            address2: address2
+            city: city
+            address1: address1
+            custom_fields: "{}"
+            postcode: postcode
+            last_name: last_name
+            additional_fields: "{}"
+            type: type
+            tax_id: tax_id
+            default: true
+            phone: phone
+            alias: alias
+            company: company
+            id: id
+            state:
+              code: code
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            fax: fax
+            region: region
+            first_name: first_name
+          - country:
+              code3: code3
+              code2: code2
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            phone_mobile: phone_mobile
+            website: website
+            gender: gender
+            identification_number: identification_number
+            address2: address2
+            city: city
+            address1: address1
+            custom_fields: "{}"
+            postcode: postcode
+            last_name: last_name
+            additional_fields: "{}"
+            type: type
+            tax_id: tax_id
+            default: true
+            phone: phone
+            alias: alias
+            company: company
+            id: id
+            state:
+              code: code
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            fax: fax
+            region: region
+            first_name: first_name
+          birth_day:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          orders_count: 6
+          phone: phone
+          consents:
+          - modified_time: modified_time
+            custom_fields: "{}"
+            additional_fields: "{}"
+            id: id
+            source: source
+            type: type
+            opt_in_level: opt_in_level
+            status: status
+          - modified_time: modified_time
+            custom_fields: "{}"
+            additional_fields: "{}"
+            id: id
+            source: source
+            type: type
+            opt_in_level: opt_in_level
+            status: status
+          status: status
+        - gender: gender
+          is_guest: true
+          additional_fields: "{}"
+          login: login
+          modified_time:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          company: company
+          id: id
+          news_letter_subscription: true
+          fax: fax
+          first_name: first_name
+          email: email
+          group:
+          - custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+          - custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+          created_time:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          website: website
+          last_order_id: last_order_id
+          last_login:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          custom_fields: "{}"
+          stores_ids:
+          - stores_ids
+          - stores_ids
+          last_name: last_name
+          lang_id: lang_id
+          ip_address: ip_address
+          address_book:
+          - country:
+              code3: code3
+              code2: code2
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            phone_mobile: phone_mobile
+            website: website
+            gender: gender
+            identification_number: identification_number
+            address2: address2
+            city: city
+            address1: address1
+            custom_fields: "{}"
+            postcode: postcode
+            last_name: last_name
+            additional_fields: "{}"
+            type: type
+            tax_id: tax_id
+            default: true
+            phone: phone
+            alias: alias
+            company: company
+            id: id
+            state:
+              code: code
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            fax: fax
+            region: region
+            first_name: first_name
+          - country:
+              code3: code3
+              code2: code2
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            phone_mobile: phone_mobile
+            website: website
+            gender: gender
+            identification_number: identification_number
+            address2: address2
+            city: city
+            address1: address1
+            custom_fields: "{}"
+            postcode: postcode
+            last_name: last_name
+            additional_fields: "{}"
+            type: type
+            tax_id: tax_id
+            default: true
+            phone: phone
+            alias: alias
+            company: company
+            id: id
+            state:
+              code: code
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+            fax: fax
+            region: region
+            first_name: first_name
+          birth_day:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          orders_count: 6
+          phone: phone
+          consents:
+          - modified_time: modified_time
+            custom_fields: "{}"
+            additional_fields: "{}"
+            id: id
+            source: source
+            type: type
+            opt_in_level: opt_in_level
+            status: status
+          - modified_time: modified_time
+            custom_fields: "{}"
+            additional_fields: "{}"
+            id: id
+            source: source
+            type: type
+            opt_in_level: opt_in_level
+            status: status
+          status: status
+      properties:
+        customers_count:
+          nullable: true
+          type: integer
+        customer:
+          items:
+            $ref: '#/components/schemas/Customer'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Model_Response_Customer_Find:
+      example:
+        result:
+          customers_count: 6
+          custom_fields: "{}"
+          additional_fields: "{}"
+          customer:
+          - gender: gender
+            is_guest: true
+            additional_fields: "{}"
+            login: login
+            modified_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            company: company
+            id: id
+            news_letter_subscription: true
+            fax: fax
+            first_name: first_name
+            email: email
+            group:
+            - custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
+            - custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
+            created_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            website: website
+            last_order_id: last_order_id
+            last_login:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            custom_fields: "{}"
+            stores_ids:
+            - stores_ids
+            - stores_ids
+            last_name: last_name
+            lang_id: lang_id
+            ip_address: ip_address
+            address_book:
+            - country:
+                code3: code3
+                code2: code2
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              phone_mobile: phone_mobile
+              website: website
+              gender: gender
+              identification_number: identification_number
+              address2: address2
+              city: city
+              address1: address1
+              custom_fields: "{}"
+              postcode: postcode
+              last_name: last_name
+              additional_fields: "{}"
+              type: type
+              tax_id: tax_id
+              default: true
+              phone: phone
+              alias: alias
+              company: company
+              id: id
+              state:
+                code: code
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              fax: fax
+              region: region
+              first_name: first_name
+            - country:
+                code3: code3
+                code2: code2
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              phone_mobile: phone_mobile
+              website: website
+              gender: gender
+              identification_number: identification_number
+              address2: address2
+              city: city
+              address1: address1
+              custom_fields: "{}"
+              postcode: postcode
+              last_name: last_name
+              additional_fields: "{}"
+              type: type
+              tax_id: tax_id
+              default: true
+              phone: phone
+              alias: alias
+              company: company
+              id: id
+              state:
+                code: code
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              fax: fax
+              region: region
+              first_name: first_name
+            birth_day:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            orders_count: 6
+            phone: phone
+            consents:
+            - modified_time: modified_time
+              custom_fields: "{}"
+              additional_fields: "{}"
+              id: id
+              source: source
+              type: type
+              opt_in_level: opt_in_level
+              status: status
+            - modified_time: modified_time
+              custom_fields: "{}"
+              additional_fields: "{}"
+              id: id
+              source: source
+              type: type
+              opt_in_level: opt_in_level
+              status: status
+            status: status
+          - gender: gender
+            is_guest: true
+            additional_fields: "{}"
+            login: login
+            modified_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            company: company
+            id: id
+            news_letter_subscription: true
+            fax: fax
+            first_name: first_name
+            email: email
+            group:
+            - custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
+            - custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
+            created_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            website: website
+            last_order_id: last_order_id
+            last_login:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            custom_fields: "{}"
+            stores_ids:
+            - stores_ids
+            - stores_ids
+            last_name: last_name
+            lang_id: lang_id
+            ip_address: ip_address
+            address_book:
+            - country:
+                code3: code3
+                code2: code2
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              phone_mobile: phone_mobile
+              website: website
+              gender: gender
+              identification_number: identification_number
+              address2: address2
+              city: city
+              address1: address1
+              custom_fields: "{}"
+              postcode: postcode
+              last_name: last_name
+              additional_fields: "{}"
+              type: type
+              tax_id: tax_id
+              default: true
+              phone: phone
+              alias: alias
+              company: company
+              id: id
+              state:
+                code: code
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              fax: fax
+              region: region
+              first_name: first_name
+            - country:
+                code3: code3
+                code2: code2
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              phone_mobile: phone_mobile
+              website: website
+              gender: gender
+              identification_number: identification_number
+              address2: address2
+              city: city
+              address1: address1
+              custom_fields: "{}"
+              postcode: postcode
+              last_name: last_name
+              additional_fields: "{}"
+              type: type
+              tax_id: tax_id
+              default: true
+              phone: phone
+              alias: alias
+              company: company
+              id: id
+              state:
+                code: code
+                custom_fields: "{}"
+                name: name
+                additional_fields: "{}"
+              fax: fax
+              region: region
+              first_name: first_name
+            birth_day:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            orders_count: 6
+            phone: phone
+            consents:
+            - modified_time: modified_time
+              custom_fields: "{}"
+              additional_fields: "{}"
+              id: id
+              source: source
+              type: type
+              opt_in_level: opt_in_level
+              status: status
+            - modified_time: modified_time
+              custom_fields: "{}"
+              additional_fields: "{}"
+              id: id
+              source: source
+              type: type
+              opt_in_level: opt_in_level
+              status: status
+            status: status
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Customer_Find_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Customer_Find_Result:
       example:
         customers_count: 6
         custom_fields: "{}"
@@ -25340,6 +26883,46 @@ components:
         custom_fields:
           nullable: true
           type: object
+    Model_Response_Order_Count:
+      example:
+        result:
+          orders_count: 6
+          custom_fields: "{}"
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Order_Count_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Order_Count_Result:
+      example:
+        orders_count: 6
+        custom_fields: "{}"
+        additional_fields: "{}"
+      properties:
+        orders_count:
+          nullable: true
+          type: integer
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
     Model_Response_Order_List:
       example:
         result:
@@ -27636,7 +29219,7 @@ components:
           type: string
           name: customer_email
         currency:
-          description: Currency code of order
+          description: Defines currency code
           example: USD
           type: string
           name: currency
@@ -29002,6 +30585,147 @@ components:
         order_products:
           items:
             $ref: '#/components/schemas/Order_Item'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Model_Response_Order_FinancialStatus_List:
+      example:
+        result:
+          custom_fields: "{}"
+          count: 6
+          additional_fields: "{}"
+          order_financial_statuses:
+          - custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+          - custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Order_FinancialStatus_List_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Order_FinancialStatus_List_Result:
+      example:
+        custom_fields: "{}"
+        count: 6
+        additional_fields: "{}"
+        order_financial_statuses:
+        - custom_fields: "{}"
+          name: name
+          additional_fields: "{}"
+          id: id
+        - custom_fields: "{}"
+          name: name
+          additional_fields: "{}"
+          id: id
+      properties:
+        count:
+          nullable: true
+          type: integer
+        order_financial_statuses:
+          items:
+            $ref: '#/components/schemas/Status'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Status:
+      example:
+        custom_fields: "{}"
+        name: name
+        additional_fields: "{}"
+        id: id
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Model_Response_Order_FulfillmentStatus_List:
+      example:
+        result:
+          custom_fields: "{}"
+          count: 6
+          additional_fields: "{}"
+          order_fulfillment_statuses:
+          - custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+          - custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Order_FulfillmentStatus_List_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Order_FulfillmentStatus_List_Result:
+      example:
+        custom_fields: "{}"
+        count: 6
+        additional_fields: "{}"
+        order_fulfillment_statuses:
+        - custom_fields: "{}"
+          name: name
+          additional_fields: "{}"
+          id: id
+        - custom_fields: "{}"
+          name: name
+          additional_fields: "{}"
+          id: id
+      properties:
+        count:
+          nullable: true
+          type: integer
+        order_fulfillment_statuses:
+          items:
+            $ref: '#/components/schemas/Status'
           type: array
         additional_fields:
           nullable: true
@@ -30909,23 +32633,6 @@ components:
         custom_fields:
           nullable: true
           type: object
-    Status:
-      example:
-        custom_fields: "{}"
-        name: name
-        additional_fields: "{}"
-        id: id
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-        additional_fields:
-          nullable: true
-          type: object
-        custom_fields:
-          nullable: true
-          type: object
     Model_Response_Order_Transaction_List:
       example:
         result:
@@ -31951,6 +33658,46 @@ components:
         custom_fields:
           nullable: true
           type: object
+    Model_Response_Product_Count:
+      example:
+        result:
+          custom_fields: "{}"
+          products_count: 6
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Product_Count_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Product_Count_Result:
+      example:
+        custom_fields: "{}"
+        products_count: 6
+        additional_fields: "{}"
+      properties:
+        products_count:
+          nullable: true
+          type: integer
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
     Model_Response_Product_List:
       example:
         result:
@@ -32617,6 +34364,1316 @@ components:
           nullable: true
           type: object
     Response_Product_List_Result:
+      example:
+        product:
+        - seo_url: seo_url
+          group_price:
+          - store_id: store_id
+            start_time: start_time
+            quantity: 1.1730742509559433
+            group_id: group_id
+            price: 7.457744773683766
+            custom_fields: "{}"
+            expire_time: expire_time
+            additional_fields: "{}"
+            id: id
+          - store_id: store_id
+            start_time: start_time
+            quantity: 1.1730742509559433
+            group_id: group_id
+            price: 7.457744773683766
+            custom_fields: "{}"
+            expire_time: expire_time
+            additional_fields: "{}"
+            id: id
+          additional_fields: "{}"
+          type: type
+          in_stock: true
+          u_isbn: u_isbn
+          discounts:
+          - customer_group_ids: customer_group_ids
+            modifier_type: modifier_type
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+            to_time: to_time
+            value: 9.369310271410669
+            from_time: from_time
+            sort_order: 6
+          - customer_group_ids: customer_group_ids
+            modifier_type: modifier_type
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+            to_time: to_time
+            value: 9.369310271410669
+            from_time: from_time
+            sort_order: 6
+          u_ean: u_ean
+          price: 6.027456183070403
+          dimensions_unit: dimensions_unit
+          id: id
+          modified_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          tier_price:
+          - price: 6.84685269835264
+            custom_fields: "{}"
+            qty: 1.4894159098541704
+            additional_fields: "{}"
+          - price: 6.84685269835264
+            custom_fields: "{}"
+            qty: 1.4894159098541704
+            additional_fields: "{}"
+          height: 5.025004791520295
+          group_items:
+          - default_qty_in_pack: 2.027123023002322
+            is_qty_in_pack_fixed: true
+            price: 4.145608029883936
+            custom_fields: "{}"
+            product_id: product_id
+            child_item_id: child_item_id
+            additional_fields: "{}"
+          - default_qty_in_pack: 2.027123023002322
+            is_qty_in_pack_fixed: true
+            price: 4.145608029883936
+            custom_fields: "{}"
+            product_id: product_id
+            child_item_id: child_item_id
+            additional_fields: "{}"
+          images:
+          - avail: true
+            mime-type: mime-type
+            file_name: file_name
+            custom_fields: "{}"
+            alt: alt
+            http_path: http_path
+            additional_fields: "{}"
+            type: type
+            size: 1
+            id: id
+            create_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            sort_order: 5
+          - avail: true
+            mime-type: mime-type
+            file_name: file_name
+            custom_fields: "{}"
+            alt: alt
+            http_path: http_path
+            additional_fields: "{}"
+            type: type
+            size: 1
+            id: id
+            create_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            sort_order: 5
+          meta_title: meta_title
+          custom_fields: "{}"
+          stores_ids:
+          - stores_ids
+          - stores_ids
+          avail_view: true
+          weight: 7.386281948385884
+          u_brand_id: u_brand_id
+          meta_description: meta_description
+          is_stock_managed: true
+          weight_unit: weight_unit
+          backorders: backorders
+          product_options:
+          - option_items:
+            - type_price: type_price
+              quantity: 9
+              price: 2.3021358869347655
+              custom_fields: "{}"
+              name: name
+              weight: 7.061401241503109
+              additional_fields: "{}"
+              id: id
+              product_option_item_id: product_option_item_id
+              sku: sku
+              is_default: true
+              sort_order: 5
+            - type_price: type_price
+              quantity: 9
+              price: 2.3021358869347655
+              custom_fields: "{}"
+              name: name
+              weight: 7.061401241503109
+              additional_fields: "{}"
+              id: id
+              product_option_item_id: product_option_item_id
+              sku: sku
+              is_default: true
+              sort_order: 5
+            used_in_combination: true
+            product_option_id: product_option_id
+            custom_fields: "{}"
+            name: name
+            available: true
+            description: description
+            additional_fields: "{}"
+            id: id
+            type: type
+            sort_order: 5
+            required: true
+          - option_items:
+            - type_price: type_price
+              quantity: 9
+              price: 2.3021358869347655
+              custom_fields: "{}"
+              name: name
+              weight: 7.061401241503109
+              additional_fields: "{}"
+              id: id
+              product_option_item_id: product_option_item_id
+              sku: sku
+              is_default: true
+              sort_order: 5
+            - type_price: type_price
+              quantity: 9
+              price: 2.3021358869347655
+              custom_fields: "{}"
+              name: name
+              weight: 7.061401241503109
+              additional_fields: "{}"
+              id: id
+              product_option_item_id: product_option_item_id
+              sku: sku
+              is_default: true
+              sort_order: 5
+            used_in_combination: true
+            product_option_id: product_option_id
+            custom_fields: "{}"
+            name: name
+            available: true
+            description: description
+            additional_fields: "{}"
+            id: id
+            type: type
+            sort_order: 5
+            required: true
+          is_downloadable: true
+          name: name
+          is_virtual: true
+          short_description: short_description
+          u_upc: u_upc
+          description: description
+          inventory:
+          - quantity: 9.301444243932576
+            custom_fields: "{}"
+            additional_fields: "{}"
+            in_stock: true
+            priority: 3
+            warehouse_id: warehouse_id
+          - quantity: 9.301444243932576
+            custom_fields: "{}"
+            additional_fields: "{}"
+            in_stock: true
+            priority: 3
+            warehouse_id: warehouse_id
+          meta_keywords: meta_keywords
+          avail_sale: true
+          up_sell_products_ids:
+          - up_sell_products_ids
+          - up_sell_products_ids
+          u_sku: u_sku
+          u_gtin: u_gtin
+          u_brand: u_brand
+          u_model: u_model
+          related_products_ids:
+          - related_products_ids
+          - related_products_ids
+          sort_order: 1
+          on_sale: true
+          cost_price: 5.637376656633329
+          manage_stock: manage_stock
+          quantity: 7.061401241503109
+          advanced_price:
+          - avail: true
+            start_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            group_id: group_id
+            custom_fields: "{}"
+            expire_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            additional_fields: "{}"
+            id: id
+            quantity_from: 5.962133916683182
+            value: 1.4658129805029452
+          - avail: true
+            start_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            group_id: group_id
+            custom_fields: "{}"
+            expire_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            additional_fields: "{}"
+            id: id
+            quantity_from: 5.962133916683182
+            value: 1.4658129805029452
+          tax_class_id: tax_class_id
+          length: 9.965781217890562
+          unit_price: 2.3021358869347655
+          url: url
+          measure_unit: measure_unit
+          special_price:
+            avail: true
+            custom_fields: "{}"
+            created_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            additional_fields: "{}"
+            expired_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            value: 1.0246457001441578
+          cross_sell_products_ids:
+          - cross_sell_products_ids
+          - cross_sell_products_ids
+          width: 4.965218492984954
+          create_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          u_mpn: u_mpn
+          categories_ids:
+          - categories_ids
+          - categories_ids
+        - seo_url: seo_url
+          group_price:
+          - store_id: store_id
+            start_time: start_time
+            quantity: 1.1730742509559433
+            group_id: group_id
+            price: 7.457744773683766
+            custom_fields: "{}"
+            expire_time: expire_time
+            additional_fields: "{}"
+            id: id
+          - store_id: store_id
+            start_time: start_time
+            quantity: 1.1730742509559433
+            group_id: group_id
+            price: 7.457744773683766
+            custom_fields: "{}"
+            expire_time: expire_time
+            additional_fields: "{}"
+            id: id
+          additional_fields: "{}"
+          type: type
+          in_stock: true
+          u_isbn: u_isbn
+          discounts:
+          - customer_group_ids: customer_group_ids
+            modifier_type: modifier_type
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+            to_time: to_time
+            value: 9.369310271410669
+            from_time: from_time
+            sort_order: 6
+          - customer_group_ids: customer_group_ids
+            modifier_type: modifier_type
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+            to_time: to_time
+            value: 9.369310271410669
+            from_time: from_time
+            sort_order: 6
+          u_ean: u_ean
+          price: 6.027456183070403
+          dimensions_unit: dimensions_unit
+          id: id
+          modified_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          tier_price:
+          - price: 6.84685269835264
+            custom_fields: "{}"
+            qty: 1.4894159098541704
+            additional_fields: "{}"
+          - price: 6.84685269835264
+            custom_fields: "{}"
+            qty: 1.4894159098541704
+            additional_fields: "{}"
+          height: 5.025004791520295
+          group_items:
+          - default_qty_in_pack: 2.027123023002322
+            is_qty_in_pack_fixed: true
+            price: 4.145608029883936
+            custom_fields: "{}"
+            product_id: product_id
+            child_item_id: child_item_id
+            additional_fields: "{}"
+          - default_qty_in_pack: 2.027123023002322
+            is_qty_in_pack_fixed: true
+            price: 4.145608029883936
+            custom_fields: "{}"
+            product_id: product_id
+            child_item_id: child_item_id
+            additional_fields: "{}"
+          images:
+          - avail: true
+            mime-type: mime-type
+            file_name: file_name
+            custom_fields: "{}"
+            alt: alt
+            http_path: http_path
+            additional_fields: "{}"
+            type: type
+            size: 1
+            id: id
+            create_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            sort_order: 5
+          - avail: true
+            mime-type: mime-type
+            file_name: file_name
+            custom_fields: "{}"
+            alt: alt
+            http_path: http_path
+            additional_fields: "{}"
+            type: type
+            size: 1
+            id: id
+            create_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            sort_order: 5
+          meta_title: meta_title
+          custom_fields: "{}"
+          stores_ids:
+          - stores_ids
+          - stores_ids
+          avail_view: true
+          weight: 7.386281948385884
+          u_brand_id: u_brand_id
+          meta_description: meta_description
+          is_stock_managed: true
+          weight_unit: weight_unit
+          backorders: backorders
+          product_options:
+          - option_items:
+            - type_price: type_price
+              quantity: 9
+              price: 2.3021358869347655
+              custom_fields: "{}"
+              name: name
+              weight: 7.061401241503109
+              additional_fields: "{}"
+              id: id
+              product_option_item_id: product_option_item_id
+              sku: sku
+              is_default: true
+              sort_order: 5
+            - type_price: type_price
+              quantity: 9
+              price: 2.3021358869347655
+              custom_fields: "{}"
+              name: name
+              weight: 7.061401241503109
+              additional_fields: "{}"
+              id: id
+              product_option_item_id: product_option_item_id
+              sku: sku
+              is_default: true
+              sort_order: 5
+            used_in_combination: true
+            product_option_id: product_option_id
+            custom_fields: "{}"
+            name: name
+            available: true
+            description: description
+            additional_fields: "{}"
+            id: id
+            type: type
+            sort_order: 5
+            required: true
+          - option_items:
+            - type_price: type_price
+              quantity: 9
+              price: 2.3021358869347655
+              custom_fields: "{}"
+              name: name
+              weight: 7.061401241503109
+              additional_fields: "{}"
+              id: id
+              product_option_item_id: product_option_item_id
+              sku: sku
+              is_default: true
+              sort_order: 5
+            - type_price: type_price
+              quantity: 9
+              price: 2.3021358869347655
+              custom_fields: "{}"
+              name: name
+              weight: 7.061401241503109
+              additional_fields: "{}"
+              id: id
+              product_option_item_id: product_option_item_id
+              sku: sku
+              is_default: true
+              sort_order: 5
+            used_in_combination: true
+            product_option_id: product_option_id
+            custom_fields: "{}"
+            name: name
+            available: true
+            description: description
+            additional_fields: "{}"
+            id: id
+            type: type
+            sort_order: 5
+            required: true
+          is_downloadable: true
+          name: name
+          is_virtual: true
+          short_description: short_description
+          u_upc: u_upc
+          description: description
+          inventory:
+          - quantity: 9.301444243932576
+            custom_fields: "{}"
+            additional_fields: "{}"
+            in_stock: true
+            priority: 3
+            warehouse_id: warehouse_id
+          - quantity: 9.301444243932576
+            custom_fields: "{}"
+            additional_fields: "{}"
+            in_stock: true
+            priority: 3
+            warehouse_id: warehouse_id
+          meta_keywords: meta_keywords
+          avail_sale: true
+          up_sell_products_ids:
+          - up_sell_products_ids
+          - up_sell_products_ids
+          u_sku: u_sku
+          u_gtin: u_gtin
+          u_brand: u_brand
+          u_model: u_model
+          related_products_ids:
+          - related_products_ids
+          - related_products_ids
+          sort_order: 1
+          on_sale: true
+          cost_price: 5.637376656633329
+          manage_stock: manage_stock
+          quantity: 7.061401241503109
+          advanced_price:
+          - avail: true
+            start_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            group_id: group_id
+            custom_fields: "{}"
+            expire_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            additional_fields: "{}"
+            id: id
+            quantity_from: 5.962133916683182
+            value: 1.4658129805029452
+          - avail: true
+            start_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            group_id: group_id
+            custom_fields: "{}"
+            expire_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            additional_fields: "{}"
+            id: id
+            quantity_from: 5.962133916683182
+            value: 1.4658129805029452
+          tax_class_id: tax_class_id
+          length: 9.965781217890562
+          unit_price: 2.3021358869347655
+          url: url
+          measure_unit: measure_unit
+          special_price:
+            avail: true
+            custom_fields: "{}"
+            created_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            additional_fields: "{}"
+            expired_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            value: 1.0246457001441578
+          cross_sell_products_ids:
+          - cross_sell_products_ids
+          - cross_sell_products_ids
+          width: 4.965218492984954
+          create_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          u_mpn: u_mpn
+          categories_ids:
+          - categories_ids
+          - categories_ids
+        custom_fields: "{}"
+        products_count: 6
+        additional_fields: "{}"
+      properties:
+        products_count:
+          nullable: true
+          type: integer
+        product:
+          items:
+            $ref: '#/components/schemas/Product'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Model_Response_Product_Find:
+      example:
+        result:
+          product:
+          - seo_url: seo_url
+            group_price:
+            - store_id: store_id
+              start_time: start_time
+              quantity: 1.1730742509559433
+              group_id: group_id
+              price: 7.457744773683766
+              custom_fields: "{}"
+              expire_time: expire_time
+              additional_fields: "{}"
+              id: id
+            - store_id: store_id
+              start_time: start_time
+              quantity: 1.1730742509559433
+              group_id: group_id
+              price: 7.457744773683766
+              custom_fields: "{}"
+              expire_time: expire_time
+              additional_fields: "{}"
+              id: id
+            additional_fields: "{}"
+            type: type
+            in_stock: true
+            u_isbn: u_isbn
+            discounts:
+            - customer_group_ids: customer_group_ids
+              modifier_type: modifier_type
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
+              to_time: to_time
+              value: 9.369310271410669
+              from_time: from_time
+              sort_order: 6
+            - customer_group_ids: customer_group_ids
+              modifier_type: modifier_type
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
+              to_time: to_time
+              value: 9.369310271410669
+              from_time: from_time
+              sort_order: 6
+            u_ean: u_ean
+            price: 6.027456183070403
+            dimensions_unit: dimensions_unit
+            id: id
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            tier_price:
+            - price: 6.84685269835264
+              custom_fields: "{}"
+              qty: 1.4894159098541704
+              additional_fields: "{}"
+            - price: 6.84685269835264
+              custom_fields: "{}"
+              qty: 1.4894159098541704
+              additional_fields: "{}"
+            height: 5.025004791520295
+            group_items:
+            - default_qty_in_pack: 2.027123023002322
+              is_qty_in_pack_fixed: true
+              price: 4.145608029883936
+              custom_fields: "{}"
+              product_id: product_id
+              child_item_id: child_item_id
+              additional_fields: "{}"
+            - default_qty_in_pack: 2.027123023002322
+              is_qty_in_pack_fixed: true
+              price: 4.145608029883936
+              custom_fields: "{}"
+              product_id: product_id
+              child_item_id: child_item_id
+              additional_fields: "{}"
+            images:
+            - avail: true
+              mime-type: mime-type
+              file_name: file_name
+              custom_fields: "{}"
+              alt: alt
+              http_path: http_path
+              additional_fields: "{}"
+              type: type
+              size: 1
+              id: id
+              create_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              modified_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              sort_order: 5
+            - avail: true
+              mime-type: mime-type
+              file_name: file_name
+              custom_fields: "{}"
+              alt: alt
+              http_path: http_path
+              additional_fields: "{}"
+              type: type
+              size: 1
+              id: id
+              create_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              modified_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              sort_order: 5
+            meta_title: meta_title
+            custom_fields: "{}"
+            stores_ids:
+            - stores_ids
+            - stores_ids
+            avail_view: true
+            weight: 7.386281948385884
+            u_brand_id: u_brand_id
+            meta_description: meta_description
+            is_stock_managed: true
+            weight_unit: weight_unit
+            backorders: backorders
+            product_options:
+            - option_items:
+              - type_price: type_price
+                quantity: 9
+                price: 2.3021358869347655
+                custom_fields: "{}"
+                name: name
+                weight: 7.061401241503109
+                additional_fields: "{}"
+                id: id
+                product_option_item_id: product_option_item_id
+                sku: sku
+                is_default: true
+                sort_order: 5
+              - type_price: type_price
+                quantity: 9
+                price: 2.3021358869347655
+                custom_fields: "{}"
+                name: name
+                weight: 7.061401241503109
+                additional_fields: "{}"
+                id: id
+                product_option_item_id: product_option_item_id
+                sku: sku
+                is_default: true
+                sort_order: 5
+              used_in_combination: true
+              product_option_id: product_option_id
+              custom_fields: "{}"
+              name: name
+              available: true
+              description: description
+              additional_fields: "{}"
+              id: id
+              type: type
+              sort_order: 5
+              required: true
+            - option_items:
+              - type_price: type_price
+                quantity: 9
+                price: 2.3021358869347655
+                custom_fields: "{}"
+                name: name
+                weight: 7.061401241503109
+                additional_fields: "{}"
+                id: id
+                product_option_item_id: product_option_item_id
+                sku: sku
+                is_default: true
+                sort_order: 5
+              - type_price: type_price
+                quantity: 9
+                price: 2.3021358869347655
+                custom_fields: "{}"
+                name: name
+                weight: 7.061401241503109
+                additional_fields: "{}"
+                id: id
+                product_option_item_id: product_option_item_id
+                sku: sku
+                is_default: true
+                sort_order: 5
+              used_in_combination: true
+              product_option_id: product_option_id
+              custom_fields: "{}"
+              name: name
+              available: true
+              description: description
+              additional_fields: "{}"
+              id: id
+              type: type
+              sort_order: 5
+              required: true
+            is_downloadable: true
+            name: name
+            is_virtual: true
+            short_description: short_description
+            u_upc: u_upc
+            description: description
+            inventory:
+            - quantity: 9.301444243932576
+              custom_fields: "{}"
+              additional_fields: "{}"
+              in_stock: true
+              priority: 3
+              warehouse_id: warehouse_id
+            - quantity: 9.301444243932576
+              custom_fields: "{}"
+              additional_fields: "{}"
+              in_stock: true
+              priority: 3
+              warehouse_id: warehouse_id
+            meta_keywords: meta_keywords
+            avail_sale: true
+            up_sell_products_ids:
+            - up_sell_products_ids
+            - up_sell_products_ids
+            u_sku: u_sku
+            u_gtin: u_gtin
+            u_brand: u_brand
+            u_model: u_model
+            related_products_ids:
+            - related_products_ids
+            - related_products_ids
+            sort_order: 1
+            on_sale: true
+            cost_price: 5.637376656633329
+            manage_stock: manage_stock
+            quantity: 7.061401241503109
+            advanced_price:
+            - avail: true
+              start_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              group_id: group_id
+              custom_fields: "{}"
+              expire_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              additional_fields: "{}"
+              id: id
+              quantity_from: 5.962133916683182
+              value: 1.4658129805029452
+            - avail: true
+              start_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              group_id: group_id
+              custom_fields: "{}"
+              expire_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              additional_fields: "{}"
+              id: id
+              quantity_from: 5.962133916683182
+              value: 1.4658129805029452
+            tax_class_id: tax_class_id
+            length: 9.965781217890562
+            unit_price: 2.3021358869347655
+            url: url
+            measure_unit: measure_unit
+            special_price:
+              avail: true
+              custom_fields: "{}"
+              created_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              additional_fields: "{}"
+              expired_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              modified_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              value: 1.0246457001441578
+            cross_sell_products_ids:
+            - cross_sell_products_ids
+            - cross_sell_products_ids
+            width: 4.965218492984954
+            create_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            u_mpn: u_mpn
+            categories_ids:
+            - categories_ids
+            - categories_ids
+          - seo_url: seo_url
+            group_price:
+            - store_id: store_id
+              start_time: start_time
+              quantity: 1.1730742509559433
+              group_id: group_id
+              price: 7.457744773683766
+              custom_fields: "{}"
+              expire_time: expire_time
+              additional_fields: "{}"
+              id: id
+            - store_id: store_id
+              start_time: start_time
+              quantity: 1.1730742509559433
+              group_id: group_id
+              price: 7.457744773683766
+              custom_fields: "{}"
+              expire_time: expire_time
+              additional_fields: "{}"
+              id: id
+            additional_fields: "{}"
+            type: type
+            in_stock: true
+            u_isbn: u_isbn
+            discounts:
+            - customer_group_ids: customer_group_ids
+              modifier_type: modifier_type
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
+              to_time: to_time
+              value: 9.369310271410669
+              from_time: from_time
+              sort_order: 6
+            - customer_group_ids: customer_group_ids
+              modifier_type: modifier_type
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
+              to_time: to_time
+              value: 9.369310271410669
+              from_time: from_time
+              sort_order: 6
+            u_ean: u_ean
+            price: 6.027456183070403
+            dimensions_unit: dimensions_unit
+            id: id
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            tier_price:
+            - price: 6.84685269835264
+              custom_fields: "{}"
+              qty: 1.4894159098541704
+              additional_fields: "{}"
+            - price: 6.84685269835264
+              custom_fields: "{}"
+              qty: 1.4894159098541704
+              additional_fields: "{}"
+            height: 5.025004791520295
+            group_items:
+            - default_qty_in_pack: 2.027123023002322
+              is_qty_in_pack_fixed: true
+              price: 4.145608029883936
+              custom_fields: "{}"
+              product_id: product_id
+              child_item_id: child_item_id
+              additional_fields: "{}"
+            - default_qty_in_pack: 2.027123023002322
+              is_qty_in_pack_fixed: true
+              price: 4.145608029883936
+              custom_fields: "{}"
+              product_id: product_id
+              child_item_id: child_item_id
+              additional_fields: "{}"
+            images:
+            - avail: true
+              mime-type: mime-type
+              file_name: file_name
+              custom_fields: "{}"
+              alt: alt
+              http_path: http_path
+              additional_fields: "{}"
+              type: type
+              size: 1
+              id: id
+              create_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              modified_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              sort_order: 5
+            - avail: true
+              mime-type: mime-type
+              file_name: file_name
+              custom_fields: "{}"
+              alt: alt
+              http_path: http_path
+              additional_fields: "{}"
+              type: type
+              size: 1
+              id: id
+              create_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              modified_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              sort_order: 5
+            meta_title: meta_title
+            custom_fields: "{}"
+            stores_ids:
+            - stores_ids
+            - stores_ids
+            avail_view: true
+            weight: 7.386281948385884
+            u_brand_id: u_brand_id
+            meta_description: meta_description
+            is_stock_managed: true
+            weight_unit: weight_unit
+            backorders: backorders
+            product_options:
+            - option_items:
+              - type_price: type_price
+                quantity: 9
+                price: 2.3021358869347655
+                custom_fields: "{}"
+                name: name
+                weight: 7.061401241503109
+                additional_fields: "{}"
+                id: id
+                product_option_item_id: product_option_item_id
+                sku: sku
+                is_default: true
+                sort_order: 5
+              - type_price: type_price
+                quantity: 9
+                price: 2.3021358869347655
+                custom_fields: "{}"
+                name: name
+                weight: 7.061401241503109
+                additional_fields: "{}"
+                id: id
+                product_option_item_id: product_option_item_id
+                sku: sku
+                is_default: true
+                sort_order: 5
+              used_in_combination: true
+              product_option_id: product_option_id
+              custom_fields: "{}"
+              name: name
+              available: true
+              description: description
+              additional_fields: "{}"
+              id: id
+              type: type
+              sort_order: 5
+              required: true
+            - option_items:
+              - type_price: type_price
+                quantity: 9
+                price: 2.3021358869347655
+                custom_fields: "{}"
+                name: name
+                weight: 7.061401241503109
+                additional_fields: "{}"
+                id: id
+                product_option_item_id: product_option_item_id
+                sku: sku
+                is_default: true
+                sort_order: 5
+              - type_price: type_price
+                quantity: 9
+                price: 2.3021358869347655
+                custom_fields: "{}"
+                name: name
+                weight: 7.061401241503109
+                additional_fields: "{}"
+                id: id
+                product_option_item_id: product_option_item_id
+                sku: sku
+                is_default: true
+                sort_order: 5
+              used_in_combination: true
+              product_option_id: product_option_id
+              custom_fields: "{}"
+              name: name
+              available: true
+              description: description
+              additional_fields: "{}"
+              id: id
+              type: type
+              sort_order: 5
+              required: true
+            is_downloadable: true
+            name: name
+            is_virtual: true
+            short_description: short_description
+            u_upc: u_upc
+            description: description
+            inventory:
+            - quantity: 9.301444243932576
+              custom_fields: "{}"
+              additional_fields: "{}"
+              in_stock: true
+              priority: 3
+              warehouse_id: warehouse_id
+            - quantity: 9.301444243932576
+              custom_fields: "{}"
+              additional_fields: "{}"
+              in_stock: true
+              priority: 3
+              warehouse_id: warehouse_id
+            meta_keywords: meta_keywords
+            avail_sale: true
+            up_sell_products_ids:
+            - up_sell_products_ids
+            - up_sell_products_ids
+            u_sku: u_sku
+            u_gtin: u_gtin
+            u_brand: u_brand
+            u_model: u_model
+            related_products_ids:
+            - related_products_ids
+            - related_products_ids
+            sort_order: 1
+            on_sale: true
+            cost_price: 5.637376656633329
+            manage_stock: manage_stock
+            quantity: 7.061401241503109
+            advanced_price:
+            - avail: true
+              start_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              group_id: group_id
+              custom_fields: "{}"
+              expire_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              additional_fields: "{}"
+              id: id
+              quantity_from: 5.962133916683182
+              value: 1.4658129805029452
+            - avail: true
+              start_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              group_id: group_id
+              custom_fields: "{}"
+              expire_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              additional_fields: "{}"
+              id: id
+              quantity_from: 5.962133916683182
+              value: 1.4658129805029452
+            tax_class_id: tax_class_id
+            length: 9.965781217890562
+            unit_price: 2.3021358869347655
+            url: url
+            measure_unit: measure_unit
+            special_price:
+              avail: true
+              custom_fields: "{}"
+              created_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              additional_fields: "{}"
+              expired_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              modified_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              value: 1.0246457001441578
+            cross_sell_products_ids:
+            - cross_sell_products_ids
+            - cross_sell_products_ids
+            width: 4.965218492984954
+            create_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            u_mpn: u_mpn
+            categories_ids:
+            - categories_ids
+            - categories_ids
+          custom_fields: "{}"
+          products_count: 6
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Product_Find_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Product_Find_Result:
       example:
         product:
         - seo_url: seo_url
@@ -37973,6 +41030,743 @@ components:
         custom_fields:
           nullable: true
           type: object
+    Model_Response_Product_ChildItem_Find:
+      example:
+        result:
+          children:
+          - seo_url: seo_url
+            default_qty_in_pack: 4.145608029883936
+            default_price: 1.4658129805029452
+            additional_fields: "{}"
+            in_stock: true
+            low_stock_threshold: 2.027123023002322
+            full_description: full_description
+            min_quantity: 3.616076749251911
+            discounts:
+            - customer_group_ids: customer_group_ids
+              modifier_type: modifier_type
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
+              to_time: to_time
+              value: 9.369310271410669
+              from_time: from_time
+              sort_order: 6
+            - customer_group_ids: customer_group_ids
+              modifier_type: modifier_type
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
+              to_time: to_time
+              value: 9.369310271410669
+              from_time: from_time
+              sort_order: 6
+            dimensions_unit: dimensions_unit
+            wholesale_price: 7.061401241503109
+            id: id
+            sku: sku
+            combination:
+            - option_value_id: option_value_id
+              custom_fields: "{}"
+              option_id: option_id
+              additional_fields: "{}"
+            - option_value_id: option_value_id
+              custom_fields: "{}"
+              option_id: option_id
+              additional_fields: "{}"
+            height: 1.0246457001441578
+            allow_backorders: true
+            created_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            images:
+            - avail: true
+              mime-type: mime-type
+              file_name: file_name
+              custom_fields: "{}"
+              alt: alt
+              http_path: http_path
+              additional_fields: "{}"
+              type: type
+              size: 1
+              id: id
+              create_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              modified_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              sort_order: 5
+            - avail: true
+              mime-type: mime-type
+              file_name: file_name
+              custom_fields: "{}"
+              alt: alt
+              http_path: http_path
+              additional_fields: "{}"
+              type: type
+              size: 1
+              id: id
+              create_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              modified_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              sort_order: 5
+            meta_title: meta_title
+            custom_fields: "{}"
+            upc: upc
+            weight: 7.386281948385884
+            mpn: mpn
+            meta_description: meta_description
+            weight_unit: weight_unit
+            inventory_level: 9.301444243932576
+            parent_id: parent_id
+            name: name
+            avail_for_sale: true
+            is_virtual: true
+            short_description: short_description
+            isbn: isbn
+            inventory:
+            - quantity: 9.301444243932576
+              custom_fields: "{}"
+              additional_fields: "{}"
+              in_stock: true
+              priority: 3
+              warehouse_id: warehouse_id
+            - quantity: 9.301444243932576
+              custom_fields: "{}"
+              additional_fields: "{}"
+              in_stock: true
+              priority: 3
+              warehouse_id: warehouse_id
+            meta_keywords: meta_keywords
+            ean: ean
+            modified_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            is_qty_in_pack_fixed: true
+            sort_order: 6
+            on_sale: true
+            cost_price: 5.962133916683182
+            manage_stock: true
+            gtin: gtin
+            advanced_price:
+            - avail: true
+              start_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              group_id: group_id
+              custom_fields: "{}"
+              expire_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              additional_fields: "{}"
+              id: id
+              quantity_from: 5.962133916683182
+              value: 1.4658129805029452
+            - avail: true
+              start_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              group_id: group_id
+              custom_fields: "{}"
+              expire_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              additional_fields: "{}"
+              id: id
+              quantity_from: 5.962133916683182
+              value: 1.4658129805029452
+            tax_class_id: tax_class_id
+            length: 1.4894159098541704
+            list_price: 2.3021358869347655
+            unit_price: 5.637376656633329
+            url: url
+            measure_unit: measure_unit
+            width: 1.2315135367772556
+          - seo_url: seo_url
+            default_qty_in_pack: 4.145608029883936
+            default_price: 1.4658129805029452
+            additional_fields: "{}"
+            in_stock: true
+            low_stock_threshold: 2.027123023002322
+            full_description: full_description
+            min_quantity: 3.616076749251911
+            discounts:
+            - customer_group_ids: customer_group_ids
+              modifier_type: modifier_type
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
+              to_time: to_time
+              value: 9.369310271410669
+              from_time: from_time
+              sort_order: 6
+            - customer_group_ids: customer_group_ids
+              modifier_type: modifier_type
+              custom_fields: "{}"
+              name: name
+              additional_fields: "{}"
+              id: id
+              to_time: to_time
+              value: 9.369310271410669
+              from_time: from_time
+              sort_order: 6
+            dimensions_unit: dimensions_unit
+            wholesale_price: 7.061401241503109
+            id: id
+            sku: sku
+            combination:
+            - option_value_id: option_value_id
+              custom_fields: "{}"
+              option_id: option_id
+              additional_fields: "{}"
+            - option_value_id: option_value_id
+              custom_fields: "{}"
+              option_id: option_id
+              additional_fields: "{}"
+            height: 1.0246457001441578
+            allow_backorders: true
+            created_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            images:
+            - avail: true
+              mime-type: mime-type
+              file_name: file_name
+              custom_fields: "{}"
+              alt: alt
+              http_path: http_path
+              additional_fields: "{}"
+              type: type
+              size: 1
+              id: id
+              create_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              modified_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              sort_order: 5
+            - avail: true
+              mime-type: mime-type
+              file_name: file_name
+              custom_fields: "{}"
+              alt: alt
+              http_path: http_path
+              additional_fields: "{}"
+              type: type
+              size: 1
+              id: id
+              create_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              modified_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              sort_order: 5
+            meta_title: meta_title
+            custom_fields: "{}"
+            upc: upc
+            weight: 7.386281948385884
+            mpn: mpn
+            meta_description: meta_description
+            weight_unit: weight_unit
+            inventory_level: 9.301444243932576
+            parent_id: parent_id
+            name: name
+            avail_for_sale: true
+            is_virtual: true
+            short_description: short_description
+            isbn: isbn
+            inventory:
+            - quantity: 9.301444243932576
+              custom_fields: "{}"
+              additional_fields: "{}"
+              in_stock: true
+              priority: 3
+              warehouse_id: warehouse_id
+            - quantity: 9.301444243932576
+              custom_fields: "{}"
+              additional_fields: "{}"
+              in_stock: true
+              priority: 3
+              warehouse_id: warehouse_id
+            meta_keywords: meta_keywords
+            ean: ean
+            modified_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            is_qty_in_pack_fixed: true
+            sort_order: 6
+            on_sale: true
+            cost_price: 5.962133916683182
+            manage_stock: true
+            gtin: gtin
+            advanced_price:
+            - avail: true
+              start_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              group_id: group_id
+              custom_fields: "{}"
+              expire_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              additional_fields: "{}"
+              id: id
+              quantity_from: 5.962133916683182
+              value: 1.4658129805029452
+            - avail: true
+              start_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              group_id: group_id
+              custom_fields: "{}"
+              expire_time:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              additional_fields: "{}"
+              id: id
+              quantity_from: 5.962133916683182
+              value: 1.4658129805029452
+            tax_class_id: tax_class_id
+            length: 1.4894159098541704
+            list_price: 2.3021358869347655
+            unit_price: 5.637376656633329
+            url: url
+            measure_unit: measure_unit
+            width: 1.2315135367772556
+          custom_fields: "{}"
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Product_ChildItem_Find_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Product_ChildItem_Find_Result:
+      example:
+        children:
+        - seo_url: seo_url
+          default_qty_in_pack: 4.145608029883936
+          default_price: 1.4658129805029452
+          additional_fields: "{}"
+          in_stock: true
+          low_stock_threshold: 2.027123023002322
+          full_description: full_description
+          min_quantity: 3.616076749251911
+          discounts:
+          - customer_group_ids: customer_group_ids
+            modifier_type: modifier_type
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+            to_time: to_time
+            value: 9.369310271410669
+            from_time: from_time
+            sort_order: 6
+          - customer_group_ids: customer_group_ids
+            modifier_type: modifier_type
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+            to_time: to_time
+            value: 9.369310271410669
+            from_time: from_time
+            sort_order: 6
+          dimensions_unit: dimensions_unit
+          wholesale_price: 7.061401241503109
+          id: id
+          sku: sku
+          combination:
+          - option_value_id: option_value_id
+            custom_fields: "{}"
+            option_id: option_id
+            additional_fields: "{}"
+          - option_value_id: option_value_id
+            custom_fields: "{}"
+            option_id: option_id
+            additional_fields: "{}"
+          height: 1.0246457001441578
+          allow_backorders: true
+          created_time:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          images:
+          - avail: true
+            mime-type: mime-type
+            file_name: file_name
+            custom_fields: "{}"
+            alt: alt
+            http_path: http_path
+            additional_fields: "{}"
+            type: type
+            size: 1
+            id: id
+            create_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            sort_order: 5
+          - avail: true
+            mime-type: mime-type
+            file_name: file_name
+            custom_fields: "{}"
+            alt: alt
+            http_path: http_path
+            additional_fields: "{}"
+            type: type
+            size: 1
+            id: id
+            create_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            sort_order: 5
+          meta_title: meta_title
+          custom_fields: "{}"
+          upc: upc
+          weight: 7.386281948385884
+          mpn: mpn
+          meta_description: meta_description
+          weight_unit: weight_unit
+          inventory_level: 9.301444243932576
+          parent_id: parent_id
+          name: name
+          avail_for_sale: true
+          is_virtual: true
+          short_description: short_description
+          isbn: isbn
+          inventory:
+          - quantity: 9.301444243932576
+            custom_fields: "{}"
+            additional_fields: "{}"
+            in_stock: true
+            priority: 3
+            warehouse_id: warehouse_id
+          - quantity: 9.301444243932576
+            custom_fields: "{}"
+            additional_fields: "{}"
+            in_stock: true
+            priority: 3
+            warehouse_id: warehouse_id
+          meta_keywords: meta_keywords
+          ean: ean
+          modified_time:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          is_qty_in_pack_fixed: true
+          sort_order: 6
+          on_sale: true
+          cost_price: 5.962133916683182
+          manage_stock: true
+          gtin: gtin
+          advanced_price:
+          - avail: true
+            start_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            group_id: group_id
+            custom_fields: "{}"
+            expire_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            additional_fields: "{}"
+            id: id
+            quantity_from: 5.962133916683182
+            value: 1.4658129805029452
+          - avail: true
+            start_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            group_id: group_id
+            custom_fields: "{}"
+            expire_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            additional_fields: "{}"
+            id: id
+            quantity_from: 5.962133916683182
+            value: 1.4658129805029452
+          tax_class_id: tax_class_id
+          length: 1.4894159098541704
+          list_price: 2.3021358869347655
+          unit_price: 5.637376656633329
+          url: url
+          measure_unit: measure_unit
+          width: 1.2315135367772556
+        - seo_url: seo_url
+          default_qty_in_pack: 4.145608029883936
+          default_price: 1.4658129805029452
+          additional_fields: "{}"
+          in_stock: true
+          low_stock_threshold: 2.027123023002322
+          full_description: full_description
+          min_quantity: 3.616076749251911
+          discounts:
+          - customer_group_ids: customer_group_ids
+            modifier_type: modifier_type
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+            to_time: to_time
+            value: 9.369310271410669
+            from_time: from_time
+            sort_order: 6
+          - customer_group_ids: customer_group_ids
+            modifier_type: modifier_type
+            custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+            to_time: to_time
+            value: 9.369310271410669
+            from_time: from_time
+            sort_order: 6
+          dimensions_unit: dimensions_unit
+          wholesale_price: 7.061401241503109
+          id: id
+          sku: sku
+          combination:
+          - option_value_id: option_value_id
+            custom_fields: "{}"
+            option_id: option_id
+            additional_fields: "{}"
+          - option_value_id: option_value_id
+            custom_fields: "{}"
+            option_id: option_id
+            additional_fields: "{}"
+          height: 1.0246457001441578
+          allow_backorders: true
+          created_time:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          images:
+          - avail: true
+            mime-type: mime-type
+            file_name: file_name
+            custom_fields: "{}"
+            alt: alt
+            http_path: http_path
+            additional_fields: "{}"
+            type: type
+            size: 1
+            id: id
+            create_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            sort_order: 5
+          - avail: true
+            mime-type: mime-type
+            file_name: file_name
+            custom_fields: "{}"
+            alt: alt
+            http_path: http_path
+            additional_fields: "{}"
+            type: type
+            size: 1
+            id: id
+            create_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            sort_order: 5
+          meta_title: meta_title
+          custom_fields: "{}"
+          upc: upc
+          weight: 7.386281948385884
+          mpn: mpn
+          meta_description: meta_description
+          weight_unit: weight_unit
+          inventory_level: 9.301444243932576
+          parent_id: parent_id
+          name: name
+          avail_for_sale: true
+          is_virtual: true
+          short_description: short_description
+          isbn: isbn
+          inventory:
+          - quantity: 9.301444243932576
+            custom_fields: "{}"
+            additional_fields: "{}"
+            in_stock: true
+            priority: 3
+            warehouse_id: warehouse_id
+          - quantity: 9.301444243932576
+            custom_fields: "{}"
+            additional_fields: "{}"
+            in_stock: true
+            priority: 3
+            warehouse_id: warehouse_id
+          meta_keywords: meta_keywords
+          ean: ean
+          modified_time:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          is_qty_in_pack_fixed: true
+          sort_order: 6
+          on_sale: true
+          cost_price: 5.962133916683182
+          manage_stock: true
+          gtin: gtin
+          advanced_price:
+          - avail: true
+            start_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            group_id: group_id
+            custom_fields: "{}"
+            expire_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            additional_fields: "{}"
+            id: id
+            quantity_from: 5.962133916683182
+            value: 1.4658129805029452
+          - avail: true
+            start_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            group_id: group_id
+            custom_fields: "{}"
+            expire_time:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            additional_fields: "{}"
+            id: id
+            quantity_from: 5.962133916683182
+            value: 1.4658129805029452
+          tax_class_id: tax_class_id
+          length: 1.4894159098541704
+          list_price: 2.3021358869347655
+          unit_price: 5.637376656633329
+          url: url
+          measure_unit: measure_unit
+          width: 1.2315135367772556
+        custom_fields: "{}"
+        additional_fields: "{}"
+      properties:
+        children:
+          items:
+            $ref: '#/components/schemas/Child'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
     Model_Response_Product_Currency_List:
       example:
         result:
@@ -41032,6 +44826,46 @@ components:
         custom_fields:
           nullable: true
           type: object
+    Model_Response_Return_Count:
+      example:
+        result:
+          custom_fields: "{}"
+          returns_count: 6
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Return_Count_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Return_Count_Result:
+      example:
+        custom_fields: "{}"
+        returns_count: 6
+        additional_fields: "{}"
+      properties:
+        returns_count:
+          nullable: true
+          type: integer
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
     Model_Response_Return_List:
       example:
         result:
@@ -41298,6 +45132,177 @@ components:
         returns:
           items:
             $ref: '#/components/schemas/Return'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Model_Response_Return_Action_List:
+      example:
+        result:
+          custom_fields: "{}"
+          additional_fields: "{}"
+          return_actions:
+          - custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+          - custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Return_Action_List_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Return_Action_List_Result:
+      example:
+        custom_fields: "{}"
+        additional_fields: "{}"
+        return_actions:
+        - custom_fields: "{}"
+          name: name
+          additional_fields: "{}"
+          id: id
+        - custom_fields: "{}"
+          name: name
+          additional_fields: "{}"
+          id: id
+      properties:
+        return_actions:
+          items:
+            $ref: '#/components/schemas/Status'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Model_Response_Return_Reason_List:
+      example:
+        result:
+          return_reasons:
+          - custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+          - custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+          custom_fields: "{}"
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Return_Reason_List_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Return_Reason_List_Result:
+      example:
+        return_reasons:
+        - custom_fields: "{}"
+          name: name
+          additional_fields: "{}"
+          id: id
+        - custom_fields: "{}"
+          name: name
+          additional_fields: "{}"
+          id: id
+        custom_fields: "{}"
+        additional_fields: "{}"
+      properties:
+        return_reasons:
+          items:
+            $ref: '#/components/schemas/Status'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Model_Response_Return_Status_List:
+      example:
+        result:
+          return_statuses:
+          - custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+          - custom_fields: "{}"
+            name: name
+            additional_fields: "{}"
+            id: id
+          custom_fields: "{}"
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Return_Status_List_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Return_Status_List_Result:
+      example:
+        return_statuses:
+        - custom_fields: "{}"
+          name: name
+          additional_fields: "{}"
+          id: id
+        - custom_fields: "{}"
+          name: name
+          additional_fields: "{}"
+          id: id
+        custom_fields: "{}"
+        additional_fields: "{}"
+      properties:
+        return_statuses:
+          items:
+            $ref: '#/components/schemas/Status'
           type: array
         additional_fields:
           nullable: true
@@ -43050,6 +47055,46 @@ components:
         custom_fields:
           nullable: true
           type: object
+    Model_Response_Webhook_Count:
+      example:
+        result:
+          custom_fields: "{}"
+          webhook_count: 6
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Webhook_Count_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Webhook_Count_Result:
+      example:
+        custom_fields: "{}"
+        webhook_count: 6
+        additional_fields: "{}"
+      properties:
+        webhook_count:
+          nullable: true
+          type: integer
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
     Webhook:
       example:
         store_id: store_id
@@ -43105,6 +47150,98 @@ components:
           nullable: true
           type: string
         filtering_conditions:
+          nullable: true
+          type: object
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Model_Response_Webhook_Events:
+      example:
+        result:
+          custom_fields: "{}"
+          additional_fields: "{}"
+          events:
+          - webhook_name: webhook_name
+            custom_fields: "{}"
+            action: action
+            filterable_fields: "{}"
+            additional_fields: "{}"
+            entity: entity
+          - webhook_name: webhook_name
+            custom_fields: "{}"
+            action: action
+            filterable_fields: "{}"
+            additional_fields: "{}"
+            entity: entity
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        result:
+          $ref: '#/components/schemas/Response_Webhook_Events_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Webhook_Events_Result:
+      example:
+        custom_fields: "{}"
+        additional_fields: "{}"
+        events:
+        - webhook_name: webhook_name
+          custom_fields: "{}"
+          action: action
+          filterable_fields: "{}"
+          additional_fields: "{}"
+          entity: entity
+        - webhook_name: webhook_name
+          custom_fields: "{}"
+          action: action
+          filterable_fields: "{}"
+          additional_fields: "{}"
+          entity: entity
+      properties:
+        events:
+          items:
+            $ref: '#/components/schemas/Webhook_Event'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Webhook_Event:
+      example:
+        webhook_name: webhook_name
+        custom_fields: "{}"
+        action: action
+        filterable_fields: "{}"
+        additional_fields: "{}"
+        entity: entity
+      properties:
+        webhook_name:
+          nullable: true
+          type: string
+        entity:
+          nullable: true
+          type: string
+        action:
+          nullable: true
+          type: string
+        filterable_fields:
           nullable: true
           type: object
         additional_fields:
@@ -43360,171 +47497,6 @@ components:
           type: string
         result:
           $ref: '#/components/schemas/AccountFailedWebhooks_200_response_result'
-    AccountSupportedPlatforms_200_response_result_supported_platforms_inner_params_required_inner_inner:
-      example:
-        name: name
-        description: description
-      properties:
-        name:
-          type: string
-        description:
-          type: string
-    AccountSupportedPlatforms_200_response_result_supported_platforms_inner_params:
-      example:
-        additional:
-        - name: name
-          description: description
-        - name: name
-          description: description
-        required:
-        - - name: name
-            description: description
-          - name: name
-            description: description
-        - - name: name
-            description: description
-          - name: name
-            description: description
-      properties:
-        required:
-          items:
-            items:
-              $ref: '#/components/schemas/AccountSupportedPlatforms_200_response_result_supported_platforms_inner_params_required_inner_inner'
-            type: array
-          type: array
-        additional:
-          items:
-            $ref: '#/components/schemas/AccountSupportedPlatforms_200_response_result_supported_platforms_inner_params_required_inner_inner'
-          type: array
-    AccountSupportedPlatforms_200_response_result_supported_platforms_inner:
-      example:
-        cart_id: cart_id
-        cart_name: cart_name
-        cart_versions: cart_versions
-        cart_method: cart_method
-        params:
-          additional:
-          - name: name
-            description: description
-          - name: name
-            description: description
-          required:
-          - - name: name
-              description: description
-            - name: name
-              description: description
-          - - name: name
-              description: description
-            - name: name
-              description: description
-      properties:
-        cart_id:
-          type: string
-        cart_name:
-          type: string
-        cart_versions:
-          type: string
-        cart_method:
-          type: string
-        params:
-          $ref: '#/components/schemas/AccountSupportedPlatforms_200_response_result_supported_platforms_inner_params'
-    AccountSupportedPlatforms_200_response_result:
-      example:
-        supported_platforms:
-        - cart_id: cart_id
-          cart_name: cart_name
-          cart_versions: cart_versions
-          cart_method: cart_method
-          params:
-            additional:
-            - name: name
-              description: description
-            - name: name
-              description: description
-            required:
-            - - name: name
-                description: description
-              - name: name
-                description: description
-            - - name: name
-                description: description
-              - name: name
-                description: description
-        - cart_id: cart_id
-          cart_name: cart_name
-          cart_versions: cart_versions
-          cart_method: cart_method
-          params:
-            additional:
-            - name: name
-              description: description
-            - name: name
-              description: description
-            required:
-            - - name: name
-                description: description
-              - name: name
-                description: description
-            - - name: name
-                description: description
-              - name: name
-                description: description
-      properties:
-        supported_platforms:
-          items:
-            $ref: '#/components/schemas/AccountSupportedPlatforms_200_response_result_supported_platforms_inner'
-          type: array
-    AccountSupportedPlatforms_200_response:
-      example:
-        result:
-          supported_platforms:
-          - cart_id: cart_id
-            cart_name: cart_name
-            cart_versions: cart_versions
-            cart_method: cart_method
-            params:
-              additional:
-              - name: name
-                description: description
-              - name: name
-                description: description
-              required:
-              - - name: name
-                  description: description
-                - name: name
-                  description: description
-              - - name: name
-                  description: description
-                - name: name
-                  description: description
-          - cart_id: cart_id
-            cart_name: cart_name
-            cart_versions: cart_versions
-            cart_method: cart_method
-            params:
-              additional:
-              - name: name
-                description: description
-              - name: name
-                description: description
-              required:
-              - - name: name
-                  description: description
-                - name: name
-                  description: description
-              - - name: name
-                  description: description
-                - name: name
-                  description: description
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/AccountSupportedPlatforms_200_response_result'
     AccountCartList_200_response_result_carts_inner:
       example:
         cart_id: cart_id
@@ -43670,25 +47642,6 @@ components:
           type: string
         result:
           $ref: '#/components/schemas/StoreAttribute'
-    AttributeCount_200_response_result:
-      example:
-        attributes_count: 6
-      properties:
-        attributes_count:
-          type: integer
-    AttributeCount_200_response:
-      example:
-        result:
-          attributes_count: 6
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/AttributeCount_200_response_result'
     AttributeAdd_200_response_result:
       example:
         id: id
@@ -43765,31 +47718,6 @@ components:
           type: string
         result:
           $ref: '#/components/schemas/AttributeAssignGroup_200_response_result'
-    AttributeTypeList_200_response_result:
-      example:
-        attribute_type:
-        - attribute_type
-        - attribute_type
-      properties:
-        attribute_type:
-          items:
-            type: string
-          type: array
-    AttributeTypeList_200_response:
-      example:
-        result:
-          attribute_type:
-          - attribute_type
-          - attribute_type
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/AttributeTypeList_200_response_result'
     AttributeUnassignGroup_200_response_result:
       example:
         unassigned: unassigned
@@ -44564,31 +48492,6 @@ components:
           type: string
         result:
           $ref: '#/components/schemas/CartValidate_200_response_result'
-    CartMethods_200_response_result:
-      example:
-        method:
-        - method
-        - method
-      properties:
-        method:
-          items:
-            type: string
-          type: array
-    CartMethods_200_response:
-      example:
-        result:
-          method:
-          - method
-          - method
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/CartMethods_200_response_result'
     CartDelete_200_response_result:
       example:
         store: store
@@ -44608,44 +48511,6 @@ components:
           type: string
         result:
           $ref: '#/components/schemas/CartDelete_200_response_result'
-    CartCatalogPriceRulesCount_200_response_result:
-      example:
-        catalog_price_rules_count: 6
-      properties:
-        catalog_price_rules_count:
-          type: integer
-    CartCatalogPriceRulesCount_200_response:
-      example:
-        result:
-          catalog_price_rules_count: 6
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/CartCatalogPriceRulesCount_200_response_result'
-    CartCouponCount_200_response_result:
-      example:
-        coupons_count: 6
-      properties:
-        coupons_count:
-          type: integer
-    CartCouponCount_200_response:
-      example:
-        result:
-          coupons_count: 6
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/CartCouponCount_200_response_result'
     CartCouponAdd_200_response_result:
       example:
         coupon_id: coupon_id
@@ -44665,25 +48530,6 @@ components:
           type: string
         result:
           $ref: '#/components/schemas/CartCouponAdd_200_response_result'
-    CartGiftcardCount_200_response_result:
-      example:
-        gift_cards_count: 6
-      properties:
-        gift_cards_count:
-          type: integer
-    CartGiftcardCount_200_response:
-      example:
-        result:
-          gift_cards_count: 6
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/CartGiftcardCount_200_response_result'
     CartGiftcardAdd_200_response_result:
       example:
         code: code
@@ -44889,82 +48735,6 @@ components:
           type: string
         result:
           $ref: '#/components/schemas/Category'
-    CategoryCount_200_response_result:
-      example:
-        categories_count: 6
-      properties:
-        categories_count:
-          type: integer
-    CategoryCount_200_response:
-      example:
-        result:
-          categories_count: 6
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/CategoryCount_200_response_result'
-    CategoryFind_200_response_result_category_inner:
-      example:
-        name: name
-        description: description
-        id: id
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-        description:
-          type: string
-    CategoryFind_200_response_result:
-      example:
-        category:
-        - name: name
-          description: description
-          id: id
-        - name: name
-          description: description
-          id: id
-      properties:
-        category:
-          items:
-            $ref: '#/components/schemas/CategoryFind_200_response_result_category_inner'
-          type: array
-    CategoryFind_200_response:
-      example:
-        result:
-          category:
-          - name: name
-            description: description
-            id: id
-          - name: name
-            description: description
-            id: id
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/CategoryFind_200_response_result'
-    CategoryAssign_200_response:
-      example:
-        result: "{}"
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          type: object
     CategoryAdd_200_response_result:
       example:
         category_id: category_id
@@ -45186,56 +48956,6 @@ components:
           type: string
         result:
           $ref: '#/components/schemas/Customer'
-    CustomerCount_200_response_result:
-      example:
-        customers_count: 6
-      properties:
-        customers_count:
-          type: integer
-    CustomerCount_200_response:
-      example:
-        result:
-          customers_count: 6
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/CustomerCount_200_response_result'
-    CustomerFind_200_response_result:
-      example:
-        last_name: last_name
-        id: id
-        first_name: first_name
-        email: email
-      properties:
-        id:
-          type: string
-        email:
-          type: string
-        first_name:
-          type: string
-        last_name:
-          type: string
-    CustomerFind_200_response:
-      example:
-        result:
-          last_name: last_name
-          id: id
-          first_name: first_name
-          email: email
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/CustomerFind_200_response_result'
     CustomerAdd_200_response_result:
       example:
         customer_id: customer_id
@@ -45729,25 +49449,6 @@ components:
           type: string
         result:
           $ref: '#/components/schemas/Order'
-    OrderCount_200_response_result:
-      example:
-        orders_count: 6
-      properties:
-        orders_count:
-          type: integer
-    OrderCount_200_response:
-      example:
-        result:
-          orders_count: 6
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/OrderCount_200_response_result'
     OrderCalculate_200_response:
       example:
         result:
@@ -45993,73 +49694,6 @@ components:
           type: string
         result:
           $ref: '#/components/schemas/OrderAdd_200_response_result'
-    OrderFinancialStatusList_200_response_result_order_financial_statuses_inner:
-      example:
-        name: name
-        id: id
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-    OrderFinancialStatusList_200_response_result:
-      example:
-        order_financial_statuses:
-        - name: name
-          id: id
-        - name: name
-          id: id
-      properties:
-        order_financial_statuses:
-          items:
-            $ref: '#/components/schemas/OrderFinancialStatusList_200_response_result_order_financial_statuses_inner'
-          type: array
-    OrderFinancialStatusList_200_response:
-      example:
-        result:
-          order_financial_statuses:
-          - name: name
-            id: id
-          - name: name
-            id: id
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/OrderFinancialStatusList_200_response_result'
-    OrderFulfillmentStatusList_200_response_result:
-      example:
-        order_fulfillment_statuses:
-        - name: name
-          id: id
-        - name: name
-          id: id
-      properties:
-        order_fulfillment_statuses:
-          items:
-            $ref: '#/components/schemas/OrderFinancialStatusList_200_response_result_order_financial_statuses_inner'
-          type: array
-    OrderFulfillmentStatusList_200_response:
-      example:
-        result:
-          order_fulfillment_statuses:
-          - name: name
-            id: id
-          - name: name
-            id: id
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/OrderFulfillmentStatusList_200_response_result'
     OrderRefundAdd_200_response_result:
       example:
         additional_refund_ids: additional_refund_ids
@@ -46551,77 +50185,6 @@ components:
           type: string
         result:
           $ref: '#/components/schemas/Product'
-    ProductCount_200_response_result:
-      example:
-        products_count: 6
-      properties:
-        products_count:
-          type: integer
-    ProductCount_200_response:
-      example:
-        result:
-          products_count: 6
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/ProductCount_200_response_result'
-    ProductFind_200_response_result_product_inner:
-      example:
-        price: 6.027456183070403
-        name: name
-        description: description
-        id: id
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-        description:
-          type: string
-        price:
-          type: number
-    ProductFind_200_response_result:
-      example:
-        product:
-        - price: 6.027456183070403
-          name: name
-          description: description
-          id: id
-        - price: 6.027456183070403
-          name: name
-          description: description
-          id: id
-      properties:
-        product:
-          items:
-            $ref: '#/components/schemas/ProductFind_200_response_result_product_inner'
-          type: array
-    ProductFind_200_response:
-      example:
-        result:
-          product:
-          - price: 6.027456183070403
-            name: name
-            description: description
-            id: id
-          - price: 6.027456183070403
-            name: name
-            description: description
-            id: id
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/ProductFind_200_response_result'
     ProductAdd_200_response_result:
       example:
         product_id: product_id
@@ -46873,24 +50436,6 @@ components:
           type: string
         result:
           $ref: '#/components/schemas/Child'
-    ProductChildItemFind_200_response_result:
-      example:
-        children: ""
-      properties:
-        children: {}
-    ProductChildItemFind_200_response:
-      example:
-        result:
-          children: ""
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/ProductChildItemFind_200_response_result'
     ProductCurrencyAdd_200_response_result:
       example:
         currency_id: currency_id
@@ -47186,131 +50731,6 @@ components:
           type: string
         result:
           $ref: '#/components/schemas/Return'
-    ReturnCount_200_response_result:
-      example:
-        returns_count: 6
-      properties:
-        returns_count:
-          type: integer
-    ReturnCount_200_response:
-      example:
-        result:
-          returns_count: 6
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/ReturnCount_200_response_result'
-    ReturnActionList_200_response_result:
-      example:
-        return_actions:
-        - name: name
-          id: id
-        - name: name
-          id: id
-      properties:
-        return_actions:
-          items:
-            $ref: '#/components/schemas/OrderFinancialStatusList_200_response_result_order_financial_statuses_inner'
-          type: array
-    ReturnActionList_200_response:
-      example:
-        result:
-          return_actions:
-          - name: name
-            id: id
-          - name: name
-            id: id
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/ReturnActionList_200_response_result'
-    ReturnReasonList_200_response_result:
-      example:
-        return_reasons:
-        - name: name
-          id: id
-        - name: name
-          id: id
-      properties:
-        return_reasons:
-          items:
-            $ref: '#/components/schemas/OrderFinancialStatusList_200_response_result_order_financial_statuses_inner'
-          type: array
-    ReturnReasonList_200_response:
-      example:
-        result:
-          return_reasons:
-          - name: name
-            id: id
-          - name: name
-            id: id
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/ReturnReasonList_200_response_result'
-    ReturnStatusList_200_response_result:
-      example:
-        return_statuses:
-        - name: name
-          id: id
-        - name: name
-          id: id
-      properties:
-        return_statuses:
-          items:
-            $ref: '#/components/schemas/OrderFinancialStatusList_200_response_result_order_financial_statuses_inner'
-          type: array
-    ReturnStatusList_200_response:
-      example:
-        result:
-          return_statuses:
-          - name: name
-            id: id
-          - name: name
-            id: id
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/ReturnStatusList_200_response_result'
-    WebhookCount_200_response_result:
-      example:
-        webhook_count: 6
-      properties:
-        webhook_count:
-          type: integer
-    WebhookCount_200_response:
-      example:
-        result:
-          webhook_count: 6
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/WebhookCount_200_response_result'
     WebhookList_200_response_result:
       example:
         webhook:
@@ -47392,58 +50812,42 @@ components:
           type: string
         result:
           $ref: '#/components/schemas/WebhookList_200_response_result'
-    WebhookEvents_200_response_result_events_inner:
+    Account_SupportedPlatform_params_required_inner_inner:
       example:
-        webhook_name: webhook_name
-        action: action
-        filterable_fields: "{}"
-        entity: entity
+        name: name
+        description: description
       properties:
-        webhook_name:
+        name:
           type: string
-        entity:
+        description:
           type: string
-        action:
-          type: string
-        filterable_fields:
-          type: object
-    WebhookEvents_200_response_result:
+    Account_SupportedPlatform_params:
       example:
-        events:
-        - webhook_name: webhook_name
-          action: action
-          filterable_fields: "{}"
-          entity: entity
-        - webhook_name: webhook_name
-          action: action
-          filterable_fields: "{}"
-          entity: entity
+        additional:
+        - name: name
+          description: description
+        - name: name
+          description: description
+        required:
+        - - name: name
+            description: description
+          - name: name
+            description: description
+        - - name: name
+            description: description
+          - name: name
+            description: description
       properties:
-        events:
+        required:
           items:
-            $ref: '#/components/schemas/WebhookEvents_200_response_result_events_inner'
+            items:
+              $ref: '#/components/schemas/Account_SupportedPlatform_params_required_inner_inner'
+            type: array
           type: array
-    WebhookEvents_200_response:
-      example:
-        result:
-          events:
-          - webhook_name: webhook_name
-            action: action
-            filterable_fields: "{}"
-            entity: entity
-          - webhook_name: webhook_name
-            action: action
-            filterable_fields: "{}"
-            entity: entity
-        return_message: return_message
-        return_code: 0
-      properties:
-        return_code:
-          type: integer
-        return_message:
-          type: string
-        result:
-          $ref: '#/components/schemas/WebhookEvents_200_response_result'
+        additional:
+          items:
+            $ref: '#/components/schemas/Account_SupportedPlatform_params_required_inner_inner'
+          type: array
     AccountCartAdd_hybris_websites_inner:
       example:
         uid: uid

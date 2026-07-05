@@ -250,7 +250,7 @@ catch (ApiException e)
 
 <a id="categoryassign"></a>
 # **CategoryAssign**
-> CategoryAssign200Response CategoryAssign (string categoryId, string productId, string? storeId = null, string? idempotencyKey = null)
+> ModelResponseCategoryAssign CategoryAssign (string categoryId, string productId, string? storeId = null, string? idempotencyKey = null)
 
 category.assign
 
@@ -290,7 +290,7 @@ namespace Example
             try
             {
                 // category.assign
-                CategoryAssign200Response result = apiInstance.CategoryAssign(categoryId, productId, storeId, idempotencyKey);
+                ModelResponseCategoryAssign result = apiInstance.CategoryAssign(categoryId, productId, storeId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -311,7 +311,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.assign
-    ApiResponse<CategoryAssign200Response> response = apiInstance.CategoryAssignWithHttpInfo(categoryId, productId, storeId, idempotencyKey);
+    ApiResponse<ModelResponseCategoryAssign> response = apiInstance.CategoryAssignWithHttpInfo(categoryId, productId, storeId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -335,7 +335,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CategoryAssign200Response**](CategoryAssign200Response.md)
+[**ModelResponseCategoryAssign**](ModelResponseCategoryAssign.md)
 
 ### Authorization
 
@@ -356,7 +356,7 @@ catch (ApiException e)
 
 <a id="categorycount"></a>
 # **CategoryCount**
-> CategoryCount200Response CategoryCount (string? parentId = null, string? storeId = null, string? langId = null, bool? avail = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? productType = null, string? findValue = null, string? findWhere = null, string? reportRequestId = null, bool? disableReportCache = null)
+> ModelResponseCategoryCount CategoryCount (string? parentId = null, string? storeId = null, string? langId = null, bool? avail = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? productType = null, string? findValue = null, string? findWhere = null, string? reportRequestId = null, bool? disableReportCache = null)
 
 category.count
 
@@ -405,7 +405,7 @@ namespace Example
             try
             {
                 // category.count
-                CategoryCount200Response result = apiInstance.CategoryCount(parentId, storeId, langId, avail, createdFrom, createdTo, modifiedFrom, modifiedTo, productType, findValue, findWhere, reportRequestId, disableReportCache);
+                ModelResponseCategoryCount result = apiInstance.CategoryCount(parentId, storeId, langId, avail, createdFrom, createdTo, modifiedFrom, modifiedTo, productType, findValue, findWhere, reportRequestId, disableReportCache);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -426,7 +426,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.count
-    ApiResponse<CategoryCount200Response> response = apiInstance.CategoryCountWithHttpInfo(parentId, storeId, langId, avail, createdFrom, createdTo, modifiedFrom, modifiedTo, productType, findValue, findWhere, reportRequestId, disableReportCache);
+    ApiResponse<ModelResponseCategoryCount> response = apiInstance.CategoryCountWithHttpInfo(parentId, storeId, langId, avail, createdFrom, createdTo, modifiedFrom, modifiedTo, productType, findValue, findWhere, reportRequestId, disableReportCache);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -459,7 +459,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CategoryCount200Response**](CategoryCount200Response.md)
+[**ModelResponseCategoryCount**](ModelResponseCategoryCount.md)
 
 ### Authorization
 
@@ -682,7 +682,7 @@ catch (ApiException e)
 
 <a id="categoryfind"></a>
 # **CategoryFind**
-> CategoryFind200Response CategoryFind (string findValue, string? findWhere = null, string? findParams = null, string? storeId = null, string? langId = null)
+> ModelResponseCategoryFind CategoryFind (string findValue, string? findWhere = null, string? findParams = null, string? storeId = null, string? langId = null)
 
 category.find
 
@@ -723,7 +723,7 @@ namespace Example
             try
             {
                 // category.find
-                CategoryFind200Response result = apiInstance.CategoryFind(findValue, findWhere, findParams, storeId, langId);
+                ModelResponseCategoryFind result = apiInstance.CategoryFind(findValue, findWhere, findParams, storeId, langId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -744,7 +744,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.find
-    ApiResponse<CategoryFind200Response> response = apiInstance.CategoryFindWithHttpInfo(findValue, findWhere, findParams, storeId, langId);
+    ApiResponse<ModelResponseCategoryFind> response = apiInstance.CategoryFindWithHttpInfo(findValue, findWhere, findParams, storeId, langId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -769,7 +769,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CategoryFind200Response**](CategoryFind200Response.md)
+[**ModelResponseCategoryFind**](ModelResponseCategoryFind.md)
 
 ### Authorization
 
@@ -1272,7 +1272,7 @@ catch (ApiException e)
 
 <a id="categoryunassign"></a>
 # **CategoryUnassign**
-> CategoryAssign200Response CategoryUnassign (string categoryId, string productId, string? storeId = null, string? idempotencyKey = null)
+> ModelResponseCategoryUnassign CategoryUnassign (string categoryId, string productId, string? storeId = null, string? idempotencyKey = null)
 
 category.unassign
 
@@ -1312,7 +1312,7 @@ namespace Example
             try
             {
                 // category.unassign
-                CategoryAssign200Response result = apiInstance.CategoryUnassign(categoryId, productId, storeId, idempotencyKey);
+                ModelResponseCategoryUnassign result = apiInstance.CategoryUnassign(categoryId, productId, storeId, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1333,7 +1333,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // category.unassign
-    ApiResponse<CategoryAssign200Response> response = apiInstance.CategoryUnassignWithHttpInfo(categoryId, productId, storeId, idempotencyKey);
+    ApiResponse<ModelResponseCategoryUnassign> response = apiInstance.CategoryUnassignWithHttpInfo(categoryId, productId, storeId, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1357,7 +1357,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CategoryAssign200Response**](CategoryAssign200Response.md)
+[**ModelResponseCategoryUnassign**](ModelResponseCategoryUnassign.md)
 
 ### Authorization
 

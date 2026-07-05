@@ -154,8 +154,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="vendorId">Counts orders specified by vendor id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrderCount200Response</returns>
-        OrderCount200Response OrderCount(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0);
+        /// <returns>ModelResponseOrderCount</returns>
+        ModelResponseOrderCount OrderCount(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// order.count
@@ -187,8 +187,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="vendorId">Counts orders specified by vendor id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrderCount200Response</returns>
-        ApiResponse<OrderCount200Response> OrderCountWithHttpInfo(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseOrderCount</returns>
+        ApiResponse<ModelResponseOrderCount> OrderCountWithHttpInfo(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0);
         /// <summary>
         /// order.financial_status.list
         /// </summary>
@@ -197,8 +197,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrderFinancialStatusList200Response</returns>
-        OrderFinancialStatusList200Response OrderFinancialStatusList(int operationIndex = 0);
+        /// <returns>ModelResponseOrderFinancialStatusList</returns>
+        ModelResponseOrderFinancialStatusList OrderFinancialStatusList(int operationIndex = 0);
 
         /// <summary>
         /// order.financial_status.list
@@ -208,8 +208,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrderFinancialStatusList200Response</returns>
-        ApiResponse<OrderFinancialStatusList200Response> OrderFinancialStatusListWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseOrderFinancialStatusList</returns>
+        ApiResponse<ModelResponseOrderFinancialStatusList> OrderFinancialStatusListWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// order.fulfillment_status.list
         /// </summary>
@@ -219,8 +219,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="action">Available statuses for the specified action. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrderFulfillmentStatusList200Response</returns>
-        OrderFulfillmentStatusList200Response OrderFulfillmentStatusList(string? action = default(string?), int operationIndex = 0);
+        /// <returns>ModelResponseOrderFulfillmentStatusList</returns>
+        ModelResponseOrderFulfillmentStatusList OrderFulfillmentStatusList(string? action = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// order.fulfillment_status.list
@@ -231,8 +231,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="action">Available statuses for the specified action. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrderFulfillmentStatusList200Response</returns>
-        ApiResponse<OrderFulfillmentStatusList200Response> OrderFulfillmentStatusListWithHttpInfo(string? action = default(string?), int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseOrderFulfillmentStatusList</returns>
+        ApiResponse<ModelResponseOrderFulfillmentStatusList> OrderFulfillmentStatusListWithHttpInfo(string? action = default(string?), int operationIndex = 0);
         /// <summary>
         /// order.info
         /// </summary>
@@ -1017,8 +1017,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="vendorId">Counts orders specified by vendor id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrderCount200Response</returns>
-        System.Threading.Tasks.Task<OrderCount200Response> OrderCountAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseOrderCount</returns>
+        System.Threading.Tasks.Task<ModelResponseOrderCount> OrderCountAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// order.count
@@ -1051,8 +1051,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="vendorId">Counts orders specified by vendor id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrderCount200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderCount200Response>> OrderCountWithHttpInfoAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseOrderCount)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseOrderCount>> OrderCountWithHttpInfoAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// order.financial_status.list
         /// </summary>
@@ -1062,8 +1062,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrderFinancialStatusList200Response</returns>
-        System.Threading.Tasks.Task<OrderFinancialStatusList200Response> OrderFinancialStatusListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseOrderFinancialStatusList</returns>
+        System.Threading.Tasks.Task<ModelResponseOrderFinancialStatusList> OrderFinancialStatusListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// order.financial_status.list
@@ -1074,8 +1074,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrderFinancialStatusList200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderFinancialStatusList200Response>> OrderFinancialStatusListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseOrderFinancialStatusList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseOrderFinancialStatusList>> OrderFinancialStatusListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// order.fulfillment_status.list
         /// </summary>
@@ -1086,8 +1086,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">Available statuses for the specified action. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrderFulfillmentStatusList200Response</returns>
-        System.Threading.Tasks.Task<OrderFulfillmentStatusList200Response> OrderFulfillmentStatusListAsync(string? action = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseOrderFulfillmentStatusList</returns>
+        System.Threading.Tasks.Task<ModelResponseOrderFulfillmentStatusList> OrderFulfillmentStatusListAsync(string? action = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// order.fulfillment_status.list
@@ -1099,8 +1099,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">Available statuses for the specified action. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrderFulfillmentStatusList200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderFulfillmentStatusList200Response>> OrderFulfillmentStatusListWithHttpInfoAsync(string? action = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseOrderFulfillmentStatusList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseOrderFulfillmentStatusList>> OrderFulfillmentStatusListWithHttpInfoAsync(string? action = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// order.info
         /// </summary>
@@ -2588,10 +2588,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="vendorId">Counts orders specified by vendor id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrderCount200Response</returns>
-        public OrderCount200Response OrderCount(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0)
+        /// <returns>ModelResponseOrderCount</returns>
+        public ModelResponseOrderCount OrderCount(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderCount200Response> localVarResponse = OrderCountWithHttpInfo(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion, vendorId);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderCount> localVarResponse = OrderCountWithHttpInfo(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion, vendorId);
             return localVarResponse.Data;
         }
 
@@ -2622,8 +2622,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="useLatestApiVersion">Use the latest platform API version (optional, default to false)</param>
         /// <param name="vendorId">Counts orders specified by vendor id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrderCount200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<OrderCount200Response> OrderCountWithHttpInfo(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseOrderCount</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderCount> OrderCountWithHttpInfo(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2752,7 +2752,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<OrderCount200Response>("/order.count.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseOrderCount>("/order.count.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OrderCount", localVarResponse);
@@ -2793,10 +2793,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="vendorId">Counts orders specified by vendor id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrderCount200Response</returns>
-        public async System.Threading.Tasks.Task<OrderCount200Response> OrderCountAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseOrderCount</returns>
+        public async System.Threading.Tasks.Task<ModelResponseOrderCount> OrderCountAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderCount200Response> localVarResponse = await OrderCountWithHttpInfoAsync(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion, vendorId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderCount> localVarResponse = await OrderCountWithHttpInfoAsync(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion, vendorId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2828,8 +2828,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="vendorId">Counts orders specified by vendor id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrderCount200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrderCount200Response>> OrderCountWithHttpInfoAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseOrderCount)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderCount>> OrderCountWithHttpInfoAsync(string? orderIds = default(string?), string? ids = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? customerEmail = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIds = default(List<string>?), string? ebayOrderStatus = default(string?), string? financialStatus = default(string?), List<string>? financialStatusIds = default(List<string>?), string? fulfillmentChannel = default(string?), string? fulfillmentStatus = default(string?), string? shippingMethod = default(string?), string? deliveryMethod = default(string?), string? tags = default(string?), string? shipNodeType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), bool? useLatestApiVersion = default(bool?), string? vendorId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2958,7 +2958,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<OrderCount200Response>("/order.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseOrderCount>("/order.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2977,10 +2977,10 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrderFinancialStatusList200Response</returns>
-        public OrderFinancialStatusList200Response OrderFinancialStatusList(int operationIndex = 0)
+        /// <returns>ModelResponseOrderFinancialStatusList</returns>
+        public ModelResponseOrderFinancialStatusList OrderFinancialStatusList(int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderFinancialStatusList200Response> localVarResponse = OrderFinancialStatusListWithHttpInfo();
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderFinancialStatusList> localVarResponse = OrderFinancialStatusListWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -2989,8 +2989,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrderFinancialStatusList200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<OrderFinancialStatusList200Response> OrderFinancialStatusListWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseOrderFinancialStatusList</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderFinancialStatusList> OrderFinancialStatusListWithHttpInfo(int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3031,7 +3031,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<OrderFinancialStatusList200Response>("/order.financial_status.list.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseOrderFinancialStatusList>("/order.financial_status.list.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OrderFinancialStatusList", localVarResponse);
@@ -3050,10 +3050,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrderFinancialStatusList200Response</returns>
-        public async System.Threading.Tasks.Task<OrderFinancialStatusList200Response> OrderFinancialStatusListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseOrderFinancialStatusList</returns>
+        public async System.Threading.Tasks.Task<ModelResponseOrderFinancialStatusList> OrderFinancialStatusListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderFinancialStatusList200Response> localVarResponse = await OrderFinancialStatusListWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderFinancialStatusList> localVarResponse = await OrderFinancialStatusListWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3063,8 +3063,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrderFinancialStatusList200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrderFinancialStatusList200Response>> OrderFinancialStatusListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseOrderFinancialStatusList)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderFinancialStatusList>> OrderFinancialStatusListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3105,7 +3105,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<OrderFinancialStatusList200Response>("/order.financial_status.list.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseOrderFinancialStatusList>("/order.financial_status.list.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3125,10 +3125,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="action">Available statuses for the specified action. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrderFulfillmentStatusList200Response</returns>
-        public OrderFulfillmentStatusList200Response OrderFulfillmentStatusList(string? action = default(string?), int operationIndex = 0)
+        /// <returns>ModelResponseOrderFulfillmentStatusList</returns>
+        public ModelResponseOrderFulfillmentStatusList OrderFulfillmentStatusList(string? action = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderFulfillmentStatusList200Response> localVarResponse = OrderFulfillmentStatusListWithHttpInfo(action);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderFulfillmentStatusList> localVarResponse = OrderFulfillmentStatusListWithHttpInfo(action);
             return localVarResponse.Data;
         }
 
@@ -3138,8 +3138,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="action">Available statuses for the specified action. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrderFulfillmentStatusList200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<OrderFulfillmentStatusList200Response> OrderFulfillmentStatusListWithHttpInfo(string? action = default(string?), int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseOrderFulfillmentStatusList</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderFulfillmentStatusList> OrderFulfillmentStatusListWithHttpInfo(string? action = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3184,7 +3184,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<OrderFulfillmentStatusList200Response>("/order.fulfillment_status.list.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseOrderFulfillmentStatusList>("/order.fulfillment_status.list.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OrderFulfillmentStatusList", localVarResponse);
@@ -3204,10 +3204,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">Available statuses for the specified action. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrderFulfillmentStatusList200Response</returns>
-        public async System.Threading.Tasks.Task<OrderFulfillmentStatusList200Response> OrderFulfillmentStatusListAsync(string? action = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseOrderFulfillmentStatusList</returns>
+        public async System.Threading.Tasks.Task<ModelResponseOrderFulfillmentStatusList> OrderFulfillmentStatusListAsync(string? action = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderFulfillmentStatusList200Response> localVarResponse = await OrderFulfillmentStatusListWithHttpInfoAsync(action, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderFulfillmentStatusList> localVarResponse = await OrderFulfillmentStatusListWithHttpInfoAsync(action, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3218,8 +3218,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">Available statuses for the specified action. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrderFulfillmentStatusList200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrderFulfillmentStatusList200Response>> OrderFulfillmentStatusListWithHttpInfoAsync(string? action = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseOrderFulfillmentStatusList)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderFulfillmentStatusList>> OrderFulfillmentStatusListWithHttpInfoAsync(string? action = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3264,7 +3264,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<OrderFulfillmentStatusList200Response>("/order.fulfillment_status.list.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseOrderFulfillmentStatusList>("/order.fulfillment_status.list.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

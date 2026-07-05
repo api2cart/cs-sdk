@@ -335,7 +335,7 @@ catch (ApiException e)
 
 <a id="customercount"></a>
 # **CustomerCount**
-> CustomerCount200Response CustomerCount (string? ids = null, string? sinceId = null, string? customerListId = null, string? groupId = null, string? storeId = null, bool? avail = null, bool? includeGuests = null, string? findValue = null, string? findWhere = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null)
+> ModelResponseCustomerCount CustomerCount (string? ids = null, string? sinceId = null, string? customerListId = null, string? groupId = null, string? storeId = null, bool? avail = null, bool? includeGuests = null, string? findValue = null, string? findWhere = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null)
 
 customer.count
 
@@ -384,7 +384,7 @@ namespace Example
             try
             {
                 // customer.count
-                CustomerCount200Response result = apiInstance.CustomerCount(ids, sinceId, customerListId, groupId, storeId, avail, includeGuests, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
+                ModelResponseCustomerCount result = apiInstance.CustomerCount(ids, sinceId, customerListId, groupId, storeId, avail, includeGuests, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -405,7 +405,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // customer.count
-    ApiResponse<CustomerCount200Response> response = apiInstance.CustomerCountWithHttpInfo(ids, sinceId, customerListId, groupId, storeId, avail, includeGuests, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
+    ApiResponse<ModelResponseCustomerCount> response = apiInstance.CustomerCountWithHttpInfo(ids, sinceId, customerListId, groupId, storeId, avail, includeGuests, findValue, findWhere, createdFrom, createdTo, modifiedFrom, modifiedTo);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -438,7 +438,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CustomerCount200Response**](CustomerCount200Response.md)
+[**ModelResponseCustomerCount**](ModelResponseCustomerCount.md)
 
 ### Authorization
 
@@ -561,7 +561,7 @@ catch (ApiException e)
 
 <a id="customerfind"></a>
 # **CustomerFind**
-> CustomerFind200Response CustomerFind (string findValue, string? findWhere = null, string? findParams = null, string? storeId = null, bool? includeGuests = null)
+> ModelResponseCustomerFind CustomerFind (string findValue, string? findWhere = null, string? findParams = null, string? storeId = null, bool? includeGuests = null)
 
 customer.find
 
@@ -602,7 +602,7 @@ namespace Example
             try
             {
                 // customer.find
-                CustomerFind200Response result = apiInstance.CustomerFind(findValue, findWhere, findParams, storeId, includeGuests);
+                ModelResponseCustomerFind result = apiInstance.CustomerFind(findValue, findWhere, findParams, storeId, includeGuests);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -623,7 +623,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // customer.find
-    ApiResponse<CustomerFind200Response> response = apiInstance.CustomerFindWithHttpInfo(findValue, findWhere, findParams, storeId, includeGuests);
+    ApiResponse<ModelResponseCustomerFind> response = apiInstance.CustomerFindWithHttpInfo(findValue, findWhere, findParams, storeId, includeGuests);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -648,7 +648,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CustomerFind200Response**](CustomerFind200Response.md)
+[**ModelResponseCustomerFind**](ModelResponseCustomerFind.md)
 
 ### Authorization
 

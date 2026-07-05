@@ -149,7 +149,7 @@ namespace Org.OpenAPITools.Test.Api
             //bool? required = null;
             //bool? varSystem = null;
             //var response = instance.AttributeCount(type, attributeSetId, storeId, langId, visible, required, varSystem);
-            //Assert.IsType<AttributeCount200Response>(response);
+            //Assert.IsType<ModelResponseAttributeCount>(response);
         }
 
         /// <summary>
@@ -234,7 +234,7 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.AttributeTypeList();
-            //Assert.IsType<AttributeTypeList200Response>(response);
+            //Assert.IsType<ModelResponseAttributeTypeList>(response);
         }
 
         /// <summary>

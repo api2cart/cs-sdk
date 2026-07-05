@@ -184,7 +184,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? findParams = null;
             //string? storeId = null;
             //var response = instance.ProductChildItemFind(findValue, findWhere, findParams, storeId);
-            //Assert.IsType<ProductChildItemFind200Response>(response);
+            //Assert.IsType<ModelResponseProductChildItemFind>(response);
         }
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace Org.OpenAPITools.Test.Api
             //bool? disableReportCache = null;
             //bool? useLatestApiVersion = null;
             //var response = instance.ProductCount(sku, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
-            //Assert.IsType<ProductCount200Response>(response);
+            //Assert.IsType<ModelResponseProductCount>(response);
         }
 
         /// <summary>
@@ -355,7 +355,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? langId = null;
             //string? storeId = null;
             //var response = instance.ProductFind(findValue, findWhere, findParams, findWhat, langId, storeId);
-            //Assert.IsType<ProductFind200Response>(response);
+            //Assert.IsType<ModelResponseProductFind>(response);
         }
 
         /// <summary>

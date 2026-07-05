@@ -30,7 +30,7 @@ All URIs are relative to *https://api.api2cart.local.com/v1.1*
 
 <a id="cartcatalogpricerulescount"></a>
 # **CartCatalogPriceRulesCount**
-> CartCatalogPriceRulesCount200Response CartCatalogPriceRulesCount ()
+> ModelResponseCartCatalogPriceRulesCount CartCatalogPriceRulesCount ()
 
 cart.catalog_price_rules.count
 
@@ -66,7 +66,7 @@ namespace Example
             try
             {
                 // cart.catalog_price_rules.count
-                CartCatalogPriceRulesCount200Response result = apiInstance.CartCatalogPriceRulesCount();
+                ModelResponseCartCatalogPriceRulesCount result = apiInstance.CartCatalogPriceRulesCount();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -87,7 +87,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.catalog_price_rules.count
-    ApiResponse<CartCatalogPriceRulesCount200Response> response = apiInstance.CartCatalogPriceRulesCountWithHttpInfo();
+    ApiResponse<ModelResponseCartCatalogPriceRulesCount> response = apiInstance.CartCatalogPriceRulesCountWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -104,7 +104,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**CartCatalogPriceRulesCount200Response**](CartCatalogPriceRulesCount200Response.md)
+[**ModelResponseCartCatalogPriceRulesCount**](ModelResponseCartCatalogPriceRulesCount.md)
 
 ### Authorization
 
@@ -455,7 +455,7 @@ catch (ApiException e)
 
 <a id="cartcouponcount"></a>
 # **CartCouponCount**
-> CartCouponCount200Response CartCouponCount (string? storeId = null, bool? avail = null, string? dateStartFrom = null, string? dateStartTo = null, string? dateEndFrom = null, string? dateEndTo = null)
+> ModelResponseCartCouponCount CartCouponCount (string? storeId = null, bool? avail = null, string? dateStartFrom = null, string? dateStartTo = null, string? dateEndFrom = null, string? dateEndTo = null)
 
 cart.coupon.count
 
@@ -497,7 +497,7 @@ namespace Example
             try
             {
                 // cart.coupon.count
-                CartCouponCount200Response result = apiInstance.CartCouponCount(storeId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo);
+                ModelResponseCartCouponCount result = apiInstance.CartCouponCount(storeId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -518,7 +518,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.coupon.count
-    ApiResponse<CartCouponCount200Response> response = apiInstance.CartCouponCountWithHttpInfo(storeId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo);
+    ApiResponse<ModelResponseCartCouponCount> response = apiInstance.CartCouponCountWithHttpInfo(storeId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -544,7 +544,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CartCouponCount200Response**](CartCouponCount200Response.md)
+[**ModelResponseCartCouponCount**](ModelResponseCartCouponCount.md)
 
 ### Authorization
 
@@ -895,7 +895,7 @@ catch (ApiException e)
 
 <a id="cartgiftcardadd"></a>
 # **CartGiftcardAdd**
-> CartGiftcardAdd200Response CartGiftcardAdd (decimal amount, string? code = null, string? ownerEmail = null, string? recipientEmail = null, string? recipientName = null, string? ownerName = null, string? idempotencyKey = null)
+> CartGiftcardAdd200Response CartGiftcardAdd (decimal amount, string? currency = null, string? storeId = null, string? code = null, string? name = null, string? ownerEmail = null, string? ownerName = null, string? recipientEmail = null, string? recipientName = null, string? message = null, string? idempotencyKey = null)
 
 cart.giftcard.add
 
@@ -928,17 +928,21 @@ namespace Example
 
             var apiInstance = new CartApi(config);
             var amount = 15.5;  // decimal | Defines the gift card amount value.
+            var currency = USD;  // string? | Defines currency code (optional) 
+            var storeId = 1;  // string? | Store Id (optional) 
             var code = GFT1 A4S5 AA11 RD61;  // string? | Gift card code (optional) 
+            var name = Test name;  // string? | Entity name (optional) 
             var ownerEmail = jubari@hannsgroup.com;  // string? | Gift card owner email (optional) 
+            var ownerName = John Doe;  // string? | Gift card owner name (optional) 
             var recipientEmail = jubari@hannsgroup.com;  // string? | Gift card recipient email (optional) 
             var recipientName = John Doe;  // string? | Gift card recipient name (optional) 
-            var ownerName = John Doe;  // string? | Gift card owner name (optional) 
+            var message = Received item is not like in the photo, get my money back.;  // string? | Free-form message attached to the entity. (optional) 
             var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // cart.giftcard.add
-                CartGiftcardAdd200Response result = apiInstance.CartGiftcardAdd(amount, code, ownerEmail, recipientEmail, recipientName, ownerName, idempotencyKey);
+                CartGiftcardAdd200Response result = apiInstance.CartGiftcardAdd(amount, currency, storeId, code, name, ownerEmail, ownerName, recipientEmail, recipientName, message, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -959,7 +963,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.giftcard.add
-    ApiResponse<CartGiftcardAdd200Response> response = apiInstance.CartGiftcardAddWithHttpInfo(amount, code, ownerEmail, recipientEmail, recipientName, ownerName, idempotencyKey);
+    ApiResponse<CartGiftcardAdd200Response> response = apiInstance.CartGiftcardAddWithHttpInfo(amount, currency, storeId, code, name, ownerEmail, ownerName, recipientEmail, recipientName, message, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -977,11 +981,15 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **amount** | **decimal** | Defines the gift card amount value. |  |
+| **currency** | **string?** | Defines currency code | [optional]  |
+| **storeId** | **string?** | Store Id | [optional]  |
 | **code** | **string?** | Gift card code | [optional]  |
+| **name** | **string?** | Entity name | [optional]  |
 | **ownerEmail** | **string?** | Gift card owner email | [optional]  |
+| **ownerName** | **string?** | Gift card owner name | [optional]  |
 | **recipientEmail** | **string?** | Gift card recipient email | [optional]  |
 | **recipientName** | **string?** | Gift card recipient name | [optional]  |
-| **ownerName** | **string?** | Gift card owner name | [optional]  |
+| **message** | **string?** | Free-form message attached to the entity. | [optional]  |
 | **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
 
 ### Return type
@@ -1007,7 +1015,7 @@ catch (ApiException e)
 
 <a id="cartgiftcardcount"></a>
 # **CartGiftcardCount**
-> CartGiftcardCount200Response CartGiftcardCount (string? storeId = null)
+> ModelResponseCartGiftcardCount CartGiftcardCount (string? storeId = null)
 
 cart.giftcard.count
 
@@ -1044,7 +1052,7 @@ namespace Example
             try
             {
                 // cart.giftcard.count
-                CartGiftcardCount200Response result = apiInstance.CartGiftcardCount(storeId);
+                ModelResponseCartGiftcardCount result = apiInstance.CartGiftcardCount(storeId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1065,7 +1073,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.giftcard.count
-    ApiResponse<CartGiftcardCount200Response> response = apiInstance.CartGiftcardCountWithHttpInfo(storeId);
+    ApiResponse<ModelResponseCartGiftcardCount> response = apiInstance.CartGiftcardCountWithHttpInfo(storeId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1086,7 +1094,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CartGiftcardCount200Response**](CartGiftcardCount200Response.md)
+[**ModelResponseCartGiftcardCount**](ModelResponseCartGiftcardCount.md)
 
 ### Authorization
 
@@ -1107,7 +1115,7 @@ catch (ApiException e)
 
 <a id="cartgiftcarddelete"></a>
 # **CartGiftcardDelete**
-> AttributeDelete200Response CartGiftcardDelete (string id)
+> AttributeDelete200Response CartGiftcardDelete (string id, string? storeId = null)
 
 cart.giftcard.delete
 
@@ -1140,11 +1148,12 @@ namespace Example
 
             var apiInstance = new CartApi(config);
             var id = 10;  // string | Entity id
+            var storeId = 1;  // string? | Store Id (optional) 
 
             try
             {
                 // cart.giftcard.delete
-                AttributeDelete200Response result = apiInstance.CartGiftcardDelete(id);
+                AttributeDelete200Response result = apiInstance.CartGiftcardDelete(id, storeId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1165,7 +1174,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.giftcard.delete
-    ApiResponse<AttributeDelete200Response> response = apiInstance.CartGiftcardDeleteWithHttpInfo(id);
+    ApiResponse<AttributeDelete200Response> response = apiInstance.CartGiftcardDeleteWithHttpInfo(id, storeId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1183,6 +1192,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **string** | Entity id |  |
+| **storeId** | **string?** | Store Id | [optional]  |
 
 ### Return type
 
@@ -1207,7 +1217,7 @@ catch (ApiException e)
 
 <a id="cartgiftcardlist"></a>
 # **CartGiftcardList**
-> ModelResponseCartGiftCardList CartGiftcardList (int? start = null, int? count = null, string? pageCursor = null, string? storeId = null, string? responseFields = null, string? varParams = null, string? exclude = null)
+> ModelResponseCartGiftCardList CartGiftcardList (string? ids = null, int? start = null, int? count = null, string? pageCursor = null, string? storeId = null, string? responseFields = null, string? varParams = null, string? exclude = null)
 
 cart.giftcard.list
 
@@ -1239,6 +1249,7 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new CartApi(config);
+            var ids = 24,25;  // string? | Retrieves gift cards specified by ids (optional) 
             var start = 0;  // int? | This parameter sets the number from which you want to get entities (optional)  (default to 0)
             var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
             var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
@@ -1250,7 +1261,7 @@ namespace Example
             try
             {
                 // cart.giftcard.list
-                ModelResponseCartGiftCardList result = apiInstance.CartGiftcardList(start, count, pageCursor, storeId, responseFields, varParams, exclude);
+                ModelResponseCartGiftCardList result = apiInstance.CartGiftcardList(ids, start, count, pageCursor, storeId, responseFields, varParams, exclude);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1271,7 +1282,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.giftcard.list
-    ApiResponse<ModelResponseCartGiftCardList> response = apiInstance.CartGiftcardListWithHttpInfo(start, count, pageCursor, storeId, responseFields, varParams, exclude);
+    ApiResponse<ModelResponseCartGiftCardList> response = apiInstance.CartGiftcardListWithHttpInfo(ids, start, count, pageCursor, storeId, responseFields, varParams, exclude);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1288,6 +1299,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
+| **ids** | **string?** | Retrieves gift cards specified by ids | [optional]  |
 | **start** | **int?** | This parameter sets the number from which you want to get entities | [optional] [default to 0] |
 | **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
 | **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
@@ -1429,7 +1441,7 @@ catch (ApiException e)
 
 cart.meta_data.list
 
-Using this method, you can get a list of metadata for various entities (products, options, customers, orders). Usually this is data created by third-party plugins.
+Using this method, you can get a list of metadata for various entities. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the <code>entity</code> parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
 
 ### Example
 ```csharp
@@ -1547,7 +1559,7 @@ catch (ApiException e)
 
 cart.meta_data.set
 
-Set meta data for a specific entity
+Set metadata for a specific entity. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the <code>entity</code> parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
 
 ### Example
 ```csharp
@@ -1765,7 +1777,7 @@ catch (ApiException e)
 
 <a id="cartmethods"></a>
 # **CartMethods**
-> CartMethods200Response CartMethods ()
+> ModelResponseCartMethods CartMethods ()
 
 cart.methods
 
@@ -1801,7 +1813,7 @@ namespace Example
             try
             {
                 // cart.methods
-                CartMethods200Response result = apiInstance.CartMethods();
+                ModelResponseCartMethods result = apiInstance.CartMethods();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1822,7 +1834,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.methods
-    ApiResponse<CartMethods200Response> response = apiInstance.CartMethodsWithHttpInfo();
+    ApiResponse<ModelResponseCartMethods> response = apiInstance.CartMethodsWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1839,7 +1851,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**CartMethods200Response**](CartMethods200Response.md)
+[**ModelResponseCartMethods**](ModelResponseCartMethods.md)
 
 ### Authorization
 

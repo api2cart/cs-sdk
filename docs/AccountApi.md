@@ -777,7 +777,7 @@ catch (ApiException e)
 
 <a id="accountsupportedplatforms"></a>
 # **AccountSupportedPlatforms**
-> AccountSupportedPlatforms200Response AccountSupportedPlatforms ()
+> ModelResponseAccountSupportedPlatforms AccountSupportedPlatforms ()
 
 account.supported_platforms
 
@@ -809,7 +809,7 @@ namespace Example
             try
             {
                 // account.supported_platforms
-                AccountSupportedPlatforms200Response result = apiInstance.AccountSupportedPlatforms();
+                ModelResponseAccountSupportedPlatforms result = apiInstance.AccountSupportedPlatforms();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -830,7 +830,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // account.supported_platforms
-    ApiResponse<AccountSupportedPlatforms200Response> response = apiInstance.AccountSupportedPlatformsWithHttpInfo();
+    ApiResponse<ModelResponseAccountSupportedPlatforms> response = apiInstance.AccountSupportedPlatformsWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -847,7 +847,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**AccountSupportedPlatforms200Response**](AccountSupportedPlatforms200Response.md)
+[**ModelResponseAccountSupportedPlatforms**](ModelResponseAccountSupportedPlatforms.md)
 
 ### Authorization
 

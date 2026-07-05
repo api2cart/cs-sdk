@@ -63,7 +63,7 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.ReturnActionList();
-            //Assert.IsType<ReturnActionList200Response>(response);
+            //Assert.IsType<ModelResponseReturnActionList>(response);
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? reportRequestId = null;
             //bool? disableReportCache = null;
             //var response = instance.ReturnCount(orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, reportRequestId, disableReportCache);
-            //Assert.IsType<ReturnCount200Response>(response);
+            //Assert.IsType<ModelResponseReturnCount>(response);
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string? storeId = null;
             //var response = instance.ReturnReasonList(storeId);
-            //Assert.IsType<ReturnReasonList200Response>(response);
+            //Assert.IsType<ModelResponseReturnReasonList>(response);
         }
 
         /// <summary>
@@ -154,7 +154,7 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.ReturnStatusList();
-            //Assert.IsType<ReturnStatusList200Response>(response);
+            //Assert.IsType<ModelResponseReturnStatusList>(response);
         }
     }
 }

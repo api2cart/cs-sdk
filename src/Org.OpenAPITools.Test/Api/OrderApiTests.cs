@@ -135,7 +135,7 @@ namespace Org.OpenAPITools.Test.Api
             //bool? useLatestApiVersion = null;
             //string? vendorId = null;
             //var response = instance.OrderCount(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion, vendorId);
-            //Assert.IsType<OrderCount200Response>(response);
+            //Assert.IsType<ModelResponseOrderCount>(response);
         }
 
         /// <summary>
@@ -146,7 +146,7 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.OrderFinancialStatusList();
-            //Assert.IsType<OrderFinancialStatusList200Response>(response);
+            //Assert.IsType<ModelResponseOrderFinancialStatusList>(response);
         }
 
         /// <summary>
@@ -158,7 +158,7 @@ namespace Org.OpenAPITools.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string? action = null;
             //var response = instance.OrderFulfillmentStatusList(action);
-            //Assert.IsType<OrderFulfillmentStatusList200Response>(response);
+            //Assert.IsType<ModelResponseOrderFulfillmentStatusList>(response);
         }
 
         /// <summary>

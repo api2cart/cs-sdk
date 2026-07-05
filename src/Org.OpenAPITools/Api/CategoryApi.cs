@@ -115,8 +115,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CategoryAssign200Response</returns>
-        CategoryAssign200Response CategoryAssign(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        /// <returns>ModelResponseCategoryAssign</returns>
+        ModelResponseCategoryAssign CategoryAssign(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// category.assign
@@ -130,8 +130,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CategoryAssign200Response</returns>
-        ApiResponse<CategoryAssign200Response> CategoryAssignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseCategoryAssign</returns>
+        ApiResponse<ModelResponseCategoryAssign> CategoryAssignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// category.count
         /// </summary>
@@ -153,8 +153,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CategoryCount200Response</returns>
-        CategoryCount200Response CategoryCount(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
+        /// <returns>ModelResponseCategoryCount</returns>
+        ModelResponseCategoryCount CategoryCount(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// category.count
@@ -177,8 +177,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CategoryCount200Response</returns>
-        ApiResponse<CategoryCount200Response> CategoryCountWithHttpInfo(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseCategoryCount</returns>
+        ApiResponse<ModelResponseCategoryCount> CategoryCountWithHttpInfo(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
         /// <summary>
         /// category.delete
         /// </summary>
@@ -240,8 +240,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CategoryFind200Response</returns>
-        CategoryFind200Response CategoryFind(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0);
+        /// <returns>ModelResponseCategoryFind</returns>
+        ModelResponseCategoryFind CategoryFind(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// category.find
@@ -256,8 +256,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CategoryFind200Response</returns>
-        ApiResponse<CategoryFind200Response> CategoryFindWithHttpInfo(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseCategoryFind</returns>
+        ApiResponse<ModelResponseCategoryFind> CategoryFindWithHttpInfo(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0);
         /// <summary>
         /// category.image.add
         /// </summary>
@@ -444,8 +444,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CategoryAssign200Response</returns>
-        CategoryAssign200Response CategoryUnassign(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        /// <returns>ModelResponseCategoryUnassign</returns>
+        ModelResponseCategoryUnassign CategoryUnassign(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// category.unassign
@@ -459,8 +459,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CategoryAssign200Response</returns>
-        ApiResponse<CategoryAssign200Response> CategoryUnassignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseCategoryUnassign</returns>
+        ApiResponse<ModelResponseCategoryUnassign> CategoryUnassignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// category.update
         /// </summary>
@@ -616,8 +616,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CategoryAssign200Response</returns>
-        System.Threading.Tasks.Task<CategoryAssign200Response> CategoryAssignAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseCategoryAssign</returns>
+        System.Threading.Tasks.Task<ModelResponseCategoryAssign> CategoryAssignAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.assign
@@ -632,8 +632,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CategoryAssign200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryAssign200Response>> CategoryAssignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseCategoryAssign)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCategoryAssign>> CategoryAssignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.count
         /// </summary>
@@ -656,8 +656,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CategoryCount200Response</returns>
-        System.Threading.Tasks.Task<CategoryCount200Response> CategoryCountAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseCategoryCount</returns>
+        System.Threading.Tasks.Task<ModelResponseCategoryCount> CategoryCountAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.count
@@ -681,8 +681,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CategoryCount200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryCount200Response>> CategoryCountWithHttpInfoAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseCategoryCount)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCategoryCount>> CategoryCountWithHttpInfoAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.delete
         /// </summary>
@@ -749,8 +749,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CategoryFind200Response</returns>
-        System.Threading.Tasks.Task<CategoryFind200Response> CategoryFindAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseCategoryFind</returns>
+        System.Threading.Tasks.Task<ModelResponseCategoryFind> CategoryFindAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.find
@@ -766,8 +766,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CategoryFind200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryFind200Response>> CategoryFindWithHttpInfoAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseCategoryFind)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCategoryFind>> CategoryFindWithHttpInfoAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.image.add
         /// </summary>
@@ -963,8 +963,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CategoryAssign200Response</returns>
-        System.Threading.Tasks.Task<CategoryAssign200Response> CategoryUnassignAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseCategoryUnassign</returns>
+        System.Threading.Tasks.Task<ModelResponseCategoryUnassign> CategoryUnassignAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// category.unassign
@@ -979,8 +979,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CategoryAssign200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryAssign200Response>> CategoryUnassignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseCategoryUnassign)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCategoryUnassign>> CategoryUnassignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// category.update
         /// </summary>
@@ -1677,10 +1677,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CategoryAssign200Response</returns>
-        public CategoryAssign200Response CategoryAssign(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        /// <returns>ModelResponseCategoryAssign</returns>
+        public ModelResponseCategoryAssign CategoryAssign(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = CategoryAssignWithHttpInfo(categoryId, productId, storeId, idempotencyKey);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryAssign> localVarResponse = CategoryAssignWithHttpInfo(categoryId, productId, storeId, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -1693,8 +1693,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CategoryAssign200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> CategoryAssignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseCategoryAssign</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryAssign> CategoryAssignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -1757,7 +1757,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<CategoryAssign200Response>("/category.assign.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<ModelResponseCategoryAssign>("/category.assign.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CategoryAssign", localVarResponse);
@@ -1780,10 +1780,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CategoryAssign200Response</returns>
-        public async System.Threading.Tasks.Task<CategoryAssign200Response> CategoryAssignAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseCategoryAssign</returns>
+        public async System.Threading.Tasks.Task<ModelResponseCategoryAssign> CategoryAssignAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = await CategoryAssignWithHttpInfoAsync(categoryId, productId, storeId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryAssign> localVarResponse = await CategoryAssignWithHttpInfoAsync(categoryId, productId, storeId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1797,8 +1797,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CategoryAssign200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response>> CategoryAssignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseCategoryAssign)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryAssign>> CategoryAssignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -1861,7 +1861,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CategoryAssign200Response>("/category.assign.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ModelResponseCategoryAssign>("/category.assign.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1893,10 +1893,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CategoryCount200Response</returns>
-        public CategoryCount200Response CategoryCount(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
+        /// <returns>ModelResponseCategoryCount</returns>
+        public ModelResponseCategoryCount CategoryCount(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryCount200Response> localVarResponse = CategoryCountWithHttpInfo(parentId, storeId, langId, avail, createdFrom, createdTo, modifiedFrom, modifiedTo, productType, findValue, findWhere, reportRequestId, disableReportCache);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryCount> localVarResponse = CategoryCountWithHttpInfo(parentId, storeId, langId, avail, createdFrom, createdTo, modifiedFrom, modifiedTo, productType, findValue, findWhere, reportRequestId, disableReportCache);
             return localVarResponse.Data;
         }
 
@@ -1918,8 +1918,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CategoryCount200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CategoryCount200Response> CategoryCountWithHttpInfo(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseCategoryCount</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryCount> CategoryCountWithHttpInfo(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2012,7 +2012,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<CategoryCount200Response>("/category.count.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseCategoryCount>("/category.count.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CategoryCount", localVarResponse);
@@ -2044,10 +2044,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CategoryCount200Response</returns>
-        public async System.Threading.Tasks.Task<CategoryCount200Response> CategoryCountAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseCategoryCount</returns>
+        public async System.Threading.Tasks.Task<ModelResponseCategoryCount> CategoryCountAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryCount200Response> localVarResponse = await CategoryCountWithHttpInfoAsync(parentId, storeId, langId, avail, createdFrom, createdTo, modifiedFrom, modifiedTo, productType, findValue, findWhere, reportRequestId, disableReportCache, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryCount> localVarResponse = await CategoryCountWithHttpInfoAsync(parentId, storeId, langId, avail, createdFrom, createdTo, modifiedFrom, modifiedTo, productType, findValue, findWhere, reportRequestId, disableReportCache, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2070,8 +2070,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CategoryCount200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryCount200Response>> CategoryCountWithHttpInfoAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseCategoryCount)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryCount>> CategoryCountWithHttpInfoAsync(string? parentId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? avail = default(bool?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? productType = default(string?), string? findValue = default(string?), string? findWhere = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2164,7 +2164,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<CategoryCount200Response>("/category.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseCategoryCount>("/category.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2532,10 +2532,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CategoryFind200Response</returns>
-        public CategoryFind200Response CategoryFind(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0)
+        /// <returns>ModelResponseCategoryFind</returns>
+        public ModelResponseCategoryFind CategoryFind(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryFind200Response> localVarResponse = CategoryFindWithHttpInfo(findValue, findWhere, findParams, storeId, langId);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryFind> localVarResponse = CategoryFindWithHttpInfo(findValue, findWhere, findParams, storeId, langId);
             return localVarResponse.Data;
         }
 
@@ -2549,8 +2549,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CategoryFind200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CategoryFind200Response> CategoryFindWithHttpInfo(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseCategoryFind</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryFind> CategoryFindWithHttpInfo(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'findValue' is set
             if (findValue == null)
@@ -2614,7 +2614,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<CategoryFind200Response>("/category.find.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseCategoryFind>("/category.find.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CategoryFind", localVarResponse);
@@ -2638,10 +2638,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CategoryFind200Response</returns>
-        public async System.Threading.Tasks.Task<CategoryFind200Response> CategoryFindAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseCategoryFind</returns>
+        public async System.Threading.Tasks.Task<ModelResponseCategoryFind> CategoryFindAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryFind200Response> localVarResponse = await CategoryFindWithHttpInfoAsync(findValue, findWhere, findParams, storeId, langId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryFind> localVarResponse = await CategoryFindWithHttpInfoAsync(findValue, findWhere, findParams, storeId, langId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2656,8 +2656,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="langId">Language id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CategoryFind200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryFind200Response>> CategoryFindWithHttpInfoAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseCategoryFind)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryFind>> CategoryFindWithHttpInfoAsync(string findValue, string? findWhere = default(string?), string? findParams = default(string?), string? storeId = default(string?), string? langId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'findValue' is set
             if (findValue == null)
@@ -2721,7 +2721,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<CategoryFind200Response>("/category.find.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseCategoryFind>("/category.find.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3914,10 +3914,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CategoryAssign200Response</returns>
-        public CategoryAssign200Response CategoryUnassign(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        /// <returns>ModelResponseCategoryUnassign</returns>
+        public ModelResponseCategoryUnassign CategoryUnassign(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = CategoryUnassignWithHttpInfo(categoryId, productId, storeId, idempotencyKey);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryUnassign> localVarResponse = CategoryUnassignWithHttpInfo(categoryId, productId, storeId, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -3930,8 +3930,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CategoryAssign200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> CategoryUnassignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseCategoryUnassign</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryUnassign> CategoryUnassignWithHttpInfo(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -3994,7 +3994,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<CategoryAssign200Response>("/category.unassign.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<ModelResponseCategoryUnassign>("/category.unassign.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CategoryUnassign", localVarResponse);
@@ -4017,10 +4017,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CategoryAssign200Response</returns>
-        public async System.Threading.Tasks.Task<CategoryAssign200Response> CategoryUnassignAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseCategoryUnassign</returns>
+        public async System.Threading.Tasks.Task<ModelResponseCategoryUnassign> CategoryUnassignAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response> localVarResponse = await CategoryUnassignWithHttpInfoAsync(categoryId, productId, storeId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryUnassign> localVarResponse = await CategoryUnassignWithHttpInfoAsync(categoryId, productId, storeId, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4034,8 +4034,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CategoryAssign200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CategoryAssign200Response>> CategoryUnassignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseCategoryUnassign)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCategoryUnassign>> CategoryUnassignWithHttpInfoAsync(string categoryId, string productId, string? storeId = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -4098,7 +4098,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CategoryAssign200Response>("/category.unassign.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ModelResponseCategoryUnassign>("/category.unassign.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

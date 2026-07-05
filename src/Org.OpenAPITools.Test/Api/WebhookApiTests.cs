@@ -66,7 +66,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? action = null;
             //bool? active = null;
             //var response = instance.WebhookCount(entity, action, active);
-            //Assert.IsType<WebhookCount200Response>(response);
+            //Assert.IsType<ModelResponseWebhookCount>(response);
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.WebhookEvents();
-            //Assert.IsType<WebhookEvents200Response>(response);
+            //Assert.IsType<ModelResponseWebhookEvents>(response);
         }
 
         /// <summary>

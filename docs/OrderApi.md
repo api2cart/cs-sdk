@@ -360,7 +360,7 @@ catch (ApiException e)
 
 <a id="ordercount"></a>
 # **OrderCount**
-> OrderCount200Response OrderCount (string? orderIds = null, string? ids = null, string? customerId = null, string? storeId = null, string? customerEmail = null, string? orderStatus = null, List<string>? orderStatusIds = null, string? ebayOrderStatus = null, string? financialStatus = null, List<string>? financialStatusIds = null, string? fulfillmentChannel = null, string? fulfillmentStatus = null, string? shippingMethod = null, string? deliveryMethod = null, string? tags = null, string? shipNodeType = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, bool? useLatestApiVersion = null, string? vendorId = null)
+> ModelResponseOrderCount OrderCount (string? orderIds = null, string? ids = null, string? customerId = null, string? storeId = null, string? customerEmail = null, string? orderStatus = null, List<string>? orderStatusIds = null, string? ebayOrderStatus = null, string? financialStatus = null, List<string>? financialStatusIds = null, string? fulfillmentChannel = null, string? fulfillmentStatus = null, string? shippingMethod = null, string? deliveryMethod = null, string? tags = null, string? shipNodeType = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, bool? useLatestApiVersion = null, string? vendorId = null)
 
 order.count
 
@@ -418,7 +418,7 @@ namespace Example
             try
             {
                 // order.count
-                OrderCount200Response result = apiInstance.OrderCount(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion, vendorId);
+                ModelResponseOrderCount result = apiInstance.OrderCount(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion, vendorId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -439,7 +439,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.count
-    ApiResponse<OrderCount200Response> response = apiInstance.OrderCountWithHttpInfo(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion, vendorId);
+    ApiResponse<ModelResponseOrderCount> response = apiInstance.OrderCountWithHttpInfo(orderIds, ids, customerId, storeId, customerEmail, orderStatus, orderStatusIds, ebayOrderStatus, financialStatus, financialStatusIds, fulfillmentChannel, fulfillmentStatus, shippingMethod, deliveryMethod, tags, shipNodeType, createdFrom, createdTo, modifiedFrom, modifiedTo, useLatestApiVersion, vendorId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -481,7 +481,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**OrderCount200Response**](OrderCount200Response.md)
+[**ModelResponseOrderCount**](ModelResponseOrderCount.md)
 
 ### Authorization
 
@@ -502,7 +502,7 @@ catch (ApiException e)
 
 <a id="orderfinancialstatuslist"></a>
 # **OrderFinancialStatusList**
-> OrderFinancialStatusList200Response OrderFinancialStatusList ()
+> ModelResponseOrderFinancialStatusList OrderFinancialStatusList ()
 
 order.financial_status.list
 
@@ -538,7 +538,7 @@ namespace Example
             try
             {
                 // order.financial_status.list
-                OrderFinancialStatusList200Response result = apiInstance.OrderFinancialStatusList();
+                ModelResponseOrderFinancialStatusList result = apiInstance.OrderFinancialStatusList();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -559,7 +559,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.financial_status.list
-    ApiResponse<OrderFinancialStatusList200Response> response = apiInstance.OrderFinancialStatusListWithHttpInfo();
+    ApiResponse<ModelResponseOrderFinancialStatusList> response = apiInstance.OrderFinancialStatusListWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -576,7 +576,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**OrderFinancialStatusList200Response**](OrderFinancialStatusList200Response.md)
+[**ModelResponseOrderFinancialStatusList**](ModelResponseOrderFinancialStatusList.md)
 
 ### Authorization
 
@@ -597,7 +597,7 @@ This endpoint does not need any parameter.
 
 <a id="orderfulfillmentstatuslist"></a>
 # **OrderFulfillmentStatusList**
-> OrderFulfillmentStatusList200Response OrderFulfillmentStatusList (string? action = null)
+> ModelResponseOrderFulfillmentStatusList OrderFulfillmentStatusList (string? action = null)
 
 order.fulfillment_status.list
 
@@ -634,7 +634,7 @@ namespace Example
             try
             {
                 // order.fulfillment_status.list
-                OrderFulfillmentStatusList200Response result = apiInstance.OrderFulfillmentStatusList(action);
+                ModelResponseOrderFulfillmentStatusList result = apiInstance.OrderFulfillmentStatusList(action);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -655,7 +655,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // order.fulfillment_status.list
-    ApiResponse<OrderFulfillmentStatusList200Response> response = apiInstance.OrderFulfillmentStatusListWithHttpInfo(action);
+    ApiResponse<ModelResponseOrderFulfillmentStatusList> response = apiInstance.OrderFulfillmentStatusListWithHttpInfo(action);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -676,7 +676,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**OrderFulfillmentStatusList200Response**](OrderFulfillmentStatusList200Response.md)
+[**ModelResponseOrderFulfillmentStatusList**](ModelResponseOrderFulfillmentStatusList.md)
 
 ### Authorization
 

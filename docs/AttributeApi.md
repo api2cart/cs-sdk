@@ -485,7 +485,7 @@ catch (ApiException e)
 
 <a id="attributecount"></a>
 # **AttributeCount**
-> AttributeCount200Response AttributeCount (string? type = null, string? attributeSetId = null, string? storeId = null, string? langId = null, bool? visible = null, bool? required = null, bool? varSystem = null)
+> ModelResponseAttributeCount AttributeCount (string? type = null, string? attributeSetId = null, string? storeId = null, string? langId = null, bool? visible = null, bool? required = null, bool? varSystem = null)
 
 attribute.count
 
@@ -528,7 +528,7 @@ namespace Example
             try
             {
                 // attribute.count
-                AttributeCount200Response result = apiInstance.AttributeCount(type, attributeSetId, storeId, langId, visible, required, varSystem);
+                ModelResponseAttributeCount result = apiInstance.AttributeCount(type, attributeSetId, storeId, langId, visible, required, varSystem);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -549,7 +549,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.count
-    ApiResponse<AttributeCount200Response> response = apiInstance.AttributeCountWithHttpInfo(type, attributeSetId, storeId, langId, visible, required, varSystem);
+    ApiResponse<ModelResponseAttributeCount> response = apiInstance.AttributeCountWithHttpInfo(type, attributeSetId, storeId, langId, visible, required, varSystem);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -576,7 +576,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AttributeCount200Response**](AttributeCount200Response.md)
+[**ModelResponseAttributeCount**](ModelResponseAttributeCount.md)
 
 ### Authorization
 
@@ -1049,7 +1049,7 @@ catch (ApiException e)
 
 <a id="attributetypelist"></a>
 # **AttributeTypeList**
-> AttributeTypeList200Response AttributeTypeList ()
+> ModelResponseAttributeTypeList AttributeTypeList ()
 
 attribute.type.list
 
@@ -1085,7 +1085,7 @@ namespace Example
             try
             {
                 // attribute.type.list
-                AttributeTypeList200Response result = apiInstance.AttributeTypeList();
+                ModelResponseAttributeTypeList result = apiInstance.AttributeTypeList();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1106,7 +1106,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // attribute.type.list
-    ApiResponse<AttributeTypeList200Response> response = apiInstance.AttributeTypeListWithHttpInfo();
+    ApiResponse<ModelResponseAttributeTypeList> response = apiInstance.AttributeTypeListWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1123,7 +1123,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**AttributeTypeList200Response**](AttributeTypeList200Response.md)
+[**ModelResponseAttributeTypeList**](ModelResponseAttributeTypeList.md)
 
 ### Authorization
 

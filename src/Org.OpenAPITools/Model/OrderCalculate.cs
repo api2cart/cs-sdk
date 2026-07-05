@@ -41,7 +41,7 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="OrderCalculate" /> class.
         /// </summary>
         /// <param name="customerEmail">Defines the customer specified by email for whom the order needs to be calculated (required).</param>
-        /// <param name="currency">Currency code of order.</param>
+        /// <param name="currency">Defines currency code.</param>
         /// <param name="currencyId">Currency Id.</param>
         /// <param name="storeId">Store Id.</param>
         /// <param name="coupons">Coupons that will be applied to order. If the order isn&#39;t eligible for any given discount code or there is no discount with such a code it will be skipped during calculation.</param>
@@ -153,9 +153,9 @@ namespace Org.OpenAPITools.Model
         public string CustomerEmail { get; set; }
 
         /// <summary>
-        /// Currency code of order
+        /// Defines currency code
         /// </summary>
-        /// <value>Currency code of order</value>
+        /// <value>Defines currency code</value>
         /*
         <example>USD</example>
         */

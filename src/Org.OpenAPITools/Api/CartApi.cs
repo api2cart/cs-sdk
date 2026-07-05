@@ -35,8 +35,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CartCatalogPriceRulesCount200Response</returns>
-        CartCatalogPriceRulesCount200Response CartCatalogPriceRulesCount(int operationIndex = 0);
+        /// <returns>ModelResponseCartCatalogPriceRulesCount</returns>
+        ModelResponseCartCatalogPriceRulesCount CartCatalogPriceRulesCount(int operationIndex = 0);
 
         /// <summary>
         /// cart.catalog_price_rules.count
@@ -46,8 +46,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CartCatalogPriceRulesCount200Response</returns>
-        ApiResponse<CartCatalogPriceRulesCount200Response> CartCatalogPriceRulesCountWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseCartCatalogPriceRulesCount</returns>
+        ApiResponse<ModelResponseCartCatalogPriceRulesCount> CartCatalogPriceRulesCountWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// cart.catalog_price_rules.list
         /// </summary>
@@ -161,8 +161,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CartCouponCount200Response</returns>
-        CartCouponCount200Response CartCouponCount(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0);
+        /// <returns>ModelResponseCartCouponCount</returns>
+        ModelResponseCartCouponCount CartCouponCount(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.coupon.count
@@ -178,8 +178,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CartCouponCount200Response</returns>
-        ApiResponse<CartCouponCount200Response> CartCouponCountWithHttpInfo(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseCartCouponCount</returns>
+        ApiResponse<ModelResponseCartCouponCount> CartCouponCountWithHttpInfo(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.coupon.delete
         /// </summary>
@@ -287,15 +287,19 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="amount">Defines the gift card amount value.</param>
+        /// <param name="currency">Defines currency code (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="code">Gift card code (optional)</param>
+        /// <param name="name">Entity name (optional)</param>
         /// <param name="ownerEmail">Gift card owner email (optional)</param>
+        /// <param name="ownerName">Gift card owner name (optional)</param>
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
-        /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="message">Free-form message attached to the entity. (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CartGiftcardAdd200Response</returns>
-        CartGiftcardAdd200Response CartGiftcardAdd(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        CartGiftcardAdd200Response CartGiftcardAdd(decimal amount, string? currency = default(string?), string? storeId = default(string?), string? code = default(string?), string? name = default(string?), string? ownerEmail = default(string?), string? ownerName = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? message = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.giftcard.add
@@ -305,15 +309,19 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="amount">Defines the gift card amount value.</param>
+        /// <param name="currency">Defines currency code (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="code">Gift card code (optional)</param>
+        /// <param name="name">Entity name (optional)</param>
         /// <param name="ownerEmail">Gift card owner email (optional)</param>
+        /// <param name="ownerName">Gift card owner name (optional)</param>
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
-        /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="message">Free-form message attached to the entity. (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CartGiftcardAdd200Response</returns>
-        ApiResponse<CartGiftcardAdd200Response> CartGiftcardAddWithHttpInfo(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<CartGiftcardAdd200Response> CartGiftcardAddWithHttpInfo(decimal amount, string? currency = default(string?), string? storeId = default(string?), string? code = default(string?), string? name = default(string?), string? ownerEmail = default(string?), string? ownerName = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? message = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.giftcard.count
         /// </summary>
@@ -323,8 +331,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CartGiftcardCount200Response</returns>
-        CartGiftcardCount200Response CartGiftcardCount(string? storeId = default(string?), int operationIndex = 0);
+        /// <returns>ModelResponseCartGiftcardCount</returns>
+        ModelResponseCartGiftcardCount CartGiftcardCount(string? storeId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.giftcard.count
@@ -335,8 +343,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CartGiftcardCount200Response</returns>
-        ApiResponse<CartGiftcardCount200Response> CartGiftcardCountWithHttpInfo(string? storeId = default(string?), int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseCartGiftcardCount</returns>
+        ApiResponse<ModelResponseCartGiftcardCount> CartGiftcardCountWithHttpInfo(string? storeId = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.giftcard.delete
         /// </summary>
@@ -345,9 +353,10 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AttributeDelete200Response</returns>
-        AttributeDelete200Response CartGiftcardDelete(string id, int operationIndex = 0);
+        AttributeDelete200Response CartGiftcardDelete(string id, string? storeId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.giftcard.delete
@@ -357,9 +366,10 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttributeDelete200Response</returns>
-        ApiResponse<AttributeDelete200Response> CartGiftcardDeleteWithHttpInfo(string id, int operationIndex = 0);
+        ApiResponse<AttributeDelete200Response> CartGiftcardDeleteWithHttpInfo(string id, string? storeId = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.giftcard.list
         /// </summary>
@@ -367,6 +377,7 @@ namespace Org.OpenAPITools.Api
         /// Get gift cards list.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Retrieves gift cards specified by ids (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
@@ -376,7 +387,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartGiftCardList</returns>
-        ModelResponseCartGiftCardList CartGiftcardList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ModelResponseCartGiftCardList CartGiftcardList(string? ids = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// cart.giftcard.list
@@ -385,6 +396,7 @@ namespace Org.OpenAPITools.Api
         /// Get gift cards list.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Retrieves gift cards specified by ids (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
@@ -394,7 +406,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartGiftCardList</returns>
-        ApiResponse<ModelResponseCartGiftCardList> CartGiftcardListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
+        ApiResponse<ModelResponseCartGiftCardList> CartGiftcardListWithHttpInfo(string? ids = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
         /// <summary>
         /// cart.info
         /// </summary>
@@ -428,7 +440,7 @@ namespace Org.OpenAPITools.Api
         /// cart.meta_data.list
         /// </summary>
         /// <remarks>
-        /// Using this method, you can get a list of metadata for various entities (products, options, customers, orders). Usually this is data created by third-party plugins.
+        /// Using this method, you can get a list of metadata for various entities. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -449,7 +461,7 @@ namespace Org.OpenAPITools.Api
         /// cart.meta_data.list
         /// </summary>
         /// <remarks>
-        /// Using this method, you can get a list of metadata for various entities (products, options, customers, orders). Usually this is data created by third-party plugins.
+        /// Using this method, you can get a list of metadata for various entities. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -469,7 +481,7 @@ namespace Org.OpenAPITools.Api
         /// cart.meta_data.set
         /// </summary>
         /// <remarks>
-        /// Set meta data for a specific entity
+        /// Set metadata for a specific entity. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -488,7 +500,7 @@ namespace Org.OpenAPITools.Api
         /// cart.meta_data.set
         /// </summary>
         /// <remarks>
-        /// Set meta data for a specific entity
+        /// Set metadata for a specific entity. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -541,8 +553,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CartMethods200Response</returns>
-        CartMethods200Response CartMethods(int operationIndex = 0);
+        /// <returns>ModelResponseCartMethods</returns>
+        ModelResponseCartMethods CartMethods(int operationIndex = 0);
 
         /// <summary>
         /// cart.methods
@@ -552,8 +564,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CartMethods200Response</returns>
-        ApiResponse<CartMethods200Response> CartMethodsWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseCartMethods</returns>
+        ApiResponse<ModelResponseCartMethods> CartMethodsWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// cart.plugin.list
         /// </summary>
@@ -764,8 +776,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CartCatalogPriceRulesCount200Response</returns>
-        System.Threading.Tasks.Task<CartCatalogPriceRulesCount200Response> CartCatalogPriceRulesCountAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseCartCatalogPriceRulesCount</returns>
+        System.Threading.Tasks.Task<ModelResponseCartCatalogPriceRulesCount> CartCatalogPriceRulesCountAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.catalog_price_rules.count
@@ -776,8 +788,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CartCatalogPriceRulesCount200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartCatalogPriceRulesCount200Response>> CartCatalogPriceRulesCountWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseCartCatalogPriceRulesCount)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartCatalogPriceRulesCount>> CartCatalogPriceRulesCountWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.catalog_price_rules.list
         /// </summary>
@@ -898,8 +910,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CartCouponCount200Response</returns>
-        System.Threading.Tasks.Task<CartCouponCount200Response> CartCouponCountAsync(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseCartCouponCount</returns>
+        System.Threading.Tasks.Task<ModelResponseCartCouponCount> CartCouponCountAsync(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.coupon.count
@@ -916,8 +928,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CartCouponCount200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartCouponCount200Response>> CartCouponCountWithHttpInfoAsync(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseCartCouponCount)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartCouponCount>> CartCouponCountWithHttpInfoAsync(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.coupon.delete
         /// </summary>
@@ -1031,16 +1043,20 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="amount">Defines the gift card amount value.</param>
+        /// <param name="currency">Defines currency code (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="code">Gift card code (optional)</param>
+        /// <param name="name">Entity name (optional)</param>
         /// <param name="ownerEmail">Gift card owner email (optional)</param>
+        /// <param name="ownerName">Gift card owner name (optional)</param>
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
-        /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="message">Free-form message attached to the entity. (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CartGiftcardAdd200Response</returns>
-        System.Threading.Tasks.Task<CartGiftcardAdd200Response> CartGiftcardAddAsync(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CartGiftcardAdd200Response> CartGiftcardAddAsync(decimal amount, string? currency = default(string?), string? storeId = default(string?), string? code = default(string?), string? name = default(string?), string? ownerEmail = default(string?), string? ownerName = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? message = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.giftcard.add
@@ -1050,16 +1066,20 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="amount">Defines the gift card amount value.</param>
+        /// <param name="currency">Defines currency code (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="code">Gift card code (optional)</param>
+        /// <param name="name">Entity name (optional)</param>
         /// <param name="ownerEmail">Gift card owner email (optional)</param>
+        /// <param name="ownerName">Gift card owner name (optional)</param>
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
-        /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="message">Free-form message attached to the entity. (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CartGiftcardAdd200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartGiftcardAdd200Response>> CartGiftcardAddWithHttpInfoAsync(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CartGiftcardAdd200Response>> CartGiftcardAddWithHttpInfoAsync(decimal amount, string? currency = default(string?), string? storeId = default(string?), string? code = default(string?), string? name = default(string?), string? ownerEmail = default(string?), string? ownerName = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? message = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.giftcard.count
         /// </summary>
@@ -1070,8 +1090,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CartGiftcardCount200Response</returns>
-        System.Threading.Tasks.Task<CartGiftcardCount200Response> CartGiftcardCountAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseCartGiftcardCount</returns>
+        System.Threading.Tasks.Task<ModelResponseCartGiftcardCount> CartGiftcardCountAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.giftcard.count
@@ -1083,8 +1103,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CartGiftcardCount200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartGiftcardCount200Response>> CartGiftcardCountWithHttpInfoAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseCartGiftcardCount)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartGiftcardCount>> CartGiftcardCountWithHttpInfoAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.giftcard.delete
         /// </summary>
@@ -1093,10 +1113,11 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttributeDelete200Response</returns>
-        System.Threading.Tasks.Task<AttributeDelete200Response> CartGiftcardDeleteAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AttributeDelete200Response> CartGiftcardDeleteAsync(string id, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.giftcard.delete
@@ -1106,10 +1127,11 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttributeDelete200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttributeDelete200Response>> CartGiftcardDeleteWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AttributeDelete200Response>> CartGiftcardDeleteWithHttpInfoAsync(string id, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.giftcard.list
         /// </summary>
@@ -1117,6 +1139,7 @@ namespace Org.OpenAPITools.Api
         /// Get gift cards list.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Retrieves gift cards specified by ids (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
@@ -1127,7 +1150,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartGiftCardList</returns>
-        System.Threading.Tasks.Task<ModelResponseCartGiftCardList> CartGiftcardListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseCartGiftCardList> CartGiftcardListAsync(string? ids = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.giftcard.list
@@ -1136,6 +1159,7 @@ namespace Org.OpenAPITools.Api
         /// Get gift cards list.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Retrieves gift cards specified by ids (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
@@ -1146,7 +1170,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartGiftCardList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartGiftCardList>> CartGiftcardListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartGiftCardList>> CartGiftcardListWithHttpInfoAsync(string? ids = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.info
         /// </summary>
@@ -1182,7 +1206,7 @@ namespace Org.OpenAPITools.Api
         /// cart.meta_data.list
         /// </summary>
         /// <remarks>
-        /// Using this method, you can get a list of metadata for various entities (products, options, customers, orders). Usually this is data created by third-party plugins.
+        /// Using this method, you can get a list of metadata for various entities. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -1204,7 +1228,7 @@ namespace Org.OpenAPITools.Api
         /// cart.meta_data.list
         /// </summary>
         /// <remarks>
-        /// Using this method, you can get a list of metadata for various entities (products, options, customers, orders). Usually this is data created by third-party plugins.
+        /// Using this method, you can get a list of metadata for various entities. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -1225,7 +1249,7 @@ namespace Org.OpenAPITools.Api
         /// cart.meta_data.set
         /// </summary>
         /// <remarks>
-        /// Set meta data for a specific entity
+        /// Set metadata for a specific entity. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -1245,7 +1269,7 @@ namespace Org.OpenAPITools.Api
         /// cart.meta_data.set
         /// </summary>
         /// <remarks>
-        /// Set meta data for a specific entity
+        /// Set metadata for a specific entity. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -1302,8 +1326,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CartMethods200Response</returns>
-        System.Threading.Tasks.Task<CartMethods200Response> CartMethodsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseCartMethods</returns>
+        System.Threading.Tasks.Task<ModelResponseCartMethods> CartMethodsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// cart.methods
@@ -1314,8 +1338,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CartMethods200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartMethods200Response>> CartMethodsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseCartMethods)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseCartMethods>> CartMethodsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// cart.plugin.list
         /// </summary>
@@ -1645,10 +1669,10 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CartCatalogPriceRulesCount200Response</returns>
-        public CartCatalogPriceRulesCount200Response CartCatalogPriceRulesCount(int operationIndex = 0)
+        /// <returns>ModelResponseCartCatalogPriceRulesCount</returns>
+        public ModelResponseCartCatalogPriceRulesCount CartCatalogPriceRulesCount(int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CartCatalogPriceRulesCount200Response> localVarResponse = CartCatalogPriceRulesCountWithHttpInfo();
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCatalogPriceRulesCount> localVarResponse = CartCatalogPriceRulesCountWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -1657,8 +1681,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CartCatalogPriceRulesCount200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CartCatalogPriceRulesCount200Response> CartCatalogPriceRulesCountWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseCartCatalogPriceRulesCount</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCatalogPriceRulesCount> CartCatalogPriceRulesCountWithHttpInfo(int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1699,7 +1723,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<CartCatalogPriceRulesCount200Response>("/cart.catalog_price_rules.count.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseCartCatalogPriceRulesCount>("/cart.catalog_price_rules.count.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CartCatalogPriceRulesCount", localVarResponse);
@@ -1718,10 +1742,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CartCatalogPriceRulesCount200Response</returns>
-        public async System.Threading.Tasks.Task<CartCatalogPriceRulesCount200Response> CartCatalogPriceRulesCountAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseCartCatalogPriceRulesCount</returns>
+        public async System.Threading.Tasks.Task<ModelResponseCartCatalogPriceRulesCount> CartCatalogPriceRulesCountAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CartCatalogPriceRulesCount200Response> localVarResponse = await CartCatalogPriceRulesCountWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCatalogPriceRulesCount> localVarResponse = await CartCatalogPriceRulesCountWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1731,8 +1755,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CartCatalogPriceRulesCount200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartCatalogPriceRulesCount200Response>> CartCatalogPriceRulesCountWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseCartCatalogPriceRulesCount)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCatalogPriceRulesCount>> CartCatalogPriceRulesCountWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1773,7 +1797,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<CartCatalogPriceRulesCount200Response>("/cart.catalog_price_rules.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseCartCatalogPriceRulesCount>("/cart.catalog_price_rules.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2493,10 +2517,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CartCouponCount200Response</returns>
-        public CartCouponCount200Response CartCouponCount(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0)
+        /// <returns>ModelResponseCartCouponCount</returns>
+        public ModelResponseCartCouponCount CartCouponCount(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CartCouponCount200Response> localVarResponse = CartCouponCountWithHttpInfo(storeId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponCount> localVarResponse = CartCouponCountWithHttpInfo(storeId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo);
             return localVarResponse.Data;
         }
 
@@ -2511,8 +2535,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="dateEndFrom">Filter entity by date_end (greater or equal) (optional)</param>
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CartCouponCount200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CartCouponCount200Response> CartCouponCountWithHttpInfo(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseCartCouponCount</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponCount> CartCouponCountWithHttpInfo(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2577,7 +2601,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<CartCouponCount200Response>("/cart.coupon.count.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseCartCouponCount>("/cart.coupon.count.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CartCouponCount", localVarResponse);
@@ -2602,10 +2626,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CartCouponCount200Response</returns>
-        public async System.Threading.Tasks.Task<CartCouponCount200Response> CartCouponCountAsync(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseCartCouponCount</returns>
+        public async System.Threading.Tasks.Task<ModelResponseCartCouponCount> CartCouponCountAsync(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CartCouponCount200Response> localVarResponse = await CartCouponCountWithHttpInfoAsync(storeId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponCount> localVarResponse = await CartCouponCountWithHttpInfoAsync(storeId, avail, dateStartFrom, dateStartTo, dateEndFrom, dateEndTo, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2621,8 +2645,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="dateEndTo">Filter entity by date_end (less or equal) (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CartCouponCount200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartCouponCount200Response>> CartCouponCountWithHttpInfoAsync(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseCartCouponCount)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartCouponCount>> CartCouponCountWithHttpInfoAsync(string? storeId = default(string?), bool? avail = default(bool?), string? dateStartFrom = default(string?), string? dateStartTo = default(string?), string? dateEndFrom = default(string?), string? dateEndTo = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2687,7 +2711,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<CartCouponCount200Response>("/cart.coupon.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseCartCouponCount>("/cart.coupon.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3369,17 +3393,21 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="amount">Defines the gift card amount value.</param>
+        /// <param name="currency">Defines currency code (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="code">Gift card code (optional)</param>
+        /// <param name="name">Entity name (optional)</param>
         /// <param name="ownerEmail">Gift card owner email (optional)</param>
+        /// <param name="ownerName">Gift card owner name (optional)</param>
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
-        /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="message">Free-form message attached to the entity. (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CartGiftcardAdd200Response</returns>
-        public CartGiftcardAdd200Response CartGiftcardAdd(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        public CartGiftcardAdd200Response CartGiftcardAdd(decimal amount, string? currency = default(string?), string? storeId = default(string?), string? code = default(string?), string? name = default(string?), string? ownerEmail = default(string?), string? ownerName = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? message = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response> localVarResponse = CartGiftcardAddWithHttpInfo(amount, code, ownerEmail, recipientEmail, recipientName, ownerName, idempotencyKey);
+            Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response> localVarResponse = CartGiftcardAddWithHttpInfo(amount, currency, storeId, code, name, ownerEmail, ownerName, recipientEmail, recipientName, message, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -3388,15 +3416,19 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="amount">Defines the gift card amount value.</param>
+        /// <param name="currency">Defines currency code (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="code">Gift card code (optional)</param>
+        /// <param name="name">Entity name (optional)</param>
         /// <param name="ownerEmail">Gift card owner email (optional)</param>
+        /// <param name="ownerName">Gift card owner name (optional)</param>
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
-        /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="message">Free-form message attached to the entity. (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CartGiftcardAdd200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response> CartGiftcardAddWithHttpInfo(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response> CartGiftcardAddWithHttpInfo(decimal amount, string? currency = default(string?), string? storeId = default(string?), string? code = default(string?), string? name = default(string?), string? ownerEmail = default(string?), string? ownerName = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? message = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3422,13 +3454,29 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "amount", amount));
+            if (currency != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "currency", currency));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
             if (code != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "code", code));
             }
+            if (name != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
+            }
             if (ownerEmail != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "owner_email", ownerEmail));
+            }
+            if (ownerName != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "owner_name", ownerName));
             }
             if (recipientEmail != null)
             {
@@ -3438,9 +3486,9 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "recipient_name", recipientName));
             }
-            if (ownerName != null)
+            if (message != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "owner_name", ownerName));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "message", message));
             }
             if (idempotencyKey != null)
             {
@@ -3480,18 +3528,22 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="amount">Defines the gift card amount value.</param>
+        /// <param name="currency">Defines currency code (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="code">Gift card code (optional)</param>
+        /// <param name="name">Entity name (optional)</param>
         /// <param name="ownerEmail">Gift card owner email (optional)</param>
+        /// <param name="ownerName">Gift card owner name (optional)</param>
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
-        /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="message">Free-form message attached to the entity. (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CartGiftcardAdd200Response</returns>
-        public async System.Threading.Tasks.Task<CartGiftcardAdd200Response> CartGiftcardAddAsync(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CartGiftcardAdd200Response> CartGiftcardAddAsync(decimal amount, string? currency = default(string?), string? storeId = default(string?), string? code = default(string?), string? name = default(string?), string? ownerEmail = default(string?), string? ownerName = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? message = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response> localVarResponse = await CartGiftcardAddWithHttpInfoAsync(amount, code, ownerEmail, recipientEmail, recipientName, ownerName, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response> localVarResponse = await CartGiftcardAddWithHttpInfoAsync(amount, currency, storeId, code, name, ownerEmail, ownerName, recipientEmail, recipientName, message, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3500,16 +3552,20 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="amount">Defines the gift card amount value.</param>
+        /// <param name="currency">Defines currency code (optional)</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="code">Gift card code (optional)</param>
+        /// <param name="name">Entity name (optional)</param>
         /// <param name="ownerEmail">Gift card owner email (optional)</param>
+        /// <param name="ownerName">Gift card owner name (optional)</param>
         /// <param name="recipientEmail">Gift card recipient email (optional)</param>
         /// <param name="recipientName">Gift card recipient name (optional)</param>
-        /// <param name="ownerName">Gift card owner name (optional)</param>
+        /// <param name="message">Free-form message attached to the entity. (optional)</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CartGiftcardAdd200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response>> CartGiftcardAddWithHttpInfoAsync(decimal amount, string? code = default(string?), string? ownerEmail = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? ownerName = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartGiftcardAdd200Response>> CartGiftcardAddWithHttpInfoAsync(decimal amount, string? currency = default(string?), string? storeId = default(string?), string? code = default(string?), string? name = default(string?), string? ownerEmail = default(string?), string? ownerName = default(string?), string? recipientEmail = default(string?), string? recipientName = default(string?), string? message = default(string?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3535,13 +3591,29 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "amount", amount));
+            if (currency != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "currency", currency));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
             if (code != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "code", code));
             }
+            if (name != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "name", name));
+            }
             if (ownerEmail != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "owner_email", ownerEmail));
+            }
+            if (ownerName != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "owner_name", ownerName));
             }
             if (recipientEmail != null)
             {
@@ -3551,9 +3623,9 @@ namespace Org.OpenAPITools.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "recipient_name", recipientName));
             }
-            if (ownerName != null)
+            if (message != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "owner_name", ownerName));
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "message", message));
             }
             if (idempotencyKey != null)
             {
@@ -3595,10 +3667,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CartGiftcardCount200Response</returns>
-        public CartGiftcardCount200Response CartGiftcardCount(string? storeId = default(string?), int operationIndex = 0)
+        /// <returns>ModelResponseCartGiftcardCount</returns>
+        public ModelResponseCartGiftcardCount CartGiftcardCount(string? storeId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CartGiftcardCount200Response> localVarResponse = CartGiftcardCountWithHttpInfo(storeId);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftcardCount> localVarResponse = CartGiftcardCountWithHttpInfo(storeId);
             return localVarResponse.Data;
         }
 
@@ -3608,8 +3680,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CartGiftcardCount200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CartGiftcardCount200Response> CartGiftcardCountWithHttpInfo(string? storeId = default(string?), int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseCartGiftcardCount</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftcardCount> CartGiftcardCountWithHttpInfo(string? storeId = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3654,7 +3726,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<CartGiftcardCount200Response>("/cart.giftcard.count.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseCartGiftcardCount>("/cart.giftcard.count.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CartGiftcardCount", localVarResponse);
@@ -3674,10 +3746,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CartGiftcardCount200Response</returns>
-        public async System.Threading.Tasks.Task<CartGiftcardCount200Response> CartGiftcardCountAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseCartGiftcardCount</returns>
+        public async System.Threading.Tasks.Task<ModelResponseCartGiftcardCount> CartGiftcardCountAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CartGiftcardCount200Response> localVarResponse = await CartGiftcardCountWithHttpInfoAsync(storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftcardCount> localVarResponse = await CartGiftcardCountWithHttpInfoAsync(storeId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3688,8 +3760,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CartGiftcardCount200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartGiftcardCount200Response>> CartGiftcardCountWithHttpInfoAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseCartGiftcardCount)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftcardCount>> CartGiftcardCountWithHttpInfoAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3734,7 +3806,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<CartGiftcardCount200Response>("/cart.giftcard.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseCartGiftcardCount>("/cart.giftcard.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3753,11 +3825,12 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AttributeDelete200Response</returns>
-        public AttributeDelete200Response CartGiftcardDelete(string id, int operationIndex = 0)
+        public AttributeDelete200Response CartGiftcardDelete(string id, string? storeId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response> localVarResponse = CartGiftcardDeleteWithHttpInfo(id);
+            Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response> localVarResponse = CartGiftcardDeleteWithHttpInfo(id, storeId);
             return localVarResponse.Data;
         }
 
@@ -3766,9 +3839,10 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttributeDelete200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response> CartGiftcardDeleteWithHttpInfo(string id, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response> CartGiftcardDeleteWithHttpInfo(string id, string? storeId = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3800,6 +3874,10 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
 
             localVarRequestOptions.Operation = "CartApi.CartGiftcardDelete";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -3834,12 +3912,13 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttributeDelete200Response</returns>
-        public async System.Threading.Tasks.Task<AttributeDelete200Response> CartGiftcardDeleteAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AttributeDelete200Response> CartGiftcardDeleteAsync(string id, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response> localVarResponse = await CartGiftcardDeleteWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response> localVarResponse = await CartGiftcardDeleteWithHttpInfoAsync(id, storeId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3848,10 +3927,11 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Entity id</param>
+        /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttributeDelete200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response>> CartGiftcardDeleteWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeDelete200Response>> CartGiftcardDeleteWithHttpInfoAsync(string id, string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3883,6 +3963,10 @@ namespace Org.OpenAPITools.Api
             }
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
 
             localVarRequestOptions.Operation = "CartApi.CartGiftcardDelete";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -3917,6 +4001,7 @@ namespace Org.OpenAPITools.Api
         /// cart.giftcard.list Get gift cards list.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Retrieves gift cards specified by ids (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
@@ -3926,9 +4011,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseCartGiftCardList</returns>
-        public ModelResponseCartGiftCardList CartGiftcardList(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public ModelResponseCartGiftCardList CartGiftcardList(string? ids = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList> localVarResponse = CartGiftcardListWithHttpInfo(start, count, pageCursor, storeId, responseFields, varParams, exclude);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList> localVarResponse = CartGiftcardListWithHttpInfo(ids, start, count, pageCursor, storeId, responseFields, varParams, exclude);
             return localVarResponse.Data;
         }
 
@@ -3936,6 +4021,7 @@ namespace Org.OpenAPITools.Api
         /// cart.giftcard.list Get gift cards list.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Retrieves gift cards specified by ids (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
@@ -3945,7 +4031,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseCartGiftCardList</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList> CartGiftcardListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList> CartGiftcardListWithHttpInfo(string? ids = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3970,6 +4056,10 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (ids != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
+            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -4031,6 +4121,7 @@ namespace Org.OpenAPITools.Api
         /// cart.giftcard.list Get gift cards list.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Retrieves gift cards specified by ids (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
@@ -4041,9 +4132,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseCartGiftCardList</returns>
-        public async System.Threading.Tasks.Task<ModelResponseCartGiftCardList> CartGiftcardListAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseCartGiftCardList> CartGiftcardListAsync(string? ids = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList> localVarResponse = await CartGiftcardListWithHttpInfoAsync(start, count, pageCursor, storeId, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList> localVarResponse = await CartGiftcardListWithHttpInfoAsync(ids, start, count, pageCursor, storeId, responseFields, varParams, exclude, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4051,6 +4142,7 @@ namespace Org.OpenAPITools.Api
         /// cart.giftcard.list Get gift cards list.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Retrieves gift cards specified by ids (optional)</param>
         /// <param name="start">This parameter sets the number from which you want to get entities (optional, default to 0)</param>
         /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
@@ -4061,7 +4153,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseCartGiftCardList)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList>> CartGiftcardListWithHttpInfoAsync(int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartGiftCardList>> CartGiftcardListWithHttpInfoAsync(string? ids = default(string?), int? start = default(int?), int? count = default(int?), string? pageCursor = default(string?), string? storeId = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -4086,6 +4178,10 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (ids != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
+            }
             if (start != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "start", start));
@@ -4340,7 +4436,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// cart.meta_data.list Using this method, you can get a list of metadata for various entities (products, options, customers, orders). Usually this is data created by third-party plugins.
+        /// cart.meta_data.list Using this method, you can get a list of metadata for various entities. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -4362,7 +4458,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// cart.meta_data.list Using this method, you can get a list of metadata for various entities (products, options, customers, orders). Usually this is data created by third-party plugins.
+        /// cart.meta_data.list Using this method, you can get a list of metadata for various entities. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -4475,7 +4571,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// cart.meta_data.list Using this method, you can get a list of metadata for various entities (products, options, customers, orders). Usually this is data created by third-party plugins.
+        /// cart.meta_data.list Using this method, you can get a list of metadata for various entities. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -4498,7 +4594,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// cart.meta_data.list Using this method, you can get a list of metadata for various entities (products, options, customers, orders). Usually this is data created by third-party plugins.
+        /// cart.meta_data.list Using this method, you can get a list of metadata for various entities. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -4613,7 +4709,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// cart.meta_data.set Set meta data for a specific entity
+        /// cart.meta_data.set Set metadata for a specific entity. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -4633,7 +4729,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// cart.meta_data.set Set meta data for a specific entity
+        /// cart.meta_data.set Set metadata for a specific entity. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -4745,7 +4841,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// cart.meta_data.set Set meta data for a specific entity
+        /// cart.meta_data.set Set metadata for a specific entity. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -4766,7 +4862,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// cart.meta_data.set Set meta data for a specific entity
+        /// cart.meta_data.set Set metadata for a specific entity. Entities supported may differ across platforms. To get the list of supported entities, pass an invalid value in the &lt;code&gt;entity&lt;/code&gt; parameter. The response will contain the list of entities supported by the specific platform. Usually this is data created by third-party plugins.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Entity Id</param>
@@ -5109,10 +5205,10 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CartMethods200Response</returns>
-        public CartMethods200Response CartMethods(int operationIndex = 0)
+        /// <returns>ModelResponseCartMethods</returns>
+        public ModelResponseCartMethods CartMethods(int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<CartMethods200Response> localVarResponse = CartMethodsWithHttpInfo();
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartMethods> localVarResponse = CartMethodsWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -5121,8 +5217,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CartMethods200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CartMethods200Response> CartMethodsWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseCartMethods</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseCartMethods> CartMethodsWithHttpInfo(int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -5163,7 +5259,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<CartMethods200Response>("/cart.methods.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseCartMethods>("/cart.methods.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CartMethods", localVarResponse);
@@ -5182,10 +5278,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CartMethods200Response</returns>
-        public async System.Threading.Tasks.Task<CartMethods200Response> CartMethodsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseCartMethods</returns>
+        public async System.Threading.Tasks.Task<ModelResponseCartMethods> CartMethodsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CartMethods200Response> localVarResponse = await CartMethodsWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseCartMethods> localVarResponse = await CartMethodsWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5195,8 +5291,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CartMethods200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CartMethods200Response>> CartMethodsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseCartMethods)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseCartMethods>> CartMethodsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -5237,7 +5333,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<CartMethods200Response>("/cart.methods.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseCartMethods>("/cart.methods.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

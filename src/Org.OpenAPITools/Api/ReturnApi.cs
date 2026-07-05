@@ -35,8 +35,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ReturnActionList200Response</returns>
-        ReturnActionList200Response ReturnActionList(int operationIndex = 0);
+        /// <returns>ModelResponseReturnActionList</returns>
+        ModelResponseReturnActionList ReturnActionList(int operationIndex = 0);
 
         /// <summary>
         /// return.action.list
@@ -46,8 +46,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ReturnActionList200Response</returns>
-        ApiResponse<ReturnActionList200Response> ReturnActionListWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseReturnActionList</returns>
+        ApiResponse<ModelResponseReturnActionList> ReturnActionListWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// return.count
         /// </summary>
@@ -67,8 +67,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ReturnCount200Response</returns>
-        ReturnCount200Response ReturnCount(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
+        /// <returns>ModelResponseReturnCount</returns>
+        ModelResponseReturnCount ReturnCount(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// return.count
@@ -89,8 +89,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ReturnCount200Response</returns>
-        ApiResponse<ReturnCount200Response> ReturnCountWithHttpInfo(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseReturnCount</returns>
+        ApiResponse<ModelResponseReturnCount> ReturnCountWithHttpInfo(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0);
         /// <summary>
         /// return.info
         /// </summary>
@@ -190,8 +190,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ReturnReasonList200Response</returns>
-        ReturnReasonList200Response ReturnReasonList(string? storeId = default(string?), int operationIndex = 0);
+        /// <returns>ModelResponseReturnReasonList</returns>
+        ModelResponseReturnReasonList ReturnReasonList(string? storeId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// return.reason.list
@@ -202,8 +202,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ReturnReasonList200Response</returns>
-        ApiResponse<ReturnReasonList200Response> ReturnReasonListWithHttpInfo(string? storeId = default(string?), int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseReturnReasonList</returns>
+        ApiResponse<ModelResponseReturnReasonList> ReturnReasonListWithHttpInfo(string? storeId = default(string?), int operationIndex = 0);
         /// <summary>
         /// return.status.list
         /// </summary>
@@ -212,8 +212,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ReturnStatusList200Response</returns>
-        ReturnStatusList200Response ReturnStatusList(int operationIndex = 0);
+        /// <returns>ModelResponseReturnStatusList</returns>
+        ModelResponseReturnStatusList ReturnStatusList(int operationIndex = 0);
 
         /// <summary>
         /// return.status.list
@@ -223,8 +223,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ReturnStatusList200Response</returns>
-        ApiResponse<ReturnStatusList200Response> ReturnStatusListWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseReturnStatusList</returns>
+        ApiResponse<ModelResponseReturnStatusList> ReturnStatusListWithHttpInfo(int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -243,8 +243,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ReturnActionList200Response</returns>
-        System.Threading.Tasks.Task<ReturnActionList200Response> ReturnActionListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseReturnActionList</returns>
+        System.Threading.Tasks.Task<ModelResponseReturnActionList> ReturnActionListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// return.action.list
@@ -255,8 +255,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ReturnActionList200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReturnActionList200Response>> ReturnActionListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseReturnActionList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseReturnActionList>> ReturnActionListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// return.count
         /// </summary>
@@ -277,8 +277,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ReturnCount200Response</returns>
-        System.Threading.Tasks.Task<ReturnCount200Response> ReturnCountAsync(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseReturnCount</returns>
+        System.Threading.Tasks.Task<ModelResponseReturnCount> ReturnCountAsync(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// return.count
@@ -300,8 +300,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ReturnCount200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReturnCount200Response>> ReturnCountWithHttpInfoAsync(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseReturnCount)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseReturnCount>> ReturnCountWithHttpInfoAsync(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// return.info
         /// </summary>
@@ -406,8 +406,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ReturnReasonList200Response</returns>
-        System.Threading.Tasks.Task<ReturnReasonList200Response> ReturnReasonListAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseReturnReasonList</returns>
+        System.Threading.Tasks.Task<ModelResponseReturnReasonList> ReturnReasonListAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// return.reason.list
@@ -419,8 +419,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ReturnReasonList200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReturnReasonList200Response>> ReturnReasonListWithHttpInfoAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseReturnReasonList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseReturnReasonList>> ReturnReasonListWithHttpInfoAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// return.status.list
         /// </summary>
@@ -430,8 +430,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ReturnStatusList200Response</returns>
-        System.Threading.Tasks.Task<ReturnStatusList200Response> ReturnStatusListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseReturnStatusList</returns>
+        System.Threading.Tasks.Task<ModelResponseReturnStatusList> ReturnStatusListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// return.status.list
@@ -442,8 +442,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ReturnStatusList200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReturnStatusList200Response>> ReturnStatusListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseReturnStatusList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseReturnStatusList>> ReturnStatusListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -569,10 +569,10 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ReturnActionList200Response</returns>
-        public ReturnActionList200Response ReturnActionList(int operationIndex = 0)
+        /// <returns>ModelResponseReturnActionList</returns>
+        public ModelResponseReturnActionList ReturnActionList(int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ReturnActionList200Response> localVarResponse = ReturnActionListWithHttpInfo();
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnActionList> localVarResponse = ReturnActionListWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -581,8 +581,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ReturnActionList200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ReturnActionList200Response> ReturnActionListWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseReturnActionList</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnActionList> ReturnActionListWithHttpInfo(int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -623,7 +623,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ReturnActionList200Response>("/return.action.list.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseReturnActionList>("/return.action.list.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReturnActionList", localVarResponse);
@@ -642,10 +642,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ReturnActionList200Response</returns>
-        public async System.Threading.Tasks.Task<ReturnActionList200Response> ReturnActionListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseReturnActionList</returns>
+        public async System.Threading.Tasks.Task<ModelResponseReturnActionList> ReturnActionListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ReturnActionList200Response> localVarResponse = await ReturnActionListWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnActionList> localVarResponse = await ReturnActionListWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -655,8 +655,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ReturnActionList200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ReturnActionList200Response>> ReturnActionListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseReturnActionList)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnActionList>> ReturnActionListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -697,7 +697,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ReturnActionList200Response>("/return.action.list.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseReturnActionList>("/return.action.list.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -727,10 +727,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ReturnCount200Response</returns>
-        public ReturnCount200Response ReturnCount(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
+        /// <returns>ModelResponseReturnCount</returns>
+        public ModelResponseReturnCount ReturnCount(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ReturnCount200Response> localVarResponse = ReturnCountWithHttpInfo(orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, reportRequestId, disableReportCache);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnCount> localVarResponse = ReturnCountWithHttpInfo(orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, reportRequestId, disableReportCache);
             return localVarResponse.Data;
         }
 
@@ -750,8 +750,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="reportRequestId">Report request id (optional)</param>
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ReturnCount200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ReturnCount200Response> ReturnCountWithHttpInfo(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseReturnCount</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnCount> ReturnCountWithHttpInfo(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -836,7 +836,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ReturnCount200Response>("/return.count.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseReturnCount>("/return.count.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReturnCount", localVarResponse);
@@ -866,10 +866,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ReturnCount200Response</returns>
-        public async System.Threading.Tasks.Task<ReturnCount200Response> ReturnCountAsync(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseReturnCount</returns>
+        public async System.Threading.Tasks.Task<ModelResponseReturnCount> ReturnCountAsync(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ReturnCount200Response> localVarResponse = await ReturnCountWithHttpInfoAsync(orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, reportRequestId, disableReportCache, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnCount> localVarResponse = await ReturnCountWithHttpInfoAsync(orderIds, customerId, storeId, status, returnType, createdFrom, createdTo, modifiedFrom, modifiedTo, reportRequestId, disableReportCache, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -890,8 +890,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="disableReportCache">Disable report cache for current request (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ReturnCount200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ReturnCount200Response>> ReturnCountWithHttpInfoAsync(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseReturnCount)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnCount>> ReturnCountWithHttpInfoAsync(string? orderIds = default(string?), string? customerId = default(string?), string? storeId = default(string?), string? status = default(string?), string? returnType = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? reportRequestId = default(string?), bool? disableReportCache = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -976,7 +976,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ReturnCount200Response>("/return.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseReturnCount>("/return.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1584,10 +1584,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ReturnReasonList200Response</returns>
-        public ReturnReasonList200Response ReturnReasonList(string? storeId = default(string?), int operationIndex = 0)
+        /// <returns>ModelResponseReturnReasonList</returns>
+        public ModelResponseReturnReasonList ReturnReasonList(string? storeId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ReturnReasonList200Response> localVarResponse = ReturnReasonListWithHttpInfo(storeId);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnReasonList> localVarResponse = ReturnReasonListWithHttpInfo(storeId);
             return localVarResponse.Data;
         }
 
@@ -1597,8 +1597,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ReturnReasonList200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ReturnReasonList200Response> ReturnReasonListWithHttpInfo(string? storeId = default(string?), int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseReturnReasonList</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnReasonList> ReturnReasonListWithHttpInfo(string? storeId = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1643,7 +1643,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ReturnReasonList200Response>("/return.reason.list.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseReturnReasonList>("/return.reason.list.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReturnReasonList", localVarResponse);
@@ -1663,10 +1663,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ReturnReasonList200Response</returns>
-        public async System.Threading.Tasks.Task<ReturnReasonList200Response> ReturnReasonListAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseReturnReasonList</returns>
+        public async System.Threading.Tasks.Task<ModelResponseReturnReasonList> ReturnReasonListAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ReturnReasonList200Response> localVarResponse = await ReturnReasonListWithHttpInfoAsync(storeId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnReasonList> localVarResponse = await ReturnReasonListWithHttpInfoAsync(storeId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1677,8 +1677,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ReturnReasonList200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ReturnReasonList200Response>> ReturnReasonListWithHttpInfoAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseReturnReasonList)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnReasonList>> ReturnReasonListWithHttpInfoAsync(string? storeId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1723,7 +1723,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ReturnReasonList200Response>("/return.reason.list.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseReturnReasonList>("/return.reason.list.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1742,10 +1742,10 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ReturnStatusList200Response</returns>
-        public ReturnStatusList200Response ReturnStatusList(int operationIndex = 0)
+        /// <returns>ModelResponseReturnStatusList</returns>
+        public ModelResponseReturnStatusList ReturnStatusList(int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ReturnStatusList200Response> localVarResponse = ReturnStatusListWithHttpInfo();
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnStatusList> localVarResponse = ReturnStatusListWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -1754,8 +1754,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ReturnStatusList200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ReturnStatusList200Response> ReturnStatusListWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseReturnStatusList</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnStatusList> ReturnStatusListWithHttpInfo(int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1796,7 +1796,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ReturnStatusList200Response>("/return.status.list.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseReturnStatusList>("/return.status.list.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReturnStatusList", localVarResponse);
@@ -1815,10 +1815,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ReturnStatusList200Response</returns>
-        public async System.Threading.Tasks.Task<ReturnStatusList200Response> ReturnStatusListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseReturnStatusList</returns>
+        public async System.Threading.Tasks.Task<ModelResponseReturnStatusList> ReturnStatusListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ReturnStatusList200Response> localVarResponse = await ReturnStatusListWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnStatusList> localVarResponse = await ReturnStatusListWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1828,8 +1828,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ReturnStatusList200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ReturnStatusList200Response>> ReturnStatusListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseReturnStatusList)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseReturnStatusList>> ReturnStatusListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1870,7 +1870,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ReturnStatusList200Response>("/return.status.list.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseReturnStatusList>("/return.status.list.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

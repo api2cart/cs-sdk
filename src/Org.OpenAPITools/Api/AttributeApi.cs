@@ -196,8 +196,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="required">Defines if the option is required (optional)</param>
         /// <param name="varSystem">True if attribute is system (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AttributeCount200Response</returns>
-        AttributeCount200Response AttributeCount(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0);
+        /// <returns>ModelResponseAttributeCount</returns>
+        ModelResponseAttributeCount AttributeCount(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// attribute.count
@@ -214,8 +214,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="required">Defines if the option is required (optional)</param>
         /// <param name="varSystem">True if attribute is system (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AttributeCount200Response</returns>
-        ApiResponse<AttributeCount200Response> AttributeCountWithHttpInfo(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseAttributeCount</returns>
+        ApiResponse<ModelResponseAttributeCount> AttributeCountWithHttpInfo(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0);
         /// <summary>
         /// attribute.delete
         /// </summary>
@@ -368,8 +368,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AttributeTypeList200Response</returns>
-        AttributeTypeList200Response AttributeTypeList(int operationIndex = 0);
+        /// <returns>ModelResponseAttributeTypeList</returns>
+        ModelResponseAttributeTypeList AttributeTypeList(int operationIndex = 0);
 
         /// <summary>
         /// attribute.type.list
@@ -379,8 +379,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AttributeTypeList200Response</returns>
-        ApiResponse<AttributeTypeList200Response> AttributeTypeListWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseAttributeTypeList</returns>
+        ApiResponse<ModelResponseAttributeTypeList> AttributeTypeListWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// attribute.unassign.group
         /// </summary>
@@ -756,8 +756,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="varSystem">True if attribute is system (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AttributeCount200Response</returns>
-        System.Threading.Tasks.Task<AttributeCount200Response> AttributeCountAsync(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseAttributeCount</returns>
+        System.Threading.Tasks.Task<ModelResponseAttributeCount> AttributeCountAsync(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// attribute.count
@@ -775,8 +775,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="varSystem">True if attribute is system (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AttributeCount200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttributeCount200Response>> AttributeCountWithHttpInfoAsync(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseAttributeCount)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseAttributeCount>> AttributeCountWithHttpInfoAsync(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// attribute.delete
         /// </summary>
@@ -938,8 +938,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AttributeTypeList200Response</returns>
-        System.Threading.Tasks.Task<AttributeTypeList200Response> AttributeTypeListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseAttributeTypeList</returns>
+        System.Threading.Tasks.Task<ModelResponseAttributeTypeList> AttributeTypeListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// attribute.type.list
@@ -950,8 +950,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AttributeTypeList200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttributeTypeList200Response>> AttributeTypeListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseAttributeTypeList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseAttributeTypeList>> AttributeTypeListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// attribute.unassign.group
         /// </summary>
@@ -2328,10 +2328,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="required">Defines if the option is required (optional)</param>
         /// <param name="varSystem">True if attribute is system (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AttributeCount200Response</returns>
-        public AttributeCount200Response AttributeCount(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0)
+        /// <returns>ModelResponseAttributeCount</returns>
+        public ModelResponseAttributeCount AttributeCount(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeCount200Response> localVarResponse = AttributeCountWithHttpInfo(type, attributeSetId, storeId, langId, visible, required, varSystem);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeCount> localVarResponse = AttributeCountWithHttpInfo(type, attributeSetId, storeId, langId, visible, required, varSystem);
             return localVarResponse.Data;
         }
 
@@ -2347,8 +2347,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="required">Defines if the option is required (optional)</param>
         /// <param name="varSystem">True if attribute is system (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AttributeCount200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AttributeCount200Response> AttributeCountWithHttpInfo(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseAttributeCount</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeCount> AttributeCountWithHttpInfo(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2417,7 +2417,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<AttributeCount200Response>("/attribute.count.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseAttributeCount>("/attribute.count.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AttributeCount", localVarResponse);
@@ -2443,10 +2443,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="varSystem">True if attribute is system (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AttributeCount200Response</returns>
-        public async System.Threading.Tasks.Task<AttributeCount200Response> AttributeCountAsync(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseAttributeCount</returns>
+        public async System.Threading.Tasks.Task<ModelResponseAttributeCount> AttributeCountAsync(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeCount200Response> localVarResponse = await AttributeCountWithHttpInfoAsync(type, attributeSetId, storeId, langId, visible, required, varSystem, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeCount> localVarResponse = await AttributeCountWithHttpInfoAsync(type, attributeSetId, storeId, langId, visible, required, varSystem, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2463,8 +2463,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="varSystem">True if attribute is system (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AttributeCount200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeCount200Response>> AttributeCountWithHttpInfoAsync(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseAttributeCount)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeCount>> AttributeCountWithHttpInfoAsync(string? type = default(string?), string? attributeSetId = default(string?), string? storeId = default(string?), string? langId = default(string?), bool? visible = default(bool?), bool? required = default(bool?), bool? varSystem = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2533,7 +2533,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<AttributeCount200Response>("/attribute.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseAttributeCount>("/attribute.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3512,10 +3512,10 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AttributeTypeList200Response</returns>
-        public AttributeTypeList200Response AttributeTypeList(int operationIndex = 0)
+        /// <returns>ModelResponseAttributeTypeList</returns>
+        public ModelResponseAttributeTypeList AttributeTypeList(int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeTypeList200Response> localVarResponse = AttributeTypeListWithHttpInfo();
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeTypeList> localVarResponse = AttributeTypeListWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -3524,8 +3524,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AttributeTypeList200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AttributeTypeList200Response> AttributeTypeListWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseAttributeTypeList</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeTypeList> AttributeTypeListWithHttpInfo(int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -3566,7 +3566,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<AttributeTypeList200Response>("/attribute.type.list.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseAttributeTypeList>("/attribute.type.list.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AttributeTypeList", localVarResponse);
@@ -3585,10 +3585,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AttributeTypeList200Response</returns>
-        public async System.Threading.Tasks.Task<AttributeTypeList200Response> AttributeTypeListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseAttributeTypeList</returns>
+        public async System.Threading.Tasks.Task<ModelResponseAttributeTypeList> AttributeTypeListAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeTypeList200Response> localVarResponse = await AttributeTypeListWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeTypeList> localVarResponse = await AttributeTypeListWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3598,8 +3598,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AttributeTypeList200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeTypeList200Response>> AttributeTypeListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseAttributeTypeList)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseAttributeTypeList>> AttributeTypeListWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3640,7 +3640,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<AttributeTypeList200Response>("/attribute.type.list.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseAttributeTypeList>("/attribute.type.list.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

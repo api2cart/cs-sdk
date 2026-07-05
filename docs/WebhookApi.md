@@ -13,7 +13,7 @@ All URIs are relative to *https://api.api2cart.local.com/v1.1*
 
 <a id="webhookcount"></a>
 # **WebhookCount**
-> WebhookCount200Response WebhookCount (string? entity = null, string? action = null, bool? active = null)
+> ModelResponseWebhookCount WebhookCount (string? entity = null, string? action = null, bool? active = null)
 
 webhook.count
 
@@ -52,7 +52,7 @@ namespace Example
             try
             {
                 // webhook.count
-                WebhookCount200Response result = apiInstance.WebhookCount(entity, action, active);
+                ModelResponseWebhookCount result = apiInstance.WebhookCount(entity, action, active);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -73,7 +73,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // webhook.count
-    ApiResponse<WebhookCount200Response> response = apiInstance.WebhookCountWithHttpInfo(entity, action, active);
+    ApiResponse<ModelResponseWebhookCount> response = apiInstance.WebhookCountWithHttpInfo(entity, action, active);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -96,7 +96,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**WebhookCount200Response**](WebhookCount200Response.md)
+[**ModelResponseWebhookCount**](ModelResponseWebhookCount.md)
 
 ### Authorization
 
@@ -317,7 +317,7 @@ catch (ApiException e)
 
 <a id="webhookevents"></a>
 # **WebhookEvents**
-> WebhookEvents200Response WebhookEvents ()
+> ModelResponseWebhookEvents WebhookEvents ()
 
 webhook.events
 
@@ -353,7 +353,7 @@ namespace Example
             try
             {
                 // webhook.events
-                WebhookEvents200Response result = apiInstance.WebhookEvents();
+                ModelResponseWebhookEvents result = apiInstance.WebhookEvents();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -374,7 +374,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // webhook.events
-    ApiResponse<WebhookEvents200Response> response = apiInstance.WebhookEventsWithHttpInfo();
+    ApiResponse<ModelResponseWebhookEvents> response = apiInstance.WebhookEventsWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -391,7 +391,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**WebhookEvents200Response**](WebhookEvents200Response.md)
+[**ModelResponseWebhookEvents**](ModelResponseWebhookEvents.md)
 
 ### Authorization
 

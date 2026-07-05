@@ -38,8 +38,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">The action you want to filter webhooks by (e.g. order or product) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WebhookCount200Response</returns>
-        WebhookCount200Response WebhookCount(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0);
+        /// <returns>ModelResponseWebhookCount</returns>
+        ModelResponseWebhookCount WebhookCount(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// webhook.count
@@ -52,8 +52,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">The action you want to filter webhooks by (e.g. order or product) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WebhookCount200Response</returns>
-        ApiResponse<WebhookCount200Response> WebhookCountWithHttpInfo(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseWebhookCount</returns>
+        ApiResponse<ModelResponseWebhookCount> WebhookCountWithHttpInfo(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0);
         /// <summary>
         /// webhook.create
         /// </summary>
@@ -108,8 +108,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WebhookEvents200Response</returns>
-        WebhookEvents200Response WebhookEvents(int operationIndex = 0);
+        /// <returns>ModelResponseWebhookEvents</returns>
+        ModelResponseWebhookEvents WebhookEvents(int operationIndex = 0);
 
         /// <summary>
         /// webhook.events
@@ -119,8 +119,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WebhookEvents200Response</returns>
-        ApiResponse<WebhookEvents200Response> WebhookEventsWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of ModelResponseWebhookEvents</returns>
+        ApiResponse<ModelResponseWebhookEvents> WebhookEventsWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// webhook.list
         /// </summary>
@@ -200,8 +200,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WebhookCount200Response</returns>
-        System.Threading.Tasks.Task<WebhookCount200Response> WebhookCountAsync(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseWebhookCount</returns>
+        System.Threading.Tasks.Task<ModelResponseWebhookCount> WebhookCountAsync(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// webhook.count
@@ -215,8 +215,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WebhookCount200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookCount200Response>> WebhookCountWithHttpInfoAsync(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseWebhookCount)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseWebhookCount>> WebhookCountWithHttpInfoAsync(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// webhook.create
         /// </summary>
@@ -276,8 +276,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WebhookEvents200Response</returns>
-        System.Threading.Tasks.Task<WebhookEvents200Response> WebhookEventsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ModelResponseWebhookEvents</returns>
+        System.Threading.Tasks.Task<ModelResponseWebhookEvents> WebhookEventsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// webhook.events
@@ -288,8 +288,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WebhookEvents200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookEvents200Response>> WebhookEventsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ModelResponseWebhookEvents)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseWebhookEvents>> WebhookEventsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// webhook.list
         /// </summary>
@@ -480,10 +480,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">The action you want to filter webhooks by (e.g. order or product) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WebhookCount200Response</returns>
-        public WebhookCount200Response WebhookCount(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0)
+        /// <returns>ModelResponseWebhookCount</returns>
+        public ModelResponseWebhookCount WebhookCount(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<WebhookCount200Response> localVarResponse = WebhookCountWithHttpInfo(entity, action, active);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseWebhookCount> localVarResponse = WebhookCountWithHttpInfo(entity, action, active);
             return localVarResponse.Data;
         }
 
@@ -495,8 +495,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">The action you want to filter webhooks by (e.g. order or product) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WebhookCount200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<WebhookCount200Response> WebhookCountWithHttpInfo(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseWebhookCount</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseWebhookCount> WebhookCountWithHttpInfo(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -549,7 +549,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<WebhookCount200Response>("/webhook.count.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseWebhookCount>("/webhook.count.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WebhookCount", localVarResponse);
@@ -571,10 +571,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WebhookCount200Response</returns>
-        public async System.Threading.Tasks.Task<WebhookCount200Response> WebhookCountAsync(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseWebhookCount</returns>
+        public async System.Threading.Tasks.Task<ModelResponseWebhookCount> WebhookCountAsync(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<WebhookCount200Response> localVarResponse = await WebhookCountWithHttpInfoAsync(entity, action, active, operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseWebhookCount> localVarResponse = await WebhookCountWithHttpInfoAsync(entity, action, active, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -587,8 +587,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WebhookCount200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<WebhookCount200Response>> WebhookCountWithHttpInfoAsync(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseWebhookCount)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseWebhookCount>> WebhookCountWithHttpInfoAsync(string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -641,7 +641,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<WebhookCount200Response>("/webhook.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseWebhookCount>("/webhook.count.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -992,10 +992,10 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WebhookEvents200Response</returns>
-        public WebhookEvents200Response WebhookEvents(int operationIndex = 0)
+        /// <returns>ModelResponseWebhookEvents</returns>
+        public ModelResponseWebhookEvents WebhookEvents(int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<WebhookEvents200Response> localVarResponse = WebhookEventsWithHttpInfo();
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseWebhookEvents> localVarResponse = WebhookEventsWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -1004,8 +1004,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WebhookEvents200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<WebhookEvents200Response> WebhookEventsWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of ModelResponseWebhookEvents</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseWebhookEvents> WebhookEventsWithHttpInfo(int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1046,7 +1046,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<WebhookEvents200Response>("/webhook.events.json", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ModelResponseWebhookEvents>("/webhook.events.json", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WebhookEvents", localVarResponse);
@@ -1065,10 +1065,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WebhookEvents200Response</returns>
-        public async System.Threading.Tasks.Task<WebhookEvents200Response> WebhookEventsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ModelResponseWebhookEvents</returns>
+        public async System.Threading.Tasks.Task<ModelResponseWebhookEvents> WebhookEventsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<WebhookEvents200Response> localVarResponse = await WebhookEventsWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseWebhookEvents> localVarResponse = await WebhookEventsWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1078,8 +1078,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WebhookEvents200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<WebhookEvents200Response>> WebhookEventsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ModelResponseWebhookEvents)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseWebhookEvents>> WebhookEventsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1120,7 +1120,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<WebhookEvents200Response>("/webhook.events.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseWebhookEvents>("/webhook.events.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

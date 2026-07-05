@@ -106,7 +106,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? storeId = null;
             //string? idempotencyKey = null;
             //var response = instance.CategoryAssign(categoryId, productId, storeId, idempotencyKey);
-            //Assert.IsType<CategoryAssign200Response>(response);
+            //Assert.IsType<ModelResponseCategoryAssign>(response);
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? reportRequestId = null;
             //bool? disableReportCache = null;
             //var response = instance.CategoryCount(parentId, storeId, langId, avail, createdFrom, createdTo, modifiedFrom, modifiedTo, productType, findValue, findWhere, reportRequestId, disableReportCache);
-            //Assert.IsType<CategoryCount200Response>(response);
+            //Assert.IsType<ModelResponseCategoryCount>(response);
         }
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? storeId = null;
             //string? langId = null;
             //var response = instance.CategoryFind(findValue, findWhere, findParams, storeId, langId);
-            //Assert.IsType<CategoryFind200Response>(response);
+            //Assert.IsType<ModelResponseCategoryFind>(response);
         }
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? storeId = null;
             //string? idempotencyKey = null;
             //var response = instance.CategoryUnassign(categoryId, productId, storeId, idempotencyKey);
-            //Assert.IsType<CategoryAssign200Response>(response);
+            //Assert.IsType<ModelResponseCategoryUnassign>(response);
         }
 
         /// <summary>
