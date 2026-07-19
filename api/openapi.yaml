@@ -14,6 +14,7 @@ servers:
   url: https://api.api2cart.local.com/v1.1
 tags:
 - name: account
+- name: analytics
 - name: cart
 - name: product
 - name: marketplace
@@ -1866,6 +1867,368 @@ paths:
       summary: account.config.update
       tags:
       - account
+  /analytics.report.json:
+    get:
+      description: Get analytics report with totals and optional interval breakdown
+        for a store over a given period.
+      operationId: AnalyticsReport
+      parameters:
+      - description: Start date for the analytics period (Y-m-d or Y-m-d H:i:s)
+        example: 2026-01-01
+        explode: true
+        in: query
+        name: date_from
+        required: true
+        schema:
+          type: string
+        style: form
+      - description: End date for the analytics period (Y-m-d or Y-m-d H:i:s). Defaults
+          to the current date.
+        example: 2026-01-31
+        explode: true
+        in: query
+        name: date_to
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Interval for analytics report breakdown
+        example: day
+        explode: true
+        in: query
+        name: interval
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Retrieves orders specified by order status
+        example: Completed
+        explode: true
+        in: query
+        name: order_status
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Retrieves orders specified by financial status
+        example: paid
+        explode: true
+        in: query
+        name: financial_status
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Currency Id
+        example: usd
+        explode: true
+        in: query
+        name: currency_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Store Id
+        example: "1"
+        explode: true
+        in: query
+        name: store_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Set field to sort by
+        example: date
+        explode: true
+        in: query
+        name: sort_by
+        required: false
+        schema:
+          default: date
+          type: string
+        style: form
+      - description: Set sorting direction
+        example: asc
+        explode: true
+        in: query
+        name: sort_direction
+        required: false
+        schema:
+          default: asc
+          type: string
+        style: form
+      - description: Set this parameter in order to choose which entity fields you
+          want to retrieve
+        example: "{result}"
+        explode: true
+        in: query
+        name: response_fields
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response_Analytics_Report_Result'
+          description: successful operation
+      security:
+      - ApiKeyAuth: []
+        StoreKeyAuth: []
+      summary: analytics.report
+      tags:
+      - analytics
+  /analytics.product_report.json:
+    get:
+      description: Get product-level analytics for a store over a given period.
+      operationId: AnalyticsProductReport
+      parameters:
+      - description: Start date for the analytics period (Y-m-d or Y-m-d H:i:s)
+        example: 2026-01-01
+        explode: true
+        in: query
+        name: date_from
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: End date for the analytics period (Y-m-d or Y-m-d H:i:s). Defaults
+          to the current date.
+        example: 2026-01-31
+        explode: true
+        in: query
+        name: date_to
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: This parameter sets the entity amount that has to be retrieved.
+          Max allowed count=250
+        example: 20
+        explode: true
+        in: query
+        name: count
+        required: false
+        schema:
+          default: 10
+          type: integer
+        style: form
+      - description: Filter analytics by product ids
+        example: "4,5"
+        explode: true
+        in: query
+        name: product_ids
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Currency Id
+        example: usd
+        explode: true
+        in: query
+        name: currency_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Store Id
+        example: "1"
+        explode: true
+        in: query
+        name: store_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Defines product add that is specified by comma-separated categories
+          id
+        example: "23,56"
+        explode: true
+        in: query
+        name: categories_ids
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Set field to sort by
+        example: items_sold
+        explode: true
+        in: query
+        name: sort_by
+        required: false
+        schema:
+          default: items_sold
+          type: string
+        style: form
+      - description: Set sorting direction
+        example: asc
+        explode: true
+        in: query
+        name: sort_direction
+        required: false
+        schema:
+          default: desc
+          type: string
+        style: form
+      - description: Used to retrieve entities via cursor-based pagination (it can't
+          be used with any other filtering parameter)
+        example: ""
+        explode: true
+        in: query
+        name: page_cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Set this parameter in order to choose which entity fields you
+          want to retrieve
+        example: "{result}"
+        explode: true
+        in: query
+        name: response_fields
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response_Analytics_ProductReport_Result'
+          description: successful operation
+      security:
+      - ApiKeyAuth: []
+        StoreKeyAuth: []
+      summary: analytics.product_report
+      tags:
+      - analytics
+  /analytics.customer_report.json:
+    get:
+      description: Get customer-level analytics for a store over a given period.
+      operationId: AnalyticsCustomerReport
+      parameters:
+      - description: Start date for the analytics period (Y-m-d or Y-m-d H:i:s)
+        example: 2026-01-01
+        explode: true
+        in: query
+        name: date_from
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: End date for the analytics period (Y-m-d or Y-m-d H:i:s). Defaults
+          to the current date.
+        example: 2026-01-31
+        explode: true
+        in: query
+        name: date_to
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: This parameter sets the entity amount that has to be retrieved.
+          Max allowed count=250
+        example: 20
+        explode: true
+        in: query
+        name: count
+        required: false
+        schema:
+          default: 10
+          type: integer
+        style: form
+      - description: Currency Id
+        example: usd
+        explode: true
+        in: query
+        name: currency_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Store Id
+        example: "1"
+        explode: true
+        in: query
+        name: store_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter analytics customers by customer type
+        example: registered
+        explode: true
+        in: query
+        name: customer_type
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter analytics customers by email
+        example: mail@example.com
+        explode: true
+        in: query
+        name: email
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Set field to sort by
+        example: total_spend
+        explode: true
+        in: query
+        name: sort_by
+        required: false
+        schema:
+          default: total_spend
+          type: string
+        style: form
+      - description: Set sorting direction
+        example: asc
+        explode: true
+        in: query
+        name: sort_direction
+        required: false
+        schema:
+          default: desc
+          type: string
+        style: form
+      - description: Used to retrieve entities via cursor-based pagination (it can't
+          be used with any other filtering parameter)
+        example: ""
+        explode: true
+        in: query
+        name: page_cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Set this parameter in order to choose which entity fields you
+          want to retrieve
+        example: "{result}"
+        explode: true
+        in: query
+        name: response_fields
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response_Analytics_CustomerReport_Result'
+          description: successful operation
+      security:
+      - ApiKeyAuth: []
+        StoreKeyAuth: []
+      summary: analytics.customer_report
+      tags:
+      - analytics
   /attribute.info.json:
     get:
       description: Get information about a specific global attribute by its ID.
@@ -15710,6 +16073,450 @@ components:
           name: scapi_scopes
       required:
       - cart_id
+    Response_Analytics_Report_Result:
+      example:
+        period:
+          custom_fields: "{}"
+          additional_fields: "{}"
+          date_to: date_to
+          date_from: date_from
+        intervals:
+        - custom_fields: "{}"
+          additional_fields: "{}"
+          date_to: date_to
+          metrics:
+            fees: 4.145608029883936
+            net_sales: 5.962133916683182
+            custom_fields: "{}"
+            gross_sales: 1.4658129805029452
+            tax: 3.616076749251911
+            additional_fields: "{}"
+            refunds: 9.301444243932576
+            orders_count: 0
+            avg_order_value: 2.3021358869347655
+            discounts: 7.061401241503109
+            shipping: 2.027123023002322
+            total_sales: 5.637376656633329
+            items_sold: 6
+            currency_id: currency_id
+          date_from: date_from
+        - custom_fields: "{}"
+          additional_fields: "{}"
+          date_to: date_to
+          metrics:
+            fees: 4.145608029883936
+            net_sales: 5.962133916683182
+            custom_fields: "{}"
+            gross_sales: 1.4658129805029452
+            tax: 3.616076749251911
+            additional_fields: "{}"
+            refunds: 9.301444243932576
+            orders_count: 0
+            avg_order_value: 2.3021358869347655
+            discounts: 7.061401241503109
+            shipping: 2.027123023002322
+            total_sales: 5.637376656633329
+            items_sold: 6
+            currency_id: currency_id
+          date_from: date_from
+        custom_fields: "{}"
+        total_metrics:
+          fees: 4.145608029883936
+          net_sales: 5.962133916683182
+          custom_fields: "{}"
+          gross_sales: 1.4658129805029452
+          tax: 3.616076749251911
+          additional_fields: "{}"
+          refunds: 9.301444243932576
+          orders_count: 0
+          avg_order_value: 2.3021358869347655
+          discounts: 7.061401241503109
+          shipping: 2.027123023002322
+          total_sales: 5.637376656633329
+          items_sold: 6
+          currency_id: currency_id
+        additional_fields: "{}"
+      properties:
+        period:
+          $ref: '#/components/schemas/Analytics_Period'
+        total_metrics:
+          $ref: '#/components/schemas/Analytics_Metric'
+        intervals:
+          items:
+            $ref: '#/components/schemas/Analytics_Interval'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Analytics_Period:
+      example:
+        custom_fields: "{}"
+        additional_fields: "{}"
+        date_to: date_to
+        date_from: date_from
+      properties:
+        date_from:
+          type: string
+        date_to:
+          type: string
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Analytics_Metric:
+      example:
+        fees: 4.145608029883936
+        net_sales: 5.962133916683182
+        custom_fields: "{}"
+        gross_sales: 1.4658129805029452
+        tax: 3.616076749251911
+        additional_fields: "{}"
+        refunds: 9.301444243932576
+        orders_count: 0
+        avg_order_value: 2.3021358869347655
+        discounts: 7.061401241503109
+        shipping: 2.027123023002322
+        total_sales: 5.637376656633329
+        items_sold: 6
+        currency_id: currency_id
+      properties:
+        orders_count:
+          nullable: true
+          type: integer
+        items_sold:
+          nullable: true
+          type: integer
+        gross_sales:
+          nullable: true
+          type: number
+        net_sales:
+          nullable: true
+          type: number
+        total_sales:
+          nullable: true
+          type: number
+        avg_order_value:
+          nullable: true
+          type: number
+        discounts:
+          nullable: true
+          type: number
+        refunds:
+          nullable: true
+          type: number
+        tax:
+          nullable: true
+          type: number
+        shipping:
+          nullable: true
+          type: number
+        fees:
+          nullable: true
+          type: number
+        currency_id:
+          nullable: true
+          type: string
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Analytics_Interval:
+      example:
+        custom_fields: "{}"
+        additional_fields: "{}"
+        date_to: date_to
+        metrics:
+          fees: 4.145608029883936
+          net_sales: 5.962133916683182
+          custom_fields: "{}"
+          gross_sales: 1.4658129805029452
+          tax: 3.616076749251911
+          additional_fields: "{}"
+          refunds: 9.301444243932576
+          orders_count: 0
+          avg_order_value: 2.3021358869347655
+          discounts: 7.061401241503109
+          shipping: 2.027123023002322
+          total_sales: 5.637376656633329
+          items_sold: 6
+          currency_id: currency_id
+        date_from: date_from
+      properties:
+        date_from:
+          type: string
+        date_to:
+          type: string
+        metrics:
+          $ref: '#/components/schemas/Analytics_Metric'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Analytics_ProductReport_Result:
+      example:
+        period:
+          custom_fields: "{}"
+          additional_fields: "{}"
+          date_to: date_to
+          date_from: date_from
+        custom_fields: "{}"
+        additional_fields: "{}"
+        items:
+        - variant_id: variant_id
+          custom_fields: "{}"
+          product_id: product_id
+          name: name
+          additional_fields: "{}"
+          category_ids:
+          - category_ids
+          - category_ids
+          metrics:
+            orders_count: 6
+            discounts: 5.637376656633329
+            net_sales: 5.962133916683182
+            custom_fields: "{}"
+            gross_sales: 1.4658129805029452
+            additional_fields: "{}"
+            items_sold: 0
+            currency_id: currency_id
+            refunds: 2.3021358869347655
+          sku: sku
+        - variant_id: variant_id
+          custom_fields: "{}"
+          product_id: product_id
+          name: name
+          additional_fields: "{}"
+          category_ids:
+          - category_ids
+          - category_ids
+          metrics:
+            orders_count: 6
+            discounts: 5.637376656633329
+            net_sales: 5.962133916683182
+            custom_fields: "{}"
+            gross_sales: 1.4658129805029452
+            additional_fields: "{}"
+            items_sold: 0
+            currency_id: currency_id
+            refunds: 2.3021358869347655
+          sku: sku
+      properties:
+        period:
+          $ref: '#/components/schemas/Analytics_Period'
+        items:
+          items:
+            $ref: '#/components/schemas/Analytics_Product'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Analytics_Product:
+      example:
+        variant_id: variant_id
+        custom_fields: "{}"
+        product_id: product_id
+        name: name
+        additional_fields: "{}"
+        category_ids:
+        - category_ids
+        - category_ids
+        metrics:
+          orders_count: 6
+          discounts: 5.637376656633329
+          net_sales: 5.962133916683182
+          custom_fields: "{}"
+          gross_sales: 1.4658129805029452
+          additional_fields: "{}"
+          items_sold: 0
+          currency_id: currency_id
+          refunds: 2.3021358869347655
+        sku: sku
+      properties:
+        product_id:
+          type: string
+        variant_id:
+          nullable: true
+          type: string
+        sku:
+          nullable: true
+          type: string
+        name:
+          nullable: true
+          type: string
+        category_ids:
+          items:
+            type: string
+          type: array
+        metrics:
+          $ref: '#/components/schemas/Analytics_ProductMetric'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Analytics_ProductMetric:
+      example:
+        orders_count: 6
+        discounts: 5.637376656633329
+        net_sales: 5.962133916683182
+        custom_fields: "{}"
+        gross_sales: 1.4658129805029452
+        additional_fields: "{}"
+        items_sold: 0
+        currency_id: currency_id
+        refunds: 2.3021358869347655
+      properties:
+        items_sold:
+          nullable: true
+          type: integer
+        orders_count:
+          nullable: true
+          type: integer
+        gross_sales:
+          nullable: true
+          type: number
+        net_sales:
+          nullable: true
+          type: number
+        discounts:
+          nullable: true
+          type: number
+        refunds:
+          nullable: true
+          type: number
+        currency_id:
+          nullable: true
+          type: string
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Analytics_CustomerReport_Result:
+      example:
+        period:
+          custom_fields: "{}"
+          additional_fields: "{}"
+          date_to: date_to
+          date_from: date_from
+        custom_fields: "{}"
+        additional_fields: "{}"
+        items:
+        - customer_type: customer_type
+          custom_fields: "{}"
+          name: name
+          additional_fields: "{}"
+          metrics:
+            total_spend: 6.027456183070403
+            orders_count: 0
+            avg_order_value: 1.4658129805029452
+            custom_fields: "{}"
+            additional_fields: "{}"
+            currency_id: currency_id
+          customer_id: customer_id
+          email: email
+        - customer_type: customer_type
+          custom_fields: "{}"
+          name: name
+          additional_fields: "{}"
+          metrics:
+            total_spend: 6.027456183070403
+            orders_count: 0
+            avg_order_value: 1.4658129805029452
+            custom_fields: "{}"
+            additional_fields: "{}"
+            currency_id: currency_id
+          customer_id: customer_id
+          email: email
+      properties:
+        period:
+          $ref: '#/components/schemas/Analytics_Period'
+        items:
+          items:
+            $ref: '#/components/schemas/Analytics_Customer'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Analytics_Customer:
+      example:
+        customer_type: customer_type
+        custom_fields: "{}"
+        name: name
+        additional_fields: "{}"
+        metrics:
+          total_spend: 6.027456183070403
+          orders_count: 0
+          avg_order_value: 1.4658129805029452
+          custom_fields: "{}"
+          additional_fields: "{}"
+          currency_id: currency_id
+        customer_id: customer_id
+        email: email
+      properties:
+        customer_id:
+          type: string
+        name:
+          nullable: true
+          type: string
+        email:
+          nullable: true
+          type: string
+        customer_type:
+          nullable: true
+          type: string
+        metrics:
+          $ref: '#/components/schemas/Analytics_CustomerMetric'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Analytics_CustomerMetric:
+      example:
+        total_spend: 6.027456183070403
+        orders_count: 0
+        avg_order_value: 1.4658129805029452
+        custom_fields: "{}"
+        additional_fields: "{}"
+        currency_id: currency_id
+      properties:
+        orders_count:
+          nullable: true
+          type: integer
+        total_spend:
+          nullable: true
+          type: number
+        avg_order_value:
+          nullable: true
+          type: number
+        currency_id:
+          nullable: true
+          type: string
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
     StoreAttribute:
       example:
         store_id: store_id
