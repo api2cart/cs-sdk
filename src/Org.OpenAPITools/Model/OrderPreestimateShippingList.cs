@@ -49,8 +49,8 @@ namespace Org.OpenAPITools.Model
         /// <param name="shippPostcode">Specifies shipping postcode.</param>
         /// <param name="shippState">Specifies shipping state code.</param>
         /// <param name="shippCountry">Specifies shipping country code (required).</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (default to &quot;force_all&quot;).</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all.</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (default to &quot;force_all&quot;).</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all.</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
         /// <param name="orderItem">orderItem (required).</param>
         public OrderPreestimateShippingList(string warehouseId = default(string), string customerId = default(string), string customerEmail = default(string), string storeId = default(string), string shippAddress1 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), string varParams = @"force_all", string exclude = default(string), string idempotencyKey = default(string), List<OrderPreestimateShippingListOrderItemInner> orderItem = default(List<OrderPreestimateShippingListOrderItemInner>))
@@ -172,9 +172,9 @@ namespace Org.OpenAPITools.Model
         public string ShippCountry { get; set; }
 
         /// <summary>
-        /// Set this parameter in order to choose which entity fields you want to retrieve
+        /// Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve
         /// </summary>
-        /// <value>Set this parameter in order to choose which entity fields you want to retrieve</value>
+        /// <value>Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve</value>
         /*
         <example>id,model,price,images</example>
         */
@@ -182,9 +182,9 @@ namespace Org.OpenAPITools.Model
         public string Params { get; set; }
 
         /// <summary>
-        /// Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all
+        /// Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all
         /// </summary>
-        /// <value>Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all</value>
+        /// <value>Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all</value>
         /*
         <example>false</example>
         */

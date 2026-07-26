@@ -56,13 +56,13 @@ namespace Org.OpenAPITools.Model
         /// <param name="taxable">Specifies whether a tax is charged.</param>
         /// <param name="taxClassId">Defines tax classes where entity has to be added.</param>
         /// <param name="isVirtual">Defines whether the product is virtual (default to false).</param>
-        /// <param name="manageStock">Defines inventory tracking for product variant.</param>
-        /// <param name="inStock">Set stock status.</param>
+        /// <param name="manageStock">Defines inventory tracking for product variant. When true, quantity sets the stock level and the stock status is derived from it; when false, quantity is ignored and in_stock sets the status directly..</param>
+        /// <param name="inStock">Set stock status. Effective only when manage_stock is false — when stock is managed, the status is derived from quantity automatically and this parameter is ignored..</param>
         /// <param name="warehouseId">This parameter is used for selecting a warehouse where you need to set/modify a product quantity..</param>
         /// <param name="reserveQuantity">This parameter allows to reserve/unreserve product variants quantity..</param>
-        /// <param name="quantity">Defines new products&#39; variants quantity.</param>
-        /// <param name="increaseQuantity">Defines the incremental changes in product quantity (default to 0M).</param>
-        /// <param name="reduceQuantity">Defines the decrement changes in product quantity (default to 0M).</param>
+        /// <param name="quantity">Defines new products&#39; variants quantity. Effective only when manage_stock is true — otherwise the value is ignored. To enable stock tracking and set a quantity in one call, pass manage_stock&#x3D;true together with quantity..</param>
+        /// <param name="increaseQuantity">Defines the incremental changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored. (default to 0M).</param>
+        /// <param name="reduceQuantity">Defines the decrement changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored. (default to 0M).</param>
         /// <param name="pricesIncTax">Indicates whether prices include tax. (default to false).</param>
         /// <param name="price">Defines new product&#39;s variant price.</param>
         /// <param name="specialPrice">Defines new product&#39;s variant special price.</param>
@@ -367,9 +367,9 @@ namespace Org.OpenAPITools.Model
         public bool IsVirtual { get; set; }
 
         /// <summary>
-        /// Defines inventory tracking for product variant
+        /// Defines inventory tracking for product variant. When true, quantity sets the stock level and the stock status is derived from it; when false, quantity is ignored and in_stock sets the status directly.
         /// </summary>
-        /// <value>Defines inventory tracking for product variant</value>
+        /// <value>Defines inventory tracking for product variant. When true, quantity sets the stock level and the stock status is derived from it; when false, quantity is ignored and in_stock sets the status directly.</value>
         /*
         <example>false</example>
         */
@@ -377,9 +377,9 @@ namespace Org.OpenAPITools.Model
         public bool ManageStock { get; set; }
 
         /// <summary>
-        /// Set stock status
+        /// Set stock status. Effective only when manage_stock is false — when stock is managed, the status is derived from quantity automatically and this parameter is ignored.
         /// </summary>
-        /// <value>Set stock status</value>
+        /// <value>Set stock status. Effective only when manage_stock is false — when stock is managed, the status is derived from quantity automatically and this parameter is ignored.</value>
         /*
         <example>true</example>
         */
@@ -407,9 +407,9 @@ namespace Org.OpenAPITools.Model
         public decimal ReserveQuantity { get; set; }
 
         /// <summary>
-        /// Defines new products&#39; variants quantity
+        /// Defines new products&#39; variants quantity. Effective only when manage_stock is true — otherwise the value is ignored. To enable stock tracking and set a quantity in one call, pass manage_stock&#x3D;true together with quantity.
         /// </summary>
-        /// <value>Defines new products&#39; variants quantity</value>
+        /// <value>Defines new products&#39; variants quantity. Effective only when manage_stock is true — otherwise the value is ignored. To enable stock tracking and set a quantity in one call, pass manage_stock&#x3D;true together with quantity.</value>
         /*
         <example>6</example>
         */
@@ -417,9 +417,9 @@ namespace Org.OpenAPITools.Model
         public decimal Quantity { get; set; }
 
         /// <summary>
-        /// Defines the incremental changes in product quantity
+        /// Defines the incremental changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored.
         /// </summary>
-        /// <value>Defines the incremental changes in product quantity</value>
+        /// <value>Defines the incremental changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored.</value>
         /*
         <example>4</example>
         */
@@ -427,9 +427,9 @@ namespace Org.OpenAPITools.Model
         public decimal IncreaseQuantity { get; set; }
 
         /// <summary>
-        /// Defines the decrement changes in product quantity
+        /// Defines the decrement changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored.
         /// </summary>
-        /// <value>Defines the decrement changes in product quantity</value>
+        /// <value>Defines the decrement changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored.</value>
         /*
         <example>4</example>
         */

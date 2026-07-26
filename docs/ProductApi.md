@@ -299,9 +299,9 @@ namespace Example
             var setName = Shoes;  // string? | Retrieves attributes specified by set_name in Magento (optional) 
             var sortBy = value;  // string? | Set field to sort by (optional)  (default to "attribute_id")
             var sortDirection = asc;  // string? | Set sorting direction (optional)  (default to "asc")
-            var responseFields = {pagination,result{attribute}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var varParams = attribute_id,name;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "attribute_id,name")
-            var exclude = attribute_id,name;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var responseFields = {pagination,result{attribute}};  // string? | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional) 
+            var varParams = attribute_id,name;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "attribute_id,name")
+            var exclude = attribute_id,name;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
@@ -356,9 +356,9 @@ catch (ApiException e)
 | **setName** | **string?** | Retrieves attributes specified by set_name in Magento | [optional]  |
 | **sortBy** | **string?** | Set field to sort by | [optional] [default to &quot;attribute_id&quot;] |
 | **sortDirection** | **string?** | Set sorting direction | [optional] [default to &quot;asc&quot;] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;attribute_id,name&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **responseFields** | **string?** | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. | [optional]  |
+| **varParams** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;attribute_id,name&quot;] |
+| **exclude** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 
@@ -658,9 +658,9 @@ namespace Example
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
             var avail = false;  // bool? | Defines category's visibility status (optional)  (default to true)
-            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,short_description,active,url")
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional) 
+            var varParams = id,model,price,images;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,short_description,active,url")
+            var exclude = false;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
@@ -718,9 +718,9 @@ catch (ApiException e)
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
 | **avail** | **bool?** | Defines category&#39;s visibility status | [optional] [default to true] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,short_description,active,url&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **responseFields** | **string?** | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. | [optional]  |
+| **varParams** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,short_description,active,url&quot;] |
+| **exclude** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 
@@ -888,9 +888,9 @@ namespace Example
             var storeId = 1;  // string? | Store Id (optional) 
             var langId = 3;  // string? | Language id (optional) 
             var currencyId = usd;  // string? | Currency Id (optional) 
-            var responseFields = {result{id,parent_id,sku,upc,images,combination}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "force_all")
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var responseFields = {result{id,parent_id,sku,upc,images,combination}};  // string? | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional) 
+            var varParams = id,model,price,images;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "force_all")
+            var exclude = false;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
 
             try
@@ -939,9 +939,9 @@ catch (ApiException e)
 | **storeId** | **string?** | Store Id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
 | **currencyId** | **string?** | Currency Id | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;force_all&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **responseFields** | **string?** | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. | [optional]  |
+| **varParams** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;force_all&quot;] |
+| **exclude** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
 
 ### Return type
@@ -1016,9 +1016,9 @@ namespace Example
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
             var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
             var returnGlobal = false;  // bool? | Determines the type of products to be returned. If set to 'true', only global products will be returned; if set to 'false', only local products will be returned. (optional)  (default to false)
-            var responseFields = {result{children{id,parent_id,sku,upc,images,combination}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "force_all")
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var responseFields = {result{children{id,parent_id,sku,upc,images,combination}}};  // string? | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional) 
+            var varParams = id,model,price,images;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "force_all")
+            var exclude = false;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var reportRequestId = 105245017661;  // string? | Report request id (optional) 
             var disableReportCache = false;  // bool? | Disable report cache for current request (optional)  (default to false)
             var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
@@ -1081,9 +1081,9 @@ catch (ApiException e)
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
 | **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
 | **returnGlobal** | **bool?** | Determines the type of products to be returned. If set to &#39;true&#39;, only global products will be returned; if set to &#39;false&#39;, only local products will be returned. | [optional] [default to false] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;force_all&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **responseFields** | **string?** | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. | [optional]  |
+| **varParams** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;force_all&quot;] |
+| **exclude** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **reportRequestId** | **string?** | Report request id | [optional]  |
 | **disableReportCache** | **bool?** | Disable report cache for current request | [optional] [default to false] |
 | **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
@@ -1412,9 +1412,9 @@ namespace Example
             var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
             var varDefault = true;  // bool? | Specifies the set of default/not default currencies (optional) 
             var avail = false;  // bool? | Specifies the set of available/not available currencies (optional) 
-            var responseFields = {return_message,pagination,result{currency}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var varParams = name,iso3,default,avail;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "name,iso3,default,avail")
-            var exclude = name,iso3,default,avail;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var responseFields = {return_message,pagination,result{currency}};  // string? | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional) 
+            var varParams = name,iso3,default,avail;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "name,iso3,default,avail")
+            var exclude = name,iso3,default,avail;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
@@ -1462,9 +1462,9 @@ catch (ApiException e)
 | **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
 | **varDefault** | **bool?** | Specifies the set of default/not default currencies | [optional]  |
 | **avail** | **bool?** | Specifies the set of available/not available currencies | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;name,iso3,default,avail&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **responseFields** | **string?** | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. | [optional]  |
+| **varParams** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;name,iso3,default,avail&quot;] |
+| **exclude** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 
@@ -2162,9 +2162,9 @@ namespace Example
             var vendorId = 1;  // string? | Vendor Id (optional) 
             var langId = 3;  // string? | Retrieves product info specified by language id (optional) 
             var currencyId = usd;  // string? | Currency Id (optional) 
-            var responseFields = {result{id,name,price,images}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description,price,categories_ids")
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var responseFields = {result{id,name,price,images}};  // string? | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional) 
+            var varParams = id,model,price,images;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description,price,categories_ids")
+            var exclude = false;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var reportRequestId = 105245017661;  // string? | Report request id (optional) 
             var disableReportCache = false;  // bool? | Disable report cache for current request (optional)  (default to false)
             var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
@@ -2215,9 +2215,9 @@ catch (ApiException e)
 | **vendorId** | **string?** | Vendor Id | [optional]  |
 | **langId** | **string?** | Retrieves product info specified by language id | [optional]  |
 | **currencyId** | **string?** | Currency Id | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description,price,categories_ids&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **responseFields** | **string?** | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. | [optional]  |
+| **varParams** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description,price,categories_ids&quot;] |
+| **exclude** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **reportRequestId** | **string?** | Report request id | [optional]  |
 | **disableReportCache** | **bool?** | Disable report cache for current request | [optional] [default to false] |
 | **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
@@ -2304,9 +2304,9 @@ namespace Example
             var findValue = Phone;  // string? | Entity search that is specified by some value (optional) 
             var findWhere = name;  // string? | Product search that is specified by field (optional) 
             var returnGlobal = false;  // bool? | Determines the type of products to be returned. If set to 'true', only global products will be returned; if set to 'false', only local products will be returned. (optional)  (default to false)
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description,price,categories_ids")
-            var responseFields = {return_code,pagination,result{product{id,name,price,images}}};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var varParams = id,model,price,images;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description,price,categories_ids")
+            var responseFields = {return_code,pagination,result{product{id,name,price,images}}};  // string? | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional) 
+            var exclude = false;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
             var sortBy = value_id;  // string? | Set field to sort by (optional)  (default to "id")
             var sortDirection = asc;  // string? | Set sorting direction (optional)  (default to "asc")
             var reportRequestId = 105245017661;  // string? | Report request id (optional) 
@@ -2383,9 +2383,9 @@ catch (ApiException e)
 | **findValue** | **string?** | Entity search that is specified by some value | [optional]  |
 | **findWhere** | **string?** | Product search that is specified by field | [optional]  |
 | **returnGlobal** | **bool?** | Determines the type of products to be returned. If set to &#39;true&#39;, only global products will be returned; if set to &#39;false&#39;, only local products will be returned. | [optional] [default to false] |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description,price,categories_ids&quot;] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **varParams** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description,price,categories_ids&quot;] |
+| **responseFields** | **string?** | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. | [optional]  |
+| **exclude** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 | **sortBy** | **string?** | Set field to sort by | [optional] [default to &quot;id&quot;] |
 | **sortDirection** | **string?** | Set sorting direction | [optional] [default to &quot;asc&quot;] |
 | **reportRequestId** | **string?** | Report request id | [optional]  |
@@ -2890,9 +2890,9 @@ namespace Example
             var productId = 10;  // string? | Retrieves products' options specified by product id (optional) 
             var langId = 3;  // string? | Language id (optional) 
             var storeId = 1;  // string? | Store Id (optional) 
-            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var varParams = id,name,sort_order;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description")
-            var exclude = id,name,sort_order;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional) 
+            var varParams = id,name,sort_order;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,name,description")
+            var exclude = id,name,sort_order;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
@@ -2940,9 +2940,9 @@ catch (ApiException e)
 | **productId** | **string?** | Retrieves products&#39; options specified by product id | [optional]  |
 | **langId** | **string?** | Language id | [optional]  |
 | **storeId** | **string?** | Store Id | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **responseFields** | **string?** | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. | [optional]  |
+| **varParams** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,name,description&quot;] |
+| **exclude** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 
@@ -3758,9 +3758,9 @@ namespace Example
             var customerId = 5;  // string? | Retrieves orders specified by customer id (optional) 
             var sortBy = value_id;  // string? | Set field to sort by (optional)  (default to "id")
             var sortDirection = asc;  // string? | Set sorting direction (optional)  (default to "asc")
-            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional) 
-            var varParams = id,model,price,images;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time")
-            var exclude = false;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var responseFields = {return_code,return_message,pagination,result};  // string? | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional) 
+            var varParams = id,model,price,images;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time")
+            var exclude = false;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
@@ -3816,9 +3816,9 @@ catch (ApiException e)
 | **customerId** | **string?** | Retrieves orders specified by customer id | [optional]  |
 | **sortBy** | **string?** | Set field to sort by | [optional] [default to &quot;id&quot;] |
 | **sortDirection** | **string?** | Set sorting direction | [optional] [default to &quot;asc&quot;] |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **responseFields** | **string?** | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. | [optional]  |
+| **varParams** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time&quot;] |
+| **exclude** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 

@@ -59,7 +59,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="status">Defines product&#39;s status.</param>
         /// <param name="condition">The human-readable label for the condition (e.g., \&quot;New\&quot;)..</param>
         /// <param name="visible">Set visibility status.</param>
-        /// <param name="inStock">Set stock status.</param>
+        /// <param name="inStock">Set stock status. Effective only when manage_stock is false — when stock is managed, the status is derived from quantity automatically and this parameter is ignored..</param>
         /// <param name="avail">Defines category&#39;s visibility status (default to true).</param>
         /// <param name="availFrom">Allows to schedule a time in the future that the item becomes available. The value should be greater than the current date and time..</param>
         /// <param name="productClass">A categorization for the product.</param>
@@ -70,12 +70,12 @@ namespace Org.OpenAPITools.Model
         /// <param name="storesIds">Assign product to the stores that is specified by comma-separated stores&#39; id.</param>
         /// <param name="storeId">Defines store id where the product should be found.</param>
         /// <param name="langId">Language id.</param>
-        /// <param name="quantity">Defines new product&#39;s quantity.</param>
+        /// <param name="quantity">Defines new product&#39;s quantity. Effective only when manage_stock is true — otherwise the value is ignored. To enable stock tracking and set a quantity in one call, pass manage_stock&#x3D;true together with quantity..</param>
         /// <param name="reserveQuantity">This parameter allows to reserve/unreserve product quantity..</param>
-        /// <param name="manageStock">Defines inventory tracking for product.</param>
+        /// <param name="manageStock">Defines inventory tracking for product. When true, quantity sets the stock level and the stock status is derived from it; when false, quantity is ignored and in_stock sets the status directly..</param>
         /// <param name="backorderStatus">Set backorder status.</param>
-        /// <param name="increaseQuantity">Defines the incremental changes in product quantity.</param>
-        /// <param name="reduceQuantity">Defines the decrement changes in product quantity.</param>
+        /// <param name="increaseQuantity">Defines the incremental changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored..</param>
+        /// <param name="reduceQuantity">Defines the decrement changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored..</param>
         /// <param name="lowStockThreshold">Specify the quantity threshold below which the product is considered low in stock.</param>
         /// <param name="minOrderQuantity">The minimum quantity an order must contain, to be eligible to purchase this product..</param>
         /// <param name="maxOrderQuantity">The maximum quantity an order can contain when purchasing the product..</param>
@@ -478,9 +478,9 @@ namespace Org.OpenAPITools.Model
         public string Visible { get; set; }
 
         /// <summary>
-        /// Set stock status
+        /// Set stock status. Effective only when manage_stock is false — when stock is managed, the status is derived from quantity automatically and this parameter is ignored.
         /// </summary>
-        /// <value>Set stock status</value>
+        /// <value>Set stock status. Effective only when manage_stock is false — when stock is managed, the status is derived from quantity automatically and this parameter is ignored.</value>
         /*
         <example>true</example>
         */
@@ -588,9 +588,9 @@ namespace Org.OpenAPITools.Model
         public string LangId { get; set; }
 
         /// <summary>
-        /// Defines new product&#39;s quantity
+        /// Defines new product&#39;s quantity. Effective only when manage_stock is true — otherwise the value is ignored. To enable stock tracking and set a quantity in one call, pass manage_stock&#x3D;true together with quantity.
         /// </summary>
-        /// <value>Defines new product&#39;s quantity</value>
+        /// <value>Defines new product&#39;s quantity. Effective only when manage_stock is true — otherwise the value is ignored. To enable stock tracking and set a quantity in one call, pass manage_stock&#x3D;true together with quantity.</value>
         /*
         <example>6</example>
         */
@@ -608,9 +608,9 @@ namespace Org.OpenAPITools.Model
         public decimal ReserveQuantity { get; set; }
 
         /// <summary>
-        /// Defines inventory tracking for product
+        /// Defines inventory tracking for product. When true, quantity sets the stock level and the stock status is derived from it; when false, quantity is ignored and in_stock sets the status directly.
         /// </summary>
-        /// <value>Defines inventory tracking for product</value>
+        /// <value>Defines inventory tracking for product. When true, quantity sets the stock level and the stock status is derived from it; when false, quantity is ignored and in_stock sets the status directly.</value>
         /*
         <example>false</example>
         */
@@ -628,9 +628,9 @@ namespace Org.OpenAPITools.Model
         public string BackorderStatus { get; set; }
 
         /// <summary>
-        /// Defines the incremental changes in product quantity
+        /// Defines the incremental changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored.
         /// </summary>
-        /// <value>Defines the incremental changes in product quantity</value>
+        /// <value>Defines the incremental changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored.</value>
         /*
         <example>4</example>
         */
@@ -638,9 +638,9 @@ namespace Org.OpenAPITools.Model
         public decimal IncreaseQuantity { get; set; }
 
         /// <summary>
-        /// Defines the decrement changes in product quantity
+        /// Defines the decrement changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored.
         /// </summary>
-        /// <value>Defines the decrement changes in product quantity</value>
+        /// <value>Defines the decrement changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored.</value>
         /*
         <example>4</example>
         */

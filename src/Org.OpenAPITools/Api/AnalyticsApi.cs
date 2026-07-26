@@ -44,7 +44,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;total_spend&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ResponseAnalyticsCustomerReportResult</returns>
         ResponseAnalyticsCustomerReportResult AnalyticsCustomerReport(string? dateFrom = default(string?), string? dateTo = default(string?), int? count = default(int?), string? currencyId = default(string?), string? storeId = default(string?), string? customerType = default(string?), string? email = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0);
@@ -66,7 +66,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;total_spend&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ResponseAnalyticsCustomerReportResult</returns>
         ApiResponse<ResponseAnalyticsCustomerReportResult> AnalyticsCustomerReportWithHttpInfo(string? dateFrom = default(string?), string? dateTo = default(string?), int? count = default(int?), string? currencyId = default(string?), string? storeId = default(string?), string? customerType = default(string?), string? email = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0);
@@ -87,7 +87,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;items_sold&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ResponseAnalyticsProductReportResult</returns>
         ResponseAnalyticsProductReportResult AnalyticsProductReport(string? dateFrom = default(string?), string? dateTo = default(string?), int? count = default(int?), string? productIds = default(string?), string? currencyId = default(string?), string? storeId = default(string?), string? categoriesIds = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0);
@@ -109,7 +109,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;items_sold&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ResponseAnalyticsProductReportResult</returns>
         ApiResponse<ResponseAnalyticsProductReportResult> AnalyticsProductReportWithHttpInfo(string? dateFrom = default(string?), string? dateTo = default(string?), int? count = default(int?), string? productIds = default(string?), string? currencyId = default(string?), string? storeId = default(string?), string? categoriesIds = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0);
@@ -129,7 +129,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;date&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ResponseAnalyticsReportResult</returns>
         ResponseAnalyticsReportResult AnalyticsReport(string dateFrom, string? dateTo = default(string?), string? interval = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? currencyId = default(string?), string? storeId = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), int operationIndex = 0);
@@ -150,7 +150,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;date&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ResponseAnalyticsReportResult</returns>
         ApiResponse<ResponseAnalyticsReportResult> AnalyticsReportWithHttpInfo(string dateFrom, string? dateTo = default(string?), string? interval = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? currencyId = default(string?), string? storeId = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), int operationIndex = 0);
@@ -180,7 +180,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;total_spend&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ResponseAnalyticsCustomerReportResult</returns>
@@ -203,7 +203,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;total_spend&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ResponseAnalyticsCustomerReportResult)</returns>
@@ -225,7 +225,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;items_sold&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ResponseAnalyticsProductReportResult</returns>
@@ -248,7 +248,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;items_sold&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ResponseAnalyticsProductReportResult)</returns>
@@ -269,7 +269,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;date&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ResponseAnalyticsReportResult</returns>
@@ -291,7 +291,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;date&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ResponseAnalyticsReportResult)</returns>
@@ -430,7 +430,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;total_spend&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ResponseAnalyticsCustomerReportResult</returns>
         public ResponseAnalyticsCustomerReportResult AnalyticsCustomerReport(string? dateFrom = default(string?), string? dateTo = default(string?), int? count = default(int?), string? currencyId = default(string?), string? storeId = default(string?), string? customerType = default(string?), string? email = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0)
@@ -453,7 +453,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;total_spend&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ResponseAnalyticsCustomerReportResult</returns>
         public Org.OpenAPITools.Client.ApiResponse<ResponseAnalyticsCustomerReportResult> AnalyticsCustomerReportWithHttpInfo(string? dateFrom = default(string?), string? dateTo = default(string?), int? count = default(int?), string? currencyId = default(string?), string? storeId = default(string?), string? customerType = default(string?), string? email = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0)
@@ -568,7 +568,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;total_spend&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ResponseAnalyticsCustomerReportResult</returns>
@@ -592,7 +592,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;total_spend&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ResponseAnalyticsCustomerReportResult)</returns>
@@ -709,7 +709,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;items_sold&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ResponseAnalyticsProductReportResult</returns>
         public ResponseAnalyticsProductReportResult AnalyticsProductReport(string? dateFrom = default(string?), string? dateTo = default(string?), int? count = default(int?), string? productIds = default(string?), string? currencyId = default(string?), string? storeId = default(string?), string? categoriesIds = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0)
@@ -732,7 +732,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;items_sold&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ResponseAnalyticsProductReportResult</returns>
         public Org.OpenAPITools.Client.ApiResponse<ResponseAnalyticsProductReportResult> AnalyticsProductReportWithHttpInfo(string? dateFrom = default(string?), string? dateTo = default(string?), int? count = default(int?), string? productIds = default(string?), string? currencyId = default(string?), string? storeId = default(string?), string? categoriesIds = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? pageCursor = default(string?), string? responseFields = default(string?), int operationIndex = 0)
@@ -847,7 +847,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;items_sold&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ResponseAnalyticsProductReportResult</returns>
@@ -871,7 +871,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;items_sold&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;desc&quot;)</param>
         /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ResponseAnalyticsProductReportResult)</returns>
@@ -987,7 +987,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;date&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ResponseAnalyticsReportResult</returns>
         public ResponseAnalyticsReportResult AnalyticsReport(string dateFrom, string? dateTo = default(string?), string? interval = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? currencyId = default(string?), string? storeId = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), int operationIndex = 0)
@@ -1009,7 +1009,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;date&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ResponseAnalyticsReportResult</returns>
         public Org.OpenAPITools.Client.ApiResponse<ResponseAnalyticsReportResult> AnalyticsReportWithHttpInfo(string dateFrom, string? dateTo = default(string?), string? interval = default(string?), string? orderStatus = default(string?), string? financialStatus = default(string?), string? currencyId = default(string?), string? storeId = default(string?), string? sortBy = default(string?), string? sortDirection = default(string?), string? responseFields = default(string?), int operationIndex = 0)
@@ -1122,7 +1122,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;date&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ResponseAnalyticsReportResult</returns>
@@ -1145,7 +1145,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="storeId">Store Id (optional)</param>
         /// <param name="sortBy">Set field to sort by (optional, default to &quot;date&quot;)</param>
         /// <param name="sortDirection">Set sorting direction (optional, default to &quot;asc&quot;)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ResponseAnalyticsReportResult)</returns>

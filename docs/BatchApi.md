@@ -48,7 +48,7 @@ namespace Example
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var processedFrom = 2100-08-29 13:45:52;  // string? | Retrieve entities according to their processing datetime (optional) 
             var processedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities according to their processing datetime (optional) 
-            var responseFields = {result};  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "{return_code,return_message,pagination,result}")
+            var responseFields = {result};  // string? | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)  (default to "{return_code,return_message,pagination,result}")
 
             try
             {
@@ -98,7 +98,7 @@ catch (ApiException e)
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **processedFrom** | **string?** | Retrieve entities according to their processing datetime | [optional]  |
 | **processedTo** | **string?** | Retrieve entities according to their processing datetime | [optional]  |
-| **responseFields** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;{return_code,return_message,pagination,result}&quot;] |
+| **responseFields** | **string?** | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. | [optional] [default to &quot;{return_code,return_message,pagination,result}&quot;] |
 
 ### Return type
 

@@ -45,9 +45,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseMarketplaceProductFind</returns>
         ModelResponseMarketplaceProductFind MarketplaceProductFind(int? count = default(int?), string? pageCursor = default(string?), string? keyword = default(string?), string? categoriesIds = default(string?), string? storeId = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
@@ -70,9 +70,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseMarketplaceProductFind</returns>
         ApiResponse<ModelResponseMarketplaceProductFind> MarketplaceProductFindWithHttpInfo(int? count = default(int?), string? pageCursor = default(string?), string? keyword = default(string?), string? categoriesIds = default(string?), string? storeId = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
@@ -103,9 +103,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseMarketplaceProductFind</returns>
@@ -129,9 +129,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseMarketplaceProductFind)</returns>
@@ -271,9 +271,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseMarketplaceProductFind</returns>
         public ModelResponseMarketplaceProductFind MarketplaceProductFind(int? count = default(int?), string? pageCursor = default(string?), string? keyword = default(string?), string? categoriesIds = default(string?), string? storeId = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
@@ -297,9 +297,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseMarketplaceProductFind</returns>
         public Org.OpenAPITools.Client.ApiResponse<ModelResponseMarketplaceProductFind> MarketplaceProductFindWithHttpInfo(int? count = default(int?), string? pageCursor = default(string?), string? keyword = default(string?), string? categoriesIds = default(string?), string? storeId = default(string?), string? asin = default(string?), string? ean = default(string?), string? gtin = default(string?), string? upc = default(string?), string? mpn = default(string?), string? isbn = default(string?), string? responseFields = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
@@ -427,9 +427,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseMarketplaceProductFind</returns>
@@ -454,9 +454,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="upc">Universal Product Code. A UPC (UPC-A) is a commonly used identifer for many different products. (optional)</param>
         /// <param name="mpn">Manufacturer Part Number. A MPN is an identifier of a particular part design or material used. (optional)</param>
         /// <param name="isbn">International Standard Book Number. An ISBN is a unique identifier for books. (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseMarketplaceProductFind)</returns>

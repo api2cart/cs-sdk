@@ -46,13 +46,29 @@ namespace Org.OpenAPITools.Model
         /// <param name="isShipped">Defines shipment&#39;s status (default to true).</param>
         /// <param name="sendNotifications">Send notifications to customer after shipment was created (default to false).</param>
         /// <param name="adjustStock">This parameter is used for adjust stock. (default to false).</param>
-        /// <param name="enableCache">If the value is &#39;true&#39; and order exist in our cache, we will use order.info from cache to prepare shipment items. (default to false).</param>
         /// <param name="checkProcessStatus">Disable or enable check process status. Please note that the response will be slower due to additional requests to the store. (default to false).</param>
         /// <param name="trackingProvider">Defines name of the company which provides shipment tracking.</param>
-        /// <param name="useLatestApiVersion">Use the latest platform API version (default to false).</param>
         /// <param name="adminComment">Specifies admin&#39;s order comment.</param>
+        /// <param name="mailClass">Mail class for the shipment (e.g., priority, express)..</param>
+        /// <param name="shipDate">Ship date..</param>
+        /// <param name="weight">Weight.</param>
+        /// <param name="weightUnit">Weight Unit.</param>
+        /// <param name="length">Defines product&#39;s length.</param>
+        /// <param name="width">Defines product&#39;s width.</param>
+        /// <param name="height">Defines product&#39;s height.</param>
+        /// <param name="dimensionsUnit">Weight Unit.</param>
+        /// <param name="shippingLabelCost">Cost of the shipping label..</param>
+        /// <param name="shippingLabelCurrency">Currency code for the shipping label cost (3-letter ISO code)..</param>
+        /// <param name="revenueEligibility">Revenue eligibility flag..</param>
+        /// <param name="shipFromCountry">Country code the shipment is sent from (2-letter ISO code)..</param>
+        /// <param name="shipToCountry">Country code the shipment is sent to (2-letter ISO code)..</param>
+        /// <param name="incoterm">International commercial term for the shipment (e.g., DAP, DDP)..</param>
+        /// <param name="dutyAmount">Duty amount for international shipment..</param>
+        /// <param name="dutyCurrency">Currency code for the duty amount (3-letter ISO code)..</param>
+        /// <param name="enableCache">If the value is &#39;true&#39; and order exist in our cache, we will use order.info from cache to prepare shipment items. (default to false).</param>
+        /// <param name="useLatestApiVersion">Use the latest platform API version (default to false).</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
-        public OrderShipmentAdd(string orderId = default(string), string warehouseId = default(string), string storeId = default(string), string shipmentProvider = default(string), string shippingMethod = default(string), List<OrderShipmentAddItemsInner> items = default(List<OrderShipmentAddItemsInner>), List<OrderShipmentAddTrackingNumbersInner> trackingNumbers = default(List<OrderShipmentAddTrackingNumbersInner>), string trackingLink = default(string), bool isShipped = true, bool sendNotifications = false, bool adjustStock = false, bool enableCache = false, bool checkProcessStatus = false, string trackingProvider = default(string), bool useLatestApiVersion = false, string adminComment = default(string), string idempotencyKey = default(string))
+        public OrderShipmentAdd(string orderId = default(string), string warehouseId = default(string), string storeId = default(string), string shipmentProvider = default(string), string shippingMethod = default(string), List<OrderShipmentAddItemsInner> items = default(List<OrderShipmentAddItemsInner>), List<OrderShipmentAddTrackingNumbersInner> trackingNumbers = default(List<OrderShipmentAddTrackingNumbersInner>), string trackingLink = default(string), bool isShipped = true, bool sendNotifications = false, bool adjustStock = false, bool checkProcessStatus = false, string trackingProvider = default(string), string adminComment = default(string), string mailClass = default(string), string shipDate = default(string), decimal weight = default(decimal), string weightUnit = default(string), decimal length = default(decimal), decimal width = default(decimal), decimal height = default(decimal), string dimensionsUnit = default(string), decimal shippingLabelCost = default(decimal), string shippingLabelCurrency = default(string), bool revenueEligibility = default(bool), string shipFromCountry = default(string), string shipToCountry = default(string), string incoterm = default(string), decimal dutyAmount = default(decimal), string dutyCurrency = default(string), bool enableCache = false, bool useLatestApiVersion = false, string idempotencyKey = default(string))
         {
             this.OrderId = orderId;
             this.WarehouseId = warehouseId;
@@ -65,11 +81,27 @@ namespace Org.OpenAPITools.Model
             this.IsShipped = isShipped;
             this.SendNotifications = sendNotifications;
             this.AdjustStock = adjustStock;
-            this.EnableCache = enableCache;
             this.CheckProcessStatus = checkProcessStatus;
             this.TrackingProvider = trackingProvider;
-            this.UseLatestApiVersion = useLatestApiVersion;
             this.AdminComment = adminComment;
+            this.MailClass = mailClass;
+            this.ShipDate = shipDate;
+            this.Weight = weight;
+            this.WeightUnit = weightUnit;
+            this.Length = length;
+            this.Width = width;
+            this.Height = height;
+            this.DimensionsUnit = dimensionsUnit;
+            this.ShippingLabelCost = shippingLabelCost;
+            this.ShippingLabelCurrency = shippingLabelCurrency;
+            this.RevenueEligibility = revenueEligibility;
+            this.ShipFromCountry = shipFromCountry;
+            this.ShipToCountry = shipToCountry;
+            this.Incoterm = incoterm;
+            this.DutyAmount = dutyAmount;
+            this.DutyCurrency = dutyCurrency;
+            this.EnableCache = enableCache;
+            this.UseLatestApiVersion = useLatestApiVersion;
             this.IdempotencyKey = idempotencyKey;
         }
 
@@ -178,16 +210,6 @@ namespace Org.OpenAPITools.Model
         public bool AdjustStock { get; set; }
 
         /// <summary>
-        /// If the value is &#39;true&#39; and order exist in our cache, we will use order.info from cache to prepare shipment items.
-        /// </summary>
-        /// <value>If the value is &#39;true&#39; and order exist in our cache, we will use order.info from cache to prepare shipment items.</value>
-        /*
-        <example>true</example>
-        */
-        [DataMember(Name = "enable_cache", EmitDefaultValue = true)]
-        public bool EnableCache { get; set; }
-
-        /// <summary>
         /// Disable or enable check process status. Please note that the response will be slower due to additional requests to the store.
         /// </summary>
         /// <value>Disable or enable check process status. Please note that the response will be slower due to additional requests to the store.</value>
@@ -208,16 +230,6 @@ namespace Org.OpenAPITools.Model
         public string TrackingProvider { get; set; }
 
         /// <summary>
-        /// Use the latest platform API version
-        /// </summary>
-        /// <value>Use the latest platform API version</value>
-        /*
-        <example>true</example>
-        */
-        [DataMember(Name = "use_latest_api_version", EmitDefaultValue = true)]
-        public bool UseLatestApiVersion { get; set; }
-
-        /// <summary>
         /// Specifies admin&#39;s order comment
         /// </summary>
         /// <value>Specifies admin&#39;s order comment</value>
@@ -226,6 +238,186 @@ namespace Org.OpenAPITools.Model
         */
         [DataMember(Name = "admin_comment", EmitDefaultValue = false)]
         public string AdminComment { get; set; }
+
+        /// <summary>
+        /// Mail class for the shipment (e.g., priority, express).
+        /// </summary>
+        /// <value>Mail class for the shipment (e.g., priority, express).</value>
+        /*
+        <example>priority</example>
+        */
+        [DataMember(Name = "mail_class", EmitDefaultValue = false)]
+        public string MailClass { get; set; }
+
+        /// <summary>
+        /// Ship date.
+        /// </summary>
+        /// <value>Ship date.</value>
+        /*
+        <example>2025-03-15 10:00:00</example>
+        */
+        [DataMember(Name = "ship_date", EmitDefaultValue = false)]
+        public string ShipDate { get; set; }
+
+        /// <summary>
+        /// Weight
+        /// </summary>
+        /// <value>Weight</value>
+        /*
+        <example>23.69</example>
+        */
+        [DataMember(Name = "weight", EmitDefaultValue = false)]
+        public decimal Weight { get; set; }
+
+        /// <summary>
+        /// Weight Unit
+        /// </summary>
+        /// <value>Weight Unit</value>
+        /*
+        <example>lb</example>
+        */
+        [DataMember(Name = "weight_unit", EmitDefaultValue = false)]
+        public string WeightUnit { get; set; }
+
+        /// <summary>
+        /// Defines product&#39;s length
+        /// </summary>
+        /// <value>Defines product&#39;s length</value>
+        /*
+        <example>56.12</example>
+        */
+        [DataMember(Name = "length", EmitDefaultValue = false)]
+        public decimal Length { get; set; }
+
+        /// <summary>
+        /// Defines product&#39;s width
+        /// </summary>
+        /// <value>Defines product&#39;s width</value>
+        /*
+        <example>56.12</example>
+        */
+        [DataMember(Name = "width", EmitDefaultValue = false)]
+        public decimal Width { get; set; }
+
+        /// <summary>
+        /// Defines product&#39;s height
+        /// </summary>
+        /// <value>Defines product&#39;s height</value>
+        /*
+        <example>56.12</example>
+        */
+        [DataMember(Name = "height", EmitDefaultValue = false)]
+        public decimal Height { get; set; }
+
+        /// <summary>
+        /// Weight Unit
+        /// </summary>
+        /// <value>Weight Unit</value>
+        /*
+        <example>cm</example>
+        */
+        [DataMember(Name = "dimensions_unit", EmitDefaultValue = false)]
+        public string DimensionsUnit { get; set; }
+
+        /// <summary>
+        /// Cost of the shipping label.
+        /// </summary>
+        /// <value>Cost of the shipping label.</value>
+        /*
+        <example>5.99</example>
+        */
+        [DataMember(Name = "shipping_label_cost", EmitDefaultValue = false)]
+        public decimal ShippingLabelCost { get; set; }
+
+        /// <summary>
+        /// Currency code for the shipping label cost (3-letter ISO code).
+        /// </summary>
+        /// <value>Currency code for the shipping label cost (3-letter ISO code).</value>
+        /*
+        <example>USD</example>
+        */
+        [DataMember(Name = "shipping_label_currency", EmitDefaultValue = false)]
+        public string ShippingLabelCurrency { get; set; }
+
+        /// <summary>
+        /// Revenue eligibility flag.
+        /// </summary>
+        /// <value>Revenue eligibility flag.</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "revenue_eligibility", EmitDefaultValue = true)]
+        public bool RevenueEligibility { get; set; }
+
+        /// <summary>
+        /// Country code the shipment is sent from (2-letter ISO code).
+        /// </summary>
+        /// <value>Country code the shipment is sent from (2-letter ISO code).</value>
+        /*
+        <example>US</example>
+        */
+        [DataMember(Name = "ship_from_country", EmitDefaultValue = false)]
+        public string ShipFromCountry { get; set; }
+
+        /// <summary>
+        /// Country code the shipment is sent to (2-letter ISO code).
+        /// </summary>
+        /// <value>Country code the shipment is sent to (2-letter ISO code).</value>
+        /*
+        <example>GB</example>
+        */
+        [DataMember(Name = "ship_to_country", EmitDefaultValue = false)]
+        public string ShipToCountry { get; set; }
+
+        /// <summary>
+        /// International commercial term for the shipment (e.g., DAP, DDP).
+        /// </summary>
+        /// <value>International commercial term for the shipment (e.g., DAP, DDP).</value>
+        /*
+        <example>DAP</example>
+        */
+        [DataMember(Name = "incoterm", EmitDefaultValue = false)]
+        public string Incoterm { get; set; }
+
+        /// <summary>
+        /// Duty amount for international shipment.
+        /// </summary>
+        /// <value>Duty amount for international shipment.</value>
+        /*
+        <example>12.50</example>
+        */
+        [DataMember(Name = "duty_amount", EmitDefaultValue = false)]
+        public decimal DutyAmount { get; set; }
+
+        /// <summary>
+        /// Currency code for the duty amount (3-letter ISO code).
+        /// </summary>
+        /// <value>Currency code for the duty amount (3-letter ISO code).</value>
+        /*
+        <example>USD</example>
+        */
+        [DataMember(Name = "duty_currency", EmitDefaultValue = false)]
+        public string DutyCurrency { get; set; }
+
+        /// <summary>
+        /// If the value is &#39;true&#39; and order exist in our cache, we will use order.info from cache to prepare shipment items.
+        /// </summary>
+        /// <value>If the value is &#39;true&#39; and order exist in our cache, we will use order.info from cache to prepare shipment items.</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "enable_cache", EmitDefaultValue = true)]
+        public bool EnableCache { get; set; }
+
+        /// <summary>
+        /// Use the latest platform API version
+        /// </summary>
+        /// <value>Use the latest platform API version</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "use_latest_api_version", EmitDefaultValue = true)]
+        public bool UseLatestApiVersion { get; set; }
 
         /// <summary>
         /// A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;
@@ -256,11 +448,27 @@ namespace Org.OpenAPITools.Model
             sb.Append("  IsShipped: ").Append(IsShipped).Append("\n");
             sb.Append("  SendNotifications: ").Append(SendNotifications).Append("\n");
             sb.Append("  AdjustStock: ").Append(AdjustStock).Append("\n");
-            sb.Append("  EnableCache: ").Append(EnableCache).Append("\n");
             sb.Append("  CheckProcessStatus: ").Append(CheckProcessStatus).Append("\n");
             sb.Append("  TrackingProvider: ").Append(TrackingProvider).Append("\n");
-            sb.Append("  UseLatestApiVersion: ").Append(UseLatestApiVersion).Append("\n");
             sb.Append("  AdminComment: ").Append(AdminComment).Append("\n");
+            sb.Append("  MailClass: ").Append(MailClass).Append("\n");
+            sb.Append("  ShipDate: ").Append(ShipDate).Append("\n");
+            sb.Append("  Weight: ").Append(Weight).Append("\n");
+            sb.Append("  WeightUnit: ").Append(WeightUnit).Append("\n");
+            sb.Append("  Length: ").Append(Length).Append("\n");
+            sb.Append("  Width: ").Append(Width).Append("\n");
+            sb.Append("  Height: ").Append(Height).Append("\n");
+            sb.Append("  DimensionsUnit: ").Append(DimensionsUnit).Append("\n");
+            sb.Append("  ShippingLabelCost: ").Append(ShippingLabelCost).Append("\n");
+            sb.Append("  ShippingLabelCurrency: ").Append(ShippingLabelCurrency).Append("\n");
+            sb.Append("  RevenueEligibility: ").Append(RevenueEligibility).Append("\n");
+            sb.Append("  ShipFromCountry: ").Append(ShipFromCountry).Append("\n");
+            sb.Append("  ShipToCountry: ").Append(ShipToCountry).Append("\n");
+            sb.Append("  Incoterm: ").Append(Incoterm).Append("\n");
+            sb.Append("  DutyAmount: ").Append(DutyAmount).Append("\n");
+            sb.Append("  DutyCurrency: ").Append(DutyCurrency).Append("\n");
+            sb.Append("  EnableCache: ").Append(EnableCache).Append("\n");
+            sb.Append("  UseLatestApiVersion: ").Append(UseLatestApiVersion).Append("\n");
             sb.Append("  IdempotencyKey: ").Append(IdempotencyKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

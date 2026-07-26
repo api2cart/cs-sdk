@@ -42,10 +42,10 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <param name="entity">Specify the entity that you want to enable webhooks for (e.g product, order, customer, category) (required).</param>
         /// <param name="action">Specify what action (event) will trigger the webhook (e.g add, delete, or update) (required).</param>
-        /// <param name="callback">Callback url that returns shipping rates. It should be able to accept POST requests with json data..</param>
+        /// <param name="callback">Callback where the webhook should send the POST request when the event occurs (required).</param>
         /// <param name="label">The name you give to the webhook.</param>
         /// <param name="fields">Fields the webhook should send (default to &quot;force_all&quot;).</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve.</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields..</param>
         /// <param name="active">Webhook status (default to true).</param>
         /// <param name="langId">Language id.</param>
         /// <param name="storeId">Defines store id where the webhook should be assigned.</param>
@@ -65,6 +65,11 @@ namespace Org.OpenAPITools.Model
                 throw new ArgumentNullException("action is a required property for WebhookCreate and cannot be null");
             }
             this.Action = action;
+            // to ensure "callback" is required (not null)
+            if (callback == null)
+            {
+                throw new ArgumentNullException("callback is a required property for WebhookCreate and cannot be null");
+            }
             this.Callback = callback;
             this.Label = label;
             // use default value if no "fields" provided
@@ -98,13 +103,13 @@ namespace Org.OpenAPITools.Model
         public string Action { get; set; }
 
         /// <summary>
-        /// Callback url that returns shipping rates. It should be able to accept POST requests with json data.
+        /// Callback where the webhook should send the POST request when the event occurs
         /// </summary>
-        /// <value>Callback url that returns shipping rates. It should be able to accept POST requests with json data.</value>
+        /// <value>Callback where the webhook should send the POST request when the event occurs</value>
         /*
         <example>https://example.com/callback</example>
         */
-        [DataMember(Name = "callback", EmitDefaultValue = false)]
+        [DataMember(Name = "callback", IsRequired = true, EmitDefaultValue = true)]
         public string Callback { get; set; }
 
         /// <summary>
@@ -128,9 +133,9 @@ namespace Org.OpenAPITools.Model
         public string Fields { get; set; }
 
         /// <summary>
-        /// Set this parameter in order to choose which entity fields you want to retrieve
+        /// Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields.
         /// </summary>
-        /// <value>Set this parameter in order to choose which entity fields you want to retrieve</value>
+        /// <value>Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields.</value>
         /*
         <example>{result}</example>
         */

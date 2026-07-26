@@ -66,7 +66,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="billCountry">Specifies billing country code.</param>
         /// <param name="billCompany">Specifies billing company.</param>
         /// <param name="billPhone">Specifies billing phone.</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve.</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields..</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
         /// <param name="orderItem">orderItem (required).</param>
         public OrderCalculate(string customerEmail = default(string), string currency = default(string), string currencyId = default(string), string storeId = default(string), List<string> coupons = default(List<string>), int roundingPrecision = default(int), string shippFirstName = default(string), string shippLastName = default(string), string shippAddress1 = default(string), string shippAddress2 = default(string), string shippCity = default(string), string shippPostcode = default(string), string shippState = default(string), string shippCountry = default(string), string shippCompany = default(string), string shippPhone = default(string), string billFirstName = default(string), string billLastName = default(string), string billAddress1 = default(string), string billAddress2 = default(string), string billCity = default(string), string billPostcode = default(string), string billState = default(string), string billCountry = default(string), string billCompany = default(string), string billPhone = default(string), string responseFields = default(string), string idempotencyKey = default(string), List<OrderCalculateOrderItemInner> orderItem = default(List<OrderCalculateOrderItemInner>))
@@ -400,9 +400,9 @@ namespace Org.OpenAPITools.Model
         public string BillPhone { get; set; }
 
         /// <summary>
-        /// Set this parameter in order to choose which entity fields you want to retrieve
+        /// Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields.
         /// </summary>
-        /// <value>Set this parameter in order to choose which entity fields you want to retrieve</value>
+        /// <value>Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields.</value>
         /*
         <example>{result}</example>
         */

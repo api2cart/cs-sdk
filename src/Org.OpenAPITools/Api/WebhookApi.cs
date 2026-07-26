@@ -134,7 +134,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookList200Response</returns>
         WebhookList200Response WebhookList(int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), string? varParams = default(string?), int operationIndex = 0);
@@ -152,7 +152,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookList200Response</returns>
         ApiResponse<WebhookList200Response> WebhookListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), string? varParams = default(string?), int operationIndex = 0);
@@ -303,7 +303,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookList200Response</returns>
@@ -322,7 +322,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookList200Response)</returns>
@@ -1144,7 +1144,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookList200Response</returns>
         public WebhookList200Response WebhookList(int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), string? varParams = default(string?), int operationIndex = 0)
@@ -1163,7 +1163,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookList200Response</returns>
         public Org.OpenAPITools.Client.ApiResponse<WebhookList200Response> WebhookListWithHttpInfo(int? start = default(int?), int? count = default(int?), string? entity = default(string?), string? action = default(string?), bool? active = default(bool?), string? ids = default(string?), string? varParams = default(string?), int operationIndex = 0)
@@ -1258,7 +1258,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookList200Response</returns>
@@ -1278,7 +1278,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="action">The action you want to filter webhooks by (e.g. add, update, or delete) (optional)</param>
         /// <param name="active">The webhook status you want to filter webhooks by (optional)</param>
         /// <param name="ids">List of сomma-separated webhook ids (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;id,entity,action,callback&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookList200Response)</returns>

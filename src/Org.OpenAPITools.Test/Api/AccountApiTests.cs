@@ -296,7 +296,8 @@ namespace Org.OpenAPITools.Test.Api
         public void AccountSupportedPlatformsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.AccountSupportedPlatforms();
+            //string? cartId = null;
+            //var response = instance.AccountSupportedPlatforms(cartId);
             //Assert.IsType<ModelResponseAccountSupportedPlatforms>(response);
         }
     }

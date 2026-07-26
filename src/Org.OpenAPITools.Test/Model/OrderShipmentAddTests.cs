@@ -155,15 +155,6 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'EnableCache'
-        /// </summary>
-        [Fact]
-        public void EnableCacheTest()
-        {
-            // TODO unit test for the property 'EnableCache'
-        }
-
-        /// <summary>
         /// Test the property 'CheckProcessStatus'
         /// </summary>
         [Fact]
@@ -182,21 +173,174 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'UseLatestApiVersion'
-        /// </summary>
-        [Fact]
-        public void UseLatestApiVersionTest()
-        {
-            // TODO unit test for the property 'UseLatestApiVersion'
-        }
-
-        /// <summary>
         /// Test the property 'AdminComment'
         /// </summary>
         [Fact]
         public void AdminCommentTest()
         {
             // TODO unit test for the property 'AdminComment'
+        }
+
+        /// <summary>
+        /// Test the property 'MailClass'
+        /// </summary>
+        [Fact]
+        public void MailClassTest()
+        {
+            // TODO unit test for the property 'MailClass'
+        }
+
+        /// <summary>
+        /// Test the property 'ShipDate'
+        /// </summary>
+        [Fact]
+        public void ShipDateTest()
+        {
+            // TODO unit test for the property 'ShipDate'
+        }
+
+        /// <summary>
+        /// Test the property 'Weight'
+        /// </summary>
+        [Fact]
+        public void WeightTest()
+        {
+            // TODO unit test for the property 'Weight'
+        }
+
+        /// <summary>
+        /// Test the property 'WeightUnit'
+        /// </summary>
+        [Fact]
+        public void WeightUnitTest()
+        {
+            // TODO unit test for the property 'WeightUnit'
+        }
+
+        /// <summary>
+        /// Test the property 'Length'
+        /// </summary>
+        [Fact]
+        public void LengthTest()
+        {
+            // TODO unit test for the property 'Length'
+        }
+
+        /// <summary>
+        /// Test the property 'Width'
+        /// </summary>
+        [Fact]
+        public void WidthTest()
+        {
+            // TODO unit test for the property 'Width'
+        }
+
+        /// <summary>
+        /// Test the property 'Height'
+        /// </summary>
+        [Fact]
+        public void HeightTest()
+        {
+            // TODO unit test for the property 'Height'
+        }
+
+        /// <summary>
+        /// Test the property 'DimensionsUnit'
+        /// </summary>
+        [Fact]
+        public void DimensionsUnitTest()
+        {
+            // TODO unit test for the property 'DimensionsUnit'
+        }
+
+        /// <summary>
+        /// Test the property 'ShippingLabelCost'
+        /// </summary>
+        [Fact]
+        public void ShippingLabelCostTest()
+        {
+            // TODO unit test for the property 'ShippingLabelCost'
+        }
+
+        /// <summary>
+        /// Test the property 'ShippingLabelCurrency'
+        /// </summary>
+        [Fact]
+        public void ShippingLabelCurrencyTest()
+        {
+            // TODO unit test for the property 'ShippingLabelCurrency'
+        }
+
+        /// <summary>
+        /// Test the property 'RevenueEligibility'
+        /// </summary>
+        [Fact]
+        public void RevenueEligibilityTest()
+        {
+            // TODO unit test for the property 'RevenueEligibility'
+        }
+
+        /// <summary>
+        /// Test the property 'ShipFromCountry'
+        /// </summary>
+        [Fact]
+        public void ShipFromCountryTest()
+        {
+            // TODO unit test for the property 'ShipFromCountry'
+        }
+
+        /// <summary>
+        /// Test the property 'ShipToCountry'
+        /// </summary>
+        [Fact]
+        public void ShipToCountryTest()
+        {
+            // TODO unit test for the property 'ShipToCountry'
+        }
+
+        /// <summary>
+        /// Test the property 'Incoterm'
+        /// </summary>
+        [Fact]
+        public void IncotermTest()
+        {
+            // TODO unit test for the property 'Incoterm'
+        }
+
+        /// <summary>
+        /// Test the property 'DutyAmount'
+        /// </summary>
+        [Fact]
+        public void DutyAmountTest()
+        {
+            // TODO unit test for the property 'DutyAmount'
+        }
+
+        /// <summary>
+        /// Test the property 'DutyCurrency'
+        /// </summary>
+        [Fact]
+        public void DutyCurrencyTest()
+        {
+            // TODO unit test for the property 'DutyCurrency'
+        }
+
+        /// <summary>
+        /// Test the property 'EnableCache'
+        /// </summary>
+        [Fact]
+        public void EnableCacheTest()
+        {
+            // TODO unit test for the property 'EnableCache'
+        }
+
+        /// <summary>
+        /// Test the property 'UseLatestApiVersion'
+        /// </summary>
+        [Fact]
+        public void UseLatestApiVersionTest()
+        {
+            // TODO unit test for the property 'UseLatestApiVersion'
         }
 
         /// <summary>

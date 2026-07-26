@@ -41,7 +41,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseBatchJobList</returns>
         ModelResponseBatchJobList BatchJobList(int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0);
@@ -60,7 +60,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseBatchJobList</returns>
         ApiResponse<ModelResponseBatchJobList> BatchJobListWithHttpInfo(int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0);
@@ -110,7 +110,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseBatchJobList</returns>
@@ -130,7 +130,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseBatchJobList)</returns>
@@ -291,7 +291,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseBatchJobList</returns>
         public ModelResponseBatchJobList BatchJobList(int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0)
@@ -311,7 +311,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseBatchJobList</returns>
         public Org.OpenAPITools.Client.ApiResponse<ModelResponseBatchJobList> BatchJobListWithHttpInfo(int? count = default(int?), string? pageCursor = default(string?), string? ids = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? processedFrom = default(string?), string? processedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0)
@@ -411,7 +411,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseBatchJobList</returns>
@@ -432,7 +432,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="processedFrom">Retrieve entities according to their processing datetime (optional)</param>
         /// <param name="processedTo">Retrieve entities according to their processing datetime (optional)</param>
-        /// <param name="responseFields">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseBatchJobList)</returns>

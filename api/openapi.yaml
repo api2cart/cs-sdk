@@ -83,7 +83,17 @@ paths:
         \ platforms may have multiple connection methods so that the response will\
         \ contain multiple sets of parameters."
       operationId: AccountSupportedPlatforms
-      parameters: []
+      parameters:
+      - description: "Filter by integration identifier (e.g. 'Shopify'). If omitted,\
+          \ the method returns all integrations."
+        example: Opencart14
+        explode: true
+        in: query
+        name: cart_id
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -114,7 +124,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Find store by store key
+      - description: "Optional filter: return only the connected store whose store\
+          \ key matches this value. A store key is the unique 32-character identifier\
+          \ of a connected store, returned as store_key here and by account.cart.add."
         example: ab37fc230bc5df63a5be1b11220949be
         explode: true
         in: query
@@ -123,7 +135,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Retrieve entities from their creation date
+      - description: Start date of the period for counting API requests made to each
+          connection. Set together with request_to_date to include each store's total_calls
+          (number of API requests in that period) in the response.
         example: 2010-07-29
         explode: true
         in: query
@@ -132,7 +146,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Retrieve entities to their creation date
+      - description: End date of the period for counting API requests made to each
+          connection. Set together with request_from_date to include each store's
+          total_calls (number of API requests in that period) in the response.
         example: 2100-08-29
         explode: true
         in: query
@@ -150,8 +166,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "url,store_key"
         explode: true
         in: query
@@ -161,8 +178,9 @@ paths:
           default: force_all
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "url,store_key"
         explode: true
         in: query
@@ -1957,8 +1975,11 @@ paths:
           default: asc
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result}"
         explode: true
         in: query
@@ -2082,8 +2103,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result}"
         explode: true
         in: query
@@ -2206,8 +2230,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result}"
         explode: true
         in: query
@@ -2270,8 +2297,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result}"
         explode: true
         in: query
@@ -2280,8 +2310,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: force_all
         explode: true
         in: query
@@ -2291,8 +2322,9 @@ paths:
           default: force_all
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: name
         explode: true
         in: query
@@ -2503,8 +2535,11 @@ paths:
         schema:
           type: boolean
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_code,return_message,pagination,result}"
         explode: true
         in: query
@@ -2513,8 +2548,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,name"
         explode: true
         in: query
@@ -2524,8 +2560,9 @@ paths:
           default: "id,name,code,type"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "id,name"
         explode: true
         in: query
@@ -3052,8 +3089,11 @@ paths:
           default: 10
           type: integer
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result}"
         explode: true
         in: query
@@ -3062,8 +3102,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,name"
         explode: true
         in: query
@@ -3073,8 +3114,9 @@ paths:
           default: "id,name"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "id,name"
         explode: true
         in: query
@@ -3140,8 +3182,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result}"
         explode: true
         in: query
@@ -3150,8 +3195,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,name"
         explode: true
         in: query
@@ -3161,8 +3207,9 @@ paths:
           default: "id,name"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "id,name"
         explode: true
         in: query
@@ -3543,8 +3590,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result}"
         explode: true
         in: query
@@ -3553,8 +3603,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -3564,8 +3615,9 @@ paths:
           default: force_all
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -3867,8 +3919,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result}"
         explode: true
         in: query
@@ -3997,17 +4052,11 @@ paths:
         \ method."
       operationId: CartInfo
       parameters:
-      - description: Store Id
-        example: "1"
-        explode: true
-        in: query
-        name: store_id
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result{name,url,stores_info{store_id,name,currency{id,iso3},store_owner_info}}}"
         explode: true
         in: query
@@ -4016,8 +4065,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "name,url"
         explode: true
         in: query
@@ -4027,8 +4077,9 @@ paths:
           default: "store_name,store_url,db_prefix"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "name,url"
         explode: true
         in: query
@@ -4190,8 +4241,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result{catalog_price_rules_count,catalog_price_rules{id,type,name,avail,usage_count,actions,conditions}}}"
         explode: true
         in: query
@@ -4200,8 +4254,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -4211,8 +4266,9 @@ paths:
           default: "id,name,description"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -4425,8 +4481,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{pagination,result{coupon_count,coupon{id,code,name,conditions,actions{scope,amount,conditions{id,value,sub-conditions}},date_start,avail}}}"
         explode: true
         in: query
@@ -4435,8 +4494,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,code,type,amount"
         explode: true
         in: query
@@ -4446,8 +4506,9 @@ paths:
           default: "id,code,name,description"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "usage_history,type"
         explode: true
         in: query
@@ -4744,8 +4805,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{pagination,result{gift_card{id,code,amount,status}}}"
         explode: true
         in: query
@@ -4754,8 +4818,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -4765,8 +4830,9 @@ paths:
           default: "id,code,name"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -5020,8 +5086,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result{items{key,value}}}"
         explode: true
         in: query
@@ -5030,8 +5099,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -5041,8 +5111,9 @@ paths:
           default: "key,value"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -5364,8 +5435,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{pagination,result{total_count,scripts{id,name,src,created_time{value}}}}"
         explode: true
         in: query
@@ -5374,8 +5448,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -5385,8 +5460,9 @@ paths:
           default: "id,name,description"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -5583,8 +5659,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result{id,name,enabled,countries,shipping_methods{name,rates}}}"
         explode: true
         in: query
@@ -5593,8 +5672,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -5604,8 +5684,9 @@ paths:
           default: "id,name,enabled"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -5669,8 +5750,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result{id,name,parent_id,modified_at{value},images}}"
         explode: true
         in: query
@@ -5679,8 +5763,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,parent_id,name"
         explode: true
         in: query
@@ -5690,8 +5775,9 @@ paths:
           default: "id,parent_id,name,description"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "id,parent_id,name"
         explode: true
         in: query
@@ -6015,8 +6101,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result{categories_count,category{id,parent_id,modified_at{value},images}}}"
         explode: true
         in: query
@@ -6025,8 +6114,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,parent_id,name"
         explode: true
         in: query
@@ -6036,8 +6126,9 @@ paths:
           default: "id,parent_id,name,description"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "id,parent_id,name"
         explode: true
         in: query
@@ -6890,8 +6981,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result{id,parent_id,sku,upc,images,combination}}"
         explode: true
         in: query
@@ -6900,8 +6994,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,email"
         explode: true
         in: query
@@ -6911,8 +7006,9 @@ paths:
           default: "id,email,first_name,last_name"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "id,email"
         explode: true
         in: query
@@ -7246,8 +7342,11 @@ paths:
           default: asc
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result{customer}}"
         explode: true
         in: query
@@ -7256,8 +7355,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,email"
         explode: true
         in: query
@@ -7267,8 +7367,9 @@ paths:
           default: "id,email,first_name,last_name"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "id,email"
         explode: true
         in: query
@@ -7526,8 +7627,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_code,return_message,pagination,result}"
         explode: true
         in: query
@@ -7536,8 +7640,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -7547,8 +7652,9 @@ paths:
           default: force_all
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -7633,8 +7739,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_code,return_message,pagination,result}"
         explode: true
         in: query
@@ -7643,8 +7752,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -7654,8 +7764,9 @@ paths:
           default: "id,name,additional_fields"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -7808,8 +7919,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_code,return_message,pagination,result}"
         explode: true
         in: query
@@ -7945,8 +8059,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result}"
         explode: true
         in: query
@@ -7955,8 +8072,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -7966,8 +8084,9 @@ paths:
           default: force_all
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -8021,8 +8140,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "order_id,totals,status"
         explode: true
         in: query
@@ -8032,8 +8152,11 @@ paths:
           default: "order_id,customer,totals,address,items,bundles,status"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result{order_id,customer,totals,address,items,bundles,status}}"
         explode: true
         in: query
@@ -8042,8 +8165,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "order_id,totals,status"
         explode: true
         in: query
@@ -8651,8 +8775,9 @@ paths:
           default: asc
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "order_id,totals,status"
         explode: true
         in: query
@@ -8662,8 +8787,11 @@ paths:
           default: "order_id,customer,totals,address,items,bundles,status"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_code,pagination,result{order{order_id,customer,totals,address,items,bundles,status}}}"
         explode: true
         in: query
@@ -8672,8 +8800,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "order_id,totals,status"
         explode: true
         in: query
@@ -9110,8 +9239,11 @@ paths:
         schema:
           type: integer
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_code,pagination,result{order{id,customer{email},created_at,totals{total},order_products}}}"
         explode: true
         in: query
@@ -9120,8 +9252,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: force_all
         explode: true
         in: query
@@ -9131,8 +9264,9 @@ paths:
           default: "customer,totals,items"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: customer
         explode: true
         in: query
@@ -9378,8 +9512,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result{id,order_id,shipment_provider,tracking_numbers{tracking_number},items{product_id,quantity}}}"
         explode: true
         in: query
@@ -9388,8 +9525,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -9399,8 +9537,9 @@ paths:
           default: "id,order_id,items,tracking_numbers"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -9512,8 +9651,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{status_code,pagination,result{shipment{id,order_id,shipment_provider,tracking_numbers{tracking_number},items{product_id,quantity}}}}"
         explode: true
         in: query
@@ -9522,8 +9664,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -9533,8 +9676,9 @@ paths:
           default: "id,order_id,items,tracking_numbers"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -9733,8 +9877,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result}"
         explode: true
         in: query
@@ -9836,8 +9983,11 @@ paths:
           default: false
           type: boolean
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_code,return_message,result}"
         explode: true
         in: query
@@ -9903,8 +10053,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -9914,8 +10065,11 @@ paths:
           default: "id,order_id,amount,description"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_code,pagination,result{transactions_count,transactions{id,transaction_id,status,description,settlement_amount,gateway,card_brand,card_last_four}}}"
         explode: true
         in: query
@@ -9924,8 +10078,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -9999,8 +10154,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result{id,name,price,images}}"
         explode: true
         in: query
@@ -10009,8 +10167,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -10020,8 +10179,9 @@ paths:
           default: "id,name,description,price,categories_ids"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -10593,8 +10753,9 @@ paths:
           default: false
           type: boolean
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -10604,8 +10765,11 @@ paths:
           default: "id,name,description,price,categories_ids"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_code,pagination,result{product{id,name,price,images}}}"
         explode: true
         in: query
@@ -10614,8 +10778,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -11056,8 +11221,11 @@ paths:
           default: asc
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{pagination,result{attribute}}"
         explode: true
         in: query
@@ -11066,8 +11234,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "attribute_id,name"
         explode: true
         in: query
@@ -11077,8 +11246,9 @@ paths:
           default: "attribute_id,name"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "attribute_id,name"
         explode: true
         in: query
@@ -11436,8 +11606,11 @@ paths:
           default: true
           type: boolean
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_code,return_message,pagination,result}"
         explode: true
         in: query
@@ -11446,8 +11619,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -11457,8 +11631,9 @@ paths:
           default: "id,name,short_description,active,url"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -11530,8 +11705,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result{id,parent_id,sku,upc,images,combination}}"
         explode: true
         in: query
@@ -11540,8 +11718,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -11551,8 +11730,9 @@ paths:
           default: force_all
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -11751,8 +11931,11 @@ paths:
           default: false
           type: boolean
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result{children{id,parent_id,sku,upc,images,combination}}}"
         explode: true
         in: query
@@ -11761,8 +11944,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -11772,8 +11956,9 @@ paths:
           default: force_all
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -11935,8 +12120,11 @@ paths:
         schema:
           type: boolean
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_message,pagination,result{currency}}"
         explode: true
         in: query
@@ -11945,8 +12133,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "name,iso3,default,avail"
         explode: true
         in: query
@@ -11956,8 +12145,9 @@ paths:
           default: "name,iso3,default,avail"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "name,iso3,default,avail"
         explode: true
         in: query
@@ -12436,8 +12626,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_code,return_message,pagination,result}"
         explode: true
         in: query
@@ -12446,8 +12639,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,name,sort_order"
         explode: true
         in: query
@@ -12457,8 +12651,9 @@ paths:
           default: "id,name,description"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "id,name,sort_order"
         explode: true
         in: query
@@ -13164,8 +13359,11 @@ paths:
           default: asc
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_code,return_message,pagination,result}"
         explode: true
         in: query
@@ -13174,8 +13372,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -13185,8 +13384,9 @@ paths:
           default: "id,customer_id,email,message,status,product_id,nick_name,summary,rating,ratings,status,created_time"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -13648,8 +13848,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_code,return_message,result}"
         explode: true
         in: query
@@ -13658,8 +13861,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,order_products"
         explode: true
         in: query
@@ -13669,8 +13873,9 @@ paths:
           default: "id,order_products"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "id,order_id"
         explode: true
         in: query
@@ -13936,8 +14141,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_code,return_message,pagination,result}"
         explode: true
         in: query
@@ -13946,8 +14154,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,order_products"
         explode: true
         in: query
@@ -13957,8 +14166,9 @@ paths:
           default: "id,order_products"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "id,order_id"
         explode: true
         in: query
@@ -14170,8 +14380,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{return_code,return_message,pagination,result}"
         explode: true
         in: query
@@ -14180,8 +14393,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,model,price,images"
         explode: true
         in: query
@@ -14191,8 +14405,9 @@ paths:
           default: force_all
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: false
         explode: true
         in: query
@@ -14252,8 +14467,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result{id,name,tax,tax_rates{id,countries{id,name,states},cities,address,zip_codes{is_range,range,fields}}}}"
         explode: true
         in: query
@@ -14262,8 +14480,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "tax_class_id,tax"
         explode: true
         in: query
@@ -14273,8 +14492,9 @@ paths:
           default: "tax_class_id,name,avail"
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to ignore. Works only if parameter `params` equal force_all
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ ignore. Works only if parameter `params` equal force_all"
         example: "tax_class_id,tax"
         explode: true
         in: query
@@ -14395,8 +14615,11 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
         example: "{result}"
         explode: true
         in: query
@@ -14527,8 +14750,9 @@ paths:
         schema:
           type: string
         style: form
-      - description: Set this parameter in order to choose which entity fields you
-          want to retrieve
+      - description: "Important! Parameter deprecated, use response_fields instead.\
+          \ Set this parameter in order to choose which entity fields you want to\
+          \ retrieve"
         example: "id,entity,callback,fields"
         explode: true
         in: query
@@ -15040,7 +15264,7 @@ components:
         demandware_client_id: b849eb85-v8b9-1dw8-9fe2-97e1d6ffc7b0
       properties:
         cart_id:
-          description: Store’s identifier which you can get from cart_list method
+          description: Integration identifier
           enum:
           - 3DCart
           - 3DCartApi
@@ -15136,7 +15360,10 @@ components:
           type: string
           name: store_root
         store_key:
-          description: Set this parameter if bridge is already uploaded to store
+          description: "If a bridge connector is already installed on the store, you\
+            \ MUST pass here the store key it generated during installation, to connect\
+            \ via the bridge-based integration. Omit it only when connecting via an\
+            \ API-based integration, which uses API credentials instead."
           example: ab37fc230bc5df63a5be1b11220949be
           type: string
           name: store_key
@@ -30161,8 +30388,11 @@ components:
           type: string
           name: bill_phone
         response_fields:
-          description: Set this parameter in order to choose which entity fields you
-            want to retrieve
+          description: "Set this parameter to choose which entity fields to retrieve.\
+            \ Use comma-separated field names in curly braces, nested to match the\
+            \ response structure, e.g. {result{product{id,name}}}. The wildcard *\
+            \ returns every field at a level: {*} gives the whole response, {result{product{*}}}\
+            \ all product fields."
           example: "{result}"
           type: string
           name: response_fields
@@ -31771,14 +32001,16 @@ components:
           name: shipp_country
         params:
           default: force_all
-          description: Set this parameter in order to choose which entity fields you
-            want to retrieve
+          description: "Important! Parameter deprecated, use response_fields instead.\
+            \ Set this parameter in order to choose which entity fields you want to\
+            \ retrieve"
           example: "id,model,price,images"
           type: string
           name: params
         exclude:
-          description: Set this parameter in order to choose which entity fields you
-            want to ignore. Works only if parameter `params` equal force_all
+          description: "Important! Parameter deprecated, use response_fields instead.\
+            \ Set this parameter in order to choose which entity fields you want to\
+            \ ignore. Works only if parameter `params` equal force_all"
           example: false
           type: string
           name: exclude
@@ -32570,16 +32802,31 @@ components:
           type: object
     OrderShipmentAdd:
       example:
-        store_id: "1"
-        send_notifications: true
-        tracking_provider: Custom tracker
+        mail_class: priority
         admin_comment: Test admin comment
         adjust_stock: true
+        shipping_label_currency: USD
+        shipping_method: flatrate_flatrate
+        dimensions_unit: cm
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
+        ship_from_country: US
+        tracking_link: http://example.com?someParam=value
+        height: 56.12
+        store_id: "1"
+        duty_amount: "12.50"
+        send_notifications: true
+        shipping_label_cost: "5.99"
+        revenue_eligibility: true
+        length: 56.12
+        tracking_provider: Custom tracker
+        weight: 23.69
+        ship_to_country: GB
         is_shipped: true
+        weight_unit: lb
         enable_cache: true
         use_latest_api_version: true
-        shipping_method: flatrate_flatrate
-        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
+        incoterm: DAP
+        width: 56.12
         shipment_provider: UPS
         tracking_numbers:
         - carrier_id: carrier_id
@@ -32592,9 +32839,10 @@ components:
           quantity: 0.8008281904610115
         - order_product_id: order_product_id
           quantity: 0.8008281904610115
-        tracking_link: http://example.com?someParam=value
+        duty_currency: USD
         warehouse_id: "1"
         check_process_status: false
+        ship_date: 2025-03-15 10:00:00
       properties:
         order_id:
           description: Defines the order for which the shipment will be created
@@ -32660,13 +32908,6 @@ components:
           example: true
           type: boolean
           name: adjust_stock
-        enable_cache:
-          default: false
-          description: "If the value is 'true' and order exist in our cache, we will\
-            \ use order.info from cache to prepare shipment items."
-          example: true
-          type: boolean
-          name: enable_cache
         check_process_status:
           default: false
           description: Disable or enable check process status. Please note that the
@@ -32679,17 +32920,105 @@ components:
           example: Custom tracker
           type: string
           name: tracking_provider
+        admin_comment:
+          description: Specifies admin's order comment
+          example: Test admin comment
+          type: string
+          name: admin_comment
+        mail_class:
+          description: "Mail class for the shipment (e.g., priority, express)."
+          example: priority
+          type: string
+          name: mail_class
+        ship_date:
+          description: Ship date.
+          example: 2025-03-15 10:00:00
+          type: string
+          name: ship_date
+        weight:
+          description: Weight
+          example: 23.69
+          type: number
+          name: weight
+        weight_unit:
+          description: Weight Unit
+          example: lb
+          type: string
+          name: weight_unit
+        length:
+          description: Defines product's length
+          example: 56.12
+          type: number
+          name: length
+        width:
+          description: Defines product's width
+          example: 56.12
+          type: number
+          name: width
+        height:
+          description: Defines product's height
+          example: 56.12
+          type: number
+          name: height
+        dimensions_unit:
+          description: Weight Unit
+          example: cm
+          type: string
+          name: dimensions_unit
+        shipping_label_cost:
+          description: Cost of the shipping label.
+          example: "5.99"
+          type: number
+          name: shipping_label_cost
+        shipping_label_currency:
+          description: Currency code for the shipping label cost (3-letter ISO code).
+          example: USD
+          type: string
+          name: shipping_label_currency
+        revenue_eligibility:
+          description: Revenue eligibility flag.
+          example: true
+          type: boolean
+          name: revenue_eligibility
+        ship_from_country:
+          description: Country code the shipment is sent from (2-letter ISO code).
+          example: US
+          type: string
+          name: ship_from_country
+        ship_to_country:
+          description: Country code the shipment is sent to (2-letter ISO code).
+          example: GB
+          type: string
+          name: ship_to_country
+        incoterm:
+          description: "International commercial term for the shipment (e.g., DAP,\
+            \ DDP)."
+          example: DAP
+          type: string
+          name: incoterm
+        duty_amount:
+          description: Duty amount for international shipment.
+          example: "12.50"
+          type: number
+          name: duty_amount
+        duty_currency:
+          description: Currency code for the duty amount (3-letter ISO code).
+          example: USD
+          type: string
+          name: duty_currency
+        enable_cache:
+          default: false
+          description: "If the value is 'true' and order exist in our cache, we will\
+            \ use order.info from cache to prepare shipment items."
+          example: true
+          type: boolean
+          name: enable_cache
         use_latest_api_version:
           default: false
           description: Use the latest platform API version
           example: true
           type: boolean
           name: use_latest_api_version
-        admin_comment:
-          description: Specifies admin's order comment
-          example: Test admin comment
-          type: string
-          name: admin_comment
         idempotency_key:
           description: A unique identifier associated with a specific request. Repeated
             requests with the same <strong>idempotency_key</strong> return a cached
@@ -39204,7 +39533,9 @@ components:
           type: string
           name: visible
         in_stock:
-          description: Set stock status
+          description: "Set stock status. Effective only when manage_stock is false\
+            \ — when stock is managed, the status is derived from quantity automatically\
+            \ and this parameter is ignored."
           example: true
           type: boolean
           name: in_stock
@@ -39262,7 +39593,9 @@ components:
           type: string
           name: lang_id
         quantity:
-          description: Defines new product's quantity
+          description: "Defines new product's quantity. Effective only when manage_stock\
+            \ is true — otherwise the value is ignored. To enable stock tracking and\
+            \ set a quantity in one call, pass manage_stock=true together with quantity."
           example: 6
           type: number
           name: quantity
@@ -39272,7 +39605,9 @@ components:
           type: number
           name: reserve_quantity
         manage_stock:
-          description: Defines inventory tracking for product
+          description: "Defines inventory tracking for product. When true, quantity\
+            \ sets the stock level and the stock status is derived from it; when false,\
+            \ quantity is ignored and in_stock sets the status directly."
           example: false
           type: boolean
           name: manage_stock
@@ -39282,12 +39617,14 @@ components:
           type: string
           name: backorder_status
         increase_quantity:
-          description: Defines the incremental changes in product quantity
+          description: Defines the incremental changes in product quantity. Effective
+            only when manage_stock is true — otherwise the value is ignored.
           example: 4
           type: number
           name: increase_quantity
         reduce_quantity:
-          description: Defines the decrement changes in product quantity
+          description: Defines the decrement changes in product quantity. Effective
+            only when manage_stock is true — otherwise the value is ignored.
           example: 4
           type: number
           name: reduce_quantity
@@ -44576,12 +44913,16 @@ components:
           type: boolean
           name: is_virtual
         manage_stock:
-          description: Defines inventory tracking for product variant
+          description: "Defines inventory tracking for product variant. When true,\
+            \ quantity sets the stock level and the stock status is derived from it;\
+            \ when false, quantity is ignored and in_stock sets the status directly."
           example: false
           type: boolean
           name: manage_stock
         in_stock:
-          description: Set stock status
+          description: "Set stock status. Effective only when manage_stock is false\
+            \ — when stock is managed, the status is derived from quantity automatically\
+            \ and this parameter is ignored."
           example: true
           type: boolean
           name: in_stock
@@ -44598,19 +44939,24 @@ components:
           type: number
           name: reserve_quantity
         quantity:
-          description: Defines new products' variants quantity
+          description: "Defines new products' variants quantity. Effective only when\
+            \ manage_stock is true — otherwise the value is ignored. To enable stock\
+            \ tracking and set a quantity in one call, pass manage_stock=true together\
+            \ with quantity."
           example: 6
           type: number
           name: quantity
         increase_quantity:
           default: 0
-          description: Defines the incremental changes in product quantity
+          description: Defines the incremental changes in product quantity. Effective
+            only when manage_stock is true — otherwise the value is ignored.
           example: 4
           type: number
           name: increase_quantity
         reduce_quantity:
           default: 0
-          description: Defines the decrement changes in product quantity
+          description: Defines the decrement changes in product quantity. Effective
+            only when manage_stock is true — otherwise the value is ignored.
           example: 4
           type: number
           name: reduce_quantity
@@ -48091,8 +48437,8 @@ components:
           type: string
           name: action
         callback:
-          description: Callback url that returns shipping rates. It should be able
-            to accept POST requests with json data.
+          description: Callback where the webhook should send the POST request when
+            the event occurs
           example: https://example.com/callback
           type: string
           name: callback
@@ -48108,8 +48454,11 @@ components:
           type: string
           name: fields
         response_fields:
-          description: Set this parameter in order to choose which entity fields you
-            want to retrieve
+          description: "Set this parameter to choose which entity fields to retrieve.\
+            \ Use comma-separated field names in curly braces, nested to match the\
+            \ response structure, e.g. {result{product{id,name}}}. The wildcard *\
+            \ returns every field at a level: {*} gives the whole response, {result{product{*}}}\
+            \ all product fields."
           example: "{result}"
           type: string
           name: response_fields
@@ -48141,6 +48490,7 @@ components:
           name: idempotency_key
       required:
       - action
+      - callback
       - entity
     ParamDefinition_FilteringConditions_FilterCondition:
       oneOf:
@@ -48192,8 +48542,8 @@ components:
           type: string
           name: id
         callback:
-          description: Callback url that returns shipping rates. It should be able
-            to accept POST requests with json data.
+          description: Callback where the webhook should send the POST request when
+            the event occurs
           example: https://example.com/callback
           type: string
           name: callback
@@ -48208,8 +48558,11 @@ components:
           type: string
           name: fields
         response_fields:
-          description: Set this parameter in order to choose which entity fields you
-            want to retrieve
+          description: "Set this parameter to choose which entity fields to retrieve.\
+            \ Use comma-separated field names in curly braces, nested to match the\
+            \ response structure, e.g. {result{product{id,name}}}. The wildcard *\
+            \ returns every field at a level: {*} gives the whole response, {result{product{*}}}\
+            \ all product fields."
           example: "{result}"
           type: string
           name: response_fields

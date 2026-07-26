@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **ShippPostcode** | **string** | Specifies shipping postcode | [optional] 
 **ShippState** | **string** | Specifies shipping state code | [optional] 
 **ShippCountry** | **string** | Specifies shipping country code | 
-**Params** | **string** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to "force_all"]
-**Exclude** | **string** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional] 
+**Params** | **string** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to "force_all"]
+**Exclude** | **string** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional] 
 **IdempotencyKey** | **string** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional] 
 **OrderItem** | [**List&lt;OrderPreestimateShippingListOrderItemInner&gt;**](OrderPreestimateShippingListOrderItemInner.md) |  | 
 

@@ -258,11 +258,10 @@ namespace Org.OpenAPITools.Test.Api
         public void CartInfoTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string? storeId = null;
             //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.CartInfo(storeId, responseFields, varParams, exclude);
+            //var response = instance.CartInfo(responseFields, varParams, exclude);
             //Assert.IsType<CartInfo200Response>(response);
         }
 

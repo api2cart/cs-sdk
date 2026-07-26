@@ -33,9 +33,9 @@ namespace Org.OpenAPITools.Model
     public partial class AccountCartAdd : IValidatableObject
     {
         /// <summary>
-        /// Store’s identifier which you can get from cart_list method
+        /// Integration identifier
         /// </summary>
-        /// <value>Store’s identifier which you can get from cart_list method</value>
+        /// <value>Integration identifier</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum CartIdEnum
         {
@@ -468,9 +468,9 @@ namespace Org.OpenAPITools.Model
 
 
         /// <summary>
-        /// Store’s identifier which you can get from cart_list method
+        /// Integration identifier
         /// </summary>
-        /// <value>Store’s identifier which you can get from cart_list method</value>
+        /// <value>Integration identifier</value>
         /*
         <example>Opencart14</example>
         */
@@ -484,11 +484,11 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountCartAdd" /> class.
         /// </summary>
-        /// <param name="cartId">Store’s identifier which you can get from cart_list method (required).</param>
+        /// <param name="cartId">Integration identifier (required).</param>
         /// <param name="storeUrl">A web address of a store that you would like to connect to API2Cart.</param>
         /// <param name="bridgeUrl">This parameter allows to set up store with custom bridge url (also you must use store_root parameter if a bridge folder is not in the root folder of the store).</param>
         /// <param name="storeRoot">Absolute path to the store root directory (used with \&quot;bridge_url\&quot; parameter).</param>
-        /// <param name="storeKey">Set this parameter if bridge is already uploaded to store.</param>
+        /// <param name="storeKey">If a bridge connector is already installed on the store, you MUST pass here the store key it generated during installation, to connect via the bridge-based integration. Omit it only when connecting via an API-based integration, which uses API credentials instead..</param>
         /// <param name="label">Defines alternative text that has to be attached to the picture.</param>
         /// <param name="customLabel">Defines a custom label for the store in the app.</param>
         /// <param name="validateVersion">Specify if api2cart should validate cart version (default to false).</param>
@@ -898,9 +898,9 @@ namespace Org.OpenAPITools.Model
         public string StoreRoot { get; set; }
 
         /// <summary>
-        /// Set this parameter if bridge is already uploaded to store
+        /// If a bridge connector is already installed on the store, you MUST pass here the store key it generated during installation, to connect via the bridge-based integration. Omit it only when connecting via an API-based integration, which uses API credentials instead.
         /// </summary>
-        /// <value>Set this parameter if bridge is already uploaded to store</value>
+        /// <value>If a bridge connector is already installed on the store, you MUST pass here the store key it generated during installation, to connect via the bridge-based integration. Omit it only when connecting via an API-based integration, which uses API credentials instead.</value>
         /*
         <example>ab37fc230bc5df63a5be1b11220949be</example>
         */

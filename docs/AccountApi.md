@@ -137,12 +137,12 @@ namespace Example
 
             var apiInstance = new AccountApi(config);
             var storeUrl = http://mystore.com;  // string? | A web address of a store (optional) 
-            var storeKey = ab37fc230bc5df63a5be1b11220949be;  // string? | Find store by store key (optional) 
-            var requestFromDate = 2010-07-29;  // string? | Retrieve entities from their creation date (optional) 
-            var requestToDate = 2100-08-29;  // string? | Retrieve entities to their creation date (optional) 
+            var storeKey = ab37fc230bc5df63a5be1b11220949be;  // string? | Optional filter: return only the connected store whose store key matches this value. A store key is the unique 32-character identifier of a connected store, returned as store_key here and by account.cart.add. (optional) 
+            var requestFromDate = 2010-07-29;  // string? | Start date of the period for counting API requests made to each connection. Set together with request_to_date to include each store's total_calls (number of API requests in that period) in the response. (optional) 
+            var requestToDate = 2100-08-29;  // string? | End date of the period for counting API requests made to each connection. Set together with request_from_date to include each store's total_calls (number of API requests in that period) in the response. (optional) 
             var customLabel = This is test store;  // string? | Defines a custom label for the store in the app (optional) 
-            var varParams = url,store_key;  // string? | Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "force_all")
-            var exclude = url,store_key;  // string? | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var varParams = url,store_key;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "force_all")
+            var exclude = url,store_key;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
 
             try
             {
@@ -186,12 +186,12 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **storeUrl** | **string?** | A web address of a store | [optional]  |
-| **storeKey** | **string?** | Find store by store key | [optional]  |
-| **requestFromDate** | **string?** | Retrieve entities from their creation date | [optional]  |
-| **requestToDate** | **string?** | Retrieve entities to their creation date | [optional]  |
+| **storeKey** | **string?** | Optional filter: return only the connected store whose store key matches this value. A store key is the unique 32-character identifier of a connected store, returned as store_key here and by account.cart.add. | [optional]  |
+| **requestFromDate** | **string?** | Start date of the period for counting API requests made to each connection. Set together with request_to_date to include each store&#39;s total_calls (number of API requests in that period) in the response. | [optional]  |
+| **requestToDate** | **string?** | End date of the period for counting API requests made to each connection. Set together with request_from_date to include each store&#39;s total_calls (number of API requests in that period) in the response. | [optional]  |
 | **customLabel** | **string?** | Defines a custom label for the store in the app | [optional]  |
-| **varParams** | **string?** | Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;force_all&quot;] |
-| **exclude** | **string?** | Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **varParams** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;force_all&quot;] |
+| **exclude** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
 
 ### Return type
 
@@ -777,7 +777,7 @@ catch (ApiException e)
 
 <a id="accountsupportedplatforms"></a>
 # **AccountSupportedPlatforms**
-> ModelResponseAccountSupportedPlatforms AccountSupportedPlatforms ()
+> ModelResponseAccountSupportedPlatforms AccountSupportedPlatforms (string? cartId = null)
 
 account.supported_platforms
 
@@ -805,11 +805,12 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new AccountApi(config);
+            var cartId = Opencart14;  // string? | Filter by integration identifier (e.g. 'Shopify'). If omitted, the method returns all integrations. (optional) 
 
             try
             {
                 // account.supported_platforms
-                ModelResponseAccountSupportedPlatforms result = apiInstance.AccountSupportedPlatforms();
+                ModelResponseAccountSupportedPlatforms result = apiInstance.AccountSupportedPlatforms(cartId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -830,7 +831,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // account.supported_platforms
-    ApiResponse<ModelResponseAccountSupportedPlatforms> response = apiInstance.AccountSupportedPlatformsWithHttpInfo();
+    ApiResponse<ModelResponseAccountSupportedPlatforms> response = apiInstance.AccountSupportedPlatformsWithHttpInfo(cartId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -844,7 +845,11 @@ catch (ApiException e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **cartId** | **string?** | Filter by integration identifier (e.g. &#39;Shopify&#39;). If omitted, the method returns all integrations. | [optional]  |
+
 ### Return type
 
 [**ModelResponseAccountSupportedPlatforms**](ModelResponseAccountSupportedPlatforms.md)

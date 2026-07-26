@@ -58,12 +58,12 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeUrl">A web address of a store (optional)</param>
-        /// <param name="storeKey">Find store by store key (optional)</param>
-        /// <param name="requestFromDate">Retrieve entities from their creation date (optional)</param>
-        /// <param name="requestToDate">Retrieve entities to their creation date (optional)</param>
+        /// <param name="storeKey">Optional filter: return only the connected store whose store key matches this value. A store key is the unique 32-character identifier of a connected store, returned as store_key here and by account.cart.add. (optional)</param>
+        /// <param name="requestFromDate">Start date of the period for counting API requests made to each connection. Set together with request_to_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
+        /// <param name="requestToDate">End date of the period for counting API requests made to each connection. Set together with request_from_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
         /// <param name="customLabel">Defines a custom label for the store in the app (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountCartList200Response</returns>
         AccountCartList200Response AccountCartList(string? storeUrl = default(string?), string? storeKey = default(string?), string? requestFromDate = default(string?), string? requestToDate = default(string?), string? customLabel = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
@@ -76,12 +76,12 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeUrl">A web address of a store (optional)</param>
-        /// <param name="storeKey">Find store by store key (optional)</param>
-        /// <param name="requestFromDate">Retrieve entities from their creation date (optional)</param>
-        /// <param name="requestToDate">Retrieve entities to their creation date (optional)</param>
+        /// <param name="storeKey">Optional filter: return only the connected store whose store key matches this value. A store key is the unique 32-character identifier of a connected store, returned as store_key here and by account.cart.add. (optional)</param>
+        /// <param name="requestFromDate">Start date of the period for counting API requests made to each connection. Set together with request_to_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
+        /// <param name="requestToDate">End date of the period for counting API requests made to each connection. Set together with request_from_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
         /// <param name="customLabel">Defines a custom label for the store in the app (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountCartList200Response</returns>
         ApiResponse<AccountCartList200Response> AccountCartListWithHttpInfo(string? storeUrl = default(string?), string? storeKey = default(string?), string? requestFromDate = default(string?), string? requestToDate = default(string?), string? customLabel = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0);
@@ -498,9 +498,10 @@ namespace Org.OpenAPITools.Api
         /// Use this method to retrieve a list of supported platforms and the sets of parameters required for connecting to each of them. Note: some platforms may have multiple connection methods so that the response will contain multiple sets of parameters.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartId">Filter by integration identifier (e.g. &#39;Shopify&#39;). If omitted, the method returns all integrations. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseAccountSupportedPlatforms</returns>
-        ModelResponseAccountSupportedPlatforms AccountSupportedPlatforms(int operationIndex = 0);
+        ModelResponseAccountSupportedPlatforms AccountSupportedPlatforms(string? cartId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// account.supported_platforms
@@ -509,9 +510,10 @@ namespace Org.OpenAPITools.Api
         /// Use this method to retrieve a list of supported platforms and the sets of parameters required for connecting to each of them. Note: some platforms may have multiple connection methods so that the response will contain multiple sets of parameters.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartId">Filter by integration identifier (e.g. &#39;Shopify&#39;). If omitted, the method returns all integrations. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseAccountSupportedPlatforms</returns>
-        ApiResponse<ModelResponseAccountSupportedPlatforms> AccountSupportedPlatformsWithHttpInfo(int operationIndex = 0);
+        ApiResponse<ModelResponseAccountSupportedPlatforms> AccountSupportedPlatformsWithHttpInfo(string? cartId = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -554,12 +556,12 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeUrl">A web address of a store (optional)</param>
-        /// <param name="storeKey">Find store by store key (optional)</param>
-        /// <param name="requestFromDate">Retrieve entities from their creation date (optional)</param>
-        /// <param name="requestToDate">Retrieve entities to their creation date (optional)</param>
+        /// <param name="storeKey">Optional filter: return only the connected store whose store key matches this value. A store key is the unique 32-character identifier of a connected store, returned as store_key here and by account.cart.add. (optional)</param>
+        /// <param name="requestFromDate">Start date of the period for counting API requests made to each connection. Set together with request_to_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
+        /// <param name="requestToDate">End date of the period for counting API requests made to each connection. Set together with request_from_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
         /// <param name="customLabel">Defines a custom label for the store in the app (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountCartList200Response</returns>
@@ -573,12 +575,12 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeUrl">A web address of a store (optional)</param>
-        /// <param name="storeKey">Find store by store key (optional)</param>
-        /// <param name="requestFromDate">Retrieve entities from their creation date (optional)</param>
-        /// <param name="requestToDate">Retrieve entities to their creation date (optional)</param>
+        /// <param name="storeKey">Optional filter: return only the connected store whose store key matches this value. A store key is the unique 32-character identifier of a connected store, returned as store_key here and by account.cart.add. (optional)</param>
+        /// <param name="requestFromDate">Start date of the period for counting API requests made to each connection. Set together with request_to_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
+        /// <param name="requestToDate">End date of the period for counting API requests made to each connection. Set together with request_from_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
         /// <param name="customLabel">Defines a custom label for the store in the app (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountCartList200Response)</returns>
@@ -1000,10 +1002,11 @@ namespace Org.OpenAPITools.Api
         /// Use this method to retrieve a list of supported platforms and the sets of parameters required for connecting to each of them. Note: some platforms may have multiple connection methods so that the response will contain multiple sets of parameters.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartId">Filter by integration identifier (e.g. &#39;Shopify&#39;). If omitted, the method returns all integrations. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseAccountSupportedPlatforms</returns>
-        System.Threading.Tasks.Task<ModelResponseAccountSupportedPlatforms> AccountSupportedPlatformsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModelResponseAccountSupportedPlatforms> AccountSupportedPlatformsAsync(string? cartId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// account.supported_platforms
@@ -1012,10 +1015,11 @@ namespace Org.OpenAPITools.Api
         /// Use this method to retrieve a list of supported platforms and the sets of parameters required for connecting to each of them. Note: some platforms may have multiple connection methods so that the response will contain multiple sets of parameters.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartId">Filter by integration identifier (e.g. &#39;Shopify&#39;). If omitted, the method returns all integrations. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseAccountSupportedPlatforms)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelResponseAccountSupportedPlatforms>> AccountSupportedPlatformsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseAccountSupportedPlatforms>> AccountSupportedPlatformsWithHttpInfoAsync(string? cartId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1298,12 +1302,12 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeUrl">A web address of a store (optional)</param>
-        /// <param name="storeKey">Find store by store key (optional)</param>
-        /// <param name="requestFromDate">Retrieve entities from their creation date (optional)</param>
-        /// <param name="requestToDate">Retrieve entities to their creation date (optional)</param>
+        /// <param name="storeKey">Optional filter: return only the connected store whose store key matches this value. A store key is the unique 32-character identifier of a connected store, returned as store_key here and by account.cart.add. (optional)</param>
+        /// <param name="requestFromDate">Start date of the period for counting API requests made to each connection. Set together with request_to_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
+        /// <param name="requestToDate">End date of the period for counting API requests made to each connection. Set together with request_from_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
         /// <param name="customLabel">Defines a custom label for the store in the app (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountCartList200Response</returns>
         public AccountCartList200Response AccountCartList(string? storeUrl = default(string?), string? storeKey = default(string?), string? requestFromDate = default(string?), string? requestToDate = default(string?), string? customLabel = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
@@ -1317,12 +1321,12 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeUrl">A web address of a store (optional)</param>
-        /// <param name="storeKey">Find store by store key (optional)</param>
-        /// <param name="requestFromDate">Retrieve entities from their creation date (optional)</param>
-        /// <param name="requestToDate">Retrieve entities to their creation date (optional)</param>
+        /// <param name="storeKey">Optional filter: return only the connected store whose store key matches this value. A store key is the unique 32-character identifier of a connected store, returned as store_key here and by account.cart.add. (optional)</param>
+        /// <param name="requestFromDate">Start date of the period for counting API requests made to each connection. Set together with request_to_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
+        /// <param name="requestToDate">End date of the period for counting API requests made to each connection. Set together with request_from_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
         /// <param name="customLabel">Defines a custom label for the store in the app (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountCartList200Response</returns>
         public Org.OpenAPITools.Client.ApiResponse<AccountCartList200Response> AccountCartListWithHttpInfo(string? storeUrl = default(string?), string? storeKey = default(string?), string? requestFromDate = default(string?), string? requestToDate = default(string?), string? customLabel = default(string?), string? varParams = default(string?), string? exclude = default(string?), int operationIndex = 0)
@@ -1407,12 +1411,12 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeUrl">A web address of a store (optional)</param>
-        /// <param name="storeKey">Find store by store key (optional)</param>
-        /// <param name="requestFromDate">Retrieve entities from their creation date (optional)</param>
-        /// <param name="requestToDate">Retrieve entities to their creation date (optional)</param>
+        /// <param name="storeKey">Optional filter: return only the connected store whose store key matches this value. A store key is the unique 32-character identifier of a connected store, returned as store_key here and by account.cart.add. (optional)</param>
+        /// <param name="requestFromDate">Start date of the period for counting API requests made to each connection. Set together with request_to_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
+        /// <param name="requestToDate">End date of the period for counting API requests made to each connection. Set together with request_from_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
         /// <param name="customLabel">Defines a custom label for the store in the app (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountCartList200Response</returns>
@@ -1427,12 +1431,12 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeUrl">A web address of a store (optional)</param>
-        /// <param name="storeKey">Find store by store key (optional)</param>
-        /// <param name="requestFromDate">Retrieve entities from their creation date (optional)</param>
-        /// <param name="requestToDate">Retrieve entities to their creation date (optional)</param>
+        /// <param name="storeKey">Optional filter: return only the connected store whose store key matches this value. A store key is the unique 32-character identifier of a connected store, returned as store_key here and by account.cart.add. (optional)</param>
+        /// <param name="requestFromDate">Start date of the period for counting API requests made to each connection. Set together with request_to_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
+        /// <param name="requestToDate">End date of the period for counting API requests made to each connection. Set together with request_from_date to include each store&#39;s total_calls (number of API requests in that period) in the response. (optional)</param>
         /// <param name="customLabel">Defines a custom label for the store in the app (optional)</param>
-        /// <param name="varParams">Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
-        /// <param name="exclude">Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
+        /// <param name="varParams">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional, default to &quot;force_all&quot;)</param>
+        /// <param name="exclude">Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountCartList200Response)</returns>
@@ -3986,11 +3990,12 @@ namespace Org.OpenAPITools.Api
         /// account.supported_platforms Use this method to retrieve a list of supported platforms and the sets of parameters required for connecting to each of them. Note: some platforms may have multiple connection methods so that the response will contain multiple sets of parameters.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartId">Filter by integration identifier (e.g. &#39;Shopify&#39;). If omitted, the method returns all integrations. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModelResponseAccountSupportedPlatforms</returns>
-        public ModelResponseAccountSupportedPlatforms AccountSupportedPlatforms(int operationIndex = 0)
+        public ModelResponseAccountSupportedPlatforms AccountSupportedPlatforms(string? cartId = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseAccountSupportedPlatforms> localVarResponse = AccountSupportedPlatformsWithHttpInfo();
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseAccountSupportedPlatforms> localVarResponse = AccountSupportedPlatformsWithHttpInfo(cartId);
             return localVarResponse.Data;
         }
 
@@ -3998,9 +4003,10 @@ namespace Org.OpenAPITools.Api
         /// account.supported_platforms Use this method to retrieve a list of supported platforms and the sets of parameters required for connecting to each of them. Note: some platforms may have multiple connection methods so that the response will contain multiple sets of parameters.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartId">Filter by integration identifier (e.g. &#39;Shopify&#39;). If omitted, the method returns all integrations. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModelResponseAccountSupportedPlatforms</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ModelResponseAccountSupportedPlatforms> AccountSupportedPlatformsWithHttpInfo(int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseAccountSupportedPlatforms> AccountSupportedPlatformsWithHttpInfo(string? cartId = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -4025,6 +4031,10 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (cartId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "cart_id", cartId));
+            }
 
             localVarRequestOptions.Operation = "AccountApi.AccountSupportedPlatforms";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -4053,12 +4063,13 @@ namespace Org.OpenAPITools.Api
         /// account.supported_platforms Use this method to retrieve a list of supported platforms and the sets of parameters required for connecting to each of them. Note: some platforms may have multiple connection methods so that the response will contain multiple sets of parameters.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartId">Filter by integration identifier (e.g. &#39;Shopify&#39;). If omitted, the method returns all integrations. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModelResponseAccountSupportedPlatforms</returns>
-        public async System.Threading.Tasks.Task<ModelResponseAccountSupportedPlatforms> AccountSupportedPlatformsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModelResponseAccountSupportedPlatforms> AccountSupportedPlatformsAsync(string? cartId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ModelResponseAccountSupportedPlatforms> localVarResponse = await AccountSupportedPlatformsWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseAccountSupportedPlatforms> localVarResponse = await AccountSupportedPlatformsWithHttpInfoAsync(cartId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4066,10 +4077,11 @@ namespace Org.OpenAPITools.Api
         /// account.supported_platforms Use this method to retrieve a list of supported platforms and the sets of parameters required for connecting to each of them. Note: some platforms may have multiple connection methods so that the response will contain multiple sets of parameters.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartId">Filter by integration identifier (e.g. &#39;Shopify&#39;). If omitted, the method returns all integrations. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModelResponseAccountSupportedPlatforms)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseAccountSupportedPlatforms>> AccountSupportedPlatformsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseAccountSupportedPlatforms>> AccountSupportedPlatformsWithHttpInfoAsync(string? cartId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -4094,6 +4106,10 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (cartId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "cart_id", cartId));
+            }
 
             localVarRequestOptions.Operation = "AccountApi.AccountSupportedPlatforms";
             localVarRequestOptions.OperationIndex = operationIndex;
