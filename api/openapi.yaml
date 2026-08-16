@@ -1152,6 +1152,30 @@ paths:
           default: us
           type: string
         style: form
+      - description: "Walmart refresh token received by a Solution Provider application\
+          \ through the Walmart App Store authorization. When it is set, walmart_client_id\
+          \ and walmart_client_secret are the credentials of that application, not\
+          \ of the seller. Must be used together with walmart_seller_id and is supported\
+          \ only for walmart_region = 'us'"
+        example: eyJraWQiOiIxYmIxMTYyNS1lM2Y2LTQyNWMtOTkwMS0zZTdiNmJhNzZmNjIiLCJhbGciOiJSUzI1NiJ9
+        explode: true
+        in: query
+        name: walmart_refresh_token
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: "Walmart seller id the refresh token was issued for, sent as\
+          \ the WM_PARTNER.ID header. Must be used together with walmart_refresh_token\
+          \ and is supported only for walmart_region = 'us'"
+        example: "10000004372"
+        explode: true
+        in: query
+        name: walmart_seller_id
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Square (Weebly) Client ID
         example: sq0idp-qwer_1pvuTYe9cAf1lmxyQ
         explode: true
@@ -15136,6 +15160,7 @@ components:
         aspdotnetstorefront_api_user: admin
         facebook_business_id: "294042786906655"
         bricklink_consumer_secret: a46abc3kxyinlbggy06i9g975xqo6gjq
+        walmart_refresh_token: eyJraWQiOiIxYmIxMTYyNS1lM2Y2LTQyNWMtOTkwMS0zZTdiNmJhNzZmNjIiLCJhbGciOiJSUzI1NiJ9
         ecwid_store_id: "1"
         temu_access_token: uplv3hfyt5kcwoymrgnajnbl1ow5qxlz4sqhev6hl3xosz5dejrtyl2jre6
         verify: false
@@ -15207,6 +15232,7 @@ components:
         etsy_shared_secret: gmz3iz45x2
         bigcommerceapi_api_key: 6b89704cd75738cb0f9f6468d5462aba
         bol_retailer_id: "145001"
+        walmart_seller_id: "10000004372"
         custom_label: This is test store
         hybris_password: nimda
         shopify_api_key: bbca57d8ff3c3677128112c15556d9e3
@@ -15278,7 +15304,6 @@ components:
           - Bol
           - CommerceHQ
           - Creloaded
-          - Cscart
           - Cubecart
           - Demandware
           - EBay
@@ -15676,6 +15701,22 @@ components:
           example: us
           type: string
           name: walmart_region
+        walmart_refresh_token:
+          description: "Walmart refresh token received by a Solution Provider application\
+            \ through the Walmart App Store authorization. When it is set, walmart_client_id\
+            \ and walmart_client_secret are the credentials of that application, not\
+            \ of the seller. Must be used together with walmart_seller_id and is supported\
+            \ only for walmart_region = 'us'"
+          example: eyJraWQiOiIxYmIxMTYyNS1lM2Y2LTQyNWMtOTkwMS0zZTdiNmJhNzZmNjIiLCJhbGciOiJSUzI1NiJ9
+          type: string
+          name: walmart_refresh_token
+        walmart_seller_id:
+          description: "Walmart seller id the refresh token was issued for, sent as\
+            \ the WM_PARTNER.ID header. Must be used together with walmart_refresh_token\
+            \ and is supported only for walmart_region = 'us'"
+          example: "10000004372"
+          type: string
+          name: walmart_seller_id
         ecwid_acess_token:
           description: Access token authorizing the app to access resources on behalf
             of a user
@@ -48517,6 +48558,9 @@ components:
           type: string
         value:
           $ref: '#/components/schemas/ParamDefinition_FilteringConditions_FilterRule_value'
+        match_items:
+          nullable: true
+          type: string
     WebhookUpdate:
       example:
         callback: https://example.com/callback

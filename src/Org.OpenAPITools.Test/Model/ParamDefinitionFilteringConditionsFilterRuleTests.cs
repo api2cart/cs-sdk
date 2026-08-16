@@ -81,5 +81,14 @@ namespace Org.OpenAPITools.Test.Model
         {
             // TODO unit test for the property 'Value'
         }
+
+        /// <summary>
+        /// Test the property 'MatchItems'
+        /// </summary>
+        [Fact]
+        public void MatchItemsTest()
+        {
+            // TODO unit test for the property 'MatchItems'
+        }
     }
 }

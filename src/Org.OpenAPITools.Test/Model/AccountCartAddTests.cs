@@ -632,6 +632,24 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'WalmartRefreshToken'
+        /// </summary>
+        [Fact]
+        public void WalmartRefreshTokenTest()
+        {
+            // TODO unit test for the property 'WalmartRefreshToken'
+        }
+
+        /// <summary>
+        /// Test the property 'WalmartSellerId'
+        /// </summary>
+        [Fact]
+        public void WalmartSellerIdTest()
+        {
+            // TODO unit test for the property 'WalmartSellerId'
+        }
+
+        /// <summary>
         /// Test the property 'EcwidAcessToken'
         /// </summary>
         [Fact]

@@ -38,11 +38,13 @@ namespace Org.OpenAPITools.Model
         /// <param name="field">field.</param>
         /// <param name="varOperator">varOperator.</param>
         /// <param name="value">value.</param>
-        public ParamDefinitionFilteringConditionsFilterRule(string field = default(string), string varOperator = default(string), ParamDefinitionFilteringConditionsFilterRuleValue value = default(ParamDefinitionFilteringConditionsFilterRuleValue))
+        /// <param name="matchItems">matchItems.</param>
+        public ParamDefinitionFilteringConditionsFilterRule(string field = default(string), string varOperator = default(string), ParamDefinitionFilteringConditionsFilterRuleValue value = default(ParamDefinitionFilteringConditionsFilterRuleValue), string matchItems = default(string))
         {
             this.Field = field;
             this.Operator = varOperator;
             this.Value = value;
+            this.MatchItems = matchItems;
         }
 
         /// <summary>
@@ -64,6 +66,12 @@ namespace Org.OpenAPITools.Model
         public ParamDefinitionFilteringConditionsFilterRuleValue Value { get; set; }
 
         /// <summary>
+        /// Gets or Sets MatchItems
+        /// </summary>
+        [DataMember(Name = "match_items", EmitDefaultValue = true)]
+        public string MatchItems { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -74,6 +82,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Field: ").Append(Field).Append("\n");
             sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  MatchItems: ").Append(MatchItems).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
