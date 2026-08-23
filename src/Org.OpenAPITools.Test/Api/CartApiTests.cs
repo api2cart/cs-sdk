@@ -261,7 +261,8 @@ namespace Org.OpenAPITools.Test.Api
             //string? responseFields = null;
             //string? varParams = null;
             //string? exclude = null;
-            //var response = instance.CartInfo(responseFields, varParams, exclude);
+            //bool? useLatestApiVersion = null;
+            //var response = instance.CartInfo(responseFields, varParams, exclude, useLatestApiVersion);
             //Assert.IsType<CartInfo200Response>(response);
         }
 

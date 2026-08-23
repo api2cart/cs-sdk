@@ -1331,7 +1331,7 @@ catch (ApiException e)
 
 <a id="cartinfo"></a>
 # **CartInfo**
-> CartInfo200Response CartInfo (string? responseFields = null, string? varParams = null, string? exclude = null)
+> CartInfo200Response CartInfo (string? responseFields = null, string? varParams = null, string? exclude = null, bool? useLatestApiVersion = null)
 
 cart.info
 
@@ -1366,11 +1366,12 @@ namespace Example
             var responseFields = {result{name,url,stores_info{store_id,name,currency{id,iso3},store_owner_info}}};  // string? | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional) 
             var varParams = name,url;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve (optional)  (default to "store_name,store_url,db_prefix")
             var exclude = name,url;  // string? | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter `params` equal force_all (optional) 
+            var useLatestApiVersion = true;  // bool? | Use the latest platform API version (optional)  (default to false)
 
             try
             {
                 // cart.info
-                CartInfo200Response result = apiInstance.CartInfo(responseFields, varParams, exclude);
+                CartInfo200Response result = apiInstance.CartInfo(responseFields, varParams, exclude, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1391,7 +1392,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // cart.info
-    ApiResponse<CartInfo200Response> response = apiInstance.CartInfoWithHttpInfo(responseFields, varParams, exclude);
+    ApiResponse<CartInfo200Response> response = apiInstance.CartInfoWithHttpInfo(responseFields, varParams, exclude, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1411,6 +1412,7 @@ catch (ApiException e)
 | **responseFields** | **string?** | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. | [optional]  |
 | **varParams** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to retrieve | [optional] [default to &quot;store_name,store_url,db_prefix&quot;] |
 | **exclude** | **string?** | Important! Parameter deprecated, use response_fields instead. Set this parameter in order to choose which entity fields you want to ignore. Works only if parameter &#x60;params&#x60; equal force_all | [optional]  |
+| **useLatestApiVersion** | **bool?** | Use the latest platform API version | [optional] [default to false] |
 
 ### Return type
 

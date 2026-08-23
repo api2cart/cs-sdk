@@ -4112,6 +4112,16 @@ paths:
         schema:
           type: string
         style: form
+      - description: Use the latest platform API version
+        example: true
+        explode: true
+        in: query
+        name: use_latest_api_version
+        required: false
+        schema:
+          default: false
+          type: boolean
+        style: form
       responses:
         "200":
           content:
