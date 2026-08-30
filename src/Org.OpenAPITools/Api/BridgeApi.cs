@@ -34,9 +34,10 @@ namespace Org.OpenAPITools.Api
         /// Delete bridge from the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AttributeValueDelete200Response</returns>
-        AttributeValueDelete200Response BridgeDelete(int operationIndex = 0);
+        AttributeValueDelete200Response BridgeDelete(string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// bridge.delete
@@ -45,9 +46,10 @@ namespace Org.OpenAPITools.Api
         /// Delete bridge from the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttributeValueDelete200Response</returns>
-        ApiResponse<AttributeValueDelete200Response> BridgeDeleteWithHttpInfo(int operationIndex = 0);
+        ApiResponse<AttributeValueDelete200Response> BridgeDeleteWithHttpInfo(string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// bridge.download
         /// </summary>
@@ -78,9 +80,10 @@ namespace Org.OpenAPITools.Api
         /// Update bridge in the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AttributeUpdate200Response</returns>
-        AttributeUpdate200Response BridgeUpdate(int operationIndex = 0);
+        AttributeUpdate200Response BridgeUpdate(string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// bridge.update
@@ -89,9 +92,10 @@ namespace Org.OpenAPITools.Api
         /// Update bridge in the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttributeUpdate200Response</returns>
-        ApiResponse<AttributeUpdate200Response> BridgeUpdateWithHttpInfo(int operationIndex = 0);
+        ApiResponse<AttributeUpdate200Response> BridgeUpdateWithHttpInfo(string? idempotencyKey = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -108,10 +112,11 @@ namespace Org.OpenAPITools.Api
         /// Delete bridge from the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttributeValueDelete200Response</returns>
-        System.Threading.Tasks.Task<AttributeValueDelete200Response> BridgeDeleteAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AttributeValueDelete200Response> BridgeDeleteAsync(string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// bridge.delete
@@ -120,10 +125,11 @@ namespace Org.OpenAPITools.Api
         /// Delete bridge from the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttributeValueDelete200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttributeValueDelete200Response>> BridgeDeleteWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AttributeValueDelete200Response>> BridgeDeleteWithHttpInfoAsync(string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// bridge.download
         /// </summary>
@@ -156,10 +162,11 @@ namespace Org.OpenAPITools.Api
         /// Update bridge in the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttributeUpdate200Response</returns>
-        System.Threading.Tasks.Task<AttributeUpdate200Response> BridgeUpdateAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AttributeUpdate200Response> BridgeUpdateAsync(string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// bridge.update
@@ -168,10 +175,11 @@ namespace Org.OpenAPITools.Api
         /// Update bridge in the store.
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttributeUpdate200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttributeUpdate200Response>> BridgeUpdateWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AttributeUpdate200Response>> BridgeUpdateWithHttpInfoAsync(string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -296,11 +304,12 @@ namespace Org.OpenAPITools.Api
         /// bridge.delete Delete bridge from the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AttributeValueDelete200Response</returns>
-        public AttributeValueDelete200Response BridgeDelete(int operationIndex = 0)
+        public AttributeValueDelete200Response BridgeDelete(string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeValueDelete200Response> localVarResponse = BridgeDeleteWithHttpInfo();
+            Org.OpenAPITools.Client.ApiResponse<AttributeValueDelete200Response> localVarResponse = BridgeDeleteWithHttpInfo(idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -308,9 +317,10 @@ namespace Org.OpenAPITools.Api
         /// bridge.delete Delete bridge from the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttributeValueDelete200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AttributeValueDelete200Response> BridgeDeleteWithHttpInfo(int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AttributeValueDelete200Response> BridgeDeleteWithHttpInfo(string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -335,6 +345,10 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "BridgeApi.BridgeDelete";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -368,12 +382,13 @@ namespace Org.OpenAPITools.Api
         /// bridge.delete Delete bridge from the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttributeValueDelete200Response</returns>
-        public async System.Threading.Tasks.Task<AttributeValueDelete200Response> BridgeDeleteAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AttributeValueDelete200Response> BridgeDeleteAsync(string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeValueDelete200Response> localVarResponse = await BridgeDeleteWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<AttributeValueDelete200Response> localVarResponse = await BridgeDeleteWithHttpInfoAsync(idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -381,10 +396,11 @@ namespace Org.OpenAPITools.Api
         /// bridge.delete Delete bridge from the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttributeValueDelete200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeValueDelete200Response>> BridgeDeleteWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeValueDelete200Response>> BridgeDeleteWithHttpInfoAsync(string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -409,6 +425,10 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "BridgeApi.BridgeDelete";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -602,11 +622,12 @@ namespace Org.OpenAPITools.Api
         /// bridge.update Update bridge in the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AttributeUpdate200Response</returns>
-        public AttributeUpdate200Response BridgeUpdate(int operationIndex = 0)
+        public AttributeUpdate200Response BridgeUpdate(string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response> localVarResponse = BridgeUpdateWithHttpInfo();
+            Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response> localVarResponse = BridgeUpdateWithHttpInfo(idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -614,9 +635,10 @@ namespace Org.OpenAPITools.Api
         /// bridge.update Update bridge in the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttributeUpdate200Response</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response> BridgeUpdateWithHttpInfo(int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response> BridgeUpdateWithHttpInfo(string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -641,6 +663,10 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "BridgeApi.BridgeUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -674,12 +700,13 @@ namespace Org.OpenAPITools.Api
         /// bridge.update Update bridge in the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttributeUpdate200Response</returns>
-        public async System.Threading.Tasks.Task<AttributeUpdate200Response> BridgeUpdateAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AttributeUpdate200Response> BridgeUpdateAsync(string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response> localVarResponse = await BridgeUpdateWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response> localVarResponse = await BridgeUpdateWithHttpInfoAsync(idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -687,10 +714,11 @@ namespace Org.OpenAPITools.Api
         /// bridge.update Update bridge in the store.
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttributeUpdate200Response)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response>> BridgeUpdateWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeUpdate200Response>> BridgeUpdateWithHttpInfoAsync(string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -715,6 +743,10 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "idempotency_key", idempotencyKey));
+            }
 
             localVarRequestOptions.Operation = "BridgeApi.BridgeUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;

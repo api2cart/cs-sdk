@@ -62,7 +62,8 @@ namespace Org.OpenAPITools.Test.Api
         public void BridgeDeleteTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.BridgeDelete();
+            //string? idempotencyKey = null;
+            //var response = instance.BridgeDelete(idempotencyKey);
             //Assert.IsType<AttributeValueDelete200Response>(response);
         }
 
@@ -85,7 +86,8 @@ namespace Org.OpenAPITools.Test.Api
         public void BridgeUpdateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.BridgeUpdate();
+            //string? idempotencyKey = null;
+            //var response = instance.BridgeUpdate(idempotencyKey);
             //Assert.IsType<AttributeUpdate200Response>(response);
         }
     }

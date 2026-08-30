@@ -10,7 +10,7 @@ All URIs are relative to *https://api.api2cart.local.com/v1.1*
 
 <a id="bridgedelete"></a>
 # **BridgeDelete**
-> AttributeValueDelete200Response BridgeDelete ()
+> AttributeValueDelete200Response BridgeDelete (string? idempotencyKey = null)
 
 bridge.delete
 
@@ -42,11 +42,12 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new BridgeApi(config);
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // bridge.delete
-                AttributeValueDelete200Response result = apiInstance.BridgeDelete();
+                AttributeValueDelete200Response result = apiInstance.BridgeDelete(idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -67,7 +68,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // bridge.delete
-    ApiResponse<AttributeValueDelete200Response> response = apiInstance.BridgeDeleteWithHttpInfo();
+    ApiResponse<AttributeValueDelete200Response> response = apiInstance.BridgeDeleteWithHttpInfo(idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -81,7 +82,11 @@ catch (ApiException e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
+
 ### Return type
 
 [**AttributeValueDelete200Response**](AttributeValueDelete200Response.md)
@@ -205,7 +210,7 @@ catch (ApiException e)
 
 <a id="bridgeupdate"></a>
 # **BridgeUpdate**
-> AttributeUpdate200Response BridgeUpdate ()
+> AttributeUpdate200Response BridgeUpdate (string? idempotencyKey = null)
 
 bridge.update
 
@@ -237,11 +242,12 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new BridgeApi(config);
+            var idempotencyKey = 098f6bcd4621d373cade4e832627b4f6;  // string? | A unique identifier associated with a specific request. Repeated requests with the same <strong>idempotency_key</strong> return a cached response without re-executing the business logic. <strong>Please note that the cache lifetime is 15 minutes.</strong> (optional) 
 
             try
             {
                 // bridge.update
-                AttributeUpdate200Response result = apiInstance.BridgeUpdate();
+                AttributeUpdate200Response result = apiInstance.BridgeUpdate(idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -262,7 +268,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // bridge.update
-    ApiResponse<AttributeUpdate200Response> response = apiInstance.BridgeUpdateWithHttpInfo();
+    ApiResponse<AttributeUpdate200Response> response = apiInstance.BridgeUpdateWithHttpInfo(idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -276,7 +282,11 @@ catch (ApiException e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **idempotencyKey** | **string?** | A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt; | [optional]  |
+
 ### Return type
 
 [**AttributeUpdate200Response**](AttributeUpdate200Response.md)

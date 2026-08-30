@@ -4031,7 +4031,19 @@ paths:
     post:
       description: Update bridge in the store.
       operationId: BridgeUpdate
-      parameters: []
+      parameters:
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -4049,7 +4061,19 @@ paths:
     post:
       description: Delete bridge from the store.
       operationId: BridgeDelete
-      parameters: []
+      parameters:
+      - description: A unique identifier associated with a specific request. Repeated
+          requests with the same <strong>idempotency_key</strong> return a cached
+          response without re-executing the business logic. <strong>Please note that
+          the cache lifetime is 15 minutes.</strong>
+        example: 098f6bcd4621d373cade4e832627b4f6
+        explode: true
+        in: query
+        name: idempotency_key
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
