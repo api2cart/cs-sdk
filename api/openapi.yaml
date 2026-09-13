@@ -30508,6 +30508,7 @@ components:
         order_status: Completed
         clear_cache: false
         customer_fax: "5656598"
+        shipp_additional_number: "8523"
         total_paid: 23.56
         coupons:
         - coupons
@@ -30519,6 +30520,7 @@ components:
         transaction_id: d41d8cd98f00b204e9800998ecf8427e
         subtotal_price: 563.23
         shipping_price: 5.5
+        shipp_national_address: RHMA3184
         shipp_last_name: Smith
         bill_company: Apple
         customer_first_name: John
@@ -30548,6 +30550,7 @@ components:
         customer_birthday: 1990-12-03
         shipp_state: IL
         total_weight: 23
+        shipp_building_number: "3184"
         carrier_id: USPS
         customer_last_name: Smith
         shipp_first_name: John
@@ -31007,6 +31010,21 @@ components:
           example: 5.5
           type: number
           name: fee_price
+        shipp_national_address:
+          description: Specifies short national address code of a shipping address
+          example: RHMA3184
+          type: string
+          name: shipp_national_address
+        shipp_building_number:
+          description: Specifies building number of a shipping address
+          example: "3184"
+          type: string
+          name: shipp_building_number
+        shipp_additional_number:
+          description: Specifies additional number of a shipping address
+          example: "8523"
+          type: string
+          name: shipp_additional_number
         idempotency_key:
           description: A unique identifier associated with a specific request. Repeated
             requests with the same <strong>idempotency_key</strong> return a cached

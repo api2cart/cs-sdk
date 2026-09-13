@@ -704,6 +704,33 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ShippNationalAddress'
+        /// </summary>
+        [Fact]
+        public void ShippNationalAddressTest()
+        {
+            // TODO unit test for the property 'ShippNationalAddress'
+        }
+
+        /// <summary>
+        /// Test the property 'ShippBuildingNumber'
+        /// </summary>
+        [Fact]
+        public void ShippBuildingNumberTest()
+        {
+            // TODO unit test for the property 'ShippBuildingNumber'
+        }
+
+        /// <summary>
+        /// Test the property 'ShippAdditionalNumber'
+        /// </summary>
+        [Fact]
+        public void ShippAdditionalNumberTest()
+        {
+            // TODO unit test for the property 'ShippAdditionalNumber'
+        }
+
+        /// <summary>
         /// Test the property 'IdempotencyKey'
         /// </summary>
         [Fact]
