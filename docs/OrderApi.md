@@ -2712,7 +2712,7 @@ namespace Example
             var invoiceAdminComment = Test admin comment;  // string? | Specifies admin's order invoice comment (optional) 
             var dateModified = 2014-05-05 05:05:00;  // string? | Specifies order's  modification date (optional) 
             var dateFinished = 2014-06-05 05:05:00;  // string? | Specifies order's  finished date (optional) 
-            var sendNotifications = true;  // bool? | Send notifications to customer after order was created (optional)  (default to false)
+            var sendNotifications = true;  // bool? | Send notifications to customer after order status was changed (optional)  (default to false)
             var createInvoice = true;  // bool? | Determines whether an invoice should be created if it has not already been created (optional) 
             var origin = newsletter;  // string? | The source of the order (optional) 
             var tags = tag1,tag2;  // string? | Order tags (optional) 
@@ -2772,7 +2772,7 @@ catch (ApiException e)
 | **invoiceAdminComment** | **string?** | Specifies admin&#39;s order invoice comment | [optional]  |
 | **dateModified** | **string?** | Specifies order&#39;s  modification date | [optional]  |
 | **dateFinished** | **string?** | Specifies order&#39;s  finished date | [optional]  |
-| **sendNotifications** | **bool?** | Send notifications to customer after order was created | [optional] [default to false] |
+| **sendNotifications** | **bool?** | Send notifications to customer after order status was changed | [optional] [default to false] |
 | **createInvoice** | **bool?** | Determines whether an invoice should be created if it has not already been created | [optional]  |
 | **origin** | **string?** | The source of the order | [optional]  |
 | **tags** | **string?** | Order tags | [optional]  |

@@ -837,7 +837,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
+        /// <param name="sendNotifications">Send notifications to customer after order status was changed (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
         /// <param name="tags">Order tags (optional)</param>
@@ -866,7 +866,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
+        /// <param name="sendNotifications">Send notifications to customer after order status was changed (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
         /// <param name="tags">Order tags (optional)</param>
@@ -1741,7 +1741,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
+        /// <param name="sendNotifications">Send notifications to customer after order status was changed (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
         /// <param name="tags">Order tags (optional)</param>
@@ -1771,7 +1771,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
+        /// <param name="sendNotifications">Send notifications to customer after order status was changed (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
         /// <param name="tags">Order tags (optional)</param>
@@ -7303,7 +7303,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
+        /// <param name="sendNotifications">Send notifications to customer after order status was changed (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
         /// <param name="tags">Order tags (optional)</param>
@@ -7333,7 +7333,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
+        /// <param name="sendNotifications">Send notifications to customer after order status was changed (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
         /// <param name="tags">Order tags (optional)</param>
@@ -7486,7 +7486,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
+        /// <param name="sendNotifications">Send notifications to customer after order status was changed (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
         /// <param name="tags">Order tags (optional)</param>
@@ -7517,7 +7517,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="invoiceAdminComment">Specifies admin&#39;s order invoice comment (optional)</param>
         /// <param name="dateModified">Specifies order&#39;s  modification date (optional)</param>
         /// <param name="dateFinished">Specifies order&#39;s  finished date (optional)</param>
-        /// <param name="sendNotifications">Send notifications to customer after order was created (optional, default to false)</param>
+        /// <param name="sendNotifications">Send notifications to customer after order status was changed (optional, default to false)</param>
         /// <param name="createInvoice">Determines whether an invoice should be created if it has not already been created (optional)</param>
         /// <param name="origin">The source of the order (optional)</param>
         /// <param name="tags">Order tags (optional)</param>

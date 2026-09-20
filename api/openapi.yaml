@@ -9108,7 +9108,7 @@ paths:
         schema:
           type: string
         style: form
-      - description: Send notifications to customer after order was created
+      - description: Send notifications to customer after order status was changed
         example: true
         explode: true
         in: query
