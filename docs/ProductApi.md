@@ -1152,7 +1152,7 @@ namespace Example
             var vendorId = 1;  // string? | Counts products specified by vendor id (optional) 
             var langId = 3;  // string? | Counts products specified by language id (optional) 
             var availView = true;  // bool? | Specifies the set of visible/invisible products (optional) 
-            var availSale = false;  // bool? | Specifies the set of available/not available products for sale (optional) 
+            var availSale = false;  // bool? | Specifies the set of available/not available products for sale.<br/>On BigCommerce the count checks only whether the product is set as purchasable and ignores stock (pre-order products are counted neither as true nor as false), so it can differ from product.list with the same value, which also checks stock at all inventory locations (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
@@ -1220,7 +1220,7 @@ catch (ApiException e)
 | **vendorId** | **string?** | Counts products specified by vendor id | [optional]  |
 | **langId** | **string?** | Counts products specified by language id | [optional]  |
 | **availView** | **bool?** | Specifies the set of visible/invisible products | [optional]  |
-| **availSale** | **bool?** | Specifies the set of available/not available products for sale | [optional]  |
+| **availSale** | **bool?** | Specifies the set of available/not available products for sale.&lt;br/&gt;On BigCommerce the count checks only whether the product is set as purchasable and ignores stock (pre-order products are counted neither as true nor as false), so it can differ from product.list with the same value, which also checks stock at all inventory locations | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |

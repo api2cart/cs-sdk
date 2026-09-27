@@ -406,7 +406,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="vendorId">Counts products specified by vendor id (optional)</param>
         /// <param name="langId">Counts products specified by language id (optional)</param>
         /// <param name="availView">Specifies the set of visible/invisible products (optional)</param>
-        /// <param name="availSale">Specifies the set of available/not available products for sale (optional)</param>
+        /// <param name="availSale">Specifies the set of available/not available products for sale.&lt;br/&gt;On BigCommerce the count checks only whether the product is set as purchasable and ignores stock (pre-order products are counted neither as true nor as false), so it can differ from product.list with the same value, which also checks stock at all inventory locations (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
@@ -443,7 +443,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="vendorId">Counts products specified by vendor id (optional)</param>
         /// <param name="langId">Counts products specified by language id (optional)</param>
         /// <param name="availView">Specifies the set of visible/invisible products (optional)</param>
-        /// <param name="availSale">Specifies the set of available/not available products for sale (optional)</param>
+        /// <param name="availSale">Specifies the set of available/not available products for sale.&lt;br/&gt;On BigCommerce the count checks only whether the product is set as purchasable and ignores stock (pre-order products are counted neither as true nor as false), so it can differ from product.list with the same value, which also checks stock at all inventory locations (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
@@ -2045,7 +2045,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="vendorId">Counts products specified by vendor id (optional)</param>
         /// <param name="langId">Counts products specified by language id (optional)</param>
         /// <param name="availView">Specifies the set of visible/invisible products (optional)</param>
-        /// <param name="availSale">Specifies the set of available/not available products for sale (optional)</param>
+        /// <param name="availSale">Specifies the set of available/not available products for sale.&lt;br/&gt;On BigCommerce the count checks only whether the product is set as purchasable and ignores stock (pre-order products are counted neither as true nor as false), so it can differ from product.list with the same value, which also checks stock at all inventory locations (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
@@ -2083,7 +2083,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="vendorId">Counts products specified by vendor id (optional)</param>
         /// <param name="langId">Counts products specified by language id (optional)</param>
         /// <param name="availView">Specifies the set of visible/invisible products (optional)</param>
-        /// <param name="availSale">Specifies the set of available/not available products for sale (optional)</param>
+        /// <param name="availSale">Specifies the set of available/not available products for sale.&lt;br/&gt;On BigCommerce the count checks only whether the product is set as purchasable and ignores stock (pre-order products are counted neither as true nor as false), so it can differ from product.list with the same value, which also checks stock at all inventory locations (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
@@ -5908,7 +5908,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="vendorId">Counts products specified by vendor id (optional)</param>
         /// <param name="langId">Counts products specified by language id (optional)</param>
         /// <param name="availView">Specifies the set of visible/invisible products (optional)</param>
-        /// <param name="availSale">Specifies the set of available/not available products for sale (optional)</param>
+        /// <param name="availSale">Specifies the set of available/not available products for sale.&lt;br/&gt;On BigCommerce the count checks only whether the product is set as purchasable and ignores stock (pre-order products are counted neither as true nor as false), so it can differ from product.list with the same value, which also checks stock at all inventory locations (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
@@ -5946,7 +5946,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="vendorId">Counts products specified by vendor id (optional)</param>
         /// <param name="langId">Counts products specified by language id (optional)</param>
         /// <param name="availView">Specifies the set of visible/invisible products (optional)</param>
-        /// <param name="availSale">Specifies the set of available/not available products for sale (optional)</param>
+        /// <param name="availSale">Specifies the set of available/not available products for sale.&lt;br/&gt;On BigCommerce the count checks only whether the product is set as purchasable and ignores stock (pre-order products are counted neither as true nor as false), so it can differ from product.list with the same value, which also checks stock at all inventory locations (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
@@ -6136,7 +6136,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="vendorId">Counts products specified by vendor id (optional)</param>
         /// <param name="langId">Counts products specified by language id (optional)</param>
         /// <param name="availView">Specifies the set of visible/invisible products (optional)</param>
-        /// <param name="availSale">Specifies the set of available/not available products for sale (optional)</param>
+        /// <param name="availSale">Specifies the set of available/not available products for sale.&lt;br/&gt;On BigCommerce the count checks only whether the product is set as purchasable and ignores stock (pre-order products are counted neither as true nor as false), so it can differ from product.list with the same value, which also checks stock at all inventory locations (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
@@ -6175,7 +6175,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="vendorId">Counts products specified by vendor id (optional)</param>
         /// <param name="langId">Counts products specified by language id (optional)</param>
         /// <param name="availView">Specifies the set of visible/invisible products (optional)</param>
-        /// <param name="availSale">Specifies the set of available/not available products for sale (optional)</param>
+        /// <param name="availSale">Specifies the set of available/not available products for sale.&lt;br/&gt;On BigCommerce the count checks only whether the product is set as purchasable and ignores stock (pre-order products are counted neither as true nor as false), so it can differ from product.list with the same value, which also checks stock at all inventory locations (optional)</param>
         /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
         /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
         /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
