@@ -10390,6 +10390,23 @@ paths:
         schema:
           type: boolean
         style: form
+      - description: "Specifies the set of products that are out of stock completely\
+          \ or partially. Only true is supported: it returns products tracked per\
+          \ product that have no stock, and products tracked per variant that have\
+          \ at least one out-of-stock variant, even while other variants of the same\
+          \ product still have stock. Stock is checked at the default inventory location\
+          \ only, so a product that still has stock at another location can be returned,\
+          \ and a product whose only variant is the base one is not matched. Unlike\
+          \ avail_sale, which answers for the product as a whole, this catches a product\
+          \ that still sells overall because some of its variants do"
+        example: true
+        explode: true
+        in: query
+        name: is_partial_or_full_out_of_stock
+        required: false
+        schema:
+          type: boolean
+        style: form
       - description: Retrieve entities from their creation date
         example: 2010-07-29 13:45:52
         explode: true
@@ -10678,6 +10695,23 @@ paths:
         explode: true
         in: query
         name: avail_sale
+        required: false
+        schema:
+          type: boolean
+        style: form
+      - description: "Specifies the set of products that are out of stock completely\
+          \ or partially. Only true is supported: it returns products tracked per\
+          \ product that have no stock, and products tracked per variant that have\
+          \ at least one out-of-stock variant, even while other variants of the same\
+          \ product still have stock. Stock is checked at the default inventory location\
+          \ only, so a product that still has stock at another location can be returned,\
+          \ and a product whose only variant is the base one is not matched. Unlike\
+          \ avail_sale, which answers for the product as a whole, this catches a product\
+          \ that still sells overall because some of its variants do"
+        example: true
+        explode: true
+        in: query
+        name: is_partial_or_full_out_of_stock
         required: false
         schema:
           type: boolean

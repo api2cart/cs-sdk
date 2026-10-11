@@ -258,6 +258,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? langId = null;
             //bool? availView = null;
             //bool? availSale = null;
+            //bool? isPartialOrFullOutOfStock = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? modifiedFrom = null;
@@ -274,7 +275,7 @@ namespace Org.OpenAPITools.Test.Api
             //bool? returnGlobal = null;
             //bool? disableReportCache = null;
             //bool? useLatestApiVersion = null;
-            //var response = instance.ProductCount(sku, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
+            //var response = instance.ProductCount(sku, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, availView, availSale, isPartialOrFullOutOfStock, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
             //Assert.IsType<ModelResponseProductCount>(response);
         }
 
@@ -448,6 +449,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? currencyId = null;
             //bool? availView = null;
             //bool? availSale = null;
+            //bool? isPartialOrFullOutOfStock = null;
             //string? createdFrom = null;
             //string? createdTo = null;
             //string? modifiedFrom = null;
@@ -472,7 +474,7 @@ namespace Org.OpenAPITools.Test.Api
             //bool? disableReportCache = null;
             //bool? useLatestApiVersion = null;
             //string? productType = null;
-            //var response = instance.ProductList(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, manufacturerId, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, productType);
+            //var response = instance.ProductList(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, currencyId, availView, availSale, isPartialOrFullOutOfStock, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, manufacturerId, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, productType);
             //Assert.IsType<ModelResponseProductList>(response);
         }
 

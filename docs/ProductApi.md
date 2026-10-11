@@ -1111,7 +1111,7 @@ catch (ApiException e)
 
 <a id="productcount"></a>
 # **ProductCount**
-> ModelResponseProductCount ProductCount (string? sku = null, string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? vendorId = null, string? langId = null, bool? availView = null, bool? availSale = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? brandName = null, string? manufacturerId = null, List<string>? productAttributes = null, string? status = null, string? type = null, string? visible = null, string? findValue = null, string? findWhere = null, string? reportRequestId = null, bool? returnGlobal = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
+> ModelResponseProductCount ProductCount (string? sku = null, string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? vendorId = null, string? langId = null, bool? availView = null, bool? availSale = null, bool? isPartialOrFullOutOfStock = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? brandName = null, string? manufacturerId = null, List<string>? productAttributes = null, string? status = null, string? type = null, string? visible = null, string? findValue = null, string? findWhere = null, string? reportRequestId = null, bool? returnGlobal = null, bool? disableReportCache = null, bool? useLatestApiVersion = null)
 
 product.count
 
@@ -1153,6 +1153,7 @@ namespace Example
             var langId = 3;  // string? | Counts products specified by language id (optional) 
             var availView = true;  // bool? | Specifies the set of visible/invisible products (optional) 
             var availSale = false;  // bool? | Specifies the set of available/not available products for sale.<br/>On BigCommerce the count checks only whether the product is set as purchasable and ignores stock (pre-order products are counted neither as true nor as false), so it can differ from product.list with the same value, which also checks stock at all inventory locations (optional) 
+            var isPartialOrFullOutOfStock = true;  // bool? | Specifies the set of products that are out of stock completely or partially. Only true is supported: it returns products tracked per product that have no stock, and products tracked per variant that have at least one out-of-stock variant, even while other variants of the same product still have stock. Stock is checked at the default inventory location only, so a product that still has stock at another location can be returned, and a product whose only variant is the base one is not matched. Unlike avail_sale, which answers for the product as a whole, this catches a product that still sells overall because some of its variants do (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
@@ -1173,7 +1174,7 @@ namespace Example
             try
             {
                 // product.count
-                ModelResponseProductCount result = apiInstance.ProductCount(sku, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
+                ModelResponseProductCount result = apiInstance.ProductCount(sku, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, availView, availSale, isPartialOrFullOutOfStock, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1194,7 +1195,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.count
-    ApiResponse<ModelResponseProductCount> response = apiInstance.ProductCountWithHttpInfo(sku, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
+    ApiResponse<ModelResponseProductCount> response = apiInstance.ProductCountWithHttpInfo(sku, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, availView, availSale, isPartialOrFullOutOfStock, createdFrom, createdTo, modifiedFrom, modifiedTo, brandName, manufacturerId, productAttributes, status, type, visible, findValue, findWhere, reportRequestId, returnGlobal, disableReportCache, useLatestApiVersion);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1221,6 +1222,7 @@ catch (ApiException e)
 | **langId** | **string?** | Counts products specified by language id | [optional]  |
 | **availView** | **bool?** | Specifies the set of visible/invisible products | [optional]  |
 | **availSale** | **bool?** | Specifies the set of available/not available products for sale.&lt;br/&gt;On BigCommerce the count checks only whether the product is set as purchasable and ignores stock (pre-order products are counted neither as true nor as false), so it can differ from product.list with the same value, which also checks stock at all inventory locations | [optional]  |
+| **isPartialOrFullOutOfStock** | **bool?** | Specifies the set of products that are out of stock completely or partially. Only true is supported: it returns products tracked per product that have no stock, and products tracked per variant that have at least one out-of-stock variant, even while other variants of the same product still have stock. Stock is checked at the default inventory location only, so a product that still has stock at another location can be returned, and a product whose only variant is the base one is not matched. Unlike avail_sale, which answers for the product as a whole, this catches a product that still sells overall because some of its variants do | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
@@ -2245,7 +2247,7 @@ catch (ApiException e)
 
 <a id="productlist"></a>
 # **ProductList**
-> ModelResponseProductList ProductList (int? start = null, int? count = null, string? pageCursor = null, string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? vendorId = null, string? langId = null, string? currencyId = null, bool? availView = null, bool? availSale = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? sku = null, string? brandName = null, List<string>? productAttributes = null, string? manufacturerId = null, string? status = null, string? type = null, string? visible = null, string? findValue = null, string? findWhere = null, bool? returnGlobal = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? sortBy = null, string? sortDirection = null, string? reportRequestId = null, bool? disableCache = null, bool? disableReportCache = null, bool? useLatestApiVersion = null, string? productType = null)
+> ModelResponseProductList ProductList (int? start = null, int? count = null, string? pageCursor = null, string? productIds = null, string? sinceId = null, string? categoriesIds = null, string? categoryId = null, string? storeId = null, string? vendorId = null, string? langId = null, string? currencyId = null, bool? availView = null, bool? availSale = null, bool? isPartialOrFullOutOfStock = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? sku = null, string? brandName = null, List<string>? productAttributes = null, string? manufacturerId = null, string? status = null, string? type = null, string? visible = null, string? findValue = null, string? findWhere = null, bool? returnGlobal = null, string? varParams = null, string? responseFields = null, string? exclude = null, string? sortBy = null, string? sortDirection = null, string? reportRequestId = null, bool? disableCache = null, bool? disableReportCache = null, bool? useLatestApiVersion = null, string? productType = null)
 
 product.list
 
@@ -2290,6 +2292,7 @@ namespace Example
             var currencyId = usd;  // string? | Currency Id (optional) 
             var availView = true;  // bool? | Specifies the set of visible/invisible products (optional) 
             var availSale = false;  // bool? | Specifies the set of available/not available products for sale (optional) 
+            var isPartialOrFullOutOfStock = true;  // bool? | Specifies the set of products that are out of stock completely or partially. Only true is supported: it returns products tracked per product that have no stock, and products tracked per variant that have at least one out-of-stock variant, even while other variants of the same product still have stock. Stock is checked at the default inventory location only, so a product that still has stock at another location can be returned, and a product whose only variant is the base one is not matched. Unlike avail_sale, which answers for the product as a whole, this catches a product that still sells overall because some of its variants do (optional) 
             var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
             var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
             var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
@@ -2318,7 +2321,7 @@ namespace Example
             try
             {
                 // product.list
-                ModelResponseProductList result = apiInstance.ProductList(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, manufacturerId, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, productType);
+                ModelResponseProductList result = apiInstance.ProductList(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, currencyId, availView, availSale, isPartialOrFullOutOfStock, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, manufacturerId, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, productType);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2339,7 +2342,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // product.list
-    ApiResponse<ModelResponseProductList> response = apiInstance.ProductListWithHttpInfo(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, currencyId, availView, availSale, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, manufacturerId, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, productType);
+    ApiResponse<ModelResponseProductList> response = apiInstance.ProductListWithHttpInfo(start, count, pageCursor, productIds, sinceId, categoriesIds, categoryId, storeId, vendorId, langId, currencyId, availView, availSale, isPartialOrFullOutOfStock, createdFrom, createdTo, modifiedFrom, modifiedTo, sku, brandName, productAttributes, manufacturerId, status, type, visible, findValue, findWhere, returnGlobal, varParams, responseFields, exclude, sortBy, sortDirection, reportRequestId, disableCache, disableReportCache, useLatestApiVersion, productType);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2369,6 +2372,7 @@ catch (ApiException e)
 | **currencyId** | **string?** | Currency Id | [optional]  |
 | **availView** | **bool?** | Specifies the set of visible/invisible products | [optional]  |
 | **availSale** | **bool?** | Specifies the set of available/not available products for sale | [optional]  |
+| **isPartialOrFullOutOfStock** | **bool?** | Specifies the set of products that are out of stock completely or partially. Only true is supported: it returns products tracked per product that have no stock, and products tracked per variant that have at least one out-of-stock variant, even while other variants of the same product still have stock. Stock is checked at the default inventory location only, so a product that still has stock at another location can be returned, and a product whose only variant is the base one is not matched. Unlike avail_sale, which answers for the product as a whole, this catches a product that still sells overall because some of its variants do | [optional]  |
 | **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
 | **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
 | **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
