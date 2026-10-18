@@ -62,7 +62,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="reserveQuantity">This parameter allows to reserve/unreserve product variants quantity..</param>
         /// <param name="quantity">Defines new products&#39; variants quantity. Effective only when manage_stock is true — otherwise the value is ignored. To enable stock tracking and set a quantity in one call, pass manage_stock&#x3D;true together with quantity..</param>
         /// <param name="increaseQuantity">Defines the incremental changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored. (default to 0M).</param>
-        /// <param name="reduceQuantity">Defines the decrement changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored. (default to 0M).</param>
+        /// <param name="reduceQuantity">Defines the decrement changes in product quantity. Effective only when manage_stock is true. (default to 0M).</param>
         /// <param name="pricesIncTax">Indicates whether prices include tax. (default to false).</param>
         /// <param name="price">Defines new product&#39;s variant price.</param>
         /// <param name="specialPrice">Defines new product&#39;s variant special price.</param>
@@ -427,9 +427,9 @@ namespace Org.OpenAPITools.Model
         public decimal IncreaseQuantity { get; set; }
 
         /// <summary>
-        /// Defines the decrement changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored.
+        /// Defines the decrement changes in product quantity. Effective only when manage_stock is true.
         /// </summary>
-        /// <value>Defines the decrement changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored.</value>
+        /// <value>Defines the decrement changes in product quantity. Effective only when manage_stock is true.</value>
         /*
         <example>4</example>
         */

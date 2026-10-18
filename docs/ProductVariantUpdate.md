@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 **ReserveQuantity** | **decimal** | This parameter allows to reserve/unreserve product variants quantity. | [optional] 
 **Quantity** | **decimal** | Defines new products&#39; variants quantity. Effective only when manage_stock is true — otherwise the value is ignored. To enable stock tracking and set a quantity in one call, pass manage_stock&#x3D;true together with quantity. | [optional] 
 **IncreaseQuantity** | **decimal** | Defines the incremental changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored. | [optional] [default to 0M]
-**ReduceQuantity** | **decimal** | Defines the decrement changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored. | [optional] [default to 0M]
+**ReduceQuantity** | **decimal** | Defines the decrement changes in product quantity. Effective only when manage_stock is true. | [optional] [default to 0M]
 **PricesIncTax** | **bool** | Indicates whether prices include tax. | [optional] [default to false]
 **Price** | **decimal** | Defines new product&#39;s variant price | [optional] 
 **SpecialPrice** | **decimal** | Defines new product&#39;s variant special price | [optional] 

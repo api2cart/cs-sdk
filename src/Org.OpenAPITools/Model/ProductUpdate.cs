@@ -75,7 +75,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="manageStock">Defines inventory tracking for product. When true, quantity sets the stock level and the stock status is derived from it; when false, quantity is ignored and in_stock sets the status directly..</param>
         /// <param name="backorderStatus">Set backorder status.</param>
         /// <param name="increaseQuantity">Defines the incremental changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored..</param>
-        /// <param name="reduceQuantity">Defines the decrement changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored..</param>
+        /// <param name="reduceQuantity">Defines the decrement changes in product quantity. Effective only when manage_stock is true..</param>
         /// <param name="lowStockThreshold">Specify the quantity threshold below which the product is considered low in stock.</param>
         /// <param name="minOrderQuantity">The minimum quantity an order must contain, to be eligible to purchase this product..</param>
         /// <param name="maxOrderQuantity">The maximum quantity an order can contain when purchasing the product..</param>
@@ -638,9 +638,9 @@ namespace Org.OpenAPITools.Model
         public decimal IncreaseQuantity { get; set; }
 
         /// <summary>
-        /// Defines the decrement changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored.
+        /// Defines the decrement changes in product quantity. Effective only when manage_stock is true.
         /// </summary>
-        /// <value>Defines the decrement changes in product quantity. Effective only when manage_stock is true — otherwise the value is ignored.</value>
+        /// <value>Defines the decrement changes in product quantity. Effective only when manage_stock is true.</value>
         /*
         <example>4</example>
         */

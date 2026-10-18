@@ -39755,7 +39755,7 @@ components:
           name: increase_quantity
         reduce_quantity:
           description: Defines the decrement changes in product quantity. Effective
-            only when manage_stock is true — otherwise the value is ignored.
+            only when manage_stock is true.
           example: 4
           type: number
           name: reduce_quantity
@@ -45087,7 +45087,7 @@ components:
         reduce_quantity:
           default: 0
           description: Defines the decrement changes in product quantity. Effective
-            only when manage_stock is true — otherwise the value is ignored.
+            only when manage_stock is true.
           example: 4
           type: number
           name: reduce_quantity
