@@ -226,6 +226,7 @@ docs/OrderCalculateShippingRate.md
 docs/OrderCalculateSubtotal.md
 docs/OrderCalculateTax.md
 docs/OrderInfo200Response.md
+docs/OrderInvoiceAdd.md
 docs/OrderItem.md
 docs/OrderItemOption.md
 docs/OrderPaymentMethod.md
@@ -701,6 +702,7 @@ src/Org.OpenAPITools.Test/Model/OrderCalculateSubtotalTests.cs
 src/Org.OpenAPITools.Test/Model/OrderCalculateTaxTests.cs
 src/Org.OpenAPITools.Test/Model/OrderCalculateTests.cs
 src/Org.OpenAPITools.Test/Model/OrderInfo200ResponseTests.cs
+src/Org.OpenAPITools.Test/Model/OrderInvoiceAddTests.cs
 src/Org.OpenAPITools.Test/Model/OrderItemOptionTests.cs
 src/Org.OpenAPITools.Test/Model/OrderItemTests.cs
 src/Org.OpenAPITools.Test/Model/OrderPaymentMethodTests.cs
@@ -1190,6 +1192,7 @@ src/Org.OpenAPITools/Model/OrderCalculateShippingRate.cs
 src/Org.OpenAPITools/Model/OrderCalculateSubtotal.cs
 src/Org.OpenAPITools/Model/OrderCalculateTax.cs
 src/Org.OpenAPITools/Model/OrderInfo200Response.cs
+src/Org.OpenAPITools/Model/OrderInvoiceAdd.cs
 src/Org.OpenAPITools/Model/OrderItem.cs
 src/Org.OpenAPITools/Model/OrderItemOption.cs
 src/Org.OpenAPITools/Model/OrderPaymentMethod.cs

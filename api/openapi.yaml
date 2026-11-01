@@ -9391,6 +9391,32 @@ paths:
       summary: order.fulfillment_status.list
       tags:
       - order
+  /order.invoice.add.json:
+    post:
+      description: "Upload a PDF invoice or credit note of the order to the store.\
+        \ The store checks the document after the upload, so a successful response\
+        \ means it was received, not accepted. Use the returned id to find the result\
+        \ of the check in the store."
+      operationId: OrderInvoiceAdd
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrderInvoiceAdd'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AttributeAdd_200_response'
+          description: successful operation
+      security:
+      - ApiKeyAuth: []
+        StoreKeyAuth: []
+      summary: order.invoice.add
+      tags:
+      - order
   /order.preestimate_shipping.list.json:
     post:
       description: Retrieve list of order preestimated shipping methods
@@ -31901,6 +31927,95 @@ components:
         custom_fields:
           nullable: true
           type: object
+    OrderInvoiceAdd:
+      example:
+        store_id: "1"
+        transaction_id: d41d8cd98f00b204e9800998ecf8427e
+        number: INV-2026-0001
+        total_price: 23.56
+        tax_price: 5.5
+        idempotency_key: 098f6bcd4621d373cade4e832627b4f6
+        shipment_id: "200000002"
+        order_id: 25
+        url: https://example.com/invoice.pdf
+        content: JVBERi0xLjcK...JSVFT0YK
+        document_type: invoice
+      properties:
+        order_id:
+          description: Defines the order the document is uploaded for
+          example: 25
+          type: string
+          name: order_id
+        shipment_id:
+          description: Defines the shipment of the order the document is for. Required
+            when the order was shipped in several shipments
+          example: "200000002"
+          type: string
+          name: shipment_id
+        store_id:
+          description: Defines the store of the order. The store of the order is taken
+            when not specified
+          example: "1"
+          type: string
+          name: store_id
+        number:
+          description: Defines the number of the invoice or credit note as printed
+            on the document
+          example: INV-2026-0001
+          type: string
+          name: number
+        document_type:
+          default: invoice
+          description: Defines whether the document is an invoice or a credit note
+            for a refund or return
+          example: invoice
+          type: string
+          name: document_type
+        transaction_id:
+          description: Defines the refund or return transaction the credit note is
+            issued for. Required when document_type is credit_note
+          example: d41d8cd98f00b204e9800998ecf8427e
+          type: string
+          name: transaction_id
+        total_price:
+          description: "Defines the total amount of the document, VAT included. When\
+            \ specified, it must match the total the store calculated for the order\
+            \ or shipment. For sellers with VAT Calculation Service Option 2 Amazon\
+            \ requires both total_price and tax_price, otherwise it rejects the feed\
+            \ after processing"
+          example: 23.56
+          type: number
+          name: total_price
+        tax_price:
+          description: "Defines the total VAT amount of the document. When specified,\
+            \ it must match the VAT the store calculated for the order or shipment.\
+            \ For sellers with VAT Calculation Service Option 2 Amazon requires both\
+            \ total_price and tax_price, otherwise it rejects the feed after processing"
+          example: 5.5
+          type: number
+          name: tax_price
+        url:
+          description: Defines the public URL of the PDF document. Required if content
+            is not specified
+          example: https://example.com/invoice.pdf
+          type: string
+          name: url
+        content:
+          description: Defines the PDF document encoded in base64. Required if url
+            is not specified
+          example: JVBERi0xLjcK...JSVFT0YK
+          type: string
+          name: content
+        idempotency_key:
+          description: A unique identifier associated with a specific request. Repeated
+            requests with the same <strong>idempotency_key</strong> return a cached
+            response without re-executing the business logic. <strong>Please note
+            that the cache lifetime is 15 minutes.</strong>
+          example: 098f6bcd4621d373cade4e832627b4f6
+          type: string
+          name: idempotency_key
+      required:
+      - number
     Model_Response_Order_PreestimateShipping_List:
       example:
         result:

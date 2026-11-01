@@ -275,6 +275,29 @@ namespace Org.OpenAPITools.Api
         /// <returns>ApiResponse of OrderInfo200Response</returns>
         ApiResponse<OrderInfo200Response> OrderInfoWithHttpInfo(string? id = default(string?), string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int? roundingPrecision = default(int?), bool? allowUserDefinedOrderStatuses = default(bool?), int operationIndex = 0);
         /// <summary>
+        /// order.invoice.add
+        /// </summary>
+        /// <remarks>
+        /// Upload a PDF invoice or credit note of the order to the store. The store checks the document after the upload, so a successful response means it was received, not accepted. Use the returned id to find the result of the check in the store.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderInvoiceAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttributeAdd200Response</returns>
+        AttributeAdd200Response OrderInvoiceAdd(OrderInvoiceAdd orderInvoiceAdd, int operationIndex = 0);
+
+        /// <summary>
+        /// order.invoice.add
+        /// </summary>
+        /// <remarks>
+        /// Upload a PDF invoice or credit note of the order to the store. The store checks the document after the upload, so a successful response means it was received, not accepted. Use the returned id to find the result of the check in the store.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderInvoiceAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttributeAdd200Response</returns>
+        ApiResponse<AttributeAdd200Response> OrderInvoiceAddWithHttpInfo(OrderInvoiceAdd orderInvoiceAdd, int operationIndex = 0);
+        /// <summary>
         /// order.list
         /// </summary>
         /// <remarks>
@@ -1144,6 +1167,31 @@ namespace Org.OpenAPITools.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderInfo200Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrderInfo200Response>> OrderInfoWithHttpInfoAsync(string? id = default(string?), string? orderId = default(string?), string? storeId = default(string?), string? varParams = default(string?), string? responseFields = default(string?), string? exclude = default(string?), bool? enableCache = default(bool?), bool? useLatestApiVersion = default(bool?), int? roundingPrecision = default(int?), bool? allowUserDefinedOrderStatuses = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <summary>
+        /// order.invoice.add
+        /// </summary>
+        /// <remarks>
+        /// Upload a PDF invoice or credit note of the order to the store. The store checks the document after the upload, so a successful response means it was received, not accepted. Use the returned id to find the result of the check in the store.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderInvoiceAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttributeAdd200Response</returns>
+        System.Threading.Tasks.Task<AttributeAdd200Response> OrderInvoiceAddAsync(OrderInvoiceAdd orderInvoiceAdd, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+
+        /// <summary>
+        /// order.invoice.add
+        /// </summary>
+        /// <remarks>
+        /// Upload a PDF invoice or credit note of the order to the store. The store checks the document after the upload, so a successful response means it was received, not accepted. Use the returned id to find the result of the check in the store.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderInvoiceAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttributeAdd200Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttributeAdd200Response>> OrderInvoiceAddWithHttpInfoAsync(OrderInvoiceAdd orderInvoiceAdd, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// order.list
         /// </summary>
@@ -3536,6 +3584,173 @@ namespace Org.OpenAPITools.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OrderInfo", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// order.invoice.add Upload a PDF invoice or credit note of the order to the store. The store checks the document after the upload, so a successful response means it was received, not accepted. Use the returned id to find the result of the check in the store.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderInvoiceAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttributeAdd200Response</returns>
+        public AttributeAdd200Response OrderInvoiceAdd(OrderInvoiceAdd orderInvoiceAdd, int operationIndex = 0)
+        {
+            Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response> localVarResponse = OrderInvoiceAddWithHttpInfo(orderInvoiceAdd);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// order.invoice.add Upload a PDF invoice or credit note of the order to the store. The store checks the document after the upload, so a successful response means it was received, not accepted. Use the returned id to find the result of the check in the store.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderInvoiceAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttributeAdd200Response</returns>
+        public Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response> OrderInvoiceAddWithHttpInfo(OrderInvoiceAdd orderInvoiceAdd, int operationIndex = 0)
+        {
+            // verify the required parameter 'orderInvoiceAdd' is set
+            if (orderInvoiceAdd == null)
+            {
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'orderInvoiceAdd' when calling OrderApi->OrderInvoiceAdd");
+            }
+
+            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = orderInvoiceAdd;
+
+            localVarRequestOptions.Operation = "OrderApi.OrderInvoiceAdd";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (StoreKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-store-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-store-key", this.Configuration.GetApiKeyWithPrefix("x-store-key"));
+            }
+            // authentication (ApiKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<AttributeAdd200Response>("/order.invoice.add.json", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OrderInvoiceAdd", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// order.invoice.add Upload a PDF invoice or credit note of the order to the store. The store checks the document after the upload, so a successful response means it was received, not accepted. Use the returned id to find the result of the check in the store.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderInvoiceAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttributeAdd200Response</returns>
+        public async System.Threading.Tasks.Task<AttributeAdd200Response> OrderInvoiceAddAsync(OrderInvoiceAdd orderInvoiceAdd, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response> localVarResponse = await OrderInvoiceAddWithHttpInfoAsync(orderInvoiceAdd, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// order.invoice.add Upload a PDF invoice or credit note of the order to the store. The store checks the document after the upload, so a successful response means it was received, not accepted. Use the returned id to find the result of the check in the store.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orderInvoiceAdd"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttributeAdd200Response)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AttributeAdd200Response>> OrderInvoiceAddWithHttpInfoAsync(OrderInvoiceAdd orderInvoiceAdd, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'orderInvoiceAdd' is set
+            if (orderInvoiceAdd == null)
+            {
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'orderInvoiceAdd' when calling OrderApi->OrderInvoiceAdd");
+            }
+
+
+            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = orderInvoiceAdd;
+
+            localVarRequestOptions.Operation = "OrderApi.OrderInvoiceAdd";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (StoreKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-store-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-store-key", this.Configuration.GetApiKeyWithPrefix("x-store-key"));
+            }
+            // authentication (ApiKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AttributeAdd200Response>("/order.invoice.add.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OrderInvoiceAdd", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

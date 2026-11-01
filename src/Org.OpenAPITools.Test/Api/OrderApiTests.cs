@@ -183,6 +183,18 @@ namespace Org.OpenAPITools.Test.Api
         }
 
         /// <summary>
+        /// Test OrderInvoiceAdd
+        /// </summary>
+        [Fact]
+        public void OrderInvoiceAddTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //OrderInvoiceAdd orderInvoiceAdd = null;
+            //var response = instance.OrderInvoiceAdd(orderInvoiceAdd);
+            //Assert.IsType<AttributeAdd200Response>(response);
+        }
+
+        /// <summary>
         /// Test OrderList
         /// </summary>
         [Fact]

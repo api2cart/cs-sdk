@@ -11,6 +11,7 @@ All URIs are relative to *https://api.api2cart.local.com/v1.1*
 | [**OrderFinancialStatusList**](OrderApi.md#orderfinancialstatuslist) | **GET** /order.financial_status.list.json | order.financial_status.list |
 | [**OrderFulfillmentStatusList**](OrderApi.md#orderfulfillmentstatuslist) | **GET** /order.fulfillment_status.list.json | order.fulfillment_status.list |
 | [**OrderInfo**](OrderApi.md#orderinfo) | **GET** /order.info.json | order.info |
+| [**OrderInvoiceAdd**](OrderApi.md#orderinvoiceadd) | **POST** /order.invoice.add.json | order.invoice.add |
 | [**OrderList**](OrderApi.md#orderlist) | **GET** /order.list.json | order.list |
 | [**OrderPreestimateShippingList**](OrderApi.md#orderpreestimateshippinglist) | **POST** /order.preestimate_shipping.list.json | order.preestimate_shipping.list |
 | [**OrderRefundAdd**](OrderApi.md#orderrefundadd) | **POST** /order.refund.add.json | order.refund.add |
@@ -803,6 +804,106 @@ catch (ApiException e)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="orderinvoiceadd"></a>
+# **OrderInvoiceAdd**
+> AttributeAdd200Response OrderInvoiceAdd (OrderInvoiceAdd orderInvoiceAdd)
+
+order.invoice.add
+
+Upload a PDF invoice or credit note of the order to the store. The store checks the document after the upload, so a successful response means it was received, not accepted. Use the returned id to find the result of the check in the store.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
+
+namespace Example
+{
+    public class OrderInvoiceAddExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
+            // Configure API key authorization: StoreKeyAuth
+            config.AddApiKey("x-store-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-store-key", "Bearer");
+            // Configure API key authorization: ApiKeyAuth
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new OrderApi(config);
+            var orderInvoiceAdd = new OrderInvoiceAdd(); // OrderInvoiceAdd | 
+
+            try
+            {
+                // order.invoice.add
+                AttributeAdd200Response result = apiInstance.OrderInvoiceAdd(orderInvoiceAdd);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling OrderApi.OrderInvoiceAdd: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the OrderInvoiceAddWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // order.invoice.add
+    ApiResponse<AttributeAdd200Response> response = apiInstance.OrderInvoiceAddWithHttpInfo(orderInvoiceAdd);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling OrderApi.OrderInvoiceAddWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **orderInvoiceAdd** | [**OrderInvoiceAdd**](OrderInvoiceAdd.md) |  |  |
+
+### Return type
+
+[**AttributeAdd200Response**](AttributeAdd200Response.md)
+
+### Authorization
+
+[StoreKeyAuth](../README.md#StoreKeyAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
