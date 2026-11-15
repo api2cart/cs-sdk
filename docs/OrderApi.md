@@ -12,6 +12,7 @@ All URIs are relative to *https://api.api2cart.local.com/v1.1*
 | [**OrderFulfillmentStatusList**](OrderApi.md#orderfulfillmentstatuslist) | **GET** /order.fulfillment_status.list.json | order.fulfillment_status.list |
 | [**OrderInfo**](OrderApi.md#orderinfo) | **GET** /order.info.json | order.info |
 | [**OrderInvoiceAdd**](OrderApi.md#orderinvoiceadd) | **POST** /order.invoice.add.json | order.invoice.add |
+| [**OrderInvoiceList**](OrderApi.md#orderinvoicelist) | **GET** /order.invoice.list.json | order.invoice.list |
 | [**OrderList**](OrderApi.md#orderlist) | **GET** /order.list.json | order.list |
 | [**OrderPreestimateShippingList**](OrderApi.md#orderpreestimateshippinglist) | **POST** /order.preestimate_shipping.list.json | order.preestimate_shipping.list |
 | [**OrderRefundAdd**](OrderApi.md#orderrefundadd) | **POST** /order.refund.add.json | order.refund.add |
@@ -904,6 +905,124 @@ catch (ApiException e)
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="orderinvoicelist"></a>
+# **OrderInvoiceList**
+> ModelResponseOrderInvoiceList OrderInvoiceList (int? count = null, string? pageCursor = null, string? orderIds = null, string? ids = null, string? storeId = null, string? createdFrom = null, string? createdTo = null, string? modifiedFrom = null, string? modifiedTo = null, string? responseFields = null)
+
+order.invoice.list
+
+Get list of invoices the store issued for orders. Only the invoices of one store are returned, also when filtered by order_ids or ids: the store given in store_id, or the default store when store_id is not given.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
+
+namespace Example
+{
+    public class OrderInvoiceListExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.api2cart.local.com/v1.1";
+            // Configure API key authorization: StoreKeyAuth
+            config.AddApiKey("x-store-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-store-key", "Bearer");
+            // Configure API key authorization: ApiKeyAuth
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new OrderApi(config);
+            var count = 20;  // int? | This parameter sets the entity amount that has to be retrieved. Max allowed count=250 (optional)  (default to 10)
+            var pageCursor = ;  // string? | Used to retrieve entities via cursor-based pagination (it can't be used with any other filtering parameter) (optional) 
+            var orderIds = 24,25;  // string? | Retrieves invoices of the orders specified by order ids (optional) 
+            var ids = 24,25;  // string? | Retrieves invoices specified by ids (optional) 
+            var storeId = 1;  // string? | Retrieves invoices of the store specified by store id. The default store is taken when not specified (optional) 
+            var createdFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their creation date (optional) 
+            var createdTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their creation date (optional) 
+            var modifiedFrom = 2010-07-29 13:45:52;  // string? | Retrieve entities from their modification date (optional) 
+            var modifiedTo = 2100-08-29 13:45:52;  // string? | Retrieve entities to their modification date (optional) 
+            var responseFields = {return_code,pagination,result{invoice_count,invoice{id,order_id,number,created_at,currency}}};  // string? | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional)  (default to "{return_code,return_message,pagination,result}")
+
+            try
+            {
+                // order.invoice.list
+                ModelResponseOrderInvoiceList result = apiInstance.OrderInvoiceList(count, pageCursor, orderIds, ids, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling OrderApi.OrderInvoiceList: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the OrderInvoiceListWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // order.invoice.list
+    ApiResponse<ModelResponseOrderInvoiceList> response = apiInstance.OrderInvoiceListWithHttpInfo(count, pageCursor, orderIds, ids, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling OrderApi.OrderInvoiceListWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **count** | **int?** | This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 | [optional] [default to 10] |
+| **pageCursor** | **string?** | Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) | [optional]  |
+| **orderIds** | **string?** | Retrieves invoices of the orders specified by order ids | [optional]  |
+| **ids** | **string?** | Retrieves invoices specified by ids | [optional]  |
+| **storeId** | **string?** | Retrieves invoices of the store specified by store id. The default store is taken when not specified | [optional]  |
+| **createdFrom** | **string?** | Retrieve entities from their creation date | [optional]  |
+| **createdTo** | **string?** | Retrieve entities to their creation date | [optional]  |
+| **modifiedFrom** | **string?** | Retrieve entities from their modification date | [optional]  |
+| **modifiedTo** | **string?** | Retrieve entities to their modification date | [optional]  |
+| **responseFields** | **string?** | Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. | [optional] [default to &quot;{return_code,return_message,pagination,result}&quot;] |
+
+### Return type
+
+[**ModelResponseOrderInvoiceList**](ModelResponseOrderInvoiceList.md)
+
+### Authorization
+
+[StoreKeyAuth](../README.md#StoreKeyAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 

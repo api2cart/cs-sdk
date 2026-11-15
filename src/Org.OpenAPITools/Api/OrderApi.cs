@@ -298,6 +298,47 @@ namespace Org.OpenAPITools.Api
         /// <returns>ApiResponse of AttributeAdd200Response</returns>
         ApiResponse<AttributeAdd200Response> OrderInvoiceAddWithHttpInfo(OrderInvoiceAdd orderInvoiceAdd, int operationIndex = 0);
         /// <summary>
+        /// order.invoice.list
+        /// </summary>
+        /// <remarks>
+        /// Get list of invoices the store issued for orders. Only the invoices of one store are returned, also when filtered by order_ids or ids: the store given in store_id, or the default store when store_id is not given.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="orderIds">Retrieves invoices of the orders specified by order ids (optional)</param>
+        /// <param name="ids">Retrieves invoices specified by ids (optional)</param>
+        /// <param name="storeId">Retrieves invoices of the store specified by store id. The default store is taken when not specified (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ModelResponseOrderInvoiceList</returns>
+        ModelResponseOrderInvoiceList OrderInvoiceList(int? count = default(int?), string? pageCursor = default(string?), string? orderIds = default(string?), string? ids = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+
+        /// <summary>
+        /// order.invoice.list
+        /// </summary>
+        /// <remarks>
+        /// Get list of invoices the store issued for orders. Only the invoices of one store are returned, also when filtered by order_ids or ids: the store given in store_id, or the default store when store_id is not given.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="orderIds">Retrieves invoices of the orders specified by order ids (optional)</param>
+        /// <param name="ids">Retrieves invoices specified by ids (optional)</param>
+        /// <param name="storeId">Retrieves invoices of the store specified by store id. The default store is taken when not specified (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ModelResponseOrderInvoiceList</returns>
+        ApiResponse<ModelResponseOrderInvoiceList> OrderInvoiceListWithHttpInfo(int? count = default(int?), string? pageCursor = default(string?), string? orderIds = default(string?), string? ids = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0);
+        /// <summary>
         /// order.list
         /// </summary>
         /// <remarks>
@@ -1192,6 +1233,49 @@ namespace Org.OpenAPITools.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttributeAdd200Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttributeAdd200Response>> OrderInvoiceAddWithHttpInfoAsync(OrderInvoiceAdd orderInvoiceAdd, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <summary>
+        /// order.invoice.list
+        /// </summary>
+        /// <remarks>
+        /// Get list of invoices the store issued for orders. Only the invoices of one store are returned, also when filtered by order_ids or ids: the store given in store_id, or the default store when store_id is not given.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="orderIds">Retrieves invoices of the orders specified by order ids (optional)</param>
+        /// <param name="ids">Retrieves invoices specified by ids (optional)</param>
+        /// <param name="storeId">Retrieves invoices of the store specified by store id. The default store is taken when not specified (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ModelResponseOrderInvoiceList</returns>
+        System.Threading.Tasks.Task<ModelResponseOrderInvoiceList> OrderInvoiceListAsync(int? count = default(int?), string? pageCursor = default(string?), string? orderIds = default(string?), string? ids = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+
+        /// <summary>
+        /// order.invoice.list
+        /// </summary>
+        /// <remarks>
+        /// Get list of invoices the store issued for orders. Only the invoices of one store are returned, also when filtered by order_ids or ids: the store given in store_id, or the default store when store_id is not given.
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="orderIds">Retrieves invoices of the orders specified by order ids (optional)</param>
+        /// <param name="ids">Retrieves invoices specified by ids (optional)</param>
+        /// <param name="storeId">Retrieves invoices of the store specified by store id. The default store is taken when not specified (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ModelResponseOrderInvoiceList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelResponseOrderInvoiceList>> OrderInvoiceListWithHttpInfoAsync(int? count = default(int?), string? pageCursor = default(string?), string? orderIds = default(string?), string? ids = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// order.list
         /// </summary>
@@ -3751,6 +3835,273 @@ namespace Org.OpenAPITools.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OrderInvoiceAdd", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// order.invoice.list Get list of invoices the store issued for orders. Only the invoices of one store are returned, also when filtered by order_ids or ids: the store given in store_id, or the default store when store_id is not given.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="orderIds">Retrieves invoices of the orders specified by order ids (optional)</param>
+        /// <param name="ids">Retrieves invoices specified by ids (optional)</param>
+        /// <param name="storeId">Retrieves invoices of the store specified by store id. The default store is taken when not specified (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ModelResponseOrderInvoiceList</returns>
+        public ModelResponseOrderInvoiceList OrderInvoiceList(int? count = default(int?), string? pageCursor = default(string?), string? orderIds = default(string?), string? ids = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        {
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderInvoiceList> localVarResponse = OrderInvoiceListWithHttpInfo(count, pageCursor, orderIds, ids, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// order.invoice.list Get list of invoices the store issued for orders. Only the invoices of one store are returned, also when filtered by order_ids or ids: the store given in store_id, or the default store when store_id is not given.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="orderIds">Retrieves invoices of the orders specified by order ids (optional)</param>
+        /// <param name="ids">Retrieves invoices specified by ids (optional)</param>
+        /// <param name="storeId">Retrieves invoices of the store specified by store id. The default store is taken when not specified (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ModelResponseOrderInvoiceList</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderInvoiceList> OrderInvoiceListWithHttpInfo(int? count = default(int?), string? pageCursor = default(string?), string? orderIds = default(string?), string? ids = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0)
+        {
+            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (count != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
+            if (orderIds != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_ids", orderIds));
+            }
+            if (ids != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (createdFrom != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
+            }
+            if (createdTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
+            }
+            if (modifiedFrom != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
+            }
+            if (modifiedTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
+            }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+
+            localVarRequestOptions.Operation = "OrderApi.OrderInvoiceList";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (StoreKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-store-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-store-key", this.Configuration.GetApiKeyWithPrefix("x-store-key"));
+            }
+            // authentication (ApiKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ModelResponseOrderInvoiceList>("/order.invoice.list.json", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OrderInvoiceList", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// order.invoice.list Get list of invoices the store issued for orders. Only the invoices of one store are returned, also when filtered by order_ids or ids: the store given in store_id, or the default store when store_id is not given.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="orderIds">Retrieves invoices of the orders specified by order ids (optional)</param>
+        /// <param name="ids">Retrieves invoices specified by ids (optional)</param>
+        /// <param name="storeId">Retrieves invoices of the store specified by store id. The default store is taken when not specified (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ModelResponseOrderInvoiceList</returns>
+        public async System.Threading.Tasks.Task<ModelResponseOrderInvoiceList> OrderInvoiceListAsync(int? count = default(int?), string? pageCursor = default(string?), string? orderIds = default(string?), string? ids = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderInvoiceList> localVarResponse = await OrderInvoiceListWithHttpInfoAsync(count, pageCursor, orderIds, ids, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// order.invoice.list Get list of invoices the store issued for orders. Only the invoices of one store are returned, also when filtered by order_ids or ids: the store given in store_id, or the default store when store_id is not given.
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="count">This parameter sets the entity amount that has to be retrieved. Max allowed count&#x3D;250 (optional, default to 10)</param>
+        /// <param name="pageCursor">Used to retrieve entities via cursor-based pagination (it can&#39;t be used with any other filtering parameter) (optional)</param>
+        /// <param name="orderIds">Retrieves invoices of the orders specified by order ids (optional)</param>
+        /// <param name="ids">Retrieves invoices specified by ids (optional)</param>
+        /// <param name="storeId">Retrieves invoices of the store specified by store id. The default store is taken when not specified (optional)</param>
+        /// <param name="createdFrom">Retrieve entities from their creation date (optional)</param>
+        /// <param name="createdTo">Retrieve entities to their creation date (optional)</param>
+        /// <param name="modifiedFrom">Retrieve entities from their modification date (optional)</param>
+        /// <param name="modifiedTo">Retrieve entities to their modification date (optional)</param>
+        /// <param name="responseFields">Set this parameter to choose which entity fields to retrieve. Use comma-separated field names in curly braces, nested to match the response structure, e.g. {result{product{id,name}}}. The wildcard * returns every field at a level: {*} gives the whole response, {result{product{*}}} all product fields. (optional, default to &quot;{return_code,return_message,pagination,result}&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ModelResponseOrderInvoiceList)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ModelResponseOrderInvoiceList>> OrderInvoiceListWithHttpInfoAsync(int? count = default(int?), string? pageCursor = default(string?), string? orderIds = default(string?), string? ids = default(string?), string? storeId = default(string?), string? createdFrom = default(string?), string? createdTo = default(string?), string? modifiedFrom = default(string?), string? modifiedTo = default(string?), string? responseFields = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+
+            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (count != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "count", count));
+            }
+            if (pageCursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "page_cursor", pageCursor));
+            }
+            if (orderIds != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "order_ids", orderIds));
+            }
+            if (ids != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "ids", ids));
+            }
+            if (storeId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "store_id", storeId));
+            }
+            if (createdFrom != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_from", createdFrom));
+            }
+            if (createdTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_to", createdTo));
+            }
+            if (modifiedFrom != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_from", modifiedFrom));
+            }
+            if (modifiedTo != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "modified_to", modifiedTo));
+            }
+            if (responseFields != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "response_fields", responseFields));
+            }
+
+            localVarRequestOptions.Operation = "OrderApi.OrderInvoiceList";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (StoreKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-store-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-store-key", this.Configuration.GetApiKeyWithPrefix("x-store-key"));
+            }
+            // authentication (ApiKeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ModelResponseOrderInvoiceList>("/order.invoice.list.json", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OrderInvoiceList", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

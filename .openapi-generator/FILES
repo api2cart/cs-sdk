@@ -179,6 +179,7 @@ docs/ModelResponseOrderAbandonedList.md
 docs/ModelResponseOrderCount.md
 docs/ModelResponseOrderFinancialStatusList.md
 docs/ModelResponseOrderFulfillmentStatusList.md
+docs/ModelResponseOrderInvoiceList.md
 docs/ModelResponseOrderList.md
 docs/ModelResponseOrderPreestimateShippingList.md
 docs/ModelResponseOrderShipmentEventList.md
@@ -226,7 +227,11 @@ docs/OrderCalculateShippingRate.md
 docs/OrderCalculateSubtotal.md
 docs/OrderCalculateTax.md
 docs/OrderInfo200Response.md
+docs/OrderInvoice.md
 docs/OrderInvoiceAdd.md
+docs/OrderInvoiceComment.md
+docs/OrderInvoiceItem.md
+docs/OrderInvoiceTotals.md
 docs/OrderItem.md
 docs/OrderItemOption.md
 docs/OrderPaymentMethod.md
@@ -415,6 +420,7 @@ docs/ResponseOrderAbandonedListResult.md
 docs/ResponseOrderCountResult.md
 docs/ResponseOrderFinancialStatusListResult.md
 docs/ResponseOrderFulfillmentStatusListResult.md
+docs/ResponseOrderInvoiceListResult.md
 docs/ResponseOrderListResult.md
 docs/ResponseOrderPreestimateShippingListResult.md
 docs/ResponseOrderShipmentEventListResult.md
@@ -657,6 +663,7 @@ src/Org.OpenAPITools.Test/Model/ModelResponseOrderAbandonedListTests.cs
 src/Org.OpenAPITools.Test/Model/ModelResponseOrderCountTests.cs
 src/Org.OpenAPITools.Test/Model/ModelResponseOrderFinancialStatusListTests.cs
 src/Org.OpenAPITools.Test/Model/ModelResponseOrderFulfillmentStatusListTests.cs
+src/Org.OpenAPITools.Test/Model/ModelResponseOrderInvoiceListTests.cs
 src/Org.OpenAPITools.Test/Model/ModelResponseOrderListTests.cs
 src/Org.OpenAPITools.Test/Model/ModelResponseOrderPreestimateShippingListTests.cs
 src/Org.OpenAPITools.Test/Model/ModelResponseOrderShipmentEventListTests.cs
@@ -703,6 +710,10 @@ src/Org.OpenAPITools.Test/Model/OrderCalculateTaxTests.cs
 src/Org.OpenAPITools.Test/Model/OrderCalculateTests.cs
 src/Org.OpenAPITools.Test/Model/OrderInfo200ResponseTests.cs
 src/Org.OpenAPITools.Test/Model/OrderInvoiceAddTests.cs
+src/Org.OpenAPITools.Test/Model/OrderInvoiceCommentTests.cs
+src/Org.OpenAPITools.Test/Model/OrderInvoiceItemTests.cs
+src/Org.OpenAPITools.Test/Model/OrderInvoiceTests.cs
+src/Org.OpenAPITools.Test/Model/OrderInvoiceTotalsTests.cs
 src/Org.OpenAPITools.Test/Model/OrderItemOptionTests.cs
 src/Org.OpenAPITools.Test/Model/OrderItemTests.cs
 src/Org.OpenAPITools.Test/Model/OrderPaymentMethodTests.cs
@@ -891,6 +902,7 @@ src/Org.OpenAPITools.Test/Model/ResponseOrderAbandonedListResultTests.cs
 src/Org.OpenAPITools.Test/Model/ResponseOrderCountResultTests.cs
 src/Org.OpenAPITools.Test/Model/ResponseOrderFinancialStatusListResultTests.cs
 src/Org.OpenAPITools.Test/Model/ResponseOrderFulfillmentStatusListResultTests.cs
+src/Org.OpenAPITools.Test/Model/ResponseOrderInvoiceListResultTests.cs
 src/Org.OpenAPITools.Test/Model/ResponseOrderListResultTests.cs
 src/Org.OpenAPITools.Test/Model/ResponseOrderPreestimateShippingListResultTests.cs
 src/Org.OpenAPITools.Test/Model/ResponseOrderShipmentEventListResultTests.cs
@@ -1146,6 +1158,7 @@ src/Org.OpenAPITools/Model/ModelResponseOrderAbandonedList.cs
 src/Org.OpenAPITools/Model/ModelResponseOrderCount.cs
 src/Org.OpenAPITools/Model/ModelResponseOrderFinancialStatusList.cs
 src/Org.OpenAPITools/Model/ModelResponseOrderFulfillmentStatusList.cs
+src/Org.OpenAPITools/Model/ModelResponseOrderInvoiceList.cs
 src/Org.OpenAPITools/Model/ModelResponseOrderList.cs
 src/Org.OpenAPITools/Model/ModelResponseOrderPreestimateShippingList.cs
 src/Org.OpenAPITools/Model/ModelResponseOrderShipmentEventList.cs
@@ -1192,7 +1205,11 @@ src/Org.OpenAPITools/Model/OrderCalculateShippingRate.cs
 src/Org.OpenAPITools/Model/OrderCalculateSubtotal.cs
 src/Org.OpenAPITools/Model/OrderCalculateTax.cs
 src/Org.OpenAPITools/Model/OrderInfo200Response.cs
+src/Org.OpenAPITools/Model/OrderInvoice.cs
 src/Org.OpenAPITools/Model/OrderInvoiceAdd.cs
+src/Org.OpenAPITools/Model/OrderInvoiceComment.cs
+src/Org.OpenAPITools/Model/OrderInvoiceItem.cs
+src/Org.OpenAPITools/Model/OrderInvoiceTotals.cs
 src/Org.OpenAPITools/Model/OrderItem.cs
 src/Org.OpenAPITools/Model/OrderItemOption.cs
 src/Org.OpenAPITools/Model/OrderPaymentMethod.cs
@@ -1380,6 +1397,7 @@ src/Org.OpenAPITools/Model/ResponseOrderAbandonedListResult.cs
 src/Org.OpenAPITools/Model/ResponseOrderCountResult.cs
 src/Org.OpenAPITools/Model/ResponseOrderFinancialStatusListResult.cs
 src/Org.OpenAPITools/Model/ResponseOrderFulfillmentStatusListResult.cs
+src/Org.OpenAPITools/Model/ResponseOrderInvoiceListResult.cs
 src/Org.OpenAPITools/Model/ResponseOrderListResult.cs
 src/Org.OpenAPITools/Model/ResponseOrderPreestimateShippingListResult.cs
 src/Org.OpenAPITools/Model/ResponseOrderShipmentEventListResult.cs

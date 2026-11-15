@@ -36,9 +36,11 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="OrderShipmentAdd200ResponseResult" /> class.
         /// </summary>
         /// <param name="shipmentId">shipmentId.</param>
-        public OrderShipmentAdd200ResponseResult(string shipmentId = default(string))
+        /// <param name="additionalFields">additionalFields.</param>
+        public OrderShipmentAdd200ResponseResult(string shipmentId = default(string), Object additionalFields = default(Object))
         {
             this.ShipmentId = shipmentId;
+            this.AdditionalFields = additionalFields;
         }
 
         /// <summary>
@@ -46,6 +48,12 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         [DataMember(Name = "shipment_id", EmitDefaultValue = false)]
         public string ShipmentId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AdditionalFields
+        /// </summary>
+        [DataMember(Name = "additional_fields", EmitDefaultValue = true)]
+        public Object AdditionalFields { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -56,6 +64,7 @@ namespace Org.OpenAPITools.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class OrderShipmentAdd200ResponseResult {\n");
             sb.Append("  ShipmentId: ").Append(ShipmentId).Append("\n");
+            sb.Append("  AdditionalFields: ").Append(AdditionalFields).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

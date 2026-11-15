@@ -9391,6 +9391,125 @@ paths:
       summary: order.fulfillment_status.list
       tags:
       - order
+  /order.invoice.list.json:
+    get:
+      description: "Get list of invoices the store issued for orders. Only the invoices\
+        \ of one store are returned, also when filtered by order_ids or ids: the store\
+        \ given in store_id, or the default store when store_id is not given."
+      operationId: OrderInvoiceList
+      parameters:
+      - description: This parameter sets the entity amount that has to be retrieved.
+          Max allowed count=250
+        example: 20
+        explode: true
+        in: query
+        name: count
+        required: false
+        schema:
+          default: 10
+          type: integer
+        style: form
+      - description: Used to retrieve entities via cursor-based pagination (it can't
+          be used with any other filtering parameter)
+        example: ""
+        explode: true
+        in: query
+        name: page_cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Retrieves invoices of the orders specified by order ids
+        example: "24,25"
+        explode: true
+        in: query
+        name: order_ids
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Retrieves invoices specified by ids
+        example: "24,25"
+        explode: true
+        in: query
+        name: ids
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Retrieves invoices of the store specified by store id. The default
+          store is taken when not specified
+        example: "1"
+        explode: true
+        in: query
+        name: store_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Retrieve entities from their creation date
+        example: 2010-07-29 13:45:52
+        explode: true
+        in: query
+        name: created_from
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Retrieve entities to their creation date
+        example: 2100-08-29 13:45:52
+        explode: true
+        in: query
+        name: created_to
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Retrieve entities from their modification date
+        example: 2010-07-29 13:45:52
+        explode: true
+        in: query
+        name: modified_from
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Retrieve entities to their modification date
+        example: 2100-08-29 13:45:52
+        explode: true
+        in: query
+        name: modified_to
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: "Set this parameter to choose which entity fields to retrieve.\
+          \ Use comma-separated field names in curly braces, nested to match the response\
+          \ structure, e.g. {result{product{id,name}}}. The wildcard * returns every\
+          \ field at a level: {*} gives the whole response, {result{product{*}}} all\
+          \ product fields."
+        example: "{return_code,pagination,result{invoice_count,invoice{id,order_id,number,created_at,currency}}}"
+        explode: true
+        in: query
+        name: response_fields
+        required: false
+        schema:
+          default: "{return_code,return_message,pagination,result}"
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Model_Response_Order_Invoice_List'
+          description: successful operation
+      security:
+      - ApiKeyAuth: []
+        StoreKeyAuth: []
+      summary: order.invoice.list
+      tags:
+      - order
   /order.invoice.add.json:
     post:
       description: "Upload a PDF invoice or credit note of the order to the store.\
@@ -31927,6 +32046,760 @@ components:
         custom_fields:
           nullable: true
           type: object
+    Model_Response_Order_Invoice_List:
+      example:
+        result:
+          custom_fields: "{}"
+          invoice_count: 6
+          additional_fields: "{}"
+          invoice:
+          - number: number
+            comments:
+            - custom_fields: "{}"
+              created_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              comment: comment
+              additional_fields: "{}"
+              id: id
+              notify: true
+            - custom_fields: "{}"
+              created_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              comment: comment
+              additional_fields: "{}"
+              id: id
+              notify: true
+            custom_fields: "{}"
+            created_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            currency: currency
+            additional_fields: "{}"
+            id: id
+            totals:
+              total: 7.061401241503109
+              shipping: 5.637376656633329
+              subtotal: 1.4658129805029452
+              custom_fields: "{}"
+              discount: 5.962133916683182
+              tax: 2.3021358869347655
+              additional_fields: "{}"
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            order_id: order_id
+            items:
+            - total: 4.145608029883936
+              order_product_id: order_product_id
+              variant_id: variant_id
+              quantity: 9.301444243932576
+              price: 3.616076749251911
+              custom_fields: "{}"
+              product_id: product_id
+              name: name
+              options:
+              - price: 1.284659006116532
+                custom_fields: "{}"
+                product_option_value_id: product_option_value_id
+                name: name
+                weight: 2.8841621266687802
+                option_id: option_id
+                additional_fields: "{}"
+                type: type
+                value: value
+              - price: 1.284659006116532
+                custom_fields: "{}"
+                product_option_value_id: product_option_value_id
+                name: name
+                weight: 2.8841621266687802
+                option_id: option_id
+                additional_fields: "{}"
+                type: type
+                value: value
+              tax: 2.027123023002322
+              additional_fields: "{}"
+              sku: sku
+            - total: 4.145608029883936
+              order_product_id: order_product_id
+              variant_id: variant_id
+              quantity: 9.301444243932576
+              price: 3.616076749251911
+              custom_fields: "{}"
+              product_id: product_id
+              name: name
+              options:
+              - price: 1.284659006116532
+                custom_fields: "{}"
+                product_option_value_id: product_option_value_id
+                name: name
+                weight: 2.8841621266687802
+                option_id: option_id
+                additional_fields: "{}"
+                type: type
+                value: value
+              - price: 1.284659006116532
+                custom_fields: "{}"
+                product_option_value_id: product_option_value_id
+                name: name
+                weight: 2.8841621266687802
+                option_id: option_id
+                additional_fields: "{}"
+                type: type
+                value: value
+              tax: 2.027123023002322
+              additional_fields: "{}"
+              sku: sku
+            status: status
+          - number: number
+            comments:
+            - custom_fields: "{}"
+              created_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              comment: comment
+              additional_fields: "{}"
+              id: id
+              notify: true
+            - custom_fields: "{}"
+              created_at:
+                custom_fields: "{}"
+                format: format
+                additional_fields: "{}"
+                value: value
+              comment: comment
+              additional_fields: "{}"
+              id: id
+              notify: true
+            custom_fields: "{}"
+            created_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            currency: currency
+            additional_fields: "{}"
+            id: id
+            totals:
+              total: 7.061401241503109
+              shipping: 5.637376656633329
+              subtotal: 1.4658129805029452
+              custom_fields: "{}"
+              discount: 5.962133916683182
+              tax: 2.3021358869347655
+              additional_fields: "{}"
+            modified_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            order_id: order_id
+            items:
+            - total: 4.145608029883936
+              order_product_id: order_product_id
+              variant_id: variant_id
+              quantity: 9.301444243932576
+              price: 3.616076749251911
+              custom_fields: "{}"
+              product_id: product_id
+              name: name
+              options:
+              - price: 1.284659006116532
+                custom_fields: "{}"
+                product_option_value_id: product_option_value_id
+                name: name
+                weight: 2.8841621266687802
+                option_id: option_id
+                additional_fields: "{}"
+                type: type
+                value: value
+              - price: 1.284659006116532
+                custom_fields: "{}"
+                product_option_value_id: product_option_value_id
+                name: name
+                weight: 2.8841621266687802
+                option_id: option_id
+                additional_fields: "{}"
+                type: type
+                value: value
+              tax: 2.027123023002322
+              additional_fields: "{}"
+              sku: sku
+            - total: 4.145608029883936
+              order_product_id: order_product_id
+              variant_id: variant_id
+              quantity: 9.301444243932576
+              price: 3.616076749251911
+              custom_fields: "{}"
+              product_id: product_id
+              name: name
+              options:
+              - price: 1.284659006116532
+                custom_fields: "{}"
+                product_option_value_id: product_option_value_id
+                name: name
+                weight: 2.8841621266687802
+                option_id: option_id
+                additional_fields: "{}"
+                type: type
+                value: value
+              - price: 1.284659006116532
+                custom_fields: "{}"
+                product_option_value_id: product_option_value_id
+                name: name
+                weight: 2.8841621266687802
+                option_id: option_id
+                additional_fields: "{}"
+                type: type
+                value: value
+              tax: 2.027123023002322
+              additional_fields: "{}"
+              sku: sku
+            status: status
+        pagination:
+          next: next
+          previous: previous
+          custom_fields: "{}"
+          additional_fields: "{}"
+        custom_fields: "{}"
+        return_message: return_message
+        additional_fields: "{}"
+        return_code: 0
+      properties:
+        return_code:
+          nullable: true
+          type: integer
+        return_message:
+          nullable: true
+          type: string
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        result:
+          $ref: '#/components/schemas/Response_Order_Invoice_List_Result'
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Response_Order_Invoice_List_Result:
+      example:
+        custom_fields: "{}"
+        invoice_count: 6
+        additional_fields: "{}"
+        invoice:
+        - number: number
+          comments:
+          - custom_fields: "{}"
+            created_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            comment: comment
+            additional_fields: "{}"
+            id: id
+            notify: true
+          - custom_fields: "{}"
+            created_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            comment: comment
+            additional_fields: "{}"
+            id: id
+            notify: true
+          custom_fields: "{}"
+          created_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          currency: currency
+          additional_fields: "{}"
+          id: id
+          totals:
+            total: 7.061401241503109
+            shipping: 5.637376656633329
+            subtotal: 1.4658129805029452
+            custom_fields: "{}"
+            discount: 5.962133916683182
+            tax: 2.3021358869347655
+            additional_fields: "{}"
+          modified_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          order_id: order_id
+          items:
+          - total: 4.145608029883936
+            order_product_id: order_product_id
+            variant_id: variant_id
+            quantity: 9.301444243932576
+            price: 3.616076749251911
+            custom_fields: "{}"
+            product_id: product_id
+            name: name
+            options:
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            tax: 2.027123023002322
+            additional_fields: "{}"
+            sku: sku
+          - total: 4.145608029883936
+            order_product_id: order_product_id
+            variant_id: variant_id
+            quantity: 9.301444243932576
+            price: 3.616076749251911
+            custom_fields: "{}"
+            product_id: product_id
+            name: name
+            options:
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            tax: 2.027123023002322
+            additional_fields: "{}"
+            sku: sku
+          status: status
+        - number: number
+          comments:
+          - custom_fields: "{}"
+            created_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            comment: comment
+            additional_fields: "{}"
+            id: id
+            notify: true
+          - custom_fields: "{}"
+            created_at:
+              custom_fields: "{}"
+              format: format
+              additional_fields: "{}"
+              value: value
+            comment: comment
+            additional_fields: "{}"
+            id: id
+            notify: true
+          custom_fields: "{}"
+          created_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          currency: currency
+          additional_fields: "{}"
+          id: id
+          totals:
+            total: 7.061401241503109
+            shipping: 5.637376656633329
+            subtotal: 1.4658129805029452
+            custom_fields: "{}"
+            discount: 5.962133916683182
+            tax: 2.3021358869347655
+            additional_fields: "{}"
+          modified_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          order_id: order_id
+          items:
+          - total: 4.145608029883936
+            order_product_id: order_product_id
+            variant_id: variant_id
+            quantity: 9.301444243932576
+            price: 3.616076749251911
+            custom_fields: "{}"
+            product_id: product_id
+            name: name
+            options:
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            tax: 2.027123023002322
+            additional_fields: "{}"
+            sku: sku
+          - total: 4.145608029883936
+            order_product_id: order_product_id
+            variant_id: variant_id
+            quantity: 9.301444243932576
+            price: 3.616076749251911
+            custom_fields: "{}"
+            product_id: product_id
+            name: name
+            options:
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            - price: 1.284659006116532
+              custom_fields: "{}"
+              product_option_value_id: product_option_value_id
+              name: name
+              weight: 2.8841621266687802
+              option_id: option_id
+              additional_fields: "{}"
+              type: type
+              value: value
+            tax: 2.027123023002322
+            additional_fields: "{}"
+            sku: sku
+          status: status
+      properties:
+        invoice_count:
+          nullable: true
+          type: integer
+        invoice:
+          items:
+            $ref: '#/components/schemas/Order_Invoice'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Order_Invoice:
+      example:
+        number: number
+        comments:
+        - custom_fields: "{}"
+          created_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          comment: comment
+          additional_fields: "{}"
+          id: id
+          notify: true
+        - custom_fields: "{}"
+          created_at:
+            custom_fields: "{}"
+            format: format
+            additional_fields: "{}"
+            value: value
+          comment: comment
+          additional_fields: "{}"
+          id: id
+          notify: true
+        custom_fields: "{}"
+        created_at:
+          custom_fields: "{}"
+          format: format
+          additional_fields: "{}"
+          value: value
+        currency: currency
+        additional_fields: "{}"
+        id: id
+        totals:
+          total: 7.061401241503109
+          shipping: 5.637376656633329
+          subtotal: 1.4658129805029452
+          custom_fields: "{}"
+          discount: 5.962133916683182
+          tax: 2.3021358869347655
+          additional_fields: "{}"
+        modified_at:
+          custom_fields: "{}"
+          format: format
+          additional_fields: "{}"
+          value: value
+        order_id: order_id
+        items:
+        - total: 4.145608029883936
+          order_product_id: order_product_id
+          variant_id: variant_id
+          quantity: 9.301444243932576
+          price: 3.616076749251911
+          custom_fields: "{}"
+          product_id: product_id
+          name: name
+          options:
+          - price: 1.284659006116532
+            custom_fields: "{}"
+            product_option_value_id: product_option_value_id
+            name: name
+            weight: 2.8841621266687802
+            option_id: option_id
+            additional_fields: "{}"
+            type: type
+            value: value
+          - price: 1.284659006116532
+            custom_fields: "{}"
+            product_option_value_id: product_option_value_id
+            name: name
+            weight: 2.8841621266687802
+            option_id: option_id
+            additional_fields: "{}"
+            type: type
+            value: value
+          tax: 2.027123023002322
+          additional_fields: "{}"
+          sku: sku
+        - total: 4.145608029883936
+          order_product_id: order_product_id
+          variant_id: variant_id
+          quantity: 9.301444243932576
+          price: 3.616076749251911
+          custom_fields: "{}"
+          product_id: product_id
+          name: name
+          options:
+          - price: 1.284659006116532
+            custom_fields: "{}"
+            product_option_value_id: product_option_value_id
+            name: name
+            weight: 2.8841621266687802
+            option_id: option_id
+            additional_fields: "{}"
+            type: type
+            value: value
+          - price: 1.284659006116532
+            custom_fields: "{}"
+            product_option_value_id: product_option_value_id
+            name: name
+            weight: 2.8841621266687802
+            option_id: option_id
+            additional_fields: "{}"
+            type: type
+            value: value
+          tax: 2.027123023002322
+          additional_fields: "{}"
+          sku: sku
+        status: status
+      properties:
+        id:
+          type: string
+        order_id:
+          type: string
+        number:
+          nullable: true
+          type: string
+        status:
+          nullable: true
+          type: string
+        created_at:
+          $ref: '#/components/schemas/A2CDateTime'
+        modified_at:
+          $ref: '#/components/schemas/A2CDateTime'
+        currency:
+          nullable: true
+          type: string
+        totals:
+          $ref: '#/components/schemas/Order_Invoice_Totals'
+        items:
+          items:
+            $ref: '#/components/schemas/Order_Invoice_Item'
+          type: array
+        comments:
+          items:
+            $ref: '#/components/schemas/Order_Invoice_Comment'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Order_Invoice_Totals:
+      example:
+        total: 7.061401241503109
+        shipping: 5.637376656633329
+        subtotal: 1.4658129805029452
+        custom_fields: "{}"
+        discount: 5.962133916683182
+        tax: 2.3021358869347655
+        additional_fields: "{}"
+      properties:
+        subtotal:
+          nullable: true
+          type: number
+        discount:
+          nullable: true
+          type: number
+        shipping:
+          nullable: true
+          type: number
+        tax:
+          nullable: true
+          type: number
+        total:
+          nullable: true
+          type: number
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Order_Invoice_Item:
+      example:
+        total: 4.145608029883936
+        order_product_id: order_product_id
+        variant_id: variant_id
+        quantity: 9.301444243932576
+        price: 3.616076749251911
+        custom_fields: "{}"
+        product_id: product_id
+        name: name
+        options:
+        - price: 1.284659006116532
+          custom_fields: "{}"
+          product_option_value_id: product_option_value_id
+          name: name
+          weight: 2.8841621266687802
+          option_id: option_id
+          additional_fields: "{}"
+          type: type
+          value: value
+        - price: 1.284659006116532
+          custom_fields: "{}"
+          product_option_value_id: product_option_value_id
+          name: name
+          weight: 2.8841621266687802
+          option_id: option_id
+          additional_fields: "{}"
+          type: type
+          value: value
+        tax: 2.027123023002322
+        additional_fields: "{}"
+        sku: sku
+      properties:
+        order_product_id:
+          nullable: true
+          type: string
+        product_id:
+          nullable: true
+          type: string
+        variant_id:
+          nullable: true
+          type: string
+        sku:
+          nullable: true
+          type: string
+        name:
+          nullable: true
+          type: string
+        quantity:
+          nullable: true
+          type: number
+        price:
+          nullable: true
+          type: number
+        tax:
+          nullable: true
+          type: number
+        total:
+          nullable: true
+          type: number
+        options:
+          items:
+            $ref: '#/components/schemas/Order_Item_Option'
+          type: array
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
+    Order_Invoice_Comment:
+      example:
+        custom_fields: "{}"
+        created_at:
+          custom_fields: "{}"
+          format: format
+          additional_fields: "{}"
+          value: value
+        comment: comment
+        additional_fields: "{}"
+        id: id
+        notify: true
+      properties:
+        id:
+          nullable: true
+          type: string
+        comment:
+          type: string
+        created_at:
+          $ref: '#/components/schemas/A2CDateTime'
+        notify:
+          nullable: true
+          type: boolean
+        additional_fields:
+          nullable: true
+          type: object
+        custom_fields:
+          nullable: true
+          type: object
     OrderInvoiceAdd:
       example:
         store_id: "1"
@@ -51211,13 +52084,18 @@ components:
           $ref: '#/components/schemas/Shipment'
     OrderShipmentAdd_200_response_result:
       example:
+        additional_fields: "{}"
         shipment_id: shipment_id
       properties:
         shipment_id:
           type: string
+        additional_fields:
+          nullable: true
+          type: object
     OrderShipmentAdd_200_response:
       example:
         result:
+          additional_fields: "{}"
           shipment_id: shipment_id
         return_message: return_message
         return_code: 0

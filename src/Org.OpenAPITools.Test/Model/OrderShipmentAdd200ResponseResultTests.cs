@@ -63,5 +63,14 @@ namespace Org.OpenAPITools.Test.Model
         {
             // TODO unit test for the property 'ShipmentId'
         }
+
+        /// <summary>
+        /// Test the property 'AdditionalFields'
+        /// </summary>
+        [Fact]
+        public void AdditionalFieldsTest()
+        {
+            // TODO unit test for the property 'AdditionalFields'
+        }
     }
 }

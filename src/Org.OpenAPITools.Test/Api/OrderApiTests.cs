@@ -195,6 +195,27 @@ namespace Org.OpenAPITools.Test.Api
         }
 
         /// <summary>
+        /// Test OrderInvoiceList
+        /// </summary>
+        [Fact]
+        public void OrderInvoiceListTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? count = null;
+            //string? pageCursor = null;
+            //string? orderIds = null;
+            //string? ids = null;
+            //string? storeId = null;
+            //string? createdFrom = null;
+            //string? createdTo = null;
+            //string? modifiedFrom = null;
+            //string? modifiedTo = null;
+            //string? responseFields = null;
+            //var response = instance.OrderInvoiceList(count, pageCursor, orderIds, ids, storeId, createdFrom, createdTo, modifiedFrom, modifiedTo, responseFields);
+            //Assert.IsType<ModelResponseOrderInvoiceList>(response);
+        }
+
+        /// <summary>
         /// Test OrderList
         /// </summary>
         [Fact]
