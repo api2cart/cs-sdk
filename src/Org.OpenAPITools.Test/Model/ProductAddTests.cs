@@ -1109,6 +1109,15 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'EconomicOperatorId'
+        /// </summary>
+        [Fact]
+        public void EconomicOperatorIdTest()
+        {
+            // TODO unit test for the property 'EconomicOperatorId'
+        }
+
+        /// <summary>
         /// Test the property 'ClearCache'
         /// </summary>
         [Fact]

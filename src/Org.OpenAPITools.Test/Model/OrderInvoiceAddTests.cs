@@ -65,21 +65,66 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'ShipmentId'
-        /// </summary>
-        [Fact]
-        public void ShipmentIdTest()
-        {
-            // TODO unit test for the property 'ShipmentId'
-        }
-
-        /// <summary>
         /// Test the property 'StoreId'
         /// </summary>
         [Fact]
         public void StoreIdTest()
         {
             // TODO unit test for the property 'StoreId'
+        }
+
+        /// <summary>
+        /// Test the property 'Items'
+        /// </summary>
+        [Fact]
+        public void ItemsTest()
+        {
+            // TODO unit test for the property 'Items'
+        }
+
+        /// <summary>
+        /// Test the property 'Comment'
+        /// </summary>
+        [Fact]
+        public void CommentTest()
+        {
+            // TODO unit test for the property 'Comment'
+        }
+
+        /// <summary>
+        /// Test the property 'SendNotifications'
+        /// </summary>
+        [Fact]
+        public void SendNotificationsTest()
+        {
+            // TODO unit test for the property 'SendNotifications'
+        }
+
+        /// <summary>
+        /// Test the property 'IsOnline'
+        /// </summary>
+        [Fact]
+        public void IsOnlineTest()
+        {
+            // TODO unit test for the property 'IsOnline'
+        }
+
+        /// <summary>
+        /// Test the property 'OrderStatus'
+        /// </summary>
+        [Fact]
+        public void OrderStatusTest()
+        {
+            // TODO unit test for the property 'OrderStatus'
+        }
+
+        /// <summary>
+        /// Test the property 'ShipmentId'
+        /// </summary>
+        [Fact]
+        public void ShipmentIdTest()
+        {
+            // TODO unit test for the property 'ShipmentId'
         }
 
         /// <summary>

@@ -229,6 +229,7 @@ docs/OrderCalculateTax.md
 docs/OrderInfo200Response.md
 docs/OrderInvoice.md
 docs/OrderInvoiceAdd.md
+docs/OrderInvoiceAddItemsInner.md
 docs/OrderInvoiceComment.md
 docs/OrderInvoiceItem.md
 docs/OrderInvoiceTotals.md
@@ -709,6 +710,7 @@ src/Org.OpenAPITools.Test/Model/OrderCalculateSubtotalTests.cs
 src/Org.OpenAPITools.Test/Model/OrderCalculateTaxTests.cs
 src/Org.OpenAPITools.Test/Model/OrderCalculateTests.cs
 src/Org.OpenAPITools.Test/Model/OrderInfo200ResponseTests.cs
+src/Org.OpenAPITools.Test/Model/OrderInvoiceAddItemsInnerTests.cs
 src/Org.OpenAPITools.Test/Model/OrderInvoiceAddTests.cs
 src/Org.OpenAPITools.Test/Model/OrderInvoiceCommentTests.cs
 src/Org.OpenAPITools.Test/Model/OrderInvoiceItemTests.cs
@@ -1207,6 +1209,7 @@ src/Org.OpenAPITools/Model/OrderCalculateTax.cs
 src/Org.OpenAPITools/Model/OrderInfo200Response.cs
 src/Org.OpenAPITools/Model/OrderInvoice.cs
 src/Org.OpenAPITools/Model/OrderInvoiceAdd.cs
+src/Org.OpenAPITools/Model/OrderInvoiceAddItemsInner.cs
 src/Org.OpenAPITools/Model/OrderInvoiceComment.cs
 src/Org.OpenAPITools/Model/OrderInvoiceItem.cs
 src/Org.OpenAPITools/Model/OrderInvoiceTotals.cs

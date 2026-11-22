@@ -2732,7 +2732,7 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <value>Salesforce Commerce API Scopes</value>
         /*
-        <example>sfcc.catalogs,sfcc.orders,sfcc.products</example>
+        <example>sfcc.catalogs,sfcc.sites,sfcc.orders,sfcc.products</example>
         */
         [DataMember(Name = "scapi_scopes", EmitDefaultValue = false)]
         public string ScapiScopes { get; set; }

@@ -821,7 +821,7 @@ catch (ApiException e)
 
 order.invoice.add
 
-Upload a PDF invoice or credit note of the order to the store. The store checks the document after the upload, so a successful response means it was received, not accepted. Use the returned id to find the result of the check in the store.
+Add an invoice to the order. Depending on the platform, the store either creates the invoice itself from the items of the order and numbers it, or takes the PDF invoice or credit note the client made. What the method does on a platform and the parameters the platform takes are given in the description of the method for that platform.
 
 ### Example
 ```csharp

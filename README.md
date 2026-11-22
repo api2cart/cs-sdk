@@ -511,6 +511,7 @@ Class | Method | HTTP request | Description
  - [Model.OrderInfo200Response](docs/OrderInfo200Response.md)
  - [Model.OrderInvoice](docs/OrderInvoice.md)
  - [Model.OrderInvoiceAdd](docs/OrderInvoiceAdd.md)
+ - [Model.OrderInvoiceAddItemsInner](docs/OrderInvoiceAddItemsInner.md)
  - [Model.OrderInvoiceComment](docs/OrderInvoiceComment.md)
  - [Model.OrderInvoiceItem](docs/OrderInvoiceItem.md)
  - [Model.OrderInvoiceTotals](docs/OrderInvoiceTotals.md)

@@ -121,6 +121,7 @@ Name | Type | Description | Notes
 **BestOffer** | [**ProductAddBestOffer**](ProductAddBestOffer.md) |  | [optional] 
 **ProductionPartnerIds** | **string** | Defines product&#39;s production partner ids that has to be added | [optional] 
 **MarketplaceItemProperties** | **string** | String containing the JSON representation of the supplied data | [optional] 
+**EconomicOperatorId** | **string** | The ID of the economic operator (the manufacturer, importer or another party responsible for the product in the EU) to link to the offer: the &#x60;id&#x60; field of an item in additional_fields.economic_operators, which the cart.info method returns when called with api_version 1.1 or higher and additional_fields in params. If omitted, the first economic operator with the VALID status is linked, in the order the store returns them, so pass the ID explicitly when there are several economic operators. If there is none, the offer is created without an economic operator and the response contains a warning. If the passed economic operator does not have the VALID status, it is linked anyway and the response contains a warning. | [optional] 
 **ClearCache** | **bool** | Is cache clear required | [optional] [default to true]
 **ViewedCount** | **int** | Specifies the number of product&#39;s reviews | [optional] [default to 0]
 **OrderedCount** | **int** | Defines how many times the product was ordered | [optional] [default to 0]

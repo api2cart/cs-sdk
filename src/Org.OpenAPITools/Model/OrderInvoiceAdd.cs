@@ -35,15 +35,15 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderInvoiceAdd" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected OrderInvoiceAdd() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OrderInvoiceAdd" /> class.
-        /// </summary>
-        /// <param name="orderId">Defines the order the document is uploaded for.</param>
-        /// <param name="shipmentId">Defines the shipment of the order the document is for. Required when the order was shipped in several shipments.</param>
+        /// <param name="orderId">Defines the order to invoice.</param>
         /// <param name="storeId">Defines the store of the order. The store of the order is taken when not specified.</param>
-        /// <param name="number">Defines the number of the invoice or credit note as printed on the document (required).</param>
+        /// <param name="items">Defines the items of the order to invoice and their quantities. Everything not invoiced yet is invoiced when not specified.</param>
+        /// <param name="comment">Defines the comment of the invoice.</param>
+        /// <param name="sendNotifications">Send the invoice to the customer by email (default to false).</param>
+        /// <param name="isOnline">Defines whether the invoice captures the payment online, through the payment method, when the method supports it. The payment is captured offline when false (default to true).</param>
+        /// <param name="orderStatus">Defines the order status that creates the invoice. Only a status that creates an invoice is accepted. The status of an accepted payment is taken when not specified.</param>
+        /// <param name="shipmentId">Defines the shipment of the order the document is for. Required when the order was shipped in several shipments.</param>
+        /// <param name="number">Defines the number of the invoice or credit note as printed on the document.</param>
         /// <param name="documentType">Defines whether the document is an invoice or a credit note for a refund or return (default to &quot;invoice&quot;).</param>
         /// <param name="transactionId">Defines the refund or return transaction the credit note is issued for. Required when document_type is credit_note.</param>
         /// <param name="totalPrice">Defines the total amount of the document, VAT included. When specified, it must match the total the store calculated for the order or shipment. For sellers with VAT Calculation Service Option 2 Amazon requires both total_price and tax_price, otherwise it rejects the feed after processing.</param>
@@ -51,17 +51,17 @@ namespace Org.OpenAPITools.Model
         /// <param name="url">Defines the public URL of the PDF document. Required if content is not specified.</param>
         /// <param name="content">Defines the PDF document encoded in base64. Required if url is not specified.</param>
         /// <param name="idempotencyKey">A unique identifier associated with a specific request. Repeated requests with the same &lt;strong&gt;idempotency_key&lt;/strong&gt; return a cached response without re-executing the business logic. &lt;strong&gt;Please note that the cache lifetime is 15 minutes.&lt;/strong&gt;.</param>
-        public OrderInvoiceAdd(string orderId = default(string), string shipmentId = default(string), string storeId = default(string), string number = default(string), string documentType = @"invoice", string transactionId = default(string), decimal totalPrice = default(decimal), decimal taxPrice = default(decimal), string url = default(string), string content = default(string), string idempotencyKey = default(string))
+        public OrderInvoiceAdd(string orderId = default(string), string storeId = default(string), List<OrderInvoiceAddItemsInner> items = default(List<OrderInvoiceAddItemsInner>), string comment = default(string), bool sendNotifications = false, bool isOnline = true, string orderStatus = default(string), string shipmentId = default(string), string number = default(string), string documentType = @"invoice", string transactionId = default(string), decimal totalPrice = default(decimal), decimal taxPrice = default(decimal), string url = default(string), string content = default(string), string idempotencyKey = default(string))
         {
-            // to ensure "number" is required (not null)
-            if (number == null)
-            {
-                throw new ArgumentNullException("number is a required property for OrderInvoiceAdd and cannot be null");
-            }
-            this.Number = number;
             this.OrderId = orderId;
-            this.ShipmentId = shipmentId;
             this.StoreId = storeId;
+            this.Items = items;
+            this.Comment = comment;
+            this.SendNotifications = sendNotifications;
+            this.IsOnline = isOnline;
+            this.OrderStatus = orderStatus;
+            this.ShipmentId = shipmentId;
+            this.Number = number;
             // use default value if no "documentType" provided
             this.DocumentType = documentType ?? @"invoice";
             this.TransactionId = transactionId;
@@ -73,24 +73,14 @@ namespace Org.OpenAPITools.Model
         }
 
         /// <summary>
-        /// Defines the order the document is uploaded for
+        /// Defines the order to invoice
         /// </summary>
-        /// <value>Defines the order the document is uploaded for</value>
+        /// <value>Defines the order to invoice</value>
         /*
         <example>25</example>
         */
         [DataMember(Name = "order_id", EmitDefaultValue = false)]
         public string OrderId { get; set; }
-
-        /// <summary>
-        /// Defines the shipment of the order the document is for. Required when the order was shipped in several shipments
-        /// </summary>
-        /// <value>Defines the shipment of the order the document is for. Required when the order was shipped in several shipments</value>
-        /*
-        <example>200000002</example>
-        */
-        [DataMember(Name = "shipment_id", EmitDefaultValue = false)]
-        public string ShipmentId { get; set; }
 
         /// <summary>
         /// Defines the store of the order. The store of the order is taken when not specified
@@ -103,13 +93,70 @@ namespace Org.OpenAPITools.Model
         public string StoreId { get; set; }
 
         /// <summary>
+        /// Defines the items of the order to invoice and their quantities. Everything not invoiced yet is invoiced when not specified
+        /// </summary>
+        /// <value>Defines the items of the order to invoice and their quantities. Everything not invoiced yet is invoiced when not specified</value>
+        [DataMember(Name = "items", EmitDefaultValue = false)]
+        public List<OrderInvoiceAddItemsInner> Items { get; set; }
+
+        /// <summary>
+        /// Defines the comment of the invoice
+        /// </summary>
+        /// <value>Defines the comment of the invoice</value>
+        /*
+        <example>This coole order</example>
+        */
+        [DataMember(Name = "comment", EmitDefaultValue = false)]
+        public string Comment { get; set; }
+
+        /// <summary>
+        /// Send the invoice to the customer by email
+        /// </summary>
+        /// <value>Send the invoice to the customer by email</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "send_notifications", EmitDefaultValue = true)]
+        public bool SendNotifications { get; set; }
+
+        /// <summary>
+        /// Defines whether the invoice captures the payment online, through the payment method, when the method supports it. The payment is captured offline when false
+        /// </summary>
+        /// <value>Defines whether the invoice captures the payment online, through the payment method, when the method supports it. The payment is captured offline when false</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "is_online", EmitDefaultValue = true)]
+        public bool IsOnline { get; set; }
+
+        /// <summary>
+        /// Defines the order status that creates the invoice. Only a status that creates an invoice is accepted. The status of an accepted payment is taken when not specified
+        /// </summary>
+        /// <value>Defines the order status that creates the invoice. Only a status that creates an invoice is accepted. The status of an accepted payment is taken when not specified</value>
+        /*
+        <example>Completed</example>
+        */
+        [DataMember(Name = "order_status", EmitDefaultValue = false)]
+        public string OrderStatus { get; set; }
+
+        /// <summary>
+        /// Defines the shipment of the order the document is for. Required when the order was shipped in several shipments
+        /// </summary>
+        /// <value>Defines the shipment of the order the document is for. Required when the order was shipped in several shipments</value>
+        /*
+        <example>200000002</example>
+        */
+        [DataMember(Name = "shipment_id", EmitDefaultValue = false)]
+        public string ShipmentId { get; set; }
+
+        /// <summary>
         /// Defines the number of the invoice or credit note as printed on the document
         /// </summary>
         /// <value>Defines the number of the invoice or credit note as printed on the document</value>
         /*
         <example>INV-2026-0001</example>
         */
-        [DataMember(Name = "number", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "number", EmitDefaultValue = false)]
         public string Number { get; set; }
 
         /// <summary>
@@ -191,8 +238,13 @@ namespace Org.OpenAPITools.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class OrderInvoiceAdd {\n");
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
-            sb.Append("  ShipmentId: ").Append(ShipmentId).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  Items: ").Append(Items).Append("\n");
+            sb.Append("  Comment: ").Append(Comment).Append("\n");
+            sb.Append("  SendNotifications: ").Append(SendNotifications).Append("\n");
+            sb.Append("  IsOnline: ").Append(IsOnline).Append("\n");
+            sb.Append("  OrderStatus: ").Append(OrderStatus).Append("\n");
+            sb.Append("  ShipmentId: ").Append(ShipmentId).Append("\n");
             sb.Append("  Number: ").Append(Number).Append("\n");
             sb.Append("  DocumentType: ").Append(DocumentType).Append("\n");
             sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
